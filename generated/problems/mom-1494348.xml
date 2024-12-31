@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="utf-8"?>
+<myopenmath xmlns:pi="http://pretextbook.org/2020/pretext/internal" id="1494348">
+<statement>
+<p>Let <m>\displaystyle{z}={f{{\left({x},{y}\right)}}}</m> where <m>\displaystyle{x}={g{{\left({t}\right)}}}</m>, <m>\displaystyle{y}={h}{\left({t}\right)}</m>, and <m>\displaystyle{f},{g},{h}</m> are all differentiable functions. Given the information in the table, compute <m>\displaystyle{\frac{{{\left.{d}{z}\right.}}}{{{\left.{d}{t}\right.}}}}{\mid}_{{{t}={3}}}</m>. </p>
+<table><tabular>         
+
+<row>
+<cell> <m>\displaystyle{f{{\left({5},{15}\right)}}}=-{4}</m> </cell>
+<cell>  <m>\displaystyle{f{{\left({2},{9}\right)}}}={7}</m> </cell>
+</row>
+<row>
+<cell> <m>\displaystyle{\frac{{\partial{f}}}{{\partial{x}}}}{\left({5},{15}\right)}={125}</m> </cell>
+<cell> <m>\displaystyle{\frac{{\partial{f}}}{{\partial{y}}}}{\left({5},{15}\right)}={0.2}</m> </cell>
+</row>
+<row>
+<cell> <m>\displaystyle{\frac{{\partial{f}}}{{\partial{x}}}}{\left({2},{9}\right)}={150}</m> </cell>
+<cell> <m>\displaystyle{\frac{{\partial{f}}}{{\partial{y}}}}{\left({2},{9}\right)}={0.7}</m> </cell>
+</row>
+<row>
+<cell> <m>\displaystyle{f{{\left({5},{2}\right)}}}=-{8}</m> </cell>
+<cell> <m>\displaystyle{f{{\left({15},{9}\right)}}}=-{6}</m> </cell>
+</row>
+<row>
+<cell> <m>\displaystyle{g{{\left({3}\right)}}}={5}</m>  </cell>
+<cell> <m>\displaystyle{h}{\left({3}\right)}={15}</m> </cell>
+</row>
+<row>
+<cell> <m>\displaystyle{g}'{\left({3}\right)}={2}</m> </cell>
+<cell> <m>\displaystyle{h}'{\left({3}\right)}={9}</m> </cell>
+</row>
+
+</tabular></table><p><m>\displaystyle{\frac{{{\left.{d}{z}\right.}}}{{{\left.{d}{t}\right.}}}}{\mid}_{{{t}={3}}}=</m><fillin characters="8" />    </p>
+
+</statement>
+<solution>
+<p><ul><li>251.8</li></ul></p>
+</solution>
+</myopenmath>
+

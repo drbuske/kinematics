@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<myopenmath xmlns:pi="http://pretextbook.org/2020/pretext/internal" id="731848">
+<statement>
+<p>
+Consider vectors <m>\displaystyle\vec{{u}}</m> and <m>\displaystyle\vec{{v}}</m> with <m>\displaystyle{\left|\vec{{u}}\right|}={6}</m> and <m>\displaystyle{\left|\vec{{v}}\right|}={1}</m>. Suppose the angle between the two vectors is <m>\displaystyle\frac{\pi}{{4}}</m>. Find <m>\displaystyle\vec{{u}}\cdot\vec{{v}}</m>.</p>
+<p>
+<m>\displaystyle\vec{{u}}\cdot\vec{{v}}=</m> <fillin characters="20" />   </p>
+<p>
+Give an exact value!
+</p>
+</statement>
+<solution>
+<p><ul><li><m>\displaystyle{3}\sqrt{{{2}}}</m></li></ul></p>
+</solution>
+</myopenmath>
+

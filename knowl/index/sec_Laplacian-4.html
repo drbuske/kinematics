@@ -1,0 +1,279 @@
+<!DOCTYPE html>
+<html lang="en-US" dir="ltr">
+<!--********************************************-->
+<!--*       Generated from PreTeXt source      *-->
+<!--*                                          *-->
+<!--*         https://pretextbook.org          *-->
+<!--*                                          *-->
+<!--********************************************-->
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<meta name="robots" content="noindex, nofollow">
+</head>
+<body class="ignore-math">
+<section class="paragraphs"><h3 class="heading"><span class="title">Second-Order Partial Derivatives.</span></h3>
+<div xmlns:pf="https://prefigure.org" class="para logical">
+<div class="para">Recall that for a single-variable function <span class="process-math">\(f\text{,}\)</span> the second derivative of <span class="process-math">\(f\)</span> is defined to be the derivative of the first derivative. That is, <span class="process-math">\(f''(x) = \frac{d}{dx}[f'(x)]\text{,}\)</span> which can be stated in terms of the limit definition of the derivative by writing</div>
+<div class="displaymath process-math">
+\begin{equation*}
+f''(x) = \lim_{h \to 0} \frac{f'(x+h) - f'(x)}{h}.
+\end{equation*}
+</div>
+</div>
+<div xmlns:pf="https://prefigure.org" class="para logical">
+<div class="para">A function <span class="process-math">\(f\)</span> of two independent variables <span class="process-math">\(x\)</span> and <span class="process-math">\(y\)</span> has two first-order partial derivatives, <span class="process-math">\(\frac{\partial f}{\partial x}\)</span> and <span class="process-math">\(\frac{\partial f}{\partial y}\text{.}\)</span> Each of these first-order partial derivatives has two partial derivatives, giving a total of four <em class="emphasis">second-order</em> partial derivatives:</div>
+<ul class="disc" id="sec_Laplacian-4-3-8">
+<li><div class="para"><span class="process-math">\(\frac{\partial}{\partial x} 
+\left(\frac{\partial
+f}{\partial x}\right) = 
+\frac{\partial^2 f}{\partial x^2}\text{,}\)</span></div></li>
+<li><div class="para"><span class="process-math">\(\frac{\partial}{\partial y} 
+\left(\frac{\partial
+f}{\partial y}\right) = 
+\frac{\partial^2 f}{\partial y^2}\text{,}\)</span></div></li>
+<li><div class="para"><span class="process-math">\(\frac{\partial}{\partial y} 
+\left(\frac{\partial
+f}{\partial x}\right) = 
+\frac{\partial^2 f}{\partial y \partial x}\text{,}\)</span></div></li>
+<li><div class="para"><span class="process-math">\(\frac{\partial}{\partial x} 
+\left(\frac{\partial
+f}{\partial y}\right) = 
+\frac{\partial^2 f}{\partial x \partial y}\text{.}\)</span></div></li>
+</ul>
+</div>
+<div xmlns:pf="https://prefigure.org" class="para">In what follows, we begin exploring the four different second-order partial derivatives of a function of two variables and seek to understand what these various derivatives tell us about the function’s behavior.</div>
+<div xmlns:pf="https://prefigure.org" class="para">Recall from single variable calculus that the second derivative measures the instantaneous rate of change of the derivative. This observation is the key to understanding the meaning of the second-order partial derivatives.</div>
+<div xmlns:pf="https://prefigure.org" class="para">Furthermore, we remember that the second derivative of a function at a point provides us with information about the concavity of the function at that point. Since the unmixed second-order partial derivative <span class="process-math">\(\frac{\partial^2 f}{\partial x^2}\)</span> requires us to hold <span class="process-math">\(y\)</span> constant and differentiate twice with respect to <span class="process-math">\(x\text{,}\)</span> we may simply view <span class="process-math">\(\frac{\partial^2 f}{\partial x^2}\)</span> as the second derivative of a trace of <span class="process-math">\(f\)</span> where <span class="process-math">\(y\)</span> is fixed. As such, <span class="process-math">\(\frac{\partial^2 f}{\partial x^2}\)</span> will measure the concavity of this trace.</div>
+<figure class="figure figure-like"><div class="sidebyside"><div class="sbsrow" style="margin-left:0.166666666666667%;margin-right:0.166666666666667%;">
+<div class="sbspanel top" style="width:33.1103678929766%;"><img xmlns:pf="https://prefigure.org" src="external/fig_10_3_fxx_1.svg" role="img" class="contained"></div>
+<div class="sbspanel top" style="width:33.1103678929766%;"><img xmlns:pf="https://prefigure.org" src="external/fig_10_3_fxx_2.svg" role="img" class="contained"></div>
+<div class="sbspanel top" style="width:33.1103678929766%;"><img xmlns:pf="https://prefigure.org" src="external/fig_10_3_fxx_3.svg" role="img" class="contained"></div>
+</div></div>
+<figcaption xmlns:pf="https://prefigure.org"><span class="type">Figure</span><span class="space"> </span><span class="codenumber">6.6.2<span class="period">.</span></span><span class="space"> </span>The tangent lines to a trace with increasing <span class="process-math">\(x\text{.}\)</span></figcaption></figure><div xmlns:pf="https://prefigure.org" class="para">Consider, for example, <span class="process-math">\(f(x,y) = \sin(x) e^{-y}\text{.}\)</span> <a href="sec_Laplacian.html#F_10_3_fxx" class="xref" data-knowl="./knowl/xref/F_10_3_fxx.html" data-reveal-label="Reveal" data-close-label="Close" title="Figure 6.6.2">Figure 6.6.2</a> shows the graph of this function along with the trace given by <span class="process-math">\(y=-1.5\text{.}\)</span> Also shown are three tangent lines to this trace, with increasing <span class="process-math">\(x\)</span>-values from left to right among the three plots in <a href="sec_Laplacian.html#F_10_3_fxx" class="xref" data-knowl="./knowl/xref/F_10_3_fxx.html" data-reveal-label="Reveal" data-close-label="Close" title="Figure 6.6.2">Figure 6.6.2</a>.</div>
+<div xmlns:pf="https://prefigure.org" class="para">That the slope of the tangent line is decreasing as <span class="process-math">\(x\)</span> increases is reflected, as it is in one-variable calculus, in the fact that the trace is concave down at <span class="process-math">\((1.75,-1.5)\text{.}\)</span> Indeed, we see that <span class="process-math">\(\frac{\partial f}{\partial x}(x,y)=\cos(x)e^{-y}\)</span> and so <span class="process-math">\(\frac{\partial^2 f}{\partial x^2}(x,y)=-\sin(x)e^{-y} \text{.}\)</span>  From here, we see that <span class="process-math">\(\frac{\partial^2 f}{\partial x^2}(1.75,-1.5) \lt  0\)</span> as expected.</div>
+<article class="example example-like"><h4 class="heading">
+<span class="type">Example</span><span xmlns:pf="https://prefigure.org" class="space"> </span><span class="codenumber">6.6.3</span><span xmlns:pf="https://prefigure.org" class="period">.</span><span xmlns:pf="https://prefigure.org" class="space"> </span><span class="title">Geometrically Understanding <span xmlns:pf="https://prefigure.org" class="process-math">\(\frac{\partial^2 f}{\partial y^2}\)</span>.</span>
+</h4>
+<div xmlns:pf="https://prefigure.org" class="para">In <a href="sec_Laplacian.html#F_10_3_fyy" class="xref" data-knowl="./knowl/xref/F_10_3_fyy.html" data-reveal-label="Reveal" data-close-label="Close" title="Figure 6.6.4">Figure 6.6.4</a>, we see the trace of <span class="process-math">\(f(x,y) = \sin(x) e^{-y}\)</span> that has <span class="process-math">\(x\)</span> held constant with <span class="process-math">\(x = 1.75\text{.}\)</span> We also see three different lines that are tangent to the trace of <span class="process-math">\(f\)</span> in the <span class="process-math">\(y\)</span> direction at values of <span class="process-math">\(y\)</span> that are increasing from left to right in the figure.</div>
+<figure class="figure figure-like"><div class="sidebyside"><div class="sbsrow" style="margin-left:0.166666666666667%;margin-right:0.166666666666667%;">
+<div class="sbspanel top" style="width:33.1103678929766%;"><img xmlns:pf="https://prefigure.org" src="external/fig_10_3_fyy_1.svg" role="img" class="contained"></div>
+<div class="sbspanel top" style="width:33.1103678929766%;"><img xmlns:pf="https://prefigure.org" src="external/fig_10_3_fyy_2.svg" role="img" class="contained"></div>
+<div class="sbspanel top" style="width:33.1103678929766%;"><img xmlns:pf="https://prefigure.org" src="external/fig_10_3_fyy_3.svg" role="img" class="contained"></div>
+</div></div>
+<figcaption xmlns:pf="https://prefigure.org"><span class="type">Figure</span><span class="space"> </span><span class="codenumber">6.6.4<span class="period">.</span></span><span class="space"> </span>The tangent lines to a trace with increasing <span class="process-math">\(y\text{.}\)</span></figcaption></figure><div xmlns:pf="https://prefigure.org" class="para">The slope of the tangent lines to the trace <span class="process-math">\(x=1.75\)</span> increases (becomes less negative) as <span class="process-math">\(y\)</span> increases.  This suggests that <span class="process-math">\(\frac{\partial^2 f}{\partial y^2}\)</span> will be positive at <span class="process-math">\((1.75,-1.5)\text{.}\)</span>  Indeed, we have <span class="process-math">\(\frac{\partial^2 f}{\partial y^2}(x,y) = \frac{\partial}{\partial y} \left( -\sin(x)e^{-y}\right) = \sin(x)e^{-y}\)</span> so that <span class="process-math">\(\frac{\partial^2 f}{\partial y^2}(1.75,-1.5) = \sin(1.75)e^{1.5} \gt 0\)</span> and this trace is concave up at <span class="process-math">\((1.75,-1.5)\)</span> as expected.</div></article><article class="example example-like"><h4 class="heading">
+<span class="type">Example</span><span xmlns:pf="https://prefigure.org" class="space"> </span><span class="codenumber">6.6.5</span><span xmlns:pf="https://prefigure.org" class="period">.</span><span xmlns:pf="https://prefigure.org" class="space"> </span><span class="title">Wind Chill.</span>
+</h4>
+<div xmlns:pf="https://prefigure.org" class="para">The wind chill <span class="process-math">\(C(v,T)\text{,}\)</span> in degrees Fahrenheit, is a function of the wind speed <span class="process-math">\(v\text{,}\)</span> in miles per hour, and the air temperature <span class="process-math">\(T\text{,}\)</span> in degrees Fahrenheit. Some values of the wind chill are recorded in <a href="sec_Laplacian.html#T_10_3_wind_chill" class="xref" data-knowl="./knowl/xref/T_10_3_wind_chill.html" data-reveal-label="Reveal" data-close-label="Close" title="Table 6.6.6: Wind chill C as a function of wind speed v and temperature T">Table 6.6.6</a>.</div>
+<figure class="table table-like"><figcaption xmlns:pf="https://prefigure.org"><span class="type">Table</span><span class="space"> </span><span class="codenumber">6.6.6<span class="period">.</span></span><span class="space"> </span>Wind chill <span class="process-math">\(C\)</span> as a function of wind speed <span class="process-math">\(v\)</span> and temperature <span class="process-math">\(T\text{.}\)</span></figcaption><div class="tabular-box natural-width"><table xmlns:pf="https://prefigure.org" class="tabular">
+<tr>
+<td class="c m b2 r0 l0 t1 lines"><span class="process-math">\(v \backslash T\)</span></td>
+<td class="c m b2 r0 l0 t1 lines">-30</td>
+<td class="c m b2 r0 l0 t1 lines">-25</td>
+<td class="c m b2 r0 l0 t1 lines">-20</td>
+<td class="c m b2 r0 l0 t1 lines">-15</td>
+<td class="c m b2 r0 l0 t1 lines">-10</td>
+<td class="c m b2 r0 l0 t1 lines">-5</td>
+<td class="c m b2 r0 l0 t1 lines">0</td>
+<td class="c m b2 r0 l0 t1 lines">5</td>
+<td class="c m b2 r0 l0 t1 lines">10</td>
+<td class="c m b2 r0 l0 t1 lines">15</td>
+<td class="c m b2 r0 l0 t1 lines">20</td>
+</tr>
+<tr>
+<td class="c m b1 r0 l0 t0 lines">5</td>
+<td class="c m b1 r0 l0 t0 lines">-46</td>
+<td class="c m b1 r0 l0 t0 lines">-40</td>
+<td class="c m b1 r0 l0 t0 lines">-34</td>
+<td class="c m b1 r0 l0 t0 lines">-28</td>
+<td class="c m b1 r0 l0 t0 lines">-22</td>
+<td class="c m b1 r0 l0 t0 lines">-16</td>
+<td class="c m b1 r0 l0 t0 lines">-11</td>
+<td class="c m b1 r0 l0 t0 lines">-5</td>
+<td class="c m b1 r0 l0 t0 lines">1</td>
+<td class="c m b1 r0 l0 t0 lines">7</td>
+<td class="c m b1 r0 l0 t0 lines">13</td>
+</tr>
+<tr>
+<td class="c m b1 r0 l0 t0 lines">10</td>
+<td class="c m b1 r0 l0 t0 lines">-53</td>
+<td class="c m b1 r0 l0 t0 lines">-47</td>
+<td class="c m b1 r0 l0 t0 lines">-41</td>
+<td class="c m b1 r0 l0 t0 lines">-35</td>
+<td class="c m b1 r0 l0 t0 lines">-28</td>
+<td class="c m b1 r0 l0 t0 lines">-22</td>
+<td class="c m b1 r0 l0 t0 lines">-16</td>
+<td class="c m b1 r0 l0 t0 lines">-10</td>
+<td class="c m b1 r0 l0 t0 lines">-4</td>
+<td class="c m b1 r0 l0 t0 lines">3</td>
+<td class="c m b1 r0 l0 t0 lines">9</td>
+</tr>
+<tr>
+<td class="c m b1 r0 l0 t0 lines">15</td>
+<td class="c m b1 r0 l0 t0 lines">-58</td>
+<td class="c m b1 r0 l0 t0 lines">-51</td>
+<td class="c m b1 r0 l0 t0 lines">-45</td>
+<td class="c m b1 r0 l0 t0 lines">-39</td>
+<td class="c m b1 r0 l0 t0 lines">-32</td>
+<td class="c m b1 r0 l0 t0 lines">-26</td>
+<td class="c m b1 r0 l0 t0 lines">-19</td>
+<td class="c m b1 r0 l0 t0 lines">-13</td>
+<td class="c m b1 r0 l0 t0 lines">-7</td>
+<td class="c m b1 r0 l0 t0 lines">0</td>
+<td class="c m b1 r0 l0 t0 lines">6</td>
+</tr>
+<tr>
+<td class="c m b1 r0 l0 t0 lines">20</td>
+<td class="c m b1 r0 l0 t0 lines">-61</td>
+<td class="c m b1 r0 l0 t0 lines">-55</td>
+<td class="c m b1 r0 l0 t0 lines">-48</td>
+<td class="c m b1 r0 l0 t0 lines">-42</td>
+<td class="c m b1 r0 l0 t0 lines">-35</td>
+<td class="c m b1 r0 l0 t0 lines">-29</td>
+<td class="c m b1 r0 l0 t0 lines">-22</td>
+<td class="c m b1 r0 l0 t0 lines">-15</td>
+<td class="c m b1 r0 l0 t0 lines">-9</td>
+<td class="c m b1 r0 l0 t0 lines">-2</td>
+<td class="c m b1 r0 l0 t0 lines">4</td>
+</tr>
+<tr>
+<td class="c m b1 r0 l0 t0 lines">25</td>
+<td class="c m b1 r0 l0 t0 lines">-64</td>
+<td class="c m b1 r0 l0 t0 lines">-58</td>
+<td class="c m b1 r0 l0 t0 lines">-51</td>
+<td class="c m b1 r0 l0 t0 lines">-44</td>
+<td class="c m b1 r0 l0 t0 lines">-37</td>
+<td class="c m b1 r0 l0 t0 lines">-31</td>
+<td class="c m b1 r0 l0 t0 lines">-24</td>
+<td class="c m b1 r0 l0 t0 lines">-17</td>
+<td class="c m b1 r0 l0 t0 lines">-11</td>
+<td class="c m b1 r0 l0 t0 lines">-4</td>
+<td class="c m b1 r0 l0 t0 lines">3</td>
+</tr>
+<tr>
+<td class="c m b1 r0 l0 t0 lines">30</td>
+<td class="c m b1 r0 l0 t0 lines">-67</td>
+<td class="c m b1 r0 l0 t0 lines">-60</td>
+<td class="c m b1 r0 l0 t0 lines">-53</td>
+<td class="c m b1 r0 l0 t0 lines">-46</td>
+<td class="c m b1 r0 l0 t0 lines">-39</td>
+<td class="c m b1 r0 l0 t0 lines">-33</td>
+<td class="c m b1 r0 l0 t0 lines">-26</td>
+<td class="c m b1 r0 l0 t0 lines">-19</td>
+<td class="c m b1 r0 l0 t0 lines">-12</td>
+<td class="c m b1 r0 l0 t0 lines">-5</td>
+<td class="c m b1 r0 l0 t0 lines">1</td>
+</tr>
+<tr>
+<td class="c m b1 r0 l0 t0 lines">35</td>
+<td class="c m b1 r0 l0 t0 lines">-69</td>
+<td class="c m b1 r0 l0 t0 lines">-62</td>
+<td class="c m b1 r0 l0 t0 lines">-55</td>
+<td class="c m b1 r0 l0 t0 lines">-48</td>
+<td class="c m b1 r0 l0 t0 lines">-41</td>
+<td class="c m b1 r0 l0 t0 lines">-34</td>
+<td class="c m b1 r0 l0 t0 lines">-27</td>
+<td class="c m b1 r0 l0 t0 lines">-21</td>
+<td class="c m b1 r0 l0 t0 lines">-14</td>
+<td class="c m b1 r0 l0 t0 lines">-7</td>
+<td class="c m b1 r0 l0 t0 lines">0</td>
+</tr>
+<tr>
+<td class="c m b1 r0 l0 t0 lines">40</td>
+<td class="c m b1 r0 l0 t0 lines">-71</td>
+<td class="c m b1 r0 l0 t0 lines">-64</td>
+<td class="c m b1 r0 l0 t0 lines">-57</td>
+<td class="c m b1 r0 l0 t0 lines">-50</td>
+<td class="c m b1 r0 l0 t0 lines">-43</td>
+<td class="c m b1 r0 l0 t0 lines">-36</td>
+<td class="c m b1 r0 l0 t0 lines">-29</td>
+<td class="c m b1 r0 l0 t0 lines">-22</td>
+<td class="c m b1 r0 l0 t0 lines">-15</td>
+<td class="c m b1 r0 l0 t0 lines">-8</td>
+<td class="c m b1 r0 l0 t0 lines">-1</td>
+</tr>
+</table></div></figure><div xmlns:pf="https://prefigure.org" class="para logical">
+<div class="para">To estimate the second-order partial <span class="process-math">\(\frac{\partial^2 C}{\partial v^2}(20,-10)\text{,}\)</span> we need information about the first partial <span class="process-math">\(\frac{\partial C}{\partial v}\)</span> near <span class="process-math">\(v=20, T=-10\text{.}\)</span>  From that information, we can then estimate the rate at which <span class="process-math">\(\frac{\partial C}{\partial v}\)</span> changes as we change wind speed <span class="process-math">\(v\text{.}\)</span>  To that end, note that using central differences yields</div>
+<div class="displaymath process-math">
+\begin{align*}
+\frac{\partial C}{\partial v}(25,-10) \approx \mathstrut \amp \frac{C(30,-10)-C(20,-10)}{30-20} \\
+= \mathstrut \amp \frac{-39-(-35)}{10} \\
+\approx \mathstrut \amp -0.4 \ \mathrm{\frac{^{\circ}F}{mph}}\\
+\frac{\partial C}{\partial v}(20,-10) \approx \mathstrut \amp \frac{C(25,-10)-C(15,-10)}{25-15} \\
+= \mathstrut \amp \frac{-37-(-32)}{10} \\
+\approx \mathstrut \amp -0.5 \ \mathrm{\frac{^{\circ}F}{mph}}\\
+\frac{\partial C}{\partial v}(15,-10) \approx \mathstrut \amp \frac{C(20,-10)-C(10,-10)}{20-10}\\
+= \mathstrut \amp \frac{-35-(-28)}{10} \\
+\approx \mathstrut \amp -0.7 \ \mathrm{\frac{^{\circ}F}{mph}}
+\end{align*}
+</div>
+<div class="para">From this, we have</div>
+<div class="displaymath process-math">
+\begin{align*}
+\frac{\partial^2 C}{\partial v^2}(20,-10) \approx \mathstrut \amp \frac{\frac{\partial C}{\partial v}(25,-10) - \frac{\partial C}{\partial v}(15,-10)}{25-15} \\
+\approx \mathstrut \amp \frac{-0.4-(-0.7)}{10} \\
+= \mathstrut \amp 0.03 \ \mathrm{(^{\circ}F/mph)/mph}
+\end{align*}
+</div>
+</div>
+<div xmlns:pf="https://prefigure.org" class="para">What does this value tell us?  It gives a rate of change of a rate of change.  <span class="process-math">\(\frac{\partial C}{\partial v}\)</span> tells us the rate at which the wind chill is changing as a small change in made in the wind speed.  As we saw, these values were all negative as expected (as wind speed increases, the wind chill decreases...that is, it feels colder).  In addition, we saw that as the wind speeds increase, the rate at which we feel colder is becoming less negative (i.e. it is increasing).  This is why the second derivative <span class="process-math">\(\frac{\partial^2 C}{\partial v^2}(20,-10)\)</span> is positive.  The second derivative gives the rate at which this rate of change is changing.  For every increase in wind speed by 1 mph, the rate at which the rate of the wind chill changes is roughly 0.03 degrees per mph.  And this matches the values of <span class="process-math">\(\frac{\partial C}{\partial v}\)</span> that we have calculated - as the wind speed goes from 15 mph to 25 mph (10 mph of change), the change in <span class="process-math">\(\frac{\partial C}{\partial v}\)</span> is 0.7-0.4 = 0.3 degrees per mph.</div></article><details xmlns:pf="https://prefigure.org" class="exercise exercise-like born-hidden-knowl"><summary class="knowl__link"><h4 class="heading">
+<span class="type">Checkpoint</span><span class="space"> </span><span class="codenumber">6.6.7</span><span class="period">.</span><span class="space"> </span><span class="title">Estimating and Interpreting a Second Partial of Wind Chill.</span>
+</h4></summary><article class="exercise exercise-like knowl__content"><div class="para">Using values of the wind chill found in <a href="sec_Laplacian.html#T_10_3_wind_chill" class="xref" data-knowl="./knowl/xref/T_10_3_wind_chill.html" data-reveal-label="Reveal" data-close-label="Close" title="Table 6.6.6: Wind chill C as a function of wind speed v and temperature T">Table 6.6.6</a>, estimate the second-order partial <span class="process-math">\(\frac{\partial^2 C}{\partial T^2}(20,-10)\text{.}\)</span>  Then, interpret the meaning of this value.</div>
+<div class="solutions"><details class="answer solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Answer</span><span class="period">.</span></summary><div class="answer solution-like knowl__content"><div class="para logical">
+<div class="para">To estimate the second-order partial <span class="process-math">\(\frac{\partial^2 C}{\partial T^2}(20,-10)\text{,}\)</span> collect information about the first partial <span class="process-math">\(\frac{\partial C}{\partial T}\text{.}\)</span>  We then estimate the rate at which <span class="process-math">\(\frac{\partial C}{\partial T}\)</span> changes as we change temperature <span class="process-math">\(T\text{.}\)</span>  Central differences yield</div>
+<div class="displaymath process-math" data-contains-math-knowls="./knowl/xref/geometricunderstandingdf2dy2.html">
+\begin{align*}
+\frac{\partial C}{\partial T}(20,-15) \approx \mathstrut \amp \frac{C(20,-10)-C(20,-20)}{-10-(-20)} \\
+= \mathstrut \amp \frac{-35-(-48)}{10} \\
+\approx \mathstrut \amp 1.3 \ \mathrm{\frac{^{\circ}F}{^{\circ}F}}\\
+\frac{\partial C}{\partial T}(20,-10) \approx \mathstrut \amp \frac{C(20,-15)-C(20,-5)}{-15-(-5)} \\
+= \mathstrut \amp \frac{-42-(-29)}{-10}\\
+\approx \mathstrut \amp 1.3 \ \mathrm{\frac{^{\circ}F}{^{\circ}F}}\\
+\frac{\partial C}{\partial T}(20,-5) \approx \mathstrut \amp \frac{C(20,-10)-C(20,0)}{-10-0} \\
+= \mathstrut \amp \frac{-35-(-22)}{-10}\\
+\approx \mathstrut \amp 1.3 \ \mathrm{\frac{^{\circ}F}{^{\circ}F}}
+\end{align*}
+</div>
+<div class="para">So,</div>
+<div class="displaymath process-math" data-contains-math-knowls="./knowl/xref/geometricunderstandingdf2dy2.html">
+\begin{align*}
+\frac{\partial^2 C}{\partial T^2}(20,-10) \approx \mathstrut \amp \frac{\frac{\partial C}{\partial T}(20,-5) - \frac{\partial C}{\partial T}(20,-15)}{-5 -(-15)}\\
+\approx \mathstrut \amp \frac{1.3-1.3}{10} \\
+= \mathstrut \amp 0 \ \mathrm{(^{\circ}F/^{\circ}F)/^{\circ}F}.
+\end{align*}
+</div>
+<div class="para">We interpret this to mean that rate of change of the wind chill with respect to temperature changes (i.e. <span class="process-math">\(\frac{\partial C}{\partial T}\)</span>) is roughly constant when <span class="process-math">\(v=20\)</span> mph and <span class="process-math">\(T=-10^{\circ}F\text{.}\)</span>  Thinking visually, if we graphed <span class="process-math">\(C(v,T)\)</span> and the trace <span class="process-math">\(v=20\text{,}\)</span> the slopes to this trace near <span class="process-math">\(T=-10\)</span> (as in <a href="sec_Laplacian.html#geometricunderstandingdf2dy2" class="xref" data-knowl="./knowl/xref/geometricunderstandingdf2dy2.html" data-reveal-label="Reveal" data-close-label="Close" title="Example 6.6.3: Geometrically Understanding \frac{\partial^2 f}{\partial y^2}">Example 6.6.3</a>) would all be the same.</div>
+</div></div></details></div></article></details><article class="example example-like"><h4 class="heading">
+<span class="type">Example</span><span xmlns:pf="https://prefigure.org" class="space"> </span><span class="codenumber">6.6.8</span><span xmlns:pf="https://prefigure.org" class="period">.</span><span xmlns:pf="https://prefigure.org" class="space"> </span><span class="title">Geometrically Understanding <span xmlns:pf="https://prefigure.org" class="process-math">\(\frac{\partial^2 f}{\partial x \partial y}\)</span>.</span>
+</h4>
+<div xmlns:pf="https://prefigure.org" class="para">
+<a href="sec_Laplacian.html#F_10_3_fxy" class="xref" data-knowl="./knowl/xref/F_10_3_fxy.html" data-reveal-label="Reveal" data-close-label="Close" title="Figure 6.6.9">Figure 6.6.9</a> helps in visualizing the mixed partial derivative, <span class="process-math">\(\frac{\partial^2 f}{\partial y \partial x}\text{.}\)</span>  Here, we first hold <span class="process-math">\(y\)</span> constant to generate the first-order partial derivative <span class="process-math">\(\frac{\partial f}{\partial x}\text{,}\)</span> and then we hold <span class="process-math">\(x\)</span> constant to compute <span class="process-math">\(\frac{\partial^2 f}{\partial y \partial x}\text{.}\)</span>  This leads to first thinking about a trace with <span class="process-math">\(x\)</span> being constant, followed by slopes of tangent lines in the <span class="process-math">\(x\)</span>-direction that slide along the original trace.  You might think of sliding your pencil down the trace with <span class="process-math">\(x\)</span> constant in a way that its slope indicates <span class="process-math">\(\frac{\partial}{\partial y}\left( \frac{\partial f}{\partial x} \right)\)</span> in order to further animate the three snapshots shown in <a href="sec_Laplacian.html#F_10_3_fxy" class="xref" data-knowl="./knowl/xref/F_10_3_fxy.html" data-reveal-label="Reveal" data-close-label="Close" title="Figure 6.6.9">Figure 6.6.9</a>. <figure class="figure figure-like"><div class="sidebyside"><div class="sbsrow" style="margin-left:0.166666666666667%;margin-right:0.166666666666667%;">
+<div class="sbspanel top" style="width:33.1103678929766%;"><img src="external/fig_10_3_fxy_1.svg" role="img" class="contained"></div>
+<div class="sbspanel top" style="width:33.1103678929766%;"><img src="external/fig_10_3_fxy_2.svg" role="img" class="contained"></div>
+<div class="sbspanel top" style="width:33.1103678929766%;"><img src="external/fig_10_3_fxy_3.svg" role="img" class="contained"></div>
+</div></div>
+<figcaption><span class="type">Figure</span><span class="space"> </span><span class="codenumber">6.6.9<span class="period">.</span></span><span class="space"> </span>The trace of <span class="process-math">\(z = f(x,y) = \sin(x)e^{-y}\)</span> with <span class="process-math">\(x = 1.75\text{,}\)</span> along with tangent lines in the <span class="process-math">\(y\)</span>-direction at three different points.</figcaption></figure> <div class="para">Based on <a href="sec_Laplacian.html#F_10_3_fxy" class="xref" data-knowl="./knowl/xref/F_10_3_fxy.html" data-reveal-label="Reveal" data-close-label="Close" title="Figure 6.6.9">Figure 6.6.9</a>, <span class="process-math">\(\frac{\partial}{\partial y}\left( \frac{\partial f}{\partial x} \right)(1.75, -1.5) \gt 0\)</span>  since the slopes shown are increasing (becoming less negative) as <span class="process-math">\(y\)</span> increases.  Algebraically, note that <span class="process-math">\(\frac{\partial^2 f}{\partial x \partial y} = \frac{\partial}{\partial y}\left( \frac{\partial f}{\partial x} \right) = \frac{\partial}{\partial y}\left( e^{-y}\sin(x)\right) = -e^{-y}\cos(x)\)</span> which also gives a mixed derivative of <span class="process-math">\(-e^{1.5}\cos(1.75) \approx 0.8 \gt 0\)</span> at <span class="process-math">\((1.75,-1.5)\text{.}\)</span>
+</div>
+</div></article><details xmlns:pf="https://prefigure.org" class="exercise exercise-like born-hidden-knowl"><summary class="knowl__link"><h4 class="heading">
+<span class="type">Checkpoint</span><span class="space"> </span><span class="codenumber">6.6.10</span><span class="period">.</span><span class="space"> </span><span class="title">Geometrically Understanding <span class="process-math">\(\frac{\partial^2 f}{\partial y \partial x}\)</span>.</span>
+</h4></summary><article class="exercise exercise-like knowl__content"><div class="para">For <span class="process-math">\(f(x,y)=e^{-y}\sin(x)\text{,}\)</span> determine a formula for <span class="process-math">\(\frac{\partial^2 f}{\partial y \partial x}\text{.}\)</span>  Use it to evaluate <span class="process-math">\(\frac{\partial^2 f}{\partial y \partial x}(1.75,-1.5)\text{.}\)</span>  Then, compare the result to <a href="sec_Laplacian.html#geometricunderstandingdf2dxy" class="xref" data-knowl="./knowl/xref/geometricunderstandingdf2dxy.html" data-reveal-label="Reveal" data-close-label="Close" title="Example 6.6.8: Geometrically Understanding \frac{\partial^2 f}{\partial x \partial y}">Example 6.6.8</a>.</div>
+<div class="solutions"><details class="answer solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Answer</span><span class="period">.</span></summary><div class="answer solution-like knowl__content"><div class="para logical">
+<div class="para">Since</div>
+<div class="displaymath process-math" data-contains-math-knowls="./knowl/xref/geometricunderstandingdf2dxy.html">
+\begin{align*}
+\frac{\partial^2 f}{\partial y \partial x} = \mathstrut \amp \frac{\partial }{\partial x} \left( -e^{-y}\sin(x)\right) \\
+= \mathstrut \amp -e^{-y}\cos(x)
+\end{align*}
+</div>
+<div class="para">we have <span class="process-math">\(\frac{\partial^2 f}{\partial y \partial x}(1.75,-1.5) =  -e^{1.5}\cos(1.75) \approx 0.8\text{.}\)</span>  This is exactly the same value as <span class="process-math">\(\frac{\partial^2 f}{\partial x \partial y}(1.75,-1.5)\)</span> found in <a href="sec_Laplacian.html#geometricunderstandingdf2dxy" class="xref" data-knowl="./knowl/xref/geometricunderstandingdf2dxy.html" data-reveal-label="Reveal" data-close-label="Close" title="Example 6.6.8: Geometrically Understanding \frac{\partial^2 f}{\partial x \partial y}">Example 6.6.8</a>.</div>
+</div></div></details></div></article></details><div xmlns:pf="https://prefigure.org" class="para">In <a href="sec_Laplacian.html#windchillsecondderivativemixed" class="xref" data-knowl="./knowl/xref/windchillsecondderivativemixed.html" data-reveal-label="Reveal" data-close-label="Close" title="Checkpoint 6.6.10: Geometrically Understanding \frac{\partial^2 f}{\partial y \partial x}">Checkpoint 6.6.10</a>, you may have noticed that the mixed second-order partial derivatives are equal. This observation holds generally and is known as Clairaut’s Theorem.</div>
+<article class="assemblage assemblage-like"><h4 class="heading"><span class="title">Clairaut’s Theorem.</span></h4>
+<div xmlns:pf="https://prefigure.org" class="para logical">
+<div class="para">Let <span class="process-math">\(f\)</span> be a function of several variables for which the partial derivatives <span class="process-math">\(\frac{\partial^2 f}{\partial x \partial y}\)</span> and <span class="process-math">\(\frac{\partial^2 f}{\partial y \partial x}\)</span> are continuous near the point <span class="process-math">\((a,b)\text{.}\)</span> Then</div>
+<div class="displaymath process-math">
+\begin{equation*}
+\frac{\partial^2 f}{\partial x \partial y}(a,b) = \frac{\partial^2 f}{\partial y \partial x}(a,b).
+\end{equation*}
+</div>
+</div></article></section><span class="incontext"><a class="internal" href="sec_Laplacian.html#sec_Laplacian-4">in-context</a></span>
+</body>
+</html>

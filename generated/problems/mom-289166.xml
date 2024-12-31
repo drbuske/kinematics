@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<myopenmath xmlns:pi="http://pretextbook.org/2020/pretext/internal" id="289166">
+<statement>
+<p>
+Convert <m>\displaystyle{\left({1},\sqrt{{{3}}},-{2}\right)}</m> from rectangular to spherical coordinates.  Enter your answer as an ordered triple.  Use exact values for each coordinate involving radicals and <m>\displaystyle\pi</m> as needed.  Type pi to enter <m>\displaystyle\pi</m>.
+</p>
+<p>
+<m>\displaystyle{\left(\rho,\theta,\phi\right)}=</m> <fillin characters="20" />  
+</p>
+</statement>
+<solution>
+<p><ul><li><m>\displaystyle{\left({2}\sqrt{{{2}}},\frac{\pi}{{3}},\frac{{{3}\pi}}{{4}}\right)}</m></li></ul></p>
+</solution>
+</myopenmath>
+

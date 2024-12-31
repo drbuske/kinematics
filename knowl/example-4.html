@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en-US">
+<!--********************************************-->
+<!--*       Generated from PreTeXt source      *-->
+<!--*                                          *-->
+<!--*         https://pretextbook.org          *-->
+<!--*                                          *-->
+<!--********************************************-->
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<meta name="robots" content="noindex, nofollow">
+</head>
+<body class="ignore-math">
+<article class="example example-like"><h3 class="heading">
+<span class="type">Example</span><span class="space"> </span><span class="codenumber">1.1.10</span><span class="period">.</span><span class="space"> </span><span class="title">Heat Index.</span>
+</h3> <div class="para logical">
+<div class="para">On hot days, you feel warmer than the actual air temperature when the air is more humid, but you feel cooler when the air is drier due to evaporation of your perspiration.  Steadman's temperature-humidity index of sultriness (i.e. <dfn class="terminology">heat index</dfn> is given by</div>
+<div class="displaymath process-math" data-contains-math-knowls="./knowl/Steadman.html ./knowl/Steadman1.html ./knowl/Steadman2.html">
+\begin{equation}
+H = T_R + [T - T_R] \cdot \left( \frac{RH \cdot e_S}{100\cdot e_R} \right)^p\tag{1.1}
+\end{equation}
+</div>
+<div class="para">where <span class="process-math">\(e_R = 1.6 \ kPa\)</span> is reference vapor pressure, and</div>
+<div class="displaymath process-math" data-contains-math-knowls="./knowl/Steadman.html ./knowl/Steadman1.html ./knowl/Steadman2.html">
+\begin{align*}
+T_R   = \mathstrut \amp 0.8841T + 0.19\\
+p  = \mathstrut \amp \frac{1}{0.0196}T + 0.09031,  \text{and}  \\
+e_S  = \mathstrut \amp 0.611e^{\left[ 5423\left(\frac{1}{273.15} - \frac{1}{(T+273.15)}\right) \right]}.
+\end{align*}
+</div>
+<div class="para">The two variables for this function <span class="process-math">\(H\)</span> are <span class="process-math">\(T\)</span> (dry bulb temperature in <span class="process-math">\(^{\circ}C\)</span>) and <span class="process-math">\(RH\)</span> (relative humidity, ranging from 0 in dry air to 100 for saturated air).  The formula in <a href="" class="xref" data-knowl="./knowl/Steadman.html" title="Equation 1.1">(1.1)</a> is an algebraic representation of the heat index function <span class="process-math">\(H=f(T, RH)\text{.}\)</span>  Obviously, this equation is somewhat messy!  Fortunately, there are multiple ways to represent functions of two variables.  For the heat index, it is often represented numerically with a table as shown in <a href="" class="xref" data-knowl="./knowl/Steadman1.html" title="Figure 1.1.11">Figure 1.1.11</a>.  In addition to an algebraic representation (i.e. a formula) and a numeric representation (i.e. a table of values), a third way to represent this function is graphically.  To this end, a contour diagram of the heat index is shown in <a href="" class="xref" data-knowl="./knowl/Steadman2.html" title="Figure 1.1.12">Figure 1.1.12</a>.  Finally, we could attempt to describe the function in a fourth way - verbally.  For this function, a precise description would be really, really clunky!  A poor verbal description of the heat index would be to say that the Steadman heat index is a measure of the ``feels like" temperature found my modifying warm air temperatures upward when high relative humidities are present.</div>
+</div> <figure class="figure figure-like"><div class="image-box" style="width: 50%; margin-left: 25%; margin-right: 25%;"><img src="external/HeatIndexCentigradeTable.jpg" class="contained" alt="Steadman's heat index."></div>
+<figcaption><span class="type">Figure</span><span class="space"> </span><span class="codenumber">1.1.11<span class="period">.</span></span><span class="space"> </span>A table representing Steadman's heat index (<span class="process-math">\(^{\circ}C\)</span>).  (Source: Stull, Practical Meteorology)</figcaption></figure> <figure class="figure figure-like"><div class="image-box" style="width: 50%; margin-left: 25%; margin-right: 25%;"><img src="external/SteadmanHeatIndexContourMap.jpg" class="contained" alt="Contour map of Steadman's heat index."></div>
+<figcaption><span class="type">Figure</span><span class="space"> </span><span class="codenumber">1.1.12<span class="period">.</span></span><span class="space"> </span>A contour diagram representing Steadman's heat index.</figcaption></figure></article><span class="incontext"><a href="sec_functionnotation.html#example-4" class="internal">in-context</a></span>
+</body>
+</html>

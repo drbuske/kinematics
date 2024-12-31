@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en-US" dir="ltr">
+<!--********************************************-->
+<!--*       Generated from PreTeXt source      *-->
+<!--*                                          *-->
+<!--*         https://pretextbook.org          *-->
+<!--*                                          *-->
+<!--********************************************-->
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<meta name="robots" content="noindex, nofollow">
+</head>
+<body class="ignore-math">
+<article class="exercise exercise-like"><h4 class="heading">
+<span class="type">Exercise</span><span xmlns:pf="https://prefigure.org" class="space"> </span><span class="codenumber">5<span xmlns:pf="https://prefigure.org" class="period">.</span></span><span xmlns:pf="https://prefigure.org" class="space"> </span><span class="title">Geopotential Heights at <span xmlns:pf="https://prefigure.org" class="process-math">\(45^{\circ}S\)</span> on January 20, 2024.</span>
+</h4>
+<div xmlns:pf="https://prefigure.org" class="para">Data from <a class="external" href="https://www.ncei.noaa.gov/erddap/griddap/nmme_cfs_v2_g500_6h_by_time_lat_lon.html" target="_blank">ERDDAP</a><details class="ptx-footnote" aria-live="polite" id="ex_geo_heights_45S-2-1-2"><summary class="ptx-footnote__number" title="Footnote 27"><sup> 27 </sup></summary><div class="ptx-footnote__contents" id="ex_geo_heights_45S-2-1-2"><code class="code-inline tex2jax_ignore">https://www.ncei.noaa.gov/erddap/griddap/nmme\_cfs\_v2\_g500\_6h\_by\_time\_lat\_lon.html</code></div></details>   representing 500 mb geopotential heights at  <span class="process-math">\(45^{\circ}S\)</span> on January 20, 2024 can be found in the spreadsheet <a class="external" href="external/GeopotentialHeights45SJan2024.csv" target="_blank"><code class="code-inline tex2jax_ignore">GeopotentialHeights45SJan2024.csv</code></a>.  <a href="sec_trig_polynomials.html#GeopotentialHeights45S" class="xref" data-knowl="./knowl/xref/GeopotentialHeights45S.html" data-reveal-label="Reveal" data-close-label="Close" title="Figure 2.2.13">Figure 2.2.13</a> illustrates a plot of this periodic data.  Here the horizontal axis represents degrees longitude east of the prime meridian and the vertical axis represents the 500 mb height <span class="process-math">\(Z\text{.}\)</span>
+</div> <figure class="figure figure-like"><div xmlns:pf="https://prefigure.org" class="image-box" style="width: 90%; margin-left: 5%; margin-right: 5%;"><img src="external/RawDataGeoHeight45SJan2024.jpg" class="contained" alt="Geopotential heights at 45 degrees south as a function of longitude t."></div>
+<figcaption xmlns:pf="https://prefigure.org"><span class="type">Figure</span><span class="space"> </span><span class="codenumber">2.2.13<span class="period">.</span></span><span class="space"> </span>500 mb geopotential heights <span class="process-math">\(Z\)</span> at <span class="process-math">\(45^{\circ}S\)</span> on January 20, 2024.</figcaption></figure> <div xmlns:pf="https://prefigure.org" class="para logical">
+<div class="para">The geopotential height <span class="process-math">\(Z\)</span> at <span class="process-math">\(45^{\circ}S\)</span> can be crudely modeled using a single sinusoid of the form</div>
+<div class="displaymath process-math">
+\begin{equation*}
+a_0 + a_1\cos(\omega \theta) + b_1\sin(\omega \theta)
+\end{equation*}
+</div>
+<div class="para">for some constants <span class="process-math">\(a_0\text{,}\)</span> <span class="process-math">\(a_1\text{,}\)</span> <span class="process-math">\(b_1\text{,}\)</span> and <span class="process-math">\(\omega\)</span> where <span class="process-math">\(\theta\)</span> is a variable representing degrees east of the prime meridian.</div>
+</div> <ol class="lower-alpha" id="ex_geo_heights_45S-2-4">
+<li><div class="para">Determine the period <span xmlns:pf="https://prefigure.org" class="process-math">\(T\)</span> (with units) and the value of constant <span xmlns:pf="https://prefigure.org" class="process-math">\(\omega\)</span> (the frequency).</div></li>
+<li><div class="para">Use the data in the spreadsheet to determine the values <span xmlns:pf="https://prefigure.org" class="process-math">\(a_0, a_1,\)</span> and <span xmlns:pf="https://prefigure.org" class="process-math">\(b_1\)</span> so that<div xmlns:pf="https://prefigure.org" class="displaymath process-math">
+\begin{equation*}
+Z_1(\theta) = a_0 + a_1\cos(\omega \theta) + b_1\sin(\omega \theta)
+\end{equation*}
+</div>models the 500 mb geopotential height at <span xmlns:pf="https://prefigure.org" class="process-math">\(45^{\circ}S\)</span> and <span xmlns:pf="https://prefigure.org" class="process-math">\(\theta\)</span> degrees east of the prime meridian.</div></li>
+<li><div class="para">Use the spreadsheet to determine values of the additional coefficients <span xmlns:pf="https://prefigure.org" class="process-math">\(a_2\)</span> and <span xmlns:pf="https://prefigure.org" class="process-math">\(b_2\)</span> in the trigonometric polynomial<div xmlns:pf="https://prefigure.org" class="displaymath process-math">
+\begin{align*}
+Z_2(\theta) = \mathstrut \amp a_0 + a_1\cos \left( \omega\theta \right) + b_1\sin \left( \omega \theta \right)\\
+\mathstrut \amp + a_2\cos \left( 2\omega \theta \right) + b_2\sin \left( 2\omega\theta \right).
+\end{align*}
+</div>
+</div></li>
+<li><div class="para">Use the spreadsheet to visually verify the reasonableness of your model above.  That is, plot both the data and the calculated trigonometric polynomial <span xmlns:pf="https://prefigure.org" class="process-math">\(Z_2(\theta)\text{.}\)</span>
+</div></li>
+<li>Values of <span xmlns:pf="https://prefigure.org" class="process-math">\(a_k\)</span> and <span xmlns:pf="https://prefigure.org" class="process-math">\(b_k\)</span> (<span xmlns:pf="https://prefigure.org" class="process-math">\(k=3, 4, 5\)</span>) for the trigonometric polynomial<div xmlns:pf="https://prefigure.org" class="displaymath process-math" data-contains-math-knowls="./knowl/xref/TrigPolyCoeff45STable.html ./knowl/xref/Deg5TrigPoly45S.html ./knowl/xref/ex_geo_heights_45S.html">
+\begin{equation*}
+Z_5(\theta) = a_0 + \sum_{k=1}^5 a_k\cos \left( k\omega\theta \right) + \sum_{k=1}^5 b_k\sin \left( k\omega \theta \right)
+\end{equation*}
+</div>are given in <a href="sec_trig_polynomials.html#TrigPolyCoeff45STable" class="xref" data-knowl="./knowl/xref/TrigPolyCoeff45STable.html" data-reveal-label="Reveal" data-close-label="Close" title="Table 2.2.14: Coefficients a_k and b_k (k=3, 4, 5) for the trigonometric polynomial Z_5(\theta) fitting data in Exercise 2.2.2.5.">Table 2.2.14</a>.  Use this to plot the trigonometric polynomial <span xmlns:pf="https://prefigure.org" class="process-math">\(Z_5(\theta)\)</span> with these 5 harmonics against the original data.  Your plot should resemble that in <a href="sec_trig_polynomials.html#Deg5TrigPoly45S" class="xref" data-knowl="./knowl/xref/Deg5TrigPoly45S.html" data-reveal-label="Reveal" data-close-label="Close" title="Figure 2.2.15">Figure 2.2.15</a>. <figure class="table table-like"><figcaption xmlns:pf="https://prefigure.org"><span class="type">Table</span><span class="space"> </span><span class="codenumber">2.2.14<span class="period">.</span></span><span class="space"> </span>Coefficients <span class="process-math">\(a_k\)</span> and <span class="process-math">\(b_k\)</span> (<span class="process-math">\(k=3, 4, 5\)</span>) for the trigonometric polynomial <span class="process-math">\(Z_5(\theta)\)</span> fitting data in Exercise 2.2.2.5.</figcaption><div class="tabular-box natural-width"><table xmlns:pf="https://prefigure.org" class="tabular">
+<tr>
+<td class="c m b2 r0 l0 t1 lines"><span class="process-math">\(k\)</span></td>
+<td class="c m b2 r0 l0 t1 lines"><span class="process-math">\(a_k\)</span></td>
+<td class="c m b2 r0 l0 t1 lines"><span class="process-math">\(b_k\)</span></td>
+</tr>
+<tr>
+<td class="c m b1 r0 l0 t0 lines">3</td>
+<td class="c m b1 r0 l0 t0 lines">4.2532</td>
+<td class="c m b1 r0 l0 t0 lines">48.8307</td>
+</tr>
+<tr>
+<td class="c m b1 r0 l0 t0 lines">4</td>
+<td class="c m b1 r0 l0 t0 lines">-17.4248</td>
+<td class="c m b1 r0 l0 t0 lines">63.7954</td>
+</tr>
+<tr>
+<td class="c m b1 r0 l0 t0 lines">5</td>
+<td class="c m b1 r0 l0 t0 lines">1.4267</td>
+<td class="c m b1 r0 l0 t0 lines">-65.9249</td>
+</tr>
+</table></div></figure> <figure class="figure figure-like"><div xmlns:pf="https://prefigure.org" class="image-box" style="width: 90%; margin-left: 5%; margin-right: 5%;"><img src="external/Deg5FourierSeries45SJan2024b.jpg" class="contained" alt="Geopotential heights at 45 degrees south fit to a trig polynomial with five harmonics."></div>
+<figcaption xmlns:pf="https://prefigure.org"><span class="type">Figure</span><span class="space"> </span><span class="codenumber">2.2.15<span class="period">.</span></span><span class="space"> </span>500 mb geopotential heights <span class="process-math">\(Z\)</span> at <span class="process-math">\(45^{\circ}S\)</span> on January 20, 2024 and a trigonometric polynomial <span class="process-math">\(Z_5(\theta)\)</span> using 5 harmonics.</figcaption></figure>
+</li>
+</ol>
+<div class="solutions"><details xmlns:pf="https://prefigure.org" class="answer solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Answer</span><span class="period">.</span></summary><div class="answer solution-like knowl__content"><ol class="lower-alpha" id="ex_geo_heights_45S-3-1">
+<li><div class="para">
+<span class="process-math">\(T=360^{\circ}\)</span> and <span class="process-math">\(\omega = \frac{2\pi}{360^{\circ}}\)</span>
+</div></li>
+<li><div class="para">
+<span class="process-math">\(a_0=5610.154\text{,}\)</span> <span class="process-math">\(a_1=-91.345\text{,}\)</span> and <span class="process-math">\(b_1=-1.109\)</span>
+</div></li>
+<li><div class="para">
+<span class="process-math">\(a_2=-8.279\)</span> and <span class="process-math">\(b_2=69.432\)</span>
+</div></li>
+<li>The trigonometric polynomial <span class="process-math">\(Z_2(\theta)\)</span> and the geopotential heights <span class="process-math">\(Z\)</span> at <span class="process-math">\(45^{\circ}S\)</span> on January 20, 2024 are shown in <a href="sec_trig_polynomials.html#GeopotentialHeights45SJan2024Deg2" class="xref" data-knowl="./knowl/xref/GeopotentialHeights45SJan2024Deg2.html" data-reveal-label="Reveal" data-close-label="Close" title="Figure 2.2.16">Figure 2.2.16</a>. <figure class="figure figure-like"><div class="image-box" style="width: 90%; margin-left: 5%; margin-right: 5%;">
+<img src="external/GeopotentialHeights45SJan2024Deg2.jpg" class="contained" alt="described in detail following the image" aria-describedby="GeopotentialHeights45SJan2024Deg2-2-description"><details class="image-description" aria-live="polite"><summary title="details"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe88e;</span></summary><div id="GeopotentialHeights45SJan2024Deg2-2-description">Geopotential heights at 45 degrees south on January 20, 2024 together with a trigonometric polynomial <span class="process-math">\(Z_2(\theta)\)</span> of degree 2 that approximates them.</div></details>
+</div>
+<figcaption><span class="type">Figure</span><span class="space"> </span><span class="codenumber">2.2.16<span class="period">.</span></span><span class="space"> </span>A trigonometric polynomial <span class="process-math">\(Z_2(\theta)\)</span> of degree 2 (having 5 terms) approximates the 500 mb geopotential heights <span class="process-math">\(Z\)</span> at <span class="process-math">\(35^{\circ}N\)</span> on January 1, 2024.</figcaption></figure>
+</li>
+</ol></div></details></div></article><span class="incontext"><a class="internal" href="sec_trig_polynomials.html#ex_geo_heights_45S">in-context</a></span>
+</body>
+</html>

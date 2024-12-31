@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="utf-8"?>
+<myopenmath xmlns:pi="http://pretextbook.org/2020/pretext/internal" id="677721">
+<statement>
+<p>
+Match each equation with its graph.</p>
+<p><ol style="list-style-type:upper-alpha">
+<li> <m>\displaystyle{f{{\left({x},{y}\right)}}}={x}^{{2}}+{y}^{{2}}</m></li>
+<li> <m>\displaystyle{f{{\left({x},{y}\right)}}}={x}^{{2}}-{y}^{{2}}</m></li>
+<li> <m>\displaystyle{f{{\left({x},{y}\right)}}}={x}^{{2}}</m></li>
+<li> <m>\displaystyle{f{{\left({x},{y}\right)}}}=\sqrt{{{x}^{{2}}+{y}^{{2}}}}</m></li>
+<li> <m>\displaystyle{f{{\left({x},{y}\right)}}}={y}^{{2}}</m></li>
+</ol></p>
+<p><ol style="list-style-type:lower-alpha">
+<li><canvas id="plot3d6743cf7fbc880" width="300" height="300" role="img" tabindex="0" aria-label="3D Plot">Not seeing the 3D graph?  <url href="https://www.myopenmath.com/util/mbx.php?id=677721&amp;useflash=true">Try Flash Alternate</url></canvas></li>
+<li><canvas id="plot3d6743cf7fbbb79" width="300" height="300" role="img" tabindex="0" aria-label="3D Plot">Not seeing the 3D graph?  <url href="https://www.myopenmath.com/util/mbx.php?id=677721&amp;useflash=true">Try Flash Alternate</url></canvas></li>
+<li><canvas id="plot3d6743cf7fbe015" width="300" height="300" role="img" tabindex="0" aria-label="3D Plot">Not seeing the 3D graph?  <url href="https://www.myopenmath.com/util/mbx.php?id=677721&amp;useflash=true">Try Flash Alternate</url></canvas></li>
+<li><canvas id="plot3d6743cf7fbd042" width="300" height="300" role="img" tabindex="0" aria-label="3D Plot">Not seeing the 3D graph?  <url href="https://www.myopenmath.com/util/mbx.php?id=677721&amp;useflash=true">Try Flash Alternate</url></canvas></li>
+<li><canvas id="plot3d6743cf7fbadd9" width="300" height="300" role="img" tabindex="0" aria-label="3D Plot">Not seeing the 3D graph?  <url href="https://www.myopenmath.com/util/mbx.php?id=677721&amp;useflash=true">Try Flash Alternate</url></canvas></li>
+</ol></p> 
+
+</statement>
+<solution>
+<p><ul><li>a c e b d </li></ul></p>
+</solution>
+</myopenmath>
+

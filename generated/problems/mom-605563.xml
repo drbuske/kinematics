@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<myopenmath xmlns:pi="http://pretextbook.org/2020/pretext/internal" id="605563">
+<statement>
+<p>
+Find the area of a parallelogram formed by the vectors <m>\displaystyle\vec{{{P}{Q}}}</m> and <m>\displaystyle\vec{{{P}{R}}}</m>, where <m>\displaystyle{P}={\left({3},{6},{0}\right)}</m>, <m>\displaystyle{Q}={\left(-{5},{2},{6}\right)}</m> and <m>\displaystyle{R}={\left(-{4},{3},{0}\right)}</m>.</p>
+<p>
+Give your answer to the nearest 0.01.  </p>
+<p>
+<fillin characters="8" />   
+</p>
+</statement>
+<solution>
+<p><ul><li>45.869379764719</li></ul></p>
+</solution>
+</myopenmath>
+

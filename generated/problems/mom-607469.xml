@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<myopenmath xmlns:pi="http://pretextbook.org/2020/pretext/internal" id="607469">
+<statement>
+<p>
+The pressure <m>\displaystyle{P}</m> (in kilopascals), volume <m>\displaystyle{V}</m> (in liters), and temperature <m>\displaystyle{T}</m> (in kelvins) of a mole of an ideal gas are related by the equation <m>\displaystyle{P}{V}={8.31}{T}</m>.  Find the rate at which the volume is changing when the temperature is <m>\displaystyle{315}</m> K and increasing at a rate of <m>\displaystyle{0.05}</m> K/s and the pressure is <m>\displaystyle{24}</m> and increasing at a rate of <m>\displaystyle{0.01}</m> kPa/s.</p>
+<p>
+Round your answer to the nearest hundredth.  </p>
+<p>
+<fillin characters="20" />    L/s
+</p>
+</statement>
+<solution>
+<p><ul><li>-0.0281328125</li></ul></p>
+</solution>
+</myopenmath>
+

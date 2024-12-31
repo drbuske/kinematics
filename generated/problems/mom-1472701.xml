@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8"?>
+<myopenmath xmlns:pi="http://pretextbook.org/2020/pretext/internal" id="1472701">
+<statement>
+<p>
+Match the surface to its corresponding equation in cylindrical or spherical coordinates.
+</p>
+<p>Each graph can be rotated with the mouse.
+</p>
+<p><ol style="list-style-type:upper-alpha">
+<li class="nowrap"> <m>\displaystyle{r}={3}</m></li>
+<li class="nowrap"> <m>\displaystyle\rho={5}</m></li>
+<li> <m>\displaystyle\theta=\frac{{{2}\pi}}{{3}}</m></li>
+<li> <m>\displaystyle\phi=\frac{{{5}\pi}}{{6}}</m></li>
+</ol></p>
+<p><ol style="list-style-type:lower-alpha">
+<li><canvas id="plot3d6735706e6c427" width="300" height="300" role="img" tabindex="0" aria-label="3D Plot">Not seeing the 3D graph?  <url href="https://www.myopenmath.com/util/mbx.php?id=1472701&amp;useflash=true">Try Flash Alternate</url></canvas></li>
+<li><canvas id="plot3d6735706e69723" width="300" height="300" role="img" tabindex="0" aria-label="3D Plot">Not seeing the 3D graph?  <url href="https://www.myopenmath.com/util/mbx.php?id=1472701&amp;useflash=true">Try Flash Alternate</url></canvas></li>
+<li><canvas id="plot3d6735706e72cfb" width="300" height="300" role="img" tabindex="0" aria-label="3D Plot">Not seeing the 3D graph?  <url href="https://www.myopenmath.com/util/mbx.php?id=1472701&amp;useflash=true">Try Flash Alternate</url></canvas></li>
+<li><canvas id="plot3d6735706e76455" width="300" height="300" role="img" tabindex="0" aria-label="3D Plot">Not seeing the 3D graph?  <url href="https://www.myopenmath.com/util/mbx.php?id=1472701&amp;useflash=true">Try Flash Alternate</url></canvas></li>
+</ol></p> 
+
+
+</statement>
+<solution>
+<p><ul><li>d a b c </li></ul></p>
+</solution>
+</myopenmath>
+

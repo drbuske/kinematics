@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<myopenmath xmlns:pi="http://pretextbook.org/2020/pretext/internal" id="1498186">
+<statement>
+<p>
+A vector field for the horizontal wind from March 8, 2024 is shown below.  Match each location with the associated vector.  The values of each vector component are measured in knots.</p><image width="100%"  pi:generated="problems/images/WindVectorFieldsMar082024.JPG" /><p><ol style="list-style-type:upper-alpha">
+<li class="nowrap"> Omaha, NE</li>
+<li> Waterloo, IA</li>
+<li> Billings, MT</li>
+<li class="nowrap"> Chicago, IL</li>
+</ol></p>
+<p><ol style="list-style-type:lower-alpha">
+<li><m>\displaystyle-{13}\vec{{{j}}}</m></li>
+<li><m>\displaystyle{14}{\cos{{\left({30}^{{\circ}}\right)}}}\vec{{{i}}}+{14}{\sin{{\left({30}^{{\circ}}\right)}}}\vec{{{j}}}</m></li>
+<li><m>\displaystyle{10}{\cos{{\left({230}^{{\circ}}\right)}}}\vec{{{i}}}+{10}{\sin{{\left({230}^{{\circ}}\right)}}}\vec{{{j}}}</m></li>
+<li><m>\displaystyle{14}{\cos{{\left(-{80}^{{\circ}}\right)}}}\vec{{{i}}}+{14}{\sin{{\left(-{80}^{{\circ}}\right)}}}\vec{{{j}}}</m></li>
+</ol></p> 
+
+</statement>
+<solution>
+<p><ul><li>b d c a </li></ul></p>
+</solution>
+</myopenmath>
+

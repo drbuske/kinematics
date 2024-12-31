@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<myopenmath xmlns:pi="http://pretextbook.org/2020/pretext/internal" id="608764">
+<statement>
+<p>
+Identify the vector field illustrated below.</p><image width="50%"  pi:generated="problems/images/8f310f8ca4ec378a9bdc4f2251ad1755.png" /><p><ol style="list-style-type:upper-alpha"><li><m>\displaystyle\vec{{{F}}}{\left({x},{y}\right)}={x}\vec{{{j}}}</m></li> 
+<li><m>\displaystyle\vec{{{F}}}{\left({x},{y}\right)}={2}{x}\vec{{{i}}}+{x}\vec{{{j}}}</m></li> 
+<li><m>\displaystyle\vec{{{F}}}{\left({x},{y}\right)}={2}\vec{{{i}}}+{3}\vec{{{j}}}</m></li> 
+<li><m>\displaystyle\vec{{{F}}}{\left({x},{y}\right)}={y}\vec{{{i}}}</m></li> 
+</ol></p>
+
+
+</statement>
+<solution>
+<p><ul><li>A: <m>\displaystyle\vec{{{F}}}{\left({x},{y}\right)}={x}\vec{{{j}}}</m></li></ul></p>
+</solution>
+</myopenmath>
+

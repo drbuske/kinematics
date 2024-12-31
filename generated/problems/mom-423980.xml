@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<myopenmath xmlns:pi="http://pretextbook.org/2020/pretext/internal" id="423980">
+<statement>
+<p>
+Sketch the level curves of the function <m>\displaystyle{g{{\left({x},{y}\right)}}}=\sqrt{{{x}^{{2}}+{y}^{{2}}}}</m> corresponding to <m>\displaystyle{c}={3}</m>, <m>\displaystyle{c}={5}</m>, and <m>\displaystyle{c}={2}</m>.</p><image width="50%"  pi:generated="problems/images/a06900c37f4cdff560a4db1075593bfb.png" />
+
+
+</statement>
+<solution>
+<p><ul><li><image width="50%"  pi:generated="problems/images/a761ee40a8e8d41fe8b22def459a35cc.png" />
+</li></ul></p>
+</solution>
+</myopenmath>
+

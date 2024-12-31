@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<myopenmath xmlns:pi="http://pretextbook.org/2020/pretext/internal" id="1498190">
+<statement>
+<p>
+A vector field for the horizontal wind from September 28, 2022 is shown below.  Match each location with the associated vector.  The values of each vector component are measured in knots.</p><image width="100%"  pi:generated="problems/images/HurricanIanSept282022.jpg" /><p><ol style="list-style-type:upper-alpha">
+<li> Port Charlotte</li>
+<li class="nowrap"> Boca Raton</li>
+<li class="nowrap"> Sarasota</li>
+<li class="nowrap"> Melbourne</li>
+</ol></p>
+<p><ol style="list-style-type:lower-alpha">
+<li><m>\displaystyle{38}{\cos{{\left({250}^{{\circ}}\right)}}}\vec{{{i}}}+{38}{\sin{{\left({250}^{{\circ}}\right)}}}\vec{{{j}}}</m></li>
+<li><m>\displaystyle{20}{\cos{{\left({70}^{{\circ}}\right)}}}\vec{{{i}}}+{20}{\sin{{\left({70}^{{\circ}}\right)}}}\vec{{{j}}}</m></li>
+<li><m>\displaystyle{15}{\cos{{\left({150}^{{\circ}}\right)}}}\vec{{{i}}}+{15}{\sin{{\left({150}^{{\circ}}\right)}}}\vec{{{j}}}</m></li>
+<li><m>\displaystyle{75}{\cos{{\left({170}^{{\circ}}\right)}}}\vec{{{i}}}+{75}{\sin{{\left({170}^{{\circ}}\right)}}}\vec{{{j}}}</m></li>
+</ol></p> 
+
+</statement>
+<solution>
+<p><ul><li>a c d b </li></ul></p>
+</solution>
+</myopenmath>
+

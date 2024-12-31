@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en-US">
+<!--********************************************-->
+<!--*       Generated from PreTeXt source      *-->
+<!--*                                          *-->
+<!--*         https://pretextbook.org          *-->
+<!--*                                          *-->
+<!--********************************************-->
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<meta name="robots" content="noindex, nofollow">
+</head>
+<body class="ignore-math"><div class="answer solution-like">By the chain rule, note that<div class="displaymath process-math">
+\begin{equation*}
+\frac{dW}{dt} = \frac{\partial W}{\partial T}\frac{dT}{dt} + \frac{\partial W}{\partial v}\frac{dv}{dt}.
+\end{equation*}
+</div>Since<div class="displaymath process-math">
+\begin{equation*}
+\frac{\partial W}{\partial T}= 0.6215 + 0.3965v^{0.16} \ {\rm{and}} \ \frac{\partial W}{\partial v}= (0.16)(11.37)v^{-0.84} + (0.16)(0.3965)Tv^{-0.84}
+\end{equation*}
+</div>we have<div class="displaymath process-math">
+\begin{equation*}
+\frac{\partial W}{\partial T}(-15,30) = 0.6215+0.3965(30)^{0.16} \approx 1.305
+\end{equation*}
+</div>and<div class="displaymath process-math">
+\begin{equation*}
+\frac{\partial W}{\partial v}(-15,30) =  (0.16)(11.37)(30)^{-0.84} + (0.16)(0.3965)(-15)(30)^{-0.84} \approx 0.05.
+\end{equation*}
+</div>So at 11:00 a.m. (when <span class="process-math">\(T = -15^{\circ}C\)</span> and <span class="process-math">\(v = 30\)</span> km/hr) we have<div class="displaymath process-math">
+\begin{align*}
+\frac{dW}{dt}  = \mathstrut \amp \frac{\partial W}{\partial T}\frac{dT}{dt} + \frac{\partial W}{\partial v}\frac{dv}{dt} \\
+\approx \mathstrut \amp \left(1.305 \ \frac{^{\circ}C}{^{\circ}C} \right) \cdot \left( -4 \ \frac{^{\circ}C}{hr}\right) + \left( 0.05 \ \frac{^{\circ}C}{km/hr} \right) \cdot \left( 2 \ \frac{km/hr}{hr}\right) \\
+= \mathstrut \amp -5.22  \ \frac{^{\circ}C}{hr} + 0.1 \ \frac{^{\circ}C}{hr} \\
+= \mathstrut \amp -5.12 \ \frac{^{\circ}C}{hr}.
+\end{align*}
+</div>This means that the wind chill (or feels like temperature) is dropping at a rate of 5.12 degrees Celsius per hour at 11:00 a.m..  Most of the contribution to this drop is coming from the rapid drop in ambient temperature <span class="process-math">\(T\text{.}\)</span>
+</div></body>
+</html>

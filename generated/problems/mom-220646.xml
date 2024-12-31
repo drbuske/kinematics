@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<myopenmath xmlns:pi="http://pretextbook.org/2020/pretext/internal" id="220646">
+<statement>
+<p>
+A contour map for a function <m>\displaystyle{f}</m> is shown.  If you start at the point (-4,7) and move in the positive <em>x</em> direction, does the function value increase or decrease?
+</p>
+<p><ol style="list-style-type:upper-alpha"><li>Increases</li> 
+<li>Decreases</li> 
+</ol></p>
+<image width="33%"  pi:generated="problems/images/0741a94dfb69158e3820ddf3cb3fb42c.png" />
+
+</statement>
+<solution>
+<p><ul><li>B: Decreases</li></ul></p>
+</solution>
+</myopenmath>
+

@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<myopenmath xmlns:pi="http://pretextbook.org/2020/pretext/internal" id="910393">
+<statement>
+<table><tabular> <row><cell>x <backslash/> y</cell><cell>0</cell><cell>1</cell><cell>2</cell><cell>3</cell></row><row><cell>0</cell><cell>0.25</cell><cell>0.27</cell><cell>0.42</cell><cell>0.43</cell></row><row><cell>1</cell><cell>0.75</cell><cell>0.96</cell><cell>1.17</cell><cell>1.74</cell></row><row><cell>2</cell><cell>1</cell><cell>1.86</cell><cell>2.26</cell><cell>2.86</cell></row><row><cell>3</cell><cell>7.25</cell><cell>8.18</cell><cell>8.95</cell><cell>9.63</cell></row></tabular></table><p>Use the above table to give a reasonable estimate for the value of <m>\displaystyle{\frac{{\partial{f}}}{{\partial{x}}}}{\left({1},{2}\right)}</m>. </p>
+<p><m>\displaystyle{\frac{{\partial{f}}}{{\partial{x}}}}{\left({1},{2}\right)}=</m><fillin characters="5" />   </p>
+
+</statement>
+<solution>
+<p><ul><li><m>\displaystyle{0.75}{\quad\text{or}\quad}{1.09}{\quad\text{or}\quad}{0.92}</m></li></ul></p>
+</solution>
+</myopenmath>
+

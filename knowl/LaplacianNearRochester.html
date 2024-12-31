@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en-US">
+<!--********************************************-->
+<!--*       Generated from PreTeXt source      *-->
+<!--*                                          *-->
+<!--*         https://pretextbook.org          *-->
+<!--*                                          *-->
+<!--********************************************-->
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<meta name="robots" content="noindex, nofollow">
+</head>
+<body class="ignore-math">
+<article class="example example-like"><h3 class="heading">
+<span class="type">Example</span><span class="space"> </span><span class="codenumber">4.6.19</span><span class="period">.</span><span class="space"> </span><span class="title">Estimating the Laplacian.</span>
+</h3> <div class="para">Temperatures near Rochester, MN are given in <a href="" class="xref" data-knowl="./knowl/RochesterMNLaplacian.html" title="Figure 4.6.20">Figure 4.6.20</a>.  From this information, we can estimate the Laplacian at Rochester, <span class="process-math">\(\Delta T({\rm{Rochester}})\text{.}\)</span>
+</div> <figure class="figure figure-like"><div class="image-box" style="width: 75%; margin-left: 12.5%; margin-right: 12.5%;"><img src="generated/latex-image/RochesterMNLaplacianPic.svg" role="img" class="contained" alt="Computing the Laplacian near Rochester."></div>
+<figcaption><span class="type">Figure</span><span class="space"> </span><span class="codenumber">4.6.20<span class="period">.</span></span><span class="space"> </span>Temperatures near Rochester, MN.  Hammond is 35 km north of Rochester.  Stewartville is 21 km south of Rochester.  Owatonna is 66 km west of Rochester.  Winona is 87 km east of Rochester.</figcaption></figure> <div class="para logical">
+<div class="para">To start, we estimate</div>
+<div class="displaymath process-math">
+\begin{align*}
+\frac{\partial T}{\partial x}(A) \approx \mathstrut \amp \frac{-0.6^{\circ}C}{66 \ {\rm{km}}}\\
+\frac{\partial T}{\partial x}(B) \approx \mathstrut \amp \frac{-0.3^{\circ}C}{87 \ {\rm{km}}}
+\end{align*}
+</div>
+<div class="para">which gives</div>
+<div class="displaymath process-math">
+\begin{align*}
+\frac{\partial^2 T}{\partial x^2}({\rm{Rochester}}) \approx \mathstrut \amp \frac{\frac{\partial T}{\partial x}(B)-\frac{\partial T}{\partial x}(A)}{(33+43.5) \ {\rm{km}}}\\
+= \mathstrut \amp 7.376 \times 10^{-5} \frac{^{\circ}C}{\rm{km}^2}
+\end{align*}
+</div>
+<div class="para">The positive second-order partial tells us that the temperature is decreasing less as we move to the east (a concave up temperature profile).</div>
+</div> <div class="para logical">
+<div class="para">Also,</div>
+<div class="displaymath process-math">
+\begin{align*}
+\frac{\partial T}{\partial y}(C) \approx \mathstrut \amp \frac{0.2^{\circ}C}{35 \ {\rm{km}}}\\
+\frac{\partial T}{\partial y}(D) \approx \mathstrut \amp \frac{0^{\circ}C}{21 \ {\rm{km}}}
+\end{align*}
+</div>
+<div class="para">which gives</div>
+<div class="displaymath process-math">
+\begin{align*}
+\frac{\partial^2 T}{\partial y^2}({\rm{Rochester}}) \approx \mathstrut \amp \frac{\frac{\partial T}{\partial y}(C)-\frac{\partial T}{\partial y}(D)}{(17.5+10.5) \ {\rm{km}}}\\
+= \mathstrut \amp 2.041 \times 10^{-4} \frac{^{\circ}C}{\rm{km}^2}
+\end{align*}
+</div>
+<div class="para">We conclude that</div>
+<div class="displaymath process-math">
+\begin{equation*}
+\Delta T({\rm{Rochester}}) = \frac{\partial^2 T}{\partial x^2} + \frac{\partial^2 T}{\partial y^2} \approx 2.78 \times 10^{-4} \ \frac{^{\circ}C}{\rm{km}^2} \gt 0.
+\end{equation*}
+</div>
+<div class="para">This means that the temperature <span class="process-math">\(T\)</span> at Rochester is less than the average local temperature which in this case we can estimate to be <span class="process-math">\(\frac{1}{4}(9.1+8.7+8.5+8.2) = 8.625 ^{\circ}C\text{.}\)</span>  Even with no wind acting, we would then expect Rochester to warm.</div>
+</div></article><span class="incontext"><a href="sec_Laplacian.html#LaplacianNearRochester" class="internal">in-context</a></span>
+</body>
+</html>

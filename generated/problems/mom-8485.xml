@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<myopenmath xmlns:pi="http://pretextbook.org/2020/pretext/internal" id="8485">
+<statement>
+<p>
+Convert the polar coordinate <m>\displaystyle{\left({3},\frac{\pi}{{6}}\right)}</m> to Cartesian coordinates.
+</p>
+<p> Enter exact values.</p>
+<p>
+x = <fillin characters="20" />   </p>
+<p>
+y = <fillin characters="20" />   
+</p>
+</statement>
+<solution>
+<p><ul><li><m>\displaystyle\frac{{{3}\sqrt{{{3}}}}}{{2}}</m></li><li><m>\displaystyle\frac{{3}}{{2}}</m></li></ul></p>
+</solution>
+</myopenmath>
+

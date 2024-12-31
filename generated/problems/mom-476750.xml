@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+<myopenmath xmlns:pi="http://pretextbook.org/2020/pretext/internal" id="476750">
+<statement>
+<p>
+Consider the graph below.</p>
+<p>
+<canvas id="plot3d6743cf7e0807e" width="300" height="300" role="img" tabindex="0" aria-label="3D Plot">Not seeing the 3D graph?  <url href="https://www.myopenmath.com/util/mbx.php?id=476750&amp;useflash=true">Try Flash Alternate</url></canvas></p>
+<p>
+Which of the following shows traces for x=-1, x=0, and x=2?</p>
+<p><ol style="list-style-type:upper-alpha"><li><image width="33%"  pi:generated="problems/images/a3efa8efe2ef6c897e50d78bd66d149f.png" />
+</li> 
+<li><image width="33%"  pi:generated="problems/images/db3c9e5d9bd2aab15b3152958b0414bd.png" />
+</li> 
+<li><image width="33%"  pi:generated="problems/images/c2238156ac12307c7d0d819fdc651196.png" />
+</li> 
+<li><image width="33%"  pi:generated="problems/images/6b3b7c15db18bd068e87e4b3be882641.png" />
+</li> 
+</ol></p>
+
+
+</statement>
+<solution>
+<p><ul><li>C: <image width="33%"  pi:generated="problems/images/c2238156ac12307c7d0d819fdc651196.png" />
+</li></ul></p>
+</solution>
+</myopenmath>
+

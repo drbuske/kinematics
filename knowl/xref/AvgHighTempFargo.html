@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en-US" dir="ltr">
+<!--********************************************-->
+<!--*       Generated from PreTeXt source      *-->
+<!--*                                          *-->
+<!--*         https://pretextbook.org          *-->
+<!--*                                          *-->
+<!--********************************************-->
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<meta name="robots" content="noindex, nofollow">
+</head>
+<body class="ignore-math">
+<article class="example example-like"><h4 class="heading">
+<span class="type">Example</span><span xmlns:pf="https://prefigure.org" class="space"> </span><span class="codenumber">2.1.12</span><span xmlns:pf="https://prefigure.org" class="period">.</span><span xmlns:pf="https://prefigure.org" class="space"> </span><span class="title">Average High Temperature in Fargo.</span>
+</h4>
+<div xmlns:pf="https://prefigure.org" class="para">The monthly average high temperature (in <span class="process-math">\(^{\circ}F\)</span>) in Fargo, ND is another example of a periodic data set.  We will use a spreadsheet to determine a sinusoidal model <span class="process-math">\(H(t) = A\sin(\omega t - \phi)+B\)</span> for this data.  Note: Month <span class="process-math">\(t=0\)</span> corresponds to January.</div>
+<figure class="figure figure-like"><div class="sidebyside"><div class="sbsrow" style="margin-left:2.5%;margin-right:2.5%;">
+<div class="sbspanel top" style="width:26.3157894736842%;"><img src="external/FargoHighTempData.jpg" class="contained"></div>
+<div class="sbspanel top" style="width:68.4210526315789%;"><img src="external/FargoHighTempDataGraph.jpg" class="contained"></div>
+</div></div>
+<figcaption xmlns:pf="https://prefigure.org"><span class="type">Figure</span><span class="space"> </span><span class="codenumber">2.1.13<span class="period">.</span></span><span class="space"> </span>Left: High temperature by month in a tabular format in a spreadsheet.  Right: A plot of the average monthly high temperature in Fargo, ND.</figcaption></figure><div xmlns:pf="https://prefigure.org" class="para logical">
+<div class="para">The average of these 12 data values is <span class="process-math">\(B = 52.5^{\circ}F\text{.}\)</span>  Half of the difference of the maximum and minimum average temperatures is <span class="process-math">\(A=32.5^{\circ}F\text{.}\)</span> The period in this example is <span class="process-math">\(T=12\)</span> so that the frequency is <span class="process-math">\(\omega = \frac{2\pi}{12} = \frac{\pi}{6}\text{.}\)</span>  The model</div>
+<div class="displaymath process-math">
+\begin{equation*}
+H(t) = 32.5\sin \left( \frac{\pi}{6}t \right) + 52.5
+\end{equation*}
+</div>
+<div class="para">has a maximum when <span class="process-math">\(\frac{\pi}{6}t = \frac{\pi}{2}\)</span> or <span class="process-math">\(t=3\)</span> months.  Since the data has a maximum at <span class="process-math">\(t=6\)</span> months, our phase shift <span class="process-math">\(\frac{\phi}{\omega} = 6-3 = 3\)</span>  (e.g. <span class="process-math">\(\phi = 3\left(\frac{\pi}{6}\right) = \frac{\pi}{2}\)</span>).  This gives a final model of</div>
+<div class="displaymath process-math">
+\begin{align*}
+H(t)  = \mathstrut \amp 32.5\sin \left( \frac{\pi}{6}(t-3) \right) + 52.5\\
+= \mathstrut \amp 32.5\sin \left( \frac{\pi}{6}t-\frac{\pi}{2} \right) + 52.5.
+\end{align*}
+</div>
+</div>
+<figure class="figure figure-like"><div xmlns:pf="https://prefigure.org" class="image-box" style="width: 75%; margin-left: 12.5%; margin-right: 12.5%;"><img src="external/FargoHighTempDataPost.jpg" class="contained" alt="The Fargo high temperature data fit to a curve."></div>
+<figcaption xmlns:pf="https://prefigure.org"><span class="type">Figure</span><span class="space"> </span><span class="codenumber">2.1.14<span class="period">.</span></span><span class="space"> </span>The Fargo high temperature data compared to our model <span class="process-math">\(H(t) = 32.5\sin \left( \frac{\pi}{6}t-\frac{\pi}{2} \right) + 52.5\text{.}\)</span></figcaption></figure></article><span class="incontext"><a class="internal" href="sec_fourier_series.html#AvgHighTempFargo">in-context</a></span>
+</body>
+</html>

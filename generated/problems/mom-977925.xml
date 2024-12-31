@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<myopenmath xmlns:pi="http://pretextbook.org/2020/pretext/internal" id="977925">
+<statement>
+<p>
+Match each rectangular coordinate expression with the equivalent expression in polar coordinates:</p>
+<p><ol style="list-style-type:upper-alpha">
+<li class="nowrap"> <m>\displaystyle{x}</m></li>
+<li class="nowrap"> <m>\displaystyle{y}</m></li>
+<li class="nowrap"> <m>\displaystyle{x}^{{2}}+{y}^{{2}}</m></li>
+<li class="nowrap"> <m>\displaystyle\frac{{y}}{{x}}</m></li>
+</ol></p>
+<p><ol style="list-style-type:lower-alpha">
+<li><m>\displaystyle{r}{\sin{{\left(\theta\right)}}}</m></li>
+<li><m>\displaystyle{r}{\cos{{\left(\theta\right)}}}</m></li>
+<li><m>\displaystyle{\tan{{\left(\theta\right)}}}</m></li>
+<li><m>\displaystyle{r}^{{2}}</m></li>
+</ol></p> 
+</statement>
+<solution>
+<p><ul><li>b a d c </li></ul></p>
+</solution>
+</myopenmath>
+

@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8"?>
+<myopenmath xmlns:pi="http://pretextbook.org/2020/pretext/internal" id="655037">
+<statement>
+<p>The cross-sections (i.e. traces) of <m>\displaystyle{f{{\left({x},{y}\right)}}}</m> when <m>\displaystyle{x}</m> is fixed at <m>\displaystyle{1}</m> and <m>\displaystyle{y}</m> is fixed at <m>\displaystyle{2}</m> are shown below.</p>
+<table><tabular>     
+
+<row>
+<cell><image width="42%"  pi:generated="problems/images/5bc319111db7b49a7080778c23001a4f.png" />
+</cell>
+<cell><image width="42%"  pi:generated="problems/images/e1b4711ee14dc2c3296c15db22d3d787.png" />
+</cell>
+</row>
+
+</tabular></table><p style="text-align: left;">What is the sign of <m>\displaystyle{\frac{{\partial{f}}}{{\partial{x}}}}{\left({1},{2}\right)}</m>? </p>
+<p><ol style="list-style-type:upper-alpha"><li>Positive</li> 
+<li>Negative</li> 
+<li>Zero</li> 
+</ol></p>
+ <p>What is the sign of <m>\displaystyle{\frac{{\partial{f}}}{{\partial{y}}}}{\left({1},{2}\right)}</m>? </p>
+<p><ol style="list-style-type:upper-alpha"><li>Positive</li> 
+<li>Negative</li> 
+<li>Zero</li> 
+</ol></p>
+ 
+
+</statement>
+<solution>
+<p><ul><li>A: Positive</li><li>C: Zero</li></ul></p>
+</solution>
+</myopenmath>
+

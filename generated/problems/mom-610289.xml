@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<myopenmath xmlns:pi="http://pretextbook.org/2020/pretext/internal" id="610289">
+<statement>
+<image width="50%"  pi:generated="problems/images/2255be3f8479ed89a8b3ce764956f85d.png" /><p>
+Is the line integral of the pictured vector field over the given curve <m>\displaystyle{C}</m> (shown in red) positive, negative, or zero?
+ </p>
+<p><ol style="list-style-type:upper-alpha"><li>Positive</li> 
+<li>Negative</li> 
+<li>Zero</li> 
+</ol></p>
+  
+
+</statement>
+<solution>
+<p><ul><li>C: Zero</li></ul></p>
+</solution>
+</myopenmath>
+

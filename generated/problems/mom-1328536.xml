@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="utf-8"?>
+<myopenmath xmlns:pi="http://pretextbook.org/2020/pretext/internal" id="1328536">
+<statement>
+<p>
+The graph below shows a fixed (solid blue) vector <m>\displaystyle{\color{blue}{\vec{{{a}}}}}</m>, and a movable (dashed red) vector <m>\displaystyle{\color{red}{\vec{{{b}}}}}</m>. Click and drag the tip of vector <m>\displaystyle{\color{red}{\vec{{{b}}}}}</m> to move it.</p>
+<p>
+As you move the vector, the value of the dot product <m>\displaystyle\vec{{{a}}}\cdot\vec{{{b}}}</m> will be displayed at the top-left corner of the graph. The measurement of the angle <m>\displaystyle\theta</m> between the vectors is shown at the bottom-left corner.</p>
+<p>
+Sometimes the dot product is a positive number, sometimes it is negative, and other times it is zero. Move the vector to see this happen.
+</p>
+<p><ul>
+  <li>When the dot product is <em>negative</em>, what is true about the angle between the vectors?<p><ol style="list-style-type:upper-alpha"><li>Greater than <m>\displaystyle{90}^{\circ}</m></li> 
+<li>Less than <m>\displaystyle{90}^{\circ}</m></li> 
+<li>Equal to <m>\displaystyle{90}^{\circ}</m></li> 
+</ol></p>
+</li>
+  <li>When the dot product is <em>positive</em>, what is true about the angle between the vectors?<p><ol style="list-style-type:upper-alpha"><li>Equal to <m>\displaystyle{90}^{\circ}</m></li> 
+<li>Less than <m>\displaystyle{90}^{\circ}</m></li> 
+<li>Greater than <m>\displaystyle{90}^{\circ}</m></li> 
+</ol></p>
+</li>
+  <li>When the dot product is <em>zero</em>, what is true about the angle between the vectors?<p><ol style="list-style-type:upper-alpha"><li>Equal to <m>\displaystyle{90}^{\circ}</m></li> 
+<li>Less than <m>\displaystyle{90}^{\circ}</m></li> 
+<li>Greater than <m>\displaystyle{90}^{\circ}</m></li> 
+</ol></p>
+</li>
+</ul></p>
+
+</statement>
+<solution>
+<p><ul><li>A: Greater than <m>\displaystyle{90}^{\circ}</m></li><li>B: Less than <m>\displaystyle{90}^{\circ}</m></li><li>A: Equal to <m>\displaystyle{90}^{\circ}</m></li></ul></p>
+</solution>
+</myopenmath>
+

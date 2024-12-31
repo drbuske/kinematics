@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en-US">
+<!--********************************************-->
+<!--*       Generated from PreTeXt source      *-->
+<!--*                                          *-->
+<!--*         https://pretextbook.org          *-->
+<!--*                                          *-->
+<!--********************************************-->
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<meta name="robots" content="noindex, nofollow">
+</head>
+<body class="ignore-math"><article class="example example-like"> Models for the Windchill Index have evolved over time.  Until the 1970s, the coldest parts of Canada reported the original Windchill Index, a three or four digit number with units of kilocalories/hour per square meter. Each individual calibrated the scale of numbers personally, through experience. The chart also provided general guidance to comfort and hazard through threshold values of the index, such as 1400, which was the threshold for frostbite.  The original formula for the index was<div class="displaymath process-math" data-contains-math-knowls="">
+\begin{equation*}
+W(v,T) = (10\sqrt{v}-v+10.5)(33-T)
+\end{equation*}
+</div>where <span class="process-math">\(W\)</span> was the Windchill Index, <span class="process-math">\(v\)</span> was the wind velocity (in <span class="process-math">\(m/s\)</span>), and <span class="process-math">\(T\)</span> was the air temperature (in <span class="process-math">\(^{\circ}C\)</span>). Using this model, <span class="process-math">\(\frac{\partial W}{\partial T}\)</span> can be found by holding <span class="process-math">\(v\)</span> constant and differentiating <span class="process-math">\(W\)</span> with respect to <span class="process-math">\(T\text{.}\)</span>  This gives<div class="displaymath process-math" data-contains-math-knowls="">
+\begin{equation*}
+\displaystyle \frac{\partial W}{\partial T} = -(10\sqrt{v} - v + 10.5).
+\end{equation*}
+</div>For example, <span class="process-math">\(\displaystyle W(10,-5) \approx 1220\)</span> (not quite frostbite threshold) and <span class="process-math">\(\frac{\partial W}{\partial T}(10,-5) = -(10\sqrt{10} - 10 + 10.5) \approx -32.1\text{.}\)</span>  This tells us that when the wind velocity is <span class="process-math">\(10 \ m/s\)</span> and the air temperature is <span class="process-math">\(-5^{\circ}C\text{,}\)</span> the rate at which the Windchill Index is changing from 1220 kilocalories/hour per square meter is -32.1 (kilocalories/hour per square meter per degree Celsius).  Simply put, if wind remained at <span class="process-math">\(10 \ m/s\)</span> but the air temperature warmed to <span class="process-math">\(-4^{\circ}C\text{,}\)</span> we could expect the Windchill Index to be roughly 1187.9 (even less worry of frostbite).</article></body>
+</html>

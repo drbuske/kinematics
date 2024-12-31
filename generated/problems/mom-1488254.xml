@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<myopenmath xmlns:pi="http://pretextbook.org/2020/pretext/internal" id="1488254">
+<statement>
+<p>The graph below shows points on the function <m>\displaystyle{y}={P}{\left({t}\right)}</m>, which is periodic with a period of <m>\displaystyle{T}={6}</m>.
+  </p><image width="67%"  pi:generated="problems/images/2795d4bab1019c165808148878aed604.png" />
+  <p>
+  Find at least four <em>different</em> <m>\displaystyle{t}</m> values that are <em>not</em> shown on this graph, such that <m>\displaystyle{P}{\left({t}\right)}={6}</m>.
+  </p>
+<p>
+  Give your answer as a list of numbers separated by commas, such as: <m>\displaystyle-{5},-{2},{6},{9}</m>
+  </p>
+<p>
+   <m>\displaystyle{t}=</m> <fillin characters="20" /></p>
+
+</statement>
+<solution>
+<p><ul><li>Answers may vary</li></ul></p>
+</solution>
+</myopenmath>
+

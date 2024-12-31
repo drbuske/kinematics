@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="utf-8"?>
+<myopenmath xmlns:pi="http://pretextbook.org/2020/pretext/internal" id="643182">
+<statement>
+<p>
+For each oriented surface described below, determine whether the flux of <m>\displaystyle\vec{{{F}}}={z}\vec{{{i}}}</m> is positive, negative, or zero.</p>
+<p>
+If the surface <m>\displaystyle{S}</m> is a flat square in the <m>\displaystyle{y}{z}</m>-plane (<m>\displaystyle{0}\leq{y}\leq{2}</m> and <m>\displaystyle{2}\leq{z}\leq{5}</m>)  oriented outward (in the positive <m>\displaystyle{x}</m> direction), then the flux of <m>\displaystyle\vec{{{F}}}={z}\vec{{{i}}}</m> through <m>\displaystyle{S}</m> is
+</p>
+<p><ol style="list-style-type:upper-alpha"><li>Positive</li> 
+<li>Negative</li> 
+<li>Zero</li> 
+</ol></p>
+<p>
+If the surface <m>\displaystyle{S}</m> is a flat square in the <m>\displaystyle{y}{z}</m>-plane (<m>\displaystyle-{2}\leq{y}\leq{0}</m> and <m>\displaystyle-{5}\leq{z}\leq-{2}</m>) oriented outward (in the positive <m>\displaystyle{x}</m> direction), then the flux of <m>\displaystyle\vec{{{F}}}={z}\vec{{{i}}}</m> through <m>\displaystyle{S}</m> is
+</p>
+<p><ol style="list-style-type:upper-alpha"><li>Positive</li> 
+<li>Negative</li> 
+<li>Zero</li> 
+</ol></p>
+                                                                                                                 If the surface <m>\displaystyle{S}</m> is a flat square in the <m>\displaystyle{x}{y}</m>-plane (<m>\displaystyle{2}\leq{x}\leq{5}</m> and <m>\displaystyle{2}\leq{y}\leq{5}</m>) oriented downward (in the negative <m>\displaystyle{z}</m> direction), then the flux of <m>\displaystyle\vec{{{F}}}={z}\vec{{{i}}}</m> through <m>\displaystyle{S}</m> is
+<p><ol style="list-style-type:upper-alpha"><li>Positive</li> 
+<li>Negative</li> 
+<li>Zero</li> 
+</ol></p>
+<p>
+If the surface <m>\displaystyle{S}</m> is a flat square in the plane <m>\displaystyle{z}={7}</m> (<m>\displaystyle{2}\leq{x}\leq{5}</m> and <m>\displaystyle{2}\leq{y}\leq{5}</m>) oriented downward (in the negative <m>\displaystyle{z}</m> direction), then the flux of <m>\displaystyle\vec{{{F}}}={z}\vec{{{i}}}</m> through <m>\displaystyle{S}</m> is
+</p>
+<p><ol style="list-style-type:upper-alpha"><li>Positive</li> 
+<li>Negative</li> 
+<li>Zero</li> 
+</ol></p>
+<p>
+If the surface <m>\displaystyle{S}</m> is a flat square in the <m>\displaystyle{x}{z}</m>-plane (<m>\displaystyle{2}\leq{x}\leq{5}</m> and <m>\displaystyle{2}\leq{z}\leq{5}</m>) oriented rightward (in the positive <m>\displaystyle{y}</m> direction), then the flux of <m>\displaystyle\vec{{{F}}}={z}\vec{{{i}}}</m> through <m>\displaystyle{S}</m> is
+</p>
+<p><ol style="list-style-type:upper-alpha"><li>Positive</li> 
+<li>Negative</li> 
+<li>Zero</li> 
+</ol></p>
+
+
+</statement>
+<solution>
+<p><ul><li>A: Positive</li><li>B: Negative</li><li>C: Zero</li><li>C: Zero</li><li>C: Zero</li></ul></p>
+</solution>
+</myopenmath>
+

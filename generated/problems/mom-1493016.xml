@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<myopenmath xmlns:pi="http://pretextbook.org/2020/pretext/internal" id="1493016">
+<statement>
+<p>
+Given  <m>\displaystyle{f{{\left({x},{y}\right)}}}={4}{e}^{{{2}{x}}}{\sin{{\left({2}{y}\right)}}}</m></p>
+<p>
+then <m>\displaystyle\nabla{f{{\left({0},\frac{\pi}{{2}}\right)}}}</m> = <fillin characters="8" />   <m>\displaystyle\vec{{{i}}}</m> + <fillin characters="8" />   <m>\displaystyle\vec{{{j}}}</m>
+</p>
+</statement>
+<solution>
+<p><ul><li>0</li><li>-8</li></ul></p>
+</solution>
+</myopenmath>
+

@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<myopenmath xmlns:pi="http://pretextbook.org/2020/pretext/internal" id="182774">
+<statement>
+<p>
+Given <m>\displaystyle\vec{{b}}</m> = <m>\displaystyle-{3}\vec{{i}}-{8}\vec{{j}}</m> and <m>\displaystyle\vec{{v}}</m> = <m>\displaystyle{6}\vec{{i}}-{6}\vec{{j}}</m>, find <m>\displaystyle\vec{{b}}</m> + <m>\displaystyle\vec{{v}}</m>.</p>
+<p>
+<m>\displaystyle\vec{{b}}</m> + <m>\displaystyle\vec{{v}}</m> = <fillin characters="3" /> <m>\displaystyle\vec{{i}}</m> + <fillin characters="3" /> <m>\displaystyle\vec{{j}}</m>
+</p>
+</statement>
+<solution>
+<p><ul><li>3</li><li>-14</li></ul></p>
+</solution>
+</myopenmath>
+

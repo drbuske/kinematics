@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+<myopenmath xmlns:pi="http://pretextbook.org/2020/pretext/internal" id="750291">
+<statement>
+<p>
+The Laplacian of a scalar field is defined as <m>\displaystyle\Delta{f}=\nabla\cdot\nabla{f}</m>.</p>
+<p>
+<em>Note: Fully simplify all your answers.</em></p>
+<p>
+Compute the Laplacian of <m>\displaystyle{f{{\left({x},{y},{z}\right)}}}={x}^{{2}}+{y}^{{2}}+{z}^{{2}}</m>.
+</p>
+<p><ul>
+  <li><m>\displaystyle\Delta{f}=</m><fillin characters="20" />  
+</li>
+</ul></p>
+Compute the Laplacian of <m>\displaystyle{f{{\left({x},{y},{z}\right)}}}=\sqrt{{{x}^{{2}}+{y}^{{2}}+{z}^{{2}}}}</m>.
+<p><ul>
+  <li><m>\displaystyle\Delta{f}=</m><fillin characters="20" />  
+</li>
+</ul></p>
+
+
+</statement>
+<solution>
+<p><ul><li><m>\displaystyle{6}</m></li><li><m>\displaystyle\frac{{2}}{\sqrt{{{x}^{{2}}+{y}^{{2}}+{z}^{{2}}}}}</m></li></ul></p>
+</solution>
+</myopenmath>
+

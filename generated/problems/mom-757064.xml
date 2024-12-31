@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="utf-8"?>
+<myopenmath xmlns:pi="http://pretextbook.org/2020/pretext/internal" id="757064">
+<statement>
+<p>Find the approximate value of <m>\displaystyle{\int_{{2}}^{{4}}}{x}^{{2}}{\left.{d}{x}\right.}</m>  using the trapezoidal rule with five subintervals. Draw a graph to illustrate.</p>
+<p>The estimated value, <m>\displaystyle{T}_{{5}}=</m>  <fillin characters="20" />
+  </p>
+<p>
+  Give your answer accurate to four decimal places.</p>
+<p>This answer is an: </p>
+<p><ol style="list-style-type:upper-alpha"><li>overestimate</li> 
+<li>underestimate</li> 
+</ol></p>
+<p>Explanation of answer above: </p>
+<p><ol style="list-style-type:upper-alpha"><li>the function is decreasing</li> 
+<li>the function is concave down</li> 
+<li>the function is concave up</li> 
+<li>the function is increasing</li> 
+</ol></p>
+
+
+</statement>
+<solution>
+<p><ul><li>18.72</li><li>A: overestimate</li><li>C: the function is concave up</li></ul></p>
+</solution>
+</myopenmath>
+

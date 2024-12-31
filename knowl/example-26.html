@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en-US">
+<!--********************************************-->
+<!--*       Generated from PreTeXt source      *-->
+<!--*                                          *-->
+<!--*         https://pretextbook.org          *-->
+<!--*                                          *-->
+<!--********************************************-->
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<meta name="robots" content="noindex, nofollow">
+</head>
+<body class="ignore-math">
+<article class="example example-like"><h4 class="heading">
+<span class="type">Example</span><span class="space"> </span><span class="codenumber">2.2.16</span><span class="period">.</span><span class="space"> </span><span class="title">One-Dimensional Advection.</span>
+</h4> <div class="para">The current temperature in Jackson, MS, is <span class="process-math">\(21^{\circ}C\text{.}\)</span>  In Memphis, TN (318 km to the north) the current temperature is <span class="process-math">\(15^{\circ}C\text{.}\)</span> The average wind between the two cities is 37 km/hr from the north.  Suppose that the only process affecting temperature is advection and assume the wind stays constant.   We can now determine the temperature in Jackson in 6 hours.</div> <div class="para logical">
+<div class="para">Mathematically, we model the current wind using a one-dimensional vector (e.g. a scalar), <span class="process-math">\(v_{curr}\text{.}\)</span>  We know that <span class="process-math">\(| v_{curr} | = 37\)</span> km/hr. So,</div>
+<div class="displaymath process-math">
+\begin{align*}
+\displaystyle T_{fcst} = \mathstrut \amp T_{curr} + \Delta t | v_{curr} | \left( \frac{T_{upwind} - T_{downwind}}{\Delta x} \right) \\
+= \mathstrut \amp 21^{\circ}C + (6 \ hr)(37 \ km/hr)\left( \frac{16^{\circ}C - 21^{\circ}C}{318 \ km} \right) \\
+\approx \mathstrut \amp 17.5^{\circ}C.
+\end{align*}
+</div>
+</div></article><span class="incontext"><a href="sec_dotproduct.html#example-26" class="internal">in-context</a></span>
+</body>
+</html>

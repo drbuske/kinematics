@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en-US">
+<!--********************************************-->
+<!--*       Generated from PreTeXt source      *-->
+<!--*                                          *-->
+<!--*         https://pretextbook.org          *-->
+<!--*                                          *-->
+<!--********************************************-->
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<meta name="robots" content="noindex, nofollow">
+</head>
+<body class="ignore-math"><div class="answer solution-like"><div class="para logical">
+<div class="para">We evaluate the difference quotient</div>
+<div class="displaymath process-math" data-contains-math-knowls="./knowl/geometricideapartial.html ./knowl/PartialXParaboloid.html">
+\begin{align*}
+\frac{\Delta z}{\Delta x}  = \mathstrut \amp \frac{f(x+\Delta x,y)-f(x,y)}{\Delta x} \\
+= \mathstrut \amp \frac{(9-(x+\Delta x)^2-y^2) - (9-x^2-y^2)}{\Delta x}. 
+\end{align*}
+</div>
+<div class="para">When we then fix <span class="process-math">\(y=2\)</span> and let <span class="process-math">\(\Delta x \rightarrow 0\text{,}\)</span> we find the partial derivative <span class="process-math">\(\frac{\partial f}{\partial x}(1,2)\text{.}\)</span>  That is,</div>
+<div class="displaymath process-math" data-contains-math-knowls="./knowl/geometricideapartial.html ./knowl/PartialXParaboloid.html">
+\begin{align*}
+\frac{\partial f}{\partial x}(1,2) = \mathstrut \amp \lim_{\Delta x \rightarrow 0} \frac{\Delta z}{\Delta x}\\
+= \mathstrut \amp \lim_{\Delta x \rightarrow 0}\frac{f(x+\Delta x,2)-f(x,2)}{\Delta x}  \\
+= \mathstrut \amp \lim_{\Delta y \rightarrow 0}\frac{(5-(x+\Delta x)^2) - (5-x^2)}{\Delta x} \\
+= \mathstrut \amp -2x.
+\end{align*}
+</div>
+<div class="para">When <span class="process-math">\(x=1\text{,}\)</span> we see that <span class="process-math">\(\frac{\partial f}{\partial x}(1,2)=-2\text{.}\)</span>  Compare this result to <a href="" class="xref" data-knowl="./knowl/geometricideapartial.html" title="Example 3.1.2: Geometric Idea of the Partial Derivative">Example 3.1.2</a> and <a href="" class="xref" data-knowl="./knowl/PartialXParaboloid.html" title="Checkpoint 3.1.8: Estimating the Value of \frac{\partial f}{\partial x}">Checkpoint 3.1.8</a>.</div>
+</div></div></body>
+</html>

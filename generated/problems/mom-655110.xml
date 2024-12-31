@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="utf-8"?>
+<myopenmath xmlns:pi="http://pretextbook.org/2020/pretext/internal" id="655110">
+<statement>
+<p>
+The value <m>\displaystyle{V}</m> of a used car (in dollars) is a function of the number of miles <m>\displaystyle{m}</m> it has been driven, its age <m>\displaystyle{a}</m> in years, and its original cost <m>\displaystyle{c}</m> in dollars when new.  That is, <m>\displaystyle{V}={f{{\left({m},{a},{c}\right)}}}</m>.  </p>
+<p>
+Do you expect <m>\displaystyle{\frac{{\partial{V}}}{{\partial{m}}}}</m> to be positive, negative, or zero?  
+</p>
+<p><ol style="list-style-type:upper-alpha"><li>Positive</li> 
+<li>Negative</li> 
+<li>Zero</li> 
+</ol></p>
+<p>
+Do you expect <m>\displaystyle{\frac{{\partial{V}}}{{\partial{a}}}}</m> to be positive, negative, or zero?  
+</p>
+<p><ol style="list-style-type:upper-alpha"><li>Positive</li> 
+<li>Negative</li> 
+<li>Zero</li> 
+</ol></p>
+<p>
+Do you expect <m>\displaystyle{\frac{{\partial{V}}}{{\partial{c}}}}</m> to be positive, negative, or zero?  
+</p>
+<p><ol style="list-style-type:upper-alpha"><li>Positive</li> 
+<li>Negative</li> 
+<li>Zero</li> 
+</ol></p>
+<p>
+What are the units of <m>\displaystyle{\frac{{\partial{V}}}{{\partial{c}}}}</m>?  
+</p>
+<p><ol style="list-style-type:upper-alpha"><li>Dollars per mile per year</li> 
+<li>Dollars per mile</li> 
+<li>miles <asterisk/> years</li> 
+<li>Dollars</li> 
+<li>Dollars per year</li> 
+<li>Dollars per dollar (i.e. unitless)</li> 
+</ol></p>
+
+
+</statement>
+<solution>
+<p><ul><li>B: Negative</li><li>B: Negative</li><li>A: Positive</li><li>F: Dollars per dollar (i.e. unitless)</li></ul></p>
+</solution>
+</myopenmath>
+

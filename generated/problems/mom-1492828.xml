@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<myopenmath xmlns:pi="http://pretextbook.org/2020/pretext/internal" id="1492828">
+<statement>
+<p>
+Use the contour map to estimate the sign of the derivatives at point P.</p><image width="54%"  pi:generated="problems/images/id64293pic3.jpg" /><p>
+<m>\displaystyle{f}_{{x}}</m> is </p>
+<p><ol style="list-style-type:upper-alpha"><li>negative (<less/>0)<less/>/label<greater/></li> 
+<li>positive (<greater/>0)</li> 
+</ol></p>
+ at point P<p>
+<m>\displaystyle{f}_{{y}}</m> is </p>
+<p><ol style="list-style-type:upper-alpha"><li>negative (<less/>0)<less/>/label<greater/></li> 
+<li>positive (<greater/>0)</li> 
+</ol></p>
+ at point P
+
+</statement>
+<solution>
+<p><ul><li>A: negative (<less/>0)<less/>/li<greater/></li><li>A: negative (<less/>0)<less/>/li<greater/></li></ul></p>
+</solution>
+</myopenmath>
+

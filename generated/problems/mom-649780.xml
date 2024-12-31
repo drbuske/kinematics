@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<myopenmath xmlns:pi="http://pretextbook.org/2020/pretext/internal" id="649780">
+<statement>
+<p>
+For each vector field below, decide whether it appears to have nonzero curl at the origin.  Each vector field is shown in the <m>\displaystyle{x}{y}</m>-plane; it has no <m>\displaystyle{z}</m>-component and is independent of <m>\displaystyle{z}</m>.  </p><image width="50%"  pi:generated="problems/images/42a365c5d55254c3aec6c9048dfc0ecb.png" /><p><ol style="list-style-type:upper-alpha"><li>Nonzero curl</li> 
+<li>Zero curl</li> 
+</ol></p>
+<image width="50%"  pi:generated="problems/images/7da4987d9bf89c61bab152a99c4892ec.png" /><p><ol style="list-style-type:upper-alpha"><li>Nonzero curl</li> 
+<li>Zero curl</li> 
+</ol></p>
+
+
+</statement>
+<solution>
+<p><ul><li>A: Nonzero curl</li><li>A: Nonzero curl</li></ul></p>
+</solution>
+</myopenmath>
+

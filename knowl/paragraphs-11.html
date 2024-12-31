@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en-US">
+<!--********************************************-->
+<!--*       Generated from PreTeXt source      *-->
+<!--*                                          *-->
+<!--*         https://pretextbook.org          *-->
+<!--*                                          *-->
+<!--********************************************-->
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<meta name="robots" content="noindex, nofollow">
+</head>
+<body class="ignore-math">
+<section class="paragraphs"><h3 class="heading"><span class="title">Defining the Cross Product Algebraically.</span></h3> <div class="para">There is an equivalent means to compute a cross product in which no angles, parallelograms, or diagrams are needed!  But before stating an algebraic definition of cross product, we take a side trip into <span class="process-math">\(3 \times 3\)</span> matrices in order to help us in a computation we later perform.  To begin, we define a number called a determinant that can be used to ``determine'' key information about the matrix when thought of as an operator.  Rather than dwell on the purpose of this number, we will focus only on how it is computed.</div> <div class="para logical">
+<div class="para">You have likely computed the determinant of a <span class="process-math">\(2 \times 2\)</span> matrix before:</div>
+<div class="displaymath process-math">
+\begin{equation*}
+\det \left( \begin{array}{cc} a \amp b \\ c \amp d \end{array}\right) = ad-bc
+\end{equation*}
+</div>
+<div class="para">But how can this be extended to larger matrices?  Below we state how it is done for <span class="process-math">\(3 \times 3\)</span> matrices.</div>
+</div> <article class="definition definition-like"><h4 class="heading">
+<span class="type">Definition</span><span class="space"> </span><span class="codenumber">2.3.16</span><span class="period">.</span><span class="space"> </span><span class="title">Determinant.</span>
+</h4> The <dfn class="terminology">determinant</dfn>  of a <span class="process-math">\(3 \times 3\)</span> matrix is given by<div class="displaymath process-math">
+\begin{align*}
+\det\left(\begin{array}{ccc}a_1 \amp a_2 \amp a_3 \\ b_1 \amp b_2 \amp b_3 \\ c_1 \amp c_2 \amp c_3 \end{array}\right) = \mathstrut \amp a_1 \det\left(\begin{array}{cc}b_2 \amp b_3 \\ c_2 \amp c_3\end{array}\right) - a_2 \det\left(\begin{array}{cc}b_1 \amp b_3 \\ c_1 \amp c_3\end{array}\right) + a_3 \det\left(\begin{array}{cc}b_1 \amp b_2 \\ c_1 \amp c_2\end{array}\right) \\
+= \mathstrut \amp a_1(b_2c_3 - c_2b_3) - a_2(b_1c_3 - c_1b_3) + a_3(b_1c_2 - c_1b_2)
+\end{align*}
+</div></article> <div class="para">There are several other ways to compute determinants of <span class="process-math">\(3 \times 3\)</span> matrices.  Our definition is typically thought of as an expansion about the first row.  One could expand about any row or column and, with the use of proper signs in each term, arrive at the same result.  However, for our purposes we will always expand about the first row of elements.</div> <article class="example example-like"><h4 class="heading">
+<span class="type">Example</span><span class="space"> </span><span class="codenumber">2.3.17</span><span class="period">.</span><span class="space"> </span><span class="title">A <span class="process-math">\(3 \times 3\)</span> Determinant.</span>
+</h4>
+<div class="displaymath process-math">
+\begin{align*}
+\det\left(\begin{array}{ccc}2 \amp -3 \amp 1 \\ 2 \amp 0 \amp -1 \\ 1 \amp 4 \amp 5 \end{array}\right) =  \mathstrut \amp 2 \cdot \det \left( \begin{array}{cc}0 \amp -1 \\ 4 \amp 5 \end{array} \right) - (-3) \cdot \det \left( \begin{array}{cc} 2 \amp -1 \\ 1 \amp 5 \end{array} \right) + 1 \cdot \det \left( \begin{array}{cc} 2 \amp 0 \\ 1 \amp 4 \end{array} \right)\\
+=  \mathstrut \amp 2 \cdot (0-(-4)) + 3 \cdot (10-(-1)) + 1 \cdot (8-0) \\
+=  \mathstrut \amp 2 \cdot 4 + 3 \cdot 11 + 1 \cdot 8 \\
+=  \mathstrut \amp 49.
+\end{align*}
+</div></article> <article class="exercise exercise-like"><a href="" class="exercise-knowl original" data-knowl="./knowl/DeterminantComputations-hidden.html" title="Checkpoint 2.3.18: Determinant Computations"><h4 class="heading">
+<span class="type">Checkpoint</span><span class="space"> </span><span class="codenumber">2.3.18</span><span class="period">.</span><span class="space"> </span><span class="title">Determinant Computations.</span>
+</h4></a></article></section><span class="incontext"><a href="sec_cross_product.html#paragraphs-11" class="internal">in-context</a></span>
+</body>
+</html>

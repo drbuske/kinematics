@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<myopenmath xmlns:pi="http://pretextbook.org/2020/pretext/internal" id="886849">
+<statement>
+<p>An unreal (and goofy!) contour map for temperature <m>\displaystyle{T}{\left({x},{y}\right)}</m> is shown below.</p><image width="81%"  pi:generated="problems/images/USVFContourCombined.jpg" /><p>Which of the following is a gradient vector field <m>\displaystyle\nabla{T}{\left({x},{y}\right)}</m> for this temperature function <m>\displaystyle{T}{\left({x},{y}\right)}</m>? </p>
+<p><ol style="list-style-type:upper-alpha"><li><image width="81%"  pi:generated="problems/images/USVFaCombined.jpg" /></li> 
+<li><image width="81%"  pi:generated="problems/images/USVFbCombined.jpg" /></li> 
+<li><image width="81%"  pi:generated="problems/images/USVFcCombined.jpg" /></li> 
+</ol></p>
+
+
+</statement>
+<solution>
+<p><ul><li>A: <image width="81%"  pi:generated="problems/images/USVFaCombined.jpg" /></li></ul></p>
+</solution>
+</myopenmath>
+

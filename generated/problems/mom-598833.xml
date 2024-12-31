@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<myopenmath xmlns:pi="http://pretextbook.org/2020/pretext/internal" id="598833">
+<statement>
+<p>
+A contour map for a function <m>\displaystyle{f}</m> is shown.</p><image width="33%"  pi:generated="problems/images/0741a94dfb69158e3820ddf3cb3fb42c.png" /><p>
+Use the contour map to estimate the value of <m>\displaystyle{f{{\left(-{2},{7}\right)}}}</m></p>
+<p>
+<m>\displaystyle{f{{\left(-{2},{7}\right)}}}\approx</m> <fillin characters="20" />
+</p>
+</statement>
+<solution>
+<p><ul><li>14.8</li></ul></p>
+</solution>
+</myopenmath>
+

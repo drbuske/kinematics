@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en-US" dir="ltr">
+<!--********************************************-->
+<!--*       Generated from PreTeXt source      *-->
+<!--*                                          *-->
+<!--*         https://pretextbook.org          *-->
+<!--*                                          *-->
+<!--********************************************-->
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<meta name="robots" content="noindex, nofollow">
+</head>
+<body class="ignore-math">
+<article class="example example-like"><h4 class="heading">
+<span class="type">Example</span><span xmlns:pf="https://prefigure.org" class="space"> </span><span class="codenumber">2.2.8</span><span xmlns:pf="https://prefigure.org" class="period">.</span><span xmlns:pf="https://prefigure.org" class="space"> </span><span class="title">Fitting a Trigonometric Polynomial to Geopotential Heights.</span>
+</h4>
+<div xmlns:pf="https://prefigure.org" class="para logical">
+<div class="para">If we also use the second harmonic (i.e. take <span class="process-math">\(m=2\)</span>) on the geopotential height data from <a href="sec_trig_polynomials.html#GeopotentialHeightsFirstHarmonic" class="xref" data-knowl="./knowl/xref/GeopotentialHeightsFirstHarmonic.html" data-reveal-label="Reveal" data-close-label="Close" title="Example 2.2.5: Fitting a Sinusoid to Geopotential Heights">Example 2.2.5</a>, we then find the best periodic function of the form</div>
+<div class="displaymath process-math" data-contains-math-knowls="./knowl/xref/GeopotentialHeightsFirstHarmonic.html">
+\begin{equation*}
+a_0 + a_1\cos(\omega t) + b_1\sin(\omega t)+a_2\cos(2\omega t) + b_2\sin(2\omega t)
+\end{equation*}
+</div>
+<div class="para">to fit the data.  In addition to the values of <span class="process-math">\(a_0\text{,}\)</span> <span class="process-math">\(a_1\text{,}\)</span> and <span class="process-math">\(b_1\)</span> found earlier, we compute:</div>
+<div class="displaymath process-math" data-contains-math-knowls="./knowl/xref/GeopotentialHeightsFirstHarmonic.html">
+\begin{align*}
+a_2  = \mathstrut \amp \displaystyle \frac{2}{N}\sum y_n \cos(2 \omega t_n) \approx -21.41 \\
+b_2  =  \mathstrut \amp \displaystyle \frac{2}{N} \sum y_n \sin(2 \omega t_n) \approx 40.21
+\end{align*}
+</div>
+</div>
+<div xmlns:pf="https://prefigure.org" class="para logical">
+<div class="para">The resulting model,</div>
+<div class="displaymath process-math">
+\begin{align*}
+f(t) = \mathstrut \amp 5656.45 + 44.73\cos\left( \frac{2\pi}{360} t\right) + 12.79\sin\left(\frac{2\pi}{360} t\right) \\
+\mathstrut \amp -21.41\cos\left( 2\cdot \frac{2\pi}{360} t\right)+ 40.21\sin\left(2\cdot \frac{2\pi}{360} t\right)
+\end{align*}
+</div>
+<div class="para">is no longer a sinusoid.  However, it remains periodic and does appear to fit the data a bit better.</div>
+</div>
+<figure class="figure figure-like"><div xmlns:pf="https://prefigure.org" class="image-box" style="width: 90%; margin-left: 5%; margin-right: 5%;"><img src="external/GeopotentialHeightsNov10202345NSecondOrder.jpg" class="contained" alt="Geopotential heights at 45 degrees north as a function of longitude t and second harmonics."></div>
+<figcaption xmlns:pf="https://prefigure.org"><span class="type">Figure</span><span class="space"> </span><span class="codenumber">2.2.9<span class="period">.</span></span><span class="space"> </span>500 mb geopotential heights <span class="process-math">\(Z\)</span> at <span class="process-math">\(45^{\circ}N\)</span> modeled by <span class="process-math">\(f(t) = 5656.45 + 44.73\cos\left( \frac{2\pi}{360} t\right) + 12.79\sin\left(\frac{2\pi}{360} t\right)\)</span><span class="process-math">\(-21.41\cos\left(2 \cdot \frac{2\pi}{360} t\right) + 40.21\sin\left(2\cdot \frac{2\pi}{360} t\right).\)</span></figcaption></figure></article><span class="incontext"><a class="internal" href="sec_trig_polynomials.html#GeopotentialHeightsSecondHarmonic">in-context</a></span>
+</body>
+</html>

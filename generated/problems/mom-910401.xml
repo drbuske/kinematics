@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<myopenmath xmlns:pi="http://pretextbook.org/2020/pretext/internal" id="910401">
+<statement>
+<p>Given <m>\displaystyle{f{{\left({x},{y}\right)}}}={3}{x}^{{6}}+{2}{x}{y}^{{4}}+{y}^{{2}}</m>, find the following partials. </p>
+<p><m>\displaystyle{\frac{{\partial{f}}}{{\partial{x}}}}=</m>  <fillin characters="20" />  
+</p>
+<p><m>\displaystyle{\frac{{\partial{f}}}{{\partial{y}}}}=</m>  <fillin characters="20" />  
+</p>
+
+</statement>
+<solution>
+<p><ul><li><m>\displaystyle{18}{x}^{{5}}+{2}{y}^{{4}}</m></li><li><m>\displaystyle{8}{x}{y}^{{3}}+{2}{y}</m></li></ul></p>
+</solution>
+</myopenmath>
+

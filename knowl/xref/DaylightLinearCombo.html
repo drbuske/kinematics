@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en-US" dir="ltr">
+<!--********************************************-->
+<!--*       Generated from PreTeXt source      *-->
+<!--*                                          *-->
+<!--*         https://pretextbook.org          *-->
+<!--*                                          *-->
+<!--********************************************-->
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<meta name="robots" content="noindex, nofollow">
+</head>
+<body class="ignore-math">
+<article class="example example-like"><h4 class="heading">
+<span class="type">Example</span><span xmlns:pf="https://prefigure.org" class="space"> </span><span class="codenumber">2.1.16</span><span xmlns:pf="https://prefigure.org" class="period">.</span><span xmlns:pf="https://prefigure.org" class="space"> </span><span class="title">Modifying the Hours of Daylight Model.</span>
+</h4>
+<div xmlns:pf="https://prefigure.org" class="para logical">
+<div class="para">Our model for hours of daylight at 45 degrees North latitude (<a href="sec_fourier_series.html#DayLengths" class="xref" data-knowl="./knowl/xref/DayLengths.html" data-reveal-label="Reveal" data-close-label="Close" title="Example 2.1.5: Day Lengths">Example 2.1.5</a>) was given by</div>
+<div class="displaymath process-math" data-contains-math-knowls="./knowl/xref/DayLengths.html ./knowl/xref/sinedifferenceidentity.html">
+\begin{equation*}
+H(t) = 3.4\sin \left( \frac{2\pi}{365}t-\frac{159.5\pi}{365} \right) + 12
+\end{equation*}
+</div>
+<div class="para">where <span class="process-math">\(t\)</span> represents the number of days since the start of the year.   Applying trigonometric identity <a href="sec_fourier_series.html#sinedifferenceidentity" class="xref" data-knowl="./knowl/xref/sinedifferenceidentity.html" data-reveal-label="Reveal" data-close-label="Close" title="Equation 2.1">(2.1)</a> gives</div>
+<div class="displaymath process-math" data-contains-math-knowls="./knowl/xref/DayLengths.html ./knowl/xref/sinedifferenceidentity.html">
+\begin{align*}
+H(t)  = \mathstrut \amp 3.4\sin \left( \frac{2\pi}{365}t-\frac{159.5\pi}{365} \right) + 12\\
+= \mathstrut \amp 3.4 \left[ \sin \left(\frac{2\pi}{365}t\right)\cos\left(\frac{159.5\pi}{365}\right) - \cos\left(\frac{2\pi}{365}t \right) \sin\left( \frac{159.5\pi}{365}\right) \right] + 12 \\
+\approx \mathstrut \amp 0.669\sin \left(\frac{2\pi}{365}t\right) - 3.333\cos\left(\frac{2\pi}{365}t \right) + 12.
+\end{align*}
+</div>
+<div class="para">That is, our sinusoid is now written as a linear combination of <span class="process-math">\(\sin(\omega t)\text{,}\)</span> <span class="process-math">\(\cos(\omega t)\text{,}\)</span> and a constant (which can be thought of as <span class="process-math">\(12\cos(0t)\)</span>).</div>
+</div></article><span class="incontext"><a class="internal" href="sec_fourier_series.html#DaylightLinearCombo">in-context</a></span>
+</body>
+</html>

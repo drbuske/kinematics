@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<myopenmath xmlns:pi="http://pretextbook.org/2020/pretext/internal" id="1492514">
+<statement>
+<p>
+Consider the vectors <m>\displaystyle\vec{{{u}}}=</m> <m>\displaystyle{2}\vec{{{i}}}+{3}\vec{{{j}}}-{2}\vec{{{k}}}</m>, <m>\displaystyle\vec{{{v}}}=</m> <m>\displaystyle-\vec{{{i}}}-{6}\vec{{{j}}}-{2}\vec{{{k}}}</m>, and <m>\displaystyle\vec{{{w}}}=</m><m>\displaystyle{3}\vec{{{i}}}-{6}\vec{{{j}}}-{2}\vec{{{k}}}</m>.  </p>
+<p>
+<m>\displaystyle{\left|\vec{{{u}}}\right|}+{\left|\vec{{{v}}}\right|}=</m> <fillin characters="8" />   </p>
+<p>
+<m>\displaystyle{\left|\vec{{{u}}}+\vec{{{v}}}\right|}=</m> <fillin characters="8" />   </p>
+<p>
+<m>\displaystyle\frac{{1}}{{\left|\vec{{{w}}}\right|}}\vec{{{w}}}=</m> <fillin characters="8" />    <m>\displaystyle\vec{{{i}}}</m> + <fillin characters="8" />   <m>\displaystyle\vec{{{j}}}</m> + <fillin characters="8" />   <m>\displaystyle\vec{{{k}}}</m></p>
+<p>
+<m>\displaystyle{\left|\frac{{1}}{{\left|\vec{{{w}}}\right|}}\vec{{{w}}}\right|}=</m> <fillin characters="8" />   
+
+</p>
+</statement>
+<solution>
+<p><ul><li><m>\displaystyle\sqrt{{{17}}}+\sqrt{{{41}}}</m></li><li><m>\displaystyle\sqrt{{{26}}}</m></li><li><m>\displaystyle\frac{{3}}{\sqrt{{{49}}}}</m></li><li>1</li><li><m>\displaystyle-\frac{{6}}{\sqrt{{{49}}}}</m></li><li><m>\displaystyle-\frac{{2}}{\sqrt{{{49}}}}</m></li></ul></p>
+</solution>
+</myopenmath>
+

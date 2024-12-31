@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8"?>
+<myopenmath xmlns:pi="http://pretextbook.org/2020/pretext/internal" id="220647">
+<statement>
+<p>
+Match each contour map with its graph.
+</p>
+<p><ol style="list-style-type:upper-alpha">
+<li> <image width="33%"  pi:generated="problems/images/0803bd382eb55f992cce27efc7ddaa07.png" />
+</li>
+<li> <image width="33%"  pi:generated="problems/images/5b3d948ed9cbbfbd38773c2572742c02.png" />
+</li>
+<li> <image width="33%"  pi:generated="problems/images/259ff002fb6fe400e3946fe6f6ecb8fb.png" /></li>
+<li> <image width="33%"  pi:generated="problems/images/afd2339d3b82719a90c7cebdcab229b3.png" />
+</li>
+</ol></p>
+<p><ol style="list-style-type:lower-alpha">
+<li><canvas id="plot3d6743cf83c86cd" width="300" height="300" role="img" tabindex="0" aria-label="3D Plot">Not seeing the 3D graph?  <url href="https://www.myopenmath.com/util/mbx.php?id=220647&amp;useflash=true">Try Flash Alternate</url></canvas></li>
+<li><canvas id="plot3d6743cf83c4822" width="300" height="300" role="img" tabindex="0" aria-label="3D Plot">Not seeing the 3D graph?  <url href="https://www.myopenmath.com/util/mbx.php?id=220647&amp;useflash=true">Try Flash Alternate</url></canvas></li>
+<li><canvas id="plot3d6743cf83c1fe1" width="300" height="300" role="img" tabindex="0" aria-label="3D Plot">Not seeing the 3D graph?  <url href="https://www.myopenmath.com/util/mbx.php?id=220647&amp;useflash=true">Try Flash Alternate</url></canvas></li>
+<li><canvas id="plot3d6743cf83c66e2" width="300" height="300" role="img" tabindex="0" aria-label="3D Plot">Not seeing the 3D graph?  <url href="https://www.myopenmath.com/util/mbx.php?id=220647&amp;useflash=true">Try Flash Alternate</url></canvas></li>
+</ol></p> 
+
+
+</statement>
+<solution>
+<p><ul><li>b d c a </li></ul></p>
+</solution>
+</myopenmath>
+

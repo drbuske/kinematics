@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<myopenmath xmlns:pi="http://pretextbook.org/2020/pretext/internal" id="605512">
+<statement>
+<p>
+Let <m>\displaystyle\vec{{a}}={2}\vec{{{i}}}-{8}\vec{{{j}}}-{4}\vec{{{k}}}</m> and <m>\displaystyle\vec{{b}}={4}\vec{{{i}}}-{5}\vec{{{j}}}-{9}\vec{{{k}}}</m>.  Find <m>\displaystyle\vec{{a}}\cdot\vec{{b}}</m>.</p>
+<p>
+<m>\displaystyle\vec{{a}}\cdot\vec{{b}}=</m> <fillin characters="5" />   
+</p>
+</statement>
+<solution>
+<p><ul><li>84</li></ul></p>
+</solution>
+</myopenmath>
+

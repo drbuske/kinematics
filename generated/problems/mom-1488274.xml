@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<myopenmath xmlns:pi="http://pretextbook.org/2020/pretext/internal" id="1488274">
+<statement>
+<p>
+The sinusoid which is the graph of <m>\displaystyle{f{{\left({t}\right)}}}={A}{\sin{{\left(\omega{t}-\phi\right)}}}+{B}</m> appears below.</p><image width="50%"  pi:generated="problems/images/75716da27938541a0f331a43f265f7f8.png" />
+<p>
+Determine the following information:</p>
+<p>
+Amplitude <m>\displaystyle{A}=</m> <fillin characters="8" />   </p>
+<p>
+Period <m>\displaystyle{T}=</m> <fillin characters="8" />   </p>
+<p>
+Vertical Shift <m>\displaystyle{B}=</m> <fillin characters="8" />   
+</p>
+</statement>
+<solution>
+<p><ul><li>2</li><li>3</li><li>3</li></ul></p>
+</solution>
+</myopenmath>
+

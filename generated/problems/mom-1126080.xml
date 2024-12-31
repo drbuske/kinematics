@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<myopenmath xmlns:pi="http://pretextbook.org/2020/pretext/internal" id="1126080">
+<statement>
+<p>
+Convert the Cartesian coordinate <m>\displaystyle{\left({3},{2}\right)}</m> to polar coordinates, where <m>\displaystyle{r}{>}{0}</m> and <m>\displaystyle{0}\le\theta{<}{2}\pi</m>.</p>
+<p>
+<m>\displaystyle{r}=</m> <fillin characters="10" />    <em> (Enter exact value) </em></p>
+<p>
+<m>\displaystyle\theta=</m> <fillin characters="10" />    <em> (Round to 4 decimal places) </em> </p>
+</statement>
+<solution>
+<p><ul><li><m>\displaystyle\sqrt{{{13}}}</m></li><li>0.588</li></ul></p>
+</solution>
+</myopenmath>
+

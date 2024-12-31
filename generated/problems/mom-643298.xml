@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<myopenmath xmlns:pi="http://pretextbook.org/2020/pretext/internal" id="643298">
+<statement>
+<p>Compute the flux of the vector field <m>\displaystyle\vec{{{v}}}=</m><m>\displaystyle{3}\vec{{{i}}}+{5}\vec{{{j}}}-{3}\vec{{{k}}}</m> through the triangular plate of area <m>\displaystyle{4}</m> in the <m>\displaystyle{y}{z}</m>-plane oriented in the positive <m>\displaystyle{x}</m>-direction.
+  </p>
+<p>
+  Flux = <fillin characters="8" />   </p>
+
+</statement>
+<solution>
+<p><ul><li>12</li></ul></p>
+</solution>
+</myopenmath>
+

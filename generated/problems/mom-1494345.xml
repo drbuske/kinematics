@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<myopenmath xmlns:pi="http://pretextbook.org/2020/pretext/internal" id="1494345">
+<statement>
+<p>Let <m>\displaystyle{f{{\left({x},{y}\right)}}},{x}{\left({s},{t}\right)}</m> and <m>\displaystyle{y}{\left({s},{t}\right)}</m> be differentiable. Define the vectors</p>
+<p><m>\displaystyle\vec{{u}}=\frac{{\partial{f}}}{{\partial{x}}}\vec{{{i}}}+\frac{{\partial{f}}}{{\partial{y}}}\vec{{{j}}},\vec{{v}}=\frac{{\partial{x}}}{{\partial{s}}}\vec{{{i}}}+\frac{{\partial{y}}}{{\partial{s}}}\vec{{{j}}}</m> and <m>\displaystyle\vec{{w}}=\frac{{\partial{x}}}{{\partial{t}}}\vec{{{i}}}+\frac{{\partial{y}}}{{\partial{t}}}\vec{{{j}}}</m>. </p>
+<p>Then the chain rule is equivalent to: <m>\displaystyle\frac{{\partial{f}}}{{\partial{s}}}=\vec{{u}}\cdot\vec{{v}}</m> and <m>\displaystyle\frac{{\partial{f}}}{{\partial{t}}}=\vec{{u}}\cdot\vec{{w}}</m> </p>
+<p><ol style="list-style-type:upper-alpha"><li>True</li> 
+<li>False</li> 
+</ol></p>
+
+
+</statement>
+<solution>
+<p><ul><li>A: True</li></ul></p>
+</solution>
+</myopenmath>
+

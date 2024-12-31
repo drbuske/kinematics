@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en-US">
+<!--********************************************-->
+<!--*       Generated from PreTeXt source      *-->
+<!--*                                          *-->
+<!--*         https://pretextbook.org          *-->
+<!--*                                          *-->
+<!--********************************************-->
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<meta name="robots" content="noindex, nofollow">
+</head>
+<body class="ignore-math">
+<section class="paragraphs"><h3 class="heading"><span class="title">Vorticity.</span></h3> <div class="para">Vorticity in fluids is similar to angular momentum in solids.  Just like curl, it is easiest to visualize vorticity by thinking of a small paddle wheel immersed in the fluid. If the fluid flow turns the paddle wheel, then it has vorticity. Vorticity is a vector, and points out of the plane in which the fluid turns. The sign of the vorticity is given by the ``right-hand” rule. If you curl the fingers on your right hand in the direction of the turning paddle wheel and your thumb points upward, then the vorticity is positive. If your thumb points downward, the vorticity is negative.  Does this sound familiar?  It should!  If not, review the concept of curl in the last section.</div> <article class="definition definition-like"><h4 class="heading">
+<span class="type">Definition</span><span class="space"> </span><span class="codenumber">4.3.8</span><span class="period">.</span><span class="space"> </span><span class="title">Vorticity.</span>
+</h4> <dfn class="terminology">Vorticity</dfn> is a vector measure of local rotation in a fluid flow, defined as the curl of the velocity vector,<div class="displaymath process-math">
+\begin{equation*}
+\nu = \nabla \times \vec{v},
+\end{equation*}
+</div>where <span class="process-math">\(\nu\)</span> is the vorticity, <span class="process-math">\(\vec{v}\)</span> the velocity, and <span class="process-math">\(\nabla\)</span> the gradient operator.</article> <div class="para">Vorticity, therefore, has units of inverse time, for instance, <span class="process-math">\(({\rm{sec}})^{-1}\text{.}\)</span>  Fluids (and all objects) have vorticity simply because of Earth's rotation. This is called <dfn class="terminology">planetary vorticity</dfn>. We do not normally appreciate this component of vorticity since it is only important if a motion lasts for a significant portion of a day, and most important if it lasts for many days, months, or years. Since geostrophic motion is essentially steady compared with the rotation time of Earth, planetary vorticity is very important for nearly geostrophic flows. The vector of planetary vorticity <span class="process-math">\(f\)</span> points upward, parallel to the rotation axis of Earth. Its magnitude is twice the angular rotation rate <span class="process-math">\(\Omega\)</span> of Earth.</div> <article class="exercise exercise-like"><a href="" class="exercise-knowl original" data-knowl="./knowl/exercise-137-hidden.html" title="Checkpoint 4.3.9: Planetary Vorticity"><h4 class="heading">
+<span class="type">Checkpoint</span><span class="space"> </span><span class="codenumber">4.3.9</span><span class="period">.</span><span class="space"> </span><span class="title">Planetary Vorticity.</span>
+</h4></a></article> <div class="para">The vorticity of the fluid motion relative to Earth's surface is called the <dfn class="terminology">relative vorticity</dfn>. It is calculated from the water velocities relative to Earth's surface (which is rotating). The total vorticity of a piece of fluid is the sum of the relative vorticity and planetary vorticity. The total vorticity is sometimes called absolute vorticity, because it is the vorticity the fluid has in the non-rotating reference frame of the stars.</div> <div class="para logical">
+<div class="para">In large-scale dynamic meterology, we are in general concerned only with the vertical components of absolute and relative vorticity, which are designated by <span class="process-math">\(\eta\)</span> and <span class="process-math">\(\zeta\text{,}\)</span> respectively.</div>
+<div class="displaymath process-math">
+\begin{align*}
+\zeta  = \mathstrut \amp \vec{k} \cdot \nu \\
+= \mathstrut \amp \vec{k} \cdot (\nabla \times \vec{v}) \\
+= \mathstrut \amp \vec{k} \cdot (\nabla \times (u\vec{i} + v\vec{j} + w\vec{k})) \\
+= \mathstrut \amp \frac{\partial v}{\partial x} - \frac{\partial u}{\partial y} 
+\end{align*}
+</div>
+<div class="para">Since <span class="process-math">\(\eta = \vec{k} \cdot \vec{\nu}_{abs} = \vec{k} \cdot (\nabla \times \vec{v}_{abs})\text{,}\)</span> we have <span class="process-math">\(\eta = \zeta + f\)</span> where <span class="process-math">\(f\)</span> is planetary vorticity.</div>
+</div> <article class="example example-like"><h4 class="heading">
+<span class="type">Example</span><span class="space"> </span><span class="codenumber">4.3.10</span><span class="period">.</span><span class="space"> </span><span class="title">Estimating Vorticity of a Horizontal Wind.</span>
+</h4> <div class="para">In <a href="" class="xref" data-knowl="./knowl/windcirculationexample.html" title="Example 4.2.10: Circulation from Wind">Example 4.2.10</a>, we computed a negative circulation <span class="process-math">\(\Gamma\)</span> for a 1000 km <span class="process-math">\(\times\)</span> 1000 km square where the horizontal wind <span class="process-math">\(\vec{v}\)</span> was easterly and decreasing at a rate of 10 m/s per 1000 km to the north.  That is, <span class="process-math">\(\vec{v}=-(20-y/100)\vec{i}\)</span> m/s (see <a href="" class="xref" data-knowl="./knowl/vorticitywindexample1.html" title="Figure 4.3.11">Figure 4.3.11</a>).  Is there vorticity at the center of this square?</div> <figure class="figure figure-like"><div class="image-box" style="width: 50%; margin-left: 25%; margin-right: 25%;"><img src="generated/latex-image/vorticitywindexample1pic.svg" role="img" class="contained" alt="A changing easterly wind."></div>
+<figcaption><span class="type">Figure</span><span class="space"> </span><span class="codenumber">4.3.11<span class="period">.</span></span><span class="space"> </span>The horizontal wind <span class="process-math">\(\vec{v}\)</span> used in <a href="" class="xref" data-knowl="./knowl/computevorticitywindexample1.html" title="Example 4.3.10: Estimating Vorticity of a Horizontal Wind">Example 4.3.10</a>.</figcaption></figure> <div class="para"></div></article> <article class="exercise exercise-like"><a href="" class="exercise-knowl original" data-knowl="./knowl/estimateeta-hidden.html" title="Checkpoint 4.3.12: Estimate \eta"><h4 class="heading">
+<span class="type">Checkpoint</span><span class="space"> </span><span class="codenumber">4.3.12</span><span class="period">.</span><span class="space"> </span><span class="title">Estimate <span class="process-math">\(\eta\)</span>.</span>
+</h4></a></article></section><span class="incontext"><a href="sec_curl.html#paragraphs-14" class="internal">in-context</a></span>
+</body>
+</html>

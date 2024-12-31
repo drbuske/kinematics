@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en-US" dir="ltr">
+<!--********************************************-->
+<!--*       Generated from PreTeXt source      *-->
+<!--*                                          *-->
+<!--*         https://pretextbook.org          *-->
+<!--*                                          *-->
+<!--********************************************-->
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<meta name="robots" content="noindex, nofollow">
+</head>
+<body class="ignore-math">
+<article class="example example-like"><h4 class="heading">
+<span class="type">Example</span><span xmlns:pf="https://prefigure.org" class="space"> </span><span class="codenumber">1.1.19</span><span xmlns:pf="https://prefigure.org" class="period">.</span><span xmlns:pf="https://prefigure.org" class="space"> </span><span class="title">Estimating CAPE using Simpson’s Rule.</span>
+</h4>
+<div xmlns:pf="https://prefigure.org" class="para logical">
+<div class="para">In <a href="sec_CAPE.html#FirstCAPEexample" class="xref" data-knowl="./knowl/xref/FirstCAPEexample.html" data-reveal-label="Reveal" data-close-label="Close" title="Example 1.1.8: Computing CAPE using the Midpoint Rule">Example 1.1.8</a> we estimated the value of CAPE using the Midpoint Rule and data from a sounding.  We found <span class="process-math">\(M_4 \approx 2007 \ \frac{J}{kg}\text{.}\)</span>  If we expand this data set (as in <a href="sec_CAPE.html#SoundingCAPETrapezoidData" class="xref" data-knowl="./knowl/xref/SoundingCAPETrapezoidData.html" data-reveal-label="Reveal" data-close-label="Close" title="Table 1.1.20: More sounding data used to estimate CAPE in Example 1.1.19">Table 1.1.20</a>) from the sounding, we can then also estimate <span class="process-math">\(T_4\text{.}\)</span> <figure class="table table-like"><figcaption><span class="type">Table</span><span class="space"> </span><span class="codenumber">1.1.20<span class="period">.</span></span><span class="space"> </span>More sounding data used to estimate CAPE in Example 1.1.19</figcaption><div class="tabular-box natural-width"><table class="tabular">
+<tr class="header-horizontal">
+<th scope="col" class="c m b2 r0 l0 t1 lines">Height <span class="process-math">\(z\)</span> (km)</th>
+<th scope="col" class="c m b2 r0 l0 t1 lines">
+<span class="process-math">\(T_p(z)\)</span> <span class="process-math">\((^{\circ}C)\)</span>
+</th>
+<th scope="col" class="c m b2 r0 l0 t1 lines">
+<span class="process-math">\(T_e(z)\)</span> <span class="process-math">\((^{\circ}C)\)</span>
+</th>
+<th scope="col" class="c m b2 r0 l0 t1 lines">
+<span class="process-math">\(T_p(z)\)</span> <span class="process-math">\((K\)</span>)</th>
+<th scope="col" class="c m b2 r0 l0 t1 lines">
+<span class="process-math">\(T_e(z)\)</span> <span class="process-math">\((K\)</span>)</th>
+</tr>
+<tr>
+<td class="c m b1 r0 l0 t0 lines">5</td>
+<td class="c m b1 r0 l0 t0 lines">-2.5</td>
+<td class="c m b1 r0 l0 t0 lines">-7.5</td>
+<td class="c m b1 r0 l0 t0 lines">270.5</td>
+<td class="c m b1 r0 l0 t0 lines">265.5</td>
+</tr>
+<tr>
+<td class="c m b1 r0 l0 t0 lines">6</td>
+<td class="c m b1 r0 l0 t0 lines">-15</td>
+<td class="c m b1 r0 l0 t0 lines">-20</td>
+<td class="c m b1 r0 l0 t0 lines">258</td>
+<td class="c m b1 r0 l0 t0 lines">253</td>
+</tr>
+<tr>
+<td class="c m b1 r0 l0 t0 lines">7</td>
+<td class="c m b1 r0 l0 t0 lines">-17.5</td>
+<td class="c m b1 r0 l0 t0 lines">-30</td>
+<td class="c m b1 r0 l0 t0 lines">255.5</td>
+<td class="c m b1 r0 l0 t0 lines">243</td>
+</tr>
+<tr>
+<td class="c m b1 r0 l0 t0 lines">8</td>
+<td class="c m b1 r0 l0 t0 lines">-25</td>
+<td class="c m b1 r0 l0 t0 lines">-35</td>
+<td class="c m b1 r0 l0 t0 lines">248</td>
+<td class="c m b1 r0 l0 t0 lines">238</td>
+</tr>
+<tr>
+<td class="c m b1 r0 l0 t0 lines">9</td>
+<td class="c m b1 r0 l0 t0 lines">-35</td>
+<td class="c m b1 r0 l0 t0 lines">-40</td>
+<td class="c m b1 r0 l0 t0 lines">238</td>
+<td class="c m b1 r0 l0 t0 lines">233</td>
+</tr>
+</table></div></figure> Here,</div>
+<div class="displaymath process-math" data-contains-math-knowls="./knowl/xref/FirstCAPEexample.html ./knowl/xref/SoundingCAPETrapezoidData.html ./knowl/xref/CAPEviaSimpsonsRule.html">
+\begin{align*}
+T_4  = \mathstrut \amp \left[ \frac{1}{2} f(5) + f(6) + f(7) + f(8) + \frac{1}{2}f(9)\right] \cdot 1000 \ {\rm{m}} \\
+= \mathstrut \amp 9.8 \ \frac{m}{s^2} \cdot \left( \frac{1}{2}\cdot \frac{5}{265.5} + \frac{5}{253} + \frac{ 12.5}{243} + \frac{10}{238} + \frac{1}{2} \cdot \frac{5}{233} \right) \cdot 1000 \ {\rm{m}} \\
+\approx \mathstrut \amp 1307 \ \frac{J}{kg}
+\end{align*}
+</div>
+<div class="para">Simpson’s Rule then gives</div>
+<div class="displaymath process-math" data-contains-math-knowls="./knowl/xref/FirstCAPEexample.html ./knowl/xref/SoundingCAPETrapezoidData.html ./knowl/xref/CAPEviaSimpsonsRule.html">
+\begin{equation*}
+S_8 = \frac{2M_4 + T_4}{3} = \frac{2\cdot 2007 + 1307}{3} \approx 1774 \ \frac{J}{kg}.
+\end{equation*}
+</div>
+</div></article><span class="incontext"><a class="internal" href="sec_CAPE.html#CAPEviaSimpsonsRule">in-context</a></span>
+</body>
+</html>

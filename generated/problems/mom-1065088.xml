@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="utf-8"?>
+<myopenmath xmlns:pi="http://pretextbook.org/2020/pretext/internal" id="1065088">
+<statement>
+<p>Compute the left-hand Riemann sum <m>\displaystyle{L}_{{5}}</m> for the function <m>\displaystyle{f{{\left({x}\right)}}}={4}{\sin{{\left(\frac{\pi}{{2}}{x}\right)}}}+{4}+\frac{{5}}{{8}}{x}</m> on <m>\displaystyle{\left[{0},{3}\right]}</m>. </p><image width="50%"  pi:generated="problems/images/d4a48b6aef431a329e352081ca0b9283.png" />
+<p>We write this sum, <m>\displaystyle{L}_{{5}}</m>, using sigma notation as <m>\displaystyle{\sum_{{{i}={1}}}^{{5}}}{f{{\left({x}_{{i}}\right)}}}\Delta{x}</m> where </p>
+<p><m>\displaystyle\Delta{x}=</m><fillin characters="8" />   </p>
+<p>Fill in values used in the sum <m>\displaystyle{L}_{{5}}</m> in the table below.  Round answers to the nearest 0.01 as needed.  </p>
+<table><tabular>       
+
+<row>
+<cell><m>\displaystyle{x}_{{i}}</m> </cell>
+<cell> <m>\displaystyle{f{{\left({x}_{{i}}\right)}}}</m>  </cell>
+</row>
+<row>
+<cell><m>\displaystyle{x}_{{1}}=</m> <fillin characters="3" />   </cell>
+<cell><fillin characters="6" />   </cell>
+</row>
+<row>
+<cell><m>\displaystyle{x}_{{2}}=</m> <fillin characters="3" />   </cell>
+<cell><fillin characters="6" />   </cell>
+</row>
+<row>
+<cell><m>\displaystyle{x}_{{3}}=</m> <fillin characters="3" />   </cell>
+<cell><fillin characters="6" />   </cell>
+</row>
+<row>
+<cell><m>\displaystyle{x}_{{4}}=</m> <fillin characters="3" />   </cell>
+<cell><fillin characters="6" />   </cell>
+</row>
+<row>
+<cell><m>\displaystyle{x}_{{5}}=</m> <fillin characters="3" />   </cell>
+<cell><fillin characters="6" />   </cell>
+</row>
+
+</tabular></table><p>So, rounded to the nearest 0.01, </p>
+<p><m>\displaystyle{L}_{{5}}=</m> <fillin characters="8" />   </p>
+
+</statement>
+<solution>
+<p><ul><li><m>\displaystyle{0.6}</m></li><li><m>\displaystyle{0}</m></li><li><m>\displaystyle{0.6}</m></li><li><m>\displaystyle{1.2}</m></li><li><m>\displaystyle{1.8}</m></li><li><m>\displaystyle{2.4}</m></li><li><m>\displaystyle{4}</m></li><li><m>\displaystyle{4}{\sin{{\left(\frac{\pi}{{2}}{\left(\frac{{3}}{{5}}\right)}\right)}}}+{4}+\frac{{5}}{{8}}{\left(\frac{{3}}{{5}}\right)}</m></li><li><m>\displaystyle{4}{\sin{{\left(\frac{\pi}{{2}}{\left(\frac{{6}}{{5}}\right)}\right)}}}+{4}+\frac{{5}}{{8}}{\left(\frac{{6}}{{5}}\right)}</m></li><li><m>\displaystyle{4}{\sin{{\left(\frac{\pi}{{2}}{\left(\frac{{9}}{{5}}\right)}\right)}}}+{4}+\frac{{5}}{{8}}{\left(\frac{{9}}{{5}}\right)}</m></li><li><m>\displaystyle{4}{\sin{{\left(\frac{\pi}{{2}}{\left(\frac{{12}}{{5}}\right)}\right)}}}+{4}+\frac{{5}}{{8}}{\left(\frac{{12}}{{5}}\right)}</m></li><li><m>\displaystyle{17.805132606606}</m></li></ul></p>
+</solution>
+</myopenmath>
+

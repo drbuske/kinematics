@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<myopenmath xmlns:pi="http://pretextbook.org/2020/pretext/internal" id="237672">
+<statement>
+<p>
+Find the dot product of the following vectors <m>\displaystyle\vec{{u}}</m> and  <m>\displaystyle\vec{{v}}</m>.
+</p><image width="33%"  pi:generated="problems/images/bc3c38ffca6621a4b1bc80f6aa678011.png" /><p>
+<m>\displaystyle\vec{{u}}</m> <m>\displaystyle\cdot</m> <m>\displaystyle\vec{{v}}</m>  =  <fillin characters="6" />    
+</p>
+</statement>
+<solution>
+<p><ul><li>-26</li></ul></p>
+</solution>
+</myopenmath>
+

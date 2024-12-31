@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<myopenmath xmlns:pi="http://pretextbook.org/2020/pretext/internal" id="1498331">
+<statement>
+<p>
+Given <m>\displaystyle{f{{\left({x},{y}\right)}}}=-{x}^{{4}}+{6}{x}{y}^{{5}}-{4}{y}^{{3}}</m>, find the following numerical values:</p>
+<p>
+<m>\displaystyle{\frac{{\partial^{{2}}{f}}}{{\partial{x}^{{2}}}}}{\left({2},{2}\right)}</m> = <fillin characters="8" /></p>
+<p>
+<m>\displaystyle{\frac{{\partial^{{2}}{f}}}{{\partial{x}\partial{y}}}}{\left({2},{2}\right)}</m> = <fillin characters="8" /></p>
+</statement>
+<solution>
+<p><ul><li>You will need to substitute the ordered pair (2, 2) into the second partial derivative <m>\displaystyle{\frac{{\partial^{{2}}{f}}}{{\partial{x}^{{2}}}}}{\left({x},{y}\right)}</m> which gives -48</li><li>You will need to substitute the ordered pair (2, 2) into the second partial derivative <m>\displaystyle{\frac{{\partial^{{2}}{f}}}{{\partial{x}\partial{y}}}}{\left({x},{y}\right)}</m> which gives 480</li></ul></p>
+</solution>
+</myopenmath>
+

@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en-US" dir="ltr">
+<!--********************************************-->
+<!--*       Generated from PreTeXt source      *-->
+<!--*                                          *-->
+<!--*         https://pretextbook.org          *-->
+<!--*                                          *-->
+<!--********************************************-->
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<meta name="robots" content="noindex, nofollow">
+</head>
+<body class="ignore-math">
+<article class="example example-like"><h4 class="heading">
+<span class="type">Example</span><span xmlns:pf="https://prefigure.org" class="space"> </span><span class="codenumber">1.1.8</span><span xmlns:pf="https://prefigure.org" class="period">.</span><span xmlns:pf="https://prefigure.org" class="space"> </span><span class="title">Computing CAPE using the Midpoint Rule.</span>
+</h4>
+<div xmlns:pf="https://prefigure.org" class="para logical">
+<div class="para">In <span class="process-math">\(z\)</span> (height) coordinates, CAPE can be found by the definite integral</div>
+<div class="displaymath process-math">
+\begin{equation*}
+CAPE  =  \int_{LFC}^{EL} g \cdot \left( \frac{T_p(z) - T_e(z)}{T_e(z)} \right) \ dz
+\end{equation*}
+</div>
+<div class="para">where <span class="process-math">\(T_p(z)\)</span> is the air parcel temperature (in <span class="process-math">\(K\)</span>) at height <span class="process-math">\(z\)</span> km, <span class="process-math">\(T_e(z)\)</span> is the environmental temperature (in <span class="process-math">\(K\)</span>) at height <span class="process-math">\(z\)</span> km, <span class="process-math">\(g\)</span> is the gravitational constant (9.8 <span class="process-math">\(m/s^2\)</span>), and <span class="process-math">\(LFC\)</span> and <span class="process-math">\(EL\)</span> are the heights of the level of free convection and equilibrium level respectively.</div>
+</div>
+<div xmlns:pf="https://prefigure.org" class="para">From a sounding, suppose we know that <span class="process-math">\(LFC = 5\)</span> km, <span class="process-math">\(EL = 9\)</span> km, and we know the information from <a href="sec_CAPE.html#FirstCAPEexampledata" class="xref" data-knowl="./knowl/xref/FirstCAPEexampledata.html" data-reveal-label="Reveal" data-close-label="Close" title="Table 1.1.9: Sounding data used in estimating CAPE">Table 1.1.9</a>
+</div>
+<figure class="table table-like"><figcaption xmlns:pf="https://prefigure.org"><span class="type">Table</span><span class="space"> </span><span class="codenumber">1.1.9<span class="period">.</span></span><span class="space"> </span>Sounding data used in estimating CAPE</figcaption><div class="tabular-box natural-width"><table xmlns:pf="https://prefigure.org" class="tabular">
+<tr class="header-horizontal">
+<th scope="col" class="c m b2 r0 l0 t1 lines">Height <span class="process-math">\(z\)</span> (km)</th>
+<th scope="col" class="c m b2 r0 l0 t1 lines">
+<span class="process-math">\(T_p(z)\)</span> (<span class="process-math">\(^{\circ}C)\)</span>
+</th>
+<th scope="col" class="c m b2 r0 l0 t1 lines">
+<span class="process-math">\(T_e(z)\)</span> (<span class="process-math">\(^{\circ}C)\)</span>
+</th>
+<th scope="col" class="c m b2 r0 l0 t1 lines">
+<span class="process-math">\(T_p(z)\)</span> (<span class="process-math">\(K\)</span>)</th>
+<th scope="col" class="c m b2 r0 l0 t1 lines">
+<span class="process-math">\(T_e(z)\)</span> (<span class="process-math">\(K\)</span>)</th>
+</tr>
+<tr>
+<td class="c m b1 r0 l0 t0 lines">5.5</td>
+<td class="c m b1 r0 l0 t0 lines">-5</td>
+<td class="c m b1 r0 l0 t0 lines">-15</td>
+<td class="c m b1 r0 l0 t0 lines">268</td>
+<td class="c m b1 r0 l0 t0 lines">258</td>
+</tr>
+<tr>
+<td class="c m b1 r0 l0 t0 lines">6.5</td>
+<td class="c m b1 r0 l0 t0 lines">-10</td>
+<td class="c m b1 r0 l0 t0 lines">-25</td>
+<td class="c m b1 r0 l0 t0 lines">263</td>
+<td class="c m b1 r0 l0 t0 lines">248</td>
+</tr>
+<tr>
+<td class="c m b1 r0 l0 t0 lines">7.5</td>
+<td class="c m b1 r0 l0 t0 lines">-20</td>
+<td class="c m b1 r0 l0 t0 lines">-40</td>
+<td class="c m b1 r0 l0 t0 lines">253</td>
+<td class="c m b1 r0 l0 t0 lines">243</td>
+</tr>
+<tr>
+<td class="c m b1 r0 l0 t0 lines">8.5</td>
+<td class="c m b1 r0 l0 t0 lines">-25</td>
+<td class="c m b1 r0 l0 t0 lines">-40</td>
+<td class="c m b1 r0 l0 t0 lines">248</td>
+<td class="c m b1 r0 l0 t0 lines">233</td>
+</tr>
+</table></div></figure><div xmlns:pf="https://prefigure.org" class="para logical">
+<div class="para">Defining</div>
+<div class="displaymath process-math" data-contains-math-knowls="./knowl/xref/midpointsumCAPE.html">
+\begin{equation*}
+\displaystyle f(z) = g \cdot \left( \frac{T_p(z) - T_e(z)}{T_e(z)} \right)\text{,}
+\end{equation*}
+</div>
+<div class="para">we find CAPE by estimating <span class="process-math">\(\int_{5 \ {\rm{km}}}^{9 \ {\rm{km}}} f(z) \ dz\text{.}\)</span>  Computing a midpoint sum <span class="process-math">\(M_4\text{,}\)</span> as illustrated in <a href="sec_CAPE.html#midpointsumCAPE" class="xref" data-knowl="./knowl/xref/midpointsumCAPE.html" data-reveal-label="Reveal" data-close-label="Close" title="Figure 1.1.10">Figure 1.1.10</a>, provides us a reasonable estimate.</div>
+</div>
+<figure class="figure figure-like"><div xmlns:pf="https://prefigure.org" class="image-box" style="width: 50%; margin-left: 25%; margin-right: 25%;"><img src="generated/latex-image/midpointsumCAPEPic.svg" role="img" class="contained"></div>
+<figcaption xmlns:pf="https://prefigure.org"><span class="type">Figure</span><span class="space"> </span><span class="codenumber">1.1.10<span class="period">.</span></span><span class="space"> </span>Using a midpoint sum <span class="process-math">\(M_4\)</span> to estimate the area under <span class="process-math">\(f(z)\)</span> on <span class="process-math">\([5,9]\text{.}\)</span></figcaption></figure><div xmlns:pf="https://prefigure.org" class="displaymath process-math" data-contains-math-knowls="./knowl/xref/FirstCAPEexampledata.html ./knowl/xref/midpointsumCAPE.html">
+\begin{align*}
+\int_{5 \ {\rm{km}}}^{9 \ {\rm{km}}} g \cdot \left( \frac{T_p(z) - T_e(z)}{T_e(z)} \right) \ dz  \approx \mathstrut \amp  \sum_{i=1}^4 f(\overline{z_i}) \ \Delta z \\
+= \mathstrut \amp \left[ f(5.5)  + f(6.5) + f(7.5)  + f(8.5)  \right]\cdot 1000 \ {\rm{m}} \\
+= \mathstrut \amp 9.8 \frac{m}{s^2} \cdot \left( \frac{10}{258} + \frac{15}{248}  + \frac{10}{243}  + \frac{15}{233}  \right)  \cdot1000 \ {\rm{m}} \\
+\approx \mathstrut \amp 2007 \ \frac{m^2}{s^2} \\
+= \mathstrut \amp 2007 \ \frac{J}{kg}
+\end{align*}
+</div></article><span class="incontext"><a class="internal" href="sec_CAPE.html#FirstCAPEexample">in-context</a></span>
+</body>
+</html>

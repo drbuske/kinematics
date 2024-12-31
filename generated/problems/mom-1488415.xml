@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8"?>
+<myopenmath xmlns:pi="http://pretextbook.org/2020/pretext/internal" id="1488415">
+<statement>
+<p>
+The following data is periodic.  What is the period?</p>
+<p>
+<m>\displaystyle{T}=</m> <fillin characters="8" />     </p><table><tabular> <row><cell><em><m>\displaystyle{t}</m></em></cell><cell>0</cell><cell>1.4</cell><cell>2.8</cell><cell>4.2</cell><cell>5.6</cell><cell>7</cell><cell>8.4</cell><cell>9.8</cell><cell>11.2</cell><cell>12.6</cell><cell>14</cell></row>
+<row><cell><em><m>\displaystyle{y}</m></em></cell><cell>87</cell><cell>50</cell><cell>73</cell><cell>62</cell><cell>71</cell><cell>87</cell><cell>50</cell><cell>73</cell><cell>62</cell><cell>71</cell><cell>87</cell></row>
+</tabular></table><p>
+The best fitting trigonometric polynomial </p>
+<p>
+<m>\displaystyle{f{{\left({t}\right)}}}={a}_{{0}}+{a}_{{1}}{\cos{{\left({\frac{{{2}\pi}}{{7}}}{t}\right)}}}+{b}_{{1}}{\sin{{\left({\frac{{{2}\pi}}{{7}}}{t}\right)}}}+{a}_{{2}}{\cos{{\left({\frac{{{2}\pi}}{{7}}}{t}\right)}}}+{b}_{{2}}{\sin{{\left({\frac{{{2}\pi}}{{7}}}{t}\right)}}}</m> </p>
+<p>
+to this data uses coefficients </p>
+<p>
+<m>\displaystyle{a}_{{0}}=</m> <fillin characters="8" />   </p>
+<p>
+<m>\displaystyle{a}_{{1}}=</m> <fillin characters="8" />   </p>
+<p>
+<m>\displaystyle{b}_{{1}}=</m> <fillin characters="8" />   </p>
+<p>
+<m>\displaystyle{a}_{{2}}=</m> <fillin characters="8" />   </p>
+<p>
+<m>\displaystyle{b}_{{2}}=</m> <fillin characters="8" />   </p>
+<p>
+Round your answers to the nearest hundredth.  
+</p>
+</statement>
+<solution>
+<p><ul><li>68.6</li><li>6.0695048315003</li><li>-5.4026196267924</li><li>12.3304951685</li><li>-9.1220447909555</li><li>7</li></ul></p>
+</solution>
+</myopenmath>
+

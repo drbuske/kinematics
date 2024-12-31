@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en-US" dir="ltr">
+<!--********************************************-->
+<!--*       Generated from PreTeXt source      *-->
+<!--*                                          *-->
+<!--*         https://pretextbook.org          *-->
+<!--*                                          *-->
+<!--********************************************-->
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<meta name="robots" content="noindex, nofollow">
+</head>
+<body class="ignore-math">
+<article class="exercise exercise-like"><h4 class="heading">
+<span class="type">Exercise</span><span xmlns:pf="https://prefigure.org" class="space"> </span><span class="codenumber">13<span xmlns:pf="https://prefigure.org" class="period">.</span></span><span xmlns:pf="https://prefigure.org" class="space"> </span><span class="title">Potential Temperature.</span>
+</h4>
+<div xmlns:pf="https://prefigure.org" class="para logical">
+<div class="para">The <dfn class="terminology">potential temperature</dfn> of a parcel of air at pressure <span class="process-math">\(p\)</span>p (in mb) and absolute temperature <span class="process-math">\(T\)</span> (in <span class="process-math">\(K\)</span>) is the temperature <span class="process-math">\(\theta\)</span> that the parcel would attain if adiabatically brought to a standard pressure of 1000 mb.  In particular,</div>
+<div class="displaymath process-math">
+\begin{equation*}
+\theta(T,p) = T \left( \frac{1000}{p} \right)^{0.286}.
+\end{equation*}
+</div>
+<ol class="lower-alpha" id="ez_potential_temperature-2-1-8">
+<li><div class="para">Compute <span class="process-math">\(\theta(280,1000)\text{.}\)</span>  What units does this value have?</div></li>
+<li><div class="para">When <span class="process-math">\(p &lt; 1000\)</span> (as it is in the atmosphere) is the potential temperature <span class="process-math">\(\theta\)</span> greater or less than the absolute temperature <span class="process-math">\(T\text{?}\)</span>  What happens as <span class="process-math">\(p\)</span> decreases (as a rising air parcel does in the atmosphere)?</div></li>
+<li><div class="para">Compute <span class="process-math">\(\frac{\partial \theta}{\partial T}(T,p)\text{.}\)</span>  What does this calculation say about how the potential temperature changes when holding pressure <span class="process-math">\(p\)</span> constant?</div></li>
+<li><div class="para">Compute <span class="process-math">\(\frac{\partial \theta}{\partial p}(T,p)\text{.}\)</span>  What does it mean to have this value be negative?</div></li>
+</ol>
+</div>
+<div class="solutions"><details xmlns:pf="https://prefigure.org" class="answer solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Answer</span><span class="period">.</span></summary><div class="answer solution-like knowl__content"><ol class="lower-alpha" id="ez_potential_temperature-3-1">
+<li><div class="para"><span class="process-math">\(\displaystyle \theta(280,1000) = 280 \left( \frac{1000}{1000} \right)^{0.286} = 280 \ K\)</span></div></li>
+<li><div class="para">When <span class="process-math">\(p &lt; 1000\text{,}\)</span> the base of the exponential part of the function <span class="process-math">\(\theta(T,p)\)</span> is greater than 1 leading to a potential temperature that is greater than the absolute temperature.  That is, <span class="process-math">\(\theta &gt; T\text{.}\)</span>  As <span class="process-math">\(p\)</span> decreases, the potential temperature <span class="process-math">\(\theta\)</span> increases.</div></li>
+<li><div class="para">
+<span class="process-math">\(\frac{\partial \theta}{\partial T}(T,p) = \left( \frac{1000}{p} \right)^{0.286}\)</span>  so that for every one degree increase in absolute temperature <span class="process-math">\(T\text{,}\)</span> the potential temperature <span class="process-math">\(\theta\)</span> increases by <span class="process-math">\(\left( \frac{1000}{p} \right)^{0.286}\text{.}\)</span>  Note that this amount of increase does not depend on the initial temperature.</div></li>
+<li><div class="para">
+<div class="displaymath process-math">
+\begin{align*}
+\frac{\partial \theta}{\partial p}(T,p) = \mathstrut \amp \frac{\partial}{\partial p} (1000)^{0.286} p^{-0.286} T \\
+= \mathstrut \amp (-0.286)(1000)^{0.286} p^{-1.286} T\\
+= \mathstrut \amp -2.06237 \left( \frac{1}{p} \right)^{1.286} T 
+\end{align*}
+</div>Being negative, this means that when holding the absolute temperature constant but increasing the pressure of an air parcel (by, say, having it drop to a lower height in the atmosphere), the potential temperature decreases (and does so at this calculated rate for this temperature <span class="process-math">\(T\)</span> and pressure <span class="process-math">\(p\)</span>).</div></li>
+</ol></div></details></div></article><span class="incontext"><a class="internal" href="sec_partial_differentiation.html#ez_potential_temperature">in-context</a></span>
+</body>
+</html>

@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<myopenmath xmlns:pi="http://pretextbook.org/2020/pretext/internal" id="1498352">
+<statement>
+<p>Find the first 3 non-zero terms of the Taylor polynomial centered at <m>\displaystyle{x}={0}</m> for <m>\displaystyle{f{{\left({x}\right)}}}={\sin{{x}}}</m>.
+  </p>
+<p>
+  <fillin characters="20" />  
+  </p>
+
+</statement>
+<solution>
+<p><ul><li><m>\displaystyle{x}-\frac{{x}^{{3}}}{{6}}+\frac{{x}^{{5}}}{{120}}</m></li></ul></p>
+</solution>
+</myopenmath>
+

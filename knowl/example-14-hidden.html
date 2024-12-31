@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en-US">
+<!--********************************************-->
+<!--*       Generated from PreTeXt source      *-->
+<!--*                                          *-->
+<!--*         https://pretextbook.org          *-->
+<!--*                                          *-->
+<!--********************************************-->
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<meta name="robots" content="noindex, nofollow">
+</head>
+<body class="ignore-math"><article class="example example-like"><p>Suppose the temperature in Jackson, MS, is <span class="process-math">\(21^{\circ}C\)</span> and in Memphis the current temperature is <span class="process-math">\(15^{\circ}C\text{.}\)</span> The average wind between the two cities is 20 knots from the north. The distance between Jackson and Memphis is 317,548 meters. If the only process affecting temperature is advection, and we assume the wind stays constant, we determine the temperature in Jackson in 6 hours.</p>
+<p>Mathematically, we model the current wind using a one-dimensional vector (e.g. a scalar), <span class="process-math">\(v_{curr}\text{.}\)</span>  We know that <span class="process-math">\(| v_{curr} | = 20\)</span> knots = 10.2 m/sec. We also know the change in time over which the advection is taking place.  We convert this to appropriate units to see that <span class="process-math">\(\Delta t = 6\)</span> hr = 21,600 sec.</p>
+<p>So,</p>
+<div class="displaymath process-math" data-contains-math-knowls="">
+\begin{align*}
+\displaystyle T_{fcst} = \mathstrut \amp T_{curr} + \Delta t | v_{curr} | \left( \frac{T_{upwind} - T_{downwind}}{\Delta x} \right) \\
+= \mathstrut \amp 21^{\circ}C + (21,600 \ s)(10.2 \ m/s)\left( \frac{16^{\circ}C - 21^{\circ}C}{317,548 \ m} \right) \\
+\approx \mathstrut \amp 17.5^{\circ}C.
+\end{align*}
+</div></article></body>
+</html>

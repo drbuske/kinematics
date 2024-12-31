@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<myopenmath xmlns:pi="http://pretextbook.org/2020/pretext/internal" id="215753">
+<statement>
+<p>
+Find <m>\displaystyle\frac{{\left.{d}{z}\right.}}{{\left.{d}{t}\right.}}</m> where <m>\displaystyle{z}{\left({x},{y}\right)}={x}^{{2}}-{y}^{{2}}</m>, with <m>\displaystyle{x}{\left({t}\right)}={6}{\sin{{\left({t}\right)}}}</m> and <m>\displaystyle{y}{\left({t}\right)}={12}{\cos{{\left({t}\right)}}}</m>.</p>
+<p>
+<m>\displaystyle\frac{{\left.{d}{z}\right.}}{{\left.{d}{t}\right.}}</m> = <fillin characters="20" />  
+
+</p>
+</statement>
+<solution>
+<p><ul><li><m>\displaystyle{360}{\cos{{\left({t}\right)}}}{\sin{{\left({t}\right)}}}</m></li></ul></p>
+</solution>
+</myopenmath>
+

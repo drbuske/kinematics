@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<myopenmath xmlns:pi="http://pretextbook.org/2020/pretext/internal" id="1493030">
+<statement>
+<p>
+Find the maximum rate of change of <m>\displaystyle{f{{\left({x},{y}\right)}}}={\ln{{\left({x}^{{2}}+{y}^{{2}}\right)}}}</m> at the point <m>\displaystyle{\left({3},{3}\right)}</m> and the direction in which it occurs.  Give exact answers (which will involve square roots).</p>
+<p>
+Maximum rate of change:  <fillin characters="8" />   </p>
+<p>
+Direction (give as a unit vector):  <fillin characters="8" />   <m>\displaystyle\vec{{{i}}}</m>+ <fillin characters="8" />   <m>\displaystyle\vec{{{j}}}</m></p>
+</statement>
+<solution>
+<p><ul><li><m>\displaystyle\frac{{2}}{\sqrt{{{18}}}}</m></li><li><m>\displaystyle\frac{{{3}\cdot\sqrt{{{18}}}}}{{18}}</m></li><li><m>\displaystyle\frac{{{3}\cdot\sqrt{{{18}}}}}{{18}}</m></li></ul></p>
+</solution>
+</myopenmath>
+

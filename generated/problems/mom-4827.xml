@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<myopenmath xmlns:pi="http://pretextbook.org/2020/pretext/internal" id="4827">
+<statement>
+<p>
+The function <m>\displaystyle{f{{\left({x}\right)}}}</m> has a domain of all real numbers, is periodic and has a period of <m>\displaystyle{p}={20}</m>.  The graph of one complete period is shown below.
+</p><image width="64%"  pi:generated="problems/images/ee70e4c5c301a2b6772c44ae4ddbb61f.png" />
+
+Find the following values: <p>
+<m>\displaystyle{f{{\left({3}\right)}}}=</m> <fillin characters="7" />    </p>
+<p>
+<m>\displaystyle{f{{\left({21}\right)}}}=</m> <fillin characters="7" />    </p>
+<p>
+<m>\displaystyle{f{{\left({355}\right)}}}=</m> <fillin characters="7" />   
+</p>
+</statement>
+<solution>
+<p><ul><li>2.6</li><li>2.2</li><li>-1.3333333333333</li></ul></p>
+</solution>
+</myopenmath>
+

@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<myopenmath xmlns:pi="http://pretextbook.org/2020/pretext/internal" id="289167">
+<statement>
+<p>
+Convert <m>\displaystyle{\left({10},\frac{{{5}\pi}}{{6}},\frac{\pi}{{2}}\right)}</m> from spherical to rectangular coordinates.  Enter your answer as an ordered triple.  Use exact values for each coordinate involving radicals as needed.
+</p>
+<p>
+<m>\displaystyle{\left({x},{y},{z}\right)}=</m> <fillin characters="20" />  
+</p>
+</statement>
+<solution>
+<p><ul><li><m>\displaystyle{\left(-{5}\sqrt{{{3}}},{5},{0}\right)}</m></li></ul></p>
+</solution>
+</myopenmath>
+

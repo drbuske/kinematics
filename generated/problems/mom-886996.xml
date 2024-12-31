@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<myopenmath xmlns:pi="http://pretextbook.org/2020/pretext/internal" id="886996">
+<statement>
+<p>Imagine that you hold the handle (i.e. <m></m>stick") of the paddlewheel in the figure steady and let the blades be pushed by the fluid represented by the vector field. </p>
+<p>Loading Geogebra... </p>
+<p>If the stick is in the direction <m>\displaystyle{<}{0},{1},{0}{>}</m> would the paddlewheel spin? Rotate your view of the vector field and paddlewheel so that you get a clear view that helps you decide. Remember that your eye is at the top of the stick. </p>
+<p><ol style="list-style-type:upper-alpha"><li>It would spin counter-clockwise.</li> 
+<li>It would spin clockwise.</li> 
+<li>It would not spin.</li> 
+</ol></p>
+ <p>Now change the direction of the stick to <m>\displaystyle{<}{1},{0},{0}{>}</m>. What happens? </p>
+<p><ol style="list-style-type:upper-alpha"><li>The paddle would spin counter-clockwise.</li> 
+<li>The paddle would spin clockwise.</li> 
+<li>The paddle would not spin.</li> 
+</ol></p>
+
+
+</statement>
+<solution>
+<p><ul><li>C: It would not spin.</li><li>B: The paddle would spin clockwise.</li></ul></p>
+</solution>
+</myopenmath>
+

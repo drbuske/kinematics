@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8"?>
+<myopenmath xmlns:pi="http://pretextbook.org/2020/pretext/internal" id="1488424">
+<statement>
+<p>The following are geopotential heights <m>\displaystyle{Z}</m> for various longitudes <m>\displaystyle\theta</m>. What is the exact frequency <m>\displaystyle\omega</m> of this data?
+  </p>
+<p>
+  <m>\displaystyle\omega=</m> <fillin characters="8" />    
+  </p><table><tabular> <row><cell><em><m>\displaystyle\theta</m></em></cell><cell>0</cell><cell>90</cell><cell>180</cell><cell>270</cell><cell>360</cell><cell>450</cell><cell>540</cell><cell>630</cell><cell>720</cell></row>
+<row><cell><em><m>\displaystyle{Z}</m></em></cell><cell>5715</cell><cell>5444</cell><cell>5767</cell><cell>5670</cell><cell>5715</cell><cell>5444</cell><cell>5767</cell><cell>5670</cell><cell>5715</cell></row>
+</tabular></table><p>
+  The best fitting trigonometric polynomial
+  </p>
+<p>
+  <m>\displaystyle{Z}_{{4}}{\left(\theta\right)}={a}_{{0}}+{\sum_{{{k}={1}}}^{{4}}}{\left({a}_{{k}}{\cos{{\left({\frac{{{2}\pi{k}}}{{360}}}\theta\right)}}}+{b}_{{k}}{\sin{{\left({\frac{{{2}\pi{k}}}{{360}}}\theta\right)}}}\right)}</m>
+  </p>
+<p>
+  to this data uses coefficients
+  </p>
+<p>
+  <m>\displaystyle{a}_{{0}}=</m> <fillin characters="8" />   
+  </p>
+<p>
+  <m>\displaystyle{a}_{{2}}=</m> <fillin characters="8" />   
+  </p>
+<p>
+  <m>\displaystyle{b}_{{4}}=</m> <fillin characters="8" />   
+  </p>
+<p>
+  Round your answers to the nearest hundredth.</p>
+
+</statement>
+<solution>
+<p><ul><li>5649</li><li>184</li><li>-4.162329540942E-12</li><li><m>\displaystyle\frac{{{2}\cdot\pi}}{{360}}</m></li></ul></p>
+</solution>
+</myopenmath>
+

@@ -1,0 +1,1330 @@
+<!DOCTYPE html>
+<!--********************************************-->
+<!--*       Generated from PreTeXt source      *-->
+<!--*                                          *-->
+<!--*         https://pretextbook.org          *-->
+<!--*                                          *-->
+<!--********************************************-->
+<html lang="en-US" dir="ltr">
+<head xmlns:og="http://ogp.me/ns#" xmlns:book="https://ogp.me/ns/book#">
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<title>Displacement Vectors</title>
+<meta name="Keywords" content="Authored in PreTeXt">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta xmlns:pf="https://prefigure.org" property="og:type" content="book">
+<meta xmlns:pf="https://prefigure.org" property="book:title" content="Mathematics of Atmospheric Kinematics">
+<meta xmlns:pf="https://prefigure.org" property="book:author" content="Dale Buske">
+<script>
+var runestoneMathReady = new Promise((resolve) => window.rsMathReady = resolve);
+window.MathJax = {
+  "tex": {
+    "inlineMath": [
+      [
+        "\\(",
+        "\\)"
+      ]
+    ],
+    "tags": "none",
+    "tagSide": "right",
+    "tagIndent": ".8em",
+    "packages": {
+      "[+]": [
+        "base",
+        "extpfeil",
+        "ams",
+        "amscd",
+        "color",
+        "newcommand",
+        "knowl"
+      ]
+    }
+  },
+  "options": {
+    "ignoreHtmlClass": "tex2jax_ignore|ignore-math",
+    "processHtmlClass": "process-math",
+    "renderActions": {
+      "findScript": [
+        10,
+        function (doc) {
+            document.querySelectorAll('script[type^="math/tex"]').forEach(function(node) {
+                var display = !!node.type.match(/; *mode=display/);
+                var math = new doc.options.MathItem(node.textContent, doc.inputJax[0], display);
+                var text = document.createTextNode('');
+                node.parentNode.replaceChild(text, node);
+                math.start = {node: text, delim: '', n: 0};
+                math.end = {node: text, delim: '', n: 0};
+                doc.math.push(math);
+            });
+        },
+        ""
+      ]
+    }
+  },
+  "chtml": {
+    "scale": 0.98,
+    "mtextInheritFont": true
+  },
+  "loader": {
+    "load": [
+      "input/asciimath",
+      "[tex]/extpfeil",
+      "[tex]/amscd",
+      "[tex]/color",
+      "[tex]/newcommand",
+      "[pretext]/mathjaxknowl3.js"
+    ],
+    "paths": {
+      "pretext": "_static/pretext/js/lib"
+    }
+  },
+  "startup": {
+    pageReady() {
+      return MathJax.startup.defaultPageReady().then(function () {
+      console.log("in ready function");
+      rsMathReady();
+      }
+    )}
+  }
+};
+</script><script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js"></script><script src="_static/pretext/js/pretext-webwork/2.17/pretext-webwork.js"></script><script src="https://webwork-ptx.aimath.org/webwork2_files/node_modules/iframe-resizer/js/iframeResizer.min.js"></script><script src="_static/pretext/js/lti_iframe_resizer.js"></script><script src="https://cdnjs.cloudflare.com/ajax/libs/lunr.js/2.3.9/lunr.min.js" integrity="sha512-4xUl/d6D6THrAnXAwGajXkoWaeMNwEKK4iNfq5DotEbLPAfk6FSxSP3ydNxqDgCw1c/0Z1Jg6L8h2j+++9BZmg==" crossorigin="anonymous" referrerpolicy="no-referrer"></script><script src="lunr-pretext-search-index.js" async=""></script><script src="_static/pretext/js/pretext_search.js"></script><link href="_static/pretext/css/pretext_search.css" rel="stylesheet" type="text/css">
+<script src="_static/pretext/js/lib/jquery.min.js"></script><script src="_static/pretext/js/lib/jquery.sticky.js"></script><script src="_static/pretext/js/lib/jquery.espy.min.js"></script><script src="_static/pretext/js/pretext.js"></script><script src="_static/pretext/js/pretext_add_on.js?x=1"></script><script src="_static/pretext/js/user_preferences.js"></script><script src="_static/pretext/js/lib/knowl.js"></script><!--knowl.js code controls Sage Cells within knowls--><script>sagecellEvalName='Evaluate (Sage)';
+</script><link xmlns:pf="https://prefigure.org" rel="preconnect" href="https://fonts.googleapis.com">
+<link xmlns:pf="https://prefigure.org" rel="preconnect" href="https://fonts.gstatic.com" crossorigin="">
+<link xmlns:pf="https://prefigure.org" href="https://fonts.googleapis.com/css2?family=Inconsolata:wght@400;700&amp;family=Noto+Serif:ital,wght@0,400;0,700;1,400;1,700&amp;family=Tinos:ital,wght@0,400;0,700;1,400;1,700&amp;display=swap" rel="stylesheet">
+<link xmlns:pf="https://prefigure.org" href="https://fonts.cdnfonts.com/css/dejavu-serif" rel="stylesheet">
+<link xmlns:pf="https://prefigure.org" href="https://fonts.googleapis.com/css2?family=Roboto+Serif:opsz,wdth,wght@8..144,50..150,100..900&amp;display=swap" rel="stylesheet">
+<link xmlns:pf="https://prefigure.org" href="https://fonts.googleapis.com/css2?family=Open+Sans:wdth,wght@75..100,300..800&amp;display=swap" rel="stylesheet">
+<link xmlns:pf="https://prefigure.org" rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200">
+<script src="https://cdn.geogebra.org/apps/deployggb.js"></script><link href="_static/pretext/css/pretext.css" rel="stylesheet" type="text/css">
+<link href="_static/pretext/css/pretext_add_on.css" rel="stylesheet" type="text/css">
+<link href="_static/pretext/css/shell_default.css" rel="stylesheet" type="text/css">
+<link href="_static/pretext/css/banner_default.css" rel="stylesheet" type="text/css">
+<link href="_static/pretext/css/navbar_default.css" rel="stylesheet" type="text/css">
+<link href="_static/pretext/css/toc_default.css" rel="stylesheet" type="text/css">
+<link href="_static/pretext/css/knowls_default.css" rel="stylesheet" type="text/css">
+<link href="_static/pretext/css/style_default.css" rel="stylesheet" type="text/css">
+<link href="_static/pretext/css/colors_blue_red.css" rel="stylesheet" type="text/css">
+<link href="_static/pretext/css/setcolors.css" rel="stylesheet" type="text/css">
+<!--** eBookCongig is necessary to configure interactive       **-->
+<!--** Runestone components to run locally in reader's browser **-->
+<!--** No external communication:                              **-->
+<!--**     log level is 0, Runestone Services are disabled     **-->
+<script type="text/javascript">
+eBookConfig = {};
+eBookConfig.useRunestoneServices = false;
+eBookConfig.host = 'http://127.0.0.1:8000';
+eBookConfig.course = 'PTX_Course_Title_Here';
+eBookConfig.basecourse = 'PTX_Base_Course';
+eBookConfig.isLoggedIn = false;
+eBookConfig.email = '';
+eBookConfig.isInstructor = false;
+eBookConfig.logLevel = 0;
+eBookConfig.username = '';
+eBookConfig.readings = null;
+eBookConfig.activities = null;
+eBookConfig.downloadsEnabled = false;
+eBookConfig.allow_pairs = false;
+eBookConfig.enableScratchAC = false;
+eBookConfig.build_info = "";
+eBookConfig.python3 = null;
+eBookConfig.runestone_version = '7.4.5';
+eBookConfig.jobehost = '';
+eBookConfig.proxyuri_runs = '';
+eBookConfig.proxyuri_files = '';
+eBookConfig.enable_chatcodes =  false;
+</script>
+<!--*** Runestone Services ***-->
+<script src="_static/prefix-runtime.a28db57f2b9be365.bundle.js"></script><script src="_static/prefix-347.8328b60515045466.bundle.js"></script><script src="_static/prefix-runestone.0143ee6c5ca7e162.bundle.js"></script><link rel="stylesheet" type="text/css" href="_static/prefix-347.f9add1ca35d5ad93.css">
+<link rel="stylesheet" type="text/css" href="_static/prefix-runestone.82759e13f7f711fa.css">
+<style>
+#ez-Norman1999-Sounding-2-3 { counter-set: ez-Norman1999-Sounding-2-3 0; }
+#ez-Norman1999-Sounding-2-3 > li::marker { content: ""counter(ez-Norman1999-Sounding-2-3,lower-alpha)"."; }
+#ez-Norman1999-Sounding-2-3 > li { counter-increment: ez-Norman1999-Sounding-2-3; }
+#ez-Norman1999-Sounding-3-1 { counter-set: ez-Norman1999-Sounding-3-1 0; }
+#ez-Norman1999-Sounding-3-1 > li::marker { content: ""counter(ez-Norman1999-Sounding-3-1,lower-alpha)"."; }
+#ez-Norman1999-Sounding-3-1 > li { counter-increment: ez-Norman1999-Sounding-3-1; }
+#ez-Midwest-Derecho-2-3 { counter-set: ez-Midwest-Derecho-2-3 0; }
+#ez-Midwest-Derecho-2-3 > li::marker { content: ""counter(ez-Midwest-Derecho-2-3,lower-alpha)"."; }
+#ez-Midwest-Derecho-2-3 > li { counter-increment: ez-Midwest-Derecho-2-3; }
+#ez-Midwest-Derecho-3-1-1 { counter-set: ez-Midwest-Derecho-3-1-1 0; }
+#ez-Midwest-Derecho-3-1-1 > li::marker { content: ""counter(ez-Midwest-Derecho-3-1-1,lower-alpha)"."; }
+#ez-Midwest-Derecho-3-1-1 > li { counter-increment: ez-Midwest-Derecho-3-1-1; }
+#ez-MPX2023-Sounding-2-4 { counter-set: ez-MPX2023-Sounding-2-4 0; }
+#ez-MPX2023-Sounding-2-4 > li::marker { content: ""counter(ez-MPX2023-Sounding-2-4,lower-alpha)"."; }
+#ez-MPX2023-Sounding-2-4 > li { counter-increment: ez-MPX2023-Sounding-2-4; }
+#ez-MPX2023-Sounding-3-1 { counter-set: ez-MPX2023-Sounding-3-1 0; }
+#ez-MPX2023-Sounding-3-1 > li::marker { content: ""counter(ez-MPX2023-Sounding-3-1,lower-alpha)"."; }
+#ez-MPX2023-Sounding-3-1 > li { counter-increment: ez-MPX2023-Sounding-3-1; }
+#ez-Davenport-Sounding-2-4 { counter-set: ez-Davenport-Sounding-2-4 0; }
+#ez-Davenport-Sounding-2-4 > li::marker { content: ""counter(ez-Davenport-Sounding-2-4,lower-alpha)"."; }
+#ez-Davenport-Sounding-2-4 > li { counter-increment: ez-Davenport-Sounding-2-4; }
+#ez-Davenport-Sounding-3-1 { counter-set: ez-Davenport-Sounding-3-1 0; }
+#ez-Davenport-Sounding-3-1 > li::marker { content: ""counter(ez-Davenport-Sounding-3-1,lower-alpha)"."; }
+#ez-Davenport-Sounding-3-1 > li { counter-increment: ez-Davenport-Sounding-3-1; }
+#ez-identifyAwTB-2-2 { counter-set: ez-identifyAwTB-2-2 0; }
+#ez-identifyAwTB-2-2 > li::marker { content: ""counter(ez-identifyAwTB-2-2,lower-alpha)"."; }
+#ez-identifyAwTB-2-2 > li { counter-increment: ez-identifyAwTB-2-2; }
+#ez-identifyAwTB-3-1 { counter-set: ez-identifyAwTB-3-1 0; }
+#ez-identifyAwTB-3-1 > li::marker { content: ""counter(ez-identifyAwTB-3-1,lower-alpha)"."; }
+#ez-identifyAwTB-3-1 > li { counter-increment: ez-identifyAwTB-3-1; }
+#ez-SeattleSun-2-4 { counter-set: ez-SeattleSun-2-4 0; }
+#ez-SeattleSun-2-4 > li::marker { content: ""counter(ez-SeattleSun-2-4,lower-alpha)"."; }
+#ez-SeattleSun-2-4 > li { counter-increment: ez-SeattleSun-2-4; }
+#ez-SeattleSun-2-4-3-2 { counter-set: ez-SeattleSun-2-4-3-2 0; }
+#ez-SeattleSun-2-4-3-2 > li::marker { content: ""counter(ez-SeattleSun-2-4-3-2,lower-roman)"."; }
+#ez-SeattleSun-2-4-3-2 > li { counter-increment: ez-SeattleSun-2-4-3-2; }
+#ez-SeattleSun-3-1 { counter-set: ez-SeattleSun-3-1 0; }
+#ez-SeattleSun-3-1 > li::marker { content: ""counter(ez-SeattleSun-3-1,lower-alpha)"."; }
+#ez-SeattleSun-3-1 > li { counter-increment: ez-SeattleSun-3-1; }
+#ez-SeattleSun-3-1-3-1 { counter-set: ez-SeattleSun-3-1-3-1 0; }
+#ez-SeattleSun-3-1-3-1 > li::marker { content: ""counter(ez-SeattleSun-3-1-3-1,lower-roman)"."; }
+#ez-SeattleSun-3-1-3-1 > li { counter-increment: ez-SeattleSun-3-1-3-1; }
+#ModelingLowTempRio-2-4 { counter-set: ModelingLowTempRio-2-4 0; }
+#ModelingLowTempRio-2-4 > li::marker { content: ""counter(ModelingLowTempRio-2-4,lower-alpha)"."; }
+#ModelingLowTempRio-2-4 > li { counter-increment: ModelingLowTempRio-2-4; }
+#ModelingLowTempRio-3-1 { counter-set: ModelingLowTempRio-3-1 0; }
+#ModelingLowTempRio-3-1 > li::marker { content: ""counter(ModelingLowTempRio-3-1,lower-alpha)"."; }
+#ModelingLowTempRio-3-1 > li { counter-increment: ModelingLowTempRio-3-1; }
+#ModelingLowHighTempStCloud-2-4 { counter-set: ModelingLowHighTempStCloud-2-4 0; }
+#ModelingLowHighTempStCloud-2-4 > li::marker { content: ""counter(ModelingLowHighTempStCloud-2-4,lower-alpha)"."; }
+#ModelingLowHighTempStCloud-2-4 > li { counter-increment: ModelingLowHighTempStCloud-2-4; }
+#ModelingLowHighTempStCloud-3-1 { counter-set: ModelingLowHighTempStCloud-3-1 0; }
+#ModelingLowHighTempStCloud-3-1 > li::marker { content: ""counter(ModelingLowHighTempStCloud-3-1,lower-alpha)"."; }
+#ModelingLowHighTempStCloud-3-1 > li { counter-increment: ModelingLowHighTempStCloud-3-1; }
+#ex_geo_heights_45S-2-4 { counter-set: ex_geo_heights_45S-2-4 0; }
+#ex_geo_heights_45S-2-4 > li::marker { content: ""counter(ex_geo_heights_45S-2-4,lower-alpha)"."; }
+#ex_geo_heights_45S-2-4 > li { counter-increment: ex_geo_heights_45S-2-4; }
+#ex_geo_heights_45S-3-1 { counter-set: ex_geo_heights_45S-3-1 0; }
+#ex_geo_heights_45S-3-1 > li::marker { content: ""counter(ex_geo_heights_45S-3-1,lower-alpha)"."; }
+#ex_geo_heights_45S-3-1 > li { counter-increment: ex_geo_heights_45S-3-1; }
+#GeopotentialHeightsAt35N-2-4 { counter-set: GeopotentialHeightsAt35N-2-4 0; }
+#GeopotentialHeightsAt35N-2-4 > li::marker { content: ""counter(GeopotentialHeightsAt35N-2-4,lower-alpha)"."; }
+#GeopotentialHeightsAt35N-2-4 > li { counter-increment: GeopotentialHeightsAt35N-2-4; }
+#GeopotentialHeightsAt35N-3-1 { counter-set: GeopotentialHeightsAt35N-3-1 0; }
+#GeopotentialHeightsAt35N-3-1 > li::marker { content: ""counter(GeopotentialHeightsAt35N-3-1,lower-alpha)"."; }
+#GeopotentialHeightsAt35N-3-1 > li { counter-increment: GeopotentialHeightsAt35N-3-1; }
+#USweathermap-2-2-2 { counter-set: USweathermap-2-2-2 0; }
+#USweathermap-2-2-2 > li::marker { content: ""counter(USweathermap-2-2-2,lower-alpha)""; }
+#USweathermap-2-2-2 > li { counter-increment: USweathermap-2-2-2; }
+#USweathermap-3-1-1 { counter-set: USweathermap-3-1-1 0; }
+#USweathermap-3-1-1 > li::marker { content: ""counter(USweathermap-3-1-1,lower-alpha)""; }
+#USweathermap-3-1-1 > li { counter-increment: USweathermap-3-1-1; }
+#windchillexercise-2-1-8 { counter-set: windchillexercise-2-1-8 0; }
+#windchillexercise-2-1-8 > li::marker { content: ""counter(windchillexercise-2-1-8,lower-alpha)"."; }
+#windchillexercise-2-1-8 > li { counter-increment: windchillexercise-2-1-8; }
+#windchillexercise-3-1-1 { counter-set: windchillexercise-3-1-1 0; }
+#windchillexercise-3-1-1 > li::marker { content: ""counter(windchillexercise-3-1-1,lower-alpha)"."; }
+#windchillexercise-3-1-1 > li { counter-increment: windchillexercise-3-1-1; }
+#snowfall1-2-1-7 { counter-set: snowfall1-2-1-7 0; }
+#snowfall1-2-1-7 > li::marker { content: ""counter(snowfall1-2-1-7,lower-alpha)"."; }
+#snowfall1-2-1-7 > li { counter-increment: snowfall1-2-1-7; }
+#snowfall1-3-1-1 { counter-set: snowfall1-3-1-1 0; }
+#snowfall1-3-1-1 > li::marker { content: ""counter(snowfall1-3-1-1,lower-alpha)"."; }
+#snowfall1-3-1-1 > li { counter-increment: snowfall1-3-1-1; }
+#UHI1-2-1-15 { counter-set: UHI1-2-1-15 0; }
+#UHI1-2-1-15 > li::marker { content: ""counter(UHI1-2-1-15,lower-alpha)"."; }
+#UHI1-2-1-15 > li { counter-increment: UHI1-2-1-15; }
+#UHI1-3-1-1 { counter-set: UHI1-3-1-1 0; }
+#UHI1-3-1-1 > li::marker { content: ""counter(UHI1-3-1-1,lower-alpha)"."; }
+#UHI1-3-1-1 > li { counter-increment: UHI1-3-1-1; }
+#dewpoint-2-1-7 { counter-set: dewpoint-2-1-7 0; }
+#dewpoint-2-1-7 > li::marker { content: ""counter(dewpoint-2-1-7,lower-alpha)""; }
+#dewpoint-2-1-7 > li { counter-increment: dewpoint-2-1-7; }
+#dewpoint-3-1-1 { counter-set: dewpoint-3-1-1 0; }
+#dewpoint-3-1-1 > li::marker { content: ""counter(dewpoint-3-1-1,lower-alpha)""; }
+#dewpoint-3-1-1 > li { counter-increment: dewpoint-3-1-1; }
+#hdwindexexercise-2-1-5 { counter-set: hdwindexexercise-2-1-5 0; }
+#hdwindexexercise-2-1-5 > li::marker { content: ""counter(hdwindexexercise-2-1-5,lower-alpha)""; }
+#hdwindexexercise-2-1-5 > li { counter-increment: hdwindexexercise-2-1-5; }
+#hdwindexexercise-3-1-1 { counter-set: hdwindexexercise-3-1-1 0; }
+#hdwindexexercise-3-1-1 > li::marker { content: ""counter(hdwindexexercise-3-1-1,lower-alpha)""; }
+#hdwindexexercise-3-1-1 > li { counter-increment: hdwindexexercise-3-1-1; }
+#MyFrostbite-2-3-1 { counter-set: MyFrostbite-2-3-1 0; }
+#MyFrostbite-2-3-1 > li::marker { content: ""counter(MyFrostbite-2-3-1,lower-alpha)""; }
+#MyFrostbite-2-3-1 > li { counter-increment: MyFrostbite-2-3-1; }
+#Plotting3D2-2-1-2 { counter-set: Plotting3D2-2-1-2 0; }
+#Plotting3D2-2-1-2 > li::marker { content: ""counter(Plotting3D2-2-1-2,lower-alpha)""; }
+#Plotting3D2-2-1-2 > li { counter-increment: Plotting3D2-2-1-2; }
+#Plotting3D2-3-1-1 { counter-set: Plotting3D2-3-1-1 0; }
+#Plotting3D2-3-1-1 > li::marker { content: ""counter(Plotting3D2-3-1-1,lower-alpha)""; }
+#Plotting3D2-3-1-1 > li { counter-increment: Plotting3D2-3-1-1; }
+#Ez-9-1-2-2-1-7 { counter-set: Ez-9-1-2-2-1-7 0; }
+#Ez-9-1-2-2-1-7 > li::marker { content: ""counter(Ez-9-1-2-2-1-7,lower-alpha)"."; }
+#Ez-9-1-2-2-1-7 > li { counter-increment: Ez-9-1-2-2-1-7; }
+#Ez-9-1-2-3-1-1 { counter-set: Ez-9-1-2-3-1-1 0; }
+#Ez-9-1-2-3-1-1 > li::marker { content: ""counter(Ez-9-1-2-3-1-1,lower-alpha)"."; }
+#Ez-9-1-2-3-1-1 > li { counter-increment: Ez-9-1-2-3-1-1; }
+#Ez-9-1-2-4-1-1 { counter-set: Ez-9-1-2-4-1-1 0; }
+#Ez-9-1-2-4-1-1 > li::marker { content: ""counter(Ez-9-1-2-4-1-1,lower-alpha)"."; }
+#Ez-9-1-2-4-1-1 > li { counter-increment: Ez-9-1-2-4-1-1; }
+#PlottingWA-2-1-1 { counter-set: PlottingWA-2-1-1 0; }
+#PlottingWA-2-1-1 > li::marker { content: ""counter(PlottingWA-2-1-1,lower-alpha)"."; }
+#PlottingWA-2-1-1 > li { counter-increment: PlottingWA-2-1-1; }
+#PlottingWA-3-1 { counter-set: PlottingWA-3-1 0; }
+#PlottingWA-3-1 > li::marker { content: ""counter(PlottingWA-3-1,lower-alpha)"."; }
+#PlottingWA-3-1 > li { counter-increment: PlottingWA-3-1; }
+#contoursandgraphs-2-2-1 { counter-set: contoursandgraphs-2-2-1 0; }
+#contoursandgraphs-2-2-1 > li::marker { content: ""counter(contoursandgraphs-2-2-1,lower-alpha)"."; }
+#contoursandgraphs-2-2-1 > li { counter-increment: contoursandgraphs-2-2-1; }
+#contoursandgraphs-3-1 { counter-set: contoursandgraphs-3-1 0; }
+#contoursandgraphs-3-1 > li::marker { content: ""counter(contoursandgraphs-3-1,lower-alpha)"."; }
+#contoursandgraphs-3-1 > li { counter-increment: contoursandgraphs-3-1; }
+#winchillcontours-2-3 { counter-set: winchillcontours-2-3 0; }
+#winchillcontours-2-3 > li::marker { content: ""counter(winchillcontours-2-3,lower-alpha)"."; }
+#winchillcontours-2-3 > li { counter-increment: winchillcontours-2-3; }
+#winchillcontours-3-1 { counter-set: winchillcontours-3-1 0; }
+#winchillcontours-3-1 > li::marker { content: ""counter(winchillcontours-3-1,lower-alpha)"."; }
+#winchillcontours-3-1 > li { counter-increment: winchillcontours-3-1; }
+#levelsetsin3d-2-1-1 { counter-set: levelsetsin3d-2-1-1 0; }
+#levelsetsin3d-2-1-1 > li::marker { content: ""counter(levelsetsin3d-2-1-1,lower-alpha)"."; }
+#levelsetsin3d-2-1-1 > li { counter-increment: levelsetsin3d-2-1-1; }
+#levelsetsin3d-3-1 { counter-set: levelsetsin3d-3-1 0; }
+#levelsetsin3d-3-1 > li::marker { content: ""counter(levelsetsin3d-3-1,lower-alpha)"."; }
+#levelsetsin3d-3-1 > li { counter-increment: levelsetsin3d-3-1; }
+#PA-7B-3-2-2 { counter-set: PA-7B-3-2-2 0; }
+#PA-7B-3-2-2 > li::marker { content: ""counter(PA-7B-3-2-2,lower-alpha)"."; }
+#PA-7B-3-2-2 > li { counter-increment: PA-7B-3-2-2; }
+#PA-7B-3-3-1-1 { counter-set: PA-7B-3-3-1-1 0; }
+#PA-7B-3-3-1-1 > li::marker { content: ""counter(PA-7B-3-3-1-1,lower-alpha)"."; }
+#PA-7B-3-3-1-1 > li { counter-increment: PA-7B-3-3-1-1; }
+#ez-sphericalp2r-2-2 { counter-set: ez-sphericalp2r-2-2 0; }
+#ez-sphericalp2r-2-2 > li::marker { content: ""counter(ez-sphericalp2r-2-2,lower-alpha)"."; }
+#ez-sphericalp2r-2-2 > li { counter-increment: ez-sphericalp2r-2-2; }
+#ez-sphericalp2r-3-1 { counter-set: ez-sphericalp2r-3-1 0; }
+#ez-sphericalp2r-3-1 > li::marker { content: ""counter(ez-sphericalp2r-3-1,lower-alpha)"."; }
+#ez-sphericalp2r-3-1 > li { counter-increment: ez-sphericalp2r-3-1; }
+#rectangulartopolar4-2-1-1 { counter-set: rectangulartopolar4-2-1-1 0; }
+#rectangulartopolar4-2-1-1 > li::marker { content: ""counter(rectangulartopolar4-2-1-1,lower-alpha)"."; }
+#rectangulartopolar4-2-1-1 > li { counter-increment: rectangulartopolar4-2-1-1; }
+#rectangulartopolar4-3-1 { counter-set: rectangulartopolar4-3-1 0; }
+#rectangulartopolar4-3-1 > li::marker { content: ""counter(rectangulartopolar4-3-1,lower-alpha)"."; }
+#rectangulartopolar4-3-1 > li { counter-increment: rectangulartopolar4-3-1; }
+#PA_11_8-2 { counter-set: PA_11_8-2 0; }
+#PA_11_8-2 > li::marker { content: ""counter(PA_11_8-2,lower-alpha)"."; }
+#PA_11_8-2 > li { counter-increment: PA_11_8-2; }
+#A_11_8_7-1-1 { counter-set: A_11_8_7-1-1 0; }
+#A_11_8_7-1-1 > li::marker { content: ""counter(A_11_8_7-1-1,lower-alpha)"."; }
+#A_11_8_7-1-1 > li { counter-increment: A_11_8_7-1-1; }
+#ez-CartesianToSpherical-2-1-1 { counter-set: ez-CartesianToSpherical-2-1-1 0; }
+#ez-CartesianToSpherical-2-1-1 > li::marker { content: ""counter(ez-CartesianToSpherical-2-1-1,lower-alpha)"."; }
+#ez-CartesianToSpherical-2-1-1 > li { counter-increment: ez-CartesianToSpherical-2-1-1; }
+#ez-CartesianToSpherical-3-1 { counter-set: ez-CartesianToSpherical-3-1 0; }
+#ez-CartesianToSpherical-3-1 > li::marker { content: ""counter(ez-CartesianToSpherical-3-1,lower-alpha)"."; }
+#ez-CartesianToSpherical-3-1 > li { counter-increment: ez-CartesianToSpherical-3-1; }
+#ez-CartesianToSpherical-4-1 { counter-set: ez-CartesianToSpherical-4-1 0; }
+#ez-CartesianToSpherical-4-1 > li::marker { content: ""counter(ez-CartesianToSpherical-4-1,lower-alpha)"."; }
+#ez-CartesianToSpherical-4-1 > li { counter-increment: ez-CartesianToSpherical-4-1; }
+#sec_displacementvectors-25-3-1-2-2 { counter-set: sec_displacementvectors-25-3-1-2-2 0; }
+#sec_displacementvectors-25-3-1-2-2 > li::marker { content: ""counter(sec_displacementvectors-25-3-1-2-2,lower-alpha)"."; }
+#sec_displacementvectors-25-3-1-2-2 > li { counter-increment: sec_displacementvectors-25-3-1-2-2; }
+#horizontalwindvector-2-1-1 { counter-set: horizontalwindvector-2-1-1 0; }
+#horizontalwindvector-2-1-1 > li::marker { content: ""counter(horizontalwindvector-2-1-1,lower-alpha)"."; }
+#horizontalwindvector-2-1-1 > li { counter-increment: horizontalwindvector-2-1-1; }
+#horizontalwindvector-3-1 { counter-set: horizontalwindvector-3-1 0; }
+#horizontalwindvector-3-1 > li::marker { content: ""counter(horizontalwindvector-3-1,lower-alpha)"."; }
+#horizontalwindvector-3-1 > li { counter-increment: horizontalwindvector-3-1; }
+#ResolveVector-2-1-1 { counter-set: ResolveVector-2-1-1 0; }
+#ResolveVector-2-1-1 > li::marker { content: ""counter(ResolveVector-2-1-1,lower-alpha)"."; }
+#ResolveVector-2-1-1 > li { counter-increment: ResolveVector-2-1-1; }
+#ResolveVector-3-1-1 { counter-set: ResolveVector-3-1-1 0; }
+#ResolveVector-3-1-1 > li::marker { content: ""counter(ResolveVector-3-1-1,lower-alpha)"."; }
+#ResolveVector-3-1-1 > li { counter-increment: ResolveVector-3-1-1; }
+#directionsandvectors-2-1-3 { counter-set: directionsandvectors-2-1-3 0; }
+#directionsandvectors-2-1-3 > li::marker { content: ""counter(directionsandvectors-2-1-3,lower-alpha)"."; }
+#directionsandvectors-2-1-3 > li { counter-increment: directionsandvectors-2-1-3; }
+#directionsandvectors-3-1 { counter-set: directionsandvectors-3-1 0; }
+#directionsandvectors-3-1 > li::marker { content: ""counter(directionsandvectors-3-1,lower-alpha)"."; }
+#directionsandvectors-3-1 > li { counter-increment: directionsandvectors-3-1; }
+#meanwindvectors0-2-2-6 { counter-set: meanwindvectors0-2-2-6 0; }
+#meanwindvectors0-2-2-6 > li::marker { content: ""counter(meanwindvectors0-2-2-6,lower-alpha)"."; }
+#meanwindvectors0-2-2-6 > li { counter-increment: meanwindvectors0-2-2-6; }
+#meanwindvectors0-3-1-1 { counter-set: meanwindvectors0-3-1-1 0; }
+#meanwindvectors0-3-1-1 > li::marker { content: ""counter(meanwindvectors0-3-1-1,lower-alpha)"."; }
+#meanwindvectors0-3-1-1 > li { counter-increment: meanwindvectors0-3-1-1; }
+#AnglesAndSigns-2-1 { counter-set: AnglesAndSigns-2-1 0; }
+#AnglesAndSigns-2-1 > li::marker { content: ""counter(AnglesAndSigns-2-1,lower-alpha)"."; }
+#AnglesAndSigns-2-1 > li { counter-increment: AnglesAndSigns-2-1; }
+#AnglesAndSigns-2-1-2-2 { counter-set: AnglesAndSigns-2-1-2-2 0; }
+#AnglesAndSigns-2-1-2-2 > li::marker { content: ""counter(AnglesAndSigns-2-1-2-2,lower-roman)"."; }
+#AnglesAndSigns-2-1-2-2 > li { counter-increment: AnglesAndSigns-2-1-2-2; }
+#dotproductbasic-2-1-3 { counter-set: dotproductbasic-2-1-3 0; }
+#dotproductbasic-2-1-3 > li::marker { content: ""counter(dotproductbasic-2-1-3,lower-alpha)"."; }
+#dotproductbasic-2-1-3 > li { counter-increment: dotproductbasic-2-1-3; }
+#dotproductbasic-3-1-1 { counter-set: dotproductbasic-3-1-1 0; }
+#dotproductbasic-3-1-1 > li::marker { content: ""counter(dotproductbasic-3-1-1,lower-alpha)"."; }
+#dotproductbasic-3-1-1 > li { counter-increment: dotproductbasic-3-1-1; }
+#advectioncentralUS-2-1-3 { counter-set: advectioncentralUS-2-1-3 0; }
+#advectioncentralUS-2-1-3 > li::marker { content: ""counter(advectioncentralUS-2-1-3,lower-alpha)"."; }
+#advectioncentralUS-2-1-3 > li { counter-increment: advectioncentralUS-2-1-3; }
+#advectioncentralUS-3-1-1 { counter-set: advectioncentralUS-3-1-1 0; }
+#advectioncentralUS-3-1-1 > li::marker { content: ""counter(advectioncentralUS-3-1-1,lower-alpha)"."; }
+#advectioncentralUS-3-1-1 > li { counter-increment: advectioncentralUS-3-1-1; }
+#AdvectionInNY-2-1-3 { counter-set: AdvectionInNY-2-1-3 0; }
+#AdvectionInNY-2-1-3 > li::marker { content: ""counter(AdvectionInNY-2-1-3,lower-alpha)"."; }
+#AdvectionInNY-2-1-3 > li { counter-increment: AdvectionInNY-2-1-3; }
+#AdvectionInNY-3-1-1 { counter-set: AdvectionInNY-3-1-1 0; }
+#AdvectionInNY-3-1-1 > li::marker { content: ""counter(AdvectionInNY-3-1-1,lower-alpha)"."; }
+#AdvectionInNY-3-1-1 > li { counter-increment: AdvectionInNY-3-1-1; }
+#advectionsartell-2-3-1 { counter-set: advectionsartell-2-3-1 0; }
+#advectionsartell-2-3-1 > li::marker { content: ""counter(advectionsartell-2-3-1,lower-alpha)"."; }
+#advectionsartell-2-3-1 > li { counter-increment: advectionsartell-2-3-1; }
+#advectionsartell-3-1 { counter-set: advectionsartell-3-1 0; }
+#advectionsartell-3-1 > li::marker { content: ""counter(advectionsartell-3-1,lower-alpha)"."; }
+#advectionsartell-3-1 > li { counter-increment: advectionsartell-3-1; }
+#advectioncoldspring-2-1-6 { counter-set: advectioncoldspring-2-1-6 0; }
+#advectioncoldspring-2-1-6 > li::marker { content: ""counter(advectioncoldspring-2-1-6,lower-alpha)"."; }
+#advectioncoldspring-2-1-6 > li { counter-increment: advectioncoldspring-2-1-6; }
+#advectioncoldspring-3-1 { counter-set: advectioncoldspring-3-1 0; }
+#advectioncoldspring-3-1 > li::marker { content: ""counter(advectioncoldspring-3-1,lower-alpha)"."; }
+#advectioncoldspring-3-1 > li { counter-increment: advectioncoldspring-3-1; }
+#DeterminantComputations-2-1-1 { counter-set: DeterminantComputations-2-1-1 0; }
+#DeterminantComputations-2-1-1 > li::marker { content: ""counter(DeterminantComputations-2-1-1,lower-alpha)"."; }
+#DeterminantComputations-2-1-1 > li { counter-increment: DeterminantComputations-2-1-1; }
+#DeterminantComputations-3-1-1 { counter-set: DeterminantComputations-3-1-1 0; }
+#DeterminantComputations-3-1-1 > li::marker { content: ""counter(DeterminantComputations-3-1-1,lower-alpha)"."; }
+#DeterminantComputations-3-1-1 > li { counter-increment: DeterminantComputations-3-1-1; }
+#coriolisgolfball-2-1-3 { counter-set: coriolisgolfball-2-1-3 0; }
+#coriolisgolfball-2-1-3 > li::marker { content: ""counter(coriolisgolfball-2-1-3,lower-alpha)"."; }
+#coriolisgolfball-2-1-3 > li { counter-increment: coriolisgolfball-2-1-3; }
+#coriolisgolfball-3-1-1 { counter-set: coriolisgolfball-3-1-1 0; }
+#coriolisgolfball-3-1-1 > li::marker { content: ""counter(coriolisgolfball-3-1-1,lower-alpha)"."; }
+#coriolisgolfball-3-1-1 > li { counter-increment: coriolisgolfball-3-1-1; }
+#VSorU-2-1-1 { counter-set: VSorU-2-1-1 0; }
+#VSorU-2-1-1 > li::marker { content: ""counter(VSorU-2-1-1,lower-alpha)"."; }
+#VSorU-2-1-1 > li { counter-increment: VSorU-2-1-1; }
+#VSorU-3-1-1 { counter-set: VSorU-3-1-1 0; }
+#VSorU-3-1-1 > li::marker { content: ""counter(VSorU-3-1-1,lower-alpha)"."; }
+#VSorU-3-1-1 > li { counter-increment: VSorU-3-1-1; }
+#NoVerticalCross-2-3 { counter-set: NoVerticalCross-2-3 0; }
+#NoVerticalCross-2-3 > li::marker { content: ""counter(NoVerticalCross-2-3,lower-alpha)"."; }
+#NoVerticalCross-2-3 > li { counter-increment: NoVerticalCross-2-3; }
+#NoVerticalCross-3-1 { counter-set: NoVerticalCross-3-1 0; }
+#NoVerticalCross-3-1 > li::marker { content: ""counter(NoVerticalCross-3-1,lower-alpha)"."; }
+#NoVerticalCross-3-1 > li { counter-increment: NoVerticalCross-3-1; }
+#VenusCoriolis-2-2 { counter-set: VenusCoriolis-2-2 0; }
+#VenusCoriolis-2-2 > li::marker { content: ""counter(VenusCoriolis-2-2,lower-alpha)"."; }
+#VenusCoriolis-2-2 > li { counter-increment: VenusCoriolis-2-2; }
+#VenusCoriolis-3-1 { counter-set: VenusCoriolis-3-1 0; }
+#VenusCoriolis-3-1 > li::marker { content: ""counter(VenusCoriolis-3-1,lower-alpha)"."; }
+#VenusCoriolis-3-1 > li { counter-increment: VenusCoriolis-3-1; }
+#PickingKoff-2-1-4 { counter-set: PickingKoff-2-1-4 0; }
+#PickingKoff-2-1-4 > li::marker { content: ""counter(PickingKoff-2-1-4,lower-alpha)"."; }
+#PickingKoff-2-1-4 > li { counter-increment: PickingKoff-2-1-4; }
+#PickingKoff-3-1 { counter-set: PickingKoff-3-1 0; }
+#PickingKoff-3-1 > li::marker { content: ""counter(PickingKoff-3-1,lower-alpha)"."; }
+#PickingKoff-3-1 > li { counter-increment: PickingKoff-3-1; }
+#TechnologyCrossProducts-2-1-1 { counter-set: TechnologyCrossProducts-2-1-1 0; }
+#TechnologyCrossProducts-2-1-1 > li::marker { content: ""counter(TechnologyCrossProducts-2-1-1,lower-alpha)"."; }
+#TechnologyCrossProducts-2-1-1 > li { counter-increment: TechnologyCrossProducts-2-1-1; }
+#BulkRichardsonNumber-2-5-1 { counter-set: BulkRichardsonNumber-2-5-1 0; }
+#BulkRichardsonNumber-2-5-1 > li::marker { content: ""counter(BulkRichardsonNumber-2-5-1,lower-alpha)"."; }
+#BulkRichardsonNumber-2-5-1 > li { counter-increment: BulkRichardsonNumber-2-5-1; }
+#BulkRichardsonNumber-3-1 { counter-set: BulkRichardsonNumber-3-1 0; }
+#BulkRichardsonNumber-3-1 > li::marker { content: ""counter(BulkRichardsonNumber-3-1,lower-alpha)"."; }
+#BulkRichardsonNumber-3-1 > li { counter-increment: BulkRichardsonNumber-3-1; }
+#windchillpartials-3 { counter-set: windchillpartials-3 0; }
+#windchillpartials-3 > li::marker { content: ""counter(windchillpartials-3,lower-alpha)"."; }
+#windchillpartials-3 > li { counter-increment: windchillpartials-3; }
+#windchillpartials-4-1 { counter-set: windchillpartials-4-1 0; }
+#windchillpartials-4-1 > li::marker { content: ""counter(windchillpartials-4-1,lower-alpha)"."; }
+#windchillpartials-4-1 > li { counter-increment: windchillpartials-4-1; }
+#interpretfirstorderpartials-8-3 { counter-set: interpretfirstorderpartials-8-3 0; }
+#interpretfirstorderpartials-8-3 > li::marker { content: ""counter(interpretfirstorderpartials-8-3,lower-alpha)"."; }
+#interpretfirstorderpartials-8-3 > li { counter-increment: interpretfirstorderpartials-8-3; }
+#interpretfirstorderpartials-8-4-1 { counter-set: interpretfirstorderpartials-8-4-1 0; }
+#interpretfirstorderpartials-8-4-1 > li::marker { content: ""counter(interpretfirstorderpartials-8-4-1,lower-alpha)"."; }
+#interpretfirstorderpartials-8-4-1 > li { counter-increment: interpretfirstorderpartials-8-4-1; }
+#meanwindspeed-3 { counter-set: meanwindspeed-3 0; }
+#meanwindspeed-3 > li::marker { content: ""counter(meanwindspeed-3,lower-alpha)"."; }
+#meanwindspeed-3 > li { counter-increment: meanwindspeed-3; }
+#meanwindspeed-4-1 { counter-set: meanwindspeed-4-1 0; }
+#meanwindspeed-4-1 > li::marker { content: ""counter(meanwindspeed-4-1,lower-alpha)"."; }
+#meanwindspeed-4-1 > li { counter-increment: meanwindspeed-4-1; }
+#SVPexercise-4 { counter-set: SVPexercise-4 0; }
+#SVPexercise-4 > li::marker { content: ""counter(SVPexercise-4,lower-alpha)"."; }
+#SVPexercise-4 > li { counter-increment: SVPexercise-4; }
+#SVPexercise-5-1 { counter-set: SVPexercise-5-1 0; }
+#SVPexercise-5-1 > li::marker { content: ""counter(SVPexercise-5-1,lower-alpha)"."; }
+#SVPexercise-5-1 > li { counter-increment: SVPexercise-5-1; }
+#partialisobaricmap-2-3 { counter-set: partialisobaricmap-2-3 0; }
+#partialisobaricmap-2-3 > li::marker { content: ""counter(partialisobaricmap-2-3,lower-alpha)"."; }
+#partialisobaricmap-2-3 > li { counter-increment: partialisobaricmap-2-3; }
+#partialisobaricmap-3-1 { counter-set: partialisobaricmap-3-1 0; }
+#partialisobaricmap-3-1 > li::marker { content: ""counter(partialisobaricmap-3-1,lower-alpha)"."; }
+#partialisobaricmap-3-1 > li { counter-increment: partialisobaricmap-3-1; }
+#ez_potential_temperature-2-1-8 { counter-set: ez_potential_temperature-2-1-8 0; }
+#ez_potential_temperature-2-1-8 > li::marker { content: ""counter(ez_potential_temperature-2-1-8,lower-alpha)"."; }
+#ez_potential_temperature-2-1-8 > li { counter-increment: ez_potential_temperature-2-1-8; }
+#ez_potential_temperature-3-1 { counter-set: ez_potential_temperature-3-1 0; }
+#ez_potential_temperature-3-1 > li::marker { content: ""counter(ez_potential_temperature-3-1,lower-alpha)"."; }
+#ez_potential_temperature-3-1 > li { counter-increment: ez_potential_temperature-3-1; }
+#insolation-2-3 { counter-set: insolation-2-3 0; }
+#insolation-2-3 > li::marker { content: ""counter(insolation-2-3,lower-alpha)"."; }
+#insolation-2-3 > li { counter-increment: insolation-2-3; }
+#frostbitepartial-2-3 { counter-set: frostbitepartial-2-3 0; }
+#frostbitepartial-2-3 > li::marker { content: ""counter(frostbitepartial-2-3,lower-alpha)"."; }
+#frostbitepartial-2-3 > li { counter-increment: frostbitepartial-2-3; }
+#frostbitepartial-3-1 { counter-set: frostbitepartial-3-1 0; }
+#frostbitepartial-3-1 > li::marker { content: ""counter(frostbitepartial-3-1,lower-alpha)"."; }
+#frostbitepartial-3-1 > li { counter-increment: frostbitepartial-3-1; }
+#WetBulbGlobeTemp-2-2 { counter-set: WetBulbGlobeTemp-2-2 0; }
+#WetBulbGlobeTemp-2-2 > li::marker { content: ""counter(WetBulbGlobeTemp-2-2,lower-alpha)"."; }
+#WetBulbGlobeTemp-2-2 > li { counter-increment: WetBulbGlobeTemp-2-2; }
+#WetBulbGlobeTemp-3-1 { counter-set: WetBulbGlobeTemp-3-1 0; }
+#WetBulbGlobeTemp-3-1 > li::marker { content: ""counter(WetBulbGlobeTemp-3-1,lower-alpha)"."; }
+#WetBulbGlobeTemp-3-1 > li { counter-increment: WetBulbGlobeTemp-3-1; }
+#A_10_2_11-2-2-5 { counter-set: A_10_2_11-2-2-5 0; }
+#A_10_2_11-2-2-5 > li::marker { content: ""counter(A_10_2_11-2-2-5,lower-alpha)"."; }
+#A_10_2_11-2-2-5 > li { counter-increment: A_10_2_11-2-2-5; }
+#partialbackwards-2 { counter-set: partialbackwards-2 0; }
+#partialbackwards-2 > li::marker { content: ""counter(partialbackwards-2,lower-alpha)"."; }
+#partialbackwards-2 > li { counter-increment: partialbackwards-2; }
+#partialbackwards-3-1 { counter-set: partialbackwards-3-1 0; }
+#partialbackwards-3-1 > li::marker { content: ""counter(partialbackwards-3-1,lower-alpha)"."; }
+#partialbackwards-3-1 > li { counter-increment: partialbackwards-3-1; }
+#firstcontouradvect-4 { counter-set: firstcontouradvect-4 0; }
+#firstcontouradvect-4 > li::marker { content: ""counter(firstcontouradvect-4,lower-alpha)"."; }
+#firstcontouradvect-4 > li { counter-increment: firstcontouradvect-4; }
+#firstcontouradvect-5-1 { counter-set: firstcontouradvect-5-1 0; }
+#firstcontouradvect-5-1 > li::marker { content: ""counter(firstcontouradvect-5-1,lower-alpha)"."; }
+#firstcontouradvect-5-1 > li { counter-increment: firstcontouradvect-5-1; }
+#dewpointcontours-2-3 { counter-set: dewpointcontours-2-3 0; }
+#dewpointcontours-2-3 > li::marker { content: ""counter(dewpointcontours-2-3,lower-alpha)"."; }
+#dewpointcontours-2-3 > li { counter-increment: dewpointcontours-2-3; }
+#dewpointcontours-2-3-3-2 { counter-set: dewpointcontours-2-3-3-2 0; }
+#dewpointcontours-2-3-3-2 > li::marker { content: ""counter(dewpointcontours-2-3-3-2,lower-roman)"."; }
+#dewpointcontours-2-3-3-2 > li { counter-increment: dewpointcontours-2-3-3-2; }
+#dewpointcontours-3-1 { counter-set: dewpointcontours-3-1 0; }
+#dewpointcontours-3-1 > li::marker { content: ""counter(dewpointcontours-3-1,lower-alpha)"."; }
+#dewpointcontours-3-1 > li { counter-increment: dewpointcontours-3-1; }
+#extracted-webwork-5-1-1-4-1-1-1 { counter-set: extracted-webwork-5-1-1-4-1-1-1 0; }
+#extracted-webwork-5-1-1-4-1-1-1 > li::marker { content: "("counter(extracted-webwork-5-1-1-4-1-1-1,lower-alpha)")"; }
+#extracted-webwork-5-1-1-4-1-1-1 > li { counter-increment: extracted-webwork-5-1-1-4-1-1-1; }
+#extracted-webwork-5-1-1-4-1-2-1 { counter-set: extracted-webwork-5-1-1-4-1-2-1 0; }
+#extracted-webwork-5-1-1-4-1-2-1 > li::marker { content: ""counter(extracted-webwork-5-1-1-4-1-2-1,upper-alpha)"."; }
+#extracted-webwork-5-1-1-4-1-2-1 > li { counter-increment: extracted-webwork-5-1-1-4-1-2-1; }
+#transportequation-2-2 { counter-set: transportequation-2-2 0; }
+#transportequation-2-2 > li::marker { content: ""counter(transportequation-2-2,lower-alpha)"."; }
+#transportequation-2-2 > li { counter-increment: transportequation-2-2; }
+#transportequation-3-1 { counter-set: transportequation-3-1 0; }
+#transportequation-3-1 > li::marker { content: ""counter(transportequation-3-1,lower-alpha)"."; }
+#transportequation-3-1 > li { counter-increment: transportequation-3-1; }
+#CirculationPentagonPath-2-5 { counter-set: CirculationPentagonPath-2-5 0; }
+#CirculationPentagonPath-2-5 > li::marker { content: ""counter(CirculationPentagonPath-2-5,lower-alpha)"."; }
+#CirculationPentagonPath-2-5 > li { counter-increment: CirculationPentagonPath-2-5; }
+#CirculationPentagonPath-3-1 { counter-set: CirculationPentagonPath-3-1 0; }
+#CirculationPentagonPath-3-1 > li::marker { content: ""counter(CirculationPentagonPath-3-1,lower-alpha)"."; }
+#CirculationPentagonPath-3-1 > li { counter-increment: CirculationPentagonPath-3-1; }
+#ComputeCurlBothWays-1-1-5 { counter-set: ComputeCurlBothWays-1-1-5 0; }
+#ComputeCurlBothWays-1-1-5 > li::marker { content: ""counter(ComputeCurlBothWays-1-1-5,lower-alpha)"."; }
+#ComputeCurlBothWays-1-1-5 > li { counter-increment: ComputeCurlBothWays-1-1-5; }
+#ComputeCurlBothWays-2-1 { counter-set: ComputeCurlBothWays-2-1 0; }
+#ComputeCurlBothWays-2-1 > li::marker { content: ""counter(ComputeCurlBothWays-2-1,lower-alpha)"."; }
+#ComputeCurlBothWays-2-1 > li { counter-increment: ComputeCurlBothWays-2-1; }
+#MetarsToVorticity-2-7 { counter-set: MetarsToVorticity-2-7 0; }
+#MetarsToVorticity-2-7 > li::marker { content: ""counter(MetarsToVorticity-2-7,lower-alpha)"."; }
+#MetarsToVorticity-2-7 > li { counter-increment: MetarsToVorticity-2-7; }
+#MetarsToVorticity-3-1 { counter-set: MetarsToVorticity-3-1 0; }
+#MetarsToVorticity-3-1 > li::marker { content: ""counter(MetarsToVorticity-3-1,lower-alpha)"."; }
+#MetarsToVorticity-3-1 > li { counter-increment: MetarsToVorticity-3-1; }
+#fluxmaximized-2-1-3 { counter-set: fluxmaximized-2-1-3 0; }
+#fluxmaximized-2-1-3 > li::marker { content: ""counter(fluxmaximized-2-1-3,lower-alpha)"."; }
+#fluxmaximized-2-1-3 > li { counter-increment: fluxmaximized-2-1-3; }
+#fluxmaximized-3-1-1 { counter-set: fluxmaximized-3-1-1 0; }
+#fluxmaximized-3-1-1 > li::marker { content: ""counter(fluxmaximized-3-1-1,lower-alpha)"."; }
+#fluxmaximized-3-1-1 > li { counter-increment: fluxmaximized-3-1-1; }
+#FluxSidesPrism-2-1-4 { counter-set: FluxSidesPrism-2-1-4 0; }
+#FluxSidesPrism-2-1-4 > li::marker { content: ""counter(FluxSidesPrism-2-1-4,lower-alpha)"."; }
+#FluxSidesPrism-2-1-4 > li { counter-increment: FluxSidesPrism-2-1-4; }
+#FluxSidesPrism-3-1 { counter-set: FluxSidesPrism-3-1 0; }
+#FluxSidesPrism-3-1 > li::marker { content: ""counter(FluxSidesPrism-3-1,lower-alpha)"."; }
+#FluxSidesPrism-3-1 > li { counter-increment: FluxSidesPrism-3-1; }
+#fluxofcube-2-1-6 { counter-set: fluxofcube-2-1-6 0; }
+#fluxofcube-2-1-6 > li::marker { content: ""counter(fluxofcube-2-1-6,lower-alpha)"."; }
+#fluxofcube-2-1-6 > li { counter-increment: fluxofcube-2-1-6; }
+#fluxofcube-3-1-1 { counter-set: fluxofcube-3-1-1 0; }
+#fluxofcube-3-1-1 > li::marker { content: ""counter(fluxofcube-3-1-1,lower-alpha)"."; }
+#fluxofcube-3-1-1 > li { counter-increment: fluxofcube-3-1-1; }
+#Ez_10_3_0-2-3 { counter-set: Ez_10_3_0-2-3 0; }
+#Ez_10_3_0-2-3 > li::marker { content: ""counter(Ez_10_3_0-2-3,lower-alpha)"."; }
+#Ez_10_3_0-2-3 > li { counter-increment: Ez_10_3_0-2-3; }
+#Ez_10_3_1-2-3 { counter-set: Ez_10_3_1-2-3 0; }
+#Ez_10_3_1-2-3 > li::marker { content: ""counter(Ez_10_3_1-2-3,lower-alpha)"."; }
+#Ez_10_3_1-2-3 > li { counter-increment: Ez_10_3_1-2-3; }
+#Ez_10_3_1-3-1-1 { counter-set: Ez_10_3_1-3-1-1 0; }
+#Ez_10_3_1-3-1-1 > li::marker { content: ""counter(Ez_10_3_1-3-1-1,lower-alpha)"."; }
+#Ez_10_3_1-3-1-1 > li { counter-increment: Ez_10_3_1-3-1-1; }
+#ez-wind-at-MSP-2-3 { counter-set: ez-wind-at-MSP-2-3 0; }
+#ez-wind-at-MSP-2-3 > li::marker { content: ""counter(ez-wind-at-MSP-2-3,lower-alpha)"."; }
+#ez-wind-at-MSP-2-3 > li { counter-increment: ez-wind-at-MSP-2-3; }
+#ez-wind-at-MSP-3-1 { counter-set: ez-wind-at-MSP-3-1 0; }
+#ez-wind-at-MSP-3-1 > li::marker { content: ""counter(ez-wind-at-MSP-3-1,lower-alpha)"."; }
+#ez-wind-at-MSP-3-1 > li { counter-increment: ez-wind-at-MSP-3-1; }
+#ez-wind-at-Jackson-2-4 { counter-set: ez-wind-at-Jackson-2-4 0; }
+#ez-wind-at-Jackson-2-4 > li::marker { content: ""counter(ez-wind-at-Jackson-2-4,lower-alpha)"."; }
+#ez-wind-at-Jackson-2-4 > li { counter-increment: ez-wind-at-Jackson-2-4; }
+#ez-wind-at-Jackson-3-1 { counter-set: ez-wind-at-Jackson-3-1 0; }
+#ez-wind-at-Jackson-3-1 > li::marker { content: ""counter(ez-wind-at-Jackson-3-1,lower-alpha)"."; }
+#ez-wind-at-Jackson-3-1 > li { counter-increment: ez-wind-at-Jackson-3-1; }
+</style>
+</head>
+<body class="pretext book ignore-math">
+<a class="assistive" href="#ptx-content">Skip to main content</a><header id="ptx-masthead" class="ptx-masthead"><div class="ptx-banner">
+<a xmlns:pf="https://prefigure.org" id="logo-link" class="logo-link" target="_blank" href="http://web.stcloudstate.edu/drbuske/"><img src="external/SCSU_StC_Pri_DkBlkBG.png" alt="Logo image"></a><div class="title-container">
+<h1 class="heading"><a href="atmospherickinematics.html"><span class="title">Mathematics of Atmospheric Kinematics</span></a></h1>
+<p class="byline">Dale Buske</p>
+</div>
+</div></header><nav xmlns:pf="https://prefigure.org" id="ptx-navbar" class="ptx-navbar navbar"><button class="toc-toggle button" title="Contents"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5d2;</span><span class="name">Contents</span></button><a class="index-button button" href="backmatter-2.html" title="Index"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe88e;</span><span class="name">Index</span></a><div class="searchbox">
+<div class="searchwidget"><button id="searchbutton" class="searchbutton button" type="button" title="Search book"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe8b6;</span><span class="name">Search Book</span></button></div>
+<div id="searchresultsplaceholder" class="searchresultsplaceholder" style="display: none">
+<div class="search-results-controls">
+<input aria-label="Search term" id="ptxsearch" class="ptxsearch" type="text" name="terms" placeholder="Search term"><button title="Close search" id="closesearchresults" class="closesearchresults"><span class="material-symbols-outlined">close</span></button>
+</div>
+<h2 class="search-results-heading">Search Results: </h2>
+<div id="searchempty" class="searchempty"><span>No results.</span></div>
+<ol id="searchresults" class="searchresults"></ol>
+</div>
+</div>
+<span class="nav-other-controls"><button id="calculator-toggle" class="calculator-toggle button" title="Show calculator" aria-expanded="false" aria-controls="calculator-container"><span class="icon material-symbols-outlined" aria-hidden="true">&#xea5f;</span><span class="name">Calc</span></button><div id="calculator-container" class="calculator-container" style="display: none; z-index:100;"><div id="geogebra-calculator"></div></div>
+<script>
+var ggbApp = new GGBApplet({"appName": "classic",
+    "width": 330,
+    "height": 600,
+    "showToolBar": true,
+    "showAlgebraInput": true,
+    "perspective": "G/A",
+    "algebraInputPosition": "bottom",
+    "scaleContainerClass": "calculator-container",
+    "allowUpscale": true,
+    "autoHeight": true,
+    "disableAutoScale": false},
+true);
+</script></span><span class="treebuttons"><a class="previous-button button" href="ch_vectors.html" title="Previous"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5cb;</span><span class="name">Prev</span></a><a class="up-button button" href="ch_vectors.html" title="Up"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5ce;</span><span class="name">Up</span></a><a class="next-button button" href="sec_dotproduct.html" title="Next"><span class="name">Next</span><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5cc;</span></a></span></nav><div xmlns:pf="https://prefigure.org" id="latex-macros" class="hidden-content process-math" style="display:none"><span class="process-math">\(\newcommand{\N}{\mathbb N}
+\newcommand{\Z}{\mathbb Z}
+\newcommand{\Q}{\mathbb Q}
+\newcommand{\R}{\mathbb R}
+\newcommand{\lt}{&lt;}
+\newcommand{\gt}{&gt;}
+\newcommand{\amp}{&amp;}
+\definecolor{fillinmathshade}{gray}{0.9}
+\newcommand{\fillinmath}[1]{\mathchoice{\colorbox{fillinmathshade}{$\displaystyle     \phantom{\,#1\,}$}}{\colorbox{fillinmathshade}{$\textstyle        \phantom{\,#1\,}$}}{\colorbox{fillinmathshade}{$\scriptstyle      \phantom{\,#1\,}$}}{\colorbox{fillinmathshade}{$\scriptscriptstyle\phantom{\,#1\,}$}}}
+\)</span></div>
+<div class="ptx-page">
+<div xmlns:pf="https://prefigure.org" id="ptx-sidebar" class="ptx-sidebar"><nav id="ptx-toc" class="ptx-toc depth2"><ul class="structural contains-active toc-item-list">
+<li class="toc-item toc-frontmatter">
+<div class="toc-title-box"><a href="frontmatter.html" class="internal"><span class="title">Front Matter</span></a></div>
+<ul class="structural toc-item-list">
+<li class="toc-item toc-colophon"><div class="toc-title-box"><a href="frontmatter-3.html" class="internal"><span class="title">Colophon</span></a></div></li>
+<li class="toc-item toc-acknowledgement"><div class="toc-title-box"><a href="frontmatter-4.html" class="internal"><span class="title">Acknowledgements</span></a></div></li>
+</ul>
+</li>
+<li class="toc-item toc-chapter">
+<div class="toc-title-box"><a href="ch_numerical_integration.html" class="internal"><span class="codenumber">1</span> <span class="title">Approximation I: Area</span></a></div>
+<ul class="structural toc-item-list"><li class="toc-item toc-section">
+<div class="toc-title-box"><a href="sec_CAPE.html" class="internal"><span class="codenumber">1.1</span> <span class="title">Numerical Integration</span></a></div>
+<ul class="structural toc-item-list">
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="sec_CAPE.html#sec_CAPE-4" class="internal"><span class="codenumber">1.1.1</span> <span class="title">CAPE and CIN</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="sec_CAPE.html#sec_CAPE-5" class="internal"><span class="codenumber">1.1.2</span> <span class="title">Left, Right, and Midpoint Sums</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="sec_CAPE.html#sec_CAPE-6" class="internal"><span class="codenumber">1.1.3</span> <span class="title">The Trapezoidal Rule</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="sec_CAPE.html#sec_CAPE-7" class="internal"><span class="codenumber">1.1.4</span> <span class="title">Simpson’s Rule</span></a></div></li>
+<li class="toc-item toc-exercises"><div class="toc-title-box"><a href="sec_CAPE.html#ez_CAPE" class="internal"><span class="codenumber">1.1.5</span> <span class="title">Exercises</span></a></div></li>
+</ul>
+</li></ul>
+</li>
+<li class="toc-item toc-chapter">
+<div class="toc-title-box"><a href="ch_series.html" class="internal"><span class="codenumber">2</span> <span class="title">Modeling Periodic Behavior</span></a></div>
+<ul class="structural toc-item-list">
+<li class="toc-item toc-section">
+<div class="toc-title-box"><a href="sec_fourier_series.html" class="internal"><span class="codenumber">2.1</span> <span class="title">Sinusoids</span></a></div>
+<ul class="structural toc-item-list">
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="sec_fourier_series.html#sec_fourier_series-4" class="internal"><span class="codenumber">2.1.1</span> <span class="title">Sinusoids</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="sec_fourier_series.html#sec_fourier_series-5" class="internal"><span class="codenumber">2.1.2</span> <span class="title">Least-squares Fit of a Sinusoid</span></a></div></li>
+<li class="toc-item toc-exercises"><div class="toc-title-box"><a href="sec_fourier_series.html#ex_sinusoids" class="internal"><span class="codenumber">2.1.3</span> <span class="title">Exercises</span></a></div></li>
+</ul>
+</li>
+<li class="toc-item toc-section">
+<div class="toc-title-box"><a href="sec_trig_polynomials.html" class="internal"><span class="codenumber">2.2</span> <span class="title">Trigonometric Polynomials</span></a></div>
+<ul class="structural toc-item-list">
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="sec_trig_polynomials.html#sec_trig_polynomials-4" class="internal"><span class="codenumber">2.2.1</span> <span class="title">Trigonometric Polynomials</span></a></div></li>
+<li class="toc-item toc-exercises"><div class="toc-title-box"><a href="sec_trig_polynomials.html#ex_trig_polynomials" class="internal"><span class="codenumber">2.2.2</span> <span class="title">Exercises</span></a></div></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toc-item toc-chapter">
+<div class="toc-title-box"><a href="ch-contours.html" class="internal"><span class="codenumber">3</span> <span class="title">Contours and Lingo</span></a></div>
+<ul class="structural toc-item-list">
+<li class="toc-item toc-section">
+<div class="toc-title-box"><a href="sec_functionnotation.html" class="internal"><span class="codenumber">3.1</span> <span class="title">Function Notation</span></a></div>
+<ul class="structural toc-item-list"><li class="toc-item toc-exercises"><div class="toc-title-box"><a href="sec_functionnotation.html#ex_firstch-intro" class="internal"><span class="codenumber">3.1</span> <span class="title">Exercises</span></a></div></li></ul>
+</li>
+<li class="toc-item toc-section">
+<div class="toc-title-box"><a href="sec_3space.html" class="internal"><span class="codenumber">3.2</span> <span class="title">A Tour of 3-Space</span></a></div>
+<ul class="structural toc-item-list"><li class="toc-item toc-exercises"><div class="toc-title-box"><a href="sec_3space.html#ex_3space" class="internal"><span class="codenumber">3.2</span> <span class="title">Exercises</span></a></div></li></ul>
+</li>
+<li class="toc-item toc-section">
+<div class="toc-title-box"><a href="sec_contour_diagrams.html" class="internal"><span class="codenumber">3.3</span> <span class="title">Contour Diagrams</span></a></div>
+<ul class="structural toc-item-list"><li class="toc-item toc-exercises"><div class="toc-title-box"><a href="sec_contour_diagrams.html#ex_contour_diagrams" class="internal"><span class="codenumber">3.3</span> <span class="title">Exercises</span></a></div></li></ul>
+</li>
+<li class="toc-item toc-section">
+<div class="toc-title-box"><a href="sec_spherical_coords.html" class="internal"><span class="codenumber">3.4</span> <span class="title">Additional Coordinate Systems</span></a></div>
+<ul class="structural toc-item-list">
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="sec_spherical_coords.html#sec_spherical_coords-4" class="internal"><span class="codenumber">3.4.1</span> <span class="title">Polar Coordinates</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="sec_spherical_coords.html#sphericalcoordinatesection" class="internal"><span class="codenumber">3.4.2</span> <span class="title">Spherical Coordinates</span></a></div></li>
+<li class="toc-item toc-exercises"><div class="toc-title-box"><a href="sec_spherical_coords.html#ex_spherical_coords" class="internal"><span class="codenumber">3.4.3</span> <span class="title">Exercises</span></a></div></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toc-item toc-chapter contains-active">
+<div class="toc-title-box"><a href="ch_vectors.html" class="internal"><span class="codenumber">4</span> <span class="title">Modeling Force: Vectors</span></a></div>
+<ul class="structural toc-item-list contains-active">
+<li class="toc-item toc-section active">
+<div class="toc-title-box"><a href="sec_displacementvectors.html" class="internal"><span class="codenumber">4.1</span> <span class="title">Displacement Vectors</span></a></div>
+<ul class="structural toc-item-list"><li class="toc-item toc-exercises"><div class="toc-title-box"><a href="sec_displacementvectors.html#ex_sec_displacementvectors" class="internal"><span class="codenumber">4.1</span> <span class="title">Exercises</span></a></div></li></ul>
+</li>
+<li class="toc-item toc-section">
+<div class="toc-title-box"><a href="sec_dotproduct.html" class="internal"><span class="codenumber">4.2</span> <span class="title">Dot Product</span></a></div>
+<ul class="structural toc-item-list"><li class="toc-item toc-exercises"><div class="toc-title-box"><a href="sec_dotproduct.html#ex_dotproduct" class="internal"><span class="codenumber">4.2</span> <span class="title">Exercises</span></a></div></li></ul>
+</li>
+<li class="toc-item toc-section">
+<div class="toc-title-box"><a href="sec_cross_product.html" class="internal"><span class="codenumber">4.3</span> <span class="title">The Cross Product</span></a></div>
+<ul class="structural toc-item-list"><li class="toc-item toc-exercises"><div class="toc-title-box"><a href="sec_cross_product.html#ex_crossproduct" class="internal"><span class="codenumber">4.3</span> <span class="title">Exercises</span></a></div></li></ul>
+</li>
+</ul>
+</li>
+<li class="toc-item toc-chapter">
+<div class="toc-title-box"><a href="ch-differentiation.html" class="internal"><span class="codenumber">5</span> <span class="title">Rate of Change: Differentiation</span></a></div>
+<ul class="structural toc-item-list">
+<li class="toc-item toc-section">
+<div class="toc-title-box"><a href="sec_partial_differentiation.html" class="internal"><span class="codenumber">5.1</span> <span class="title">Partial Differentiation</span></a></div>
+<ul class="structural toc-item-list">
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="sec_partial_differentiation.html#sec_partial_differentiation-4" class="internal"><span class="codenumber">5.1.1</span> <span class="title">First-order Partial Derivatives</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="sec_partial_differentiation.html#interpretfirstorderpartials" class="internal"><span class="codenumber">5.1.2</span> <span class="title">Interpretations of First-order Partial Derivatives</span></a></div></li>
+<li class="toc-item toc-exercises"><div class="toc-title-box"><a href="sec_partial_differentiation.html#ex_partialdifferentiation" class="internal"><span class="codenumber">5.1.3</span> <span class="title">Exercises</span></a></div></li>
+</ul>
+</li>
+<li class="toc-item toc-section">
+<div class="toc-title-box"><a href="sec_the_gradient.html" class="internal"><span class="codenumber">5.2</span> <span class="title">The Gradient</span></a></div>
+<ul class="structural toc-item-list"><li class="toc-item toc-exercises"><div class="toc-title-box"><a href="sec_the_gradient.html#ex_the_gradient" class="internal"><span class="codenumber">5.2</span> <span class="title">Exercises</span></a></div></li></ul>
+</li>
+<li class="toc-item toc-section">
+<div class="toc-title-box"><a href="sec_chain_rule.html" class="internal"><span class="codenumber">5.3</span> <span class="title">The Chain Rule</span></a></div>
+<ul class="structural toc-item-list"><li class="toc-item toc-exercises"><div class="toc-title-box"><a href="sec_chain_rule.html#ex_chain_rule" class="internal"><span class="codenumber">5.3</span> <span class="title">Exercises</span></a></div></li></ul>
+</li>
+</ul>
+</li>
+<li class="toc-item toc-chapter">
+<div class="toc-title-box"><a href="ch-vectorfields.html" class="internal"><span class="codenumber">6</span> <span class="title">Flow: Vector Fields</span></a></div>
+<ul class="structural toc-item-list">
+<li class="toc-item toc-section">
+<div class="toc-title-box"><a href="sec_vector_fields.html" class="internal"><span class="codenumber">6.1</span> <span class="title">Vector Fields</span></a></div>
+<ul class="structural toc-item-list"><li class="toc-item toc-exercises"><div class="toc-title-box"><a href="sec_vector_fields.html#ex_sec_vectorfields" class="internal"><span class="codenumber">6.1</span> <span class="title">Exercises</span></a></div></li></ul>
+</li>
+<li class="toc-item toc-section">
+<div class="toc-title-box"><a href="sec_circulation.html" class="internal"><span class="codenumber">6.2</span> <span class="title">Circulation</span></a></div>
+<ul class="structural toc-item-list"><li class="toc-item toc-exercises"><div class="toc-title-box"><a href="sec_circulation.html#ex_sec_circulation" class="internal"><span class="codenumber">6.2</span> <span class="title">Exercises</span></a></div></li></ul>
+</li>
+<li class="toc-item toc-section">
+<div class="toc-title-box"><a href="sec_curl.html" class="internal"><span class="codenumber">6.3</span> <span class="title">Curl</span></a></div>
+<ul class="structural toc-item-list"><li class="toc-item toc-exercises"><div class="toc-title-box"><a href="sec_curl.html#ex_sec_curl" class="internal"><span class="codenumber">6.3</span> <span class="title">Exercises</span></a></div></li></ul>
+</li>
+<li class="toc-item toc-section">
+<div class="toc-title-box"><a href="sec_flux.html" class="internal"><span class="codenumber">6.4</span> <span class="title">Flux</span></a></div>
+<ul class="structural toc-item-list"><li class="toc-item toc-exercises"><div class="toc-title-box"><a href="sec_flux.html#ex_sec_flux" class="internal"><span class="codenumber">6.4</span> <span class="title">Exercises</span></a></div></li></ul>
+</li>
+<li class="toc-item toc-section">
+<div class="toc-title-box"><a href="sec_divergence.html" class="internal"><span class="codenumber">6.5</span> <span class="title">Divergence</span></a></div>
+<ul class="structural toc-item-list"><li class="toc-item toc-exercises"><div class="toc-title-box"><a href="sec_divergence.html#ex_sec_divergence" class="internal"><span class="codenumber">6.5</span> <span class="title">Exercises</span></a></div></li></ul>
+</li>
+<li class="toc-item toc-section">
+<div class="toc-title-box"><a href="sec_Laplacian.html" class="internal"><span class="codenumber">6.6</span> <span class="title">The Laplacian</span></a></div>
+<ul class="structural toc-item-list"><li class="toc-item toc-exercises"><div class="toc-title-box"><a href="sec_Laplacian.html#ex_laplacian" class="internal"><span class="codenumber">6.6</span> <span class="title">Exercises</span></a></div></li></ul>
+</li>
+</ul>
+</li>
+<li class="toc-item toc-chapter">
+<div class="toc-title-box"><a href="ch_taylor_polynomials.html" class="internal"><span class="codenumber">7</span> <span class="title">Approximation II: Taylor Polynomials</span></a></div>
+<ul class="structural toc-item-list">
+<li class="toc-item toc-section">
+<div class="toc-title-box"><a href="sec_taylor_polynomials_1var.html" class="internal"><span class="codenumber">7.1</span> <span class="title">Taylor Polynomials in One Variable</span></a></div>
+<ul class="structural toc-item-list">
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="sec_taylor_polynomials_1var.html#sec_taylor_polynomials_1var-4" class="internal"><span class="codenumber">7.1.1</span> <span class="title">Taylor Polynomials of Degree 2</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="sec_taylor_polynomials_1var.html#sec_taylor_polynomials_1var-5" class="internal"><span class="codenumber">7.1.2</span> <span class="title">Taylor Polynomials of Degree <span class="process-math">\(n\)</span></span></a></div></li>
+<li class="toc-item toc-exercises"><div class="toc-title-box"><a href="sec_taylor_polynomials_1var.html#ex_taylor_polynomials_1var" class="internal"><span class="codenumber">7.1.3</span> <span class="title">Exercises</span></a></div></li>
+</ul>
+</li>
+<li class="toc-item toc-section">
+<div class="toc-title-box"><a href="sec_taylor_polynomials_2var.html" class="internal"><span class="codenumber">7.2</span> <span class="title">Taylor Polynomials in Two Variables</span></a></div>
+<ul class="structural toc-item-list">
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="sec_taylor_polynomials_2var.html#sec_taylor_polynomials_2var-4" class="internal"><span class="codenumber">7.2.1</span> <span class="title">Linear Approximations in Two Variables</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="sec_taylor_polynomials_2var.html#sec_taylor_polynomials_2var-5" class="internal"><span class="codenumber">7.2.2</span> <span class="title">Quadratic Approximations in Two Variables</span></a></div></li>
+<li class="toc-item toc-section"><div class="toc-title-box"><a href="sec_taylor_polynomials_2var.html#sec_taylor_polynomials_2var-6" class="internal"><span class="codenumber">7.2.1</span> <span class="title">Translations, Divergence, Vorticity, and Deformation</span></a></div></li>
+<li class="toc-item toc-section"><div class="toc-title-box"><a href="sec_taylor_polynomials_2var.html#sec_taylor_polynomials_2var-7" class="internal"><span class="codenumber">7.2.2</span> <span class="title">Kinematics of the Horizontal Wind Field</span></a></div></li>
+<li class="toc-item toc-exercises"><div class="toc-title-box"><a href="sec_taylor_polynomials_2var.html#ex_taylor_polynomials_2var" class="internal"><span class="codenumber">7.2.5</span> <span class="title">Exercises</span></a></div></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toc-item toc-backmatter">
+<div class="toc-title-box"><a href="backmatter.html" class="internal"><span class="title">Backmatter</span></a></div>
+<ul class="structural toc-item-list">
+<li class="toc-item toc-index"><div class="toc-title-box"><a href="backmatter-2.html" class="internal"><span class="title">Index</span></a></div></li>
+<li class="toc-item toc-colophon"><div class="toc-title-box"><a href="backmatter-3.html" class="internal"><span class="title">Colophon</span></a></div></li>
+</ul>
+</li>
+</ul></nav></div>
+<main class="ptx-main"><div id="ptx-content" class="ptx-content"><section xmlns:pf="https://prefigure.org" class="section" id="sec_displacementvectors"><h2 class="heading hide-type">
+<span class="type">Section</span><span class="space"> </span><span class="codenumber">4.1</span><span class="space"> </span><span class="title">Displacement Vectors</span>
+</h2>
+<article class="objectives goal-like" id="sec_displacementvectors-2"><h3 class="heading"><span class="type">Motivating Questions</span></h3>
+<ul class="disc" id="sec_displacementvectors-2-1">
+<li id="sec_displacementvectors-2-1-1"><div class="para" id="sec_displacementvectors-2-1-1-1">What is a vector?</div></li>
+<li id="sec_displacementvectors-2-1-2"><div class="para" id="sec_displacementvectors-2-1-2-1">How can vectors be used to model wind?  How do wind barbs compare to mathematical vectors?</div></li>
+<li id="sec_displacementvectors-2-1-3"><div class="para" id="sec_displacementvectors-2-1-3-1">How can the pressure gradient force be represented by a vector?</div></li>
+</ul></article><div class="para" id="sec_displacementvectors-3">Air flow in the atmosphere has both a speed and direction. Meteorological maps (such as surface maps) often illustrate winds using a representation called a <dfn class="terminology">wind barb</dfn>. Wind barbs have flags in the direction the wind is coming from; the barbs describe the speed of the wind in knots.  See <a href="sec_displacementvectors.html#figure-windbarbs" class="xref" data-knowl="./knowl/xref/figure-windbarbs.html" data-reveal-label="Reveal" data-close-label="Close" title="Figure 4.1.1">Figure 4.1.1</a>.</div>
+<figure class="figure figure-like" id="figure-windbarbs"><div class="image-box" style="width: 30%; margin-left: 35%; margin-right: 35%;">
+<img src="generated/latex-image/windbarbs.svg" role="img" class="contained" alt="described in detail following the image" aria-describedby="windbarbs-description"><details class="image-description" aria-live="polite"><summary title="details"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe88e;</span></summary><div id="windbarbs-description">A wind barb illustrating a 35-knot, <span class="process-math">\(0^{\circ}\)</span> wind (i.e. from the north).</div></details>
+</div>
+<figcaption><span class="type">Figure</span><span class="space"> </span><span class="codenumber">4.1.1<span class="period">.</span></span><span class="space"> </span>A wind barb illustrating a 35-knot, <span class="process-math">\(0^{\circ}\)</span> wind (i.e. from the north).</figcaption></figure><div class="para" id="sec_displacementvectors-5">Mathematically, we represent quantities having both a speed and a direction using a displacement vector.  A <dfn class="terminology">wind arrow</dfn>   (an example of a displacement vector) is an arrow pointing in the direction the wind is blowing towards.</div>
+<figure class="figure figure-like" id="figure-windarrow"><div class="image-box" style="width: 30%; margin-left: 35%; margin-right: 35%;"><img src="generated/latex-image/windarrow.svg" role="img" class="contained" alt="A wind arrow."></div>
+<figcaption><span class="type">Figure</span><span class="space"> </span><span class="codenumber">4.1.2<span class="period">.</span></span><span class="space"> </span>A wind arrow.</figcaption></figure><article class="definition definition-like" id="sec_displacementvectors-7"><h3 class="heading">
+<span class="type">Definition</span><span class="space"> </span><span class="codenumber">4.1.3</span><span class="period">.</span>
+</h3>
+<div class="para" id="sec_displacementvectors-7-1">A <dfn class="terminology">displacement vector</dfn>  from one point to another is an arrow with its tail at the first point and its tip at the second.  The <dfn class="terminology">magnitude</dfn>  (or length) of the displacement vector is the distance between the points and is represented by the length of the arrow.  The <dfn class="terminology">direction</dfn>  of the displacement vector is the direction of the arrow.</div></article><details id="vectormagnitude" class="exercise exercise-like born-hidden-knowl"><summary class="knowl__link"><h3 class="heading">
+<span class="type">Checkpoint</span><span class="space"> </span><span class="codenumber">4.1.4</span><span class="period">.</span><span class="space"> </span><span class="title">Magnitude of a Vector.</span>
+</h3></summary><article class="exercise exercise-like knowl__content"><div class="para" id="vectormagnitude-2-1">Determine the magnitude of the displacement vector <span class="process-math">\(\vec{v}\)</span> shown in <a href="sec_displacementvectors.html#firstvector" class="xref" data-knowl="./knowl/xref/firstvector.html" data-reveal-label="Reveal" data-close-label="Close" title="Figure 4.1.5">Figure 4.1.5</a>. <figure class="figure figure-like" id="firstvector"><div class="image-box" style="width: 30%; margin-left: 35%; margin-right: 35%;"><img src="generated/latex-image/firstvectorpic.svg" role="img" class="contained" alt="Compute magnitude of vector."></div>
+<figcaption><span class="type">Figure</span><span class="space"> </span><span class="codenumber">4.1.5<span class="period">.</span></span><span class="space"> </span>Vector <span class="process-math">\(\vec{v}\)</span> for <a href="sec_displacementvectors.html#vectormagnitude" class="xref" data-knowl="./knowl/xref/vectormagnitude.html" data-reveal-label="Reveal" data-close-label="Close" title="Checkpoint 4.1.4: Magnitude of a Vector">Checkpoint 4.1.4</a>.</figcaption></figure>
+</div>
+<div class="solutions"><details id="vectormagnitude-3" class="answer solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Answer</span><span class="period">.</span></summary><div class="answer solution-like knowl__content"><div class="para" id="vectormagnitude-3-1">The magnitude, or length, of vector <span class="process-math">\(\vec{v}\)</span> is <span class="process-math">\(\|\vec{v}\| = \sqrt{4^2 + (-3)^2} = \sqrt{25} = 5\text{.}\)</span>
+</div></div></details></div></article></details><div class="para" id="sec_displacementvectors-9">Displacement vectors which point in the same direction and have the same magnitude are considered to be the same, even if they do not coincide.</div>
+<div class="para" id="sec_displacementvectors-10">A <dfn class="terminology">vector</dfn> is used to represent a quantity (like velocity, force, or wind) having both magnitude and direction.  In comparison, a quantity specified only by a number, but no direction, such as wind speed or temperature is called a <dfn class="terminology">scalar</dfn>.</div>
+<details id="VectorOrScalar" class="exercise exercise-like born-hidden-knowl"><summary class="knowl__link"><h3 class="heading">
+<span class="type">Checkpoint</span><span class="space"> </span><span class="codenumber">4.1.6</span><span class="period">.</span><span class="space"> </span><span class="title">Vector or Scalar?</span>
+</h3></summary><article class="exercise exercise-like knowl__content"><div class="para logical" id="VectorOrScalar-2-1">
+<div class="para">Classify each of the following quantities as a vector or a scalar.</div>
+<ul class="disc" id="VectorOrScalar-2-1-1">
+<li id="VectorOrScalar-2-1-1-1"><div class="para" id="p-derived-VectorOrScalar-2-1-1-1">Wind Speed</div></li>
+<li id="VectorOrScalar-2-1-1-2"><div class="para" id="p-derived-VectorOrScalar-2-1-1-2">Wind Velocity</div></li>
+<li id="VectorOrScalar-2-1-1-3"><div class="para" id="p-derived-VectorOrScalar-2-1-1-3">Gravitational Force</div></li>
+<li id="VectorOrScalar-2-1-1-4"><div class="para" id="p-derived-VectorOrScalar-2-1-1-4">Relative Humidity</div></li>
+<li id="VectorOrScalar-2-1-1-5"><div class="para" id="p-derived-VectorOrScalar-2-1-1-5">Temperature</div></li>
+<li id="VectorOrScalar-2-1-1-6"><div class="para" id="p-derived-VectorOrScalar-2-1-1-6">Temperature Gradient</div></li>
+<li id="VectorOrScalar-2-1-1-7"><div class="para" id="p-derived-VectorOrScalar-2-1-1-7">Advection</div></li>
+<li id="VectorOrScalar-2-1-1-8"><div class="para" id="p-derived-VectorOrScalar-2-1-1-8">Coriolis Force</div></li>
+<li id="VectorOrScalar-2-1-1-9"><div class="para" id="p-derived-VectorOrScalar-2-1-1-9">Pressure Gradient Force (PGF)</div></li>
+</ul>
+</div>
+<div class="solutions"><details id="VectorOrScalar-3" class="answer solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Answer</span><span class="period">.</span></summary><div class="answer solution-like knowl__content"><div class="para logical" id="VectorOrScalar-3-1"><ul class="disc" id="VectorOrScalar-3-1-1">
+<li id="VectorOrScalar-3-1-1-1"><div class="para" id="p-derived-VectorOrScalar-3-1-1-1">Wind Speed (scalar)</div></li>
+<li id="VectorOrScalar-3-1-1-2"><div class="para" id="p-derived-VectorOrScalar-3-1-1-2">Wind Velocity (vector)</div></li>
+<li id="VectorOrScalar-3-1-1-3"><div class="para" id="p-derived-VectorOrScalar-3-1-1-3">Gravitational Force (vector)</div></li>
+<li id="VectorOrScalar-3-1-1-4"><div class="para" id="p-derived-VectorOrScalar-3-1-1-4">Relative Humidity (scalar)</div></li>
+<li id="VectorOrScalar-3-1-1-5"><div class="para" id="p-derived-VectorOrScalar-3-1-1-5">Temperature (scalar)</div></li>
+<li id="VectorOrScalar-3-1-1-6"><div class="para" id="p-derived-VectorOrScalar-3-1-1-6">Temperature Gradient (vector)</div></li>
+<li id="VectorOrScalar-3-1-1-7"><div class="para" id="p-derived-VectorOrScalar-3-1-1-7">Advection (scalar)</div></li>
+<li id="VectorOrScalar-3-1-1-8"><div class="para" id="p-derived-VectorOrScalar-3-1-1-8">Coriolis Force (vector)</div></li>
+<li id="VectorOrScalar-3-1-1-9"><div class="para" id="p-derived-VectorOrScalar-3-1-1-9">Pressure Gradient Force (PGF) (vector)</div></li>
+</ul></div></div></details></div></article></details><div class="para" id="sec_displacementvectors-12">By convention, we speak of winds in terms of the direction they are coming from. So if we say "a south wind", that is a wind coming from the south. The wind barb would have flags on the bottom (south), and the wind arrow would be pointed up (north).  The way winds are reported in the raw observations (e.g. METARs) is for a north wind to be <span class="process-math">\(0^{\circ}\text{,}\)</span> an east wind to be <span class="process-math">\(90^{\circ}\text{,}\)</span> a south wind to be <span class="process-math">\(180^{\circ}\text{,}\)</span> a west wind to be <span class="process-math">\(270^{\circ}\text{,}\)</span> etc. See <a href="sec_displacementvectors.html#figure-windobservations" class="xref" data-knowl="./knowl/xref/figure-windobservations.html" data-reveal-label="Reveal" data-close-label="Close" title="Figure 4.1.7">Figure 4.1.7</a>.</div>
+<figure class="figure figure-like" id="figure-windobservations"><div class="image-box" style="width: 30%; margin-left: 35%; margin-right: 35%;"><img src="generated/latex-image/windobservations.svg" role="img" class="contained" alt="Raw wind observations."></div>
+<figcaption><span class="type">Figure</span><span class="space"> </span><span class="codenumber">4.1.7<span class="period">.</span></span><span class="space"> </span>Raw wind observations.</figcaption></figure><article class="example example-like" id="sec_displacementvectors-14"><h3 class="heading">
+<span class="type">Example</span><span class="space"> </span><span class="codenumber">4.1.8</span><span class="period">.</span><span class="space"> </span><span class="title">METARs Code Wind Barbs.</span>
+</h3>
+<div class="para" id="sec_displacementvectors-14-2">Below is a METAR for the Saint Cloud, MN airport showing a 35-knot wind from <span class="process-math">\(240^{\circ}\text{.}\)</span>  A wind barb representing this wind is shown in <a href="sec_displacementvectors.html#STCmetar" class="xref" data-knowl="./knowl/xref/STCmetar.html" data-reveal-label="Reveal" data-close-label="Close" title="Figure 4.1.9">Figure 4.1.9</a>. <code class="code-inline tex2jax_ignore">KSTC 260053Z 24035KT 10SM CLR M10/M14 A2994 RMK AO2 SLP173 T11001139</code>
+</div>
+<figure class="figure figure-like" id="STCmetar"><div class="image-box" style="width: 25%; margin-left: 37.5%; margin-right: 37.5%;"><img src="generated/latex-image/STCmetarPic.svg" role="img" class="contained" alt="A 35-knot wind from 240."></div>
+<figcaption><span class="type">Figure</span><span class="space"> </span><span class="codenumber">4.1.9<span class="period">.</span></span><span class="space"> </span>A 35-knot wind from <span class="process-math">\(240^{\circ}\text{.}\)</span></figcaption></figure></article><details id="WindFromMETAR" class="exercise exercise-like born-hidden-knowl"><summary class="knowl__link"><h3 class="heading">
+<span class="type">Checkpoint</span><span class="space"> </span><span class="codenumber">4.1.10</span><span class="period">.</span><span class="space"> </span><span class="title">Wind Barb from a METAR.</span>
+</h3></summary><article class="exercise exercise-like knowl__content"><div class="para" id="WindFromMETAR-2-1">Draw a wind barb representing the wind in Phoenix, AZ given in the METAR data. <code class="code-inline tex2jax_ignore">KPHX 260051Z 19015KT 10SM FEW100 23/M06 A2982 RMK AO2 SLP087 T02281056</code>
+</div>
+<div class="solutions"><details id="WindFromMETAR-3" class="answer solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Answer</span><span class="period">.</span></summary><div class="answer solution-like knowl__content">
+<div class="para" id="WindFromMETAR-3-1">The wind being described is from <span class="process-math">\(190^{\circ}\)</span> at 15 knots.  This is a SSW wind.  See <a href="sec_displacementvectors.html#PHXmetar" class="xref" data-knowl="./knowl/xref/PHXmetar.html" data-reveal-label="Reveal" data-close-label="Close" title="Figure 4.1.11">Figure 4.1.11</a>.</div>
+<figure class="figure figure-like" id="PHXmetar"><div class="image-box" style="width: 25%; margin-left: 37.5%; margin-right: 37.5%;"><img src="generated/latex-image/PHXmetarPic.svg" role="img" class="contained" alt="A 15-knot wind from 190."></div>
+<figcaption><span class="type">Figure</span><span class="space"> </span><span class="codenumber">4.1.11<span class="period">.</span></span><span class="space"> </span>A 15-knot wind from <span class="process-math">\(190^{\circ}\text{.}\)</span></figcaption></figure>
+</div></details></div></article></details><div class="para" id="sec_displacementvectors-16">Once we start thinking of wind as a mathematical vector, we will want to use the mathematical convention (see <a href="sec_displacementvectors.html#figure-windconventions" class="xref" data-knowl="./knowl/xref/figure-windconventions.html" data-reveal-label="Reveal" data-close-label="Close" title="Figure 4.1.12">Figure 4.1.12</a>) for the direction.</div>
+<figure class="figure figure-like" id="figure-windconventions"><div class="image-box" style="width: 30%; margin-left: 35%; margin-right: 35%;"><img src="generated/latex-image/windconventions.svg" role="img" class="contained" alt="Mathematical convention for direction."></div>
+<figcaption><span class="type">Figure</span><span class="space"> </span><span class="codenumber">4.1.12<span class="period">.</span></span><span class="space"> </span>Mathematical convention for direction.</figcaption></figure><div class="para" id="sec_displacementvectors-18">A west wind will produce a vector pointing along the <span class="process-math">\(x\)</span>-axis and a mathematical direction of <span class="process-math">\(\phi_{polar}=0^{\circ}\text{,}\)</span> a north wind will produce a vector pointing towards the negative <span class="process-math">\(y\)</span>-axis and a mathematical direction of <span class="process-math">\(\phi_{polar}=270^{\circ}\text{,}\)</span> and so on.</div>
+<details id="windbarbexer" class="exercise exercise-like born-hidden-knowl"><summary class="knowl__link"><h3 class="heading">
+<span class="type">Checkpoint</span><span class="space"> </span><span class="codenumber">4.1.13</span><span class="period">.</span><span class="space"> </span><span class="title">Converting a Meteorological Direction.</span>
+</h3></summary><article class="exercise exercise-like knowl__content"><div class="para" id="windbarbexer-2-1">Convert the meteorological direction of <span class="process-math">\(\phi_{met}=40^{\circ}\)</span> to a mathematical wind direction <span class="process-math">\(\phi_{polar}\text{.}\)</span>
+</div>
+<div class="solutions"><details id="windbarbexer-3" class="answer solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Answer</span><span class="period">.</span></summary><div class="answer solution-like knowl__content"><div class="para" id="windbarbexer-3-1">
+<span class="process-math">\(\phi_{polar} = 230^{\circ}\)</span> <figure class="figure figure-like" id="phipolar"><div class="image-box" style="width: 50%; margin-left: 25%; margin-right: 25%;"><img src="generated/latex-image/phipolarpic.svg" role="img" class="contained" alt="The meteoroogical angle of 40 is equivalent to the polar angle of 230."></div>
+<figcaption><span class="type">Figure</span><span class="space"> </span><span class="codenumber">4.1.14<span class="period">.</span></span><span class="space"> </span><span class="process-math">\(\phi_{met}=40^{\circ}\)</span> is equivalent to <span class="process-math">\(\phi_{polar}=230^{\circ}\text{.}\)</span></figcaption></figure>
+</div></div></details></div></article></details><details id="windbarbexer2" class="exercise exercise-like born-hidden-knowl"><summary class="knowl__link"><h3 class="heading">
+<span class="type">Checkpoint</span><span class="space"> </span><span class="codenumber">4.1.15</span><span class="period">.</span><span class="space"> </span><span class="title">Wind Barbs and Mathematical Vectors.</span>
+</h3></summary><article class="exercise exercise-like knowl__content">The wind barb given in <a href="sec_displacementvectors.html#figure-wcexercise" class="xref" data-knowl="./knowl/xref/figure-wcexercise.html" data-reveal-label="Reveal" data-close-label="Close" title="Figure 4.1.16">Figure 4.1.16</a> can be thought of as a mathematical vector <span class="process-math">\(\vec{v}\text{.}\)</span>  What is the mathematical angle <span class="process-math">\(\phi_{polar}\)</span> for this vector <span class="process-math">\(\vec{v}\text{?}\)</span>  What is the magnitude of this vector? <figure class="figure figure-like" id="figure-wcexercise"><div class="image-box" style="width: 15%; margin-left: 42.5%; margin-right: 42.5%;"><img src="generated/latex-image/wcexercise.svg" role="img" class="contained" alt="Wind barb."></div>
+<figcaption><span class="type">Figure</span><span class="space"> </span><span class="codenumber">4.1.16<span class="period">.</span></span><span class="space"> </span>Wind barb for <a href="sec_displacementvectors.html#windbarbexer2" class="xref" data-knowl="./knowl/xref/windbarbexer2.html" data-reveal-label="Reveal" data-close-label="Close" title="Checkpoint 4.1.15: Wind Barbs and Mathematical Vectors">Checkpoint 4.1.15</a></figcaption></figure><div class="solutions"><details id="windbarbexer2-3" class="answer solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Answer</span><span class="period">.</span></summary><div class="answer solution-like knowl__content">
+<div class="para" id="windbarbexer2-3-1">Since <span class="process-math">\(\phi_{met}\)</span> makes an angle of <span class="process-math">\(40^{\circ}\)</span> with the positive <span class="process-math">\(y\)</span>-axis pointing north, the mathematical angle is <span class="process-math">\(\phi_{polar}=270^{\circ}+40^{\circ}=310^{\circ}\text{;}\)</span> the magnitude of this vector is 35 knots.</div>
+<figure class="figure figure-like" id="phipolar2"><div class="image-box" style="width: 50%; margin-left: 25%; margin-right: 25%;"><img src="generated/latex-image/phipolar2pic.svg" role="img" class="contained" alt="The meteorological angle of 320 is equivalent to the polar angle of 310."></div>
+<figcaption><span class="type">Figure</span><span class="space"> </span><span class="codenumber">4.1.17<span class="period">.</span></span><span class="space"> </span><span class="process-math">\(\phi_{met}=320^{\circ}\)</span> is equivalent to <span class="process-math">\(\phi_{polar}=310^{\circ}\text{.}\)</span></figcaption></figure>
+</div></details></div></article></details><details id="windbarbexer3" class="exercise exercise-like born-hidden-knowl"><summary class="knowl__link"><h3 class="heading">
+<span class="type">Checkpoint</span><span class="space"> </span><span class="codenumber">4.1.18</span><span class="period">.</span><span class="space"> </span><span class="title">Wind Barb Conversion.</span>
+</h3></summary><article class="exercise exercise-like knowl__content"><div class="para" id="windbarbexer3-2-1">Much like Fahrenheit to Celsius conversion, derive a formula (in degrees) that converts a meteorological wind direction <span class="process-math">\(\phi_{met}\)</span> to a mathematical direction <span class="process-math">\(\phi_{polar}\)</span> (and vice-versa).  Be sure to consider how to handle an angle less than zero.</div>
+<div class="solutions"><details id="windbarbexer3-3" class="answer solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Answer</span><span class="period">.</span></summary><div class="answer solution-like knowl__content"><div class="para" id="windbarbexer3-3-1">
+<span class="process-math">\(\phi_{polar} = 270^{\circ} - \phi_{met}\)</span> where <span class="process-math">\(\phi_{polar}\)</span> is the mathematical wind direction, and <span class="process-math">\(\phi_{met}\)</span> is the meteorological wind direction.  If this value is less than zero, we add 360.</div></div></details></div></article></details><section class="paragraphs" id="sec_displacementvectors-22"><h3 class="heading"><span class="title">Pressure Gradient Force.</span></h3>
+<div class="para logical" id="sec_displacementvectors-22-2">
+<div class="para">The speed and direction of the wind is mainly governed by three forces; the <dfn class="terminology">pressure gradient force (PGF)</dfn> , the Coriolis Force  and friction. The PGF is the force produced by differences in barometric pressure between two locations and is responsible for the flow of air from an area of high pressure to an area of low pressure.  The PGF can be represented by a vector since it has both magnitude and direction.</div>
+<ul class="disc" id="sec_displacementvectors-22-2-4">
+<li id="sec_displacementvectors-22-2-4-1"><div class="para" id="p-derived-sec_displacementvectors-22-2-4-1">The <dfn class="terminology">direction</dfn> of the PGF is from the center of high pressure to the center of low pressure (see <a href="sec_displacementvectors.html#figure-pgfexercisePic" class="xref" data-knowl="./knowl/xref/figure-pgfexercisePic.html" data-reveal-label="Reveal" data-close-label="Close" title="Figure 4.1.19">Figure 4.1.19</a>).</div></li>
+<li id="sec_displacementvectors-22-2-4-2"><div class="para" id="p-derived-sec_displacementvectors-22-2-4-2">The <dfn class="terminology">magnitude</dfn> of the PGF, <span class="process-math">\(F_{PG}\text{,}\)</span> can be calculated by <span class="process-math">\(\frac{F_{PG}}{mass} = -\frac{1}{\rho} \cdot \frac{\Delta p}{\Delta {\rm{distance}}}\)</span> where <span class="process-math">\(m\)</span> represents mass in kg, <span class="process-math">\(\rho\)</span> represents air density (in kg/m<span class="process-math">\(^3\)</span>), and <span class="process-math">\(\Delta p\)</span> represents the change in pressure (in mb).</div></li>
+</ul>
+<div class="para">The units for the magnitude can be understood by conversion to mks-units: If pressure is typically reported in millibars (mb), we can convert that to Pascals (Pa) since 1 mb = 100 Pa.  We can then convert Pascals to Newtons per square meter.  We see that 1 Pa = 1 kg/(<span class="process-math">\(m \cdot s^2\)</span>).  Air density <span class="process-math">\(\rho\)</span> can be measured in units of kg/m<span class="process-math">\(^3\text{.}\)</span>  So, the units for the magnitude of <span class="process-math">\(F_{PG}/\)</span>mass are <span class="process-math">\(-\frac{1}{kg/m^3} \cdot \frac{kg/(m\cdot s^2)}{m} = \frac{m}{s^2}\)</span> leaving units of <span class="process-math">\(F_{PG}\)</span> to be <span class="process-math">\(\frac{kg \cdot m}{s^2}\text{,}\)</span> or Newtons as expected for a force.</div>
+</div>
+<figure class="figure figure-like" id="figure-pgfexercisePic"><div class="image-box" style="width: 50%; margin-left: 25%; margin-right: 25%;"><img src="generated/latex-image/pgfexercisePic.svg" role="img" class="contained" alt="A pressure gradient vector."></div>
+<figcaption><span class="type">Figure</span><span class="space"> </span><span class="codenumber">4.1.19<span class="period">.</span></span><span class="space"> </span>Having both magnitude and direction, the pressure gradient force can be represented by a vector.  Shown here is the pressure gradient vector for <a href="sec_displacementvectors.html#pgfexercise" class="xref" data-knowl="./knowl/xref/pgfexercise.html" data-reveal-label="Reveal" data-close-label="Close" title="Checkpoint 4.1.20: Calculating PGF">Checkpoint 4.1.20</a>.</figcaption></figure><details id="pgfexercise" class="exercise exercise-like born-hidden-knowl"><summary class="knowl__link"><h4 class="heading">
+<span class="type">Checkpoint</span><span class="space"> </span><span class="codenumber">4.1.20</span><span class="period">.</span><span class="space"> </span><span class="title">Calculating PGF.</span>
+</h4></summary><article class="exercise exercise-like knowl__content"><div class="para" id="pgfexercise-2-1">
+<a href="sec_displacementvectors.html#figure-pgfexercisePic" class="xref" data-knowl="./knowl/xref/figure-pgfexercisePic.html" data-reveal-label="Reveal" data-close-label="Close" title="Figure 4.1.19">Figure 4.1.19</a> is a simplified weather map showing isobars.  Assuming air density of 1 <span class="process-math">\(kg/m^3\text{,}\)</span> determine the magnitude of the pressure gradient vector shown.  Be sure to pay particularly close attention to units.</div>
+<div class="solutions"><details id="pgfexercise-3" class="answer solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Answer</span><span class="period">.</span></summary><div class="answer solution-like knowl__content"><div class="para logical" id="pgfexercise-3-1">
+<div class="para">First, we convert the pressure values into mks-units.  We see that 1012  <span class="process-math">\(mb\)</span> = 101,200  <span class="process-math">\(Pa\)</span> = 101,200 <span class="process-math">\(\frac{kg}{m \cdot s^2}\)</span> and 1004  <span class="process-math">\(mb\)</span> = 100,400  <span class="process-math">\(Pa\)</span> = 100,400 <span class="process-math">\(\frac{kg}{m \cdot s^2}\text{.}\)</span>  Then, we have</div>
+<div class="displaymath process-math" id="pgfexercise-3-1-7">
+\begin{align*}
+\frac{F_{PG}}{mass} =\mathstrut \amp -\frac{1}{\rho} \cdot \frac{\Delta p}{\Delta {\text{distance}}} \\
+=\mathstrut \amp -\frac{1}{1 \ kg/m^3} \cdot \frac{101,200 \frac{kg}{m \cdot s^2} - 100,400 \frac{kg}{m \cdot s^2}}{100,000 \ m} \\
+=\mathstrut \amp - \frac{m^3}{kg} \cdot \frac{800 \frac{kg}{m \cdot s^2}}{100,000 \ m} \\
+=\mathstrut \amp -8.0 \times 10^{-3} m/s^2. 
+\end{align*}
+</div>
+<div class="para">So, for every 1 <span class="process-math">\(kg\)</span> of mass, we have <span class="process-math">\(F_{PG} = -8.0 \times 10^{-3} \ kg \cdot m / s^2\text{.}\)</span>  This is 0.008 Newtons.</div>
+</div></div></details></div></article></details></section><section class="paragraphs" id="sec_displacementvectors-23"><h3 class="heading"><span class="title">Vector Arithmetic.</span></h3>
+<div class="para" id="sec_displacementvectors-23-2">Think of <span class="process-math">\(\vec{v}\)</span> as representing the velocity given to a paper airplane and <span class="process-math">\(\vec{w}\)</span> as the velocity of the wind.  Then <span class="process-math">\(\vec{v} + \vec{w}\)</span> represents the sum of these two forces (called a <dfn class="terminology">resultant</dfn> ).  See <a href="sec_displacementvectors.html#vectoraddition" class="xref" data-knowl="./knowl/xref/vectoraddition.html" data-reveal-label="Reveal" data-close-label="Close" title="Figure 4.1.22">Figure 4.1.22</a>.</div>
+<article class="definition definition-like" id="sec_displacementvectors-23-3"><h4 class="heading">
+<span class="type">Definition</span><span class="space"> </span><span class="codenumber">4.1.21</span><span class="period">.</span><span class="space"> </span><span class="title">Vector Addition.</span>
+</h4>
+<div class="para" id="sec_displacementvectors-23-3-2">The <dfn class="terminology">sum</dfn>, <span class="process-math">\(\vec{v} + \vec{w}\text{,}\)</span> of two vectors <span class="process-math">\(\vec{v}\)</span> and <span class="process-math">\(\vec{w}\)</span> is the combined displacement resulting from first applying <span class="process-math">\(\vec{v}\)</span> and then <span class="process-math">\(\vec{w}\text{.}\)</span>
+</div></article><figure class="figure figure-like" id="vectoraddition"><div class="image-box" style="width: 40%; margin-left: 30%; margin-right: 30%;"><img src="generated/latex-image/vectoradditionpic.svg" role="img" class="contained" alt="Vector addition."></div>
+<figcaption><span class="type">Figure</span><span class="space"> </span><span class="codenumber">4.1.22<span class="period">.</span></span><span class="space"> </span>Vector addition.  <span class="process-math">\(\vec{v}+\vec{w}\)</span> forms the diagonal of a parallelogram.</figcaption></figure><div class="para" id="sec_displacementvectors-23-5">If <span class="process-math">\(\vec{v}\)</span> represents a displacement vector, the vector <span class="process-math">\(2\vec{v}\)</span> represents a displacement of twice the magnitude in the same direction as <span class="process-math">\(\vec{v}\text{.}\)</span>  Likewise, the vector <span class="process-math">\(0.5\vec{v}\)</span> represents a displacement of half the magnitude in the same direction and <span class="process-math">\(-\vec{v}\)</span> represents a displacement of the same magnitude but in the opposite direction.  See <a href="sec_displacementvectors.html#scalarmultiplication" class="xref" data-knowl="./knowl/xref/scalarmultiplication.html" data-reveal-label="Reveal" data-close-label="Close" title="Figure 4.1.23">Figure 4.1.23</a>.</div>
+<figure class="figure figure-like" id="scalarmultiplication"><div class="image-box" style="width: 25%; margin-left: 37.5%; margin-right: 37.5%;"><img src="generated/latex-image/scalarmultiplicationpic.svg" role="img" class="contained" alt="Scalar Multiplication."></div>
+<figcaption><span class="type">Figure</span><span class="space"> </span><span class="codenumber">4.1.23<span class="period">.</span></span><span class="space"> </span>Scalar Multiplication.</figcaption></figure><article class="example example-like" id="GeostrophicWind"><h4 class="heading">
+<span class="type">Example</span><span class="space"> </span><span class="codenumber">4.1.24</span><span class="period">.</span><span class="space"> </span><span class="title">Geostrophic Wind.</span>
+</h4>
+<div class="para logical" id="GeostrophicWind-2">
+<div class="para">The observed wind <span class="process-math">\(\vec{v}\)</span> is the sum of the <dfn class="terminology">geostrophic wind</dfn> <span class="process-math">\(\vec{v}_g\)</span> and the <dfn class="terminology">ageostrophic wind</dfn> <span class="process-math">\(\vec{v}_{ag}\)</span> .  That is,</div>
+<div class="displaymath process-math" data-contains-math-knowls="./knowl/xref/GeostrophicWindPic.html ./knowl/xref/GeostrophicWindPic.html ./knowl/xref/GeostrophicWind.html" id="GeostrophicWind-2-8">
+\begin{gather*}
+\vec{v} = \vec{v}_{g} + \vec{v}_{ag}.
+\end{gather*}
+</div>
+<div class="para">For the observed wind <span class="process-math">\(\vec{v}\)</span> and geostrophic wind <span class="process-math">\(\vec{v}_g\)</span> given in <a href="sec_displacementvectors.html#GeostrophicWindPic" class="xref" data-knowl="./knowl/xref/GeostrophicWindPic.html" data-reveal-label="Reveal" data-close-label="Close" title="Figure 4.1.25">Figure 4.1.25</a>, a vector representing the ageostrophic wind <span class="process-math">\(\vec{v}_{ag}\)</span> is shown.  The observed wind <span class="process-math">\(\vec{v}\)</span> is found via the "tip to tail" method of vector addition - we place the tail of <span class="process-math">\(\vec{v}_{ag}\)</span> on the tip of the vector <span class="process-math">\(\vec{v}_g\)</span> and draw an arrow from the tail of <span class="process-math">\(\vec{v}_g\)</span> to the tip of <span class="process-math">\(\vec{v}_{ag}\)</span> as shown <a href="sec_displacementvectors.html#GeostrophicWindPic" class="xref" data-knowl="./knowl/xref/GeostrophicWindPic.html" data-reveal-label="Reveal" data-close-label="Close" title="Figure 4.1.25">Figure 4.1.25</a>.  Important note: Normally, ageostrophic wind is much smaller (relatively speaking) than the geostrophic wind. <figure class="figure figure-like" id="GeostrophicWindPic"><div class="image-box" style="width: 25%; margin-left: 37.5%; margin-right: 37.5%;"><img src="generated/latex-image/MyGeostrophicWindPic.svg" role="img" class="contained" alt="Geostrophic and Ageostrophic wind."></div>
+<figcaption><span class="type">Figure</span><span class="space"> </span><span class="codenumber">4.1.25<span class="period">.</span></span><span class="space"> </span>Observed, geostrophic, and ageostrophic wind vectors for <a href="sec_displacementvectors.html#GeostrophicWind" class="xref" data-knowl="./knowl/xref/GeostrophicWind.html" data-reveal-label="Reveal" data-close-label="Close" title="Example 4.1.24: Geostrophic Wind">Example 4.1.24</a>.</figcaption></figure>
+</div>
+</div></article><details id="vectordiff" class="exercise exercise-like born-hidden-knowl"><summary class="knowl__link"><h4 class="heading">
+<span class="type">Checkpoint</span><span class="space"> </span><span class="codenumber">4.1.26</span><span class="period">.</span><span class="space"> </span><span class="title">Vector Arithmetic in 2D.</span>
+</h4></summary><article class="exercise exercise-like knowl__content"><div class="para" id="vectordiff-2-1">Determine a displacement vector <span class="process-math">\({\vec{a}} - {\vec{2b}}\)</span> for vectors <span class="process-math">\(\vec{a}\)</span> and <span class="process-math">\(\vec{b}\)</span> shown in <a href="sec_displacementvectors.html#vecsaandb" class="xref" data-knowl="./knowl/xref/vecsaandb.html" data-reveal-label="Reveal" data-close-label="Close" title="Figure 4.1.27">Figure 4.1.27</a>. <figure class="figure figure-like" id="vecsaandb"><div class="image-box" style="width: 40%; margin-left: 30%; margin-right: 30%;"><img src="generated/latex-image/vecsaandbpic.svg" role="img" class="contained" alt="Vectors used in an exercise on addition."></div>
+<figcaption><span class="type">Figure</span><span class="space"> </span><span class="codenumber">4.1.27<span class="period">.</span></span><span class="space"> </span>Vectors used in <a href="sec_displacementvectors.html#vectordiff" class="xref" data-knowl="./knowl/xref/vectordiff.html" data-reveal-label="Reveal" data-close-label="Close" title="Checkpoint 4.1.26: Vector Arithmetic in 2D">Checkpoint 4.1.26</a>.</figcaption></figure>
+</div>
+<div class="solutions"><details id="vectordiff-3" class="answer solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Answer</span><span class="period">.</span></summary><div class="answer solution-like knowl__content">
+<div class="para" id="vectordiff-3-1">By placing two copies of <span class="process-math">\(-\vec{b}\)</span> at the end of <span class="process-math">\(\vec{a}\text{,}\)</span> the resultant <span class="process-math">\(\vec{a}-2\vec{b}\)</span> can be found by connecting the tail of <span class="process-math">\(\vec{a}\)</span> to the tip of the second <span class="process-math">\(-\vec{b}\text{.}\)</span> (see <a href="sec_displacementvectors.html#vectoraddition" class="xref" data-knowl="./knowl/xref/vectoraddition.html" data-reveal-label="Reveal" data-close-label="Close" title="Figure 4.1.22">Figure 4.1.22</a>).</div>
+<figure class="figure figure-like" id="vecsaandbans"><div class="image-box" style="width: 40%; margin-left: 30%; margin-right: 30%;"><img src="generated/latex-image/vecsaandbanspic.svg" role="img" class="contained" alt="Solution to exercise on addition."></div>
+<figcaption><span class="type">Figure</span><span class="space"> </span><span class="codenumber">4.1.28<span class="period">.</span></span><span class="space"> </span><span class="process-math">\(\vec{a}-2\vec{b}\)</span> from <a href="sec_displacementvectors.html#vectordiff" class="xref" data-knowl="./knowl/xref/vectordiff.html" data-reveal-label="Reveal" data-close-label="Close" title="Checkpoint 4.1.26: Vector Arithmetic in 2D">Checkpoint 4.1.26</a>.</figcaption></figure>
+</div></details></div></article></details><details id="Add3D" class="exercise exercise-like born-hidden-knowl"><summary class="knowl__link"><h4 class="heading">
+<span class="type">Checkpoint</span><span class="space"> </span><span class="codenumber">4.1.29</span><span class="period">.</span><span class="space"> </span><span class="title">Vector Arithmetic in 3D.</span>
+</h4></summary><article class="exercise exercise-like knowl__content"><div class="para" id="Add3D-2-1">Add vectors <span class="process-math">\(\vec{u}\text{,}\)</span> <span class="process-math">\(\vec{v}\text{,}\)</span> and <span class="process-math">\(\vec{w}\)</span> as shown in <a href="sec_displacementvectors.html#AddIn3D" class="xref" data-knowl="./knowl/xref/AddIn3D.html" data-reveal-label="Reveal" data-close-label="Close" title="Figure 4.1.30">Figure 4.1.30</a>. <figure class="figure figure-like" id="AddIn3D"><div class="image-box" style="width: 50%; margin-left: 25%; margin-right: 25%;"><img src="generated/latex-image/AddIn3DPic.svg" role="img" class="contained" alt="Adding in 3D."></div>
+<figcaption><span class="type">Figure</span><span class="space"> </span><span class="codenumber">4.1.30<span class="period">.</span></span><span class="space"> </span>Vectors <span class="process-math">\(\vec{u}\text{,}\)</span> <span class="process-math">\(\vec{v}\text{,}\)</span> and <span class="process-math">\(\vec{w}\)</span> for <a href="sec_displacementvectors.html#Add3D" class="xref" data-knowl="./knowl/xref/Add3D.html" data-reveal-label="Reveal" data-close-label="Close" title="Checkpoint 4.1.29: Vector Arithmetic in 3D">Checkpoint 4.1.29</a>.</figcaption></figure>
+</div>
+<div class="solutions"><details id="Add3D-3" class="answer solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Answer</span><span class="period">.</span></summary><div class="answer solution-like knowl__content">
+<div class="para" id="Add3D-3-1">Since <span class="process-math">\(\vec{v}\)</span> is a displacement vector, it can be moved to make the addition of these vectors geometrically as easy as connecting the tail of <span class="process-math">\(\vec{u}\)</span> to the tip of <span class="process-math">\(\vec{w}\text{.}\)</span>
+</div>
+<figure class="figure figure-like" id="AddIn3DAnswer"><div class="image-box" style="width: 50%; margin-left: 25%; margin-right: 25%;"><img src="generated/latex-image/AddIn3DAnswerPic.svg" role="img" class="contained" alt="Adding in 3D - an answer."></div>
+<figcaption><span class="type">Figure</span><span class="space"> </span><span class="codenumber">4.1.31<span class="period">.</span></span><span class="space"> </span>The sum <span class="process-math">\(\vec{u} +\vec{v} + \vec{w}\)</span> for <a href="sec_displacementvectors.html#Add3D" class="xref" data-knowl="./knowl/xref/Add3D.html" data-reveal-label="Reveal" data-close-label="Close" title="Checkpoint 4.1.29: Vector Arithmetic in 3D">Checkpoint 4.1.29</a>.</figcaption></figure>
+</div></details></div></article></details></section><section class="paragraphs" id="sec_displacementvectors-24"><h3 class="heading"><span class="title">Vector Resolution.</span></h3>
+<div class="para" id="sec_displacementvectors-24-2">Suppose a wind is blowing from the NW (generally speaking) and that we are interested in the strength of the westerly component and the (relative) strength of the northerly component.  Using <dfn class="terminology">components</dfn> of the wind vector allows us to specify each of these.</div>
+<div class="para" id="sec_displacementvectors-24-3">In <a href="sec_displacementvectors.html#components1" class="xref" data-knowl="./knowl/xref/components1.html" data-reveal-label="Reveal" data-close-label="Close" title="Figure 4.1.32">Figure 4.1.32</a>, the displacement vector from <span class="process-math">\(P\)</span> to <span class="process-math">\(Q\)</span> is <span class="process-math">\(3\vec{i}-\vec{j}\text{.}\)</span> Here <span class="process-math">\(\vec{i}\)</span> is a unit vector pointing east, <span class="process-math">\(\vec{j}\)</span> is a unit vector pointing north, and <span class="process-math">\(3\vec{i}\)</span> and <span class="process-math">\(-\vec{j}\)</span> are the components of the vector.</div>
+<figure class="figure figure-like" id="components1"><div class="image-box" style="width: 50%; margin-left: 25%; margin-right: 25%;"><img src="generated/latex-image/components1Pic.svg" role="img" class="contained" alt="Resolving our first vector."></div>
+<figcaption><span class="type">Figure</span><span class="space"> </span><span class="codenumber">4.1.32<span class="period">.</span></span><span class="space"> </span>Resolving the displacement vector from <span class="process-math">\(P\)</span> to <span class="process-math">\(Q\)</span> as <span class="process-math">\(3\vec{i}-\vec{j}\text{.}\)</span></figcaption></figure><div class="para logical" id="sec_displacementvectors-24-5">
+<div class="para">In a similar fashion, we can <dfn class="terminology">resolve</dfn> any displacement vector  <span class="process-math">\(\vec{v}\)</span> in space by writing it in the form</div>
+<div class="displaymath process-math" data-contains-math-knowls="./knowl/xref/basisvectors.html" id="sec_displacementvectors-24-5-4">
+\begin{gather*}
+\vec{v} = v_1 \vec{i} + v_2 \vec{j}+v_3 \vec{k}.
+\end{gather*}
+</div>
+<div class="para">The vectors <span class="process-math">\(\vec{i}\text{,}\)</span> <span class="process-math">\(\vec{j}\text{,}\)</span> and <span class="process-math">\(\vec{k}\)</span> are unit vectors pointing in the direction of the positive <span class="process-math">\(x\)</span>-axis, the positive <span class="process-math">\(y\)</span>-axis, and positive <span class="process-math">\(z\)</span>-axis respectively (see <a href="sec_displacementvectors.html#basisvectors" class="xref" data-knowl="./knowl/xref/basisvectors.html" data-reveal-label="Reveal" data-close-label="Close" title="Figure 4.1.33">Figure 4.1.33</a>. We call <span class="process-math">\(v_1 \vec{i}\text{,}\)</span> <span class="process-math">\(v_2 \vec{j}\text{,}\)</span> and <span class="process-math">\(v_3 \vec{k}\)</span> the components of <span class="process-math">\(\vec{v}\text{.}\)</span>
+</div>
+</div>
+<figure class="figure figure-like" id="basisvectors"><div class="image-box" style="width: 35%; margin-left: 32.5%; margin-right: 32.5%;"><img src="generated/latex-image/basisvectorsPic.svg" role="img" class="contained" alt="The basis vectors."></div>
+<figcaption><span class="type">Figure</span><span class="space"> </span><span class="codenumber">4.1.33<span class="period">.</span></span><span class="space"> </span>Unit basis vectors <span class="process-math">\(\vec{i}\text{,}\)</span> <span class="process-math">\(\vec{j}\text{,}\)</span> and <span class="process-math">\(\vec{k}\text{.}\)</span></figcaption></figure><article class="example example-like" id="resolvegeowind"><h4 class="heading">
+<span class="type">Example</span><span class="space"> </span><span class="codenumber">4.1.34</span><span class="period">.</span><span class="space"> </span><span class="title">Resolving Geostrophic Wind.</span>
+</h4>
+<div class="para" id="resolvegeowind-2">A resolution of the vectors representing both the geostrophic wind <span class="process-math">\(\vec{v}_g\)</span> and ageostrophic wind <span class="process-math">\(\vec{v}_{ag}\)</span> given in <a href="sec_displacementvectors.html#GeostrophicWind" class="xref" data-knowl="./knowl/xref/GeostrophicWind.html" data-reveal-label="Reveal" data-close-label="Close" title="Example 4.1.24: Geostrophic Wind">Example 4.1.24</a> is <span class="process-math">\(\vec{v}_g = 2\vec{i} + 3\vec{j}\)</span> and  <span class="process-math">\(\vec{v}_{ag} = 2\vec{i} - \vec{j}\text{.}\)</span>  The observed wind <span class="process-math">\(\vec{v}\)</span> has resolution <span class="process-math">\(\vec{v}=4\vec{i}+2\vec{j} = (2+2)\vec{i} + (3-1)\vec{j} = (2\vec{i}+3\vec{j}) + (2\vec{i} - \vec{j}) = \vec{v}_g + \vec{v}_{ag}\text{.}\)</span>
+</div></article><details id="Resolve3DVector" class="exercise exercise-like born-hidden-knowl"><summary class="knowl__link"><h4 class="heading">
+<span class="type">Checkpoint</span><span class="space"> </span><span class="codenumber">4.1.35</span><span class="period">.</span><span class="space"> </span><span class="title">Resolving a 3D Vector.</span>
+</h4></summary><article class="exercise exercise-like knowl__content"><div class="para" id="Resolve3DVector-2-1">Suppose that <span class="process-math">\(\vec{v}\)</span> points from the point <span class="process-math">\(P = (3, -1, 0)\)</span> to the point <span class="process-math">\(Q = (0, 2, 4)\text{.}\)</span>  Resolve <span class="process-math">\(\vec{v}\)</span> into components.</div> <figure class="figure figure-like" id="ResolveThis3DVector"><div class="image-box" style="width: 50%; margin-left: 25%; margin-right: 25%;"><img src="generated/latex-image/ResolveThis3DVectorPic.svg" role="img" class="contained" alt="Resolve this 3D Vector."></div>
+<figcaption><span class="type">Figure</span><span class="space"> </span><span class="codenumber">4.1.36<span class="period">.</span></span><span class="space"> </span>Resolve <span class="process-math">\(\vec{v}\)</span> into components.</figcaption></figure><div class="solutions"><details id="Resolve3DVector-3" class="answer solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Answer</span><span class="period">.</span></summary><div class="answer solution-like knowl__content">
+<div class="para" id="Resolve3DVector-3-1">
+<span class="process-math">\(\vec{v} = (0-3)\vec{i} +(2-(-1))\vec{j} +(4-0)\vec{k} = -3\vec{i} +3\vec{j} +4\vec{k}\)</span> as illustrated in <a href="sec_displacementvectors.html#Resolve3DExample" class="xref" data-knowl="./knowl/xref/Resolve3DExample.html" data-reveal-label="Reveal" data-close-label="Close" title="Figure 4.1.37">Figure 4.1.37</a>.</div>
+<figure class="figure figure-like" id="Resolve3DExample"><div class="image-box" style="width: 50%; margin-left: 25%; margin-right: 25%;"><img src="generated/latex-image/Resolve3DExamplePic.svg" role="img" class="contained" alt="Resolving a 3D Vector."></div>
+<figcaption><span class="type">Figure</span><span class="space"> </span><span class="codenumber">4.1.37<span class="period">.</span></span><span class="space"> </span><span class="process-math">\(\vec{v} = -3\vec{i} +3\vec{j} +4\vec{k}\text{.}\)</span></figcaption></figure>
+</div></details></div></article></details></section><section class="paragraphs" id="sec_displacementvectors-25"><h3 class="heading"><span class="title">Horizontal Wind Vectors.</span></h3>
+<div class="para" id="sec_displacementvectors-25-2">The <dfn class="terminology">horizontal wind vector</dfn> <span class="process-math">\(\vec{v}_H\)</span> can be represented in multiple ways.  We describe two ways of representing this vector.</div>
+<div class="para logical" id="sec_displacementvectors-25-3">
+<ul class="disc" id="sec_displacementvectors-25-3-1">
+<li id="sec_displacementvectors-25-3-1-1"><div class="para" id="sec_displacementvectors-25-3-1-1-1">
+<em class="emphasis">Component representation.</em> <span class="process-math">\(\vec{v}_H\)</span> can be represented in terms of perpendicular velocity components.  For this representation, vectors <span class="process-math">\(\vec{i}\)</span> and <span class="process-math">\(\vec{j}\)</span> represent unit vectors in directions East and North respectively.  We then write <span class="process-math">\(\vec{v}_H = u\vec{i} + v\vec{j}\text{.}\)</span>  Here <span class="process-math">\(u\)</span> is the <dfn class="terminology">zonal velocity</dfn>, the magnitude of the horizontal wind towards East.   Scalar <span class="process-math">\(v\)</span> is the <dfn class="terminology">meridional velocity</dfn>, the magnitude of the horizontal wind towards North.</div></li>
+<li id="sec_displacementvectors-25-3-1-2">
+<div class="para" id="sec_displacementvectors-25-3-1-2-1">
+<em class="emphasis">Wind speed and direction representation.</em> The wind speed is simply the magnitude of <span class="process-math">\(\vec{v}_H\)</span> being specified.  That is, <span class="process-math">\(\|\vec{v}_H\|\)</span> is prescribed.  Two opposite conventions are commonly used to describe wind direction.</div>
+<ol class="lower-alpha" id="sec_displacementvectors-25-3-1-2-2">
+<li id="sec_displacementvectors-25-3-1-2-2-1"><div class="para" id="p-derived-sec_displacementvectors-25-3-1-2-2-1">
+<span class="process-math">\(\phi_{vect}\)</span> is the <dfn class="terminology">wind vector azimuth</dfn>, i.e. the direction towards which the wind is blowing.  <span class="process-math">\(\phi_{vect}\)</span> increases clockwise from North when viewed from above. Terms such as northward, eastward, etc. imply wind vector azimuths.</div></li>
+<li id="sec_displacementvectors-25-3-1-2-2-2"><div class="para" id="p-derived-sec_displacementvectors-25-3-1-2-2-2">
+<span class="process-math">\(\phi_{met}\)</span> is the <dfn class="terminology">meteorological wind direction</dfn>, i.e. the direction from which the wind is blowing. <span class="process-math">\(\phi_{met}\)</span> also increases clockwise from North when viewed from above. Terms such as northerly, easterly, etc. imply meteorological wind directions.</div></li>
+</ol>
+</li>
+</ul>
+<div class="para">The polar angle <span class="process-math">\(\phi_{polar}\)</span> is the standard angle used in mathematics to measure the angle that <span class="process-math">\(\vec{v}_H\)</span> makes with the positive <span class="process-math">\(x\)</span>-axis.</div>
+</div>
+<figure class="figure figure-like" id="HorizontalWind"><div class="image-box" style="width: 50%; margin-left: 25%; margin-right: 25%;">
+<img src="generated/latex-image/HorizontalWindPic.svg" role="img" class="contained" alt="described in detail following the image" aria-describedby="HorizontalWindPic-description"><details class="image-description" aria-live="polite"><summary title="details"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe88e;</span></summary><div id="HorizontalWindPic-description">Representing the horizontal wind vector <span class="process-math">\(\vec{v}_H\text{.}\)</span>
+</div></details>
+</div>
+<figcaption><span class="type">Figure</span><span class="space"> </span><span class="codenumber">4.1.38<span class="period">.</span></span><span class="space"> </span>Representing the horizontal wind vector <span class="process-math">\(\vec{v}_H\text{.}\)</span>  Here the horizontal wind <span class="process-math">\(\vec{v}_H\)</span> is coming from an angle of <span class="process-math">\(\phi_{met}\)</span> and has azimuth <span class="process-math">\(\phi_{vect}\text{.}\)</span></figcaption></figure><details id="horizontalwindvector" class="exercise exercise-like born-hidden-knowl"><summary class="knowl__link"><h4 class="heading">
+<span class="type">Checkpoint</span><span class="space"> </span><span class="codenumber">4.1.39</span><span class="period">.</span><span class="space"> </span><span class="title">The Horizontal Wind Vector.</span>
+</h4></summary><article class="exercise exercise-like knowl__content"><div class="para logical" id="horizontalwindvector-2-1"><ol class="lower-alpha" id="horizontalwindvector-2-1-1">
+<li id="horizontalwindvector-2-1-1-1"><div class="para" id="p-derived-horizontalwindvector-2-1-1-1">If <span class="process-math">\(\vec{v}_H = -(2 \ km/h)\vec{i} + (2 \ km/h)\vec{j}\)</span> is the component representation of the horizontal wind, what is the wind speed?  What is the wind vector azimuth <span class="process-math">\(\phi_{vect}\text{?}\)</span>  What is the meteorlogical wind direction <span class="process-math">\(\phi_{met}\text{?}\)</span>
+</div></li>
+<li id="horizontalwindvector-2-1-1-2"><div class="para" id="p-derived-horizontalwindvector-2-1-1-2">Consider a northwest (southward and eastward) wind at 5 km/h.  What is <span class="process-math">\(\phi_{vect}\text{?}\)</span>  What is <span class="process-math">\(\phi_{met}\text{?}\)</span>  What is the component representation for <span class="process-math">\(\vec{v}_H\text{?}\)</span>
+</div></li>
+</ol></div>
+<div class="solutions"><details id="horizontalwindvector-3" class="answer solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Answer</span><span class="period">.</span></summary><div class="answer solution-like knowl__content"><ol class="lower-alpha" id="horizontalwindvector-3-1">
+<li id="horizontalwindvector-3-1-1"><div class="para" id="p-derived-horizontalwindvector-3-1-1">
+<span class="process-math">\(\| \vec{v}_H \| = \sqrt{(-2)^2 + 2^2} = \sqrt{8} \approx 2.8\)</span> km/h; <span class="process-math">\(\phi_{vect} = 315^{\circ}\text{;}\)</span> <span class="process-math">\(\phi_{met} = 135^{\circ}\)</span>
+</div></li>
+<li id="horizontalwindvector-3-1-2"><div class="para" id="p-derived-horizontalwindvector-3-1-2">
+<span class="process-math">\(\phi_{vect} = 135^{\circ}\text{;}\)</span> <span class="process-math">\(\phi_{met} = 315^{\circ}\text{;}\)</span> <span class="process-math">\(\vec{v}_H = \frac{5\sqrt{2}}{2} \vec{i} - \frac{5\sqrt{2}}{2} \vec{j} \approx 3.5\vec{i}-3.5\vec{j}\)</span>
+</div></li>
+</ol></div></details></div></article></details><article class="example example-like" id="verticalwindshear"><h4 class="heading">
+<span class="type">Example</span><span class="space"> </span><span class="codenumber">4.1.40</span><span class="period">.</span><span class="space"> </span><span class="title">Vertical Wind Shear.</span>
+</h4>
+<div class="para" id="verticalwindshear-2">The change of horizontal wind speed and/or direction with height, called <dfn class="terminology">vertical wind shear</dfn>, is a requirement for thunderstorm formation.  The vertical wind shear across a layer of air is the vector difference between the winds at the top of the layer and winds at the bottom, divided by layer thickness <span class="process-math">\(\Delta z\text{.}\)</span>
+</div>
+<div class="para logical" id="verticalwindshear-3">
+<div class="para">Suppose, for example, the wind at an altitude of <span class="process-math">\(z_1 = 3\)</span> km is given by <span class="process-math">\(\vec{v}_1 = 5\vec{i}-3\vec{j}\)</span> (in units of m/s) and the wind at altitude <span class="process-math">\(z_2 = 2\)</span> km is <span class="process-math">\(\vec{v}_2 = \vec{i} + 2\vec{j}\)</span> (also in units of m/s) as shown in <a href="sec_displacementvectors.html#WindShearPic" class="xref" data-knowl="./knowl/xref/WindShearPic.html" data-reveal-label="Reveal" data-close-label="Close" title="Figure 4.1.41">Figure 4.1.41</a>.  Then, the shear vector is given by</div>
+<div class="displaymath process-math" data-contains-math-knowls="./knowl/xref/WindShearPic.html ./knowl/xref/WindShearPic.html" id="verticalwindshear-3-6">
+\begin{gather*}
+\vec{v}_s = \frac{\vec{v}_1 - \vec{v}_2}{z_1-z_2} = \frac{4\vec{i} - 5\vec{j}}{3 \ km - 2 \ km} = \frac{(4\vec{i} - 5\vec{j}) \ m/s}{1000 \ m}\text{.}
+\end{gather*}
+</div>
+<div class="para">The shear magnitude is then</div>
+<div class="displaymath process-math" data-contains-math-knowls="./knowl/xref/WindShearPic.html ./knowl/xref/WindShearPic.html" id="verticalwindshear-3-7">
+\begin{gather*}
+\| \vec{v}_s \| = \sqrt{0.004^2 + (-0.005)^2} \approx 0.0064 \ s^{-1}\text{.}
+\end{gather*}
+</div>
+<div class="para">The direction (but not the magnitude!) of the shear vector is the same as the red vector <span class="process-math">\(\Delta z \cdot \vec{v}_s\)</span> shown in <a href="sec_displacementvectors.html#WindShearPic" class="xref" data-knowl="./knowl/xref/WindShearPic.html" data-reveal-label="Reveal" data-close-label="Close" title="Figure 4.1.41">Figure 4.1.41</a>. The units of vertical wind shear in this example are <span class="process-math">\(1/s\text{.}\)</span>
+</div>
+</div>
+<figure class="figure figure-like" id="WindShearPic"><div class="image-box" style="width: 50%; margin-left: 25%; margin-right: 25%;"><img src="generated/latex-image/WindShearPicName.svg" role="img" class="contained" alt="Wind shear."></div>
+<figcaption><span class="type">Figure</span><span class="space"> </span><span class="codenumber">4.1.41<span class="period">.</span></span><span class="space"> </span>Vertical wind shear is proportional to the difference of the wind vectors.</figcaption></figure></article><div class="para" id="sec_displacementvectors-25-7">The vertical wind shear <span class="process-math">\(\vec{v}_s\)</span> between the surface and a height of <span class="process-math">\(z=6\)</span> km is a standard tool in storm prediction.  When the vertical distance between layers is fixed (as it is here at 6 km), just the difference of the wind <span class="process-math">\(\vec{v}_2\)</span> at the upper layer <span class="process-math">\(z=6\)</span> km and the wind <span class="process-math">\(\vec{v}_1\)</span> at the surface called the <dfn class="terminology">bulk shear</dfn> is used.  The bulk shear is the wind difference over a layer calculated by vector subtraction.  A tool that illustrates and calculates bulk shear between two layers can be found  <a class="external" href="https://courseware.e-education.psu.edu/courses/meteo361/javascript/Lesson3/shear_calc.html#" target="_blank">here</a><details class="ptx-footnote" aria-live="polite" id="sec_displacementvectors-25-7-9"><summary class="ptx-footnote__number" title="Footnote 57"><sup> 57 </sup></summary><div class="ptx-footnote__contents" id="sec_displacementvectors-25-7-9"><code class="code-inline tex2jax_ignore">http://www.grlevelx.com/manuals/gr2analyst/window_toolbar.htm</code></div></details>.</div>
+<details id="verticalwindsheardiff" class="exercise exercise-like born-hidden-knowl"><summary class="knowl__link"><h4 class="heading">
+<span class="type">Checkpoint</span><span class="space"> </span><span class="codenumber">4.1.42</span><span class="period">.</span><span class="space"> </span><span class="title">The 6-km Bulk Wind Shear.</span>
+</h4></summary><article class="exercise exercise-like knowl__content"><div class="para" id="verticalwindsheardiff-2-1">Suppose that the surface wind <span class="process-math">\(\vec{v}_1\)</span> is known to be 10 knots at <span class="process-math">\(250^{\circ}\)</span> and the wind <span class="process-math">\(\vec{v}_2\)</span> at 6 km is known to be 40 knots at <span class="process-math">\(300^{\circ}\)</span> as illustrated in <a href="sec_displacementvectors.html#verticalwindshear6km" class="xref" data-knowl="./knowl/xref/verticalwindshear6km.html" data-reveal-label="Reveal" data-close-label="Close" title="Figure 4.1.43">Figure 4.1.43</a>.  Determine the 6-km bulk wind shear <span class="process-math">\(\vec{v}_s = \vec{v}_2-\vec{v}_1\)</span> by giving both its meteorological direction <span class="process-math">\(\phi_{met}\)</span> and its magnitude.  Then, sketch <span class="process-math">\(\vec{v}_s\)</span> on <a href="sec_displacementvectors.html#verticalwindshear6km" class="xref" data-knowl="./knowl/xref/verticalwindshear6km.html" data-reveal-label="Reveal" data-close-label="Close" title="Figure 4.1.43">Figure 4.1.43</a>. <figure class="figure figure-like" id="verticalwindshear6km"><div class="image-box" style="width: 50%; margin-left: 25%; margin-right: 25%;">
+<img src="generated/latex-image/verticalwindshear6kmpic.svg" role="img" class="contained" alt="described in detail following the image" aria-describedby="verticalwindshear6kmpic-description"><details class="image-description" aria-live="polite"><summary title="details"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe88e;</span></summary><div id="verticalwindshear6kmpic-description">Bulk wind shear at 6 km used in <a href="sec_displacementvectors.html#verticalwindsheardiff" class="xref" data-knowl="./knowl/xref/verticalwindsheardiff.html" data-reveal-label="Reveal" data-close-label="Close" title="Checkpoint 4.1.42: The 6-km Bulk Wind Shear">Checkpoint 4.1.42</a>.</div></details>
+</div>
+<figcaption><span class="type">Figure</span><span class="space"> </span><span class="codenumber">4.1.43<span class="period">.</span></span><span class="space"> </span>Bulk wind shear at 6 km used in <a href="sec_displacementvectors.html#verticalwindsheardiff" class="xref" data-knowl="./knowl/xref/verticalwindsheardiff.html" data-reveal-label="Reveal" data-close-label="Close" title="Checkpoint 4.1.42: The 6-km Bulk Wind Shear">Checkpoint 4.1.42</a>.</figcaption></figure>
+</div>
+<div class="solutions"><details id="verticalwindsheardiff-3" class="answer solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Answer</span><span class="period">.</span></summary><div class="answer solution-like knowl__content"><div class="para logical" id="verticalwindsheardiff-3-1">
+<div class="para">The magnitude of <span class="process-math">\(\vec{v}_s\)</span> can be determined by the law of cosines:</div>
+<div class="displaymath process-math" id="verticalwindsheardiff-3-1-2">
+\begin{gather*}
+\|\vec{v}_s\|^2 = 10^2 + 40^2 - 2(10)(40)\cos(50^{\circ})
+\end{gather*}
+</div>
+<div class="para">means that <span class="process-math">\(\|\vec{v}_s\| \approx 34.4\)</span> knots.  The meteorological direction of <span class="process-math">\(\vec{v}_s\)</span> is  <span class="process-math">\(\phi_{met} \approx 313^{\circ}\text{.}\)</span>  One way to find this angle is using vector resolution:</div>
+<div class="displaymath process-math" id="verticalwindsheardiff-3-1-6">
+\begin{gather*}
+\vec{v}_1 =10\cos(20^{\circ})\vec{i} + 10\sin(20^{\circ})\vec{j} \approx 9.4\vec{i} + 3.4\vec{j} \\
+\vec{v}_2 = 40\cos(30^{\circ})\vec{i} - 40\sin(30^{\circ})\vec{j} \approx 34.6\vec{i} - 20\vec{j}.
+\end{gather*}
+</div>
+<div class="para">So,</div>
+<div class="displaymath process-math" id="verticalwindsheardiff-3-1-7">
+\begin{gather*}
+\vec{v}_s = \vec{v}_2 - \vec{v}_1 \approx  (34.6\vec{i} - 20\vec{j}) - (9.4\vec{i} + 3.4\vec{j}) = 25.2\vec{i} - 23.4\vec{j}\text{.}
+\end{gather*}
+</div>
+<div class="para">We can then evaluate <span class="process-math">\(\phi_{polar} = \arctan\left(\frac{-23.4}{25.2}\right) \approx -43^{\circ}\)</span> (or <span class="process-math">\(317^{\circ}\)</span>).  This gives a meteorological angle of <span class="process-math">\(\phi_{met} \approx 270-317(+360) = 313^{\circ}\text{.}\)</span> <figure class="figure figure-like" id="verticalwindshear6km2"><div class="image-box" style="width: 50%; margin-left: 25%; margin-right: 25%;"><img src="generated/latex-image/verticalwindshear6km2pic.svg" role="img" class="contained" alt="Bulk wind shear at 6 km is the difference of two vectors."></div>
+<figcaption><span class="type">Figure</span><span class="space"> </span><span class="codenumber">4.1.44<span class="period">.</span></span><span class="space"> </span>Bulk wind shear at 6 km is the difference of two vectors.</figcaption></figure>
+</div>
+</div></div></details></div></article></details></section><section class="exercises" id="ex_sec_displacementvectors"><h3 class="heading hide-type">
+<span class="type">Exercises</span><span class="space"> </span><span class="codenumber"></span><span class="space"> </span><span class="title">Exercises</span>
+</h3>
+<article class="exercise exercise-like" id="PositionVector"><h4 class="heading">
+<span class="codenumber">1<span class="period">.</span></span><span class="space"> </span><span class="title">The Position Vector.</span>
+</h4>
+<div class="para" id="PositionVector-2-1">A <dfn class="terminology">position vector</dfn> is one that has its tail at the origin.</div> <div id="momPositionVector-2-2wrap" style="width:100%;overflow:visible;position:relative"><iframe id="momPositionVector-2-2" style="position:absolute;z-index:1;object-fit: contain; width: 100%" frameborder="0" data-knowl-callback="sendResizeRequest" src="https://www.myopenmath.com/embedq2.php?id=907668&amp;frame_id=momPositionVector-2-2"></iframe></div></article><article class="exercise exercise-like" id="SimpleAddition"><h4 class="heading">
+<span class="codenumber">2<span class="period">.</span></span><span class="space"> </span><span class="title">Adding Vectors in Component Form.</span>
+</h4>
+<div id="momSimpleAddition-2wrap" style="width:100%;overflow:visible;position:relative"><iframe id="momSimpleAddition-2" style="position:absolute;z-index:1;object-fit: contain; width: 100%" frameborder="0" data-knowl-callback="sendResizeRequest" src="https://www.myopenmath.com/embedq2.php?id=182774&amp;frame_id=momSimpleAddition-2"></iframe></div></article><article class="exercise exercise-like" id="DrawSumVectors"><h4 class="heading">
+<span class="codenumber">3<span class="period">.</span></span><span class="space"> </span><span class="title">Draw the Sum of Vectors.</span>
+</h4>
+<div id="momDrawSumVectors-2wrap" style="width:100%;overflow:visible;position:relative"><iframe id="momDrawSumVectors-2" style="position:absolute;z-index:1;object-fit: contain; width: 100%" frameborder="0" data-knowl-callback="sendResizeRequest" src="https://www.myopenmath.com/embedq2.php?id=605359&amp;frame_id=momDrawSumVectors-2"></iframe></div></article><article class="exercise exercise-like" id="LinearCombos"><h4 class="heading">
+<span class="codenumber">4<span class="period">.</span></span><span class="space"> </span><span class="title">Combining Vectors.</span>
+</h4>
+<div id="momLinearCombos-2wrap" style="width:100%;overflow:visible;position:relative"><iframe id="momLinearCombos-2" style="position:absolute;z-index:1;object-fit: contain; width: 100%" frameborder="0" data-knowl-callback="sendResizeRequest" src="https://www.myopenmath.com/embedq2.php?id=182752&amp;frame_id=momLinearCombos-2"></iframe></div></article><article class="exercise exercise-like" id="Magnitudes"><h4 class="heading">
+<span class="codenumber">5<span class="period">.</span></span><span class="space"> </span><span class="title">Vector Length.</span>
+</h4>
+<div id="momMagnitudes-2wrap" style="width:100%;overflow:visible;position:relative"><iframe id="momMagnitudes-2" style="position:absolute;z-index:1;object-fit: contain; width: 100%" frameborder="0" data-knowl-callback="sendResizeRequest" src="https://www.myopenmath.com/embedq2.php?id=1492514&amp;frame_id=momMagnitudes-2"></iframe></div></article><article class="exercise exercise-like" id="NetForce"><h4 class="heading">
+<span class="codenumber">6<span class="period">.</span></span><span class="space"> </span><span class="title">Net Force.</span>
+</h4>
+<div id="momNetForce-2wrap" style="width:100%;overflow:visible;position:relative"><iframe id="momNetForce-2" style="position:absolute;z-index:1;object-fit: contain; width: 100%" frameborder="0" data-knowl-callback="sendResizeRequest" src="https://www.myopenmath.com/embedq2.php?id=1492517&amp;frame_id=momNetForce-2"></iframe></div></article><article class="exercise exercise-like" id="ResolveVector"><h4 class="heading">
+<span class="codenumber">7<span class="period">.</span></span><span class="space"> </span><span class="title">Resolve a Vector.</span>
+</h4>
+<div class="para logical" id="ResolveVector-2-1"><ol class="lower-alpha" id="ResolveVector-2-1-1">
+<li id="ResolveVector-2-1-1-1"><div class="para" id="p-derived-ResolveVector-2-1-1-1">Resolve the vector given in <a href="sec_displacementvectors.html#firstvector" class="xref" data-knowl="./knowl/xref/firstvector.html" data-reveal-label="Reveal" data-close-label="Close" title="Figure 4.1.5">Figure 4.1.5</a>.  That is, write <span class="process-math">\(\vec{v} = a\vec{i} + b\vec{j}\)</span> for some <span class="process-math">\(a\)</span> and <span class="process-math">\(b\text{.}\)</span>
+</div></li>
+<li id="ResolveVector-2-1-1-2"><div class="para" id="p-derived-ResolveVector-2-1-1-2">Resolve <span class="process-math">\(-2\vec{v}\)</span> if <span class="process-math">\(\vec{v}\)</span> is the vector given in <a href="sec_displacementvectors.html#firstvector" class="xref" data-knowl="./knowl/xref/firstvector.html" data-reveal-label="Reveal" data-close-label="Close" title="Figure 4.1.5">Figure 4.1.5</a>.</div></li>
+</ol></div>
+<div class="solutions"><details id="ResolveVector-3" class="answer solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Answer</span><span class="period">.</span></summary><div class="answer solution-like knowl__content"><div class="para logical" id="ResolveVector-3-1"><ol class="lower-alpha" id="ResolveVector-3-1-1">
+<li id="ResolveVector-3-1-1-1"><div class="para" id="p-derived-ResolveVector-3-1-1-1"><span class="process-math">\(\displaystyle \vec{v}=4\vec{i} - 3\vec{j}\)</span></div></li>
+<li id="ResolveVector-3-1-1-2"><div class="para" id="p-derived-ResolveVector-3-1-1-2"><span class="process-math">\(\displaystyle -2\vec{v} = -8\vec{i} + 6\vec{j}\)</span></div></li>
+</ol></div></div></details></div></article><article class="exercise exercise-like" id="WindBarb2VectorEx"><h4 class="heading">
+<span class="codenumber">8<span class="period">.</span></span><span class="space"> </span><span class="title">Resolving a Wind Barb.</span>
+</h4>
+<div class="para" id="WindBarb2VectorEx-2-1">Resolve the horizontal wind vector <span class="process-math">\(\vec{v}_H\)</span> shown in <a href="sec_displacementvectors.html#windbarb2vector" class="xref" data-knowl="./knowl/xref/windbarb2vector.html" data-reveal-label="Reveal" data-close-label="Close" title="Figure 4.1.45">Figure 4.1.45</a> as a wind barb.  That is, describe this wind in the form <span class="process-math">\(a\vec{j} + b\vec{j}\)</span> where <span class="process-math">\(a\)</span> and <span class="process-math">\(b\)</span> are in units of knots. <figure class="figure figure-like" id="windbarb2vector"><div class="image-box" style="width: 15%; margin-left: 42.5%; margin-right: 42.5%;"><img src="generated/latex-image/windbarb2vectorpic.svg" role="img" class="contained" alt="Wind barb."></div>
+<figcaption><span class="type">Figure</span><span class="space"> </span><span class="codenumber">4.1.45<span class="period">.</span></span><span class="space"> </span>Wind barb for <a href="sec_displacementvectors.html#WindBarb2VectorEx" class="xref" data-knowl="./knowl/xref/WindBarb2VectorEx.html" data-reveal-label="Reveal" data-close-label="Close" title="Exercise 4.1.8: Resolving a Wind Barb">Exercise 4.1.8</a>.</figcaption></figure>
+</div>
+<div class="solutions"><details id="WindBarb2VectorEx-3" class="answer solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Answer</span><span class="period">.</span></summary><div class="answer solution-like knowl__content"><div class="para logical" id="WindBarb2VectorEx-3-1"><div class="displaymath process-math" id="WindBarb2VectorEx-3-1-1">
+\begin{align*}
+\vec{v}_H = \amp (20 \ {\rm{knots}}) \cos (-30^{\circ}) \vec{i} + (20 \ {\rm{knots}}) \sin (-30^{\circ}) \vec{j} \\
+\approx \amp (17.3\ {\rm{knots}})\vec{i} -(10\ {\rm{knots}})\vec{j}\text{.}
+\end{align*}
+</div></div></div></details></div></article><article class="exercise exercise-like" id="Convertmathangleazimuth"><h4 class="heading">
+<span class="codenumber">9<span class="period">.</span></span><span class="space"> </span><span class="title">Converting Between <span class="process-math">\(\phi_{polar}\)</span> and <span class="process-math">\(\phi_{vect}\)</span>.</span>
+</h4>
+<div class="para" id="Convertmathangleazimuth-2-1">We have seen that the relationship between a meteorological angle <span class="process-math">\(\phi_{met}\)</span> and a mathematical angle <span class="process-math">\(\phi_{polar}\)</span> is given by the equation <span class="process-math">\(\phi_{polar} = 270^{\circ}-\phi_{met}\text{.}\)</span>  Determine the relationship between a mathematical angle <span class="process-math">\(\phi_{polar}\)</span> and the wind azimuth <span class="process-math">\(\phi_{vect}\)</span> as illustrated in <a href="sec_displacementvectors.html#HorizontalWind" class="xref" data-knowl="./knowl/xref/HorizontalWind.html" data-reveal-label="Reveal" data-close-label="Close" title="Figure 4.1.38">Figure 4.1.38</a>.</div>
+<div class="solutions"><details id="Convertmathangleazimuth-3" class="answer solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Answer</span><span class="period">.</span></summary><div class="answer solution-like knowl__content"><div class="para" id="Convertmathangleazimuth-3-1">
+<span class="process-math">\(\phi_{polar} = 90^{\circ} - \phi_{vect}\)</span> where <span class="process-math">\(360^{\circ}\)</span> can be added to make the angle positive if desired.</div></div></details></div></article><article class="exercise exercise-like" id="directionsandvectors"><h4 class="heading">
+<span class="codenumber">10<span class="period">.</span></span><span class="space"> </span><span class="title">Directions and Vectors.</span>
+</h4>
+<div class="para logical" id="directionsandvectors-2-1">
+<div class="para">Suppose that north is the direction of the positive <span class="process-math">\(y\)</span>-axis and east is the direction of the positive <span class="process-math">\(x\)</span>-axis.</div>
+<ol class="lower-alpha" id="directionsandvectors-2-1-3">
+<li id="directionsandvectors-2-1-3-1"><div class="para" id="p-derived-directionsandvectors-2-1-3-1">Describe a mathematical vector <span class="process-math">\(\vec{v}=a\vec{i}+b\vec{j}\)</span> representing a Southeast wind.  That is, determine values of <span class="process-math">\(a\)</span> and <span class="process-math">\(b\)</span> giving the resolution of <span class="process-math">\(\vec{v}\text{.}\)</span>
+</div></li>
+<li id="directionsandvectors-2-1-3-2"><div class="para" id="p-derived-directionsandvectors-2-1-3-2">Give a vector parallel, but not equal to <span class="process-math">\(\vec{v}\text{.}\)</span>
+</div></li>
+<li id="directionsandvectors-2-1-3-3"><div class="para" id="p-derived-directionsandvectors-2-1-3-3">Give a vector <span class="process-math">\(\vec{w}\)</span> pointing in the opposite direction of <span class="process-math">\(\vec{v}\text{.}\)</span>  This vector should represent a Northwest wind.</div></li>
+<li id="directionsandvectors-2-1-3-4"><div class="para" id="p-derived-directionsandvectors-2-1-3-4">Give a unit vector <span class="process-math">\(\vec{u}\)</span> representing a Southeast wind.</div></li>
+</ol>
+<div class="para">How many vectors can you find in each case above?</div>
+</div>
+<div class="solutions"><details id="directionsandvectors-3" class="answer solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Answer</span><span class="period">.</span></summary><div class="answer solution-like knowl__content"><ol class="lower-alpha" id="directionsandvectors-3-1">
+<li id="directionsandvectors-3-1-1"><div class="para" id="p-derived-directionsandvectors-3-1-1">
+<span class="process-math">\(\vec{v} = -\vec{i} +\vec{j}\)</span> (infinitely-many such vectors exist)</div></li>
+<li id="directionsandvectors-3-1-2"><div class="para" id="p-derived-directionsandvectors-3-1-2">Answers vary; for example, <span class="process-math">\(\vec{v} = -2\vec{i} +2\vec{j}\)</span> (infinitely-many such vectors exist)</div></li>
+<li id="directionsandvectors-3-1-3"><div class="para" id="p-derived-directionsandvectors-3-1-3">
+<span class="process-math">\(\vec{w} = \vec{i} -\vec{j}\)</span> (infinitely-many such vectors exist)</div></li>
+<li id="directionsandvectors-3-1-4"><div class="para" id="p-derived-directionsandvectors-3-1-4">
+<span class="process-math">\(\displaystyle \vec{u} = \frac{1}{\sqrt{2}}(-\vec{i} +\vec{j})\)</span> (exactly one such vector exists)</div></li>
+</ol></div></details></div></article><article class="exercise exercise-like" id="stormmotionvectorexample"><h4 class="heading">
+<span class="codenumber">11<span class="period">.</span></span><span class="space"> </span><span class="title">Storm Motion Vectors.</span>
+</h4>
+<div class="para" id="stormmotionvectorexample-2-1">When a thunderstorm already exists, its motion can be tracked on radar or satellite (which gives a vector based on its actual speed and direction of movement).  One can determine the <dfn class="terminology">storm motion vector</dfn> by marking a point on the radar display then going forward in time to the next radar scan and measuring the distance to that point. The speed is calculated based on radar time and distance.  The vector is commonly reported via the azimuth angle and the speed in knots.  For example, <a href="sec_displacementvectors.html#setstormmotionvectorPic" class="xref" data-knowl="./knowl/xref/setstormmotionvectorPic.html" data-reveal-label="Reveal" data-close-label="Close" title="Figure 4.1.46">Figure 4.1.46</a> shows radar being used to generate a storm motion vector with azimuth of <span class="process-math">\(248^{\circ}\)</span> and a speed of 47 knots.</div> <figure class="figure figure-like" id="setstormmotionvectorPic"><div class="image-box" style="width: 75%; margin-left: 12.5%; margin-right: 12.5%;"><img src="external/setstormmotionvector.jpg" class="contained" alt="A storm motion vector."></div>
+<figcaption><span class="type">Figure</span><span class="space"> </span><span class="codenumber">4.1.46<span class="period">.</span></span><span class="space"> </span>The storm motion vector can be estimated using a radar.  Source: <a class="external" href="https://support.allisonhouse.com/hc/en-us/articles/206870313--GR2AE-Finding-Setting-Storm-Motion-Vector-Manually" target="_blank">https://support.allisonhouse.com/hc/en-us/articles/206870313--GR2AE-Finding-Setting-Storm-Motion-Vector-Manually</a><details class="ptx-footnote" aria-live="polite" id="setstormmotionvectorPic-1-2"><summary class="ptx-footnote__number" title="Footnote 58"><sup> 58 </sup></summary><div class="ptx-footnote__contents" id="setstormmotionvectorPic-1-2"><code class="code-inline tex2jax_ignore">https://support.allisonhouse.com/hc/en-us/articles/206870313--GR2AE-Finding-Setting-Storm-Motion-Vector-Manually</code></div></details></figcaption></figure> <div class="para" id="stormmotionvectorexample-2-3">The storm motion vector described by the radar in <a href="sec_displacementvectors.html#setstormmotionvectorPic" class="xref" data-knowl="./knowl/xref/setstormmotionvectorPic.html" data-reveal-label="Reveal" data-close-label="Close" title="Figure 4.1.46">Figure 4.1.46</a> is illustrated in <a href="sec_displacementvectors.html#stormmotionvectorPic" class="xref" data-knowl="./knowl/xref/stormmotionvectorPic.html" data-reveal-label="Reveal" data-close-label="Close" title="Figure 4.1.47">Figure 4.1.47</a>.</div> <figure class="figure figure-like" id="stormmotionvectorPic"><div class="image-box" style="width: 50%; margin-left: 25%; margin-right: 25%;"><img src="generated/latex-image/stormmotionvectorPicB.svg" role="img" class="contained" alt="Representing the storm motion vector."></div>
+<figcaption><span class="type">Figure</span><span class="space"> </span><span class="codenumber">4.1.47<span class="period">.</span></span><span class="space"> </span>The storm motion vector <span class="process-math">\(\vec{v}_{storm}\)</span> for <a href="sec_displacementvectors.html#stormmotionvectorexample" class="xref" data-knowl="./knowl/xref/stormmotionvectorexample.html" data-reveal-label="Reveal" data-close-label="Close" title="Exercise 4.1.11: Storm Motion Vectors">Exercise 4.1.11</a>.</figcaption></figure> <div class="para" id="stormmotionvectorexample-2-5">Resolve the vector <span class="process-math">\(\vec{v}_{storm}\)</span> into components.  That is, write <span class="process-math">\(\vec{v}_{storm} = a\vec{i} + b\vec{j}\)</span> where <span class="process-math">\(a\)</span> and <span class="process-math">\(b\)</span> are measured in knots.</div>
+<div class="solutions"><details id="stormmotionvectorexample-3" class="answer solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Answer</span><span class="period">.</span></summary><div class="answer solution-like knowl__content"><div class="para logical" id="stormmotionvectorexample-3-1">
+<div class="para">First, notice that <span class="process-math">\(\phi_{polar} = 202^{\circ}\text{.}\)</span>  Then,</div>
+<div class="displaymath process-math" id="stormmotionvectorexample-3-1-2">
+\begin{align*}
+\vec{v}_{storm} = \amp (47\cos(202^{\circ}) \ {\rm{knots}})\vec{i} + (47\sin(202^{\circ}) \ {\rm{knots}})\vec{j} \\
+\approx \amp (-43.6 \ {\rm{knots}})\vec{i} + (-17.6 \ {\rm{knots}})\vec{j}\text{.}
+\end{align*}
+</div>
+</div></div></details></div></article><article class="exercise exercise-like" id="MyStormVector2"><h4 class="heading">
+<span class="codenumber">12<span class="period">.</span></span><span class="space"> </span><span class="title">Resolving a Storm Motion Vector.</span>
+</h4>
+<div class="para" id="MyStormVector2-2-1">Resolve the vector <span class="process-math">\(\vec{v}_{storm}\)</span> described in <a href="sec_displacementvectors.html#stormvec2" class="xref" data-knowl="./knowl/xref/stormvec2.html" data-reveal-label="Reveal" data-close-label="Close" title="Figure 4.1.48">Figure 4.1.48</a> into components using units of km/hr.  That is, write <span class="process-math">\(\vec{v}_{storm} = a\vec{i} + b\vec{j}\)</span> where <span class="process-math">\(a\)</span> and <span class="process-math">\(b\)</span> are measured in units of kilometers per hour. <figure class="figure figure-like" id="stormvec2"><div class="image-box" style="width: 50%; margin-left: 25%; margin-right: 25%;">
+<img src="external/stormmotionvector3.jpg" class="contained" alt="described in detail following the image" aria-describedby="stormvec2-2-description"><details class="image-description" aria-live="polite"><summary title="details"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe88e;</span></summary><div id="stormvec2-2-description">Storm vector for <a href="sec_displacementvectors.html#MyStormVector2" class="xref" data-knowl="./knowl/xref/MyStormVector2.html" data-reveal-label="Reveal" data-close-label="Close" title="Exercise 4.1.12: Resolving a Storm Motion Vector">Exercise 4.1.12</a>.  Source: <a class="external" href="http://www.grlevelx.com/manuals/gr2analyst/window_toolbar.htm" target="_blank">https://support.allisonhouse.com/hc/en-us/articles/206870313--GR2AE-Finding-Setting-Storm-Motion-Vector-Manually</a><details class="ptx-footnote" aria-live="polite" id="stormvec2-2-1-3"><summary class="ptx-footnote__number" title="Footnote 60"><sup> 60 </sup></summary><div class="ptx-footnote__contents" id="stormvec2-2-1-3"><code class="code-inline tex2jax_ignore">http://www.grlevelx.com/manuals/gr2analyst/window_toolbar.htm</code></div></details>.</div></details>
+</div>
+<figcaption><span class="type">Figure</span><span class="space"> </span><span class="codenumber">4.1.48<span class="period">.</span></span><span class="space"> </span>Storm vector for <a href="sec_displacementvectors.html#MyStormVector2" class="xref" data-knowl="./knowl/xref/MyStormVector2.html" data-reveal-label="Reveal" data-close-label="Close" title="Exercise 4.1.12: Resolving a Storm Motion Vector">Exercise 4.1.12</a>.  Source: <a class="external" href="http://www.grlevelx.com/manuals/gr2analyst/window_toolbar.htm" target="_blank">https://support.allisonhouse.com/hc/en-us/articles/206870313--GR2AE-Finding-Setting-Storm-Motion-Vector-Manually</a><details class="ptx-footnote" aria-live="polite" id="stormvec2-1-3"><summary class="ptx-footnote__number" title="Footnote 59"><sup> 59 </sup></summary><div class="ptx-footnote__contents" id="stormvec2-1-3"><code class="code-inline tex2jax_ignore">http://www.grlevelx.com/manuals/gr2analyst/window_toolbar.htm</code></div></details>.</figcaption></figure>
+</div>
+<div class="solutions"><details id="MyStormVector2-3" class="answer solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Answer</span><span class="period">.</span></summary><div class="answer solution-like knowl__content">
+<span class="process-math">\(\phi_{polar} = 90^{\circ} - \phi_{vect} = 90^{\circ} - 236^{\circ} = 214^{\circ}\text{.}\)</span><span class="process-math">\(\phi_{polar}\)</span><span class="process-math">\(214^{\circ}\)</span><span class="process-math">\(x\)</span><span class="process-math">\(46.3\)</span><div class="displaymath process-math" id="MyStormVector2-3-6">
+\begin{align*}
+\vec{v}_{storm} = \amp 46.3\cos(214^{\circ})\vec{i} + 46.3\sin(214^{\circ})\vec{j} \\
+\approx \amp (-38.4 \ {\rm{km/hr}}) \vec{i} + (-25.9 \ {\rm{km/hr}}) \vec{j}\text{.}
+\end{align*}
+</div>
+</div></details></div></article><article class="exercise exercise-like" id="meanwindvectors0"><h4 class="heading">
+<span class="codenumber">13<span class="period">.</span></span><span class="space"> </span><span class="title">The Mean Wind Vector.</span>
+</h4>
+<div class="para" id="meanwindvectors0-2-1">Given in <a href="sec_displacementvectors.html#meanwind2vectors" class="xref" data-knowl="./knowl/xref/meanwind2vectors.html" data-reveal-label="Reveal" data-close-label="Close" title="Figure 4.1.49">Figure 4.1.49</a> are vectors representing the surface wind (<span class="process-math">\(\vec{v}_{\rm{sfc}}\)</span>) and the wind at 5 km (<span class="process-math">\(\vec{v}_{5 {\rm{km}}}\)</span>). <figure class="figure figure-like" id="meanwind2vectors"><div class="image-box" style="width: 50%; margin-left: 25%; margin-right: 25%;"><img src="generated/latex-image/meanwind2vectorspic.svg" role="img" class="contained" alt="Winds for exercise."></div>
+<figcaption><span class="type">Figure</span><span class="space"> </span><span class="codenumber">4.1.49<span class="period">.</span></span><span class="space"> </span>Winds for <a href="sec_displacementvectors.html#meanwindvectors0" class="xref" data-knowl="./knowl/xref/meanwindvectors0.html" data-reveal-label="Reveal" data-close-label="Close" title="Exercise 4.1.13: The Mean Wind Vector">Exercise 4.1.13</a>.</figcaption></figure>
+</div> <div class="para logical" id="meanwindvectors0-2-2">
+<div class="para">The <dfn class="terminology">mean wind</dfn> is defined to be the average of the vectors <span class="process-math">\(\vec{v}_{\rm{sfc}}\)</span> and <span class="process-math">\(\vec{v}_{5 {\rm{km}}}\text{.}\)</span>  That is,</div>
+<div class="displaymath process-math" data-contains-math-knowls="./knowl/xref/meanwind2vectors.html ./knowl/xref/meanwindvectors0.html" id="meanwindvectors0-2-2-5">
+\begin{gather*}
+\vec{v}_{\rm{mean}} = \frac{1}{2}\vec{v}_{\rm{sfc}} + \frac{1}{2}\vec{v}_{5 {\rm{km}}}.
+\end{gather*}
+</div>
+<ol class="lower-alpha" id="meanwindvectors0-2-2-6">
+<li id="meanwindvectors0-2-2-6-1"><div class="para" id="p-derived-meanwindvectors0-2-2-6-1">Draw and label the mean wind vector <span class="process-math">\(\vec{v}_{\rm{mean}}\)</span> on <a href="sec_displacementvectors.html#meanwind2vectors" class="xref" data-knowl="./knowl/xref/meanwind2vectors.html" data-reveal-label="Reveal" data-close-label="Close" title="Figure 4.1.49">Figure 4.1.49</a>.</div></li>
+<li id="meanwindvectors0-2-2-6-2"><div class="para" id="p-derived-meanwindvectors0-2-2-6-2">Resolve vectors <span class="process-math">\(\vec{v}_{\rm{sfc}}\)</span> and <span class="process-math">\(\vec{v}_{5 {\rm{km}}}\)</span> into components.  Then, use the resolutions to write the mean wind <span class="process-math">\(\vec{v}_{\rm{mean}}\)</span> as <span class="process-math">\(u\vec{i} + v\vec{j}\)</span> for some constants <span class="process-math">\(u\)</span> and <span class="process-math">\(v\text{.}\)</span>
+</div></li>
+<li id="meanwindvectors0-2-2-6-3">In a supercell thunderstorm, there can be propagation due to the rotating updraft (called <dfn class="terminology">updraft-shear propagation</dfn>).  The resultant storm motion vector <span class="process-math">\(\vec{v}_{\rm{storm}}\)</span> is the vector sum of the mean wind vector (<span class="process-math">\(\vec{v}_{\rm{mean}}\)</span>) and the propagation due to the rotating updraft (<span class="process-math">\(\vec{v}_{usp}\)</span>).  Suppose then that the mean wind vector <span class="process-math">\(\vec{v}_{\rm{mean}}\)</span> is from the Southwest at <span class="process-math">\(11.3 \approx 8\sqrt{2}\)</span> knots and that the updraft-shear propagation vector <span class="process-math">\(\vec{v}_{usp}\)</span> is from the South at 1 knot.  Draw and label the three vectors <span class="process-math">\(\vec{v}_{\rm{mean}}\text{,}\)</span> <span class="process-math">\(\vec{v}_{usp}\text{,}\)</span> and <span class="process-math">\(\vec{v}_{\rm{storm}}\)</span> on the diagram below.  Then, determine (approximately) the meteorlogical direction <span class="process-math">\(\phi_{met}\)</span> of the storm motion vector (i.e. the direction from which the storm is moving). <figure class="figure figure-like" id="meanwind2vectorsB"><div class="image-box" style="width: 50%; margin-left: 25%; margin-right: 25%;"><img src="generated/latex-image/meanwind2vectorsBpic.svg" role="img" class="contained" alt="Winds for exercise."></div>
+<figcaption><span class="type">Figure</span><span class="space"> </span><span class="codenumber">4.1.50<span class="period">.</span></span><span class="space"> </span>Winds for <a href="sec_displacementvectors.html#meanwindvectors0" class="xref" data-knowl="./knowl/xref/meanwindvectors0.html" data-reveal-label="Reveal" data-close-label="Close" title="Exercise 4.1.13: The Mean Wind Vector">Exercise 4.1.13</a>.</figcaption></figure>
+</li>
+</ol>
+</div>
+<div class="solutions"><details id="meanwindvectors0-3" class="answer solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Answer</span><span class="period">.</span></summary><div class="answer solution-like knowl__content"><div class="para logical" id="meanwindvectors0-3-1"><ol class="lower-alpha" id="meanwindvectors0-3-1-1">
+<li id="meanwindvectors0-3-1-1-1"><div class="para" id="meanwindvectors0-3-1-1-1-1">Geometrically, the mean wind lies exactly between the surface wind and the 5 km wind. <figure class="figure figure-like" id="meanwind2vectorsanswer"><div class="image-box" style="width: 75%; margin-left: 12.5%; margin-right: 12.5%;">
+<img src="generated/latex-image/meanwind2vectorsanswerpic.svg" role="img" class="contained" alt="described in detail following the image" aria-describedby="meanwind2vectorsanswerpic-description"><details class="image-description" aria-live="polite"><summary title="details"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe88e;</span></summary><div id="meanwind2vectorsanswerpic-description">
+<span class="process-math">\(\vec{v}_{mean}\)</span> for exercise.</div></details>
+</div>
+<figcaption><span class="type">Figure</span><span class="space"> </span><span class="codenumber">4.1.51<span class="period">.</span></span><span class="space"> </span><span class="process-math">\(\vec{v}_{mean}\)</span> for <a href="sec_displacementvectors.html#meanwindvectors0" class="xref" data-knowl="./knowl/xref/meanwindvectors0.html" data-reveal-label="Reveal" data-close-label="Close" title="Exercise 4.1.13: The Mean Wind Vector">Exercise 4.1.13</a>.</figcaption></figure>
+</div></li>
+<li id="meanwindvectors0-3-1-1-2"><div class="para" id="p-derived-meanwindvectors0-3-1-1-2">
+<span class="process-math">\(\vec{v}_{\rm{sfc}} = \vec{i} + 2\vec{j}\)</span> and <span class="process-math">\(\vec{v}_{5 {\rm{km}}} = 5\vec{i} + 2\vec{j}\text{.}\)</span>  So,<div class="displaymath process-math" id="meanwindvectors0-3-1-1-2-3">
+\begin{align*}
+\vec{v}_{\rm{mean}} = \amp \frac{1}{2}(\vec{i} + 2\vec{j}) + \frac{1}{2}(5\vec{i} + 2\vec{j}) \\
+= \amp 3\vec{i} + 2 \vec{j}.
+\end{align*}
+</div>
+</div></li>
+<li id="meanwindvectors0-3-1-1-3">Note that <span class="process-math">\(\vec{v}_{\rm{mean}} = 8\vec{i} + 8\vec{j}\)</span> and <span class="process-math">\(\vec{v}_{usp} = 1\vec{j}\text{.}\)</span>  This makes <span class="process-math">\(\vec{v}_{\rm{storm}} = \vec{v}_{\rm{mean}} + \vec{v}_{usp} = 8\vec{i} + 9\vec{j}\text{.}\)</span>   The meteorlogical direction will then be given by <span class="process-math">\(\phi_{met} = 270^{\circ}-\arctan(8/9) \approx 228.4^{\circ}\text{.}\)</span> <figure class="figure figure-like" id="meanwind2vectorsBanswer"><div class="image-box" style="width: 75%; margin-left: 12.5%; margin-right: 12.5%;"><img src="generated/latex-image/meanwind2vectorsBanswerpic.svg" role="img" class="contained" alt="Storm motion vector for an Exercise."></div>
+<figcaption><span class="type">Figure</span><span class="space"> </span><span class="codenumber">4.1.52<span class="period">.</span></span><span class="space"> </span><span class="process-math">\(\vec{v}_{storm}\)</span> for <a href="sec_displacementvectors.html#meanwindvectors0" class="xref" data-knowl="./knowl/xref/meanwindvectors0.html" data-reveal-label="Reveal" data-close-label="Close" title="Exercise 4.1.13: The Mean Wind Vector">Exercise 4.1.13</a>.</figcaption></figure>
+</li>
+</ol></div></div></details></div></article><article class="exercise exercise-like" id="meanwindvectors"><h4 class="heading">
+<span class="codenumber">14<span class="period">.</span></span><span class="space"> </span><span class="title">More Mean Wind Vectors.</span>
+</h4>
+<div class="para" id="meanwindvectors-2-1">
+<a href="sec_displacementvectors.html#verticalwindprofile2" class="xref" data-knowl="./knowl/xref/verticalwindprofile2.html" data-reveal-label="Reveal" data-close-label="Close" title="Table 4.1.53: A vertical wind profile for KMSP at 12Z 05 Mar 2023.">Table 4.1.53</a> gives wind measurements at various pressure levels at 12Z on March 5, 2023 for Minneapolis, MN. A rain/snow event was nearing. <figure class="table table-like" id="verticalwindprofile2"><figcaption><span class="type">Table</span><span class="space"> </span><span class="codenumber">4.1.53<span class="period">.</span></span><span class="space"> </span>A vertical wind profile for KMSP at 12Z 05 Mar 2023.</figcaption><div class="tabular-box natural-width"><table class="tabular">
+<tr class="header-horizontal">
+<th scope="col" class="c m b1 r0 l0 t0 lines">Pressure (mb)</th>
+<th scope="col" class="c m b1 r0 l0 t0 lines">
+<span class="process-math">\(\phi_{met}\)</span> (degrees)</th>
+<th scope="col" class="c m b1 r0 l0 t0 lines">wind speed (knots)</th>
+<th scope="col" class="c m b1 r0 l0 t0 lines">
+<span class="process-math">\(u\)</span> (knots)</th>
+<th scope="col" class="c m b1 r0 l0 t0 lines">
+<span class="process-math">\(v\)</span> (knots)</th>
+</tr>
+<tr>
+<td class="c m b0 r0 l0 t0 lines"><span class="process-math">\(925\)</span></td>
+<td class="c m b0 r0 l0 t0 lines"><span class="process-math">\(110\)</span></td>
+<td class="c m b0 r0 l0 t0 lines"><span class="process-math">\(8\)</span></td>
+<td class="c m b0 r0 l0 t0 lines"></td>
+<td class="c m b0 r0 l0 t0 lines"></td>
+</tr>
+<tr>
+<td class="c m b0 r0 l0 t0 lines"><span class="process-math">\(850\)</span></td>
+<td class="c m b0 r0 l0 t0 lines"><span class="process-math">\(125\)</span></td>
+<td class="c m b0 r0 l0 t0 lines"><span class="process-math">\(3\)</span></td>
+<td class="c m b0 r0 l0 t0 lines"></td>
+<td class="c m b0 r0 l0 t0 lines"></td>
+</tr>
+<tr>
+<td class="c m b0 r0 l0 t0 lines"><span class="process-math">\(700\)</span></td>
+<td class="c m b0 r0 l0 t0 lines"><span class="process-math">\(255\)</span></td>
+<td class="c m b0 r0 l0 t0 lines"><span class="process-math">\(18\)</span></td>
+<td class="c m b0 r0 l0 t0 lines"></td>
+<td class="c m b0 r0 l0 t0 lines"></td>
+</tr>
+<tr>
+<td class="c m b0 r0 l0 t0 lines"><span class="process-math">\(500\)</span></td>
+<td class="c m b0 r0 l0 t0 lines"><span class="process-math">\(265\)</span></td>
+<td class="c m b0 r0 l0 t0 lines"><span class="process-math">\(56\)</span></td>
+<td class="c m b0 r0 l0 t0 lines"></td>
+<td class="c m b0 r0 l0 t0 lines"></td>
+</tr>
+</table></div></figure> Forecasters are interested in the mean wind of the sounding because it affects how fast storms move.  For each level of the atmosphere, we can write the wind vector as <span class="process-math">\(\vec{v}=u\vec{i}+v\vec{j}\text{.}\)</span>  Determine the appropriate values of <span class="process-math">\(u\)</span> and <span class="process-math">\(v\)</span> (in knots) in <a href="sec_displacementvectors.html#verticalwindprofile2" class="xref" data-knowl="./knowl/xref/verticalwindprofile2.html" data-reveal-label="Reveal" data-close-label="Close" title="Table 4.1.53: A vertical wind profile for KMSP at 12Z 05 Mar 2023.">Table 4.1.53</a>.  Then, calculate the mean wind vector <span class="process-math">\(\vec{v}_{mean}\)</span> and mean wind speed from the given sounding data.</div>
+<div class="solutions"><details id="meanwindvectors-3" class="answer solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Answer</span><span class="period">.</span></summary><div class="answer solution-like knowl__content"><div class="para" id="meanwindvectors-3-1">The components of the wind vectors at the given pressures are shown in <a href="sec_displacementvectors.html#verticalwindprofile3" class="xref" data-knowl="./knowl/xref/verticalwindprofile3.html" data-reveal-label="Reveal" data-close-label="Close" title="Table 4.1.54: A vertical wind profile for KMSP at 12Z 05 Mar 2023.">Table 4.1.54</a>. <figure class="table table-like" id="verticalwindprofile3"><figcaption><span class="type">Table</span><span class="space"> </span><span class="codenumber">4.1.54<span class="period">.</span></span><span class="space"> </span>A vertical wind profile for KMSP at 12Z 05 Mar 2023.</figcaption><div class="tabular-box natural-width"><table class="tabular">
+<tr class="header-horizontal">
+<th scope="col" class="c m b1 r0 l0 t0 lines">Pressure (mb)</th>
+<th scope="col" class="c m b1 r0 l0 t0 lines">
+<span class="process-math">\(\phi_{met}\)</span> (degrees)</th>
+<th scope="col" class="c m b1 r0 l0 t0 lines">wind speed (knots)</th>
+<th scope="col" class="c m b1 r0 l0 t0 lines">
+<span class="process-math">\(u\)</span> (knots)</th>
+<th scope="col" class="c m b1 r0 l0 t0 lines">
+<span class="process-math">\(v\)</span> (knots)</th>
+</tr>
+<tr>
+<td class="c m b0 r0 l0 t0 lines"><span class="process-math">\(925\)</span></td>
+<td class="c m b0 r0 l0 t0 lines"><span class="process-math">\(110\)</span></td>
+<td class="c m b0 r0 l0 t0 lines"><span class="process-math">\(8\)</span></td>
+<td class="c m b0 r0 l0 t0 lines"><span class="process-math">\(-7.5\)</span></td>
+<td class="c m b0 r0 l0 t0 lines"><span class="process-math">\(2.7\)</span></td>
+</tr>
+<tr>
+<td class="c m b0 r0 l0 t0 lines"><span class="process-math">\(850\)</span></td>
+<td class="c m b0 r0 l0 t0 lines"><span class="process-math">\(125\)</span></td>
+<td class="c m b0 r0 l0 t0 lines"><span class="process-math">\(3\)</span></td>
+<td class="c m b0 r0 l0 t0 lines"><span class="process-math">\(-1.7\)</span></td>
+<td class="c m b0 r0 l0 t0 lines"><span class="process-math">\(2.5\)</span></td>
+</tr>
+<tr>
+<td class="c m b0 r0 l0 t0 lines"><span class="process-math">\(700\)</span></td>
+<td class="c m b0 r0 l0 t0 lines"><span class="process-math">\(255\)</span></td>
+<td class="c m b0 r0 l0 t0 lines"><span class="process-math">\(18\)</span></td>
+<td class="c m b0 r0 l0 t0 lines"><span class="process-math">\(17.4\)</span></td>
+<td class="c m b0 r0 l0 t0 lines"><span class="process-math">\(4.7\)</span></td>
+</tr>
+<tr>
+<td class="c m b0 r0 l0 t0 lines"><span class="process-math">\(500\)</span></td>
+<td class="c m b0 r0 l0 t0 lines"><span class="process-math">\(265\)</span></td>
+<td class="c m b0 r0 l0 t0 lines"><span class="process-math">\(56\)</span></td>
+<td class="c m b0 r0 l0 t0 lines"><span class="process-math">\(55.8\)</span></td>
+<td class="c m b0 r0 l0 t0 lines"><span class="process-math">\(4.9\)</span></td>
+</tr>
+</table></div></figure> The mean wind is then found to be <span class="process-math">\(\left(\frac{-7.5-1.7+17.4+55.8}{4}\right)\vec{i} + \left(\frac{2.7+2.5+4.7+4.9}{4}\right)\vec{j}\)</span> or <span class="process-math">\((16 \ {\rm{knots}})\vec{i} + (3.7 \ {\rm{knots}})\vec{j}\text{.}\)</span> This give a mean wind speed of <span class="process-math">\(\sqrt{16^2+3.7^2} \approx 16.4\)</span> knots.</div></div></details></div></article><article class="exercise exercise-like" id="StormRelativeWind"><h4 class="heading">
+<span class="codenumber">15<span class="period">.</span></span><span class="space"> </span><span class="title">Storm-relative Winds.</span>
+</h4>
+<div class="para" id="StormRelativeWind-2-1">Because tornadoes translate with their parent thunderstorms, the winds that influence supercell and tornado rotation are the environmental wind vectors relative to a coordinate system that moves with the thunderstorm. Such winds are called <dfn class="terminology">storm-relative winds</dfn>.  One way to think about this is as the wind felt by the storm.  An analogy is driving a car 50 miles per hour into a 20 mile per hour wind. The wind sensed by the car is a 70 mile per hour wind.</div> <div class="para" id="StormRelativeWind-2-2">First, we find the storm motion vector (see <a href="sec_displacementvectors.html#stormmotionvectorexample" class="xref" data-knowl="./knowl/xref/stormmotionvectorexample.html" data-reveal-label="Reveal" data-close-label="Close" title="Exercise 4.1.11: Storm Motion Vectors">Exercise 4.1.11</a>).  Next, to find storm-relative winds, we take the vector difference between the actual wind vectors (at various heights in the atmosphere) and the storm-motion vector.</div> <div class="para" id="StormRelativeWind-2-3">Suppose the vertical wind profile is given by <a href="sec_displacementvectors.html#verticalwindprofile" class="xref" data-knowl="./knowl/xref/verticalwindprofile.html" data-reveal-label="Reveal" data-close-label="Close" title="Table 4.1.55: A vertical wind profile.">Table 4.1.55</a>. <figure class="table table-like" id="verticalwindprofile"><figcaption><span class="type">Table</span><span class="space"> </span><span class="codenumber">4.1.55<span class="period">.</span></span><span class="space"> </span>A vertical wind profile.</figcaption><div class="tabular-box natural-width"><table class="tabular">
+<tr class="header-horizontal">
+<th scope="col" class="c m b1 r0 l0 t0 lines">
+<span class="process-math">\(z\)</span> (km)</th>
+<th scope="col" class="c m b1 r0 l0 t0 lines">
+<span class="process-math">\(\phi_{met}\)</span> (degrees)</th>
+<th scope="col" class="c m b1 r0 l0 t0 lines">
+<span class="process-math">\(v\)</span> (m/s)</th>
+</tr>
+<tr>
+<td class="c m b0 r0 l0 t0 lines"><span class="process-math">\(0\)</span></td>
+<td class="c m b0 r0 l0 t0 lines"><span class="process-math">\(110\)</span></td>
+<td class="c m b0 r0 l0 t0 lines"><span class="process-math">\(6\)</span></td>
+</tr>
+<tr>
+<td class="c m b0 r0 l0 t0 lines"><span class="process-math">\(1\)</span></td>
+<td class="c m b0 r0 l0 t0 lines"><span class="process-math">\(150\)</span></td>
+<td class="c m b0 r0 l0 t0 lines"><span class="process-math">\(10\)</span></td>
+</tr>
+<tr>
+<td class="c m b0 r0 l0 t0 lines"><span class="process-math">\(2\)</span></td>
+<td class="c m b0 r0 l0 t0 lines"><span class="process-math">\(180\)</span></td>
+<td class="c m b0 r0 l0 t0 lines"><span class="process-math">\(15\)</span></td>
+</tr>
+<tr>
+<td class="c m b0 r0 l0 t0 lines"><span class="process-math">\(3\)</span></td>
+<td class="c m b0 r0 l0 t0 lines"><span class="process-math">\(190\)</span></td>
+<td class="c m b0 r0 l0 t0 lines"><span class="process-math">\(17\)</span></td>
+</tr>
+<tr>
+<td class="c m b0 r0 l0 t0 lines"><span class="process-math">\(4\)</span></td>
+<td class="c m b0 r0 l0 t0 lines"><span class="process-math">\(250\)</span></td>
+<td class="c m b0 r0 l0 t0 lines"><span class="process-math">\(25\)</span></td>
+</tr>
+<tr>
+<td class="c m b0 r0 l0 t0 lines"><span class="process-math">\(5\)</span></td>
+<td class="c m b0 r0 l0 t0 lines"><span class="process-math">\(270\)</span></td>
+<td class="c m b0 r0 l0 t0 lines"><span class="process-math">\(30\)</span></td>
+</tr>
+<tr>
+<td class="c m b0 r0 l0 t0 lines"><span class="process-math">\(6\)</span></td>
+<td class="c m b0 r0 l0 t0 lines"><span class="process-math">\(310\)</span></td>
+<td class="c m b0 r0 l0 t0 lines"><span class="process-math">\(40\)</span></td>
+</tr>
+</table></div></figure> Suppose also that the storm motion vector <span class="process-math">\(\vec{v}_{storm}\)</span> has azimuth of <span class="process-math">\(\phi_{vect} = 45\)</span> degrees (from SW) and the speed is 12 m/s.  Determine, geometrically, the storm-relative winds.  The storm-relative wind vector <span class="process-math">\(\vec{v}_{sr}\)</span> for <span class="process-math">\(z=0 \ km\)</span> is shown in <a href="sec_displacementvectors.html#stormrelativewindPic" class="xref" data-knowl="./knowl/xref/stormrelativewindPic.html" data-reveal-label="Reveal" data-close-label="Close" title="Figure 4.1.56">Figure 4.1.56</a>.</div> <figure class="figure figure-like" id="stormrelativewindPic"><div class="image-box" style="width: 75%; margin-left: 12.5%; margin-right: 12.5%;"><img src="generated/latex-image/srwPic.svg" role="img" class="contained" alt="Storm-relative winds."></div>
+<figcaption><span class="type">Figure</span><span class="space"> </span><span class="codenumber">4.1.56<span class="period">.</span></span><span class="space"> </span>The storm-relative wind (dotted, in red) at <span class="process-math">\(z=0\)</span> km for <a href="sec_displacementvectors.html#StormRelativeWind" class="xref" data-knowl="./knowl/xref/StormRelativeWind.html" data-reveal-label="Reveal" data-close-label="Close" title="Exercise 4.1.15: Storm-relative Winds">Exercise 4.1.15</a>.</figcaption></figure><div class="solutions"><details id="StormRelativeWind-3" class="answer solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Answer</span><span class="period">.</span></summary><div class="answer solution-like knowl__content">
+<span class="process-math">\(\vec{v}_{sr@z=0} \approx -14.12 \vec{i} - 6.43 \vec{j}\text{;}\)</span><span class="process-math">\(\vec{v}_{sr@z=1} \approx -13.49 \vec{i} +0.75 \vec{j}\text{;}\)</span><span class="process-math">\(\vec{v}_{sr@z=2} \approx -8.485 \vec{i} +6.515 \vec{j}\text{;}\)</span><span class="process-math">\(\vec{v}_{sr@z=3} \approx -5.53 \vec{i} + 8.26 \vec{j}\text{;}\)</span><span class="process-math">\(\vec{v}_{sr@z=4} \approx 15.01 \vec{i} + 0.065 \vec{j}\text{;}\)</span><span class="process-math">\(\vec{v}_{sr@z=5} \approx 21.51 \vec{i} - 8.485 \vec{j}\text{;}\)</span><span class="process-math">\(\vec{v}_{sr@z=6} \approx 22.16 \vec{i} - 34.2 \vec{j}\)</span>
+</div></details></div></article></section></section></div>
+<div class="ptx-content-footer">
+<a class="previous-button button" href="ch_vectors.html" title="Previous"><span xmlns:pf="https://prefigure.org" class="icon material-symbols-outlined" aria-hidden="true">&#xe5cb;</span><span class="name">Prev</span></a><a class="top-button button" href="#" title="Top"><span xmlns:pf="https://prefigure.org" class="icon material-symbols-outlined" aria-hidden="true">&#xe5ce;</span><span class="name">Top</span></a><a class="next-button button" href="sec_dotproduct.html" title="Next"><span class="name">Next</span><span xmlns:pf="https://prefigure.org" class="icon material-symbols-outlined" aria-hidden="true">&#xe5cc;</span></a>
+</div></main>
+</div>
+<div id="ptx-page-footer" class="ptx-page-footer">
+<a xmlns:pf="https://prefigure.org" class="pretext-link" href="https://pretextbook.org" title="PreTeXt"><div class="logo"><svg xmlns="http://www.w3.org/2000/svg" width="100%" height="100%" viewBox="338 3000 8772 6866"><g style="stroke-width:.025in; stroke:black; fill:none"><polyline points="472,3590 472,9732 " style="stroke:#000000;stroke-width:174; stroke-linejoin:miter; stroke-linecap:round; "></polyline><path style="stroke:#000000;stroke-width:126;stroke-linecap:butt;" d="M 4724,9448 A 4660 4660  0  0  1  8598  9259"></path><path style="stroke:#000000;stroke-width:174;stroke-linecap:butt;" d="M 4488,9685 A 4228 4228  0  0  0   472  9732"></path><path style="stroke:#000000;stroke-width:126;stroke-linecap:butt;" d="M 4724,3590 A 4241 4241  0  0  1  8598  3496"></path><path style="stroke:#000000;stroke-width:126;stroke-linecap:round;" d="M 850,3496  A 4241 4241  0  0  1  4724  3590"></path><path style="stroke:#000000;stroke-width:126;stroke-linecap:round;" d="M 850,9259  A 4507 4507  0  0  1  4724  9448"></path><polyline points="5385,4299 4062,8125" style="stroke:#000000;stroke-width:300; stroke-linejoin:miter; stroke-linecap:round;"></polyline><polyline points="8598,3496 8598,9259" style="stroke:#000000;stroke-width:126; stroke-linejoin:miter; stroke-linecap:round;"></polyline><polyline points="850,3496 850,9259" style="stroke:#000000;stroke-width:126; stroke-linejoin:miter; stroke-linecap:round;"></polyline><polyline points="4960,9685 4488,9685" style="stroke:#000000;stroke-width:174; stroke-linejoin:miter; stroke-linecap:round;"></polyline><polyline points="3070,4582 1889,6141 3070,7700" style="stroke:#000000;stroke-width:300; stroke-linejoin:miter; stroke-linecap:round;"></polyline><polyline points="6418,4582 7600,6141 6418,7700" style="stroke:#000000;stroke-width:300; stroke-linejoin:miter; stroke-linecap:round;"></polyline><polyline points="8976,3590 8976,9732" style="stroke:#000000;stroke-width:174; stroke-linejoin:miter; stroke-linecap:round;"></polyline><path style="stroke:#000000;stroke-width:174;stroke-linecap:butt;" d="M 4960,9685 A 4228 4228  0  0  1  8976  9732"></path></g></svg></div></a><a xmlns:pf="https://prefigure.org" class="runestone-link" href="https://runestone.academy" title="Runestone Academy"><img class="logo" src="https://runestone.academy/runestone/static/images/RAIcon_cropped.png"></a><a xmlns:pf="https://prefigure.org" class="mathjax-link" href="https://www.mathjax.org" title="MathJax"><img class="logo" src="https://www.mathjax.org/badge/badge-square-2.png"></a>
+</div>
+</body>
+</html>

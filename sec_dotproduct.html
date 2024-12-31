@@ -1,0 +1,1133 @@
+<!DOCTYPE html>
+<!--********************************************-->
+<!--*       Generated from PreTeXt source      *-->
+<!--*                                          *-->
+<!--*         https://pretextbook.org          *-->
+<!--*                                          *-->
+<!--********************************************-->
+<html lang="en-US" dir="ltr">
+<head xmlns:og="http://ogp.me/ns#" xmlns:book="https://ogp.me/ns/book#">
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<title>Dot Product</title>
+<meta name="Keywords" content="Authored in PreTeXt">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta xmlns:pf="https://prefigure.org" property="og:type" content="book">
+<meta xmlns:pf="https://prefigure.org" property="book:title" content="Mathematics of Atmospheric Kinematics">
+<meta xmlns:pf="https://prefigure.org" property="book:author" content="Dale Buske">
+<script>
+var runestoneMathReady = new Promise((resolve) => window.rsMathReady = resolve);
+window.MathJax = {
+  "tex": {
+    "inlineMath": [
+      [
+        "\\(",
+        "\\)"
+      ]
+    ],
+    "tags": "none",
+    "tagSide": "right",
+    "tagIndent": ".8em",
+    "packages": {
+      "[+]": [
+        "base",
+        "extpfeil",
+        "ams",
+        "amscd",
+        "color",
+        "newcommand",
+        "knowl"
+      ]
+    }
+  },
+  "options": {
+    "ignoreHtmlClass": "tex2jax_ignore|ignore-math",
+    "processHtmlClass": "process-math",
+    "renderActions": {
+      "findScript": [
+        10,
+        function (doc) {
+            document.querySelectorAll('script[type^="math/tex"]').forEach(function(node) {
+                var display = !!node.type.match(/; *mode=display/);
+                var math = new doc.options.MathItem(node.textContent, doc.inputJax[0], display);
+                var text = document.createTextNode('');
+                node.parentNode.replaceChild(text, node);
+                math.start = {node: text, delim: '', n: 0};
+                math.end = {node: text, delim: '', n: 0};
+                doc.math.push(math);
+            });
+        },
+        ""
+      ]
+    }
+  },
+  "chtml": {
+    "scale": 0.98,
+    "mtextInheritFont": true
+  },
+  "loader": {
+    "load": [
+      "input/asciimath",
+      "[tex]/extpfeil",
+      "[tex]/amscd",
+      "[tex]/color",
+      "[tex]/newcommand",
+      "[pretext]/mathjaxknowl3.js"
+    ],
+    "paths": {
+      "pretext": "_static/pretext/js/lib"
+    }
+  },
+  "startup": {
+    pageReady() {
+      return MathJax.startup.defaultPageReady().then(function () {
+      console.log("in ready function");
+      rsMathReady();
+      }
+    )}
+  }
+};
+</script><script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js"></script><script src="_static/pretext/js/pretext-webwork/2.17/pretext-webwork.js"></script><script src="https://webwork-ptx.aimath.org/webwork2_files/node_modules/iframe-resizer/js/iframeResizer.min.js"></script><script src="_static/pretext/js/lti_iframe_resizer.js"></script><script src="https://cdnjs.cloudflare.com/ajax/libs/lunr.js/2.3.9/lunr.min.js" integrity="sha512-4xUl/d6D6THrAnXAwGajXkoWaeMNwEKK4iNfq5DotEbLPAfk6FSxSP3ydNxqDgCw1c/0Z1Jg6L8h2j+++9BZmg==" crossorigin="anonymous" referrerpolicy="no-referrer"></script><script src="lunr-pretext-search-index.js" async=""></script><script src="_static/pretext/js/pretext_search.js"></script><link href="_static/pretext/css/pretext_search.css" rel="stylesheet" type="text/css">
+<script src="_static/pretext/js/lib/jquery.min.js"></script><script src="_static/pretext/js/lib/jquery.sticky.js"></script><script src="_static/pretext/js/lib/jquery.espy.min.js"></script><script src="_static/pretext/js/pretext.js"></script><script src="_static/pretext/js/pretext_add_on.js?x=1"></script><script src="_static/pretext/js/user_preferences.js"></script><script src="_static/pretext/js/lib/knowl.js"></script><!--knowl.js code controls Sage Cells within knowls--><script>sagecellEvalName='Evaluate (Sage)';
+</script><link xmlns:pf="https://prefigure.org" rel="preconnect" href="https://fonts.googleapis.com">
+<link xmlns:pf="https://prefigure.org" rel="preconnect" href="https://fonts.gstatic.com" crossorigin="">
+<link xmlns:pf="https://prefigure.org" href="https://fonts.googleapis.com/css2?family=Inconsolata:wght@400;700&amp;family=Noto+Serif:ital,wght@0,400;0,700;1,400;1,700&amp;family=Tinos:ital,wght@0,400;0,700;1,400;1,700&amp;display=swap" rel="stylesheet">
+<link xmlns:pf="https://prefigure.org" href="https://fonts.cdnfonts.com/css/dejavu-serif" rel="stylesheet">
+<link xmlns:pf="https://prefigure.org" href="https://fonts.googleapis.com/css2?family=Roboto+Serif:opsz,wdth,wght@8..144,50..150,100..900&amp;display=swap" rel="stylesheet">
+<link xmlns:pf="https://prefigure.org" href="https://fonts.googleapis.com/css2?family=Open+Sans:wdth,wght@75..100,300..800&amp;display=swap" rel="stylesheet">
+<link xmlns:pf="https://prefigure.org" rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200">
+<script src="https://cdn.geogebra.org/apps/deployggb.js"></script><link href="_static/pretext/css/pretext.css" rel="stylesheet" type="text/css">
+<link href="_static/pretext/css/pretext_add_on.css" rel="stylesheet" type="text/css">
+<link href="_static/pretext/css/shell_default.css" rel="stylesheet" type="text/css">
+<link href="_static/pretext/css/banner_default.css" rel="stylesheet" type="text/css">
+<link href="_static/pretext/css/navbar_default.css" rel="stylesheet" type="text/css">
+<link href="_static/pretext/css/toc_default.css" rel="stylesheet" type="text/css">
+<link href="_static/pretext/css/knowls_default.css" rel="stylesheet" type="text/css">
+<link href="_static/pretext/css/style_default.css" rel="stylesheet" type="text/css">
+<link href="_static/pretext/css/colors_blue_red.css" rel="stylesheet" type="text/css">
+<link href="_static/pretext/css/setcolors.css" rel="stylesheet" type="text/css">
+<!--** eBookCongig is necessary to configure interactive       **-->
+<!--** Runestone components to run locally in reader's browser **-->
+<!--** No external communication:                              **-->
+<!--**     log level is 0, Runestone Services are disabled     **-->
+<script type="text/javascript">
+eBookConfig = {};
+eBookConfig.useRunestoneServices = false;
+eBookConfig.host = 'http://127.0.0.1:8000';
+eBookConfig.course = 'PTX_Course_Title_Here';
+eBookConfig.basecourse = 'PTX_Base_Course';
+eBookConfig.isLoggedIn = false;
+eBookConfig.email = '';
+eBookConfig.isInstructor = false;
+eBookConfig.logLevel = 0;
+eBookConfig.username = '';
+eBookConfig.readings = null;
+eBookConfig.activities = null;
+eBookConfig.downloadsEnabled = false;
+eBookConfig.allow_pairs = false;
+eBookConfig.enableScratchAC = false;
+eBookConfig.build_info = "";
+eBookConfig.python3 = null;
+eBookConfig.runestone_version = '7.4.5';
+eBookConfig.jobehost = '';
+eBookConfig.proxyuri_runs = '';
+eBookConfig.proxyuri_files = '';
+eBookConfig.enable_chatcodes =  false;
+</script>
+<!--*** Runestone Services ***-->
+<script src="_static/prefix-runtime.a28db57f2b9be365.bundle.js"></script><script src="_static/prefix-347.8328b60515045466.bundle.js"></script><script src="_static/prefix-runestone.0143ee6c5ca7e162.bundle.js"></script><link rel="stylesheet" type="text/css" href="_static/prefix-347.f9add1ca35d5ad93.css">
+<link rel="stylesheet" type="text/css" href="_static/prefix-runestone.82759e13f7f711fa.css">
+<style>
+#ez-Norman1999-Sounding-2-3 { counter-set: ez-Norman1999-Sounding-2-3 0; }
+#ez-Norman1999-Sounding-2-3 > li::marker { content: ""counter(ez-Norman1999-Sounding-2-3,lower-alpha)"."; }
+#ez-Norman1999-Sounding-2-3 > li { counter-increment: ez-Norman1999-Sounding-2-3; }
+#ez-Norman1999-Sounding-3-1 { counter-set: ez-Norman1999-Sounding-3-1 0; }
+#ez-Norman1999-Sounding-3-1 > li::marker { content: ""counter(ez-Norman1999-Sounding-3-1,lower-alpha)"."; }
+#ez-Norman1999-Sounding-3-1 > li { counter-increment: ez-Norman1999-Sounding-3-1; }
+#ez-Midwest-Derecho-2-3 { counter-set: ez-Midwest-Derecho-2-3 0; }
+#ez-Midwest-Derecho-2-3 > li::marker { content: ""counter(ez-Midwest-Derecho-2-3,lower-alpha)"."; }
+#ez-Midwest-Derecho-2-3 > li { counter-increment: ez-Midwest-Derecho-2-3; }
+#ez-Midwest-Derecho-3-1-1 { counter-set: ez-Midwest-Derecho-3-1-1 0; }
+#ez-Midwest-Derecho-3-1-1 > li::marker { content: ""counter(ez-Midwest-Derecho-3-1-1,lower-alpha)"."; }
+#ez-Midwest-Derecho-3-1-1 > li { counter-increment: ez-Midwest-Derecho-3-1-1; }
+#ez-MPX2023-Sounding-2-4 { counter-set: ez-MPX2023-Sounding-2-4 0; }
+#ez-MPX2023-Sounding-2-4 > li::marker { content: ""counter(ez-MPX2023-Sounding-2-4,lower-alpha)"."; }
+#ez-MPX2023-Sounding-2-4 > li { counter-increment: ez-MPX2023-Sounding-2-4; }
+#ez-MPX2023-Sounding-3-1 { counter-set: ez-MPX2023-Sounding-3-1 0; }
+#ez-MPX2023-Sounding-3-1 > li::marker { content: ""counter(ez-MPX2023-Sounding-3-1,lower-alpha)"."; }
+#ez-MPX2023-Sounding-3-1 > li { counter-increment: ez-MPX2023-Sounding-3-1; }
+#ez-Davenport-Sounding-2-4 { counter-set: ez-Davenport-Sounding-2-4 0; }
+#ez-Davenport-Sounding-2-4 > li::marker { content: ""counter(ez-Davenport-Sounding-2-4,lower-alpha)"."; }
+#ez-Davenport-Sounding-2-4 > li { counter-increment: ez-Davenport-Sounding-2-4; }
+#ez-Davenport-Sounding-3-1 { counter-set: ez-Davenport-Sounding-3-1 0; }
+#ez-Davenport-Sounding-3-1 > li::marker { content: ""counter(ez-Davenport-Sounding-3-1,lower-alpha)"."; }
+#ez-Davenport-Sounding-3-1 > li { counter-increment: ez-Davenport-Sounding-3-1; }
+#ez-identifyAwTB-2-2 { counter-set: ez-identifyAwTB-2-2 0; }
+#ez-identifyAwTB-2-2 > li::marker { content: ""counter(ez-identifyAwTB-2-2,lower-alpha)"."; }
+#ez-identifyAwTB-2-2 > li { counter-increment: ez-identifyAwTB-2-2; }
+#ez-identifyAwTB-3-1 { counter-set: ez-identifyAwTB-3-1 0; }
+#ez-identifyAwTB-3-1 > li::marker { content: ""counter(ez-identifyAwTB-3-1,lower-alpha)"."; }
+#ez-identifyAwTB-3-1 > li { counter-increment: ez-identifyAwTB-3-1; }
+#ez-SeattleSun-2-4 { counter-set: ez-SeattleSun-2-4 0; }
+#ez-SeattleSun-2-4 > li::marker { content: ""counter(ez-SeattleSun-2-4,lower-alpha)"."; }
+#ez-SeattleSun-2-4 > li { counter-increment: ez-SeattleSun-2-4; }
+#ez-SeattleSun-2-4-3-2 { counter-set: ez-SeattleSun-2-4-3-2 0; }
+#ez-SeattleSun-2-4-3-2 > li::marker { content: ""counter(ez-SeattleSun-2-4-3-2,lower-roman)"."; }
+#ez-SeattleSun-2-4-3-2 > li { counter-increment: ez-SeattleSun-2-4-3-2; }
+#ez-SeattleSun-3-1 { counter-set: ez-SeattleSun-3-1 0; }
+#ez-SeattleSun-3-1 > li::marker { content: ""counter(ez-SeattleSun-3-1,lower-alpha)"."; }
+#ez-SeattleSun-3-1 > li { counter-increment: ez-SeattleSun-3-1; }
+#ez-SeattleSun-3-1-3-1 { counter-set: ez-SeattleSun-3-1-3-1 0; }
+#ez-SeattleSun-3-1-3-1 > li::marker { content: ""counter(ez-SeattleSun-3-1-3-1,lower-roman)"."; }
+#ez-SeattleSun-3-1-3-1 > li { counter-increment: ez-SeattleSun-3-1-3-1; }
+#ModelingLowTempRio-2-4 { counter-set: ModelingLowTempRio-2-4 0; }
+#ModelingLowTempRio-2-4 > li::marker { content: ""counter(ModelingLowTempRio-2-4,lower-alpha)"."; }
+#ModelingLowTempRio-2-4 > li { counter-increment: ModelingLowTempRio-2-4; }
+#ModelingLowTempRio-3-1 { counter-set: ModelingLowTempRio-3-1 0; }
+#ModelingLowTempRio-3-1 > li::marker { content: ""counter(ModelingLowTempRio-3-1,lower-alpha)"."; }
+#ModelingLowTempRio-3-1 > li { counter-increment: ModelingLowTempRio-3-1; }
+#ModelingLowHighTempStCloud-2-4 { counter-set: ModelingLowHighTempStCloud-2-4 0; }
+#ModelingLowHighTempStCloud-2-4 > li::marker { content: ""counter(ModelingLowHighTempStCloud-2-4,lower-alpha)"."; }
+#ModelingLowHighTempStCloud-2-4 > li { counter-increment: ModelingLowHighTempStCloud-2-4; }
+#ModelingLowHighTempStCloud-3-1 { counter-set: ModelingLowHighTempStCloud-3-1 0; }
+#ModelingLowHighTempStCloud-3-1 > li::marker { content: ""counter(ModelingLowHighTempStCloud-3-1,lower-alpha)"."; }
+#ModelingLowHighTempStCloud-3-1 > li { counter-increment: ModelingLowHighTempStCloud-3-1; }
+#ex_geo_heights_45S-2-4 { counter-set: ex_geo_heights_45S-2-4 0; }
+#ex_geo_heights_45S-2-4 > li::marker { content: ""counter(ex_geo_heights_45S-2-4,lower-alpha)"."; }
+#ex_geo_heights_45S-2-4 > li { counter-increment: ex_geo_heights_45S-2-4; }
+#ex_geo_heights_45S-3-1 { counter-set: ex_geo_heights_45S-3-1 0; }
+#ex_geo_heights_45S-3-1 > li::marker { content: ""counter(ex_geo_heights_45S-3-1,lower-alpha)"."; }
+#ex_geo_heights_45S-3-1 > li { counter-increment: ex_geo_heights_45S-3-1; }
+#GeopotentialHeightsAt35N-2-4 { counter-set: GeopotentialHeightsAt35N-2-4 0; }
+#GeopotentialHeightsAt35N-2-4 > li::marker { content: ""counter(GeopotentialHeightsAt35N-2-4,lower-alpha)"."; }
+#GeopotentialHeightsAt35N-2-4 > li { counter-increment: GeopotentialHeightsAt35N-2-4; }
+#GeopotentialHeightsAt35N-3-1 { counter-set: GeopotentialHeightsAt35N-3-1 0; }
+#GeopotentialHeightsAt35N-3-1 > li::marker { content: ""counter(GeopotentialHeightsAt35N-3-1,lower-alpha)"."; }
+#GeopotentialHeightsAt35N-3-1 > li { counter-increment: GeopotentialHeightsAt35N-3-1; }
+#USweathermap-2-2-2 { counter-set: USweathermap-2-2-2 0; }
+#USweathermap-2-2-2 > li::marker { content: ""counter(USweathermap-2-2-2,lower-alpha)""; }
+#USweathermap-2-2-2 > li { counter-increment: USweathermap-2-2-2; }
+#USweathermap-3-1-1 { counter-set: USweathermap-3-1-1 0; }
+#USweathermap-3-1-1 > li::marker { content: ""counter(USweathermap-3-1-1,lower-alpha)""; }
+#USweathermap-3-1-1 > li { counter-increment: USweathermap-3-1-1; }
+#windchillexercise-2-1-8 { counter-set: windchillexercise-2-1-8 0; }
+#windchillexercise-2-1-8 > li::marker { content: ""counter(windchillexercise-2-1-8,lower-alpha)"."; }
+#windchillexercise-2-1-8 > li { counter-increment: windchillexercise-2-1-8; }
+#windchillexercise-3-1-1 { counter-set: windchillexercise-3-1-1 0; }
+#windchillexercise-3-1-1 > li::marker { content: ""counter(windchillexercise-3-1-1,lower-alpha)"."; }
+#windchillexercise-3-1-1 > li { counter-increment: windchillexercise-3-1-1; }
+#snowfall1-2-1-7 { counter-set: snowfall1-2-1-7 0; }
+#snowfall1-2-1-7 > li::marker { content: ""counter(snowfall1-2-1-7,lower-alpha)"."; }
+#snowfall1-2-1-7 > li { counter-increment: snowfall1-2-1-7; }
+#snowfall1-3-1-1 { counter-set: snowfall1-3-1-1 0; }
+#snowfall1-3-1-1 > li::marker { content: ""counter(snowfall1-3-1-1,lower-alpha)"."; }
+#snowfall1-3-1-1 > li { counter-increment: snowfall1-3-1-1; }
+#UHI1-2-1-15 { counter-set: UHI1-2-1-15 0; }
+#UHI1-2-1-15 > li::marker { content: ""counter(UHI1-2-1-15,lower-alpha)"."; }
+#UHI1-2-1-15 > li { counter-increment: UHI1-2-1-15; }
+#UHI1-3-1-1 { counter-set: UHI1-3-1-1 0; }
+#UHI1-3-1-1 > li::marker { content: ""counter(UHI1-3-1-1,lower-alpha)"."; }
+#UHI1-3-1-1 > li { counter-increment: UHI1-3-1-1; }
+#dewpoint-2-1-7 { counter-set: dewpoint-2-1-7 0; }
+#dewpoint-2-1-7 > li::marker { content: ""counter(dewpoint-2-1-7,lower-alpha)""; }
+#dewpoint-2-1-7 > li { counter-increment: dewpoint-2-1-7; }
+#dewpoint-3-1-1 { counter-set: dewpoint-3-1-1 0; }
+#dewpoint-3-1-1 > li::marker { content: ""counter(dewpoint-3-1-1,lower-alpha)""; }
+#dewpoint-3-1-1 > li { counter-increment: dewpoint-3-1-1; }
+#hdwindexexercise-2-1-5 { counter-set: hdwindexexercise-2-1-5 0; }
+#hdwindexexercise-2-1-5 > li::marker { content: ""counter(hdwindexexercise-2-1-5,lower-alpha)""; }
+#hdwindexexercise-2-1-5 > li { counter-increment: hdwindexexercise-2-1-5; }
+#hdwindexexercise-3-1-1 { counter-set: hdwindexexercise-3-1-1 0; }
+#hdwindexexercise-3-1-1 > li::marker { content: ""counter(hdwindexexercise-3-1-1,lower-alpha)""; }
+#hdwindexexercise-3-1-1 > li { counter-increment: hdwindexexercise-3-1-1; }
+#MyFrostbite-2-3-1 { counter-set: MyFrostbite-2-3-1 0; }
+#MyFrostbite-2-3-1 > li::marker { content: ""counter(MyFrostbite-2-3-1,lower-alpha)""; }
+#MyFrostbite-2-3-1 > li { counter-increment: MyFrostbite-2-3-1; }
+#Plotting3D2-2-1-2 { counter-set: Plotting3D2-2-1-2 0; }
+#Plotting3D2-2-1-2 > li::marker { content: ""counter(Plotting3D2-2-1-2,lower-alpha)""; }
+#Plotting3D2-2-1-2 > li { counter-increment: Plotting3D2-2-1-2; }
+#Plotting3D2-3-1-1 { counter-set: Plotting3D2-3-1-1 0; }
+#Plotting3D2-3-1-1 > li::marker { content: ""counter(Plotting3D2-3-1-1,lower-alpha)""; }
+#Plotting3D2-3-1-1 > li { counter-increment: Plotting3D2-3-1-1; }
+#Ez-9-1-2-2-1-7 { counter-set: Ez-9-1-2-2-1-7 0; }
+#Ez-9-1-2-2-1-7 > li::marker { content: ""counter(Ez-9-1-2-2-1-7,lower-alpha)"."; }
+#Ez-9-1-2-2-1-7 > li { counter-increment: Ez-9-1-2-2-1-7; }
+#Ez-9-1-2-3-1-1 { counter-set: Ez-9-1-2-3-1-1 0; }
+#Ez-9-1-2-3-1-1 > li::marker { content: ""counter(Ez-9-1-2-3-1-1,lower-alpha)"."; }
+#Ez-9-1-2-3-1-1 > li { counter-increment: Ez-9-1-2-3-1-1; }
+#Ez-9-1-2-4-1-1 { counter-set: Ez-9-1-2-4-1-1 0; }
+#Ez-9-1-2-4-1-1 > li::marker { content: ""counter(Ez-9-1-2-4-1-1,lower-alpha)"."; }
+#Ez-9-1-2-4-1-1 > li { counter-increment: Ez-9-1-2-4-1-1; }
+#PlottingWA-2-1-1 { counter-set: PlottingWA-2-1-1 0; }
+#PlottingWA-2-1-1 > li::marker { content: ""counter(PlottingWA-2-1-1,lower-alpha)"."; }
+#PlottingWA-2-1-1 > li { counter-increment: PlottingWA-2-1-1; }
+#PlottingWA-3-1 { counter-set: PlottingWA-3-1 0; }
+#PlottingWA-3-1 > li::marker { content: ""counter(PlottingWA-3-1,lower-alpha)"."; }
+#PlottingWA-3-1 > li { counter-increment: PlottingWA-3-1; }
+#contoursandgraphs-2-2-1 { counter-set: contoursandgraphs-2-2-1 0; }
+#contoursandgraphs-2-2-1 > li::marker { content: ""counter(contoursandgraphs-2-2-1,lower-alpha)"."; }
+#contoursandgraphs-2-2-1 > li { counter-increment: contoursandgraphs-2-2-1; }
+#contoursandgraphs-3-1 { counter-set: contoursandgraphs-3-1 0; }
+#contoursandgraphs-3-1 > li::marker { content: ""counter(contoursandgraphs-3-1,lower-alpha)"."; }
+#contoursandgraphs-3-1 > li { counter-increment: contoursandgraphs-3-1; }
+#winchillcontours-2-3 { counter-set: winchillcontours-2-3 0; }
+#winchillcontours-2-3 > li::marker { content: ""counter(winchillcontours-2-3,lower-alpha)"."; }
+#winchillcontours-2-3 > li { counter-increment: winchillcontours-2-3; }
+#winchillcontours-3-1 { counter-set: winchillcontours-3-1 0; }
+#winchillcontours-3-1 > li::marker { content: ""counter(winchillcontours-3-1,lower-alpha)"."; }
+#winchillcontours-3-1 > li { counter-increment: winchillcontours-3-1; }
+#levelsetsin3d-2-1-1 { counter-set: levelsetsin3d-2-1-1 0; }
+#levelsetsin3d-2-1-1 > li::marker { content: ""counter(levelsetsin3d-2-1-1,lower-alpha)"."; }
+#levelsetsin3d-2-1-1 > li { counter-increment: levelsetsin3d-2-1-1; }
+#levelsetsin3d-3-1 { counter-set: levelsetsin3d-3-1 0; }
+#levelsetsin3d-3-1 > li::marker { content: ""counter(levelsetsin3d-3-1,lower-alpha)"."; }
+#levelsetsin3d-3-1 > li { counter-increment: levelsetsin3d-3-1; }
+#PA-7B-3-2-2 { counter-set: PA-7B-3-2-2 0; }
+#PA-7B-3-2-2 > li::marker { content: ""counter(PA-7B-3-2-2,lower-alpha)"."; }
+#PA-7B-3-2-2 > li { counter-increment: PA-7B-3-2-2; }
+#PA-7B-3-3-1-1 { counter-set: PA-7B-3-3-1-1 0; }
+#PA-7B-3-3-1-1 > li::marker { content: ""counter(PA-7B-3-3-1-1,lower-alpha)"."; }
+#PA-7B-3-3-1-1 > li { counter-increment: PA-7B-3-3-1-1; }
+#ez-sphericalp2r-2-2 { counter-set: ez-sphericalp2r-2-2 0; }
+#ez-sphericalp2r-2-2 > li::marker { content: ""counter(ez-sphericalp2r-2-2,lower-alpha)"."; }
+#ez-sphericalp2r-2-2 > li { counter-increment: ez-sphericalp2r-2-2; }
+#ez-sphericalp2r-3-1 { counter-set: ez-sphericalp2r-3-1 0; }
+#ez-sphericalp2r-3-1 > li::marker { content: ""counter(ez-sphericalp2r-3-1,lower-alpha)"."; }
+#ez-sphericalp2r-3-1 > li { counter-increment: ez-sphericalp2r-3-1; }
+#rectangulartopolar4-2-1-1 { counter-set: rectangulartopolar4-2-1-1 0; }
+#rectangulartopolar4-2-1-1 > li::marker { content: ""counter(rectangulartopolar4-2-1-1,lower-alpha)"."; }
+#rectangulartopolar4-2-1-1 > li { counter-increment: rectangulartopolar4-2-1-1; }
+#rectangulartopolar4-3-1 { counter-set: rectangulartopolar4-3-1 0; }
+#rectangulartopolar4-3-1 > li::marker { content: ""counter(rectangulartopolar4-3-1,lower-alpha)"."; }
+#rectangulartopolar4-3-1 > li { counter-increment: rectangulartopolar4-3-1; }
+#PA_11_8-2 { counter-set: PA_11_8-2 0; }
+#PA_11_8-2 > li::marker { content: ""counter(PA_11_8-2,lower-alpha)"."; }
+#PA_11_8-2 > li { counter-increment: PA_11_8-2; }
+#A_11_8_7-1-1 { counter-set: A_11_8_7-1-1 0; }
+#A_11_8_7-1-1 > li::marker { content: ""counter(A_11_8_7-1-1,lower-alpha)"."; }
+#A_11_8_7-1-1 > li { counter-increment: A_11_8_7-1-1; }
+#ez-CartesianToSpherical-2-1-1 { counter-set: ez-CartesianToSpherical-2-1-1 0; }
+#ez-CartesianToSpherical-2-1-1 > li::marker { content: ""counter(ez-CartesianToSpherical-2-1-1,lower-alpha)"."; }
+#ez-CartesianToSpherical-2-1-1 > li { counter-increment: ez-CartesianToSpherical-2-1-1; }
+#ez-CartesianToSpherical-3-1 { counter-set: ez-CartesianToSpherical-3-1 0; }
+#ez-CartesianToSpherical-3-1 > li::marker { content: ""counter(ez-CartesianToSpherical-3-1,lower-alpha)"."; }
+#ez-CartesianToSpherical-3-1 > li { counter-increment: ez-CartesianToSpherical-3-1; }
+#ez-CartesianToSpherical-4-1 { counter-set: ez-CartesianToSpherical-4-1 0; }
+#ez-CartesianToSpherical-4-1 > li::marker { content: ""counter(ez-CartesianToSpherical-4-1,lower-alpha)"."; }
+#ez-CartesianToSpherical-4-1 > li { counter-increment: ez-CartesianToSpherical-4-1; }
+#sec_displacementvectors-25-3-1-2-2 { counter-set: sec_displacementvectors-25-3-1-2-2 0; }
+#sec_displacementvectors-25-3-1-2-2 > li::marker { content: ""counter(sec_displacementvectors-25-3-1-2-2,lower-alpha)"."; }
+#sec_displacementvectors-25-3-1-2-2 > li { counter-increment: sec_displacementvectors-25-3-1-2-2; }
+#horizontalwindvector-2-1-1 { counter-set: horizontalwindvector-2-1-1 0; }
+#horizontalwindvector-2-1-1 > li::marker { content: ""counter(horizontalwindvector-2-1-1,lower-alpha)"."; }
+#horizontalwindvector-2-1-1 > li { counter-increment: horizontalwindvector-2-1-1; }
+#horizontalwindvector-3-1 { counter-set: horizontalwindvector-3-1 0; }
+#horizontalwindvector-3-1 > li::marker { content: ""counter(horizontalwindvector-3-1,lower-alpha)"."; }
+#horizontalwindvector-3-1 > li { counter-increment: horizontalwindvector-3-1; }
+#ResolveVector-2-1-1 { counter-set: ResolveVector-2-1-1 0; }
+#ResolveVector-2-1-1 > li::marker { content: ""counter(ResolveVector-2-1-1,lower-alpha)"."; }
+#ResolveVector-2-1-1 > li { counter-increment: ResolveVector-2-1-1; }
+#ResolveVector-3-1-1 { counter-set: ResolveVector-3-1-1 0; }
+#ResolveVector-3-1-1 > li::marker { content: ""counter(ResolveVector-3-1-1,lower-alpha)"."; }
+#ResolveVector-3-1-1 > li { counter-increment: ResolveVector-3-1-1; }
+#directionsandvectors-2-1-3 { counter-set: directionsandvectors-2-1-3 0; }
+#directionsandvectors-2-1-3 > li::marker { content: ""counter(directionsandvectors-2-1-3,lower-alpha)"."; }
+#directionsandvectors-2-1-3 > li { counter-increment: directionsandvectors-2-1-3; }
+#directionsandvectors-3-1 { counter-set: directionsandvectors-3-1 0; }
+#directionsandvectors-3-1 > li::marker { content: ""counter(directionsandvectors-3-1,lower-alpha)"."; }
+#directionsandvectors-3-1 > li { counter-increment: directionsandvectors-3-1; }
+#meanwindvectors0-2-2-6 { counter-set: meanwindvectors0-2-2-6 0; }
+#meanwindvectors0-2-2-6 > li::marker { content: ""counter(meanwindvectors0-2-2-6,lower-alpha)"."; }
+#meanwindvectors0-2-2-6 > li { counter-increment: meanwindvectors0-2-2-6; }
+#meanwindvectors0-3-1-1 { counter-set: meanwindvectors0-3-1-1 0; }
+#meanwindvectors0-3-1-1 > li::marker { content: ""counter(meanwindvectors0-3-1-1,lower-alpha)"."; }
+#meanwindvectors0-3-1-1 > li { counter-increment: meanwindvectors0-3-1-1; }
+#AnglesAndSigns-2-1 { counter-set: AnglesAndSigns-2-1 0; }
+#AnglesAndSigns-2-1 > li::marker { content: ""counter(AnglesAndSigns-2-1,lower-alpha)"."; }
+#AnglesAndSigns-2-1 > li { counter-increment: AnglesAndSigns-2-1; }
+#AnglesAndSigns-2-1-2-2 { counter-set: AnglesAndSigns-2-1-2-2 0; }
+#AnglesAndSigns-2-1-2-2 > li::marker { content: ""counter(AnglesAndSigns-2-1-2-2,lower-roman)"."; }
+#AnglesAndSigns-2-1-2-2 > li { counter-increment: AnglesAndSigns-2-1-2-2; }
+#dotproductbasic-2-1-3 { counter-set: dotproductbasic-2-1-3 0; }
+#dotproductbasic-2-1-3 > li::marker { content: ""counter(dotproductbasic-2-1-3,lower-alpha)"."; }
+#dotproductbasic-2-1-3 > li { counter-increment: dotproductbasic-2-1-3; }
+#dotproductbasic-3-1-1 { counter-set: dotproductbasic-3-1-1 0; }
+#dotproductbasic-3-1-1 > li::marker { content: ""counter(dotproductbasic-3-1-1,lower-alpha)"."; }
+#dotproductbasic-3-1-1 > li { counter-increment: dotproductbasic-3-1-1; }
+#advectioncentralUS-2-1-3 { counter-set: advectioncentralUS-2-1-3 0; }
+#advectioncentralUS-2-1-3 > li::marker { content: ""counter(advectioncentralUS-2-1-3,lower-alpha)"."; }
+#advectioncentralUS-2-1-3 > li { counter-increment: advectioncentralUS-2-1-3; }
+#advectioncentralUS-3-1-1 { counter-set: advectioncentralUS-3-1-1 0; }
+#advectioncentralUS-3-1-1 > li::marker { content: ""counter(advectioncentralUS-3-1-1,lower-alpha)"."; }
+#advectioncentralUS-3-1-1 > li { counter-increment: advectioncentralUS-3-1-1; }
+#AdvectionInNY-2-1-3 { counter-set: AdvectionInNY-2-1-3 0; }
+#AdvectionInNY-2-1-3 > li::marker { content: ""counter(AdvectionInNY-2-1-3,lower-alpha)"."; }
+#AdvectionInNY-2-1-3 > li { counter-increment: AdvectionInNY-2-1-3; }
+#AdvectionInNY-3-1-1 { counter-set: AdvectionInNY-3-1-1 0; }
+#AdvectionInNY-3-1-1 > li::marker { content: ""counter(AdvectionInNY-3-1-1,lower-alpha)"."; }
+#AdvectionInNY-3-1-1 > li { counter-increment: AdvectionInNY-3-1-1; }
+#advectionsartell-2-3-1 { counter-set: advectionsartell-2-3-1 0; }
+#advectionsartell-2-3-1 > li::marker { content: ""counter(advectionsartell-2-3-1,lower-alpha)"."; }
+#advectionsartell-2-3-1 > li { counter-increment: advectionsartell-2-3-1; }
+#advectionsartell-3-1 { counter-set: advectionsartell-3-1 0; }
+#advectionsartell-3-1 > li::marker { content: ""counter(advectionsartell-3-1,lower-alpha)"."; }
+#advectionsartell-3-1 > li { counter-increment: advectionsartell-3-1; }
+#advectioncoldspring-2-1-6 { counter-set: advectioncoldspring-2-1-6 0; }
+#advectioncoldspring-2-1-6 > li::marker { content: ""counter(advectioncoldspring-2-1-6,lower-alpha)"."; }
+#advectioncoldspring-2-1-6 > li { counter-increment: advectioncoldspring-2-1-6; }
+#advectioncoldspring-3-1 { counter-set: advectioncoldspring-3-1 0; }
+#advectioncoldspring-3-1 > li::marker { content: ""counter(advectioncoldspring-3-1,lower-alpha)"."; }
+#advectioncoldspring-3-1 > li { counter-increment: advectioncoldspring-3-1; }
+#DeterminantComputations-2-1-1 { counter-set: DeterminantComputations-2-1-1 0; }
+#DeterminantComputations-2-1-1 > li::marker { content: ""counter(DeterminantComputations-2-1-1,lower-alpha)"."; }
+#DeterminantComputations-2-1-1 > li { counter-increment: DeterminantComputations-2-1-1; }
+#DeterminantComputations-3-1-1 { counter-set: DeterminantComputations-3-1-1 0; }
+#DeterminantComputations-3-1-1 > li::marker { content: ""counter(DeterminantComputations-3-1-1,lower-alpha)"."; }
+#DeterminantComputations-3-1-1 > li { counter-increment: DeterminantComputations-3-1-1; }
+#coriolisgolfball-2-1-3 { counter-set: coriolisgolfball-2-1-3 0; }
+#coriolisgolfball-2-1-3 > li::marker { content: ""counter(coriolisgolfball-2-1-3,lower-alpha)"."; }
+#coriolisgolfball-2-1-3 > li { counter-increment: coriolisgolfball-2-1-3; }
+#coriolisgolfball-3-1-1 { counter-set: coriolisgolfball-3-1-1 0; }
+#coriolisgolfball-3-1-1 > li::marker { content: ""counter(coriolisgolfball-3-1-1,lower-alpha)"."; }
+#coriolisgolfball-3-1-1 > li { counter-increment: coriolisgolfball-3-1-1; }
+#VSorU-2-1-1 { counter-set: VSorU-2-1-1 0; }
+#VSorU-2-1-1 > li::marker { content: ""counter(VSorU-2-1-1,lower-alpha)"."; }
+#VSorU-2-1-1 > li { counter-increment: VSorU-2-1-1; }
+#VSorU-3-1-1 { counter-set: VSorU-3-1-1 0; }
+#VSorU-3-1-1 > li::marker { content: ""counter(VSorU-3-1-1,lower-alpha)"."; }
+#VSorU-3-1-1 > li { counter-increment: VSorU-3-1-1; }
+#NoVerticalCross-2-3 { counter-set: NoVerticalCross-2-3 0; }
+#NoVerticalCross-2-3 > li::marker { content: ""counter(NoVerticalCross-2-3,lower-alpha)"."; }
+#NoVerticalCross-2-3 > li { counter-increment: NoVerticalCross-2-3; }
+#NoVerticalCross-3-1 { counter-set: NoVerticalCross-3-1 0; }
+#NoVerticalCross-3-1 > li::marker { content: ""counter(NoVerticalCross-3-1,lower-alpha)"."; }
+#NoVerticalCross-3-1 > li { counter-increment: NoVerticalCross-3-1; }
+#VenusCoriolis-2-2 { counter-set: VenusCoriolis-2-2 0; }
+#VenusCoriolis-2-2 > li::marker { content: ""counter(VenusCoriolis-2-2,lower-alpha)"."; }
+#VenusCoriolis-2-2 > li { counter-increment: VenusCoriolis-2-2; }
+#VenusCoriolis-3-1 { counter-set: VenusCoriolis-3-1 0; }
+#VenusCoriolis-3-1 > li::marker { content: ""counter(VenusCoriolis-3-1,lower-alpha)"."; }
+#VenusCoriolis-3-1 > li { counter-increment: VenusCoriolis-3-1; }
+#PickingKoff-2-1-4 { counter-set: PickingKoff-2-1-4 0; }
+#PickingKoff-2-1-4 > li::marker { content: ""counter(PickingKoff-2-1-4,lower-alpha)"."; }
+#PickingKoff-2-1-4 > li { counter-increment: PickingKoff-2-1-4; }
+#PickingKoff-3-1 { counter-set: PickingKoff-3-1 0; }
+#PickingKoff-3-1 > li::marker { content: ""counter(PickingKoff-3-1,lower-alpha)"."; }
+#PickingKoff-3-1 > li { counter-increment: PickingKoff-3-1; }
+#TechnologyCrossProducts-2-1-1 { counter-set: TechnologyCrossProducts-2-1-1 0; }
+#TechnologyCrossProducts-2-1-1 > li::marker { content: ""counter(TechnologyCrossProducts-2-1-1,lower-alpha)"."; }
+#TechnologyCrossProducts-2-1-1 > li { counter-increment: TechnologyCrossProducts-2-1-1; }
+#BulkRichardsonNumber-2-5-1 { counter-set: BulkRichardsonNumber-2-5-1 0; }
+#BulkRichardsonNumber-2-5-1 > li::marker { content: ""counter(BulkRichardsonNumber-2-5-1,lower-alpha)"."; }
+#BulkRichardsonNumber-2-5-1 > li { counter-increment: BulkRichardsonNumber-2-5-1; }
+#BulkRichardsonNumber-3-1 { counter-set: BulkRichardsonNumber-3-1 0; }
+#BulkRichardsonNumber-3-1 > li::marker { content: ""counter(BulkRichardsonNumber-3-1,lower-alpha)"."; }
+#BulkRichardsonNumber-3-1 > li { counter-increment: BulkRichardsonNumber-3-1; }
+#windchillpartials-3 { counter-set: windchillpartials-3 0; }
+#windchillpartials-3 > li::marker { content: ""counter(windchillpartials-3,lower-alpha)"."; }
+#windchillpartials-3 > li { counter-increment: windchillpartials-3; }
+#windchillpartials-4-1 { counter-set: windchillpartials-4-1 0; }
+#windchillpartials-4-1 > li::marker { content: ""counter(windchillpartials-4-1,lower-alpha)"."; }
+#windchillpartials-4-1 > li { counter-increment: windchillpartials-4-1; }
+#interpretfirstorderpartials-8-3 { counter-set: interpretfirstorderpartials-8-3 0; }
+#interpretfirstorderpartials-8-3 > li::marker { content: ""counter(interpretfirstorderpartials-8-3,lower-alpha)"."; }
+#interpretfirstorderpartials-8-3 > li { counter-increment: interpretfirstorderpartials-8-3; }
+#interpretfirstorderpartials-8-4-1 { counter-set: interpretfirstorderpartials-8-4-1 0; }
+#interpretfirstorderpartials-8-4-1 > li::marker { content: ""counter(interpretfirstorderpartials-8-4-1,lower-alpha)"."; }
+#interpretfirstorderpartials-8-4-1 > li { counter-increment: interpretfirstorderpartials-8-4-1; }
+#meanwindspeed-3 { counter-set: meanwindspeed-3 0; }
+#meanwindspeed-3 > li::marker { content: ""counter(meanwindspeed-3,lower-alpha)"."; }
+#meanwindspeed-3 > li { counter-increment: meanwindspeed-3; }
+#meanwindspeed-4-1 { counter-set: meanwindspeed-4-1 0; }
+#meanwindspeed-4-1 > li::marker { content: ""counter(meanwindspeed-4-1,lower-alpha)"."; }
+#meanwindspeed-4-1 > li { counter-increment: meanwindspeed-4-1; }
+#SVPexercise-4 { counter-set: SVPexercise-4 0; }
+#SVPexercise-4 > li::marker { content: ""counter(SVPexercise-4,lower-alpha)"."; }
+#SVPexercise-4 > li { counter-increment: SVPexercise-4; }
+#SVPexercise-5-1 { counter-set: SVPexercise-5-1 0; }
+#SVPexercise-5-1 > li::marker { content: ""counter(SVPexercise-5-1,lower-alpha)"."; }
+#SVPexercise-5-1 > li { counter-increment: SVPexercise-5-1; }
+#partialisobaricmap-2-3 { counter-set: partialisobaricmap-2-3 0; }
+#partialisobaricmap-2-3 > li::marker { content: ""counter(partialisobaricmap-2-3,lower-alpha)"."; }
+#partialisobaricmap-2-3 > li { counter-increment: partialisobaricmap-2-3; }
+#partialisobaricmap-3-1 { counter-set: partialisobaricmap-3-1 0; }
+#partialisobaricmap-3-1 > li::marker { content: ""counter(partialisobaricmap-3-1,lower-alpha)"."; }
+#partialisobaricmap-3-1 > li { counter-increment: partialisobaricmap-3-1; }
+#ez_potential_temperature-2-1-8 { counter-set: ez_potential_temperature-2-1-8 0; }
+#ez_potential_temperature-2-1-8 > li::marker { content: ""counter(ez_potential_temperature-2-1-8,lower-alpha)"."; }
+#ez_potential_temperature-2-1-8 > li { counter-increment: ez_potential_temperature-2-1-8; }
+#ez_potential_temperature-3-1 { counter-set: ez_potential_temperature-3-1 0; }
+#ez_potential_temperature-3-1 > li::marker { content: ""counter(ez_potential_temperature-3-1,lower-alpha)"."; }
+#ez_potential_temperature-3-1 > li { counter-increment: ez_potential_temperature-3-1; }
+#insolation-2-3 { counter-set: insolation-2-3 0; }
+#insolation-2-3 > li::marker { content: ""counter(insolation-2-3,lower-alpha)"."; }
+#insolation-2-3 > li { counter-increment: insolation-2-3; }
+#frostbitepartial-2-3 { counter-set: frostbitepartial-2-3 0; }
+#frostbitepartial-2-3 > li::marker { content: ""counter(frostbitepartial-2-3,lower-alpha)"."; }
+#frostbitepartial-2-3 > li { counter-increment: frostbitepartial-2-3; }
+#frostbitepartial-3-1 { counter-set: frostbitepartial-3-1 0; }
+#frostbitepartial-3-1 > li::marker { content: ""counter(frostbitepartial-3-1,lower-alpha)"."; }
+#frostbitepartial-3-1 > li { counter-increment: frostbitepartial-3-1; }
+#WetBulbGlobeTemp-2-2 { counter-set: WetBulbGlobeTemp-2-2 0; }
+#WetBulbGlobeTemp-2-2 > li::marker { content: ""counter(WetBulbGlobeTemp-2-2,lower-alpha)"."; }
+#WetBulbGlobeTemp-2-2 > li { counter-increment: WetBulbGlobeTemp-2-2; }
+#WetBulbGlobeTemp-3-1 { counter-set: WetBulbGlobeTemp-3-1 0; }
+#WetBulbGlobeTemp-3-1 > li::marker { content: ""counter(WetBulbGlobeTemp-3-1,lower-alpha)"."; }
+#WetBulbGlobeTemp-3-1 > li { counter-increment: WetBulbGlobeTemp-3-1; }
+#A_10_2_11-2-2-5 { counter-set: A_10_2_11-2-2-5 0; }
+#A_10_2_11-2-2-5 > li::marker { content: ""counter(A_10_2_11-2-2-5,lower-alpha)"."; }
+#A_10_2_11-2-2-5 > li { counter-increment: A_10_2_11-2-2-5; }
+#partialbackwards-2 { counter-set: partialbackwards-2 0; }
+#partialbackwards-2 > li::marker { content: ""counter(partialbackwards-2,lower-alpha)"."; }
+#partialbackwards-2 > li { counter-increment: partialbackwards-2; }
+#partialbackwards-3-1 { counter-set: partialbackwards-3-1 0; }
+#partialbackwards-3-1 > li::marker { content: ""counter(partialbackwards-3-1,lower-alpha)"."; }
+#partialbackwards-3-1 > li { counter-increment: partialbackwards-3-1; }
+#firstcontouradvect-4 { counter-set: firstcontouradvect-4 0; }
+#firstcontouradvect-4 > li::marker { content: ""counter(firstcontouradvect-4,lower-alpha)"."; }
+#firstcontouradvect-4 > li { counter-increment: firstcontouradvect-4; }
+#firstcontouradvect-5-1 { counter-set: firstcontouradvect-5-1 0; }
+#firstcontouradvect-5-1 > li::marker { content: ""counter(firstcontouradvect-5-1,lower-alpha)"."; }
+#firstcontouradvect-5-1 > li { counter-increment: firstcontouradvect-5-1; }
+#dewpointcontours-2-3 { counter-set: dewpointcontours-2-3 0; }
+#dewpointcontours-2-3 > li::marker { content: ""counter(dewpointcontours-2-3,lower-alpha)"."; }
+#dewpointcontours-2-3 > li { counter-increment: dewpointcontours-2-3; }
+#dewpointcontours-2-3-3-2 { counter-set: dewpointcontours-2-3-3-2 0; }
+#dewpointcontours-2-3-3-2 > li::marker { content: ""counter(dewpointcontours-2-3-3-2,lower-roman)"."; }
+#dewpointcontours-2-3-3-2 > li { counter-increment: dewpointcontours-2-3-3-2; }
+#dewpointcontours-3-1 { counter-set: dewpointcontours-3-1 0; }
+#dewpointcontours-3-1 > li::marker { content: ""counter(dewpointcontours-3-1,lower-alpha)"."; }
+#dewpointcontours-3-1 > li { counter-increment: dewpointcontours-3-1; }
+#extracted-webwork-5-1-1-4-1-1-1 { counter-set: extracted-webwork-5-1-1-4-1-1-1 0; }
+#extracted-webwork-5-1-1-4-1-1-1 > li::marker { content: "("counter(extracted-webwork-5-1-1-4-1-1-1,lower-alpha)")"; }
+#extracted-webwork-5-1-1-4-1-1-1 > li { counter-increment: extracted-webwork-5-1-1-4-1-1-1; }
+#extracted-webwork-5-1-1-4-1-2-1 { counter-set: extracted-webwork-5-1-1-4-1-2-1 0; }
+#extracted-webwork-5-1-1-4-1-2-1 > li::marker { content: ""counter(extracted-webwork-5-1-1-4-1-2-1,upper-alpha)"."; }
+#extracted-webwork-5-1-1-4-1-2-1 > li { counter-increment: extracted-webwork-5-1-1-4-1-2-1; }
+#transportequation-2-2 { counter-set: transportequation-2-2 0; }
+#transportequation-2-2 > li::marker { content: ""counter(transportequation-2-2,lower-alpha)"."; }
+#transportequation-2-2 > li { counter-increment: transportequation-2-2; }
+#transportequation-3-1 { counter-set: transportequation-3-1 0; }
+#transportequation-3-1 > li::marker { content: ""counter(transportequation-3-1,lower-alpha)"."; }
+#transportequation-3-1 > li { counter-increment: transportequation-3-1; }
+#CirculationPentagonPath-2-5 { counter-set: CirculationPentagonPath-2-5 0; }
+#CirculationPentagonPath-2-5 > li::marker { content: ""counter(CirculationPentagonPath-2-5,lower-alpha)"."; }
+#CirculationPentagonPath-2-5 > li { counter-increment: CirculationPentagonPath-2-5; }
+#CirculationPentagonPath-3-1 { counter-set: CirculationPentagonPath-3-1 0; }
+#CirculationPentagonPath-3-1 > li::marker { content: ""counter(CirculationPentagonPath-3-1,lower-alpha)"."; }
+#CirculationPentagonPath-3-1 > li { counter-increment: CirculationPentagonPath-3-1; }
+#ComputeCurlBothWays-1-1-5 { counter-set: ComputeCurlBothWays-1-1-5 0; }
+#ComputeCurlBothWays-1-1-5 > li::marker { content: ""counter(ComputeCurlBothWays-1-1-5,lower-alpha)"."; }
+#ComputeCurlBothWays-1-1-5 > li { counter-increment: ComputeCurlBothWays-1-1-5; }
+#ComputeCurlBothWays-2-1 { counter-set: ComputeCurlBothWays-2-1 0; }
+#ComputeCurlBothWays-2-1 > li::marker { content: ""counter(ComputeCurlBothWays-2-1,lower-alpha)"."; }
+#ComputeCurlBothWays-2-1 > li { counter-increment: ComputeCurlBothWays-2-1; }
+#MetarsToVorticity-2-7 { counter-set: MetarsToVorticity-2-7 0; }
+#MetarsToVorticity-2-7 > li::marker { content: ""counter(MetarsToVorticity-2-7,lower-alpha)"."; }
+#MetarsToVorticity-2-7 > li { counter-increment: MetarsToVorticity-2-7; }
+#MetarsToVorticity-3-1 { counter-set: MetarsToVorticity-3-1 0; }
+#MetarsToVorticity-3-1 > li::marker { content: ""counter(MetarsToVorticity-3-1,lower-alpha)"."; }
+#MetarsToVorticity-3-1 > li { counter-increment: MetarsToVorticity-3-1; }
+#fluxmaximized-2-1-3 { counter-set: fluxmaximized-2-1-3 0; }
+#fluxmaximized-2-1-3 > li::marker { content: ""counter(fluxmaximized-2-1-3,lower-alpha)"."; }
+#fluxmaximized-2-1-3 > li { counter-increment: fluxmaximized-2-1-3; }
+#fluxmaximized-3-1-1 { counter-set: fluxmaximized-3-1-1 0; }
+#fluxmaximized-3-1-1 > li::marker { content: ""counter(fluxmaximized-3-1-1,lower-alpha)"."; }
+#fluxmaximized-3-1-1 > li { counter-increment: fluxmaximized-3-1-1; }
+#FluxSidesPrism-2-1-4 { counter-set: FluxSidesPrism-2-1-4 0; }
+#FluxSidesPrism-2-1-4 > li::marker { content: ""counter(FluxSidesPrism-2-1-4,lower-alpha)"."; }
+#FluxSidesPrism-2-1-4 > li { counter-increment: FluxSidesPrism-2-1-4; }
+#FluxSidesPrism-3-1 { counter-set: FluxSidesPrism-3-1 0; }
+#FluxSidesPrism-3-1 > li::marker { content: ""counter(FluxSidesPrism-3-1,lower-alpha)"."; }
+#FluxSidesPrism-3-1 > li { counter-increment: FluxSidesPrism-3-1; }
+#fluxofcube-2-1-6 { counter-set: fluxofcube-2-1-6 0; }
+#fluxofcube-2-1-6 > li::marker { content: ""counter(fluxofcube-2-1-6,lower-alpha)"."; }
+#fluxofcube-2-1-6 > li { counter-increment: fluxofcube-2-1-6; }
+#fluxofcube-3-1-1 { counter-set: fluxofcube-3-1-1 0; }
+#fluxofcube-3-1-1 > li::marker { content: ""counter(fluxofcube-3-1-1,lower-alpha)"."; }
+#fluxofcube-3-1-1 > li { counter-increment: fluxofcube-3-1-1; }
+#Ez_10_3_0-2-3 { counter-set: Ez_10_3_0-2-3 0; }
+#Ez_10_3_0-2-3 > li::marker { content: ""counter(Ez_10_3_0-2-3,lower-alpha)"."; }
+#Ez_10_3_0-2-3 > li { counter-increment: Ez_10_3_0-2-3; }
+#Ez_10_3_1-2-3 { counter-set: Ez_10_3_1-2-3 0; }
+#Ez_10_3_1-2-3 > li::marker { content: ""counter(Ez_10_3_1-2-3,lower-alpha)"."; }
+#Ez_10_3_1-2-3 > li { counter-increment: Ez_10_3_1-2-3; }
+#Ez_10_3_1-3-1-1 { counter-set: Ez_10_3_1-3-1-1 0; }
+#Ez_10_3_1-3-1-1 > li::marker { content: ""counter(Ez_10_3_1-3-1-1,lower-alpha)"."; }
+#Ez_10_3_1-3-1-1 > li { counter-increment: Ez_10_3_1-3-1-1; }
+#ez-wind-at-MSP-2-3 { counter-set: ez-wind-at-MSP-2-3 0; }
+#ez-wind-at-MSP-2-3 > li::marker { content: ""counter(ez-wind-at-MSP-2-3,lower-alpha)"."; }
+#ez-wind-at-MSP-2-3 > li { counter-increment: ez-wind-at-MSP-2-3; }
+#ez-wind-at-MSP-3-1 { counter-set: ez-wind-at-MSP-3-1 0; }
+#ez-wind-at-MSP-3-1 > li::marker { content: ""counter(ez-wind-at-MSP-3-1,lower-alpha)"."; }
+#ez-wind-at-MSP-3-1 > li { counter-increment: ez-wind-at-MSP-3-1; }
+#ez-wind-at-Jackson-2-4 { counter-set: ez-wind-at-Jackson-2-4 0; }
+#ez-wind-at-Jackson-2-4 > li::marker { content: ""counter(ez-wind-at-Jackson-2-4,lower-alpha)"."; }
+#ez-wind-at-Jackson-2-4 > li { counter-increment: ez-wind-at-Jackson-2-4; }
+#ez-wind-at-Jackson-3-1 { counter-set: ez-wind-at-Jackson-3-1 0; }
+#ez-wind-at-Jackson-3-1 > li::marker { content: ""counter(ez-wind-at-Jackson-3-1,lower-alpha)"."; }
+#ez-wind-at-Jackson-3-1 > li { counter-increment: ez-wind-at-Jackson-3-1; }
+</style>
+</head>
+<body class="pretext book ignore-math">
+<a class="assistive" href="#ptx-content">Skip to main content</a><header id="ptx-masthead" class="ptx-masthead"><div class="ptx-banner">
+<a xmlns:pf="https://prefigure.org" id="logo-link" class="logo-link" target="_blank" href="http://web.stcloudstate.edu/drbuske/"><img src="external/SCSU_StC_Pri_DkBlkBG.png" alt="Logo image"></a><div class="title-container">
+<h1 class="heading"><a href="atmospherickinematics.html"><span class="title">Mathematics of Atmospheric Kinematics</span></a></h1>
+<p class="byline">Dale Buske</p>
+</div>
+</div></header><nav xmlns:pf="https://prefigure.org" id="ptx-navbar" class="ptx-navbar navbar"><button class="toc-toggle button" title="Contents"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5d2;</span><span class="name">Contents</span></button><a class="index-button button" href="backmatter-2.html" title="Index"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe88e;</span><span class="name">Index</span></a><div class="searchbox">
+<div class="searchwidget"><button id="searchbutton" class="searchbutton button" type="button" title="Search book"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe8b6;</span><span class="name">Search Book</span></button></div>
+<div id="searchresultsplaceholder" class="searchresultsplaceholder" style="display: none">
+<div class="search-results-controls">
+<input aria-label="Search term" id="ptxsearch" class="ptxsearch" type="text" name="terms" placeholder="Search term"><button title="Close search" id="closesearchresults" class="closesearchresults"><span class="material-symbols-outlined">close</span></button>
+</div>
+<h2 class="search-results-heading">Search Results: </h2>
+<div id="searchempty" class="searchempty"><span>No results.</span></div>
+<ol id="searchresults" class="searchresults"></ol>
+</div>
+</div>
+<span class="nav-other-controls"><button id="calculator-toggle" class="calculator-toggle button" title="Show calculator" aria-expanded="false" aria-controls="calculator-container"><span class="icon material-symbols-outlined" aria-hidden="true">&#xea5f;</span><span class="name">Calc</span></button><div id="calculator-container" class="calculator-container" style="display: none; z-index:100;"><div id="geogebra-calculator"></div></div>
+<script>
+var ggbApp = new GGBApplet({"appName": "classic",
+    "width": 330,
+    "height": 600,
+    "showToolBar": true,
+    "showAlgebraInput": true,
+    "perspective": "G/A",
+    "algebraInputPosition": "bottom",
+    "scaleContainerClass": "calculator-container",
+    "allowUpscale": true,
+    "autoHeight": true,
+    "disableAutoScale": false},
+true);
+</script></span><span class="treebuttons"><a class="previous-button button" href="sec_displacementvectors.html" title="Previous"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5cb;</span><span class="name">Prev</span></a><a class="up-button button" href="ch_vectors.html" title="Up"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5ce;</span><span class="name">Up</span></a><a class="next-button button" href="sec_cross_product.html" title="Next"><span class="name">Next</span><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5cc;</span></a></span></nav><div xmlns:pf="https://prefigure.org" id="latex-macros" class="hidden-content process-math" style="display:none"><span class="process-math">\(\newcommand{\N}{\mathbb N}
+\newcommand{\Z}{\mathbb Z}
+\newcommand{\Q}{\mathbb Q}
+\newcommand{\R}{\mathbb R}
+\newcommand{\lt}{&lt;}
+\newcommand{\gt}{&gt;}
+\newcommand{\amp}{&amp;}
+\definecolor{fillinmathshade}{gray}{0.9}
+\newcommand{\fillinmath}[1]{\mathchoice{\colorbox{fillinmathshade}{$\displaystyle     \phantom{\,#1\,}$}}{\colorbox{fillinmathshade}{$\textstyle        \phantom{\,#1\,}$}}{\colorbox{fillinmathshade}{$\scriptstyle      \phantom{\,#1\,}$}}{\colorbox{fillinmathshade}{$\scriptscriptstyle\phantom{\,#1\,}$}}}
+\)</span></div>
+<div class="ptx-page">
+<div xmlns:pf="https://prefigure.org" id="ptx-sidebar" class="ptx-sidebar"><nav id="ptx-toc" class="ptx-toc depth2"><ul class="structural contains-active toc-item-list">
+<li class="toc-item toc-frontmatter">
+<div class="toc-title-box"><a href="frontmatter.html" class="internal"><span class="title">Front Matter</span></a></div>
+<ul class="structural toc-item-list">
+<li class="toc-item toc-colophon"><div class="toc-title-box"><a href="frontmatter-3.html" class="internal"><span class="title">Colophon</span></a></div></li>
+<li class="toc-item toc-acknowledgement"><div class="toc-title-box"><a href="frontmatter-4.html" class="internal"><span class="title">Acknowledgements</span></a></div></li>
+</ul>
+</li>
+<li class="toc-item toc-chapter">
+<div class="toc-title-box"><a href="ch_numerical_integration.html" class="internal"><span class="codenumber">1</span> <span class="title">Approximation I: Area</span></a></div>
+<ul class="structural toc-item-list"><li class="toc-item toc-section">
+<div class="toc-title-box"><a href="sec_CAPE.html" class="internal"><span class="codenumber">1.1</span> <span class="title">Numerical Integration</span></a></div>
+<ul class="structural toc-item-list">
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="sec_CAPE.html#sec_CAPE-4" class="internal"><span class="codenumber">1.1.1</span> <span class="title">CAPE and CIN</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="sec_CAPE.html#sec_CAPE-5" class="internal"><span class="codenumber">1.1.2</span> <span class="title">Left, Right, and Midpoint Sums</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="sec_CAPE.html#sec_CAPE-6" class="internal"><span class="codenumber">1.1.3</span> <span class="title">The Trapezoidal Rule</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="sec_CAPE.html#sec_CAPE-7" class="internal"><span class="codenumber">1.1.4</span> <span class="title">Simpson’s Rule</span></a></div></li>
+<li class="toc-item toc-exercises"><div class="toc-title-box"><a href="sec_CAPE.html#ez_CAPE" class="internal"><span class="codenumber">1.1.5</span> <span class="title">Exercises</span></a></div></li>
+</ul>
+</li></ul>
+</li>
+<li class="toc-item toc-chapter">
+<div class="toc-title-box"><a href="ch_series.html" class="internal"><span class="codenumber">2</span> <span class="title">Modeling Periodic Behavior</span></a></div>
+<ul class="structural toc-item-list">
+<li class="toc-item toc-section">
+<div class="toc-title-box"><a href="sec_fourier_series.html" class="internal"><span class="codenumber">2.1</span> <span class="title">Sinusoids</span></a></div>
+<ul class="structural toc-item-list">
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="sec_fourier_series.html#sec_fourier_series-4" class="internal"><span class="codenumber">2.1.1</span> <span class="title">Sinusoids</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="sec_fourier_series.html#sec_fourier_series-5" class="internal"><span class="codenumber">2.1.2</span> <span class="title">Least-squares Fit of a Sinusoid</span></a></div></li>
+<li class="toc-item toc-exercises"><div class="toc-title-box"><a href="sec_fourier_series.html#ex_sinusoids" class="internal"><span class="codenumber">2.1.3</span> <span class="title">Exercises</span></a></div></li>
+</ul>
+</li>
+<li class="toc-item toc-section">
+<div class="toc-title-box"><a href="sec_trig_polynomials.html" class="internal"><span class="codenumber">2.2</span> <span class="title">Trigonometric Polynomials</span></a></div>
+<ul class="structural toc-item-list">
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="sec_trig_polynomials.html#sec_trig_polynomials-4" class="internal"><span class="codenumber">2.2.1</span> <span class="title">Trigonometric Polynomials</span></a></div></li>
+<li class="toc-item toc-exercises"><div class="toc-title-box"><a href="sec_trig_polynomials.html#ex_trig_polynomials" class="internal"><span class="codenumber">2.2.2</span> <span class="title">Exercises</span></a></div></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toc-item toc-chapter">
+<div class="toc-title-box"><a href="ch-contours.html" class="internal"><span class="codenumber">3</span> <span class="title">Contours and Lingo</span></a></div>
+<ul class="structural toc-item-list">
+<li class="toc-item toc-section">
+<div class="toc-title-box"><a href="sec_functionnotation.html" class="internal"><span class="codenumber">3.1</span> <span class="title">Function Notation</span></a></div>
+<ul class="structural toc-item-list"><li class="toc-item toc-exercises"><div class="toc-title-box"><a href="sec_functionnotation.html#ex_firstch-intro" class="internal"><span class="codenumber">3.1</span> <span class="title">Exercises</span></a></div></li></ul>
+</li>
+<li class="toc-item toc-section">
+<div class="toc-title-box"><a href="sec_3space.html" class="internal"><span class="codenumber">3.2</span> <span class="title">A Tour of 3-Space</span></a></div>
+<ul class="structural toc-item-list"><li class="toc-item toc-exercises"><div class="toc-title-box"><a href="sec_3space.html#ex_3space" class="internal"><span class="codenumber">3.2</span> <span class="title">Exercises</span></a></div></li></ul>
+</li>
+<li class="toc-item toc-section">
+<div class="toc-title-box"><a href="sec_contour_diagrams.html" class="internal"><span class="codenumber">3.3</span> <span class="title">Contour Diagrams</span></a></div>
+<ul class="structural toc-item-list"><li class="toc-item toc-exercises"><div class="toc-title-box"><a href="sec_contour_diagrams.html#ex_contour_diagrams" class="internal"><span class="codenumber">3.3</span> <span class="title">Exercises</span></a></div></li></ul>
+</li>
+<li class="toc-item toc-section">
+<div class="toc-title-box"><a href="sec_spherical_coords.html" class="internal"><span class="codenumber">3.4</span> <span class="title">Additional Coordinate Systems</span></a></div>
+<ul class="structural toc-item-list">
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="sec_spherical_coords.html#sec_spherical_coords-4" class="internal"><span class="codenumber">3.4.1</span> <span class="title">Polar Coordinates</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="sec_spherical_coords.html#sphericalcoordinatesection" class="internal"><span class="codenumber">3.4.2</span> <span class="title">Spherical Coordinates</span></a></div></li>
+<li class="toc-item toc-exercises"><div class="toc-title-box"><a href="sec_spherical_coords.html#ex_spherical_coords" class="internal"><span class="codenumber">3.4.3</span> <span class="title">Exercises</span></a></div></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toc-item toc-chapter contains-active">
+<div class="toc-title-box"><a href="ch_vectors.html" class="internal"><span class="codenumber">4</span> <span class="title">Modeling Force: Vectors</span></a></div>
+<ul class="structural toc-item-list contains-active">
+<li class="toc-item toc-section">
+<div class="toc-title-box"><a href="sec_displacementvectors.html" class="internal"><span class="codenumber">4.1</span> <span class="title">Displacement Vectors</span></a></div>
+<ul class="structural toc-item-list"><li class="toc-item toc-exercises"><div class="toc-title-box"><a href="sec_displacementvectors.html#ex_sec_displacementvectors" class="internal"><span class="codenumber">4.1</span> <span class="title">Exercises</span></a></div></li></ul>
+</li>
+<li class="toc-item toc-section active">
+<div class="toc-title-box"><a href="sec_dotproduct.html" class="internal"><span class="codenumber">4.2</span> <span class="title">Dot Product</span></a></div>
+<ul class="structural toc-item-list"><li class="toc-item toc-exercises"><div class="toc-title-box"><a href="sec_dotproduct.html#ex_dotproduct" class="internal"><span class="codenumber">4.2</span> <span class="title">Exercises</span></a></div></li></ul>
+</li>
+<li class="toc-item toc-section">
+<div class="toc-title-box"><a href="sec_cross_product.html" class="internal"><span class="codenumber">4.3</span> <span class="title">The Cross Product</span></a></div>
+<ul class="structural toc-item-list"><li class="toc-item toc-exercises"><div class="toc-title-box"><a href="sec_cross_product.html#ex_crossproduct" class="internal"><span class="codenumber">4.3</span> <span class="title">Exercises</span></a></div></li></ul>
+</li>
+</ul>
+</li>
+<li class="toc-item toc-chapter">
+<div class="toc-title-box"><a href="ch-differentiation.html" class="internal"><span class="codenumber">5</span> <span class="title">Rate of Change: Differentiation</span></a></div>
+<ul class="structural toc-item-list">
+<li class="toc-item toc-section">
+<div class="toc-title-box"><a href="sec_partial_differentiation.html" class="internal"><span class="codenumber">5.1</span> <span class="title">Partial Differentiation</span></a></div>
+<ul class="structural toc-item-list">
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="sec_partial_differentiation.html#sec_partial_differentiation-4" class="internal"><span class="codenumber">5.1.1</span> <span class="title">First-order Partial Derivatives</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="sec_partial_differentiation.html#interpretfirstorderpartials" class="internal"><span class="codenumber">5.1.2</span> <span class="title">Interpretations of First-order Partial Derivatives</span></a></div></li>
+<li class="toc-item toc-exercises"><div class="toc-title-box"><a href="sec_partial_differentiation.html#ex_partialdifferentiation" class="internal"><span class="codenumber">5.1.3</span> <span class="title">Exercises</span></a></div></li>
+</ul>
+</li>
+<li class="toc-item toc-section">
+<div class="toc-title-box"><a href="sec_the_gradient.html" class="internal"><span class="codenumber">5.2</span> <span class="title">The Gradient</span></a></div>
+<ul class="structural toc-item-list"><li class="toc-item toc-exercises"><div class="toc-title-box"><a href="sec_the_gradient.html#ex_the_gradient" class="internal"><span class="codenumber">5.2</span> <span class="title">Exercises</span></a></div></li></ul>
+</li>
+<li class="toc-item toc-section">
+<div class="toc-title-box"><a href="sec_chain_rule.html" class="internal"><span class="codenumber">5.3</span> <span class="title">The Chain Rule</span></a></div>
+<ul class="structural toc-item-list"><li class="toc-item toc-exercises"><div class="toc-title-box"><a href="sec_chain_rule.html#ex_chain_rule" class="internal"><span class="codenumber">5.3</span> <span class="title">Exercises</span></a></div></li></ul>
+</li>
+</ul>
+</li>
+<li class="toc-item toc-chapter">
+<div class="toc-title-box"><a href="ch-vectorfields.html" class="internal"><span class="codenumber">6</span> <span class="title">Flow: Vector Fields</span></a></div>
+<ul class="structural toc-item-list">
+<li class="toc-item toc-section">
+<div class="toc-title-box"><a href="sec_vector_fields.html" class="internal"><span class="codenumber">6.1</span> <span class="title">Vector Fields</span></a></div>
+<ul class="structural toc-item-list"><li class="toc-item toc-exercises"><div class="toc-title-box"><a href="sec_vector_fields.html#ex_sec_vectorfields" class="internal"><span class="codenumber">6.1</span> <span class="title">Exercises</span></a></div></li></ul>
+</li>
+<li class="toc-item toc-section">
+<div class="toc-title-box"><a href="sec_circulation.html" class="internal"><span class="codenumber">6.2</span> <span class="title">Circulation</span></a></div>
+<ul class="structural toc-item-list"><li class="toc-item toc-exercises"><div class="toc-title-box"><a href="sec_circulation.html#ex_sec_circulation" class="internal"><span class="codenumber">6.2</span> <span class="title">Exercises</span></a></div></li></ul>
+</li>
+<li class="toc-item toc-section">
+<div class="toc-title-box"><a href="sec_curl.html" class="internal"><span class="codenumber">6.3</span> <span class="title">Curl</span></a></div>
+<ul class="structural toc-item-list"><li class="toc-item toc-exercises"><div class="toc-title-box"><a href="sec_curl.html#ex_sec_curl" class="internal"><span class="codenumber">6.3</span> <span class="title">Exercises</span></a></div></li></ul>
+</li>
+<li class="toc-item toc-section">
+<div class="toc-title-box"><a href="sec_flux.html" class="internal"><span class="codenumber">6.4</span> <span class="title">Flux</span></a></div>
+<ul class="structural toc-item-list"><li class="toc-item toc-exercises"><div class="toc-title-box"><a href="sec_flux.html#ex_sec_flux" class="internal"><span class="codenumber">6.4</span> <span class="title">Exercises</span></a></div></li></ul>
+</li>
+<li class="toc-item toc-section">
+<div class="toc-title-box"><a href="sec_divergence.html" class="internal"><span class="codenumber">6.5</span> <span class="title">Divergence</span></a></div>
+<ul class="structural toc-item-list"><li class="toc-item toc-exercises"><div class="toc-title-box"><a href="sec_divergence.html#ex_sec_divergence" class="internal"><span class="codenumber">6.5</span> <span class="title">Exercises</span></a></div></li></ul>
+</li>
+<li class="toc-item toc-section">
+<div class="toc-title-box"><a href="sec_Laplacian.html" class="internal"><span class="codenumber">6.6</span> <span class="title">The Laplacian</span></a></div>
+<ul class="structural toc-item-list"><li class="toc-item toc-exercises"><div class="toc-title-box"><a href="sec_Laplacian.html#ex_laplacian" class="internal"><span class="codenumber">6.6</span> <span class="title">Exercises</span></a></div></li></ul>
+</li>
+</ul>
+</li>
+<li class="toc-item toc-chapter">
+<div class="toc-title-box"><a href="ch_taylor_polynomials.html" class="internal"><span class="codenumber">7</span> <span class="title">Approximation II: Taylor Polynomials</span></a></div>
+<ul class="structural toc-item-list">
+<li class="toc-item toc-section">
+<div class="toc-title-box"><a href="sec_taylor_polynomials_1var.html" class="internal"><span class="codenumber">7.1</span> <span class="title">Taylor Polynomials in One Variable</span></a></div>
+<ul class="structural toc-item-list">
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="sec_taylor_polynomials_1var.html#sec_taylor_polynomials_1var-4" class="internal"><span class="codenumber">7.1.1</span> <span class="title">Taylor Polynomials of Degree 2</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="sec_taylor_polynomials_1var.html#sec_taylor_polynomials_1var-5" class="internal"><span class="codenumber">7.1.2</span> <span class="title">Taylor Polynomials of Degree <span class="process-math">\(n\)</span></span></a></div></li>
+<li class="toc-item toc-exercises"><div class="toc-title-box"><a href="sec_taylor_polynomials_1var.html#ex_taylor_polynomials_1var" class="internal"><span class="codenumber">7.1.3</span> <span class="title">Exercises</span></a></div></li>
+</ul>
+</li>
+<li class="toc-item toc-section">
+<div class="toc-title-box"><a href="sec_taylor_polynomials_2var.html" class="internal"><span class="codenumber">7.2</span> <span class="title">Taylor Polynomials in Two Variables</span></a></div>
+<ul class="structural toc-item-list">
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="sec_taylor_polynomials_2var.html#sec_taylor_polynomials_2var-4" class="internal"><span class="codenumber">7.2.1</span> <span class="title">Linear Approximations in Two Variables</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="sec_taylor_polynomials_2var.html#sec_taylor_polynomials_2var-5" class="internal"><span class="codenumber">7.2.2</span> <span class="title">Quadratic Approximations in Two Variables</span></a></div></li>
+<li class="toc-item toc-section"><div class="toc-title-box"><a href="sec_taylor_polynomials_2var.html#sec_taylor_polynomials_2var-6" class="internal"><span class="codenumber">7.2.1</span> <span class="title">Translations, Divergence, Vorticity, and Deformation</span></a></div></li>
+<li class="toc-item toc-section"><div class="toc-title-box"><a href="sec_taylor_polynomials_2var.html#sec_taylor_polynomials_2var-7" class="internal"><span class="codenumber">7.2.2</span> <span class="title">Kinematics of the Horizontal Wind Field</span></a></div></li>
+<li class="toc-item toc-exercises"><div class="toc-title-box"><a href="sec_taylor_polynomials_2var.html#ex_taylor_polynomials_2var" class="internal"><span class="codenumber">7.2.5</span> <span class="title">Exercises</span></a></div></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toc-item toc-backmatter">
+<div class="toc-title-box"><a href="backmatter.html" class="internal"><span class="title">Backmatter</span></a></div>
+<ul class="structural toc-item-list">
+<li class="toc-item toc-index"><div class="toc-title-box"><a href="backmatter-2.html" class="internal"><span class="title">Index</span></a></div></li>
+<li class="toc-item toc-colophon"><div class="toc-title-box"><a href="backmatter-3.html" class="internal"><span class="title">Colophon</span></a></div></li>
+</ul>
+</li>
+</ul></nav></div>
+<main class="ptx-main"><div id="ptx-content" class="ptx-content"><section xmlns:pf="https://prefigure.org" class="section" id="sec_dotproduct"><h2 class="heading hide-type">
+<span class="type">Section</span><span class="space"> </span><span class="codenumber">4.2</span><span class="space"> </span><span class="title">Dot Product</span>
+</h2>
+<article class="objectives goal-like" id="sec_dotproduct-2"><h3 class="heading"><span class="type">Motivating Questions</span></h3>
+<ul class="disc" id="sec_dotproduct-2-1">
+<li id="sec_dotproduct-2-1-1"><div class="para" id="sec_dotproduct-2-1-1-1">How can we measure how much two vectors are aligned?</div></li>
+<li id="sec_dotproduct-2-1-2"><div class="para" id="sec_dotproduct-2-1-2-1">How can we quantify advection?</div></li>
+</ul></article><section class="introduction" id="sec_dotproduct-3"><div class="para" id="sec_dotproduct-3-1">
+<dfn class="terminology">Advection</dfn>  is the process of transport of an atmospheric property solely by the mass motion of the atmosphere.  One may also wish to think of it as the rate of change of the value of the advected property at a given point.</div>
+<div class="para" id="sec_dotproduct-3-2">Temperature is an example of an advected property.  Winds transport air parcels from regions of one temperature to regions of a different temperature.  In the process, air masses are warmed or cooled.  <a href="sec_dotproduct.html#advectedtemp925" class="xref" data-knowl="./knowl/xref/advectedtemp925.html" data-reveal-label="Reveal" data-close-label="Close" title="Figure 4.2.1">Figure 4.2.1</a> illustrates temperature advection at 925 mb over the central United States.  Regions shaded in red are being warmed the most; regions shaded blue are being cooled the most.  The rate at which temperature is being advected (or changed) depends on two factors - the temperature gradient and the wind velocity at that location.  For example, in central Iowa, it appears that winds are blowing from the Southeast.  Since there is a strong temperature gradient that points north, warm-air advection will occur.  Conversely, in southeast Nebraska, we see that winds are blowing from the northeast.  Since the temperature gradient points north, cold-air advection will occur. <figure class="figure figure-like" id="advectedtemp925"><div class="image-box" style="width: 90%; margin-left: 5%; margin-right: 5%;"><img src="external/advection_iowa_tadv_925_mar05_2023.jpg" class="contained" alt="Temperature advection over central United States"></div>
+<figcaption><span class="type">Figure</span><span class="space"> </span><span class="codenumber">4.2.1<span class="period">.</span></span><span class="space"> </span>Temperature advection over the central United States. (Source: <a class="external" href="https://spc.noaa.gov" target="_blank">spc.noaa.gov</a><details class="ptx-footnote" aria-live="polite" id="advectedtemp925-1-2"><summary class="ptx-footnote__number" title="Footnote 61"><sup> 61 </sup></summary><div class="ptx-footnote__contents" id="advectedtemp925-1-2"><code class="code-inline tex2jax_ignore">https://spc.noaa.gov</code></div></details>).</figcaption></figure>
+</div>
+<div class="para" id="sec_dotproduct-3-3">Using vectors to quantify both the temperature gradient <span class="process-math">\(\vec{u}_T\)</span> and the horizontal wind velocity <span class="process-math">\(\vec{v}_H\)</span> allows a more precise measure of advection.  What is needed is some mechanism that tells us (a) how aligned these two vectors are and (b) the strength (i.e. the magnitude) of the combined vectors.  A dot product of two vectors will do this.</div>
+<div class="para" id="sec_dotproduct-3-4">The <dfn class="terminology">dot product</dfn>  is a measure of the amount one vector goes in the direction of another.  It is useful to think of it as a way to measure the similarity of two vectors.</div></section><article class="definition definition-like" id="sec_dotproduct-4"><h3 class="heading">
+<span class="type">Definition</span><span class="space"> </span><span class="codenumber">4.2.2</span><span class="period">.</span><span class="space"> </span><span class="title">Geometric Definition of Dot Product.</span>
+</h3>
+<div class="para logical" id="sec_dotproduct-4-2">
+<div class="para">For any two vectors <span class="process-math">\(\vec{v} = v_1\vec{i} + v_2\vec{j}  + v_3\vec{k}\)</span> and <span class="process-math">\(\vec{w} = w_1\vec{i} + w_2\vec{j}  + w_3\vec{k}\text{,}\)</span> we define</div>
+<div class="displaymath process-math">
+\begin{equation*}
+\vec{v} \cdot \vec{w} = \|\vec{v}\| \|\vec{w} \| \cos\theta
+\end{equation*}
+</div>
+<div class="para">where <span class="process-math">\(\theta\)</span> is the angle between <span class="process-math">\(\vec{v}\)</span> and <span class="process-math">\(\vec{w}\)</span>  and <span class="process-math">\(0 \leq \theta \leq \pi\text{.}\)</span>
+</div>
+</div></article><figure class="figure figure-like" id="figure-dotproductdefn"><div class="image-box" style="width: 25%; margin-left: 37.5%; margin-right: 37.5%;"><img src="generated/latex-image/dotproductdefn.svg" role="img" class="contained" alt="The geometric definition of dot product."></div>
+<figcaption><span class="type">Figure</span><span class="space"> </span><span class="codenumber">4.2.3<span class="period">.</span></span><span class="space"> </span>The geometric definition of the dot product: <span class="process-math">\(\vec{v} \cdot \vec{w} = \|\vec{v}\| \|\vec{w} \| \cos\theta\text{.}\)</span></figcaption></figure><div class="para" id="sec_dotproduct-6">Notice that the dot product of two vectors is a number. When two vectors <span class="process-math">\(\vec{v}\)</span> and <span class="process-math">\(\vec{w}\)</span> have the same direction (i.e. <span class="process-math">\(\theta=0\)</span>), <span class="process-math">\(\vec{v} \cdot \vec{w}=\| \vec{v}\| \|\vec{w}\|\text{.}\)</span>  That is, we simply multiply the lengths of the two vectors.  On the other hand, when the vectors are pointing in opposite directions (i.e. <span class="process-math">\(\theta=180^{\circ}\)</span>), we have <span class="process-math">\(\vec{v} \cdot \vec{w}=-\| \vec{v}\| \|\vec{w}\|\text{.}\)</span>  This yields the opposite of the product of the two lengths.  Angles <span class="process-math">\(\theta\)</span> between <span class="process-math">\(0\)</span> and <span class="process-math">\(180^{\circ}\)</span> produce values between these extremes.  The more that vectors <span class="process-math">\(\vec{v}\)</span> and <span class="process-math">\(\vec{w}\)</span> are aligned, the closer the dot product is to the positive extreme <span class="process-math">\(\| \vec{v}\| \|\vec{w}\|\)</span> and the less aligned <span class="process-math">\(\vec{v}\)</span> and <span class="process-math">\(\vec{w}\)</span> are, the closer the dot product is to the negative extreme, <span class="process-math">\(-\| \vec{v}\| \|\vec{w}\|\text{.}\)</span>
+</div>
+<div class="para" id="sec_dotproduct-7">The applet found at <a class="external" href="https://www.geogebra.org/m/N9pvSPf4" target="_blank">www.geogebra.org/m/N9pvSPf4</a><details class="ptx-footnote" aria-live="polite" id="sec_dotproduct-7-2"><summary class="ptx-footnote__number" title="Footnote 62"><sup> 62 </sup></summary><div class="ptx-footnote__contents" id="sec_dotproduct-7-2"><code class="code-inline tex2jax_ignore">https://www.geogebra.org/m/N9pvSPf4</code></div></details> illustrates the above idea well.</div>
+<details id="FirstGeometricDotProduct" class="exercise exercise-like born-hidden-knowl"><summary class="knowl__link"><h3 class="heading">
+<span class="type">Checkpoint</span><span class="space"> </span><span class="codenumber">4.2.4</span><span class="period">.</span><span class="space"> </span><span class="title">Computing a Dot Product - Part I.</span>
+</h3></summary><article class="exercise exercise-like knowl__content"><div class="para" id="FirstGeometricDotProduct-2-1">Suppose <span class="process-math">\(\vec{v} = 3\vec{i}\text{,}\)</span> <span class="process-math">\(\| \vec{w} \| = 4\text{,}\)</span> and <span class="process-math">\({\vec{w}}\)</span> makes a <span class="process-math">\(60^\circ\)</span> angle with the positive <span class="process-math">\(x\)</span>-axis as shown in <a href="sec_dotproduct.html#figure-FirstGeometricDotProduct" class="xref" data-knowl="./knowl/xref/figure-FirstGeometricDotProduct.html" data-reveal-label="Reveal" data-close-label="Close" title="Figure 4.2.5">Figure 4.2.5</a>.  Calculate <span class="process-math">\({\vec{v}} \cdot \vec{w}\)</span> using the geometric definition. <figure class="figure figure-like" id="figure-FirstGeometricDotProduct"><div class="image-box" style="width: 33%; margin-left: 33.5%; margin-right: 33.5%;"><img src="generated/latex-image/FirstGeometricDotProductPic.svg" role="img" class="contained" alt="Computing a Dot Product - Part I."></div>
+<figcaption><span class="type">Figure</span><span class="space"> </span><span class="codenumber">4.2.5<span class="period">.</span></span><span class="space"> </span>Vectors used in <a href="sec_dotproduct.html#FirstGeometricDotProduct" class="xref" data-knowl="./knowl/xref/FirstGeometricDotProduct.html" data-reveal-label="Reveal" data-close-label="Close" title="Checkpoint 4.2.4: Computing a Dot Product - Part I">Checkpoint 4.2.4</a>.</figcaption></figure>
+</div>
+<div class="solutions"><details id="FirstGeometricDotProduct-3" class="answer solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Answer</span><span class="period">.</span></summary><div class="answer solution-like knowl__content"><div class="para" id="FirstGeometricDotProduct-3-1"><span class="process-math">\(\vec{v} \cdot \vec{w} = \| \vec{v} \| \cdot \| \vec{w} \| \cdot \cos\theta = 3 \cdot 4 \cdot \cos(60^{\circ}) = 6\)</span></div></div></details></div></article></details><article class="definition definition-like" id="sec_dotproduct-9"><h3 class="heading">
+<span class="type">Definition</span><span class="space"> </span><span class="codenumber">4.2.6</span><span class="period">.</span><span class="space"> </span><span class="title">Algebraic Definition of Dot Product.</span>
+</h3>
+<span class="process-math">\(\vec{v} = v_1\vec{i} + v_2\vec{j}  + v_3\vec{k}\)</span><span class="process-math">\(\vec{w} = w_1\vec{i} + w_2\vec{j}  + w_3\vec{k}\text{,}\)</span><div class="displaymath process-math">
+\begin{equation*}
+\vec{v} \cdot \vec{w} = v_1w_1 + v_2w_2 + v_3w_3.
+\end{equation*}
+</div></article><div class="para" id="sec_dotproduct-10">The geometric and algebraic definitions can be shown to give the same result by using the law of cosines.  For now, we let the calculation in <a href="sec_dotproduct.html#SecondGeometricDotProduct" class="xref" data-knowl="./knowl/xref/SecondGeometricDotProduct.html" data-reveal-label="Reveal" data-close-label="Close" title="Checkpoint 4.2.7: Computing a Dot Product - Part II">Checkpoint 4.2.7</a> convince us.</div>
+<details id="SecondGeometricDotProduct" class="exercise exercise-like born-hidden-knowl"><summary class="knowl__link"><h3 class="heading">
+<span class="type">Checkpoint</span><span class="space"> </span><span class="codenumber">4.2.7</span><span class="period">.</span><span class="space"> </span><span class="title">Computing a Dot Product - Part II.</span>
+</h3></summary><article class="exercise exercise-like knowl__content"><div class="para" id="SecondGeometricDotProduct-2-1">Suppose <span class="process-math">\(\vec{v} = 3\vec{i}\text{,}\)</span> <span class="process-math">\(\| \vec{w} \| = 4\text{,}\)</span> and <span class="process-math">\({\vec{w}}\)</span> makes a <span class="process-math">\(60^\circ\)</span> angle with the positive <span class="process-math">\(x\)</span>-axis as shown in <a href="sec_dotproduct.html#figure-FirstGeometricDotProduct" class="xref" data-knowl="./knowl/xref/figure-FirstGeometricDotProduct.html" data-reveal-label="Reveal" data-close-label="Close" title="Figure 4.2.5">Figure 4.2.5</a>.  Calculate <span class="process-math">\({\vec{v}} \cdot \vec{w}\)</span> using the algebraic definition.</div>
+<div class="solutions"><details id="SecondGeometricDotProduct-3" class="answer solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Answer</span><span class="period">.</span></summary><div class="answer solution-like knowl__content"><div class="para" id="SecondGeometricDotProduct-3-1">Resolving vector <span class="process-math">\(\vec{w}\)</span> gives <span class="process-math">\(\vec{w} = 4\cos(60^{\circ})\vec{i} + 4\sin(60^{\circ})\vec{j} = 2\vec{i} + 2\sqrt{3}\vec{j}\text{.}\)</span>  It follows that <span class="process-math">\(\vec{v} \cdot \vec{w} = 3 \cdot 2 + 0 \cdot 2\sqrt{3} = 6\text{,}\)</span> just as in <a href="sec_dotproduct.html#FirstGeometricDotProduct" class="xref" data-knowl="./knowl/xref/FirstGeometricDotProduct.html" data-reveal-label="Reveal" data-close-label="Close" title="Checkpoint 4.2.4: Computing a Dot Product - Part I">Checkpoint 4.2.4</a>.</div></div></details></div></article></details><article class="activity project-like" id="AnglesAndSigns"><h3 class="heading">
+<span class="type">Activity</span><span class="space"> </span><span class="codenumber">3</span><span class="period">.</span><span class="space"> </span><span class="title">Angles and Signs.</span>
+</h3>
+<div class="para logical" id="AnglesAndSigns-2"><ol class="lower-alpha" id="AnglesAndSigns-2-1">
+<li id="AnglesAndSigns-2-1-1">Plot the vector <span class="process-math">\(\vec{u} = \vec{i} + 3\vec{j}\)</span> on the grid in <a href="sec_dotproduct.html#AngleAndSignsPic" class="xref" data-knowl="./knowl/xref/AngleAndSignsPic.html" data-reveal-label="Reveal" data-close-label="Close" title="Figure 4.2.8">Figure 4.2.8</a>. <figure class="figure figure-like" id="AngleAndSignsPic"><div class="image-box" style="width: 50%; margin-left: 25%; margin-right: 25%;">
+<img src="generated/latex-image/AngleAndSignsPic2.svg" role="img" class="contained" alt="described in detail following the image" aria-describedby="AngleAndSignsPic2-description"><details class="image-description" aria-live="polite"><summary title="details"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe88e;</span></summary><div id="AngleAndSignsPic2-description">Grid for <a href="sec_dotproduct.html#AnglesAndSigns" class="xref" data-knowl="./knowl/xref/AnglesAndSigns.html" data-reveal-label="Reveal" data-close-label="Close" title="Activity 3: Angles and Signs">Activity 3</a>.</div></details>
+</div>
+<figcaption><span class="type">Figure</span><span class="space"> </span><span class="codenumber">4.2.8<span class="period">.</span></span><span class="space"> </span>Grid for <a href="sec_dotproduct.html#AnglesAndSigns" class="xref" data-knowl="./knowl/xref/AnglesAndSigns.html" data-reveal-label="Reveal" data-close-label="Close" title="Activity 3: Angles and Signs">Activity 3</a>.</figcaption></figure>
+</li>
+<li id="AnglesAndSigns-2-1-2">
+<div class="para" id="AnglesAndSigns-2-1-2-1">For each of the following vectors <span class="process-math">\(\vec{v}\text{,}\)</span> plot the vector on the grid in <a href="sec_dotproduct.html#AngleAndSignsPic" class="xref" data-knowl="./knowl/xref/AngleAndSignsPic.html" data-reveal-label="Reveal" data-close-label="Close" title="Figure 4.2.8">Figure 4.2.8</a> and then compute the dot product <span class="process-math">\(\vec{u} \cdot \vec{v}\text{.}\)</span>
+</div>
+<ol class="lower-roman" id="AnglesAndSigns-2-1-2-2">
+<li id="AnglesAndSigns-2-1-2-2-1"><div class="para" id="p-derived-AnglesAndSigns-2-1-2-2-1"><span class="process-math">\(\displaystyle {\vec{v}} = 3\vec{i} + 2\vec{j}\)</span></div></li>
+<li id="AnglesAndSigns-2-1-2-2-2"><div class="para" id="p-derived-AnglesAndSigns-2-1-2-2-2"><span class="process-math">\(\displaystyle {\vec{v}} = 3\vec{i}\)</span></div></li>
+<li id="AnglesAndSigns-2-1-2-2-3"><div class="para" id="p-derived-AnglesAndSigns-2-1-2-2-3"><span class="process-math">\(\displaystyle {\vec{v}} = 3\vec{i} -\vec{j}\)</span></div></li>
+<li id="AnglesAndSigns-2-1-2-2-4"><div class="para" id="p-derived-AnglesAndSigns-2-1-2-2-4"><span class="process-math">\(\displaystyle {\vec{v}} = 3\vec{i} - 2\vec{j}\)</span></div></li>
+<li id="AnglesAndSigns-2-1-2-2-5"><div class="para" id="p-derived-AnglesAndSigns-2-1-2-2-5"><span class="process-math">\(\displaystyle {\vec{v}} = 3\vec{i} -4\vec{j}\)</span></div></li>
+</ol>
+</li>
+<li id="AnglesAndSigns-2-1-3">Based upon the previous part of this activity, what do you think is the sign of the dot product in the three cases shown in <a href="sec_dotproduct.html#Grid2DotProductActivity" class="xref" data-knowl="./knowl/xref/Grid2DotProductActivity.html" data-reveal-label="Reveal" data-close-label="Close" title="Figure 4.2.9">Figure 4.2.9</a>. <figure class="figure figure-like" id="Grid2DotProductActivity"><div class="image-box" style="width: 75%; margin-left: 12.5%; margin-right: 12.5%;"><img src="generated/latex-image/CasesToConsiderAnglesSigns.svg" role="img" class="contained" alt="Angles to consider."></div>
+<figcaption><span class="type">Figure</span><span class="space"> </span><span class="codenumber">4.2.9<span class="period">.</span></span><span class="space"> </span>Cases to consider for <a href="sec_dotproduct.html#AnglesAndSigns" class="xref" data-knowl="./knowl/xref/AnglesAndSigns.html" data-reveal-label="Reveal" data-close-label="Close" title="Activity 3: Angles and Signs">Activity 3</a>.</figcaption></figure>
+</li>
+</ol></div></article><article class="activity project-like" id="ActivityDiscoverPatternAngle"><h3 class="heading">
+<span class="type">Activity</span><span class="space"> </span><span class="codenumber">4</span><span class="period">.</span><span class="space"> </span><span class="title">Positive, Negative, and Zero Dot Products.</span>
+</h3>
+<div id="momActivityDiscoverPatternAngle-2wrap" style="width:100%;overflow:visible;position:relative"><iframe id="momActivityDiscoverPatternAngle-2" style="position:absolute;z-index:1;object-fit: contain; width: 100%" frameborder="0" data-knowl-callback="sendResizeRequest" src="https://www.myopenmath.com/embedq2.php?id=1328536&amp;frame_id=momActivityDiscoverPatternAngle-2"></iframe></div></article><details id="ThirdDotProduct" class="exercise exercise-like born-hidden-knowl"><summary class="knowl__link"><h3 class="heading">
+<span class="type">Checkpoint</span><span class="space"> </span><span class="codenumber">4.2.10</span><span class="period">.</span><span class="space"> </span><span class="title">Computing Dot Products.</span>
+</h3></summary><article class="exercise exercise-like knowl__content"><div class="para" id="ThirdDotProduct-2-1">Compute <span class="process-math">\(\vec{u} \cdot \vec{v}\)</span> for each pair of vectors shown in <a href="sec_dotproduct.html#figure-ThirdDotProduct" class="xref" data-knowl="./knowl/xref/figure-ThirdDotProduct.html" data-reveal-label="Reveal" data-close-label="Close" title="Figure 4.2.11">Figure 4.2.11</a>. <figure class="figure figure-like" id="figure-ThirdDotProduct"><div class="image-box" style="width: 100%; margin-left: 0%; margin-right: 0%;"><img src="generated/latex-image/ThirdDotProductPic.svg" role="img" class="contained" alt="Computing Dot Products."></div>
+<figcaption><span class="type">Figure</span><span class="space"> </span><span class="codenumber">4.2.11<span class="period">.</span></span><span class="space"> </span>Vectors used in <a href="sec_dotproduct.html#ThirdDotProduct" class="xref" data-knowl="./knowl/xref/ThirdDotProduct.html" data-reveal-label="Reveal" data-close-label="Close" title="Checkpoint 4.2.10: Computing Dot Products">Checkpoint 4.2.10</a>.</figcaption></figure>
+</div>
+<div class="solutions"><details id="ThirdDotProduct-3" class="answer solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Answer</span><span class="period">.</span></summary><div class="answer solution-like knowl__content"><div class="para" id="ThirdDotProduct-3-1">
+<span class="process-math">\(\vec{u} \cdot \vec{v} = 5, 0\text{,}\)</span> and -8 respectively</div></div></details></div></article></details><details id="FourthDotProduct" class="exercise exercise-like born-hidden-knowl"><summary class="knowl__link"><h3 class="heading">
+<span class="type">Checkpoint</span><span class="space"> </span><span class="codenumber">4.2.12</span><span class="period">.</span><span class="space"> </span><span class="title">3D Dot Product.</span>
+</h3></summary><article class="exercise exercise-like knowl__content"><div class="para" id="FourthDotProduct-2-1">Compute <span class="process-math">\(\vec{v} \cdot \vec{w}\)</span> for the pair of vectors shown in <a href="sec_dotproduct.html#figure-FourthDotProduct" class="xref" data-knowl="./knowl/xref/figure-FourthDotProduct.html" data-reveal-label="Reveal" data-close-label="Close" title="Figure 4.2.13">Figure 4.2.13</a>. <figure class="figure figure-like" id="figure-FourthDotProduct"><div class="image-box" style="width: 50%; margin-left: 25%; margin-right: 25%;"><img src="generated/latex-image/FourthDotProductPic.svg" role="img" class="contained" alt="Computing 3D Dot Products."></div>
+<figcaption><span class="type">Figure</span><span class="space"> </span><span class="codenumber">4.2.13<span class="period">.</span></span><span class="space"> </span>Vectors used in <a href="sec_dotproduct.html#FourthDotProduct" class="xref" data-knowl="./knowl/xref/FourthDotProduct.html" data-reveal-label="Reveal" data-close-label="Close" title="Checkpoint 4.2.12: 3D Dot Product">Checkpoint 4.2.12</a>.</figcaption></figure>
+</div>
+<div class="solutions"><details id="FourthDotProduct-3" class="answer solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Answer</span><span class="period">.</span></summary><div class="answer solution-like knowl__content"><div class="para" id="FourthDotProduct-3-1">
+<span class="process-math">\(\vec{v}=-3\vec{j}-5\vec{k}\)</span> and <span class="process-math">\(\vec{w}=3\vec{j}\)</span> so that <span class="process-math">\(\vec{v} \cdot \vec{w} = -9.\)</span>
+</div></div></details></div></article></details><article class="example example-like" id="sec_dotproduct-16"><h3 class="heading">
+<span class="type">Example</span><span class="space"> </span><span class="codenumber">4.2.14</span><span class="period">.</span><span class="space"> </span><span class="title">Mario Kart and Dot Product.</span>
+</h3>
+<div class="para" id="sec_dotproduct-16-2">If you have ever played a game called Mario Kart, you are well-positioned to understand the dot product in action.  To this end, in Mario Kart, there are ``boost pads" that increase your speed.   Imagine the red vector in <a href="sec_dotproduct.html#mariokart" class="xref" data-knowl="./knowl/xref/mariokart.html" data-reveal-label="Reveal" data-close-label="Close" title="Figure 4.2.15">Figure 4.2.15</a> is your speed (<span class="process-math">\(\vec{i}\)</span> and <span class="process-math">\(\vec{j}\)</span> direction), and the blue vector is the orientation of the boost pad (<span class="process-math">\(\vec{i}\)</span> and <span class="process-math">\(\vec{j}\)</span> direction). Larger numbers are more power.  How much boost will you get?</div>
+<figure class="figure figure-like" id="mariokart"><div class="image-box" style="width: 75%; margin-left: 12.5%; margin-right: 12.5%;"><img src="external/mario_kart_vector.jpg" class="contained" alt="mario kart dot product"></div>
+<figcaption><span class="type">Figure</span><span class="space"> </span><span class="codenumber">4.2.15<span class="period">.</span></span><span class="space"> </span>Understanding the dot product through Mario Kart (Source: <a class="external" href="https://betterexplained.com/articles/vector-calculus-understanding-the-dot-product/" target="_blank">betterexplained.com</a><details class="ptx-footnote" aria-live="polite" id="mariokart-1-2"><summary class="ptx-footnote__number" title="Footnote 63"><sup> 63 </sup></summary><div class="ptx-footnote__contents" id="mariokart-1-2"><code class="code-inline tex2jax_ignore">https://betterexplained.com/articles/vector-calculus-understanding-the-dot-product/</code></div></details>).</figcaption></figure><div class="para" id="sec_dotproduct-16-4">Essentially the pad multiplies your speed.</div>
+<ul class="disc" id="sec_dotproduct-16-5">
+<li id="sec_dotproduct-16-5-1"><div class="para" id="p-derived-sec_dotproduct-16-5-1">If you come in going 0, you’ll get nothing [if you are just dropped onto the pad, there’s no boost].</div></li>
+<li id="sec_dotproduct-16-5-2"><div class="para" id="p-derived-sec_dotproduct-16-5-2">If you cross the pad perpendicularly, you’ll get 0.</div></li>
+<li id="sec_dotproduct-16-5-3"><div class="para" id="p-derived-sec_dotproduct-16-5-3">If we have some overlap, our <span class="process-math">\(\vec{i}\)</span>-speed will get an <span class="process-math">\(\vec{i}\)</span>-boost, and our <span class="process-math">\(\vec{j}\)</span>-speed gets a <span class="process-math">\(\vec{j}\)</span>-boost:<div class="displaymath process-math">
+\begin{equation*}
+Total = speed_{\vec{i}} \cdot boost_{\vec{i}} + speed_{\vec{j}} \cdot boost_{\vec{j}}
+\end{equation*}
+</div>
+</div></li>
+</ul>
+<span class="process-math">\(\|a\|\text{,}\)</span><span class="process-math">\(\|b\|\text{.}\)</span><span class="process-math">\(\cos(\theta)\text{,}\)</span><span class="process-math">\(\|a\|\|b\|\cos(\theta)\text{.}\)</span></article><section class="paragraphs" id="sec_dotproduct-17"><h3 class="heading"><span class="title">Advection.</span></h3>
+<div class="para logical" id="sec_dotproduct-17-2">
+<div class="para">Mathematically, temperature advection is the negative of the dot product of the horizontal wind vector <span class="process-math">\(\vec{v}_H\)</span> and the temperature gradient <span class="process-math">\(\vec{u}_T\text{.}\)</span>  That is,</div>
+<div class="displaymath process-math">
+\begin{equation*}
+-\vec{v}_H \cdot \vec{u}_T.
+\end{equation*}
+</div>
+<div class="para">The negative sign is due to the fact that the temperature gradient always points in the direction of higher temperatures.  However, air masses warm (positive advection) when the wind <span class="process-math">\(\vec{v}_H\)</span> is generally pointing in the direction from higher temperatures to lower temperatures.</div>
+</div>
+<div class="para logical" id="sec_dotproduct-17-3">
+<div class="para">We can use this to our advantage in thinking about advection as a rate of change. Then, we see that</div>
+<div class="displaymath process-math">
+\begin{equation*}
+T_{fcst} = T_{curr} + (\Delta T)_{advection}.
+\end{equation*}
+</div>
+<div class="para">That is, the forcast temperature at a given location is the current temperature combined with the temperature change at that location due to advection. Let’s investigate this in 1 and 2 dimensions.</div>
+</div>
+<div class="para logical" id="sec_dotproduct-17-4">
+<div class="para">In one dimension, the horizontal wind vector and the temperature gradient are completely aligned.  This allows us to treat <span class="process-math">\(\vec{v}_H\)</span> and <span class="process-math">\(\vec{u}_T\)</span> as scalars:</div>
+<div class="displaymath process-math" id="sec_dotproduct-17-4-3">
+\begin{align*}
+\frac{T_{fcst} - T_{curr}}{\Delta t} = \mathstrut \amp -\vec{v}_H \cdot \vec{u}_T \\
+= \mathstrut \amp | v_{curr} | \left( \frac{T_{upwind} - T_{downwind}}{\Delta x} \right)
+\end{align*}
+</div>
+<div class="para">where <span class="process-math">\(| v_{curr} |\)</span> is the speed of the horizontal wind and the negative sign has been absorbed into the temperature gradient <span class="process-math">\(\vec{u}_T = \frac{T_{downwind} - T_{upwind}}{\Delta x}\text{.}\)</span>
+</div>
+</div>
+<article class="example example-like" id="sec_dotproduct-17-5"><h4 class="heading">
+<span class="type">Example</span><span class="space"> </span><span class="codenumber">4.2.16</span><span class="period">.</span><span class="space"> </span><span class="title">One-Dimensional Advection.</span>
+</h4>
+<div class="para" id="sec_dotproduct-17-5-2">The current temperature in Jackson, MS, is <span class="process-math">\(21^{\circ}C\text{.}\)</span>  In Memphis, TN (318 km to the north) the current temperature is <span class="process-math">\(15^{\circ}C\text{.}\)</span> The average wind between the two cities is 37 km/hr from the north.  Suppose that the only process affecting temperature is advection and assume the wind stays constant.   We can now determine the temperature in Jackson in 6 hours.</div>
+<div class="para logical" id="sec_dotproduct-17-5-3">
+<div class="para">Mathematically, we model the current wind using a one-dimensional vector (e.g. a scalar), <span class="process-math">\(v_{curr}\text{.}\)</span>  We know that <span class="process-math">\(| v_{curr} | = 37\)</span> km/hr. So,</div>
+<div class="displaymath process-math" id="sec_dotproduct-17-5-3-3">
+\begin{align*}
+\displaystyle T_{fcst} = \mathstrut \amp T_{curr} + \Delta t | v_{curr} | \left( \frac{T_{upwind} - T_{downwind}}{\Delta x} \right) \\
+= \mathstrut \amp 21^{\circ}C + (6 \ hr)(37 \ km/hr)\left( \frac{16^{\circ}C - 21^{\circ}C}{318 \ km} \right) \\
+\approx \mathstrut \amp 17.5^{\circ}C.
+\end{align*}
+</div>
+</div></article><div class="para logical" id="sec_dotproduct-17-6">
+<div class="para">In two dimensions,</div>
+<div class="displaymath process-math">
+\begin{equation*}
+\frac{T_{fcst} - T_{curr}}{\Delta t} = -\vec{v}_H \cdot \vec{u}_T
+\end{equation*}
+</div>
+<div class="para">where <span class="process-math">\(\vec{v}_H\)</span> is the horizontal wind vector and <span class="process-math">\(\vec{u}_T\text{,}\)</span> the horizontal temperature gradient, is also a vector.</div>
+</div>
+<article class="example example-like" id="sec_dotproduct-17-7"><h4 class="heading">
+<span class="type">Example</span><span class="space"> </span><span class="codenumber">4.2.17</span><span class="period">.</span><span class="space"> </span><span class="title">Two-Dimensional Advection.</span>
+</h4>
+<div class="para" id="sec_dotproduct-17-7-2">
+<a href="sec_dotproduct.html#RochesterMN" class="xref" data-knowl="./knowl/xref/RochesterMN.html" data-reveal-label="Reveal" data-close-label="Close" title="Figure 4.2.18">Figure 4.2.18</a> shows current temperatures observed near Rochester, MN.  Suppose the horizontal wind vector is <span class="process-math">\(\vec{v}_H = (36 \ {\rm{km/hr}})\vec{i} -(11 \ {\rm{km/hr}})\vec{j}.\)</span> <figure class="figure figure-like" id="RochesterMN"><div class="image-box" style="width: 75%; margin-left: 12.5%; margin-right: 12.5%;"><img src="generated/latex-image/RochesterMNPic.svg" role="img" class="contained" alt="Two-Dimensional Advection."></div>
+<figcaption><span class="type">Figure</span><span class="space"> </span><span class="codenumber">4.2.18<span class="period">.</span></span><span class="space"> </span>Temperatures near Rochester, MN.  Hammond is 35 km north of Rochester.  Stewartville is 21 km south of Rochester.  Owatonna is 66 km west of Rochester.  Winona is 87 km east of Rochester.</figcaption></figure>
+</div>
+<div class="para logical" id="sec_dotproduct-17-7-3">
+<div class="para">Here,</div>
+<div class="displaymath process-math">
+\begin{equation*}
+\vec{u}_T = \frac{(8.2-9.1)^{\circ}C}{153 \ {\rm{km}}} \vec{i} + \frac{(8.7-8.5)^{\circ}C}{56 \ {\rm{km}}}\vec{j}.
+\end{equation*}
+</div>
+<div class="para">It follows that the temperature advection at Rochester is</div>
+<div class="displaymath process-math" id="sec_dotproduct-17-7-3-2">
+\begin{align*}
+-\vec{v}_H \cdot \vec{u}_T = \mathstrut \amp -\left[(36 \ {\rm{km/hr}})\vec{i} -(11 \ {\rm{km/hr}}) \vec{j}\right] \cdot \left(\frac{-0.9^{\circ}C}{153 \ {\rm{km}}} \vec{i} + \frac{0.2^{\circ}C}{56 \ {\rm{km}}}\vec{j}\right) \\
+= \mathstrut \amp \frac{324}{1530} \frac{^{\circ}C}{\rm{hr}} + \frac{22}{560} \frac{^{\circ}C}{{\rm{hr}}} \\
+\approx \mathstrut \amp 0.25\frac{^{\circ}C}{\rm{hr}}
+\end{align*}
+</div>
+</div>
+<div class="para logical" id="sec_dotproduct-17-7-4">
+<div class="para">If the current temperature at Rochester is <span class="process-math">\(8.5^{\circ}C\text{,}\)</span> the temperature 2 hours from now is given by</div>
+<div class="displaymath process-math" id="sec_dotproduct-17-7-4-2">
+\begin{align*}
+T_{fcst} = \mathstrut \amp T_{curr} + \Delta t(- \vec{v}_H \cdot \vec{u}_T)\\
+\approx \mathstrut \amp 8.5^{\circ}C + (2 \ {\rm{hr}}) \left( 0.25\frac{^{\circ}C}{\rm{hr}}\right)  \\
+= \mathstrut \amp 9.0^{\circ}{C}\text{.}
+\end{align*}
+</div>
+</div></article><div class="para" id="sec_dotproduct-17-8">Advection may refer to more than temperature advection.  In general, advection refers to the horizontal transport of some property of the atmosphere or ocean, such as heat, humidity or salinity.  For example, <dfn class="terminology">moisture advection</dfn> is the horizontal transport of water vapor by the wind.  The advection of dew point can be thought of as moisture advection - found by the dot product of the horizontal wind vector <span class="process-math">\(\vec{v}_H\)</span> and the dewpoint temperature gradient <span class="process-math">\(\vec{u}_{T_d}\text{.}\)</span>
+</div></section><section class="exercises" id="ex_dotproduct"><h3 class="heading hide-type">
+<span class="type">Exercises</span><span class="space"> </span><span class="codenumber"></span><span class="space"> </span><span class="title">Exercises</span>
+</h3>
+<article class="exercise exercise-like" id="GeometricDotProduct"><h4 class="heading">
+<span class="codenumber">1<span class="period">.</span></span><span class="space"> </span><span class="title">Calculating the Dot Product Geometrically.</span>
+</h4>
+<div id="momGeometricDotProduct-2wrap" style="width:100%;overflow:visible;position:relative"><iframe id="momGeometricDotProduct-2" style="position:absolute;z-index:1;object-fit: contain; width: 100%" frameborder="0" data-knowl-callback="sendResizeRequest" src="https://www.myopenmath.com/embedq2.php?id=237672&amp;frame_id=momGeometricDotProduct-2"></iframe></div></article><article class="exercise exercise-like" id="RandomDotProductAlgebraic"><h4 class="heading">
+<span class="codenumber">2<span class="period">.</span></span><span class="space"> </span><span class="title">An Algebraic Dot Product.</span>
+</h4>
+<div id="momRandomDotProductAlgebraic-2wrap" style="width:100%;overflow:visible;position:relative"><iframe id="momRandomDotProductAlgebraic-2" style="position:absolute;z-index:1;object-fit: contain; width: 100%" frameborder="0" data-knowl-callback="sendResizeRequest" src="https://www.myopenmath.com/embedq2.php?id=605512&amp;frame_id=momRandomDotProductAlgebraic-2"></iframe></div></article><article class="exercise exercise-like" id="AngleBetweenVectors"><h4 class="heading">
+<span class="codenumber">3<span class="period">.</span></span><span class="space"> </span><span class="title">Calculating the Angle Between Two Vectors.</span>
+</h4>
+<div id="momAngleBetweenVectors-2wrap" style="width:100%;overflow:visible;position:relative"><iframe id="momAngleBetweenVectors-2" style="position:absolute;z-index:1;object-fit: contain; width: 100%" frameborder="0" data-knowl-callback="sendResizeRequest" src="https://www.myopenmath.com/embedq2.php?id=605513&amp;frame_id=momAngleBetweenVectors-2"></iframe></div></article><article class="exercise exercise-like" id="GeometricDotProduct2"><h4 class="heading">
+<span class="codenumber">4<span class="period">.</span></span><span class="space"> </span><span class="title">Calculating the Dot Product.</span>
+</h4>
+<div id="momGeometricDotProduct2-2wrap" style="width:100%;overflow:visible;position:relative"><iframe id="momGeometricDotProduct2-2" style="position:absolute;z-index:1;object-fit: contain; width: 100%" frameborder="0" data-knowl-callback="sendResizeRequest" src="https://www.myopenmath.com/embedq2.php?id=731848&amp;frame_id=momGeometricDotProduct2-2"></iframe></div></article><article class="exercise exercise-like" id="dotproductbasic"><h4 class="heading">
+<span class="codenumber">5<span class="period">.</span></span><span class="space"> </span><span class="title">Dot Products of Basic Vectors.</span>
+</h4>
+<div class="para logical" id="dotproductbasic-2-1">
+<div class="para">Compute each dot product of <dfn class="terminology">basis vectors</dfn>.</div>
+<ol class="lower-alpha" id="dotproductbasic-2-1-3">
+<li id="dotproductbasic-2-1-3-1"><div class="para" id="p-derived-dotproductbasic-2-1-3-1"><span class="process-math">\(\displaystyle \vec{i} \cdot \vec{j}\)</span></div></li>
+<li id="dotproductbasic-2-1-3-2"><div class="para" id="p-derived-dotproductbasic-2-1-3-2"><span class="process-math">\(\displaystyle \vec{j} \cdot \vec{k}\)</span></div></li>
+<li id="dotproductbasic-2-1-3-3"><div class="para" id="p-derived-dotproductbasic-2-1-3-3"><span class="process-math">\(\displaystyle \vec{k} \cdot \vec{i}\)</span></div></li>
+<li id="dotproductbasic-2-1-3-4"><div class="para" id="p-derived-dotproductbasic-2-1-3-4"><span class="process-math">\(\displaystyle \vec{i} \cdot \vec{i}\)</span></div></li>
+</ol>
+</div>
+<div class="solutions"><details id="dotproductbasic-3" class="answer solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Answer</span><span class="period">.</span></summary><div class="answer solution-like knowl__content"><div class="para logical" id="dotproductbasic-3-1"><ol class="lower-alpha" id="dotproductbasic-3-1-1">
+<li id="dotproductbasic-3-1-1-1"><div class="para" id="p-derived-dotproductbasic-3-1-1-1">0</div></li>
+<li id="dotproductbasic-3-1-1-2"><div class="para" id="p-derived-dotproductbasic-3-1-1-2">0</div></li>
+<li id="dotproductbasic-3-1-1-3"><div class="para" id="p-derived-dotproductbasic-3-1-1-3">0</div></li>
+<li id="dotproductbasic-3-1-1-4"><div class="para" id="p-derived-dotproductbasic-3-1-1-4">1</div></li>
+</ol></div></div></details></div></article><article class="exercise exercise-like" id="DotProductWindVectors"><h4 class="heading">
+<span class="codenumber">6<span class="period">.</span></span><span class="space"> </span><span class="title">Product of Wind Vectors.</span>
+</h4>
+<div class="para" id="DotProductWindVectors-2-1">Compute <span class="process-math">\(\vec{v} \cdot \vec{w}\text{.}\)</span>  What are the units in the resulting value?  Be sure to include units. <figure class="figure figure-like" id="ProductWindVectors"><div class="image-box" style="width: 40%; margin-left: 30%; margin-right: 30%;"><img src="generated/latex-image/ProductWindVectorsPic.svg" role="img" class="contained" alt="Product of Wind Vectors."></div>
+<figcaption><span class="type">Figure</span><span class="space"> </span><span class="codenumber">4.2.19<span class="period">.</span></span><span class="space"> </span>Wind vectors <span class="process-math">\(\vec{v}\)</span> and <span class="process-math">\(\vec{w}\)</span> for <a href="sec_dotproduct.html#DotProductWindVectors" class="xref" data-knowl="./knowl/xref/DotProductWindVectors.html" data-reveal-label="Reveal" data-close-label="Close" title="Exercise 4.2.6: Product of Wind Vectors">Exercise 4.2.6</a>.</figcaption></figure>
+</div>
+<div class="solutions"><details id="DotProductWindVectors-3" class="answer solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Answer</span><span class="period">.</span></summary><div class="answer solution-like knowl__content"><div class="para" id="DotProductWindVectors-3-1">
+<span class="process-math">\(\vec{v} \cdot \vec{w} = (35 \ {\rm{knots}})(15 \ {\rm{knots}}) \cos(75^{\circ}) \approx 136\)</span> square knots!</div></div></details></div></article><article class="exercise exercise-like" id="advectioncentralUS"><h4 class="heading">
+<span class="codenumber">7<span class="period">.</span></span><span class="space"> </span><span class="title">700 mb Temperature Advection.</span>
+</h4>
+<div class="para logical" id="advectioncentralUS-2-1">
+<div class="para">
+<a href="sec_dotproduct.html#advectedtemp700" class="xref" data-knowl="./knowl/xref/advectedtemp700.html" data-reveal-label="Reveal" data-close-label="Close" title="Figure 4.2.20">Figure 4.2.20</a> shows regions of cold-air and warm-air advection at a height of 700 mb. <figure class="figure figure-like" id="advectedtemp700"><div class="image-box" style="width: 90%; margin-left: 5%; margin-right: 5%;"><img src="external/advection_7tad_iowa_mar06_2023.jpg" class="contained" alt="Temperature advection at 700 mb over central United States"></div>
+<figcaption><span class="type">Figure</span><span class="space"> </span><span class="codenumber">4.2.20<span class="period">.</span></span><span class="space"> </span>Temperature advection at 700 mb over the central United States. (Source: <a class="external" href="https://spc.noaa.gov" target="_blank">spc.noaa.gov</a><details class="ptx-footnote" aria-live="polite" id="advectedtemp700-1-2"><summary class="ptx-footnote__number" title="Footnote 64"><sup> 64 </sup></summary><div class="ptx-footnote__contents" id="advectedtemp700-1-2"><code class="code-inline tex2jax_ignore">https://spc.noaa.gov</code></div></details>).</figcaption></figure>
+</div>
+<ol class="lower-alpha" id="advectioncentralUS-2-1-3">
+<li id="advectioncentralUS-2-1-3-1"><div class="para" id="p-derived-advectioncentralUS-2-1-3-1">On approximately which isotherm is Saint Cloud, MN located?  Are the winds parallel or perpendicular to this isotherm here?</div></li>
+<li id="advectioncentralUS-2-1-3-2"><div class="para" id="p-derived-advectioncentralUS-2-1-3-2">Estimate the angle between the temperature gradient <span class="process-math">\(\vec{u}_T\)</span> and the horizontal wind vector <span class="process-math">\(\vec{v}_H\)</span> at Saint Cloud, MN.  If the angle was changed by <span class="process-math">\(30^{\circ}\text{,}\)</span> how would temperature advection at Saint Cloud be impacted?</div></li>
+</ol>
+</div>
+<div class="solutions"><details id="advectioncentralUS-3" class="answer solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Answer</span><span class="period">.</span></summary><div class="answer solution-like knowl__content"><div class="para logical" id="advectioncentralUS-3-1"><ol class="lower-alpha" id="advectioncentralUS-3-1-1">
+<li id="advectioncentralUS-3-1-1-1"><div class="para" id="p-derived-advectioncentralUS-3-1-1-1">
+<span class="process-math">\(-14^{\circ}C\text{;}\)</span> the winds are perpendicular to this isotherm.</div></li>
+<li id="advectioncentralUS-3-1-1-2"><div class="para" id="p-derived-advectioncentralUS-3-1-1-2">The angle between the temperature gradient and the horizontal wind appears to be close to zero (the temperature gradient points south).  This angle maximizes the temperature advection for the given wind speed and temperature gradient.  If the angle differed by <span class="process-math">\(30^{\circ}\text{,}\)</span> there would be less temperature advection at this location.</div></li>
+</ol></div></div></details></div></article><article class="exercise exercise-like" id="AdvectionInNY"><h4 class="heading">
+<span class="codenumber">8<span class="period">.</span></span><span class="space"> </span><span class="title">Advection in New York.</span>
+</h4>
+<div class="para logical" id="AdvectionInNY-2-1">
+<div class="para">
+<a href="sec_dotproduct.html#advectionNYpic" class="xref" data-knowl="./knowl/xref/advectionNYpic.html" data-reveal-label="Reveal" data-close-label="Close" title="Figure 4.2.21">Figure 4.2.21</a> shows temperatures observed at four New York stations at 2000 UTC 21 February 2018 as a strong cold front was moving through the area. <figure class="figure figure-like" id="advectionNYpic"><div class="image-box" style="width: 75%; margin-left: 12.5%; margin-right: 12.5%;"><img src="generated/latex-image/advectioninNYPic.svg" role="img" class="contained" alt="Advection in NY."></div>
+<figcaption><span class="type">Figure</span><span class="space"> </span><span class="codenumber">4.2.21<span class="period">.</span></span><span class="space"> </span>Temperature readings near Glenville, NY used in <a href="sec_dotproduct.html#AdvectionInNY" class="xref" data-knowl="./knowl/xref/AdvectionInNY.html" data-reveal-label="Reveal" data-close-label="Close" title="Exercise 4.2.8: Advection in New York">Exercise 4.2.8</a>.  Edinburg is 65 km north of Voorheesville.  Schaghticoke is 87 km east of Oppenheim.</figcaption></figure>
+</div>
+<ol class="lower-alpha" id="AdvectionInNY-2-1-3">
+<li id="AdvectionInNY-2-1-3-1"><div class="para" id="p-derived-AdvectionInNY-2-1-3-1">Calculate the temperature gradient vector <span class="process-math">\(\vec{u}_T\)</span> at Glenville, NY.  Be sure to include appropriate units.</div></li>
+<li id="AdvectionInNY-2-1-3-2"><div class="para" id="p-derived-AdvectionInNY-2-1-3-2">The horizontal wind vector at this time was<div class="displaymath process-math">
+\begin{equation*}
+\vec{v}_H = (29 \ {\rm{km/hr}})\vec{i} -(7\ {\rm{km/hr}}) \vec{j}.
+\end{equation*}
+</div>Estimate the temperature advection at Glenville, NY.  Be sure to include units in your response.</div></li>
+</ol>
+</div>
+<div class="solutions"><details id="AdvectionInNY-3" class="answer solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Answer</span><span class="period">.</span></summary><div class="answer solution-like knowl__content"><div class="para logical" id="AdvectionInNY-3-1"><ol class="lower-alpha" id="AdvectionInNY-3-1-1">
+<li id="AdvectionInNY-3-1-1-1"><div class="para" id="p-derived-AdvectionInNY-3-1-1-1"><div class="displaymath process-math" id="AdvectionInNY-3-1-1-1-1">
+\begin{gather*}
+\vec{u}_T = \frac{ 20.6^{\circ}C - 8.9^{\circ}C}{87 \ {\rm{km}} }\vec{i} + \frac{14.4^{\circ}C - 19.4^{\circ}C}{65 \ {\rm{km}} }\vec{j} \\
+= 0.1345 \frac{ ^\circ C}{\rm{km}} \vec{i} -0.0769 \frac{^{\circ}C}{\rm{km}}\vec{j}
+\end{gather*}
+</div></div></li>
+<li id="AdvectionInNY-3-1-1-2"><div class="para" id="p-derived-AdvectionInNY-3-1-1-2"><div class="displaymath process-math" id="AdvectionInNY-3-1-1-2-1">
+\begin{align*}
+-\vec{v}_H \cdot \vec{u}_T = \mathstrut \amp -\left[ (29 \ {\rm{km/hr}})\vec{i} -(7 \ {\rm{km/hr}})\vec{j}\right] \cdot \left[ 0.1345 \frac{^{\circ}C}{\rm{km}}\vec{i} -0.0769 \frac{^{\circ}C}{\rm{km}}\vec{j}\right] \\
+= \mathstrut \amp -4.4388 \frac{^\circ C}{\rm{hr}} 
+\end{align*}
+</div></div></li>
+</ol></div></div></details></div></article><article class="exercise exercise-like" id="advectionsartell"><h4 class="heading">
+<span class="codenumber">9<span class="period">.</span></span><span class="space"> </span><span class="title">Advection in Sartell.</span>
+</h4>
+<div class="para" id="advectionsartell-2-1">
+<a href="sec_dotproduct.html#sartell" class="xref" data-knowl="./knowl/xref/sartell.html" data-reveal-label="Reveal" data-close-label="Close" title="Figure 4.2.22">Figure 4.2.22</a> shows horizontal isotherms near Sartell, MN.   The distance between these contours is <span class="process-math">\(100\)</span> nautical miles (nm).  In addition, the horizontal wind vector <span class="process-math">\(\vec{v}_H\)</span> is from <span class="process-math">\(330^{\circ}\)</span> at a speed of <span class="process-math">\(20 \ {\rm{knots}}\text{.}\)</span>
+</div> <figure class="figure figure-like" id="sartell"><div class="image-box" style="width: 50%; margin-left: 25%; margin-right: 25%;"><img src="generated/latex-image/sartellPic.svg" role="img" class="contained" alt="Advection in Sartell."></div>
+<figcaption><span class="type">Figure</span><span class="space"> </span><span class="codenumber">4.2.22<span class="period">.</span></span><span class="space"> </span>Isotherms near Sartell, MN used in <a href="sec_dotproduct.html#advectionsartell" class="xref" data-knowl="./knowl/xref/advectionsartell.html" data-reveal-label="Reveal" data-close-label="Close" title="Exercise 4.2.9: Advection in Sartell">Exercise 4.2.9</a>.</figcaption></figure> <div class="para logical" id="advectionsartell-2-3"><ol class="lower-alpha" id="advectionsartell-2-3-1">
+<li id="advectionsartell-2-3-1-1"><div class="para" id="p-derived-advectionsartell-2-3-1-1">Find a resolution of the temperature gradient vector <span class="process-math">\(\vec{u}_T\)</span> at Sartell, MN.</div></li>
+<li id="advectionsartell-2-3-1-2"><div class="para" id="p-derived-advectionsartell-2-3-1-2">Find a resolution of the horizontal wind vector <span class="process-math">\(\vec{v}_H\text{.}\)</span>
+</div></li>
+<li id="advectionsartell-2-3-1-3"><div class="para" id="p-derived-advectionsartell-2-3-1-3">Estimate the temperature advection at Sartell, MN.  Be sure to include appropriate units in your response.</div></li>
+</ol></div>
+<div class="solutions"><details id="advectionsartell-3" class="answer solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Answer</span><span class="period">.</span></summary><div class="answer solution-like knowl__content"><ol class="lower-alpha" id="advectionsartell-3-1">
+<li id="advectionsartell-3-1-1"><div class="para logical" id="advectionsartell-3-1-1-1">
+<div class="para">Remember that the temperature gradient is always pointed in the direction of the steepest increase.  So the gradient in this case will clearly point in the negative <span class="process-math">\(\vec{j}\)</span> direction.</div>
+<div class="displaymath process-math" id="advectionsartell-3-1-1-1-2">
+\begin{align*}
+\vec{u}_T = \mathstrut \amp \frac{10^{\circ}C - 20^{\circ}C}{100 \ {\rm{nm}}} \vec{j} \\
+= \mathstrut \amp -0.1 \frac{^{\circ}C}{\rm{nm}} \vec{j} 
+\end{align*}
+</div>
+</div></li>
+<li id="advectionsartell-3-1-2"><div class="para logical" id="advectionsartell-3-1-2-1">
+<div class="para">Remember to convert the meteorological angle <span class="process-math">\(\phi_{met}=330^{\circ}\)</span> to a mathematical angle <span class="process-math">\(\phi_{polar} = 270^{\circ}-\phi_{met}\text{.}\)</span>
+</div>
+<div class="displaymath process-math" id="advectionsartell-3-1-2-1-3">
+\begin{align*}
+\vec{v}_H = \mathstrut \amp (20 \ {\rm{knots}})\cos (270^{\circ}-330^{\circ}) \vec{i} + (20 \ {\rm{knots}})\sin (270^{\circ}-330^{\circ}) \vec{j} \\
+\approx \mathstrut \amp (10 \ {\rm{knots}})\vec{i} - (17.3 \ {\rm{knots}})\vec{j} 
+\end{align*}
+</div>
+</div></li>
+<li id="advectionsartell-3-1-3"><div class="para logical" id="advectionsartell-3-1-3-1"><div class="displaymath process-math" id="advectionsartell-3-1-3-1-1">
+\begin{align*}
+-\vec{v}_H \cdot \vec{u}_T \approx \mathstrut \amp -\left[-0.1 \frac{^{\circ}C}{\rm{nm}} \vec{j}\right] \cdot \left[ (10 \ {\rm{knots}})\vec{i} - (17.3 \ {\rm{knots}})\vec{j} \right] \\
+\approx \mathstrut \amp -1.73 \frac{^{\circ}C}{\rm{hr}}
+\end{align*}
+</div></div></li>
+</ol></div></details></div></article><article class="exercise exercise-like" id="advectioncoldspring"><h4 class="heading">
+<span class="codenumber">10<span class="period">.</span></span><span class="space"> </span><span class="title">Temperature Prediction in Cold Spring.</span>
+</h4>
+<div class="para logical" id="advectioncoldspring-2-1">
+<div class="para">
+<a href="sec_dotproduct.html#ColdSpringMNTemp" class="xref" data-knowl="./knowl/xref/ColdSpringMNTemp.html" data-reveal-label="Reveal" data-close-label="Close" title="Figure 4.2.23">Figure 4.2.23</a> shows current temperatures observed near Cold Spring, MN. <figure class="figure figure-like" id="ColdSpringMNTemp"><div class="image-box" style="width: 75%; margin-left: 12.5%; margin-right: 12.5%;"><img src="generated/latex-image/ColdSpringMNTempPic.svg" role="img" class="contained" alt="Current temperatures near Cold Spring, MN."></div>
+<figcaption><span class="type">Figure</span><span class="space"> </span><span class="codenumber">4.2.23<span class="period">.</span></span><span class="space"> </span>Current temperatures at and near Cold Spring, MN for <a href="sec_dotproduct.html#advectioncoldspring" class="xref" data-knowl="./knowl/xref/advectioncoldspring.html" data-reveal-label="Reveal" data-close-label="Close" title="Exercise 4.2.10: Temperature Prediction in Cold Spring">Exercise 4.2.10</a>.  Avon is 21.2 km north of Cold Spring.  Watkins is 16.5 km south of Cold Spring.  Richmond is 8.3 km west of Cold Spring.  Rockville is 8.6 km east of Cold Spring.</figcaption></figure> The horizontal wind vector <span class="process-math">\(\vec{v}_H\)</span> is shown in <a href="sec_dotproduct.html#ColdSpringMNWind" class="xref" data-knowl="./knowl/xref/ColdSpringMNWind.html" data-reveal-label="Reveal" data-close-label="Close" title="Figure 4.2.24">Figure 4.2.24</a>. <figure class="figure figure-like" id="ColdSpringMNWind"><div class="image-box" style="width: 10%; margin-left: 45%; margin-right: 45%;"><img src="generated/latex-image/ColdSpringMNWindPic.svg" role="img" class="contained" alt="Horizontal wind vector near Cold Spring, MN."></div>
+<figcaption><span class="type">Figure</span><span class="space"> </span><span class="codenumber">4.2.24<span class="period">.</span></span><span class="space"> </span>Horizontal wind vector <span class="process-math">\(\vec{v}_H\)</span> near Cold Spring, MN.</figcaption></figure>
+</div>
+<ol class="lower-alpha" id="advectioncoldspring-2-1-6">
+<li id="advectioncoldspring-2-1-6-1"><div class="para" id="p-derived-advectioncoldspring-2-1-6-1">The horizontal wind vector can be written as <span class="process-math">\(u\vec{i} + v\vec{j}\text{.}\)</span>  Determine the values of <span class="process-math">\(u\)</span> and <span class="process-math">\(v\)</span> (in knots).  Then, convert each of these components to units of km/hr.</div></li>
+<li id="advectioncoldspring-2-1-6-2"><div class="para" id="p-derived-advectioncoldspring-2-1-6-2">Compute the temperature advection at Cold Spring.  What will be the temperature at Cold Spring 30 minutes from now?</div></li>
+</ol>
+</div>
+<div class="solutions"><details id="advectioncoldspring-3" class="answer solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Answer</span><span class="period">.</span></summary><div class="answer solution-like knowl__content"><ol class="lower-alpha" id="advectioncoldspring-3-1">
+<li id="advectioncoldspring-3-1-1"><div class="para" id="p-derived-advectioncoldspring-3-1-1">We have<div class="displaymath process-math" id="advectioncoldspring-3-1-1-1">
+\begin{align*}
+\vec{v}_H  = \mathstrut \amp (20 \ {\rm{knots}}) \cos (270^{\circ}-330^{\circ}) \vec{i} + (20 \ {\rm{knots}}) \sin (270^{\circ}-330^{\circ}) \vec{j} \\
+\approx \mathstrut \amp (10 \ {\rm{knots}}) \vec{i} - (17.3 \ {\rm{knots}}) \vec{j} \\
+\approx \mathstrut \amp (18.5 \ {\rm{km/hr}}) \vec{i} - (32.0 \ {\rm{km/hr}}) \vec{j} 
+\end{align*}
+</div>That is, <span class="process-math">\(u=10\)</span> knots and <span class="process-math">\(v \approx -17.3\)</span> knots.</div></li>
+<li id="advectioncoldspring-3-1-2"><div class="para" id="p-derived-advectioncoldspring-3-1-2">Here,<div class="displaymath process-math">
+\begin{equation*}
+\vec{u}_T =  \frac{(-20+21)^{\circ}C}{16.9 \ {\rm{km}}} \vec{i} + \frac{(-21+20)^{\circ}C}{37.7 \ {\rm{km}}} \vec{j}.
+\end{equation*}
+</div>The advection is<div class="displaymath process-math" id="advectioncoldspring-3-1-2-2">
+\begin{align*}
+-\vec{v}_H \cdot \vec{u}_T = \mathstrut \amp - \left(18.5 \frac{m}{\rm{hr}} \vec{i} - 32.0 \frac{m}{\rm{hr}}\vec{j}\right) \cdot \left( \frac{1^{\circ}C}{16.9 \ {\rm{km}}} \vec{i} + \frac{-1^{\circ}C}{37.7 \ {\rm{km}}} \vec{j}\right) \\
+= \mathstrut \amp -1.9 \frac{^{\circ}C}{\rm{hr}} 
+\end{align*}
+</div>Note that this is negative (cooling).  This is mainly since Richmond is so much closer than Avon.  So, in 30 minutes (i.e., 0.5 hours), the temperature in Cold Spring will be<div class="displaymath process-math" id="advectioncoldspring-3-1-2-3">
+\begin{align*}
+T_{fcst} = \mathstrut \amp -20^{\circ}C + (0.5 \ {\rm{hr}})\left(-1.9 \ \frac{^{\circ}C}{\rm{hr}}\right) \\
+= \mathstrut \amp -20.95^{\circ}C.
+\end{align*}
+</div>
+</div></li>
+</ol></div></details></div></article></section></section></div>
+<div class="ptx-content-footer">
+<a class="previous-button button" href="sec_displacementvectors.html" title="Previous"><span xmlns:pf="https://prefigure.org" class="icon material-symbols-outlined" aria-hidden="true">&#xe5cb;</span><span class="name">Prev</span></a><a class="top-button button" href="#" title="Top"><span xmlns:pf="https://prefigure.org" class="icon material-symbols-outlined" aria-hidden="true">&#xe5ce;</span><span class="name">Top</span></a><a class="next-button button" href="sec_cross_product.html" title="Next"><span class="name">Next</span><span xmlns:pf="https://prefigure.org" class="icon material-symbols-outlined" aria-hidden="true">&#xe5cc;</span></a>
+</div></main>
+</div>
+<div id="ptx-page-footer" class="ptx-page-footer">
+<a xmlns:pf="https://prefigure.org" class="pretext-link" href="https://pretextbook.org" title="PreTeXt"><div class="logo"><svg xmlns="http://www.w3.org/2000/svg" width="100%" height="100%" viewBox="338 3000 8772 6866"><g style="stroke-width:.025in; stroke:black; fill:none"><polyline points="472,3590 472,9732 " style="stroke:#000000;stroke-width:174; stroke-linejoin:miter; stroke-linecap:round; "></polyline><path style="stroke:#000000;stroke-width:126;stroke-linecap:butt;" d="M 4724,9448 A 4660 4660  0  0  1  8598  9259"></path><path style="stroke:#000000;stroke-width:174;stroke-linecap:butt;" d="M 4488,9685 A 4228 4228  0  0  0   472  9732"></path><path style="stroke:#000000;stroke-width:126;stroke-linecap:butt;" d="M 4724,3590 A 4241 4241  0  0  1  8598  3496"></path><path style="stroke:#000000;stroke-width:126;stroke-linecap:round;" d="M 850,3496  A 4241 4241  0  0  1  4724  3590"></path><path style="stroke:#000000;stroke-width:126;stroke-linecap:round;" d="M 850,9259  A 4507 4507  0  0  1  4724  9448"></path><polyline points="5385,4299 4062,8125" style="stroke:#000000;stroke-width:300; stroke-linejoin:miter; stroke-linecap:round;"></polyline><polyline points="8598,3496 8598,9259" style="stroke:#000000;stroke-width:126; stroke-linejoin:miter; stroke-linecap:round;"></polyline><polyline points="850,3496 850,9259" style="stroke:#000000;stroke-width:126; stroke-linejoin:miter; stroke-linecap:round;"></polyline><polyline points="4960,9685 4488,9685" style="stroke:#000000;stroke-width:174; stroke-linejoin:miter; stroke-linecap:round;"></polyline><polyline points="3070,4582 1889,6141 3070,7700" style="stroke:#000000;stroke-width:300; stroke-linejoin:miter; stroke-linecap:round;"></polyline><polyline points="6418,4582 7600,6141 6418,7700" style="stroke:#000000;stroke-width:300; stroke-linejoin:miter; stroke-linecap:round;"></polyline><polyline points="8976,3590 8976,9732" style="stroke:#000000;stroke-width:174; stroke-linejoin:miter; stroke-linecap:round;"></polyline><path style="stroke:#000000;stroke-width:174;stroke-linecap:butt;" d="M 4960,9685 A 4228 4228  0  0  1  8976  9732"></path></g></svg></div></a><a xmlns:pf="https://prefigure.org" class="runestone-link" href="https://runestone.academy" title="Runestone Academy"><img class="logo" src="https://runestone.academy/runestone/static/images/RAIcon_cropped.png"></a><a xmlns:pf="https://prefigure.org" class="mathjax-link" href="https://www.mathjax.org" title="MathJax"><img class="logo" src="https://www.mathjax.org/badge/badge-square-2.png"></a>
+</div>
+</body>
+</html>

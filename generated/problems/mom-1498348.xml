@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<myopenmath xmlns:pi="http://pretextbook.org/2020/pretext/internal" id="1498348">
+<statement>
+<p>Find the first 4 non-zero terms of the Taylor polynomial centered at <m>\displaystyle{x}={0}</m> for <m>\displaystyle{f{{\left({x}\right)}}}={e}^{{{2}{x}}}</m>.</p>
+<p><fillin characters="20" />  
+</p>
+
+</statement>
+<solution>
+<p><ul><li><m>\displaystyle{1}+{2}{x}+{2}{x}^{{2}}+\frac{{4}}{{3}}{x}^{{3}}</m></li></ul></p>
+</solution>
+</myopenmath>
+
