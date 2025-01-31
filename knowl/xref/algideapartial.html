@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en-US" dir="ltr">
+<!--********************************************-->
+<!--*       Generated from PreTeXt source      *-->
+<!--*                                          *-->
+<!--*         https://pretextbook.org          *-->
+<!--*                                          *-->
+<!--********************************************-->
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<meta name="robots" content="noindex, nofollow">
+</head>
+<body class="ignore-math">
+<article class="example example-like"><h4 class="heading">
+<span class="type">Example</span><span xmlns:pf="https://prefigure.org" class="space"> </span><span class="codenumber">5.1.9</span><span xmlns:pf="https://prefigure.org" class="period">.</span><span xmlns:pf="https://prefigure.org" class="space"> </span><span class="title">Algebraic Computation of the Partial Derivative.</span>
+</h4>
+<div xmlns:pf="https://prefigure.org" class="para logical">
+<div class="para">Once again we are interested in knowing how fast the dependent variable <span class="process-math">\(z\)</span> changes with respect to a change in the independent variable <span class="process-math">\(y\)</span> when <span class="process-math">\(z = f(x,y) = 9-x^2-y^2\text{.}\)</span>  Further, we are interested in this change at the moment that <span class="process-math">\(x=1, y=2\text{,}\)</span> and <span class="process-math">\(z=4\text{.}\)</span>  We limit our interest to the rate as <span class="process-math">\(y\)</span> changes; we hold the value of <span class="process-math">\(x\)</span> constant at <span class="process-math">\(x=1\text{.}\)</span>  We evaluate the difference quotient</div>
+<div class="displaymath process-math" data-contains-math-knowls="./knowl/xref/PartialYParaboloid.html ./knowl/xref/numericalideapartial.html">
+\begin{align*}
+\frac{\Delta z}{\Delta y}  = \mathstrut \amp \frac{f(x,y+\Delta y)-f(x,y)}{\Delta y} \\
+= \mathstrut \amp \frac{(9-x^2-(y+\Delta y)^2) - (9-x^2-y^2)}{\Delta y}. 
+\end{align*}
+</div>
+<div class="para">When we then fix <span class="process-math">\(x=1\)</span> and let <span class="process-math">\(\Delta y \rightarrow 0\text{,}\)</span> the partial derivative emerges.  That is,</div>
+<div class="displaymath process-math" data-contains-math-knowls="./knowl/xref/PartialYParaboloid.html ./knowl/xref/numericalideapartial.html">
+\begin{align*}
+\frac{\partial f}{\partial y}(1,2) \mathstrut \amp \lim_{\Delta y \rightarrow 0} \frac{\Delta z}{\Delta y}\\
+= \mathstrut \amp \lim_{\Delta y \rightarrow 0}\frac{f(1,y+\Delta y)-f(1,y)}{\Delta y}  \\
+= \mathstrut \amp \lim_{\Delta y \rightarrow 0}\frac{(8-(y+\Delta y)^2) - (8-y^2)}{\Delta y} \\
+= \mathstrut \amp -2y.
+\end{align*}
+</div>
+<div class="para">When <span class="process-math">\(y=2\text{,}\)</span> we see that <span class="process-math">\(\frac{\partial f}{\partial y}(1,2)=-4\text{.}\)</span>  Compare this result to those in <a href="sec_partial_differentiation.html#PartialYParaboloid" class="xref" data-knowl="./knowl/xref/PartialYParaboloid.html" data-reveal-label="Reveal" data-close-label="Close" title="Checkpoint 5.1.4: Discovering the Value of \frac{\partial f}{\partial y}">Checkpoint 5.1.4</a> and <a href="sec_partial_differentiation.html#numericalideapartial" class="xref" data-knowl="./knowl/xref/numericalideapartial.html" data-reveal-label="Reveal" data-close-label="Close" title="Example 5.1.6: Numerical Estimation of the Partial Derivative">Example 5.1.6</a>.  Also, note how closely this calculation resembles that of computing <span class="process-math">\(g'(2)\)</span> when <span class="process-math">\(g(y) = 8-y^2\text{.}\)</span>
+</div>
+</div></article><span class="incontext"><a class="internal" href="sec_partial_differentiation.html#algideapartial">in-context</a></span>
+</body>
+</html>

@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en-US">
+<!--********************************************-->
+<!--*       Generated from PreTeXt source      *-->
+<!--*                                          *-->
+<!--*         https://pretextbook.org          *-->
+<!--*                                          *-->
+<!--********************************************-->
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<meta name="robots" content="noindex, nofollow">
+</head>
+<body class="ignore-math"><article class="example example-like"><p>Suppose the temperature (in <span class="process-math">\(^{\circ}C\)</span>) is given by the function <span class="process-math">\(T(x,y)\)</span> whose contours are shown in <a href="" class="xref" data-knowl="./knowl/RateOfChangeContours1.html" title="Figure 3.3.7">Figure 3.3.7</a> (<span class="process-math">\(x, y\)</span> are in kilometers).  If you consider how your location corresponds to points in the <span class="process-math">\(xy\)</span>-plane, you know that when you pass the point <span class="process-math">\((2,1)\text{,}\)</span> your velocity vector is <span class="process-math">\(-\vec{i} + 2\vec{j}\)</span> (km/hr).  We estimate the rate of change of your temperature, <span class="process-math">\(\frac{dT}{dt}\text{,}\)</span> when passing through <span class="process-math">\((2,1)\text{.}\)</span></p>
+<figure class="figure figure-like"><div class="image-box" style="width: 50%; margin-left: 25%; margin-right: 25%;"><img src="external/fig_10_3_activity_contour.svg" role="img" class="contained"></div>
+<figcaption><span class="type">Figure</span><span class="space"> </span><span class="codenumber">3.3.7<span class="period">.</span></span><span class="space"> </span>Contours for the temperature <span class="process-math">\(T\)</span> of <a href="" class="xref" data-knowl="./knowl/ChainRuleContours.html" title="Example 3.3.6: A Warming Path">Example 3.3.6</a>.  Source:<a class="external" href="https://activecalculus.org/multi/S-10-5-Chain-Rule.html" target="_blank">activecalculus.org</a><a href="" class="fn-knowl original" data-knowl="./knowl/fn-27-hidden.html" title="Footnote 3.3.1"><sup> 1 </sup></a></figcaption></figure><p>First, note that the dependence diagram from <a href="" class="xref" data-knowl="./knowl/ChainRule1.html" title="Example 3.3.4: The Chain Rule for P = f(x,y) x=g(t) y=h(t)">Example 3.3.4</a> with <span class="process-math">\(T\)</span> replacing variable <span class="process-math">\(P\)</span> applies here.  We have</p>
+<div class="displaymath process-math" data-contains-math-knowls="./knowl/ChainRule1.html">
+\begin{equation*}
+\frac{dT}{dt} =  \frac{\partial{T}}{\partial{x}} \frac{dx}{dt}  + \frac{\partial{T}}{\partial{y}} \frac{dy}{dt}.
+\end{equation*}
+</div>
+<p class="continuation">Next, note that when <span class="process-math">\(x = 2\)</span> and <span class="process-math">\(y=-1\text{,}\)</span> the velocity vector tells us that <span class="process-math">\(\frac{dx}{dt} = -1\)</span> and <span class="process-math">\(\frac{dy}{dt} = 2\text{.}\)</span>  Using the contours, we can estimate <span class="process-math">\(\frac{\partial T}{\partial x} \approx \frac{\Delta T}{\Delta x}\)</span> and <span class="process-math">\(\frac{\partial T}{\partial y} \approx \frac{\Delta T}{\Delta y}\)</span> to obtain</p>
+<div class="displaymath process-math" data-contains-math-knowls="./knowl/ChainRule1.html">
+\begin{align*}
+\frac{dT}{dt} = \mathstrut \amp \frac{\partial{T}}{\partial{x}} \frac{dx}{dt}  + \frac{\partial{T}}{\partial{y}} \frac{dy}{dt} \\
+\approx \mathstrut \amp \left( \frac{2-4}{3-1.5}  \right)\frac{^{\circ}C}{km} \cdot \frac{dx}{dt} + \left( \frac{4-2}{1.75-0.25} \right)\frac{^{\circ}C}{km} \cdot \frac{dy}{dt} \\
+\approx \mathstrut \amp (-1.33 ^{\circ}C/km)\left(-1 \ \frac{km}{hr}\right) + (1.33 ^{\circ}C/km)\left(2 \ \frac{km}{hr}\right) \\
+\approx \mathstrut \amp 4 \ \frac{^{\circ}C}{hr}.
+\end{align*}
+</div>
+<p class="continuation">This tells us that as we move in the direction of velocity vector at <span class="process-math">\((2,1)\text{,}\)</span> the temperature will rise (which is clear from the contour map).  But it also tells us how quickly the temperature will rise.  Moreover, you can see the contributions to this rate of change that come from our movement in the horizontal direction (1.33 <span class="process-math">\(^{\circ}C/hr\)</span>) and our movement in the vertical direction (2.66 <span class="process-math">\(^{\circ}C/hr\)</span>).  We warm as we move west, but we warm even faster, roughly twice as fast, as we move north.</p></article></body>
+</html>

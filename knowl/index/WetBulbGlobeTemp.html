@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en-US" dir="ltr">
+<!--********************************************-->
+<!--*       Generated from PreTeXt source      *-->
+<!--*                                          *-->
+<!--*         https://pretextbook.org          *-->
+<!--*                                          *-->
+<!--********************************************-->
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<meta name="robots" content="noindex, nofollow">
+</head>
+<body class="ignore-math">
+<article class="exercise exercise-like"><h4 class="heading">
+<span class="type">Exercise</span><span xmlns:pf="https://prefigure.org" class="space"> </span><span class="codenumber">16<span xmlns:pf="https://prefigure.org" class="period">.</span></span><span xmlns:pf="https://prefigure.org" class="space"> </span><span class="title">Wet Bulb Globe Temperature.</span>
+</h4>
+<div xmlns:pf="https://prefigure.org" class="para logical">
+<div class="para">The <dfn class="terminology">wet bulb globe temperature</dfn>, or WBGT, is an envrionmental monitoring measure introduced in the early 1950’s in response to heat casualties occurring in the United States armed forces.  WBGT utilizes ambient temperature, relative humidity, wind, and solar radiation from the sun to get a composite value that can be used when monitoring environmental conditions during exercise in the heat.  More specifically,</div>
+<div class="displaymath process-math">
+\begin{equation*}
+{\rm{WBGT}}(T_w, T_g, T_d) = 0.7T_w + 0.2T_g + 0.1T_d
+\end{equation*}
+</div>
+<div class="para">where <span class="process-math">\(T_w\)</span> is the wet bulb temperature (indicating humidity), <span class="process-math">\(T_g\)</span> is the globe temperature (indicating radiant heat), and <span class="process-math">\(T_d\)</span> is the ambient air (dry) temperature.  Here, each of <span class="process-math">\(T_w, T_g\text{,}\)</span> and <span class="process-math">\(T_d\)</span> are measured in degrees Celsius.</div>
+</div> <ol class="lower-alpha" id="WetBulbGlobeTemp-2-2">
+<li><div xmlns:pf="https://prefigure.org" class="para">In what units is WBGT measured?</div></li>
+<li><div xmlns:pf="https://prefigure.org" class="para">Calculate <span class="process-math">\(\frac{\partial {\rm{WBGT}}}{\partial T_w}\text{.}\)</span>  Be sure to include units on this value.  Then, interpret this value’s meaning.</div></li>
+<li>
+<div xmlns:pf="https://prefigure.org" class="para">In some instances when a WBGT monitoring device is unavailable, a chart as in <a href="sec_partial_differentiation.html#WBGTchart" class="xref" data-knowl="./knowl/xref/WBGTchart.html" data-reveal-label="Reveal" data-close-label="Close" title="Figure 5.1.29">Figure 5.1.29</a> can be used to estimate WBGT. These are estimates and are derived only from using temperature <span class="process-math">\(T\)</span> (in <span class="process-math">\(^{\circ}C\)</span>) and relative humidity <span class="process-math">\(RH\)</span> (as a percent) and the chart accounts for full sunshine and light wind conditions.  Depending on the radiant heat load from the sun and the wind, the actual WBGT reading could be different from what is on the chart.</div>
+<figure class="figure figure-like"><div xmlns:pf="https://prefigure.org" class="image-box" style="width: 75%; margin-left: 12.5%; margin-right: 12.5%;"><img src="external/WBGT-Chart.jpg" class="contained" alt="WBGT chart."></div>
+<figcaption xmlns:pf="https://prefigure.org"><span class="type">Figure</span><span class="space"> </span><span class="codenumber">5.1.29<span class="period">.</span></span><span class="space"> </span>Wet Bulb Globe Temperature (WBGT). (Source: <a class="external" href="https://ksi.uconn.edu/prevention/wet-bulb-globe-temperature-monitoring/" target="_blank">The Korey Stringer Institute</a><details class="ptx-footnote" aria-live="polite" id="WBGTchart-1-2"><summary class="ptx-footnote__number" title="Footnote 75"><sup> 75 </sup></summary><div class="ptx-footnote__contents" id="WBGTchart-1-2"><code class="code-inline tex2jax_ignore">https://ksi.uconn.edu/prevention/wet-bulb-globe-temperature-monitoring/</code></div></details>).</figcaption></figure><div xmlns:pf="https://prefigure.org" class="para">The chart gives <span class="process-math">\({\rm{WBGT}}(T,RH)\text{.}\)</span>  Use a central difference to estimate the value of <span class="process-math">\(\frac{\partial{\rm{WBGT}}}{\partial T}(30,95)\text{.}\)</span>  Be sure include units.  Then, interpret the meaning of this value.</div>
+</li>
+</ol>
+<div class="solutions"><details xmlns:pf="https://prefigure.org" class="answer solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Answer</span><span class="period">.</span></summary><div class="answer solution-like knowl__content"><ol class="lower-alpha" id="WetBulbGlobeTemp-3-1">
+<li><div class="para">Degrees Celsius</div></li>
+<li><div class="para">
+<span class="process-math">\(\frac{\partial {\rm{WBGT}}}{\partial T_w} = 0.7 \frac{^{\circ}C}{^{\circ}C}\text{.}\)</span>  This value tells us that for each 1 degree increase in the wet bulb temperature, with both <span class="process-math">\(T_g\)</span> and <span class="process-math">\(T_d\)</span> held constant, we can expect a <span class="process-math">\(0.7^{\circ}C\)</span> increase in WBGT.</div></li>
+<li><div class="para logical">
+<div class="displaymath process-math">
+\begin{align*}
+\frac{\partial{\rm{WBGT}}}{\partial T}(30,95) \approx \mathstrut \amp \frac{38^{\circ}C - 35^{\circ}C}{31^{\circ}C - 29^{\circ}C}\\
+= \mathstrut \amp 1.5\frac{^{\circ}C}{^{\circ}C}
+\end{align*}
+</div>
+<div class="para">We take this to mean that when the temperature is <span class="process-math">\(30^{\circ}\)</span> and the relative humidity is 95%, then when the temperature increases <span class="process-math">\(1^{\circ}C\)</span> and the relative humidity stays constant, the WBGT measure increases by <span class="process-math">\(1.5^{\circ}C\text{.}\)</span>
+</div>
+</div></li>
+</ol></div></details></div></article><span class="incontext"><a class="internal" href="sec_partial_differentiation.html#WetBulbGlobeTemp">in-context</a></span>
+</body>
+</html>

@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<myopenmath xmlns:pi="http://pretextbook.org/2020/pretext/internal" id="471858">
+<statement>
+<p>
+Consider the points, <m>\displaystyle{A}{\left(-{3},{2},{3}\right)}</m>, <m>\displaystyle{B}{\left({4},{1},-{2}\right)}</m>, and <m>\displaystyle{C}{\left({0},-{2},{0}\right)}</m>.</p>
+<p>
+Find the area of the parallelogram, <m>\displaystyle{A}{B}{C}{D}</m> with adjacent sides <m>\displaystyle\vec{{{A}{B}}}</m> and <m>\displaystyle\vec{{{A}{C}}}</m>. Give your answer in exact form.</p>
+<p>
+Area of the parallelogram <m>\displaystyle=</m> <fillin characters="8" />    </p>
+</statement>
+<solution>
+<p><ul><li><m>\displaystyle{5}\sqrt{{{38}}}</m></li></ul></p>
+</solution>
+</myopenmath>
+

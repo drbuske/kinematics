@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<myopenmath xmlns:pi="http://pretextbook.org/2020/pretext/internal" id="605513">
+<statement>
+<p>
+Let <m>\displaystyle\vec{{a}}=</m> <m>\displaystyle-{3}\vec{{i}}+{4}\vec{{j}}</m> and <m>\displaystyle\vec{{b}}=</m> <m>\displaystyle{0}\vec{{i}}-\vec{{j}}</m>.</p>
+<p>
+Find the angle between the vectors, in degrees (to the nearest tenth of a degree).</p>
+<p>
+<fillin characters="5" /> °    
+</p>
+</statement>
+<solution>
+<p><ul><li>143.13010235416</li></ul></p>
+</solution>
+</myopenmath>
+

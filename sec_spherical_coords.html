@@ -1,0 +1,1242 @@
+<!DOCTYPE html>
+<!--********************************************-->
+<!--*       Generated from PreTeXt source      *-->
+<!--*                                          *-->
+<!--*         https://pretextbook.org          *-->
+<!--*                                          *-->
+<!--********************************************-->
+<html lang="en-US" dir="ltr">
+<head xmlns:og="http://ogp.me/ns#" xmlns:book="https://ogp.me/ns/book#">
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<title>Additional Coordinate Systems</title>
+<meta name="Keywords" content="Authored in PreTeXt">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta xmlns:pf="https://prefigure.org" property="og:type" content="book">
+<meta xmlns:pf="https://prefigure.org" property="book:title" content="Mathematics of Atmospheric Kinematics">
+<meta xmlns:pf="https://prefigure.org" property="book:author" content="Dale Buske">
+<script>
+var runestoneMathReady = new Promise((resolve) => window.rsMathReady = resolve);
+window.MathJax = {
+  "tex": {
+    "inlineMath": [
+      [
+        "\\(",
+        "\\)"
+      ]
+    ],
+    "tags": "none",
+    "tagSide": "right",
+    "tagIndent": ".8em",
+    "packages": {
+      "[+]": [
+        "base",
+        "extpfeil",
+        "ams",
+        "amscd",
+        "color",
+        "newcommand",
+        "knowl"
+      ]
+    }
+  },
+  "options": {
+    "ignoreHtmlClass": "tex2jax_ignore|ignore-math",
+    "processHtmlClass": "process-math",
+    "renderActions": {
+      "findScript": [
+        10,
+        function (doc) {
+            document.querySelectorAll('script[type^="math/tex"]').forEach(function(node) {
+                var display = !!node.type.match(/; *mode=display/);
+                var math = new doc.options.MathItem(node.textContent, doc.inputJax[0], display);
+                var text = document.createTextNode('');
+                node.parentNode.replaceChild(text, node);
+                math.start = {node: text, delim: '', n: 0};
+                math.end = {node: text, delim: '', n: 0};
+                doc.math.push(math);
+            });
+        },
+        ""
+      ]
+    }
+  },
+  "chtml": {
+    "scale": 0.98,
+    "mtextInheritFont": true
+  },
+  "loader": {
+    "load": [
+      "input/asciimath",
+      "[tex]/extpfeil",
+      "[tex]/amscd",
+      "[tex]/color",
+      "[tex]/newcommand",
+      "[pretext]/mathjaxknowl3.js"
+    ],
+    "paths": {
+      "pretext": "_static/pretext/js/lib"
+    }
+  },
+  "startup": {
+    pageReady() {
+      return MathJax.startup.defaultPageReady().then(function () {
+      console.log("in ready function");
+      rsMathReady();
+      }
+    )}
+  }
+};
+</script><script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js"></script><script src="_static/pretext/js/pretext-webwork/2.17/pretext-webwork.js"></script><script src="https://webwork-ptx.aimath.org/webwork2_files/node_modules/iframe-resizer/js/iframeResizer.min.js"></script><script src="_static/pretext/js/lti_iframe_resizer.js"></script><script src="https://cdnjs.cloudflare.com/ajax/libs/lunr.js/2.3.9/lunr.min.js" integrity="sha512-4xUl/d6D6THrAnXAwGajXkoWaeMNwEKK4iNfq5DotEbLPAfk6FSxSP3ydNxqDgCw1c/0Z1Jg6L8h2j+++9BZmg==" crossorigin="anonymous" referrerpolicy="no-referrer"></script><script src="lunr-pretext-search-index.js" async=""></script><script src="_static/pretext/js/pretext_search.js"></script><link href="_static/pretext/css/pretext_search.css" rel="stylesheet" type="text/css">
+<script src="_static/pretext/js/lib/jquery.min.js"></script><script src="_static/pretext/js/lib/jquery.sticky.js"></script><script src="_static/pretext/js/lib/jquery.espy.min.js"></script><script src="_static/pretext/js/pretext.js"></script><script src="_static/pretext/js/pretext_add_on.js?x=1"></script><script src="_static/pretext/js/user_preferences.js"></script><script src="_static/pretext/js/lib/knowl.js"></script><!--knowl.js code controls Sage Cells within knowls--><script>sagecellEvalName='Evaluate (Sage)';
+</script><link xmlns:pf="https://prefigure.org" rel="preconnect" href="https://fonts.googleapis.com">
+<link xmlns:pf="https://prefigure.org" rel="preconnect" href="https://fonts.gstatic.com" crossorigin="">
+<link xmlns:pf="https://prefigure.org" href="https://fonts.googleapis.com/css2?family=Inconsolata:wght@400;700&amp;family=Noto+Serif:ital,wght@0,400;0,700;1,400;1,700&amp;family=Tinos:ital,wght@0,400;0,700;1,400;1,700&amp;display=swap" rel="stylesheet">
+<link xmlns:pf="https://prefigure.org" href="https://fonts.cdnfonts.com/css/dejavu-serif" rel="stylesheet">
+<link xmlns:pf="https://prefigure.org" href="https://fonts.googleapis.com/css2?family=Roboto+Serif:opsz,wdth,wght@8..144,50..150,100..900&amp;display=swap" rel="stylesheet">
+<link xmlns:pf="https://prefigure.org" href="https://fonts.googleapis.com/css2?family=Open+Sans:wdth,wght@75..100,300..800&amp;display=swap" rel="stylesheet">
+<link xmlns:pf="https://prefigure.org" rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200">
+<script src="https://cdn.geogebra.org/apps/deployggb.js"></script><link href="_static/pretext/css/pretext.css" rel="stylesheet" type="text/css">
+<link href="_static/pretext/css/pretext_add_on.css" rel="stylesheet" type="text/css">
+<link href="_static/pretext/css/shell_default.css" rel="stylesheet" type="text/css">
+<link href="_static/pretext/css/banner_default.css" rel="stylesheet" type="text/css">
+<link href="_static/pretext/css/navbar_default.css" rel="stylesheet" type="text/css">
+<link href="_static/pretext/css/toc_default.css" rel="stylesheet" type="text/css">
+<link href="_static/pretext/css/knowls_default.css" rel="stylesheet" type="text/css">
+<link href="_static/pretext/css/style_default.css" rel="stylesheet" type="text/css">
+<link href="_static/pretext/css/colors_blue_red.css" rel="stylesheet" type="text/css">
+<link href="_static/pretext/css/setcolors.css" rel="stylesheet" type="text/css">
+<!--** eBookCongig is necessary to configure interactive       **-->
+<!--** Runestone components to run locally in reader's browser **-->
+<!--** No external communication:                              **-->
+<!--**     log level is 0, Runestone Services are disabled     **-->
+<script type="text/javascript">
+eBookConfig = {};
+eBookConfig.useRunestoneServices = false;
+eBookConfig.host = 'http://127.0.0.1:8000';
+eBookConfig.course = 'PTX_Course_Title_Here';
+eBookConfig.basecourse = 'PTX_Base_Course';
+eBookConfig.isLoggedIn = false;
+eBookConfig.email = '';
+eBookConfig.isInstructor = false;
+eBookConfig.logLevel = 0;
+eBookConfig.username = '';
+eBookConfig.readings = null;
+eBookConfig.activities = null;
+eBookConfig.downloadsEnabled = false;
+eBookConfig.allow_pairs = false;
+eBookConfig.enableScratchAC = false;
+eBookConfig.build_info = "";
+eBookConfig.python3 = null;
+eBookConfig.runestone_version = '7.4.5';
+eBookConfig.jobehost = '';
+eBookConfig.proxyuri_runs = '';
+eBookConfig.proxyuri_files = '';
+eBookConfig.enable_chatcodes =  false;
+</script>
+<!--*** Runestone Services ***-->
+<script src="_static/prefix-runtime.a28db57f2b9be365.bundle.js"></script><script src="_static/prefix-347.8328b60515045466.bundle.js"></script><script src="_static/prefix-runestone.0143ee6c5ca7e162.bundle.js"></script><link rel="stylesheet" type="text/css" href="_static/prefix-347.f9add1ca35d5ad93.css">
+<link rel="stylesheet" type="text/css" href="_static/prefix-runestone.82759e13f7f711fa.css">
+<style>
+#ez-Norman1999-Sounding-2-3 { counter-set: ez-Norman1999-Sounding-2-3 0; }
+#ez-Norman1999-Sounding-2-3 > li::marker { content: ""counter(ez-Norman1999-Sounding-2-3,lower-alpha)"."; }
+#ez-Norman1999-Sounding-2-3 > li { counter-increment: ez-Norman1999-Sounding-2-3; }
+#ez-Norman1999-Sounding-3-1 { counter-set: ez-Norman1999-Sounding-3-1 0; }
+#ez-Norman1999-Sounding-3-1 > li::marker { content: ""counter(ez-Norman1999-Sounding-3-1,lower-alpha)"."; }
+#ez-Norman1999-Sounding-3-1 > li { counter-increment: ez-Norman1999-Sounding-3-1; }
+#ez-Midwest-Derecho-2-3 { counter-set: ez-Midwest-Derecho-2-3 0; }
+#ez-Midwest-Derecho-2-3 > li::marker { content: ""counter(ez-Midwest-Derecho-2-3,lower-alpha)"."; }
+#ez-Midwest-Derecho-2-3 > li { counter-increment: ez-Midwest-Derecho-2-3; }
+#ez-Midwest-Derecho-3-1-1 { counter-set: ez-Midwest-Derecho-3-1-1 0; }
+#ez-Midwest-Derecho-3-1-1 > li::marker { content: ""counter(ez-Midwest-Derecho-3-1-1,lower-alpha)"."; }
+#ez-Midwest-Derecho-3-1-1 > li { counter-increment: ez-Midwest-Derecho-3-1-1; }
+#ez-MPX2023-Sounding-2-4 { counter-set: ez-MPX2023-Sounding-2-4 0; }
+#ez-MPX2023-Sounding-2-4 > li::marker { content: ""counter(ez-MPX2023-Sounding-2-4,lower-alpha)"."; }
+#ez-MPX2023-Sounding-2-4 > li { counter-increment: ez-MPX2023-Sounding-2-4; }
+#ez-MPX2023-Sounding-3-1 { counter-set: ez-MPX2023-Sounding-3-1 0; }
+#ez-MPX2023-Sounding-3-1 > li::marker { content: ""counter(ez-MPX2023-Sounding-3-1,lower-alpha)"."; }
+#ez-MPX2023-Sounding-3-1 > li { counter-increment: ez-MPX2023-Sounding-3-1; }
+#ez-Davenport-Sounding-2-4 { counter-set: ez-Davenport-Sounding-2-4 0; }
+#ez-Davenport-Sounding-2-4 > li::marker { content: ""counter(ez-Davenport-Sounding-2-4,lower-alpha)"."; }
+#ez-Davenport-Sounding-2-4 > li { counter-increment: ez-Davenport-Sounding-2-4; }
+#ez-Davenport-Sounding-3-1 { counter-set: ez-Davenport-Sounding-3-1 0; }
+#ez-Davenport-Sounding-3-1 > li::marker { content: ""counter(ez-Davenport-Sounding-3-1,lower-alpha)"."; }
+#ez-Davenport-Sounding-3-1 > li { counter-increment: ez-Davenport-Sounding-3-1; }
+#ez-identifyAwTB-2-2 { counter-set: ez-identifyAwTB-2-2 0; }
+#ez-identifyAwTB-2-2 > li::marker { content: ""counter(ez-identifyAwTB-2-2,lower-alpha)"."; }
+#ez-identifyAwTB-2-2 > li { counter-increment: ez-identifyAwTB-2-2; }
+#ez-identifyAwTB-3-1 { counter-set: ez-identifyAwTB-3-1 0; }
+#ez-identifyAwTB-3-1 > li::marker { content: ""counter(ez-identifyAwTB-3-1,lower-alpha)"."; }
+#ez-identifyAwTB-3-1 > li { counter-increment: ez-identifyAwTB-3-1; }
+#ez-SeattleSun-2-4 { counter-set: ez-SeattleSun-2-4 0; }
+#ez-SeattleSun-2-4 > li::marker { content: ""counter(ez-SeattleSun-2-4,lower-alpha)"."; }
+#ez-SeattleSun-2-4 > li { counter-increment: ez-SeattleSun-2-4; }
+#ez-SeattleSun-2-4-3-2 { counter-set: ez-SeattleSun-2-4-3-2 0; }
+#ez-SeattleSun-2-4-3-2 > li::marker { content: ""counter(ez-SeattleSun-2-4-3-2,lower-roman)"."; }
+#ez-SeattleSun-2-4-3-2 > li { counter-increment: ez-SeattleSun-2-4-3-2; }
+#ez-SeattleSun-3-1 { counter-set: ez-SeattleSun-3-1 0; }
+#ez-SeattleSun-3-1 > li::marker { content: ""counter(ez-SeattleSun-3-1,lower-alpha)"."; }
+#ez-SeattleSun-3-1 > li { counter-increment: ez-SeattleSun-3-1; }
+#ez-SeattleSun-3-1-3-1 { counter-set: ez-SeattleSun-3-1-3-1 0; }
+#ez-SeattleSun-3-1-3-1 > li::marker { content: ""counter(ez-SeattleSun-3-1-3-1,lower-roman)"."; }
+#ez-SeattleSun-3-1-3-1 > li { counter-increment: ez-SeattleSun-3-1-3-1; }
+#ModelingLowTempRio-2-4 { counter-set: ModelingLowTempRio-2-4 0; }
+#ModelingLowTempRio-2-4 > li::marker { content: ""counter(ModelingLowTempRio-2-4,lower-alpha)"."; }
+#ModelingLowTempRio-2-4 > li { counter-increment: ModelingLowTempRio-2-4; }
+#ModelingLowTempRio-3-1 { counter-set: ModelingLowTempRio-3-1 0; }
+#ModelingLowTempRio-3-1 > li::marker { content: ""counter(ModelingLowTempRio-3-1,lower-alpha)"."; }
+#ModelingLowTempRio-3-1 > li { counter-increment: ModelingLowTempRio-3-1; }
+#ModelingLowHighTempStCloud-2-4 { counter-set: ModelingLowHighTempStCloud-2-4 0; }
+#ModelingLowHighTempStCloud-2-4 > li::marker { content: ""counter(ModelingLowHighTempStCloud-2-4,lower-alpha)"."; }
+#ModelingLowHighTempStCloud-2-4 > li { counter-increment: ModelingLowHighTempStCloud-2-4; }
+#ModelingLowHighTempStCloud-3-1 { counter-set: ModelingLowHighTempStCloud-3-1 0; }
+#ModelingLowHighTempStCloud-3-1 > li::marker { content: ""counter(ModelingLowHighTempStCloud-3-1,lower-alpha)"."; }
+#ModelingLowHighTempStCloud-3-1 > li { counter-increment: ModelingLowHighTempStCloud-3-1; }
+#ex_geo_heights_45S-2-4 { counter-set: ex_geo_heights_45S-2-4 0; }
+#ex_geo_heights_45S-2-4 > li::marker { content: ""counter(ex_geo_heights_45S-2-4,lower-alpha)"."; }
+#ex_geo_heights_45S-2-4 > li { counter-increment: ex_geo_heights_45S-2-4; }
+#ex_geo_heights_45S-3-1 { counter-set: ex_geo_heights_45S-3-1 0; }
+#ex_geo_heights_45S-3-1 > li::marker { content: ""counter(ex_geo_heights_45S-3-1,lower-alpha)"."; }
+#ex_geo_heights_45S-3-1 > li { counter-increment: ex_geo_heights_45S-3-1; }
+#GeopotentialHeightsAt35N-2-4 { counter-set: GeopotentialHeightsAt35N-2-4 0; }
+#GeopotentialHeightsAt35N-2-4 > li::marker { content: ""counter(GeopotentialHeightsAt35N-2-4,lower-alpha)"."; }
+#GeopotentialHeightsAt35N-2-4 > li { counter-increment: GeopotentialHeightsAt35N-2-4; }
+#GeopotentialHeightsAt35N-3-1 { counter-set: GeopotentialHeightsAt35N-3-1 0; }
+#GeopotentialHeightsAt35N-3-1 > li::marker { content: ""counter(GeopotentialHeightsAt35N-3-1,lower-alpha)"."; }
+#GeopotentialHeightsAt35N-3-1 > li { counter-increment: GeopotentialHeightsAt35N-3-1; }
+#USweathermap-2-2-2 { counter-set: USweathermap-2-2-2 0; }
+#USweathermap-2-2-2 > li::marker { content: ""counter(USweathermap-2-2-2,lower-alpha)""; }
+#USweathermap-2-2-2 > li { counter-increment: USweathermap-2-2-2; }
+#USweathermap-3-1-1 { counter-set: USweathermap-3-1-1 0; }
+#USweathermap-3-1-1 > li::marker { content: ""counter(USweathermap-3-1-1,lower-alpha)""; }
+#USweathermap-3-1-1 > li { counter-increment: USweathermap-3-1-1; }
+#windchillexercise-2-1-8 { counter-set: windchillexercise-2-1-8 0; }
+#windchillexercise-2-1-8 > li::marker { content: ""counter(windchillexercise-2-1-8,lower-alpha)"."; }
+#windchillexercise-2-1-8 > li { counter-increment: windchillexercise-2-1-8; }
+#windchillexercise-3-1-1 { counter-set: windchillexercise-3-1-1 0; }
+#windchillexercise-3-1-1 > li::marker { content: ""counter(windchillexercise-3-1-1,lower-alpha)"."; }
+#windchillexercise-3-1-1 > li { counter-increment: windchillexercise-3-1-1; }
+#snowfall1-2-1-7 { counter-set: snowfall1-2-1-7 0; }
+#snowfall1-2-1-7 > li::marker { content: ""counter(snowfall1-2-1-7,lower-alpha)"."; }
+#snowfall1-2-1-7 > li { counter-increment: snowfall1-2-1-7; }
+#snowfall1-3-1-1 { counter-set: snowfall1-3-1-1 0; }
+#snowfall1-3-1-1 > li::marker { content: ""counter(snowfall1-3-1-1,lower-alpha)"."; }
+#snowfall1-3-1-1 > li { counter-increment: snowfall1-3-1-1; }
+#UHI1-2-1-15 { counter-set: UHI1-2-1-15 0; }
+#UHI1-2-1-15 > li::marker { content: ""counter(UHI1-2-1-15,lower-alpha)"."; }
+#UHI1-2-1-15 > li { counter-increment: UHI1-2-1-15; }
+#UHI1-3-1-1 { counter-set: UHI1-3-1-1 0; }
+#UHI1-3-1-1 > li::marker { content: ""counter(UHI1-3-1-1,lower-alpha)"."; }
+#UHI1-3-1-1 > li { counter-increment: UHI1-3-1-1; }
+#dewpoint-2-1-7 { counter-set: dewpoint-2-1-7 0; }
+#dewpoint-2-1-7 > li::marker { content: ""counter(dewpoint-2-1-7,lower-alpha)""; }
+#dewpoint-2-1-7 > li { counter-increment: dewpoint-2-1-7; }
+#dewpoint-3-1-1 { counter-set: dewpoint-3-1-1 0; }
+#dewpoint-3-1-1 > li::marker { content: ""counter(dewpoint-3-1-1,lower-alpha)""; }
+#dewpoint-3-1-1 > li { counter-increment: dewpoint-3-1-1; }
+#hdwindexexercise-2-1-5 { counter-set: hdwindexexercise-2-1-5 0; }
+#hdwindexexercise-2-1-5 > li::marker { content: ""counter(hdwindexexercise-2-1-5,lower-alpha)""; }
+#hdwindexexercise-2-1-5 > li { counter-increment: hdwindexexercise-2-1-5; }
+#hdwindexexercise-3-1-1 { counter-set: hdwindexexercise-3-1-1 0; }
+#hdwindexexercise-3-1-1 > li::marker { content: ""counter(hdwindexexercise-3-1-1,lower-alpha)""; }
+#hdwindexexercise-3-1-1 > li { counter-increment: hdwindexexercise-3-1-1; }
+#MyFrostbite-2-3-1 { counter-set: MyFrostbite-2-3-1 0; }
+#MyFrostbite-2-3-1 > li::marker { content: ""counter(MyFrostbite-2-3-1,lower-alpha)""; }
+#MyFrostbite-2-3-1 > li { counter-increment: MyFrostbite-2-3-1; }
+#Plotting3D2-2-1-2 { counter-set: Plotting3D2-2-1-2 0; }
+#Plotting3D2-2-1-2 > li::marker { content: ""counter(Plotting3D2-2-1-2,lower-alpha)""; }
+#Plotting3D2-2-1-2 > li { counter-increment: Plotting3D2-2-1-2; }
+#Plotting3D2-3-1-1 { counter-set: Plotting3D2-3-1-1 0; }
+#Plotting3D2-3-1-1 > li::marker { content: ""counter(Plotting3D2-3-1-1,lower-alpha)""; }
+#Plotting3D2-3-1-1 > li { counter-increment: Plotting3D2-3-1-1; }
+#Ez-9-1-2-2-1-7 { counter-set: Ez-9-1-2-2-1-7 0; }
+#Ez-9-1-2-2-1-7 > li::marker { content: ""counter(Ez-9-1-2-2-1-7,lower-alpha)"."; }
+#Ez-9-1-2-2-1-7 > li { counter-increment: Ez-9-1-2-2-1-7; }
+#Ez-9-1-2-3-1-1 { counter-set: Ez-9-1-2-3-1-1 0; }
+#Ez-9-1-2-3-1-1 > li::marker { content: ""counter(Ez-9-1-2-3-1-1,lower-alpha)"."; }
+#Ez-9-1-2-3-1-1 > li { counter-increment: Ez-9-1-2-3-1-1; }
+#Ez-9-1-2-4-1-1 { counter-set: Ez-9-1-2-4-1-1 0; }
+#Ez-9-1-2-4-1-1 > li::marker { content: ""counter(Ez-9-1-2-4-1-1,lower-alpha)"."; }
+#Ez-9-1-2-4-1-1 > li { counter-increment: Ez-9-1-2-4-1-1; }
+#PlottingWA-2-1-1 { counter-set: PlottingWA-2-1-1 0; }
+#PlottingWA-2-1-1 > li::marker { content: ""counter(PlottingWA-2-1-1,lower-alpha)"."; }
+#PlottingWA-2-1-1 > li { counter-increment: PlottingWA-2-1-1; }
+#PlottingWA-3-1 { counter-set: PlottingWA-3-1 0; }
+#PlottingWA-3-1 > li::marker { content: ""counter(PlottingWA-3-1,lower-alpha)"."; }
+#PlottingWA-3-1 > li { counter-increment: PlottingWA-3-1; }
+#contoursandgraphs-2-2-1 { counter-set: contoursandgraphs-2-2-1 0; }
+#contoursandgraphs-2-2-1 > li::marker { content: ""counter(contoursandgraphs-2-2-1,lower-alpha)"."; }
+#contoursandgraphs-2-2-1 > li { counter-increment: contoursandgraphs-2-2-1; }
+#contoursandgraphs-3-1 { counter-set: contoursandgraphs-3-1 0; }
+#contoursandgraphs-3-1 > li::marker { content: ""counter(contoursandgraphs-3-1,lower-alpha)"."; }
+#contoursandgraphs-3-1 > li { counter-increment: contoursandgraphs-3-1; }
+#winchillcontours-2-3 { counter-set: winchillcontours-2-3 0; }
+#winchillcontours-2-3 > li::marker { content: ""counter(winchillcontours-2-3,lower-alpha)"."; }
+#winchillcontours-2-3 > li { counter-increment: winchillcontours-2-3; }
+#winchillcontours-3-1 { counter-set: winchillcontours-3-1 0; }
+#winchillcontours-3-1 > li::marker { content: ""counter(winchillcontours-3-1,lower-alpha)"."; }
+#winchillcontours-3-1 > li { counter-increment: winchillcontours-3-1; }
+#levelsetsin3d-2-1-1 { counter-set: levelsetsin3d-2-1-1 0; }
+#levelsetsin3d-2-1-1 > li::marker { content: ""counter(levelsetsin3d-2-1-1,lower-alpha)"."; }
+#levelsetsin3d-2-1-1 > li { counter-increment: levelsetsin3d-2-1-1; }
+#levelsetsin3d-3-1 { counter-set: levelsetsin3d-3-1 0; }
+#levelsetsin3d-3-1 > li::marker { content: ""counter(levelsetsin3d-3-1,lower-alpha)"."; }
+#levelsetsin3d-3-1 > li { counter-increment: levelsetsin3d-3-1; }
+#PA-7B-3-2-2 { counter-set: PA-7B-3-2-2 0; }
+#PA-7B-3-2-2 > li::marker { content: ""counter(PA-7B-3-2-2,lower-alpha)"."; }
+#PA-7B-3-2-2 > li { counter-increment: PA-7B-3-2-2; }
+#PA-7B-3-3-1-1 { counter-set: PA-7B-3-3-1-1 0; }
+#PA-7B-3-3-1-1 > li::marker { content: ""counter(PA-7B-3-3-1-1,lower-alpha)"."; }
+#PA-7B-3-3-1-1 > li { counter-increment: PA-7B-3-3-1-1; }
+#ez-sphericalp2r-2-2 { counter-set: ez-sphericalp2r-2-2 0; }
+#ez-sphericalp2r-2-2 > li::marker { content: ""counter(ez-sphericalp2r-2-2,lower-alpha)"."; }
+#ez-sphericalp2r-2-2 > li { counter-increment: ez-sphericalp2r-2-2; }
+#ez-sphericalp2r-3-1 { counter-set: ez-sphericalp2r-3-1 0; }
+#ez-sphericalp2r-3-1 > li::marker { content: ""counter(ez-sphericalp2r-3-1,lower-alpha)"."; }
+#ez-sphericalp2r-3-1 > li { counter-increment: ez-sphericalp2r-3-1; }
+#rectangulartopolar4-2-1-1 { counter-set: rectangulartopolar4-2-1-1 0; }
+#rectangulartopolar4-2-1-1 > li::marker { content: ""counter(rectangulartopolar4-2-1-1,lower-alpha)"."; }
+#rectangulartopolar4-2-1-1 > li { counter-increment: rectangulartopolar4-2-1-1; }
+#rectangulartopolar4-3-1 { counter-set: rectangulartopolar4-3-1 0; }
+#rectangulartopolar4-3-1 > li::marker { content: ""counter(rectangulartopolar4-3-1,lower-alpha)"."; }
+#rectangulartopolar4-3-1 > li { counter-increment: rectangulartopolar4-3-1; }
+#PA_11_8-2 { counter-set: PA_11_8-2 0; }
+#PA_11_8-2 > li::marker { content: ""counter(PA_11_8-2,lower-alpha)"."; }
+#PA_11_8-2 > li { counter-increment: PA_11_8-2; }
+#A_11_8_7-1-1 { counter-set: A_11_8_7-1-1 0; }
+#A_11_8_7-1-1 > li::marker { content: ""counter(A_11_8_7-1-1,lower-alpha)"."; }
+#A_11_8_7-1-1 > li { counter-increment: A_11_8_7-1-1; }
+#ez-CartesianToSpherical-2-1-1 { counter-set: ez-CartesianToSpherical-2-1-1 0; }
+#ez-CartesianToSpherical-2-1-1 > li::marker { content: ""counter(ez-CartesianToSpherical-2-1-1,lower-alpha)"."; }
+#ez-CartesianToSpherical-2-1-1 > li { counter-increment: ez-CartesianToSpherical-2-1-1; }
+#ez-CartesianToSpherical-3-1 { counter-set: ez-CartesianToSpherical-3-1 0; }
+#ez-CartesianToSpherical-3-1 > li::marker { content: ""counter(ez-CartesianToSpherical-3-1,lower-alpha)"."; }
+#ez-CartesianToSpherical-3-1 > li { counter-increment: ez-CartesianToSpherical-3-1; }
+#ez-CartesianToSpherical-4-1 { counter-set: ez-CartesianToSpherical-4-1 0; }
+#ez-CartesianToSpherical-4-1 > li::marker { content: ""counter(ez-CartesianToSpherical-4-1,lower-alpha)"."; }
+#ez-CartesianToSpherical-4-1 > li { counter-increment: ez-CartesianToSpherical-4-1; }
+#sec_displacementvectors-25-3-1-2-2 { counter-set: sec_displacementvectors-25-3-1-2-2 0; }
+#sec_displacementvectors-25-3-1-2-2 > li::marker { content: ""counter(sec_displacementvectors-25-3-1-2-2,lower-alpha)"."; }
+#sec_displacementvectors-25-3-1-2-2 > li { counter-increment: sec_displacementvectors-25-3-1-2-2; }
+#horizontalwindvector-2-1-1 { counter-set: horizontalwindvector-2-1-1 0; }
+#horizontalwindvector-2-1-1 > li::marker { content: ""counter(horizontalwindvector-2-1-1,lower-alpha)"."; }
+#horizontalwindvector-2-1-1 > li { counter-increment: horizontalwindvector-2-1-1; }
+#horizontalwindvector-3-1 { counter-set: horizontalwindvector-3-1 0; }
+#horizontalwindvector-3-1 > li::marker { content: ""counter(horizontalwindvector-3-1,lower-alpha)"."; }
+#horizontalwindvector-3-1 > li { counter-increment: horizontalwindvector-3-1; }
+#ResolveVector-2-1-1 { counter-set: ResolveVector-2-1-1 0; }
+#ResolveVector-2-1-1 > li::marker { content: ""counter(ResolveVector-2-1-1,lower-alpha)"."; }
+#ResolveVector-2-1-1 > li { counter-increment: ResolveVector-2-1-1; }
+#ResolveVector-3-1-1 { counter-set: ResolveVector-3-1-1 0; }
+#ResolveVector-3-1-1 > li::marker { content: ""counter(ResolveVector-3-1-1,lower-alpha)"."; }
+#ResolveVector-3-1-1 > li { counter-increment: ResolveVector-3-1-1; }
+#directionsandvectors-2-1-3 { counter-set: directionsandvectors-2-1-3 0; }
+#directionsandvectors-2-1-3 > li::marker { content: ""counter(directionsandvectors-2-1-3,lower-alpha)"."; }
+#directionsandvectors-2-1-3 > li { counter-increment: directionsandvectors-2-1-3; }
+#directionsandvectors-3-1 { counter-set: directionsandvectors-3-1 0; }
+#directionsandvectors-3-1 > li::marker { content: ""counter(directionsandvectors-3-1,lower-alpha)"."; }
+#directionsandvectors-3-1 > li { counter-increment: directionsandvectors-3-1; }
+#meanwindvectors0-2-2-6 { counter-set: meanwindvectors0-2-2-6 0; }
+#meanwindvectors0-2-2-6 > li::marker { content: ""counter(meanwindvectors0-2-2-6,lower-alpha)"."; }
+#meanwindvectors0-2-2-6 > li { counter-increment: meanwindvectors0-2-2-6; }
+#meanwindvectors0-3-1-1 { counter-set: meanwindvectors0-3-1-1 0; }
+#meanwindvectors0-3-1-1 > li::marker { content: ""counter(meanwindvectors0-3-1-1,lower-alpha)"."; }
+#meanwindvectors0-3-1-1 > li { counter-increment: meanwindvectors0-3-1-1; }
+#AnglesAndSigns-2-1 { counter-set: AnglesAndSigns-2-1 0; }
+#AnglesAndSigns-2-1 > li::marker { content: ""counter(AnglesAndSigns-2-1,lower-alpha)"."; }
+#AnglesAndSigns-2-1 > li { counter-increment: AnglesAndSigns-2-1; }
+#AnglesAndSigns-2-1-2-2 { counter-set: AnglesAndSigns-2-1-2-2 0; }
+#AnglesAndSigns-2-1-2-2 > li::marker { content: ""counter(AnglesAndSigns-2-1-2-2,lower-roman)"."; }
+#AnglesAndSigns-2-1-2-2 > li { counter-increment: AnglesAndSigns-2-1-2-2; }
+#dotproductbasic-2-1-3 { counter-set: dotproductbasic-2-1-3 0; }
+#dotproductbasic-2-1-3 > li::marker { content: ""counter(dotproductbasic-2-1-3,lower-alpha)"."; }
+#dotproductbasic-2-1-3 > li { counter-increment: dotproductbasic-2-1-3; }
+#dotproductbasic-3-1-1 { counter-set: dotproductbasic-3-1-1 0; }
+#dotproductbasic-3-1-1 > li::marker { content: ""counter(dotproductbasic-3-1-1,lower-alpha)"."; }
+#dotproductbasic-3-1-1 > li { counter-increment: dotproductbasic-3-1-1; }
+#advectioncentralUS-2-1-3 { counter-set: advectioncentralUS-2-1-3 0; }
+#advectioncentralUS-2-1-3 > li::marker { content: ""counter(advectioncentralUS-2-1-3,lower-alpha)"."; }
+#advectioncentralUS-2-1-3 > li { counter-increment: advectioncentralUS-2-1-3; }
+#advectioncentralUS-3-1-1 { counter-set: advectioncentralUS-3-1-1 0; }
+#advectioncentralUS-3-1-1 > li::marker { content: ""counter(advectioncentralUS-3-1-1,lower-alpha)"."; }
+#advectioncentralUS-3-1-1 > li { counter-increment: advectioncentralUS-3-1-1; }
+#AdvectionInNY-2-1-3 { counter-set: AdvectionInNY-2-1-3 0; }
+#AdvectionInNY-2-1-3 > li::marker { content: ""counter(AdvectionInNY-2-1-3,lower-alpha)"."; }
+#AdvectionInNY-2-1-3 > li { counter-increment: AdvectionInNY-2-1-3; }
+#AdvectionInNY-3-1-1 { counter-set: AdvectionInNY-3-1-1 0; }
+#AdvectionInNY-3-1-1 > li::marker { content: ""counter(AdvectionInNY-3-1-1,lower-alpha)"."; }
+#AdvectionInNY-3-1-1 > li { counter-increment: AdvectionInNY-3-1-1; }
+#advectionsartell-2-3-1 { counter-set: advectionsartell-2-3-1 0; }
+#advectionsartell-2-3-1 > li::marker { content: ""counter(advectionsartell-2-3-1,lower-alpha)"."; }
+#advectionsartell-2-3-1 > li { counter-increment: advectionsartell-2-3-1; }
+#advectionsartell-3-1 { counter-set: advectionsartell-3-1 0; }
+#advectionsartell-3-1 > li::marker { content: ""counter(advectionsartell-3-1,lower-alpha)"."; }
+#advectionsartell-3-1 > li { counter-increment: advectionsartell-3-1; }
+#advectioncoldspring-2-1-6 { counter-set: advectioncoldspring-2-1-6 0; }
+#advectioncoldspring-2-1-6 > li::marker { content: ""counter(advectioncoldspring-2-1-6,lower-alpha)"."; }
+#advectioncoldspring-2-1-6 > li { counter-increment: advectioncoldspring-2-1-6; }
+#advectioncoldspring-3-1 { counter-set: advectioncoldspring-3-1 0; }
+#advectioncoldspring-3-1 > li::marker { content: ""counter(advectioncoldspring-3-1,lower-alpha)"."; }
+#advectioncoldspring-3-1 > li { counter-increment: advectioncoldspring-3-1; }
+#DeterminantComputations-2-1-1 { counter-set: DeterminantComputations-2-1-1 0; }
+#DeterminantComputations-2-1-1 > li::marker { content: ""counter(DeterminantComputations-2-1-1,lower-alpha)"."; }
+#DeterminantComputations-2-1-1 > li { counter-increment: DeterminantComputations-2-1-1; }
+#DeterminantComputations-3-1-1 { counter-set: DeterminantComputations-3-1-1 0; }
+#DeterminantComputations-3-1-1 > li::marker { content: ""counter(DeterminantComputations-3-1-1,lower-alpha)"."; }
+#DeterminantComputations-3-1-1 > li { counter-increment: DeterminantComputations-3-1-1; }
+#coriolisgolfball-2-1-3 { counter-set: coriolisgolfball-2-1-3 0; }
+#coriolisgolfball-2-1-3 > li::marker { content: ""counter(coriolisgolfball-2-1-3,lower-alpha)"."; }
+#coriolisgolfball-2-1-3 > li { counter-increment: coriolisgolfball-2-1-3; }
+#coriolisgolfball-3-1-1 { counter-set: coriolisgolfball-3-1-1 0; }
+#coriolisgolfball-3-1-1 > li::marker { content: ""counter(coriolisgolfball-3-1-1,lower-alpha)"."; }
+#coriolisgolfball-3-1-1 > li { counter-increment: coriolisgolfball-3-1-1; }
+#VSorU-2-1-1 { counter-set: VSorU-2-1-1 0; }
+#VSorU-2-1-1 > li::marker { content: ""counter(VSorU-2-1-1,lower-alpha)"."; }
+#VSorU-2-1-1 > li { counter-increment: VSorU-2-1-1; }
+#VSorU-3-1-1 { counter-set: VSorU-3-1-1 0; }
+#VSorU-3-1-1 > li::marker { content: ""counter(VSorU-3-1-1,lower-alpha)"."; }
+#VSorU-3-1-1 > li { counter-increment: VSorU-3-1-1; }
+#NoVerticalCross-2-3 { counter-set: NoVerticalCross-2-3 0; }
+#NoVerticalCross-2-3 > li::marker { content: ""counter(NoVerticalCross-2-3,lower-alpha)"."; }
+#NoVerticalCross-2-3 > li { counter-increment: NoVerticalCross-2-3; }
+#NoVerticalCross-3-1 { counter-set: NoVerticalCross-3-1 0; }
+#NoVerticalCross-3-1 > li::marker { content: ""counter(NoVerticalCross-3-1,lower-alpha)"."; }
+#NoVerticalCross-3-1 > li { counter-increment: NoVerticalCross-3-1; }
+#VenusCoriolis-2-2 { counter-set: VenusCoriolis-2-2 0; }
+#VenusCoriolis-2-2 > li::marker { content: ""counter(VenusCoriolis-2-2,lower-alpha)"."; }
+#VenusCoriolis-2-2 > li { counter-increment: VenusCoriolis-2-2; }
+#VenusCoriolis-3-1 { counter-set: VenusCoriolis-3-1 0; }
+#VenusCoriolis-3-1 > li::marker { content: ""counter(VenusCoriolis-3-1,lower-alpha)"."; }
+#VenusCoriolis-3-1 > li { counter-increment: VenusCoriolis-3-1; }
+#PickingKoff-2-1-4 { counter-set: PickingKoff-2-1-4 0; }
+#PickingKoff-2-1-4 > li::marker { content: ""counter(PickingKoff-2-1-4,lower-alpha)"."; }
+#PickingKoff-2-1-4 > li { counter-increment: PickingKoff-2-1-4; }
+#PickingKoff-3-1 { counter-set: PickingKoff-3-1 0; }
+#PickingKoff-3-1 > li::marker { content: ""counter(PickingKoff-3-1,lower-alpha)"."; }
+#PickingKoff-3-1 > li { counter-increment: PickingKoff-3-1; }
+#TechnologyCrossProducts-2-1-1 { counter-set: TechnologyCrossProducts-2-1-1 0; }
+#TechnologyCrossProducts-2-1-1 > li::marker { content: ""counter(TechnologyCrossProducts-2-1-1,lower-alpha)"."; }
+#TechnologyCrossProducts-2-1-1 > li { counter-increment: TechnologyCrossProducts-2-1-1; }
+#BulkRichardsonNumber-2-5-1 { counter-set: BulkRichardsonNumber-2-5-1 0; }
+#BulkRichardsonNumber-2-5-1 > li::marker { content: ""counter(BulkRichardsonNumber-2-5-1,lower-alpha)"."; }
+#BulkRichardsonNumber-2-5-1 > li { counter-increment: BulkRichardsonNumber-2-5-1; }
+#BulkRichardsonNumber-3-1 { counter-set: BulkRichardsonNumber-3-1 0; }
+#BulkRichardsonNumber-3-1 > li::marker { content: ""counter(BulkRichardsonNumber-3-1,lower-alpha)"."; }
+#BulkRichardsonNumber-3-1 > li { counter-increment: BulkRichardsonNumber-3-1; }
+#windchillpartials-3 { counter-set: windchillpartials-3 0; }
+#windchillpartials-3 > li::marker { content: ""counter(windchillpartials-3,lower-alpha)"."; }
+#windchillpartials-3 > li { counter-increment: windchillpartials-3; }
+#windchillpartials-4-1 { counter-set: windchillpartials-4-1 0; }
+#windchillpartials-4-1 > li::marker { content: ""counter(windchillpartials-4-1,lower-alpha)"."; }
+#windchillpartials-4-1 > li { counter-increment: windchillpartials-4-1; }
+#interpretfirstorderpartials-8-3 { counter-set: interpretfirstorderpartials-8-3 0; }
+#interpretfirstorderpartials-8-3 > li::marker { content: ""counter(interpretfirstorderpartials-8-3,lower-alpha)"."; }
+#interpretfirstorderpartials-8-3 > li { counter-increment: interpretfirstorderpartials-8-3; }
+#interpretfirstorderpartials-8-4-1 { counter-set: interpretfirstorderpartials-8-4-1 0; }
+#interpretfirstorderpartials-8-4-1 > li::marker { content: ""counter(interpretfirstorderpartials-8-4-1,lower-alpha)"."; }
+#interpretfirstorderpartials-8-4-1 > li { counter-increment: interpretfirstorderpartials-8-4-1; }
+#meanwindspeed-3 { counter-set: meanwindspeed-3 0; }
+#meanwindspeed-3 > li::marker { content: ""counter(meanwindspeed-3,lower-alpha)"."; }
+#meanwindspeed-3 > li { counter-increment: meanwindspeed-3; }
+#meanwindspeed-4-1 { counter-set: meanwindspeed-4-1 0; }
+#meanwindspeed-4-1 > li::marker { content: ""counter(meanwindspeed-4-1,lower-alpha)"."; }
+#meanwindspeed-4-1 > li { counter-increment: meanwindspeed-4-1; }
+#SVPexercise-4 { counter-set: SVPexercise-4 0; }
+#SVPexercise-4 > li::marker { content: ""counter(SVPexercise-4,lower-alpha)"."; }
+#SVPexercise-4 > li { counter-increment: SVPexercise-4; }
+#SVPexercise-5-1 { counter-set: SVPexercise-5-1 0; }
+#SVPexercise-5-1 > li::marker { content: ""counter(SVPexercise-5-1,lower-alpha)"."; }
+#SVPexercise-5-1 > li { counter-increment: SVPexercise-5-1; }
+#partialisobaricmap-2-3 { counter-set: partialisobaricmap-2-3 0; }
+#partialisobaricmap-2-3 > li::marker { content: ""counter(partialisobaricmap-2-3,lower-alpha)"."; }
+#partialisobaricmap-2-3 > li { counter-increment: partialisobaricmap-2-3; }
+#partialisobaricmap-3-1 { counter-set: partialisobaricmap-3-1 0; }
+#partialisobaricmap-3-1 > li::marker { content: ""counter(partialisobaricmap-3-1,lower-alpha)"."; }
+#partialisobaricmap-3-1 > li { counter-increment: partialisobaricmap-3-1; }
+#ez_potential_temperature-2-1-8 { counter-set: ez_potential_temperature-2-1-8 0; }
+#ez_potential_temperature-2-1-8 > li::marker { content: ""counter(ez_potential_temperature-2-1-8,lower-alpha)"."; }
+#ez_potential_temperature-2-1-8 > li { counter-increment: ez_potential_temperature-2-1-8; }
+#ez_potential_temperature-3-1 { counter-set: ez_potential_temperature-3-1 0; }
+#ez_potential_temperature-3-1 > li::marker { content: ""counter(ez_potential_temperature-3-1,lower-alpha)"."; }
+#ez_potential_temperature-3-1 > li { counter-increment: ez_potential_temperature-3-1; }
+#insolation-2-3 { counter-set: insolation-2-3 0; }
+#insolation-2-3 > li::marker { content: ""counter(insolation-2-3,lower-alpha)"."; }
+#insolation-2-3 > li { counter-increment: insolation-2-3; }
+#frostbitepartial-2-3 { counter-set: frostbitepartial-2-3 0; }
+#frostbitepartial-2-3 > li::marker { content: ""counter(frostbitepartial-2-3,lower-alpha)"."; }
+#frostbitepartial-2-3 > li { counter-increment: frostbitepartial-2-3; }
+#frostbitepartial-3-1 { counter-set: frostbitepartial-3-1 0; }
+#frostbitepartial-3-1 > li::marker { content: ""counter(frostbitepartial-3-1,lower-alpha)"."; }
+#frostbitepartial-3-1 > li { counter-increment: frostbitepartial-3-1; }
+#WetBulbGlobeTemp-2-2 { counter-set: WetBulbGlobeTemp-2-2 0; }
+#WetBulbGlobeTemp-2-2 > li::marker { content: ""counter(WetBulbGlobeTemp-2-2,lower-alpha)"."; }
+#WetBulbGlobeTemp-2-2 > li { counter-increment: WetBulbGlobeTemp-2-2; }
+#WetBulbGlobeTemp-3-1 { counter-set: WetBulbGlobeTemp-3-1 0; }
+#WetBulbGlobeTemp-3-1 > li::marker { content: ""counter(WetBulbGlobeTemp-3-1,lower-alpha)"."; }
+#WetBulbGlobeTemp-3-1 > li { counter-increment: WetBulbGlobeTemp-3-1; }
+#A_10_2_11-2-2-5 { counter-set: A_10_2_11-2-2-5 0; }
+#A_10_2_11-2-2-5 > li::marker { content: ""counter(A_10_2_11-2-2-5,lower-alpha)"."; }
+#A_10_2_11-2-2-5 > li { counter-increment: A_10_2_11-2-2-5; }
+#partialbackwards-2 { counter-set: partialbackwards-2 0; }
+#partialbackwards-2 > li::marker { content: ""counter(partialbackwards-2,lower-alpha)"."; }
+#partialbackwards-2 > li { counter-increment: partialbackwards-2; }
+#partialbackwards-3-1 { counter-set: partialbackwards-3-1 0; }
+#partialbackwards-3-1 > li::marker { content: ""counter(partialbackwards-3-1,lower-alpha)"."; }
+#partialbackwards-3-1 > li { counter-increment: partialbackwards-3-1; }
+#firstcontouradvect-4 { counter-set: firstcontouradvect-4 0; }
+#firstcontouradvect-4 > li::marker { content: ""counter(firstcontouradvect-4,lower-alpha)"."; }
+#firstcontouradvect-4 > li { counter-increment: firstcontouradvect-4; }
+#firstcontouradvect-5-1 { counter-set: firstcontouradvect-5-1 0; }
+#firstcontouradvect-5-1 > li::marker { content: ""counter(firstcontouradvect-5-1,lower-alpha)"."; }
+#firstcontouradvect-5-1 > li { counter-increment: firstcontouradvect-5-1; }
+#dewpointcontours-2-3 { counter-set: dewpointcontours-2-3 0; }
+#dewpointcontours-2-3 > li::marker { content: ""counter(dewpointcontours-2-3,lower-alpha)"."; }
+#dewpointcontours-2-3 > li { counter-increment: dewpointcontours-2-3; }
+#dewpointcontours-2-3-3-2 { counter-set: dewpointcontours-2-3-3-2 0; }
+#dewpointcontours-2-3-3-2 > li::marker { content: ""counter(dewpointcontours-2-3-3-2,lower-roman)"."; }
+#dewpointcontours-2-3-3-2 > li { counter-increment: dewpointcontours-2-3-3-2; }
+#dewpointcontours-3-1 { counter-set: dewpointcontours-3-1 0; }
+#dewpointcontours-3-1 > li::marker { content: ""counter(dewpointcontours-3-1,lower-alpha)"."; }
+#dewpointcontours-3-1 > li { counter-increment: dewpointcontours-3-1; }
+#extracted-webwork-5-1-1-4-1-1-1 { counter-set: extracted-webwork-5-1-1-4-1-1-1 0; }
+#extracted-webwork-5-1-1-4-1-1-1 > li::marker { content: "("counter(extracted-webwork-5-1-1-4-1-1-1,lower-alpha)")"; }
+#extracted-webwork-5-1-1-4-1-1-1 > li { counter-increment: extracted-webwork-5-1-1-4-1-1-1; }
+#extracted-webwork-5-1-1-4-1-2-1 { counter-set: extracted-webwork-5-1-1-4-1-2-1 0; }
+#extracted-webwork-5-1-1-4-1-2-1 > li::marker { content: ""counter(extracted-webwork-5-1-1-4-1-2-1,upper-alpha)"."; }
+#extracted-webwork-5-1-1-4-1-2-1 > li { counter-increment: extracted-webwork-5-1-1-4-1-2-1; }
+#transportequation-2-2 { counter-set: transportequation-2-2 0; }
+#transportequation-2-2 > li::marker { content: ""counter(transportequation-2-2,lower-alpha)"."; }
+#transportequation-2-2 > li { counter-increment: transportequation-2-2; }
+#transportequation-3-1 { counter-set: transportequation-3-1 0; }
+#transportequation-3-1 > li::marker { content: ""counter(transportequation-3-1,lower-alpha)"."; }
+#transportequation-3-1 > li { counter-increment: transportequation-3-1; }
+#CirculationPentagonPath-2-5 { counter-set: CirculationPentagonPath-2-5 0; }
+#CirculationPentagonPath-2-5 > li::marker { content: ""counter(CirculationPentagonPath-2-5,lower-alpha)"."; }
+#CirculationPentagonPath-2-5 > li { counter-increment: CirculationPentagonPath-2-5; }
+#CirculationPentagonPath-3-1 { counter-set: CirculationPentagonPath-3-1 0; }
+#CirculationPentagonPath-3-1 > li::marker { content: ""counter(CirculationPentagonPath-3-1,lower-alpha)"."; }
+#CirculationPentagonPath-3-1 > li { counter-increment: CirculationPentagonPath-3-1; }
+#ComputeCurlBothWays-1-1-5 { counter-set: ComputeCurlBothWays-1-1-5 0; }
+#ComputeCurlBothWays-1-1-5 > li::marker { content: ""counter(ComputeCurlBothWays-1-1-5,lower-alpha)"."; }
+#ComputeCurlBothWays-1-1-5 > li { counter-increment: ComputeCurlBothWays-1-1-5; }
+#ComputeCurlBothWays-2-1 { counter-set: ComputeCurlBothWays-2-1 0; }
+#ComputeCurlBothWays-2-1 > li::marker { content: ""counter(ComputeCurlBothWays-2-1,lower-alpha)"."; }
+#ComputeCurlBothWays-2-1 > li { counter-increment: ComputeCurlBothWays-2-1; }
+#MetarsToVorticity-2-7 { counter-set: MetarsToVorticity-2-7 0; }
+#MetarsToVorticity-2-7 > li::marker { content: ""counter(MetarsToVorticity-2-7,lower-alpha)"."; }
+#MetarsToVorticity-2-7 > li { counter-increment: MetarsToVorticity-2-7; }
+#MetarsToVorticity-3-1 { counter-set: MetarsToVorticity-3-1 0; }
+#MetarsToVorticity-3-1 > li::marker { content: ""counter(MetarsToVorticity-3-1,lower-alpha)"."; }
+#MetarsToVorticity-3-1 > li { counter-increment: MetarsToVorticity-3-1; }
+#fluxmaximized-2-1-3 { counter-set: fluxmaximized-2-1-3 0; }
+#fluxmaximized-2-1-3 > li::marker { content: ""counter(fluxmaximized-2-1-3,lower-alpha)"."; }
+#fluxmaximized-2-1-3 > li { counter-increment: fluxmaximized-2-1-3; }
+#fluxmaximized-3-1-1 { counter-set: fluxmaximized-3-1-1 0; }
+#fluxmaximized-3-1-1 > li::marker { content: ""counter(fluxmaximized-3-1-1,lower-alpha)"."; }
+#fluxmaximized-3-1-1 > li { counter-increment: fluxmaximized-3-1-1; }
+#FluxSidesPrism-2-1-4 { counter-set: FluxSidesPrism-2-1-4 0; }
+#FluxSidesPrism-2-1-4 > li::marker { content: ""counter(FluxSidesPrism-2-1-4,lower-alpha)"."; }
+#FluxSidesPrism-2-1-4 > li { counter-increment: FluxSidesPrism-2-1-4; }
+#FluxSidesPrism-3-1 { counter-set: FluxSidesPrism-3-1 0; }
+#FluxSidesPrism-3-1 > li::marker { content: ""counter(FluxSidesPrism-3-1,lower-alpha)"."; }
+#FluxSidesPrism-3-1 > li { counter-increment: FluxSidesPrism-3-1; }
+#fluxofcube-2-1-6 { counter-set: fluxofcube-2-1-6 0; }
+#fluxofcube-2-1-6 > li::marker { content: ""counter(fluxofcube-2-1-6,lower-alpha)"."; }
+#fluxofcube-2-1-6 > li { counter-increment: fluxofcube-2-1-6; }
+#fluxofcube-3-1-1 { counter-set: fluxofcube-3-1-1 0; }
+#fluxofcube-3-1-1 > li::marker { content: ""counter(fluxofcube-3-1-1,lower-alpha)"."; }
+#fluxofcube-3-1-1 > li { counter-increment: fluxofcube-3-1-1; }
+#Ez_10_3_0-2-3 { counter-set: Ez_10_3_0-2-3 0; }
+#Ez_10_3_0-2-3 > li::marker { content: ""counter(Ez_10_3_0-2-3,lower-alpha)"."; }
+#Ez_10_3_0-2-3 > li { counter-increment: Ez_10_3_0-2-3; }
+#Ez_10_3_1-2-3 { counter-set: Ez_10_3_1-2-3 0; }
+#Ez_10_3_1-2-3 > li::marker { content: ""counter(Ez_10_3_1-2-3,lower-alpha)"."; }
+#Ez_10_3_1-2-3 > li { counter-increment: Ez_10_3_1-2-3; }
+#Ez_10_3_1-3-1-1 { counter-set: Ez_10_3_1-3-1-1 0; }
+#Ez_10_3_1-3-1-1 > li::marker { content: ""counter(Ez_10_3_1-3-1-1,lower-alpha)"."; }
+#Ez_10_3_1-3-1-1 > li { counter-increment: Ez_10_3_1-3-1-1; }
+#ez-wind-at-MSP-2-3 { counter-set: ez-wind-at-MSP-2-3 0; }
+#ez-wind-at-MSP-2-3 > li::marker { content: ""counter(ez-wind-at-MSP-2-3,lower-alpha)"."; }
+#ez-wind-at-MSP-2-3 > li { counter-increment: ez-wind-at-MSP-2-3; }
+#ez-wind-at-MSP-3-1 { counter-set: ez-wind-at-MSP-3-1 0; }
+#ez-wind-at-MSP-3-1 > li::marker { content: ""counter(ez-wind-at-MSP-3-1,lower-alpha)"."; }
+#ez-wind-at-MSP-3-1 > li { counter-increment: ez-wind-at-MSP-3-1; }
+#ez-wind-at-Jackson-2-4 { counter-set: ez-wind-at-Jackson-2-4 0; }
+#ez-wind-at-Jackson-2-4 > li::marker { content: ""counter(ez-wind-at-Jackson-2-4,lower-alpha)"."; }
+#ez-wind-at-Jackson-2-4 > li { counter-increment: ez-wind-at-Jackson-2-4; }
+#ez-wind-at-Jackson-3-1 { counter-set: ez-wind-at-Jackson-3-1 0; }
+#ez-wind-at-Jackson-3-1 > li::marker { content: ""counter(ez-wind-at-Jackson-3-1,lower-alpha)"."; }
+#ez-wind-at-Jackson-3-1 > li { counter-increment: ez-wind-at-Jackson-3-1; }
+</style>
+</head>
+<body class="pretext book ignore-math">
+<a class="assistive" href="#ptx-content">Skip to main content</a><header id="ptx-masthead" class="ptx-masthead"><div class="ptx-banner">
+<a xmlns:pf="https://prefigure.org" id="logo-link" class="logo-link" target="_blank" href="http://web.stcloudstate.edu/drbuske/"><img src="external/SCSU_StC_Pri_DkBlkBG.png" alt="Logo image"></a><div class="title-container">
+<h1 class="heading"><a href="atmospherickinematics.html"><span class="title">Mathematics of Atmospheric Kinematics</span></a></h1>
+<p class="byline">Dale Buske</p>
+</div>
+</div></header><nav xmlns:pf="https://prefigure.org" id="ptx-navbar" class="ptx-navbar navbar"><button class="toc-toggle button" title="Contents"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5d2;</span><span class="name">Contents</span></button><a class="index-button button" href="backmatter-2.html" title="Index"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe88e;</span><span class="name">Index</span></a><div class="searchbox">
+<div class="searchwidget"><button id="searchbutton" class="searchbutton button" type="button" title="Search book"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe8b6;</span><span class="name">Search Book</span></button></div>
+<div id="searchresultsplaceholder" class="searchresultsplaceholder" style="display: none">
+<div class="search-results-controls">
+<input aria-label="Search term" id="ptxsearch" class="ptxsearch" type="text" name="terms" placeholder="Search term"><button title="Close search" id="closesearchresults" class="closesearchresults"><span class="material-symbols-outlined">close</span></button>
+</div>
+<h2 class="search-results-heading">Search Results: </h2>
+<div id="searchempty" class="searchempty"><span>No results.</span></div>
+<ol id="searchresults" class="searchresults"></ol>
+</div>
+</div>
+<span class="nav-other-controls"><button id="calculator-toggle" class="calculator-toggle button" title="Show calculator" aria-expanded="false" aria-controls="calculator-container"><span class="icon material-symbols-outlined" aria-hidden="true">&#xea5f;</span><span class="name">Calc</span></button><div id="calculator-container" class="calculator-container" style="display: none; z-index:100;"><div id="geogebra-calculator"></div></div>
+<script>
+var ggbApp = new GGBApplet({"appName": "classic",
+    "width": 330,
+    "height": 600,
+    "showToolBar": true,
+    "showAlgebraInput": true,
+    "perspective": "G/A",
+    "algebraInputPosition": "bottom",
+    "scaleContainerClass": "calculator-container",
+    "allowUpscale": true,
+    "autoHeight": true,
+    "disableAutoScale": false},
+true);
+</script></span><span class="treebuttons"><a class="previous-button button" href="sec_contour_diagrams.html" title="Previous"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5cb;</span><span class="name">Prev</span></a><a class="up-button button" href="ch-contours.html" title="Up"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5ce;</span><span class="name">Up</span></a><a class="next-button button" href="ch_vectors.html" title="Next"><span class="name">Next</span><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5cc;</span></a></span></nav><div xmlns:pf="https://prefigure.org" id="latex-macros" class="hidden-content process-math" style="display:none"><span class="process-math">\(\newcommand{\N}{\mathbb N}
+\newcommand{\Z}{\mathbb Z}
+\newcommand{\Q}{\mathbb Q}
+\newcommand{\R}{\mathbb R}
+\newcommand{\lt}{&lt;}
+\newcommand{\gt}{&gt;}
+\newcommand{\amp}{&amp;}
+\definecolor{fillinmathshade}{gray}{0.9}
+\newcommand{\fillinmath}[1]{\mathchoice{\colorbox{fillinmathshade}{$\displaystyle     \phantom{\,#1\,}$}}{\colorbox{fillinmathshade}{$\textstyle        \phantom{\,#1\,}$}}{\colorbox{fillinmathshade}{$\scriptstyle      \phantom{\,#1\,}$}}{\colorbox{fillinmathshade}{$\scriptscriptstyle\phantom{\,#1\,}$}}}
+\)</span></div>
+<div class="ptx-page">
+<div xmlns:pf="https://prefigure.org" id="ptx-sidebar" class="ptx-sidebar"><nav id="ptx-toc" class="ptx-toc depth2"><ul class="structural contains-active toc-item-list">
+<li class="toc-item toc-frontmatter">
+<div class="toc-title-box"><a href="frontmatter.html" class="internal"><span class="title">Front Matter</span></a></div>
+<ul class="structural toc-item-list">
+<li class="toc-item toc-colophon"><div class="toc-title-box"><a href="frontmatter-3.html" class="internal"><span class="title">Colophon</span></a></div></li>
+<li class="toc-item toc-acknowledgement"><div class="toc-title-box"><a href="frontmatter-4.html" class="internal"><span class="title">Acknowledgements</span></a></div></li>
+</ul>
+</li>
+<li class="toc-item toc-chapter">
+<div class="toc-title-box"><a href="ch_numerical_integration.html" class="internal"><span class="codenumber">1</span> <span class="title">Approximation I: Area</span></a></div>
+<ul class="structural toc-item-list"><li class="toc-item toc-section">
+<div class="toc-title-box"><a href="sec_CAPE.html" class="internal"><span class="codenumber">1.1</span> <span class="title">Numerical Integration</span></a></div>
+<ul class="structural toc-item-list">
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="sec_CAPE.html#sec_CAPE-4" class="internal"><span class="codenumber">1.1.1</span> <span class="title">CAPE and CIN</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="sec_CAPE.html#sec_CAPE-5" class="internal"><span class="codenumber">1.1.2</span> <span class="title">Left, Right, and Midpoint Sums</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="sec_CAPE.html#sec_CAPE-6" class="internal"><span class="codenumber">1.1.3</span> <span class="title">The Trapezoidal Rule</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="sec_CAPE.html#sec_CAPE-7" class="internal"><span class="codenumber">1.1.4</span> <span class="title">Simpson’s Rule</span></a></div></li>
+<li class="toc-item toc-exercises"><div class="toc-title-box"><a href="sec_CAPE.html#ez_CAPE" class="internal"><span class="codenumber">1.1.5</span> <span class="title">Exercises</span></a></div></li>
+</ul>
+</li></ul>
+</li>
+<li class="toc-item toc-chapter">
+<div class="toc-title-box"><a href="ch_series.html" class="internal"><span class="codenumber">2</span> <span class="title">Modeling Periodic Behavior</span></a></div>
+<ul class="structural toc-item-list">
+<li class="toc-item toc-section">
+<div class="toc-title-box"><a href="sec_fourier_series.html" class="internal"><span class="codenumber">2.1</span> <span class="title">Sinusoids</span></a></div>
+<ul class="structural toc-item-list">
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="sec_fourier_series.html#sec_fourier_series-4" class="internal"><span class="codenumber">2.1.1</span> <span class="title">Sinusoids</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="sec_fourier_series.html#sec_fourier_series-5" class="internal"><span class="codenumber">2.1.2</span> <span class="title">Least-squares Fit of a Sinusoid</span></a></div></li>
+<li class="toc-item toc-exercises"><div class="toc-title-box"><a href="sec_fourier_series.html#ex_sinusoids" class="internal"><span class="codenumber">2.1.3</span> <span class="title">Exercises</span></a></div></li>
+</ul>
+</li>
+<li class="toc-item toc-section">
+<div class="toc-title-box"><a href="sec_trig_polynomials.html" class="internal"><span class="codenumber">2.2</span> <span class="title">Trigonometric Polynomials</span></a></div>
+<ul class="structural toc-item-list">
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="sec_trig_polynomials.html#sec_trig_polynomials-4" class="internal"><span class="codenumber">2.2.1</span> <span class="title">Trigonometric Polynomials</span></a></div></li>
+<li class="toc-item toc-exercises"><div class="toc-title-box"><a href="sec_trig_polynomials.html#ex_trig_polynomials" class="internal"><span class="codenumber">2.2.2</span> <span class="title">Exercises</span></a></div></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toc-item toc-chapter contains-active">
+<div class="toc-title-box"><a href="ch-contours.html" class="internal"><span class="codenumber">3</span> <span class="title">Contours and Lingo</span></a></div>
+<ul class="structural toc-item-list contains-active">
+<li class="toc-item toc-section">
+<div class="toc-title-box"><a href="sec_functionnotation.html" class="internal"><span class="codenumber">3.1</span> <span class="title">Function Notation</span></a></div>
+<ul class="structural toc-item-list"><li class="toc-item toc-exercises"><div class="toc-title-box"><a href="sec_functionnotation.html#ex_firstch-intro" class="internal"><span class="codenumber">3.1</span> <span class="title">Exercises</span></a></div></li></ul>
+</li>
+<li class="toc-item toc-section">
+<div class="toc-title-box"><a href="sec_3space.html" class="internal"><span class="codenumber">3.2</span> <span class="title">A Tour of 3-Space</span></a></div>
+<ul class="structural toc-item-list"><li class="toc-item toc-exercises"><div class="toc-title-box"><a href="sec_3space.html#ex_3space" class="internal"><span class="codenumber">3.2</span> <span class="title">Exercises</span></a></div></li></ul>
+</li>
+<li class="toc-item toc-section">
+<div class="toc-title-box"><a href="sec_contour_diagrams.html" class="internal"><span class="codenumber">3.3</span> <span class="title">Contour Diagrams</span></a></div>
+<ul class="structural toc-item-list"><li class="toc-item toc-exercises"><div class="toc-title-box"><a href="sec_contour_diagrams.html#ex_contour_diagrams" class="internal"><span class="codenumber">3.3</span> <span class="title">Exercises</span></a></div></li></ul>
+</li>
+<li class="toc-item toc-section active">
+<div class="toc-title-box"><a href="sec_spherical_coords.html" class="internal"><span class="codenumber">3.4</span> <span class="title">Additional Coordinate Systems</span></a></div>
+<ul class="structural toc-item-list">
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="sec_spherical_coords.html#sec_spherical_coords-4" class="internal"><span class="codenumber">3.4.1</span> <span class="title">Polar Coordinates</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="sec_spherical_coords.html#sphericalcoordinatesection" class="internal"><span class="codenumber">3.4.2</span> <span class="title">Spherical Coordinates</span></a></div></li>
+<li class="toc-item toc-exercises"><div class="toc-title-box"><a href="sec_spherical_coords.html#ex_spherical_coords" class="internal"><span class="codenumber">3.4.3</span> <span class="title">Exercises</span></a></div></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toc-item toc-chapter">
+<div class="toc-title-box"><a href="ch_vectors.html" class="internal"><span class="codenumber">4</span> <span class="title">Modeling Force: Vectors</span></a></div>
+<ul class="structural toc-item-list">
+<li class="toc-item toc-section">
+<div class="toc-title-box"><a href="sec_displacementvectors.html" class="internal"><span class="codenumber">4.1</span> <span class="title">Displacement Vectors</span></a></div>
+<ul class="structural toc-item-list"><li class="toc-item toc-exercises"><div class="toc-title-box"><a href="sec_displacementvectors.html#ex_sec_displacementvectors" class="internal"><span class="codenumber">4.1</span> <span class="title">Exercises</span></a></div></li></ul>
+</li>
+<li class="toc-item toc-section">
+<div class="toc-title-box"><a href="sec_dotproduct.html" class="internal"><span class="codenumber">4.2</span> <span class="title">Dot Product</span></a></div>
+<ul class="structural toc-item-list"><li class="toc-item toc-exercises"><div class="toc-title-box"><a href="sec_dotproduct.html#ex_dotproduct" class="internal"><span class="codenumber">4.2</span> <span class="title">Exercises</span></a></div></li></ul>
+</li>
+<li class="toc-item toc-section">
+<div class="toc-title-box"><a href="sec_cross_product.html" class="internal"><span class="codenumber">4.3</span> <span class="title">The Cross Product</span></a></div>
+<ul class="structural toc-item-list"><li class="toc-item toc-exercises"><div class="toc-title-box"><a href="sec_cross_product.html#ex_crossproduct" class="internal"><span class="codenumber">4.3</span> <span class="title">Exercises</span></a></div></li></ul>
+</li>
+</ul>
+</li>
+<li class="toc-item toc-chapter">
+<div class="toc-title-box"><a href="ch-differentiation.html" class="internal"><span class="codenumber">5</span> <span class="title">Rate of Change: Differentiation</span></a></div>
+<ul class="structural toc-item-list">
+<li class="toc-item toc-section">
+<div class="toc-title-box"><a href="sec_partial_differentiation.html" class="internal"><span class="codenumber">5.1</span> <span class="title">Partial Differentiation</span></a></div>
+<ul class="structural toc-item-list">
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="sec_partial_differentiation.html#sec_partial_differentiation-4" class="internal"><span class="codenumber">5.1.1</span> <span class="title">First-order Partial Derivatives</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="sec_partial_differentiation.html#interpretfirstorderpartials" class="internal"><span class="codenumber">5.1.2</span> <span class="title">Interpretations of First-order Partial Derivatives</span></a></div></li>
+<li class="toc-item toc-exercises"><div class="toc-title-box"><a href="sec_partial_differentiation.html#ex_partialdifferentiation" class="internal"><span class="codenumber">5.1.3</span> <span class="title">Exercises</span></a></div></li>
+</ul>
+</li>
+<li class="toc-item toc-section">
+<div class="toc-title-box"><a href="sec_the_gradient.html" class="internal"><span class="codenumber">5.2</span> <span class="title">The Gradient</span></a></div>
+<ul class="structural toc-item-list"><li class="toc-item toc-exercises"><div class="toc-title-box"><a href="sec_the_gradient.html#ex_the_gradient" class="internal"><span class="codenumber">5.2</span> <span class="title">Exercises</span></a></div></li></ul>
+</li>
+<li class="toc-item toc-section">
+<div class="toc-title-box"><a href="sec_chain_rule.html" class="internal"><span class="codenumber">5.3</span> <span class="title">The Chain Rule</span></a></div>
+<ul class="structural toc-item-list"><li class="toc-item toc-exercises"><div class="toc-title-box"><a href="sec_chain_rule.html#ex_chain_rule" class="internal"><span class="codenumber">5.3</span> <span class="title">Exercises</span></a></div></li></ul>
+</li>
+</ul>
+</li>
+<li class="toc-item toc-chapter">
+<div class="toc-title-box"><a href="ch-vectorfields.html" class="internal"><span class="codenumber">6</span> <span class="title">Flow: Vector Fields</span></a></div>
+<ul class="structural toc-item-list">
+<li class="toc-item toc-section">
+<div class="toc-title-box"><a href="sec_vector_fields.html" class="internal"><span class="codenumber">6.1</span> <span class="title">Vector Fields</span></a></div>
+<ul class="structural toc-item-list"><li class="toc-item toc-exercises"><div class="toc-title-box"><a href="sec_vector_fields.html#ex_sec_vectorfields" class="internal"><span class="codenumber">6.1</span> <span class="title">Exercises</span></a></div></li></ul>
+</li>
+<li class="toc-item toc-section">
+<div class="toc-title-box"><a href="sec_circulation.html" class="internal"><span class="codenumber">6.2</span> <span class="title">Circulation</span></a></div>
+<ul class="structural toc-item-list"><li class="toc-item toc-exercises"><div class="toc-title-box"><a href="sec_circulation.html#ex_sec_circulation" class="internal"><span class="codenumber">6.2</span> <span class="title">Exercises</span></a></div></li></ul>
+</li>
+<li class="toc-item toc-section">
+<div class="toc-title-box"><a href="sec_curl.html" class="internal"><span class="codenumber">6.3</span> <span class="title">Curl</span></a></div>
+<ul class="structural toc-item-list"><li class="toc-item toc-exercises"><div class="toc-title-box"><a href="sec_curl.html#ex_sec_curl" class="internal"><span class="codenumber">6.3</span> <span class="title">Exercises</span></a></div></li></ul>
+</li>
+<li class="toc-item toc-section">
+<div class="toc-title-box"><a href="sec_flux.html" class="internal"><span class="codenumber">6.4</span> <span class="title">Flux</span></a></div>
+<ul class="structural toc-item-list"><li class="toc-item toc-exercises"><div class="toc-title-box"><a href="sec_flux.html#ex_sec_flux" class="internal"><span class="codenumber">6.4</span> <span class="title">Exercises</span></a></div></li></ul>
+</li>
+<li class="toc-item toc-section">
+<div class="toc-title-box"><a href="sec_divergence.html" class="internal"><span class="codenumber">6.5</span> <span class="title">Divergence</span></a></div>
+<ul class="structural toc-item-list"><li class="toc-item toc-exercises"><div class="toc-title-box"><a href="sec_divergence.html#ex_sec_divergence" class="internal"><span class="codenumber">6.5</span> <span class="title">Exercises</span></a></div></li></ul>
+</li>
+<li class="toc-item toc-section">
+<div class="toc-title-box"><a href="sec_Laplacian.html" class="internal"><span class="codenumber">6.6</span> <span class="title">The Laplacian</span></a></div>
+<ul class="structural toc-item-list"><li class="toc-item toc-exercises"><div class="toc-title-box"><a href="sec_Laplacian.html#ex_laplacian" class="internal"><span class="codenumber">6.6</span> <span class="title">Exercises</span></a></div></li></ul>
+</li>
+</ul>
+</li>
+<li class="toc-item toc-chapter">
+<div class="toc-title-box"><a href="ch_taylor_polynomials.html" class="internal"><span class="codenumber">7</span> <span class="title">Approximation II: Taylor Polynomials</span></a></div>
+<ul class="structural toc-item-list">
+<li class="toc-item toc-section">
+<div class="toc-title-box"><a href="sec_taylor_polynomials_1var.html" class="internal"><span class="codenumber">7.1</span> <span class="title">Taylor Polynomials in One Variable</span></a></div>
+<ul class="structural toc-item-list">
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="sec_taylor_polynomials_1var.html#sec_taylor_polynomials_1var-4" class="internal"><span class="codenumber">7.1.1</span> <span class="title">Taylor Polynomials of Degree 2</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="sec_taylor_polynomials_1var.html#sec_taylor_polynomials_1var-5" class="internal"><span class="codenumber">7.1.2</span> <span class="title">Taylor Polynomials of Degree <span class="process-math">\(n\)</span></span></a></div></li>
+<li class="toc-item toc-exercises"><div class="toc-title-box"><a href="sec_taylor_polynomials_1var.html#ex_taylor_polynomials_1var" class="internal"><span class="codenumber">7.1.3</span> <span class="title">Exercises</span></a></div></li>
+</ul>
+</li>
+<li class="toc-item toc-section">
+<div class="toc-title-box"><a href="sec_taylor_polynomials_2var.html" class="internal"><span class="codenumber">7.2</span> <span class="title">Taylor Polynomials in Two Variables</span></a></div>
+<ul class="structural toc-item-list">
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="sec_taylor_polynomials_2var.html#sec_taylor_polynomials_2var-4" class="internal"><span class="codenumber">7.2.1</span> <span class="title">Linear Approximations in Two Variables</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="sec_taylor_polynomials_2var.html#sec_taylor_polynomials_2var-5" class="internal"><span class="codenumber">7.2.2</span> <span class="title">Quadratic Approximations in Two Variables</span></a></div></li>
+<li class="toc-item toc-section"><div class="toc-title-box"><a href="sec_taylor_polynomials_2var.html#sec_taylor_polynomials_2var-6" class="internal"><span class="codenumber">7.2.1</span> <span class="title">Translations, Divergence, Vorticity, and Deformation</span></a></div></li>
+<li class="toc-item toc-section"><div class="toc-title-box"><a href="sec_taylor_polynomials_2var.html#sec_taylor_polynomials_2var-7" class="internal"><span class="codenumber">7.2.2</span> <span class="title">Kinematics of the Horizontal Wind Field</span></a></div></li>
+<li class="toc-item toc-exercises"><div class="toc-title-box"><a href="sec_taylor_polynomials_2var.html#ex_taylor_polynomials_2var" class="internal"><span class="codenumber">7.2.5</span> <span class="title">Exercises</span></a></div></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toc-item toc-backmatter">
+<div class="toc-title-box"><a href="backmatter.html" class="internal"><span class="title">Backmatter</span></a></div>
+<ul class="structural toc-item-list">
+<li class="toc-item toc-index"><div class="toc-title-box"><a href="backmatter-2.html" class="internal"><span class="title">Index</span></a></div></li>
+<li class="toc-item toc-colophon"><div class="toc-title-box"><a href="backmatter-3.html" class="internal"><span class="title">Colophon</span></a></div></li>
+</ul>
+</li>
+</ul></nav></div>
+<main class="ptx-main"><div id="ptx-content" class="ptx-content"><section xmlns:pf="https://prefigure.org" class="section" id="sec_spherical_coords"><h2 class="heading hide-type">
+<span class="type">Section</span><span class="space"> </span><span class="codenumber">3.4</span><span class="space"> </span><span class="title">Additional Coordinate Systems</span>
+</h2>
+<article class="objectives goal-like" id="sec_spherical_coords-2"><h3 class="heading"><span class="type">Motivating Questions</span></h3>
+<ul class="disc" id="sec_spherical_coords-2-1">
+<li id="sec_spherical_coords-2-1-1"><div class="para" id="sec_spherical_coords-2-1-1-1">Are there alternative methods for representing locations in space?</div></li>
+<li id="sec_spherical_coords-2-1-2"><div class="para" id="sec_spherical_coords-2-1-2-1">What are polar coordinates?  How are polar coordinates useful?</div></li>
+<li id="sec_spherical_coords-2-1-3"><div class="para" id="sec_spherical_coords-2-1-3-1">What are spherical coordinates?  How are spherical coordinates related to rectangular coordinates?   How is the conversion done?</div></li>
+</ul></article><section class="introduction" id="sec_spherical_coords-3"><div class="para" id="sec_spherical_coords-3-1">When it comes to describing locations in two or three dimensions, there are various approaches beyond using the rectangular <span class="process-math">\((x,y,z)\)</span> coordinate system.  In this section, we study a few coordinate systems that are generally useful in meteorology.</div>
+<article class="example example-like" id="pressurevertical"><h3 class="heading">
+<span class="type">Example</span><span class="space"> </span><span class="codenumber">3.4.1</span><span class="period">.</span><span class="space"> </span><span class="title">Pressure as a Vertical Coordinate.</span>
+</h3>
+<div class="para logical" id="pressurevertical-2">
+<div class="para">In modeling the atmosphere, it often makes sense to change the vertical coordinate height (<span class="process-math">\(z\)</span>) to pressure (<span class="process-math">\(p\)</span>).  The <dfn class="terminology">hydrostatic equation</dfn>
+</div>
+<div class="displaymath process-math">
+\begin{equation*}
+\frac{dp}{dz} = -\rho g
+\end{equation*}
+</div>
+<div class="para">is what allows us to do this.  Here <span class="process-math">\(\rho\)</span> is the density of air, <span class="process-math">\(g\)</span> is the gravitational constant, <span class="process-math">\(p\)</span> represents pressure, and <span class="process-math">\(z\)</span> represents height.  For an ideal gas, density <span class="process-math">\(\rho\)</span> is proportional to pressure <span class="process-math">\(p\)</span> and inversely proportional to temperature <span class="process-math">\(T\text{.}\)</span>  That is, <span class="process-math">\(\rho = c \frac{p}{T}\)</span> for some constant <span class="process-math">\(c\text{.}\)</span>  That is,</div>
+<div class="displaymath process-math">
+\begin{equation*}
+\frac{dp}{dz}=\left(-\frac{cg}{T}\right) p.
+\end{equation*}
+</div>
+<div class="para">This equation tells us that pressure falls off exponentially with height (the only functions <span class="process-math">\(p(z)\)</span> whose derivatives are constant multiples of themselves are exponential functions).  That is, there is a one-to-one correspondence between a heights <span class="process-math">\(z\)</span> and pressures <span class="process-math">\(p\text{.}\)</span>  This is why we can uniquely describe the location <span class="process-math">\((x,y,p)\)</span> of any air parcel using its pressure <span class="process-math">\(p\)</span> rather than its height <span class="process-math">\(z\text{.}\)</span>  There are advantages and disadvantages to using pressure <span class="process-math">\(p\)</span> as the vertical coordinate.</div>
+</div>
+<figure class="figure figure-like" id="PressureVsHeightGraph"><div class="sidebyside"><div class="sbsrow" style="margin-left:5%;margin-right:5%;">
+<div class="sbspanel top" style="width:44.4444444444444%;"><img src="generated/latex-image/PressureVsHeightGraphPic.svg" role="img" class="contained"></div>
+<div class="sbspanel top" style="width:44.4444444444444%;"><img src="generated/latex-image/ColumnOfAirPic.svg" role="img" class="contained"></div>
+</div></div>
+<figcaption><span class="type">Figure</span><span class="space"> </span><span class="codenumber">3.4.2<span class="period">.</span></span><span class="space"> </span>Left: Atmospheric pressure <span class="process-math">\(p\)</span> (in hPa) is in one-to-one correspondence with height <span class="process-math">\(z\)</span> (in km).  Right: Heights in a column of air correspond to distinct pressure readings.</figcaption></figure></article><article class="example example-like" id="isentropiccoordinates"><h3 class="heading">
+<span class="type">Example</span><span class="space"> </span><span class="codenumber">3.4.3</span><span class="period">.</span><span class="space"> </span><span class="title">Isentropic Coordinates.</span>
+</h3>
+<div class="para" id="isentropiccoordinates-2">A less familiar vertical coordinate to use in place of height <span class="process-math">\(z\)</span> is  <span class="process-math">\(\theta\)</span> -- a combination of temperature and pressure. Its value gets larger the higher you go in the atmosphere, sort of like altitude.  In large-scale stratospheric flow conditions, air parcels move so as to conserve potential temperature (i.e. adiabatically, without losing or gaining heat).  Winds in the atmosphere blow along surfaces of constant potential temperature <span class="process-math">\(\theta \)</span> most of the time, making it an advantageous choice for a vertical coordinate.  A simple rule-of-thumb for converting potential temperature <span class="process-math">\(\theta\)</span> to height <span class="process-math">\(z\)</span> (via Crutzen and Freie) is given by <span class="process-math">\(\theta/25 = z\)</span> where <span class="process-math">\(z\)</span> is measured in kilometers.  Other formulas relating potential temperature <span class="process-math">\(\theta\)</span> to height <span class="process-math">\(z\text{,}\)</span> <span class="process-math">\(\theta = 350e^{0.45(z-13)}\)</span> or <span class="process-math">\(0.635\theta -9.22 = z\text{,}\)</span> also demonstrate the one-to-one correspondence between these variables (<a class="external" href="https://www.giss.nasa.gov/research/briefs/1997_knox_02/" target="_blank">John Knox, NASA</a><details class="ptx-footnote" aria-live="polite" id="isentropiccoordinates-2-14"><summary class="ptx-footnote__number" title="Footnote 52"><sup> 52 </sup></summary><div class="ptx-footnote__contents" id="isentropiccoordinates-2-14"><code class="code-inline tex2jax_ignore">https://www.giss.nasa.gov/research/briefs/1997_knox_02/</code></div></details>).</div>
+<figure class="figure figure-like" id="isentropic"><div class="sidebyside"><div class="sbsrow" style="margin-left:2.5%;margin-right:2.5%;">
+<div class="sbspanel top" style="width:47.3684210526316%;"><img src="external/lat_pres_theta_feb.jpg" class="contained"></div>
+<div class="sbspanel top" style="width:47.3684210526316%;"><img src="external/lat_pres_theta_jul.jpg" class="contained"></div>
+</div></div>
+<figcaption><span class="type">Figure</span><span class="space"> </span><span class="codenumber">3.4.4<span class="period">.</span></span><span class="space"> </span>Left: Example potential temperature profile with latitude for February.  Right: Example potential temperature profile with latitude for July.  Source: <a class="external" href="https://www.cpc.ncep.noaa.gov/products/stratosphere/theta/theta_info.shtml" target="_blank">NWS Climate Prediction Center</a><details class="ptx-footnote" aria-live="polite" id="isentropic-1-2"><summary class="ptx-footnote__number" title="Footnote 53"><sup> 53 </sup></summary><div class="ptx-footnote__contents" id="isentropic-1-2"><code class="code-inline tex2jax_ignore">https://www.cpc.ncep.noaa.gov/products/stratosphere/theta/theta_info.shtml</code></div></details>.</figcaption></figure></article><div class="para" id="sec_spherical_coords-3-4">In what follows, we study coordinate systems in widespread use due to their value in describing behavior involving circular or spherical regions.</div></section><section class="subsection" id="sec_spherical_coords-4"><h3 class="heading hide-type">
+<span class="type">Subsection</span><span class="space"> </span><span class="codenumber">3.4.1</span><span class="space"> </span><span class="title">Polar Coordinates</span>
+</h3>
+<div class="para" id="sec_spherical_coords-4-2">The rectangular coordinate system can be thought of as a means to provide directions to a particular location in the plane.  From a "home" position (the origin), if we walked <span class="process-math">\(1\)</span> unit east and <span class="process-math">\(\sqrt{3}\)</span> units south to reach a location <span class="process-math">\(P\text{,}\)</span> we would denote such directions by the ordered pair <span class="process-math">\((1,-\sqrt{3})\text{.}\)</span>  <a href="sec_spherical_coords.html#polarcoordsintro" class="xref" data-knowl="./knowl/xref/polarcoordsintro.html" data-reveal-label="Reveal" data-close-label="Close" title="Figure 3.4.5">Figure 3.4.5</a> shows another ways we could describe how to reach location <span class="process-math">\(P\)</span> from the origin.  If we are standing at the origin facing east (in the direction of the positive <span class="process-math">\(x\)</span>-axis), we could reach <span class="process-math">\(P\)</span> by turning our body <span class="process-math">\(\theta=60^{\circ}\)</span> (<span class="process-math">\(\frac{\pi}{3}\)</span> radians) clockwise and walking <span class="process-math">\(2\)</span> units forward.  Such directions could be represented by the ordered pair <span class="process-math">\(\left( 2,-\frac{\pi}{3}\right)\)</span> or <span class="process-math">\(\left( 2, -60^{\circ} \right)\text{.}\)</span>  We use a negative sign for the angle of rotation <span class="process-math">\(\theta\)</span> since counterclockwise is normally treated positively in mathematics.  These ordered pairs, or directions, are <dfn class="terminology">polar coordinates</dfn>.</div>
+<figure class="figure figure-like" id="polarcoordsintro"><div class="image-box" style="width: 35%; margin-left: 32.5%; margin-right: 32.5%;"><img src="generated/latex-image/polarcoordsintropic.svg" role="img" class="contained" alt="Polar coordinates"></div>
+<figcaption><span class="type">Figure</span><span class="space"> </span><span class="codenumber">3.4.5<span class="period">.</span></span><span class="space"> </span>Different directions to reach location <span class="process-math">\(P\text{.}\)</span></figcaption></figure><div class="para" id="sec_spherical_coords-4-4">It is often easier to describe circular behavior using polar coordinates than by using rectangular coordinates.  The equation of a unit circle, for example, can be describe by <span class="process-math">\(\theta=1\)</span> in polar coordinates.  This is less complicated than the equation <span class="process-math">\(x^2 + y^2 = 1\)</span> used to describe this circle using rectangular coordinates.</div>
+<div class="para" id="sec_spherical_coords-4-5">The rectangular coordinates of a point <span class="process-math">\(P\)</span> are given by an ordered pair <span class="process-math">\((x,y)\text{,}\)</span> where <span class="process-math">\(x\)</span> is the (signed) distance the point lies from the <span class="process-math">\(y\)</span>-axis to <span class="process-math">\(P\)</span> and <span class="process-math">\(y\)</span> is the (signed) distance the point lies from the <span class="process-math">\(x\)</span>-axis to <span class="process-math">\(P\text{.}\)</span> In polar coordinates, we locate the point by considering the distance <span class="process-math">\(r\)</span> the point lies from the origin, <span class="process-math">\(O = (0,0)\text{,}\)</span> and the angle <span class="process-math">\(\theta\)</span> the line segment from the origin to <span class="process-math">\(P\)</span> forms with the positive <span class="process-math">\(x\)</span>-axis.</div>
+<article class="example example-like" id="convertrectangulartopolar"><h4 class="heading">
+<span class="type">Example</span><span class="space"> </span><span class="codenumber">3.4.6</span><span class="period">.</span><span class="space"> </span><span class="title">Polar to Rectangular Conversions.</span>
+</h4>
+<div class="para" id="convertrectangulartopolar-2">Point <span class="process-math">\(P\)</span> lies 2 units east of the origin and <span class="process-math">\(\overline{OP}\)</span> makes an angle of <span class="process-math">\(90^{\circ}\)</span> (<span class="process-math">\(\frac{\pi}{2}\)</span> radians) with the positive <span class="process-math">\(x\)</span>-axis.  The polar coordinates for point <span class="process-math">\(P\)</span> are <span class="process-math">\(\left(2,90^{\circ}\right)\text{.}\)</span>  The rectangular coordinates for point <span class="process-math">\(P\)</span> are <span class="process-math">\(\left( 0,2 \right)\text{.}\)</span>
+</div>
+<figure class="figure figure-like" id="polarcoordsprc1"><div class="image-box" style="width: 35%; margin-left: 32.5%; margin-right: 32.5%;"><img src="generated/latex-image/polarcoordsprc1pic.svg" role="img" class="contained" alt="Polar coordinates of (0,2)."></div>
+<figcaption><span class="type">Figure</span><span class="space"> </span><span class="codenumber">3.4.7<span class="period">.</span></span><span class="space"> </span>Point <span class="process-math">\(P\)</span> has polar coordinates of <span class="process-math">\((2,90^{\circ})\)</span> and rectangular coordinates of <span class="process-math">\((0,2)\text{.}\)</span></figcaption></figure></article><details id="PA-7B-3" class="exercise exercise-like born-hidden-knowl"><summary class="knowl__link"><h4 class="heading">
+<span class="type">Checkpoint</span><span class="space"> </span><span class="codenumber">3.4.8</span><span class="period">.</span><span class="space"> </span><span class="title">More Polar and Rectangular Conversions.</span>
+</h4></summary><article class="exercise exercise-like knowl__content"><div class="para" id="PA-7B-3-2-1">Determine both polar and rectangular coordinates of the following points.</div> <ol class="lower-alpha" id="PA-7B-3-2-2">
+<li id="PA-7B-3-2-2-1"><div class="para" id="PA-7B-3-2-2-1-1">The point <span class="process-math">\(Q\)</span> that lies 1 unit east of the origin on the positive <span class="process-math">\(x\)</span>-axis.</div></li>
+<li id="PA-7B-3-2-2-2"><div class="para" id="PA-7B-3-2-2-2-1">The point <span class="process-math">\(R\)</span> that lies 3 units from the origin such that <span class="process-math">\(\overline{OR}\)</span> makes an angle of <span class="process-math">\(120^{\circ}\)</span> (<span class="process-math">\(\frac{2\pi}{3}\)</span> radians) with the positive <span class="process-math">\(x\)</span>-axis.</div></li>
+</ol>
+<div class="solutions"><details id="PA-7B-3-3" class="answer solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Answer</span><span class="period">.</span></summary><div class="answer solution-like knowl__content"><div class="para logical" id="PA-7B-3-3-1"><ol class="lower-alpha" id="PA-7B-3-3-1-1">
+<li id="PA-7B-3-3-1-1-1"><div class="para" id="p-derived-PA-7B-3-3-1-1-1">Polar coordinates are <span class="process-math">\((1,0^{\circ})\text{.}\)</span>  Rectangular coordinates are the same, <span class="process-math">\((1,0)\text{.}\)</span>
+</div></li>
+<li id="PA-7B-3-3-1-1-2">Polar coordinates are <span class="process-math">\((3,120^{\circ})\)</span> or <span class="process-math">\(\left(3,\frac{2\pi}{3}\right)\text{.}\)</span>  Rectangular coordinates are <span class="process-math">\(\left( 3\cos(120^{\circ}),3\sin(120^{\circ}) \right)\)</span> or <span class="process-math">\(\left(-1.5,\frac{3\sqrt{3}}{2} \right)\text{.}\)</span> <figure class="figure figure-like" id="polarcoordsprc2"><div class="image-box" style="width: 50%; margin-left: 25%; margin-right: 25%;">
+<img src="generated/latex-image/polarcoordsprc2pic.svg" role="img" class="contained" alt="described in detail following the image" aria-describedby="polarcoordsprc2pic-description"><details class="image-description" aria-live="polite"><summary title="details"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe88e;</span></summary><div id="polarcoordsprc2pic-description">Polar coordinates <span class="process-math">\((3,120^{\circ})\text{.}\)</span>
+</div></details>
+</div>
+<figcaption><span class="type">Figure</span><span class="space"> </span><span class="codenumber">3.4.9<span class="period">.</span></span><span class="space"> </span>Point <span class="process-math">\(R\)</span> has polar coordinates of <span class="process-math">\((3,120^{\circ})\)</span> and rectangular coordinates of <span class="process-math">\(\left(-1.5,\frac{3\sqrt{3}}{2} \right)\text{.}\)</span></figcaption></figure>
+</li>
+</ol></div></div></details></div></article></details><div class="para" id="sec_spherical_coords-4-8"></div>
+<details id="ez-sphericalp2r" class="exercise exercise-like born-hidden-knowl"><summary class="knowl__link"><h4 class="heading">
+<span class="type">Checkpoint</span><span class="space"> </span><span class="codenumber">3.4.10</span><span class="period">.</span><span class="space"> </span><span class="title">Converting from Polar to Rectangular Coordinates.</span>
+</h4></summary><article class="exercise exercise-like knowl__content"><div class="para" id="ez-sphericalp2r-2-1">Convert each of the following from polar to rectangular coordinates.</div> <ol class="lower-alpha" id="ez-sphericalp2r-2-2">
+<li id="ez-sphericalp2r-2-2-1"><div class="para" id="ez-sphericalp2r-2-2-1-1"><span class="process-math">\(\displaystyle (3,60^{\circ})\)</span></div></li>
+<li id="ez-sphericalp2r-2-2-2"><div class="para" id="ez-sphericalp2r-2-2-2-1"><span class="process-math">\(\displaystyle (2,3\pi/2)\)</span></div></li>
+<li id="ez-sphericalp2r-2-2-3"><div class="para" id="ez-sphericalp2r-2-2-3-1"><span class="process-math">\(\displaystyle (6,-150^{\circ})\)</span></div></li>
+</ol>
+<div class="solutions"><details id="ez-sphericalp2r-3" class="answer solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Answer</span><span class="period">.</span></summary><div class="answer solution-like knowl__content"><ol class="lower-alpha" id="ez-sphericalp2r-3-1">
+<li id="ez-sphericalp2r-3-1-1"><div class="para" id="ez-sphericalp2r-3-1-1-1">Using <a href="sec_spherical_coords.html#polar2recteqns" class="xref" data-knowl="./knowl/xref/polar2recteqns.html" data-reveal-label="Reveal" data-close-label="Close" title="Equation 3.3">equations (3.3)</a> with <span class="process-math">\(r=3\)</span> and <span class="process-math">\(\theta = 60^{\circ}\)</span> gives <span class="process-math">\(x=3\cos (60^{\circ}) = \frac{3}{2}\)</span> and <span class="process-math">\(y=3\sin (60^{\circ}) = \frac{3\sqrt{3}}{2}\text{.}\)</span>  Therefore this point can be represented as <span class="process-math">\(\left( \frac{3}{2}, \frac{3\sqrt{3}}{2} \right)\)</span> in rectangular coordinates.</div></li>
+<li id="ez-sphericalp2r-3-1-2"><div class="para" id="ez-sphericalp2r-3-1-2-1">Using <a href="sec_spherical_coords.html#polar2recteqns" class="xref" data-knowl="./knowl/xref/polar2recteqns.html" data-reveal-label="Reveal" data-close-label="Close" title="Equation 3.3">equations (3.3)</a> with <span class="process-math">\(r=2\)</span> and <span class="process-math">\(\theta = \frac{3\pi}{2}\)</span> gives <span class="process-math">\(x=2\cos (3\pi/2) = 0\)</span> and <span class="process-math">\(y=2\sin (3\pi/2) = -2\text{.}\)</span>  Therefore this point can be represented as <span class="process-math">\(\left(0, -2 \right)\)</span> in rectangular coordinates.</div></li>
+<li id="ez-sphericalp2r-3-1-3"><div class="para" id="ez-sphericalp2r-3-1-3-1">Using <a href="sec_spherical_coords.html#polar2recteqns" class="xref" data-knowl="./knowl/xref/polar2recteqns.html" data-reveal-label="Reveal" data-close-label="Close" title="Equation 3.3">equations (3.3)</a> with <span class="process-math">\(r=6\)</span> and <span class="process-math">\(\theta = -150^{\circ}\)</span> gives <span class="process-math">\(x=6\cos (-150^{\circ}) = -3\sqrt{3}\)</span> and <span class="process-math">\(y=6\sin (-150^{\circ}) = -3\text{.}\)</span>  Therefore this point can be represented as <span class="process-math">\(\left( -3\sqrt{3}, -3 \right)\)</span> in rectangular coordinates.</div></li>
+</ol></div></details></div></article></details><div class="para" id="sec_spherical_coords-4-10">
+<a href="sec_spherical_coords.html#convertrectangulartopolar" class="xref" data-knowl="./knowl/xref/convertrectangulartopolar.html" data-reveal-label="Reveal" data-close-label="Close" title="Example 3.4.6: Polar to Rectangular Conversions">Example 3.4.6</a> and <a href="sec_spherical_coords.html#PA-7B-3" class="xref" data-knowl="./knowl/xref/PA-7B-3.html" data-reveal-label="Reveal" data-close-label="Close" title="Checkpoint 3.4.8: More Polar and Rectangular Conversions">Checkpoint 3.4.8</a> indicate that the two pieces of information completely determine the location of a point:  either the traditional <span class="process-math">\((x,y)\)</span> coordinates, or alternately, the distance <span class="process-math">\(r\)</span> from the point to the origin along with the angle <span class="process-math">\(\theta\)</span> that the line through the origin and the point makes with the positive <span class="process-math">\(x\)</span>-axis. We write <span class="process-math">\((r, \theta)\)</span> to denote the point’s location in its polar coordinate representation.</div>
+<figure class="figure figure-like" id="F_11_5_Polar_coords"><div class="sidebyside"><div class="sbsrow" style="margin-left:5%;margin-right:5%;">
+<div class="sbspanel top" style="width:44.4444444444444%;"><img src="external/fig_11_5_polar_def.svg" role="img" class="contained"></div>
+<div class="sbspanel top" style="width:44.4444444444444%;"><img src="external/fig_11_5_polar_grid.svg" role="img" class="contained"></div>
+</div></div>
+<figcaption><span class="type">Figure</span><span class="space"> </span><span class="codenumber">3.4.11<span class="period">.</span></span><span class="space"> </span>Left: The relationship between the polar coordinates <span class="process-math">\((r,\theta)\)</span> of a point <span class="process-math">\(P\)</span> and the rectangular coordinates <span class="process-math">\((x,y)\)</span> of <span class="process-math">\(P\text{.}\)</span>  Right: The polar coordinate grid.</figcaption></figure><div class="para" id="sec_spherical_coords-4-12">The rectangular coordinate system is best suited for graphs and regions that are naturally considered over a rectangular grid. The polar coordinate system is an alternative that offers good options for functions and domains that have more circular characteristics.  Trigonometry and the Pythagorean theorem allow for straightforward conversion from rectangular to polar coordinate systems, and vice versa.</div>
+<article class="assemblage assemblage-like" id="Polar-coordinates"><h4 class="heading"><span class="title">Converting between rectangular and polar coordinates.</span></h4>
+<div class="para logical" id="Polar-coordinates-2"><ul class="disc" id="Polar-coordinates-2-1">
+<li id="Polar-coordinates-2-1-1">
+<span class="heading"><span class="title">Converting from rectangular to polar.</span></span><div class="para logical" id="Polar-coordinates-2-1-1-2">
+<div class="para">If we are given the rectangular coordinates <span class="process-math">\((x,y)\)</span> of a point <span class="process-math">\(P\text{,}\)</span> then the polar coordinates <span class="process-math">\((r,\theta)\)</span> of <span class="process-math">\(P\)</span> satisfy</div>
+<div class="displaymath process-math" id="rect2polareqns">
+\begin{equation}
+r = \sqrt{x^2+y^2} \ \ \ \ \text{ and }  \ \ \ \ \tan(\theta) = \frac{y}{x}, \text{ assuming }  x \neq 0.\tag{3.2}
+\end{equation}
+</div>
+</div>
+</li>
+<li id="Polar-coordinates-2-1-2">
+<span class="heading"><span class="title">Converting from polar to rectangular.</span></span><div class="para logical" id="Polar-coordinates-2-1-2-2">
+<div class="para">If we are given the polar coordinates <span class="process-math">\((r,\theta)\)</span> of a point <span class="process-math">\(P\text{,}\)</span> then the rectangular coordinates <span class="process-math">\((x,y)\)</span> of <span class="process-math">\(P\)</span> satisfy</div>
+<div class="displaymath process-math" id="polar2recteqns">
+\begin{equation}
+x = r\cos(\theta)  \ \ \ \ \text{ and }  \ \ \ \ y = r\sin(\theta).\tag{3.3}
+\end{equation}
+</div>
+</div>
+</li>
+</ul></div></article><div class="para" id="sec_spherical_coords-4-14">
+<em class="emphasis">Note:</em> The sign of <span class="process-math">\(\tan(\theta)\)</span> does not uniquely determine the quadrant in which <span class="process-math">\(\theta\)</span> lies, so we have to determine the value of <span class="process-math">\(\theta\)</span> from the location of the point. In other words, more care has to be paid when using polar coordinates than rectangular coordinates.</div>
+<article class="example example-like" id="rectangulartopolar4"><h4 class="heading">
+<span class="type">Example</span><span class="space"> </span><span class="codenumber">3.4.12</span><span class="period">.</span><span class="space"> </span><span class="title">Converting from Rectangular to Polar Coordinates.</span>
+</h4>
+<div class="para logical" id="rectangulartopolar4-2-1">
+<div class="para">Convert each of the following points from rectangular to polar coordinates.</div>
+<ol class="lower-alpha" id="rectangulartopolar4-2-1-1">
+<li id="rectangulartopolar4-2-1-1-1"><div class="para" id="rectangulartopolar4-2-1-1-1-1"><span class="process-math">\(\displaystyle (1,1)\)</span></div></li>
+<li id="rectangulartopolar4-2-1-1-2"><div class="para" id="rectangulartopolar4-2-1-1-2-1"><span class="process-math">\(\displaystyle (-3,4)\)</span></div></li>
+<li id="rectangulartopolar4-2-1-1-3"><div class="para" id="rectangulartopolar4-2-1-1-3-1"><span class="process-math">\(\displaystyle (0,3)\)</span></div></li>
+<li id="rectangulartopolar4-2-1-1-4"><div class="para" id="rectangulartopolar4-2-1-1-4-1"><span class="process-math">\(\displaystyle (5\sqrt{3},-5)\)</span></div></li>
+</ol>
+</div>
+<div class="solutions"><details id="rectangulartopolar4-3" class="answer solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Answer</span><span class="period">.</span></summary><div class="answer solution-like knowl__content"><ol class="lower-alpha" id="rectangulartopolar4-3-1">
+<li id="rectangulartopolar4-3-1-1"><div class="para" id="rectangulartopolar4-3-1-1-1">Using <a href="sec_spherical_coords.html#rect2polareqns" class="xref" data-knowl="./knowl/xref/rect2polareqns.html" data-reveal-label="Reveal" data-close-label="Close" title="Equation 3.2">equations (3.2)</a>, with <span class="process-math">\(x=1\)</span> and <span class="process-math">\(y=1\)</span> gives <span class="process-math">\(r^2=1^2+1^2=2\)</span> or <span class="process-math">\(r=\sqrt{2}\)</span> and <span class="process-math">\(\tan\theta = \frac{1}{1} = 1\)</span> or <span class="process-math">\(\theta = \frac{\pi}{4} = 45^{\circ}\text{.}\)</span>  The point <span class="process-math">\((1,1)\)</span> can be represented as either <span class="process-math">\(\left( \sqrt{2}, 45^{\circ} \right)\)</span> or <span class="process-math">\(\left( \sqrt{2}, \frac{\pi}{4} \right)\)</span> in polar coordinates.</div></li>
+<li id="rectangulartopolar4-3-1-2"><div class="para" id="rectangulartopolar4-3-1-2-1">Again using <a href="sec_spherical_coords.html#rect2polareqns" class="xref" data-knowl="./knowl/xref/rect2polareqns.html" data-reveal-label="Reveal" data-close-label="Close" title="Equation 3.2">equations (3.2)</a>, but this time with <span class="process-math">\(x=-3\)</span> and <span class="process-math">\(y=4\)</span> gives <span class="process-math">\(r^2=(-3)^2+4^2=25\)</span> or <span class="process-math">\(r=5\)</span> and <span class="process-math">\(\tan\theta = -\frac{4}{3}\text{.}\)</span>  Since the point <span class="process-math">\((-3,4)\)</span> lies in quadrant II, we compute <span class="process-math">\(\theta = \pi+\arctan(-4/3) \approx 2.21\)</span> radians (about 127 degrees).</div></li>
+<li id="rectangulartopolar4-3-1-3"><div class="para" id="rectangulartopolar4-3-1-3-1">Here <span class="process-math">\(r^2=0^2+3^2 = 9\)</span> so that <span class="process-math">\(r=3\text{.}\)</span>  From <a href="sec_spherical_coords.html#rect2polareqns" class="xref" data-knowl="./knowl/xref/rect2polareqns.html" data-reveal-label="Reveal" data-close-label="Close" title="Equation 3.2">equations (3.2)</a> we also have <span class="process-math">\(\tan\theta = \frac{3}{0}\text{.}\)</span>  Direct application of the second equation leads to division by zero! Graphing the point <span class="process-math">\((0,3)\)</span> on the rectangular coordinate system reveals that the point is located on the positive <span class="process-math">\(y\)</span>-axis. The angle between the positive <span class="process-math">\(x\)</span>-axis and the positive <span class="process-math">\(y\)</span>-axis is <span class="process-math">\(90^{\circ}\)</span> (<span class="process-math">\(\frac{\pi}{2}\)</span> radians).  Therefore this point can be represented as either <span class="process-math">\(\left( 3, 90^{\circ}\right)\)</span> or <span class="process-math">\(\left(3,\frac{\pi}{2}\right)\)</span> in polar coordinates.</div></li>
+<li id="rectangulartopolar4-3-1-4"><div class="para" id="rectangulartopolar4-3-1-4-1">Using <a href="sec_spherical_coords.html#rect2polareqns" class="xref" data-knowl="./knowl/xref/rect2polareqns.html" data-reveal-label="Reveal" data-close-label="Close" title="Equation 3.2">equations (3.2)</a>, with <span class="process-math">\(x=5\sqrt{3}\)</span> and <span class="process-math">\(y=-5\)</span> gives <span class="process-math">\(r^2=(5\sqrt{3})^2+(-5)^2=100\)</span> or <span class="process-math">\(r=10\)</span> and <span class="process-math">\(\tan\theta = \frac{-5}{5\sqrt{3}} = -\frac{\sqrt{3}}{3}\)</span> or <span class="process-math">\(\theta = -\frac{\pi}{6} = -30^{\circ}\text{.}\)</span>  The point <span class="process-math">\((5\sqrt{3},-5)\)</span> can thus be represented as either <span class="process-math">\(\left( 10, 330^{\circ}\right)\)</span> or <span class="process-math">\(\left( 10, -\frac{\pi}{6} \right)\)</span> in polar coordinates.</div></li>
+</ol></div></details></div></article><article class="example example-like" id="dopplerradar"><h4 class="heading">
+<span class="type">Example</span><span class="space"> </span><span class="codenumber">3.4.13</span><span class="period">.</span><span class="space"> </span><span class="title">PPI (Radar).</span>
+</h4>
+<div class="para" id="dopplerradar-2">Radar supplies data in a format closely related to polar coordinates.  Rather than supplying the polar angle <span class="process-math">\(\theta\text{,}\)</span> data is stored in a table of range-azimuth ordered pairs <span class="process-math">\((r,\beta)\)</span> where <span class="process-math">\(\beta\)</span> is the azimuth sometimes also denoted by <span class="process-math">\(\phi_{vect}\text{.}\)</span>  The azimuth measures the angle in a clockwise fashion with <span class="process-math">\(0^{\circ}\)</span> as due north.</div>
+<figure class="figure figure-like" id="radarazimuth"><div class="sidebyside"><div class="sbsrow" style="margin-left:5%;margin-right:5%;">
+<div class="sbspanel middle" style="width:44.4444444444444%;"><img src="external/Sturmfront_auf_Doppler-Radar-Schirm.jpg" class="contained"></div>
+<div class="sbspanel middle" style="width:44.4444444444444%;"><img src="generated/latex-image/radarazimuthpic.svg" role="img" class="contained" alt="Radar uses range-azimuth ordered pairs."></div>
+</div></div>
+<figcaption><span class="type">Figure</span><span class="space"> </span><span class="codenumber">3.4.14<span class="period">.</span></span><span class="space"> </span>Left: Image of a thunderstorm on a PPI. (Source: Public Domain (NOAA))  Right: Radar supplies the location at point <span class="process-math">\(P\)</span> as a range-azimuth ordered pair <span class="process-math">\((r,\beta)\text{.}\)</span>  The angle <span class="process-math">\(\beta\)</span> is the angle measured clockwise from the axis pointing due north and the segment connecting the pole <span class="process-math">\(O\)</span> with the point <span class="process-math">\(P\text{.}\)</span></figcaption></figure><div class="para logical" id="dopplerradar-4">
+<div class="para">A <dfn class="terminology">plan position indicator (PPI)</dfn> is a type of radar display that represents the radar antenna in the center of the display, with the distance from it drawn as concentric circles. As the radar antenna rotates, a radial trace on the PPI sweeps in unison with it about the center point.  To generate a picture similar to a PPI on a raster scan monitor with a line sequential image (such as a television or computer monitor), this radar data must first be converted to rectangular coordinates <span class="process-math">\((x,y)\text{.}\)</span>  Since <span class="process-math">\(\theta = 90^{\circ}-\beta\text{,}\)</span> the equations</div>
+<div class="displaymath process-math" id="dopplerradar-4-5">
+\begin{equation}
+x=r\cos(90^{\circ}-\beta), \ \ \ \ y=r\sin(90^{\circ}-\beta)\tag{3.4}
+\end{equation}
+</div>
+<div class="para">accomplish this task.</div>
+</div></article><details id="PPIcalculation" class="exercise exercise-like born-hidden-knowl"><summary class="knowl__link"><h4 class="heading">
+<span class="type">Checkpoint</span><span class="space"> </span><span class="codenumber">3.4.15</span><span class="period">.</span><span class="space"> </span><span class="title">Converting PPI Data.</span>
+</h4></summary><article class="exercise exercise-like knowl__content"><div class="para" id="PPIcalculation-2-1">Convert PPI data sent in <a href="sec_spherical_coords.html#PPIdatatable" class="xref" data-knowl="./knowl/xref/PPIdatatable.html" data-reveal-label="Reveal" data-close-label="Close" title="Table 3.4.16: PPI data.">Table 3.4.16</a> to rectangular coordinates <span class="process-math">\((x,y)\)</span> and a color <span class="process-math">\(c\)</span> for a <span class="process-math">\(1920 \times 1080\)</span> computer monitor.  Place the radar antenna at the center of the screen.</div> <figure class="table table-like" id="PPIdatatable"><figcaption><span class="type">Table</span><span class="space"> </span><span class="codenumber">3.4.16<span class="period">.</span></span><span class="space"> </span>PPI data.</figcaption><div class="tabular-box natural-width"><table class="tabular">
+<tr>
+<td class="c m b2 r0 l0 t1 lines"><span class="process-math">\(r\)</span></td>
+<td class="c m b2 r0 l0 t1 lines"><span class="process-math">\(\beta\)</span></td>
+<td class="c m b2 r0 l0 t1 lines">color <span class="process-math">\(c\)</span>
+</td>
+</tr>
+<tr>
+<td class="c m b1 r0 l0 t0 lines">2</td>
+<td class="c m b1 r0 l0 t0 lines">90</td>
+<td class="c m b1 r0 l0 t0 lines">blue</td>
+</tr>
+<tr>
+<td class="c m b1 r0 l0 t0 lines">30</td>
+<td class="c m b1 r0 l0 t0 lines">120</td>
+<td class="c m b1 r0 l0 t0 lines">white</td>
+</tr>
+<tr>
+<td class="c m b1 r0 l0 t0 lines">30</td>
+<td class="c m b1 r0 l0 t0 lines">180</td>
+<td class="c m b1 r0 l0 t0 lines">red</td>
+</tr>
+</table></div></figure><div class="solutions"><details id="PPIcalculation-3" class="answer solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Answer</span><span class="period">.</span></summary><div class="answer solution-like knowl__content"><div class="para" id="PPIcalculation-3-1">In order for the antenna to be located at the center of the screen, each <span class="process-math">\(x\)</span>-value must be shifted <span class="process-math">\(1920/2 = 960\)</span> units right and each <span class="process-math">\(y\)</span>-value must be shifted <span class="process-math">\(1080/2=540\)</span> units up.  For example, the ordered pair <span class="process-math">\((3,120^{\circ})\)</span> is converted to <span class="process-math">\(x=960+30\cos(90^{\circ}-120^{\circ})\approx 986\)</span> and <span class="process-math">\(y=540+30\sin(90^{\circ}-120^{\circ})=525 \)</span> <figure class="table table-like" id="PPIdatatableconverted"><figcaption><span class="type">Table</span><span class="space"> </span><span class="codenumber">3.4.17<span class="period">.</span></span><span class="space"> </span>Converted PPI data.</figcaption><div class="tabular-box natural-width"><table class="tabular">
+<tr>
+<td class="c m b2 r0 l0 t1 lines"><span class="process-math">\(x\)</span></td>
+<td class="c m b2 r0 l0 t1 lines"><span class="process-math">\(y\)</span></td>
+<td class="c m b2 r0 l0 t1 lines">color <span class="process-math">\(c\)</span>
+</td>
+</tr>
+<tr>
+<td class="c m b1 r0 l0 t0 lines">962</td>
+<td class="c m b1 r0 l0 t0 lines">540</td>
+<td class="c m b1 r0 l0 t0 lines">blue</td>
+</tr>
+<tr>
+<td class="c m b1 r0 l0 t0 lines">986</td>
+<td class="c m b1 r0 l0 t0 lines">525</td>
+<td class="c m b1 r0 l0 t0 lines">white</td>
+</tr>
+<tr>
+<td class="c m b1 r0 l0 t0 lines">960</td>
+<td class="c m b1 r0 l0 t0 lines">510</td>
+<td class="c m b1 r0 l0 t0 lines">red</td>
+</tr>
+</table></div></figure>
+</div></div></details></div></article></details><div class="para" id="sec_spherical_coords-4-18">The polar representation of a point is not unique. For example, the polar coordinates <span class="process-math">\(\left( 2, 60^{\circ} \right)\)</span> and <span class="process-math">\(\left( 2, 420^{\circ} \right)\)</span> both represent the point <span class="process-math">\((1,\sqrt{3})\)</span> in the rectangular system. Also, the value of <span class="process-math">\(r\)</span> can be negative. Therefore, the point with polar coordinates <span class="process-math">\(\left(-2,240^{\circ}\right)\)</span> also represents the point <span class="process-math">\((1,\sqrt{3})\)</span> in the rectangular system.  Every point in the plane has an infinite number of representations in polar coordinates. However, each point in the plane has only one representation in the rectangular coordinate system.</div></section><section class="subsection" id="sphericalcoordinatesection"><h3 class="heading hide-type">
+<span class="type">Subsection</span><span class="space"> </span><span class="codenumber">3.4.2</span><span class="space"> </span><span class="title">Spherical Coordinates</span>
+</h3>
+<div class="para" id="sphericalcoordinatesection-2">We have encountered two different coordinate systems in the plane — the rectangular and polar coordinates systems — and seen how polar coordinates form a convenient alternative. In a similar way, there is an additional natural coordinate system, <dfn class="terminology">spherical coordinates</dfn>, in three-dimensional space.  We now investigate this system (which builds upon polar coordinates in the plane).</div>
+<figure class="figure figure-like" id="F_11_8_Spherical_coords"><div class="image-box" style="width: 50%; margin-left: 25%; margin-right: 25%;"><img src="external/fig_11_8_spherical.svg" role="img" class="contained"></div>
+<figcaption><span class="type">Figure</span><span class="space"> </span><span class="codenumber">3.4.18<span class="period">.</span></span><span class="space"> </span>The spherical coordinates of a point.  Any point in space can be represented in spherical coordinates with <span class="process-math">\(\rho \geq 0\text{,}\)</span> <span class="process-math">\(0 \leq \theta \lt 2 \pi\text{,}\)</span> and <span class="process-math">\(0 \leq \phi \leq \pi\text{.}\)</span>  See, for example, <a class="external" href="https://www.geogebra.org/m/h9xS5ZZs" target="_blank">https://www.geogebra.org/m/h9xS5ZZs</a><details class="ptx-footnote" aria-live="polite" id="F_11_8_Spherical_coords-1-5"><summary class="ptx-footnote__number" title="Footnote 54"><sup> 54 </sup></summary><div class="ptx-footnote__contents" id="F_11_8_Spherical_coords-1-5"><code class="code-inline tex2jax_ignore">https://www.geogebra.org/m/h9xS5ZZs</code></div></details>.</figcaption></figure><div class="para" id="sphericalcoordinatesection-4">The spherical coordinates of a point in space are <span class="process-math">\(\rho\)</span> (rho), <span class="process-math">\(\theta\text{,}\)</span> and <span class="process-math">\(\phi\)</span> (phi), where <span class="process-math">\(\rho\)</span> is the distance from the point to the origin, <span class="process-math">\(\theta\)</span> has the same interpretation it does in polar coordinates, and <span class="process-math">\(\phi\)</span> is the angle between the positive <span class="process-math">\(z\)</span> axis and the vector from the origin to the point, as illustrated in <a href="sec_spherical_coords.html#F_11_8_Spherical_coords" class="xref" data-knowl="./knowl/xref/F_11_8_Spherical_coords.html" data-reveal-label="Reveal" data-close-label="Close" title="Figure 3.4.18">Figure 3.4.18</a>. You should convince yourself that any point in space can be represented in spherical coordinates with <span class="process-math">\(\rho \geq 0\text{,}\)</span> <span class="process-math">\(0 \leq \theta \lt 2 \pi\text{,}\)</span> and <span class="process-math">\(0 \leq \phi \leq \pi\text{.}\)</span>
+</div>
+<article class="example example-like" id="ColumbusOH"><h4 class="heading">
+<span class="type">Example</span><span class="space"> </span><span class="codenumber">3.4.19</span><span class="period">.</span><span class="space"> </span><span class="title">Converting Latitude and Longitude to Spherical Coordinates.</span>
+</h4>
+<div class="para" id="ColumbusOH-2">The latitude of Columbus, Ohio, is <span class="process-math">\(40^{\circ}\)</span> N and the longitude is <span class="process-math">\(83^{\circ}\)</span> W.  The radius of Earth is 3961 miles.  The location of Columbus in spherical coordinates can be described by <span class="process-math">\((3961, -83^{\circ}, 50^{\circ})\text{.}\)</span>  We use <span class="process-math">\(\phi=50^{\circ}\)</span> since that is the angle Columbus makes with the positive <span class="process-math">\(z\)</span>-axis which is runs from the center of Earth through the north pole.  <span class="process-math">\(40^{\circ}\)</span> is the angle Columbus makes with the equator.  Longitude <span class="process-math">\(\theta=-83^{\circ}\)</span> is measured in degrees east of the <span class="process-math">\(xz\)</span>-plane.</div>
+<figure class="figure figure-like" id="EarthSpherical"><div class="image-box" style="width: 50%; margin-left: 25%; margin-right: 25%;"><img src="external/EarthSphericalOpenStax.jpg" class="contained"></div>
+<figcaption><span class="type">Figure</span><span class="space"> </span><span class="codenumber">3.4.20<span class="period">.</span></span><span class="space"> </span>In the latitude–longitude system, angles describe the location of a point on Earth relative to the equator and the prime meridian.  Source:<a class="external" href="https://openstax.org/books/calculus-volume-3/pages/2-7-cylindrical-and-spherical-coordinates" target="_blank">OpenStax Calculus Volume 3</a><details class="ptx-footnote" aria-live="polite" id="EarthSpherical-1-2"><summary class="ptx-footnote__number" title="Footnote 55"><sup> 55 </sup></summary><div class="ptx-footnote__contents" id="EarthSpherical-1-2"><code class="code-inline tex2jax_ignore">https://openstax.org/books/calculus-volume-3/pages/2-7-cylindrical-and-spherical-coordinates</code></div></details>.</figcaption></figure></article><details id="WashingtonDC" class="exercise exercise-like born-hidden-knowl"><summary class="knowl__link"><h4 class="heading">
+<span class="type">Checkpoint</span><span class="space"> </span><span class="codenumber">3.4.21</span><span class="period">.</span><span class="space"> </span><span class="title">Where in the World is Washington, DC?</span>
+</h4></summary><article class="exercise exercise-like knowl__content"><div class="para" id="WashingtonDC-2-1">Washington, DC, is located at <span class="process-math">\(39^{\circ}\)</span> N and <span class="process-math">\(77^{\circ}\)</span> W (see <a href="sec_spherical_coords.html#WashDCPic" class="xref" data-knowl="./knowl/xref/WashDCPic.html" data-reveal-label="Reveal" data-close-label="Close" title="Figure 3.4.22">Figure 3.4.22</a>).  The radius of Earth is 3961 miles. Express the location of Washington, DC, in spherical coordinates.</div> <figure class="figure figure-like" id="WashDCPic"><div class="image-box" style="width: 30%; margin-left: 35%; margin-right: 35%;"><img src="external/WashDC.jpg" class="contained"></div>
+<figcaption><span class="type">Figure</span><span class="space"> </span><span class="codenumber">3.4.22<span class="period">.</span></span><span class="space"> </span>Washington, DC, as viewed from space.  Source:<a class="external" href="https://openstax.org/books/calculus-volume-3/pages/2-7-cylindrical-and-spherical-coordinates" target="_blank">OpenStax Calculus Volume 3</a><details class="ptx-footnote" aria-live="polite" id="WashDCPic-1-2"><summary class="ptx-footnote__number" title="Footnote 56"><sup> 56 </sup></summary><div class="ptx-footnote__contents" id="WashDCPic-1-2"><code class="code-inline tex2jax_ignore">https://openstax.org/books/calculus-volume-3/pages/2-7-cylindrical-and-spherical-coordinates</code></div></details>.</figcaption></figure><div class="solutions"><details id="WashingtonDC-3" class="answer solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Answer</span><span class="period">.</span></summary><div class="answer solution-like knowl__content"><div class="para" id="WashingtonDC-3-1">We have <span class="process-math">\(\rho=3961\text{,}\)</span> <span class="process-math">\(\theta = -77^{\circ}\text{,}\)</span> and <span class="process-math">\(\phi=90^{\circ}-39^{\circ} = 51^{\circ}\text{.}\)</span>  So the spherical coordinates are <span class="process-math">\((3961, -77^{\circ},51^{\circ})\text{.}\)</span>
+</div></div></details></div></article></details><div class="para" id="sphericalcoordinatesection-7">
+<a href="sec_spherical_coords.html#ColumbusOH" class="xref" data-knowl="./knowl/xref/ColumbusOH.html" data-reveal-label="Reveal" data-close-label="Close" title="Example 3.4.19: Converting Latitude and Longitude to Spherical Coordinates">Example 3.4.19</a> demonstrates why the angle <span class="process-math">\(\phi\)</span> is sometimes called the cone angle or the <dfn class="terminology">colatitude</dfn>.  The angle <span class="process-math">\(\theta\)</span> is called the polar angle or longitude.</div>
+<article class="activity project-like" id="PA_11_8"><h4 class="heading">
+<span class="type">Activity</span><span class="space"> </span><span class="codenumber">1</span><span class="period">.</span>
+</h4>
+<div class="para" id="PA_11_8-1">For the following questions, consider the point <span class="process-math">\(P\)</span> whose Cartesian coordinates are <span class="process-math">\((-2,2,\sqrt{8})\text{.}\)</span>
+</div>
+<ol class="lower-alpha" id="PA_11_8-2">
+<li id="PA_11_8-2-1"><div class="para" id="PA_11_8-2-1-1">What is the distance from <span class="process-math">\(P\)</span> to the origin?  Your result is the value of <span class="process-math">\(\rho\)</span> in the spherical coordinates of <span class="process-math">\(P\text{.}\)</span>
+</div></li>
+<li id="PA_11_8-2-2"><div class="para" id="PA_11_8-2-2-1">Determine the point that is the projection of <span class="process-math">\(P\)</span> onto the <span class="process-math">\(xy\)</span>-plane.  Then, use this projection to find the value of <span class="process-math">\(\theta\)</span> in the polar coordinates of the projection of <span class="process-math">\(P\)</span> that lies in the plane.  Your result is also the value of <span class="process-math">\(\theta\)</span> for the spherical coordinates of the point.</div></li>
+<li id="PA_11_8-2-3"><div class="para" id="PA_11_8-2-3-1">Based on the illustration in <a href="sec_spherical_coords.html#F_11_8_Spherical_coords" class="xref" data-knowl="./knowl/xref/F_11_8_Spherical_coords.html" data-reveal-label="Reveal" data-close-label="Close" title="Figure 3.4.18">Figure 3.4.18</a>, how is the angle <span class="process-math">\(\phi\)</span> determined by <span class="process-math">\(\rho\)</span> and the <span class="process-math">\(z\)</span> coordinate of <span class="process-math">\(P\text{?}\)</span> Use a well-chosen right triangle to find the value of <span class="process-math">\(\phi\text{,}\)</span> which is the final component in the spherical coordinates of <span class="process-math">\(P\text{.}\)</span> Draw a carefully labeled picture that clearly illustrates the values of <span class="process-math">\(\rho\text{,}\)</span> <span class="process-math">\(\theta\text{,}\)</span> and <span class="process-math">\(\phi\)</span> in this example, along with the original rectangular coordinates of <span class="process-math">\(P\text{.}\)</span>
+</div></li>
+<li id="PA_11_8-2-4"><div class="para" id="PA_11_8-2-4-1">Based on your responses to (a), (b), and (c), if we are given the Cartesian coordinates <span class="process-math">\((x,y,z)\)</span> of a point <span class="process-math">\(Q\text{,}\)</span> how are the values of <span class="process-math">\(\rho\text{,}\)</span> <span class="process-math">\(\theta\text{,}\)</span> and <span class="process-math">\(\phi\)</span> in the spherical coordinates of <span class="process-math">\(Q\)</span> determined by <span class="process-math">\(x\text{,}\)</span> <span class="process-math">\(y\text{,}\)</span> and <span class="process-math">\(z\text{?}\)</span>
+</div></li>
+</ol></article><div class="para" id="sphericalcoordinatesection-9">As we saw in <a href="sec_spherical_coords.html#PA_11_8" class="xref" data-knowl="./knowl/xref/PA_11_8.html" data-reveal-label="Reveal" data-close-label="Close" title="Activity 1">Activity 1</a>, the spherical coordinates of a point in 3-space have the form <span class="process-math">\((\rho, \theta, \phi)\text{,}\)</span> where <span class="process-math">\(\rho\)</span> is the distance from the point to the origin, <span class="process-math">\(\theta\)</span> has the same meaning as in polar coordinates, and <span class="process-math">\(\phi\)</span> is the angle between the positive <span class="process-math">\(z\)</span> axis and the vector from the origin to the point. The overall situation is illustrated in <a href="sec_spherical_coords.html#F_11_8_Spherical_coords" class="xref" data-knowl="./knowl/xref/F_11_8_Spherical_coords.html" data-reveal-label="Reveal" data-close-label="Close" title="Figure 3.4.18">Figure 3.4.18</a>.</div>
+<figure class="figure figure-like" id="F_11_8_Spherical_to_Cartesian"><div class="image-box" style="width: 50%; margin-left: 25%; margin-right: 25%;"><img src="external/fig_11_8_spherical_explain.svg" role="img" class="contained"></div>
+<figcaption><span class="type">Figure</span><span class="space"> </span><span class="codenumber">3.4.23<span class="period">.</span></span><span class="space"> </span>Converting from spherical to Cartesian coordinates.</figcaption></figure><div class="para" id="sphericalcoordinatesection-11">The example in <a href="sec_spherical_coords.html#PA_11_8" class="xref" data-knowl="./knowl/xref/PA_11_8.html" data-reveal-label="Reveal" data-close-label="Close" title="Activity 1">Activity 1</a> and <a href="sec_spherical_coords.html#F_11_8_Spherical_to_Cartesian" class="xref" data-knowl="./knowl/xref/F_11_8_Spherical_to_Cartesian.html" data-reveal-label="Reveal" data-close-label="Close" title="Figure 3.4.23">Figure 3.4.23</a> suggest how to convert between Cartesian and spherical coordinates.</div>
+<article class="assemblage assemblage-like" id="Spherical-cylindrical"><h4 class="heading"><span class="title">Coverting between Cartesian and spherical coordinates.</span></h4>
+<div class="para logical" id="Spherical-cylindrical-2"><ul class="disc" id="Spherical-cylindrical-2-1">
+<li id="Spherical-cylindrical-2-1-1">
+<span class="heading"><span class="title">Converting from Cartesian to spherical.</span></span><div class="para logical" id="Spherical-cylindrical-2-1-1-2">
+<div class="para">If we are given the Cartesian coordinates <span class="process-math">\((x,y,z)\)</span> of a point <span class="process-math">\(P\text{,}\)</span> then the spherical coordinates <span class="process-math">\((\rho,\theta,\phi)\)</span> of <span class="process-math">\(P\)</span> satisfy</div>
+<div class="displaymath process-math" id="rectangular2spherical">
+\begin{equation}
+\rho  = \sqrt{x^2  + y^2 + z^2} \ \ \ \ \  \tan(\theta) = \frac{y}{x} \ \ \ \ \ \text{ and } \ \ \ \ \  \cos(\phi) = \frac{z}{\rho},\tag{3.5}
+\end{equation}
+</div>
+<div class="para">where in the latter two equations, we require <span class="process-math">\(x \ne 0\)</span> and <span class="process-math">\(\rho \ne 0\text{.}\)</span>
+</div>
+</div>
+</li>
+<li id="Spherical-cylindrical-2-1-2">
+<span class="heading"><span class="title">Converting from spherical to Cartesian.</span></span><div class="para logical" id="Spherical-cylindrical-2-1-2-2">
+<div class="para">If we are given the spherical coordinates <span class="process-math">\((\rho,\theta,\phi)\)</span> of a point <span class="process-math">\(P\text{,}\)</span> then the Cartesian coordinates <span class="process-math">\((x,y,z)\)</span> of <span class="process-math">\(P\)</span> satisfy</div>
+<div class="displaymath process-math" id="spherical2rectangular">
+\begin{equation}
+x = \rho \sin(\phi) \cos(\theta) \ \ \ \ \ y = \rho \sin(\phi) \sin(\theta) \ \ \ \ \ \text{ and } \ \ \ \ \ z = \rho \cos(\phi).\tag{3.6}
+\end{equation}
+</div>
+</div>
+</li>
+</ul></div></article><article class="example example-like" id="ColumbusOHRectangular"><h4 class="heading">
+<span class="type">Example</span><span class="space"> </span><span class="codenumber">3.4.24</span><span class="period">.</span><span class="space"> </span><span class="title">Rectangular Coordinates of Columbus, OH.</span>
+</h4>
+<div class="para logical" id="ColumbusOHRectangular-2">
+<div class="para">In <a href="sec_spherical_coords.html#ColumbusOH" class="xref" data-knowl="./knowl/xref/ColumbusOH.html" data-reveal-label="Reveal" data-close-label="Close" title="Example 3.4.19: Converting Latitude and Longitude to Spherical Coordinates">Example 3.4.19</a>, the spherical coordinates of Columbus, OH, were described by <span class="process-math">\((4000, -83^{\circ}, 50^{\circ})\text{.}\)</span>  Here we assumed, and continue to assume, that the origin is at the center of the earth, the positive <span class="process-math">\(x\)</span>-axis runs from the origin to where the prime meridian and the equator intersect on the surface, and the positive <span class="process-math">\(z\)</span>-axis runs from the origin through the north pole.  In rectangular coordinates, we use <a href="sec_spherical_coords.html#spherical2rectangular" class="xref" data-knowl="./knowl/xref/spherical2rectangular.html" data-reveal-label="Reveal" data-close-label="Close" title="Equation 3.6">(3.6)</a> to locate Columbus at</div>
+<div class="displaymath process-math" data-contains-math-knowls="./knowl/xref/ColumbusOH.html ./knowl/xref/spherical2rectangular.html" id="ColumbusOHRectangular-2-6">
+\begin{align*}
+x = \mathstrut \amp 4000\sin(50^{\circ}) \cos(-83^{\circ}) \approx 313.3 \\
+y = \mathstrut \amp 4000 \sin(50^{\circ}) \sin(-83^{\circ}) \approx -2552 \\
+z = \mathstrut \amp 4000 \cos(50^{\circ}) \approx 2571
+\end{align*}
+</div>
+<div class="para">where all the units are miles (as measured from the center of the earth).</div>
+</div></article><div class="para" id="sphericalcoordinatesection-14">When it comes to thinking about particular surfaces in spherical coordinates, we usually write <span class="process-math">\(\rho\)</span> as a function of <span class="process-math">\(\theta\)</span> and <span class="process-math">\(\phi\text{;}\)</span> this is a natural analog to polar coordinates, where we often think of our distance from the origin in the plane as being a function of <span class="process-math">\(\theta\text{.}\)</span> In spherical coordinates, we likewise often view <span class="process-math">\(\rho\)</span> as a function of <span class="process-math">\(\theta\)</span> and <span class="process-math">\(\phi\text{,}\)</span> thus viewing distance from the origin as a function of two key angles.</div>
+<div class="para" id="sphericalcoordinatesection-15">In the following activity, we explore several basic equations in spherical coordinates and the surfaces they generate.</div>
+<article class="activity project-like" id="A_11_8_7"><h4 class="heading">
+<span class="type">Activity</span><span class="space"> </span><span class="codenumber">2</span><span class="period">.</span>
+</h4>
+<div class="para logical" id="A_11_8_7-1">
+<div class="para">In this activity, we graph some surfaces using spherical coordinates. To improve your intuition and test your understanding, you should first think about what each graph should look like before you plot it using appropriate technology.</div>
+<ol class="lower-alpha" id="A_11_8_7-1-1">
+<li id="A_11_8_7-1-1-1"><div class="para" id="A_11_8_7-1-1-1-1">What familiar surface is described by the points in spherical coordinates with <span class="process-math">\(\rho = 1\text{,}\)</span> <span class="process-math">\(0 \leq \theta \leq 2\pi\text{,}\)</span> and <span class="process-math">\(0 \leq \phi \leq \pi\text{?}\)</span> How does this particular example demonstrate the reason for the name of this coordinate system? What if we restrict <span class="process-math">\(\phi\)</span> to <span class="process-math">\(0 \leq \phi \leq \frac{\pi}{2}\text{?}\)</span>
+</div></li>
+<li id="A_11_8_7-1-1-2"><div class="para" id="A_11_8_7-1-1-2-1">What familiar surface is described by the points in spherical coordinates with <span class="process-math">\(\phi = \frac{\pi}{3}\text{,}\)</span> <span class="process-math">\(0 \leq \rho \leq 1\text{,}\)</span> and <span class="process-math">\(0 \leq \theta \leq 2\pi\text{?}\)</span>
+</div></li>
+<li id="A_11_8_7-1-1-3"><div class="para" id="A_11_8_7-1-1-3-1">What familiar shape is described by the points in spherical coordinates with <span class="process-math">\(\theta = \frac{\pi}{6}\text{,}\)</span> <span class="process-math">\(0 \leq \rho \leq 1\text{,}\)</span> and <span class="process-math">\(0 \leq \phi \leq \pi\text{?}\)</span>
+</div></li>
+<li id="A_11_8_7-1-1-4"><div class="para" id="A_11_8_7-1-1-4-1">Plot the graph of <span class="process-math">\(\rho = \theta\text{,}\)</span> for <span class="process-math">\(0 \leq \phi \leq \pi\)</span> and <span class="process-math">\(0 \leq \theta \leq 2 \pi\text{.}\)</span> How does the resulting surface appear?</div></li>
+</ol>
+</div></article><div class="para" id="sphericalcoordinatesection-17">As the name and <a href="sec_spherical_coords.html#A_11_8_7" class="xref" data-knowl="./knowl/xref/A_11_8_7.html" data-reveal-label="Reveal" data-close-label="Close" title="Activity 2">Activity 2</a> indicate, spherical coordinates are particularly useful for describing curves and surfaces that are spherical in nature.</div>
+<article class="example example-like" id="S20Latitude"><h4 class="heading">
+<span class="type">Example</span><span class="space"> </span><span class="codenumber">3.4.25</span><span class="period">.</span><span class="space"> </span><span class="title">Describing a Line of Latitude.</span>
+</h4>
+<div class="para" id="S20Latitude-2">The set of spherical coordinates <span class="process-math">\(\left\{ (\rho,\theta,\phi): \rho = 3961, 0^{\circ} \leq \theta \leq 360^{\circ}, \phi = 110^{\circ} \right\}\)</span> describes the set of locations on the earth at the <span class="process-math">\(20^{\circ}\)</span> S line of latitude.</div>
+<figure class="figure figure-like" id="S20LatitudeMap"><div class="image-box" style="width: 50%; margin-left: 25%; margin-right: 25%;"><img src="generated/latex-image/S20LatitudeMapPic.svg" role="img" class="contained" alt="Latitude of 20 degrees south."></div>
+<figcaption><span class="type">Figure</span><span class="space"> </span><span class="codenumber">3.4.26<span class="period">.</span></span><span class="space"> </span>A line of latitude at <span class="process-math">\(20^{\circ}\)</span> S.</figcaption></figure></article><details id="Longitude70" class="exercise exercise-like born-hidden-knowl"><summary class="knowl__link"><h4 class="heading">
+<span class="type">Checkpoint</span><span class="space"> </span><span class="codenumber">3.4.27</span><span class="period">.</span><span class="space"> </span><span class="title">Describing a Line of Longitude.</span>
+</h4></summary><article class="exercise exercise-like knowl__content"><div class="para" id="Longitude70-2-1">Use spherical coordinates to describe the <span class="process-math">\(70^{\circ}\)</span> E line of longitude.</div>
+<div class="solutions"><details id="Longitude70-3" class="answer solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Answer</span><span class="period">.</span></summary><div class="answer solution-like knowl__content"><div class="para" id="Longitude70-3-1">Assuming that the prime meridian is located in the <span class="process-math">\(xz\)</span>-plane and crosses the positive <span class="process-math">\(x\)</span>-axis, the set of spherical coordinates <span class="process-math">\(\left\{ (\rho,\theta,\phi): \rho=3961, \theta=70^{\circ}, 0^{\circ} \leq \phi \leq 180^{\circ} \right\}\)</span> describe this line.</div></div></details></div></article></details><div class="para" id="sphericalcoordinatesection-20">Finally, we note that the use of spherical coordinates varies significantly.  Mathematicians and meteorologists use a variety of notations and sometimes define variables differently.  To illustrate this point, note that one common means of defining spherical coordinates by meteorologists appears in <a href="sec_spherical_coords.html#MetSpherical" class="xref" data-knowl="./knowl/xref/MetSpherical.html" data-reveal-label="Reveal" data-close-label="Close" title="Figure 3.4.28">Figure 3.4.28</a>.</div>
+<figure class="figure figure-like" id="MetSpherical"><div class="image-box" style="width: 50%; margin-left: 25%; margin-right: 25%;"><img src="generated/latex-image/MetSphericalPic.svg" role="img" class="contained" alt="Spherical Coordinates used by meteorologists."></div>
+<figcaption><span class="type">Figure</span><span class="space"> </span><span class="codenumber">3.4.28<span class="period">.</span></span><span class="space"> </span>Meteorologists often use spherical coordinates <span class="process-math">\((r,\lambda,\varphi)\)</span> where <span class="process-math">\(r\)</span> is the location’s distance from the origin, <span class="process-math">\(\lambda\)</span> is longitude, and <span class="process-math">\(\varphi\)</span> is latitude.  Longitude is measured in degrees east of the prime meridian and latitude is measured in degrees north of the equator.</figcaption></figure><article class="example example-like" id="haversinedistance"><h4 class="heading">
+<span class="type">Example</span><span class="space"> </span><span class="codenumber">3.4.29</span><span class="period">.</span><span class="space"> </span><span class="title">The Haversine Distance Formula.</span>
+</h4>
+<div class="para logical" id="haversinedistance-2">
+<div class="para">Using <span class="process-math">\((r,\lambda,\varphi)\)</span> notation for locations on the earth, we can compute the great circle distance <span class="process-math">\(d\)</span> (as one would traverse the surface of our beloved sphere) using the <dfn class="terminology">Haversine distance formula</dfn>.  With <span class="process-math">\(\lambda\)</span> representing longitude and <span class="process-math">\(\varphi\)</span> representing latitude of a location, and <span class="process-math">\(r\)</span> representing the radius of the planet, we have</div>
+<div class="displaymath process-math" id="gcdist">
+\begin{equation}
+d=2r\arcsin\left( \sqrt{\sin^2\left( \frac{\varphi_2-\varphi_1}{2} \right) + \cos(\varphi_1)\cos(\varphi_2)\sin^2\left( \frac{\lambda_2-\lambda_1}{2} \right)} \right)\text{.}\tag{3.7}
+\end{equation}
+</div>
+<div class="para">Note that when computing the arcsine, the result must be in radians.</div>
+</div>
+<figure class="figure figure-like" id="GreatCircleDistance"><div class="image-box" style="width: 50%; margin-left: 25%; margin-right: 25%;"><img src="generated/latex-image/GreatCircleDistancePic.svg" role="img" class="contained" alt="The Haversine Distance Formula."></div>
+<figcaption><span class="type">Figure</span><span class="space"> </span><span class="codenumber">3.4.30<span class="period">.</span></span><span class="space"> </span>The great circle distance <span class="process-math">\(d\)</span> between two points <span class="process-math">\((r,\lambda_1,\varphi_1)\)</span> and <span class="process-math">\((r,\lambda_2,\varphi_2)\)</span> on a sphere is given by the Haversine distance formula <a href="sec_spherical_coords.html#gcdist" class="xref" data-knowl="./knowl/xref/gcdist.html" data-reveal-label="Reveal" data-close-label="Close" title="Equation 3.7">(3.7)</a>.</figcaption></figure></article></section><section class="exercises" id="ex_spherical_coords"><h3 class="heading hide-type">
+<span class="type">Exercises</span><span class="space"> </span><span class="codenumber">3.4.3</span><span class="space"> </span><span class="title">Exercises</span>
+</h3>
+<article class="exercise exercise-like" id="IdentifyPolarCoords"><h4 class="heading">
+<span class="codenumber">1<span class="period">.</span></span><span class="space"> </span><span class="title">Identify Polar Coordinates.</span>
+</h4>
+<div id="momIdentifyPolarCoords-2wrap" style="width:100%;overflow:visible;position:relative"><iframe id="momIdentifyPolarCoords-2" style="position:absolute;z-index:1;object-fit: contain; width: 100%" frameborder="0" data-knowl-callback="sendResizeRequest" src="https://www.myopenmath.com/embedq2.php?id=1490729&amp;frame_id=momIdentifyPolarCoords-2"></iframe></div></article><article class="exercise exercise-like" id="PlotPolarPoint"><h4 class="heading">
+<span class="codenumber">2<span class="period">.</span></span><span class="space"> </span><span class="title">Plot Point Given in Polar Coordinates.</span>
+</h4>
+<div id="momPlotPolarPoint-2wrap" style="width:100%;overflow:visible;position:relative"><iframe id="momPlotPolarPoint-2" style="position:absolute;z-index:1;object-fit: contain; width: 100%" frameborder="0" data-knowl-callback="sendResizeRequest" src="https://www.myopenmath.com/embedq2.php?id=578805&amp;frame_id=momPlotPolarPoint-2"></iframe></div></article><article class="exercise exercise-like" id="ConvertPolar2Cartesian"><h4 class="heading">
+<span class="codenumber">3<span class="period">.</span></span><span class="space"> </span><span class="title">Convert Polar Coordinates to Cartesian.</span>
+</h4>
+<div id="momConvertPolar2Cartesian-2wrap" style="width:100%;overflow:visible;position:relative"><iframe id="momConvertPolar2Cartesian-2" style="position:absolute;z-index:1;object-fit: contain; width: 100%" frameborder="0" data-knowl-callback="sendResizeRequest" src="https://www.myopenmath.com/embedq2.php?id=8485&amp;frame_id=momConvertPolar2Cartesian-2"></iframe></div></article><article class="exercise exercise-like" id="ConvertCartesian2PolarPlus"><h4 class="heading">
+<span class="codenumber">4<span class="period">.</span></span><span class="space"> </span><span class="title">Convert Cartesian Coordinates to Polar.</span>
+</h4>
+<div id="momConvertCartesian2PolarPlus-2wrap" style="width:100%;overflow:visible;position:relative"><iframe id="momConvertCartesian2PolarPlus-2" style="position:absolute;z-index:1;object-fit: contain; width: 100%" frameborder="0" data-knowl-callback="sendResizeRequest" src="https://www.myopenmath.com/embedq2.php?id=8490&amp;frame_id=momConvertCartesian2PolarPlus-2"></iframe></div></article><article class="exercise exercise-like" id="ConvertCartesian2PolarMinus"><h4 class="heading">
+<span class="codenumber">5<span class="period">.</span></span><span class="space"> </span><span class="title">Convert Cartesian Coordinates to Polar II.</span>
+</h4>
+<div id="momConvertCartesian2PolarMinus-2wrap" style="width:100%;overflow:visible;position:relative"><iframe id="momConvertCartesian2PolarMinus-2" style="position:absolute;z-index:1;object-fit: contain; width: 100%" frameborder="0" data-knowl-callback="sendResizeRequest" src="https://www.myopenmath.com/embedq2.php?id=8489&amp;frame_id=momConvertCartesian2PolarMinus-2"></iframe></div></article><article class="exercise exercise-like" id="MatchPolarCartesianExp"><h4 class="heading">
+<span class="codenumber">6<span class="period">.</span></span><span class="space"> </span><span class="title">Match Expressions.</span>
+</h4>
+<div id="momMatchPolarCartesianExp-2wrap" style="width:100%;overflow:visible;position:relative"><iframe id="momMatchPolarCartesianExp-2" style="position:absolute;z-index:1;object-fit: contain; width: 100%" frameborder="0" data-knowl-callback="sendResizeRequest" src="https://www.myopenmath.com/embedq2.php?id=977925&amp;frame_id=momMatchPolarCartesianExp-2"></iframe></div></article><article class="exercise exercise-like" id="ConvertRectSphere"><h4 class="heading">
+<span class="codenumber">7<span class="period">.</span></span><span class="space"> </span><span class="title">Convert from Rectangular to Spherical Coordinates.</span>
+</h4>
+<div id="momConvertRectSphere-2wrap" style="width:100%;overflow:visible;position:relative"><iframe id="momConvertRectSphere-2" style="position:absolute;z-index:1;object-fit: contain; width: 100%" frameborder="0" data-knowl-callback="sendResizeRequest" src="https://www.myopenmath.com/embedq2.php?id=289166&amp;frame_id=momConvertRectSphere-2"></iframe></div></article><article class="exercise exercise-like" id="ConvertSphereRect"><h4 class="heading">
+<span class="codenumber">8<span class="period">.</span></span><span class="space"> </span><span class="title">Convert from Spherical to Rectangular Coordinates.</span>
+</h4>
+<div id="momConvertSphereRect-2wrap" style="width:100%;overflow:visible;position:relative"><iframe id="momConvertSphereRect-2" style="position:absolute;z-index:1;object-fit: contain; width: 100%" frameborder="0" data-knowl-callback="sendResizeRequest" src="https://www.myopenmath.com/embedq2.php?id=289167&amp;frame_id=momConvertSphereRect-2"></iframe></div></article><article class="exercise exercise-like" id="MatchSpherical"><h4 class="heading">
+<span class="codenumber">9<span class="period">.</span></span><span class="space"> </span><span class="title">Match Surfaces with Equations Described in Spherical Coordinates.</span>
+</h4>
+<div id="momMatchSpherical-2wrap" style="width:100%;overflow:visible;position:relative"><iframe id="momMatchSpherical-2" style="position:absolute;z-index:1;object-fit: contain; width: 100%" frameborder="0" data-knowl-callback="sendResizeRequest" src="https://www.myopenmath.com/embedq2.php?id=1472709&amp;frame_id=momMatchSpherical-2"></iframe></div></article><article class="exercise exercise-like" id="ez-CartesianToSpherical"><h4 class="heading">
+<span class="codenumber">10<span class="period">.</span></span><span class="space"> </span><span class="title">Convert from Cartesian Coordinates to Spherical Coordinates.</span>
+</h4>
+<div class="para logical" id="ez-CartesianToSpherical-2-1">
+<div class="para">Convert from Cartesian to spherical coordinates.</div>
+<ol class="lower-alpha" id="ez-CartesianToSpherical-2-1-1">
+<li id="ez-CartesianToSpherical-2-1-1-1"><div class="para" id="p-derived-ez-CartesianToSpherical-2-1-1-1"><span class="process-math">\(\displaystyle (-2,0,0)\)</span></div></li>
+<li id="ez-CartesianToSpherical-2-1-1-2"><div class="para" id="p-derived-ez-CartesianToSpherical-2-1-1-2"><span class="process-math">\(\displaystyle (0,3,0)\)</span></div></li>
+<li id="ez-CartesianToSpherical-2-1-1-3"><div class="para" id="p-derived-ez-CartesianToSpherical-2-1-1-3"><span class="process-math">\(\displaystyle (0,0,-4)\)</span></div></li>
+<li id="ez-CartesianToSpherical-2-1-1-4"><div class="para" id="p-derived-ez-CartesianToSpherical-2-1-1-4"><span class="process-math">\(\displaystyle \left(-\frac{1}{\sqrt{2}},\frac{1}{\sqrt{2}},\sqrt{3}\right)\)</span></div></li>
+</ol>
+</div>
+<div class="solutions">
+<details id="ez-CartesianToSpherical-3" class="answer solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Answer</span><span class="period">.</span></summary><div class="answer solution-like knowl__content"><ol class="lower-alpha" id="ez-CartesianToSpherical-3-1">
+<li id="ez-CartesianToSpherical-3-1-1"><div class="para" id="p-derived-ez-CartesianToSpherical-3-1-1">
+<span class="process-math">\(\rho=2\text{,}\)</span> <span class="process-math">\(\theta=\pi\text{,}\)</span> <span class="process-math">\(\phi=\frac{\pi}{2}\)</span>
+</div></li>
+<li id="ez-CartesianToSpherical-3-1-2"><div class="para" id="p-derived-ez-CartesianToSpherical-3-1-2">
+<span class="process-math">\(\rho=3\text{,}\)</span> <span class="process-math">\(\theta=\frac{\pi}{2}\text{,}\)</span> <span class="process-math">\(\phi=\frac{\pi}{2}\)</span>
+</div></li>
+<li id="ez-CartesianToSpherical-3-1-3"><div class="para" id="p-derived-ez-CartesianToSpherical-3-1-3">
+<span class="process-math">\(\rho=4\text{,}\)</span> <span class="process-math">\(\theta=\text{arbitrary}\text{,}\)</span> <span class="process-math">\(\phi=\pi\)</span>
+</div></li>
+<li id="ez-CartesianToSpherical-3-1-4"><div class="para" id="p-derived-ez-CartesianToSpherical-3-1-4">
+<span class="process-math">\(\rho=2\text{,}\)</span> <span class="process-math">\(\theta=\frac{3\pi}{4}\text{,}\)</span> <span class="process-math">\(\phi=\frac{\pi}{6}\)</span>
+</div></li>
+</ol></div></details><details id="ez-CartesianToSpherical-4" class="solution solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Solution</span><span class="period">.</span></summary><div class="solution solution-like knowl__content"><ol class="lower-alpha" id="ez-CartesianToSpherical-4-1">
+<li id="ez-CartesianToSpherical-4-1-1">
+<div class="para" id="ez-CartesianToSpherical-4-1-1-1">The point <span class="process-math">\((-2,0,0)\)</span>
+</div>
+<ul class="disc" id="ez-CartesianToSpherical-4-1-1-2">
+<li id="ez-CartesianToSpherical-4-1-1-2-1"><div class="para" id="p-derived-ez-CartesianToSpherical-4-1-1-2-1">lies in the <span class="process-math">\(xy\)</span>-plane (i.e. has <span class="process-math">\(z=\rho\cos\phi=0\)</span>) and so has <span class="process-math">\(\phi=\frac{\pi}{2}\)</span> and</div></li>
+<li id="ez-CartesianToSpherical-4-1-1-2-2"><div class="para" id="p-derived-ez-CartesianToSpherical-4-1-1-2-2">lies on the negative <span class="process-math">\(x\)</span>-axis and so has <span class="process-math">\(\theta=\pi\)</span> and</div></li>
+<li id="ez-CartesianToSpherical-4-1-1-2-3"><div class="para" id="p-derived-ez-CartesianToSpherical-4-1-1-2-3">is a distance <span class="process-math">\(2\)</span> from the origin and so has <span class="process-math">\(\rho=2\text{.}\)</span>
+</div></li>
+</ul>
+</li>
+<li id="ez-CartesianToSpherical-4-1-2">
+<div class="para" id="ez-CartesianToSpherical-4-1-2-1">The point <span class="process-math">\((0,3,0)\)</span>
+</div>
+<ul class="disc" id="ez-CartesianToSpherical-4-1-2-2">
+<li id="ez-CartesianToSpherical-4-1-2-2-1"><div class="para" id="p-derived-ez-CartesianToSpherical-4-1-2-2-1">lies in the <span class="process-math">\(xy\)</span>-plane (i.e. has <span class="process-math">\(z=\rho\cos\phi=0\)</span>) and so has <span class="process-math">\(\phi=\frac{\pi}{2}\)</span> and</div></li>
+<li id="ez-CartesianToSpherical-4-1-2-2-2"><div class="para" id="p-derived-ez-CartesianToSpherical-4-1-2-2-2">lies on the positive <span class="process-math">\(y\)</span>-axis and so has <span class="process-math">\(\theta=\frac{\pi}{2}\)</span> and</div></li>
+<li id="ez-CartesianToSpherical-4-1-2-2-3"><div class="para" id="p-derived-ez-CartesianToSpherical-4-1-2-2-3">is a distance <span class="process-math">\(3\)</span> from the origin and so has <span class="process-math">\(\rho=3\text{.}\)</span>
+</div></li>
+</ul>
+</li>
+<li id="ez-CartesianToSpherical-4-1-3">
+<div class="para" id="ez-CartesianToSpherical-4-1-3-1">The point <span class="process-math">\((0,0,-4)\)</span>
+</div>
+<ul class="disc" id="ez-CartesianToSpherical-4-1-3-2">
+<li id="ez-CartesianToSpherical-4-1-3-2-1"><div class="para" id="p-derived-ez-CartesianToSpherical-4-1-3-2-1">lies on the negative <span class="process-math">\(z\)</span>-axis and so has <span class="process-math">\(\phi=\pi\)</span> and <span class="process-math">\(\theta\)</span> arbitrary and</div></li>
+<li id="ez-CartesianToSpherical-4-1-3-2-2"><div class="para" id="p-derived-ez-CartesianToSpherical-4-1-3-2-2">is a distance <span class="process-math">\(4\)</span> from the origin and so has <span class="process-math">\(\rho=4\text{.}\)</span>
+</div></li>
+</ul>
+</li>
+<li id="ez-CartesianToSpherical-4-1-4">
+<div class="para" id="ez-CartesianToSpherical-4-1-4-1">The point <span class="process-math">\(\left(-\frac{1}{\sqrt{2}},\frac{1}{\sqrt{2}},\sqrt{3}\right)\)</span>
+</div>
+<ul class="disc" id="ez-CartesianToSpherical-4-1-4-2">
+<li id="ez-CartesianToSpherical-4-1-4-2-1"><div class="para" id="p-derived-ez-CartesianToSpherical-4-1-4-2-1">has <span class="process-math">\(\rho=\sqrt{x^2+y^2+z^2}
+=\sqrt{\left(-\frac{1}{\sqrt{2}}\right)^2
++\left(\frac{1}{\sqrt{2}}\right)^2
++\left(\sqrt{3}\right)^2}=\sqrt{4}=2\)</span> and</div></li>
+<li id="ez-CartesianToSpherical-4-1-4-2-2"><div class="para" id="p-derived-ez-CartesianToSpherical-4-1-4-2-2">has <span class="process-math">\(\sqrt{3}=z=\rho\cos\phi = 2\cos\phi\)</span> so that <span class="process-math">\(\cos\phi = \frac{\sqrt{3}}{2}\)</span> and <span class="process-math">\(\phi=\frac{\pi}{6}\)</span> and</div></li>
+<li id="ez-CartesianToSpherical-4-1-4-2-3"><div class="para" id="p-derived-ez-CartesianToSpherical-4-1-4-2-3">has <span class="process-math">\(-\frac{1}{\sqrt{2}}=x=\rho\sin\phi\cos\theta
+= 2\big(\frac{1}{2}\big)\cos\theta\)</span> so that <span class="process-math">\(\cos\theta = -\frac{1}{\sqrt{2}}\text{.}\)</span> As <span class="process-math">\(\left(-\frac{1}{\sqrt{2}},\frac{1}{\sqrt{2}}\right)\)</span> is in the second quadrant, we have <span class="process-math">\(\frac{\pi}{2}\le\theta\le\pi\)</span> and so <span class="process-math">\(\theta=\frac{3\pi}{4}\text{.}\)</span>
+</div></li>
+</ul>
+</li>
+</ol></div></details>
+</div></article><article class="exercise exercise-like" id="ez-Sydney"><h4 class="heading">
+<span class="codenumber">11<span class="period">.</span></span><span class="space"> </span><span class="title">Land Down Under.</span>
+</h4>
+<div class="para" id="ez-Sydney-2-1">Sydney, Australia is at <span class="process-math">\(34^{\circ}\)</span> S and <span class="process-math">\(151^{\circ}\)</span> E.  Express Sydney’s location in spherical coordinates.  Assume Earth has a radius of 4000 miles.</div>
+<div class="solutions"><details id="ez-Sydney-3" class="answer solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Answer</span><span class="period">.</span></summary><div class="answer solution-like knowl__content"><div class="para" id="ez-Sydney-3-1">
+<span class="process-math">\(\rho = 4000\text{,}\)</span> <span class="process-math">\(\theta = 151^{\circ}\text{,}\)</span> and <span class="process-math">\(\phi=90^{\circ} + 34^{\circ} = 124^{\circ}\)</span> so the spherical coordinates of Sydney are <span class="process-math">\((4000,151^{\circ},124^{\circ})\text{.}\)</span>
+</div></div></details></div></article><article class="exercise exercise-like" id="ez-SydneyRectangular"><h4 class="heading">
+<span class="codenumber">12<span class="period">.</span></span><span class="space"> </span><span class="title">Sydney’s Rectangular Coordinates.</span>
+</h4>
+<div class="para" id="ez-SydneyRectangular-2-1">Sydney, Australia is at <span class="process-math">\(34^{\circ}\)</span> S and <span class="process-math">\(151^{\circ}\)</span> E.  Express Sydney’s location in rectangular coordinates.  Spherical coordinates for Sydney were found in <a href="sec_spherical_coords.html#ez-Sydney" class="xref" data-knowl="./knowl/xref/ez-Sydney.html" data-reveal-label="Reveal" data-close-label="Close" title="Exercise 3.4.3.11: Land Down Under">Exercise 3.4.3.11</a>.</div>
+<div class="solutions"><details id="ez-SydneyRectangular-3" class="answer solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Answer</span><span class="period">.</span></summary><div class="answer solution-like knowl__content"><div class="para logical" id="ez-SydneyRectangular-3-1">
+<div class="para">The spherical coordinates of Sydney are <span class="process-math">\((4000,151^{\circ},124^{\circ})\text{.}\)</span>  In rectangular coordinates, we use <a href="sec_spherical_coords.html#spherical2rectangular" class="xref" data-knowl="./knowl/xref/spherical2rectangular.html" data-reveal-label="Reveal" data-close-label="Close" title="Equation 3.6">(3.6)</a> to locate Sydney at</div>
+<div class="displaymath process-math" data-contains-math-knowls="./knowl/xref/spherical2rectangular.html" id="ez-SydneyRectangular-3-1-3">
+\begin{align*}
+x = \mathstrut \amp 4000\sin(124^{\circ}) \cos(151^{\circ}) \approx -2900 \\
+y = \mathstrut \amp 4000 \sin(124^{\circ}) \sin(151^{\circ}) \approx 1608 \\
+z = \mathstrut \amp 4000 \cos(124^{\circ}) \approx -2237
+\end{align*}
+</div>
+<div class="para">where the units are miles.</div>
+</div></div></details></div></article><article class="exercise exercise-like" id="ez-antartica"><h4 class="heading">
+<span class="codenumber">13<span class="period">.</span></span><span class="space"> </span><span class="title">Describing the Antartic.</span>
+</h4>
+<div class="para" id="ez-antartica-2-1">The Antarctic is usually defined simply as that region south of <span class="process-math">\(60^{\circ}\)</span> south latitude, S.  Use spherical coordinates to describe this region as a set.</div>
+<div class="solutions"><details id="ez-antartica-3" class="answer solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Answer</span><span class="period">.</span></summary><div class="answer solution-like knowl__content"><div class="para" id="ez-antartica-3-1"><span class="process-math">\(\left\{ (\rho,\theta,\phi): \rho=3691, 0^{\circ} \leq \theta \leq 360^{\circ}, 150^{\circ} \leq \phi \leq 180^{\circ} \right\}\)</span></div></div></details></div></article><article class="exercise exercise-like" id="ez-stratosphere"><h4 class="heading">
+<span class="codenumber">14<span class="period">.</span></span><span class="space"> </span><span class="title">Describing the Troposphere and Stratosphere.</span>
+</h4>
+<div class="para" id="ez-stratosphere-2-1">According to NASA, the combined troposphere and stratosphere reach 31 miles above the surface of the earth.  Use spherical coordinates to describe this region.</div>
+<div class="solutions"><details id="ez-stratosphere-3" class="answer solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Answer</span><span class="period">.</span></summary><div class="answer solution-like knowl__content"><div class="para" id="ez-stratosphere-3-1">
+<span class="process-math">\(\left\{ (\rho,\theta,\phi): 3961 \leq \rho \leq 3992, 0^{\circ} \leq \theta \leq 360^{\circ}, 0^{\circ} \leq \phi \leq 180^{\circ} \right\}\)</span> or, more compactly, <span class="process-math">\(\left\{ (\rho,\theta,\phi): 3961 \leq \rho \leq 3992 \right\}\)</span>
+</div></div></details></div></article><article class="exercise exercise-like" id="ez-latitudegcdistance"><h4 class="heading">
+<span class="codenumber">15<span class="period">.</span></span><span class="space"> </span><span class="title">Distance Between Latitude Lines.</span>
+</h4>
+<div class="para" id="ez-latitudegcdistance-2-1">Earth has a radius of approximately 3961 miles (6371 km).  Use the Haversine formula to determine the great circle distance between <span class="process-math">\(30^{\circ}\)</span> N and <span class="process-math">\(31^{\circ}\)</span> N.</div>
+<div class="solutions"><details id="ez-latitudegcdistance-3" class="answer solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Answer</span><span class="period">.</span></summary><div class="answer solution-like knowl__content"><div class="para logical" id="ez-latitudegcdistance-3-1"><div class="displaymath process-math" id="ez-latitudegcdistance-3-1-1">
+\begin{align*}
+d= \mathstrut \amp 2(3961)\arcsin\left( \sqrt{\sin^2\left( 0.5^{\circ} \right) + \cos(30^{\circ})\cos(31^{\circ})\sin^2\left( 0^{\circ} \right)} \right)\\
+\approx \mathstrut \amp 2(3961)(0.00872664626 \ {\rm{rad}}) \\
+\approx \mathstrut \amp 69.1 \ {\rm{miles}}\text{.}
+\end{align*}
+</div></div></div></details></div></article><article class="exercise exercise-like" id="ez-3Dradar"><h4 class="heading">
+<span class="codenumber">16<span class="period">.</span></span><span class="space"> </span><span class="title">Radar and Spherical Coordinates.</span>
+</h4>
+<div class="para" id="ez-3Dradar-2-1">Radars use electromagnetic waves to detect objects and measure their positions in space. Object positioning is done by determining distance in relation to the radar equipment.  Three coordinates: azimuth <span class="process-math">\(\phi_{vect}\)</span> (clockwise around the vertical axis), elevation <span class="process-math">\(\varphi\)</span> (from the horizontal axis) and the distance <span class="process-math">\(r\)</span> from the pointing equipment. The set of measurements distance-azimuth-elevation <span class="process-math">\((r,\phi_{vect},\varphi)\)</span> constitutes a set of spherical coordinates with the radar itself at the origin.  Determine the rectangular coordiantes <span class="process-math">\((x,y,z)\)</span> in terms of these spherical coordinates.</div> <figure class="figure figure-like" id="RadarSpherical"><div class="image-box" style="width: 50%; margin-left: 25%; margin-right: 25%;"><img src="generated/latex-image/RadarSphericalPic.svg" role="img" class="contained" alt="Spherical Coordinates for radar."></div>
+<figcaption><span class="type">Figure</span><span class="space"> </span><span class="codenumber">3.4.31<span class="period">.</span></span><span class="space"> </span>Spherical coordinates <span class="process-math">\((r,\phi_{vect},\varphi)\)</span> for radar where <span class="process-math">\(r\)</span> is the location’s distance from the radar (origin), <span class="process-math">\(\phi_{vect}\)</span> the azimuth (measured clockwise from the positive <span class="process-math">\(y\)</span>-axis, and <span class="process-math">\(\varphi\)</span> the angle of elevation (from the <span class="process-math">\(xy\)</span>-plane).</figcaption></figure><div class="solutions"><details id="ez-3Dradar-3" class="answer solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Answer</span><span class="period">.</span></summary><div class="answer solution-like knowl__content"><div class="para logical" id="ez-3Dradar-3-1">
+<div class="para">The rectangular coordinates are</div>
+<div class="displaymath process-math" id="ez-3Dradar-3-1-1">
+\begin{align*}
+x = \mathstrut \amp r\sin(\phi_{vect})\cos(\varphi)\\
+y = \mathstrut \amp r\cos(\phi_{vect})\cos(\varphi)\\
+z = \mathstrut \amp r\sin(\varphi)
+\end{align*}
+</div>
+</div></div></details></div></article></section></section></div>
+<div class="ptx-content-footer">
+<a class="previous-button button" href="sec_contour_diagrams.html" title="Previous"><span xmlns:pf="https://prefigure.org" class="icon material-symbols-outlined" aria-hidden="true">&#xe5cb;</span><span class="name">Prev</span></a><a class="top-button button" href="#" title="Top"><span xmlns:pf="https://prefigure.org" class="icon material-symbols-outlined" aria-hidden="true">&#xe5ce;</span><span class="name">Top</span></a><a class="next-button button" href="ch_vectors.html" title="Next"><span class="name">Next</span><span xmlns:pf="https://prefigure.org" class="icon material-symbols-outlined" aria-hidden="true">&#xe5cc;</span></a>
+</div></main>
+</div>
+<div id="ptx-page-footer" class="ptx-page-footer">
+<a xmlns:pf="https://prefigure.org" class="pretext-link" href="https://pretextbook.org" title="PreTeXt"><div class="logo"><svg xmlns="http://www.w3.org/2000/svg" width="100%" height="100%" viewBox="338 3000 8772 6866"><g style="stroke-width:.025in; stroke:black; fill:none"><polyline points="472,3590 472,9732 " style="stroke:#000000;stroke-width:174; stroke-linejoin:miter; stroke-linecap:round; "></polyline><path style="stroke:#000000;stroke-width:126;stroke-linecap:butt;" d="M 4724,9448 A 4660 4660  0  0  1  8598  9259"></path><path style="stroke:#000000;stroke-width:174;stroke-linecap:butt;" d="M 4488,9685 A 4228 4228  0  0  0   472  9732"></path><path style="stroke:#000000;stroke-width:126;stroke-linecap:butt;" d="M 4724,3590 A 4241 4241  0  0  1  8598  3496"></path><path style="stroke:#000000;stroke-width:126;stroke-linecap:round;" d="M 850,3496  A 4241 4241  0  0  1  4724  3590"></path><path style="stroke:#000000;stroke-width:126;stroke-linecap:round;" d="M 850,9259  A 4507 4507  0  0  1  4724  9448"></path><polyline points="5385,4299 4062,8125" style="stroke:#000000;stroke-width:300; stroke-linejoin:miter; stroke-linecap:round;"></polyline><polyline points="8598,3496 8598,9259" style="stroke:#000000;stroke-width:126; stroke-linejoin:miter; stroke-linecap:round;"></polyline><polyline points="850,3496 850,9259" style="stroke:#000000;stroke-width:126; stroke-linejoin:miter; stroke-linecap:round;"></polyline><polyline points="4960,9685 4488,9685" style="stroke:#000000;stroke-width:174; stroke-linejoin:miter; stroke-linecap:round;"></polyline><polyline points="3070,4582 1889,6141 3070,7700" style="stroke:#000000;stroke-width:300; stroke-linejoin:miter; stroke-linecap:round;"></polyline><polyline points="6418,4582 7600,6141 6418,7700" style="stroke:#000000;stroke-width:300; stroke-linejoin:miter; stroke-linecap:round;"></polyline><polyline points="8976,3590 8976,9732" style="stroke:#000000;stroke-width:174; stroke-linejoin:miter; stroke-linecap:round;"></polyline><path style="stroke:#000000;stroke-width:174;stroke-linecap:butt;" d="M 4960,9685 A 4228 4228  0  0  1  8976  9732"></path></g></svg></div></a><a xmlns:pf="https://prefigure.org" class="runestone-link" href="https://runestone.academy" title="Runestone Academy"><img class="logo" src="https://runestone.academy/runestone/static/images/RAIcon_cropped.png"></a><a xmlns:pf="https://prefigure.org" class="mathjax-link" href="https://www.mathjax.org" title="MathJax"><img class="logo" src="https://www.mathjax.org/badge/badge-square-2.png"></a>
+</div>
+</body>
+</html>

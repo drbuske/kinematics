@@ -1,0 +1,1270 @@
+<!DOCTYPE html>
+<!--********************************************-->
+<!--*       Generated from PreTeXt source      *-->
+<!--*                                          *-->
+<!--*         https://pretextbook.org          *-->
+<!--*                                          *-->
+<!--********************************************-->
+<html lang="en-US" dir="ltr">
+<head xmlns:og="http://ogp.me/ns#" xmlns:book="https://ogp.me/ns/book#">
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<title>Taylor Polynomials in One Variable</title>
+<meta name="Keywords" content="Authored in PreTeXt">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta xmlns:pf="https://prefigure.org" property="og:type" content="book">
+<meta xmlns:pf="https://prefigure.org" property="book:title" content="Mathematics of Atmospheric Kinematics">
+<meta xmlns:pf="https://prefigure.org" property="book:author" content="Dale Buske">
+<script>
+var runestoneMathReady = new Promise((resolve) => window.rsMathReady = resolve);
+window.MathJax = {
+  "tex": {
+    "inlineMath": [
+      [
+        "\\(",
+        "\\)"
+      ]
+    ],
+    "tags": "none",
+    "tagSide": "right",
+    "tagIndent": ".8em",
+    "packages": {
+      "[+]": [
+        "base",
+        "extpfeil",
+        "ams",
+        "amscd",
+        "color",
+        "newcommand",
+        "knowl"
+      ]
+    }
+  },
+  "options": {
+    "ignoreHtmlClass": "tex2jax_ignore|ignore-math",
+    "processHtmlClass": "process-math",
+    "renderActions": {
+      "findScript": [
+        10,
+        function (doc) {
+            document.querySelectorAll('script[type^="math/tex"]').forEach(function(node) {
+                var display = !!node.type.match(/; *mode=display/);
+                var math = new doc.options.MathItem(node.textContent, doc.inputJax[0], display);
+                var text = document.createTextNode('');
+                node.parentNode.replaceChild(text, node);
+                math.start = {node: text, delim: '', n: 0};
+                math.end = {node: text, delim: '', n: 0};
+                doc.math.push(math);
+            });
+        },
+        ""
+      ]
+    }
+  },
+  "chtml": {
+    "scale": 0.98,
+    "mtextInheritFont": true
+  },
+  "loader": {
+    "load": [
+      "input/asciimath",
+      "[tex]/extpfeil",
+      "[tex]/amscd",
+      "[tex]/color",
+      "[tex]/newcommand",
+      "[pretext]/mathjaxknowl3.js"
+    ],
+    "paths": {
+      "pretext": "_static/pretext/js/lib"
+    }
+  },
+  "startup": {
+    pageReady() {
+      return MathJax.startup.defaultPageReady().then(function () {
+      console.log("in ready function");
+      rsMathReady();
+      }
+    )}
+  }
+};
+</script><script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js"></script><script src="_static/pretext/js/pretext-webwork/2.17/pretext-webwork.js"></script><script src="https://webwork-ptx.aimath.org/webwork2_files/node_modules/iframe-resizer/js/iframeResizer.min.js"></script><script src="_static/pretext/js/lti_iframe_resizer.js"></script><script src="https://cdnjs.cloudflare.com/ajax/libs/lunr.js/2.3.9/lunr.min.js" integrity="sha512-4xUl/d6D6THrAnXAwGajXkoWaeMNwEKK4iNfq5DotEbLPAfk6FSxSP3ydNxqDgCw1c/0Z1Jg6L8h2j+++9BZmg==" crossorigin="anonymous" referrerpolicy="no-referrer"></script><script src="lunr-pretext-search-index.js" async=""></script><script src="_static/pretext/js/pretext_search.js"></script><link href="_static/pretext/css/pretext_search.css" rel="stylesheet" type="text/css">
+<script src="_static/pretext/js/lib/jquery.min.js"></script><script src="_static/pretext/js/lib/jquery.sticky.js"></script><script src="_static/pretext/js/lib/jquery.espy.min.js"></script><script src="_static/pretext/js/pretext.js"></script><script src="_static/pretext/js/pretext_add_on.js?x=1"></script><script src="_static/pretext/js/user_preferences.js"></script><script src="_static/pretext/js/lib/knowl.js"></script><!--knowl.js code controls Sage Cells within knowls--><script>sagecellEvalName='Evaluate (Sage)';
+</script><link xmlns:pf="https://prefigure.org" rel="preconnect" href="https://fonts.googleapis.com">
+<link xmlns:pf="https://prefigure.org" rel="preconnect" href="https://fonts.gstatic.com" crossorigin="">
+<link xmlns:pf="https://prefigure.org" href="https://fonts.googleapis.com/css2?family=Inconsolata:wght@400;700&amp;family=Noto+Serif:ital,wght@0,400;0,700;1,400;1,700&amp;family=Tinos:ital,wght@0,400;0,700;1,400;1,700&amp;display=swap" rel="stylesheet">
+<link xmlns:pf="https://prefigure.org" href="https://fonts.cdnfonts.com/css/dejavu-serif" rel="stylesheet">
+<link xmlns:pf="https://prefigure.org" href="https://fonts.googleapis.com/css2?family=Roboto+Serif:opsz,wdth,wght@8..144,50..150,100..900&amp;display=swap" rel="stylesheet">
+<link xmlns:pf="https://prefigure.org" href="https://fonts.googleapis.com/css2?family=Open+Sans:wdth,wght@75..100,300..800&amp;display=swap" rel="stylesheet">
+<link xmlns:pf="https://prefigure.org" rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200">
+<script src="https://cdn.geogebra.org/apps/deployggb.js"></script><link href="_static/pretext/css/pretext.css" rel="stylesheet" type="text/css">
+<link href="_static/pretext/css/pretext_add_on.css" rel="stylesheet" type="text/css">
+<link href="_static/pretext/css/shell_default.css" rel="stylesheet" type="text/css">
+<link href="_static/pretext/css/banner_default.css" rel="stylesheet" type="text/css">
+<link href="_static/pretext/css/navbar_default.css" rel="stylesheet" type="text/css">
+<link href="_static/pretext/css/toc_default.css" rel="stylesheet" type="text/css">
+<link href="_static/pretext/css/knowls_default.css" rel="stylesheet" type="text/css">
+<link href="_static/pretext/css/style_default.css" rel="stylesheet" type="text/css">
+<link href="_static/pretext/css/colors_blue_red.css" rel="stylesheet" type="text/css">
+<link href="_static/pretext/css/setcolors.css" rel="stylesheet" type="text/css">
+<!--** eBookCongig is necessary to configure interactive       **-->
+<!--** Runestone components to run locally in reader's browser **-->
+<!--** No external communication:                              **-->
+<!--**     log level is 0, Runestone Services are disabled     **-->
+<script type="text/javascript">
+eBookConfig = {};
+eBookConfig.useRunestoneServices = false;
+eBookConfig.host = 'http://127.0.0.1:8000';
+eBookConfig.course = 'PTX_Course_Title_Here';
+eBookConfig.basecourse = 'PTX_Base_Course';
+eBookConfig.isLoggedIn = false;
+eBookConfig.email = '';
+eBookConfig.isInstructor = false;
+eBookConfig.logLevel = 0;
+eBookConfig.username = '';
+eBookConfig.readings = null;
+eBookConfig.activities = null;
+eBookConfig.downloadsEnabled = false;
+eBookConfig.allow_pairs = false;
+eBookConfig.enableScratchAC = false;
+eBookConfig.build_info = "";
+eBookConfig.python3 = null;
+eBookConfig.runestone_version = '7.4.5';
+eBookConfig.jobehost = '';
+eBookConfig.proxyuri_runs = '';
+eBookConfig.proxyuri_files = '';
+eBookConfig.enable_chatcodes =  false;
+</script>
+<!--*** Runestone Services ***-->
+<script src="_static/prefix-runtime.a28db57f2b9be365.bundle.js"></script><script src="_static/prefix-347.8328b60515045466.bundle.js"></script><script src="_static/prefix-runestone.0143ee6c5ca7e162.bundle.js"></script><link rel="stylesheet" type="text/css" href="_static/prefix-347.f9add1ca35d5ad93.css">
+<link rel="stylesheet" type="text/css" href="_static/prefix-runestone.82759e13f7f711fa.css">
+<style>
+#ez-Norman1999-Sounding-2-3 { counter-set: ez-Norman1999-Sounding-2-3 0; }
+#ez-Norman1999-Sounding-2-3 > li::marker { content: ""counter(ez-Norman1999-Sounding-2-3,lower-alpha)"."; }
+#ez-Norman1999-Sounding-2-3 > li { counter-increment: ez-Norman1999-Sounding-2-3; }
+#ez-Norman1999-Sounding-3-1 { counter-set: ez-Norman1999-Sounding-3-1 0; }
+#ez-Norman1999-Sounding-3-1 > li::marker { content: ""counter(ez-Norman1999-Sounding-3-1,lower-alpha)"."; }
+#ez-Norman1999-Sounding-3-1 > li { counter-increment: ez-Norman1999-Sounding-3-1; }
+#ez-Midwest-Derecho-2-3 { counter-set: ez-Midwest-Derecho-2-3 0; }
+#ez-Midwest-Derecho-2-3 > li::marker { content: ""counter(ez-Midwest-Derecho-2-3,lower-alpha)"."; }
+#ez-Midwest-Derecho-2-3 > li { counter-increment: ez-Midwest-Derecho-2-3; }
+#ez-Midwest-Derecho-3-1-1 { counter-set: ez-Midwest-Derecho-3-1-1 0; }
+#ez-Midwest-Derecho-3-1-1 > li::marker { content: ""counter(ez-Midwest-Derecho-3-1-1,lower-alpha)"."; }
+#ez-Midwest-Derecho-3-1-1 > li { counter-increment: ez-Midwest-Derecho-3-1-1; }
+#ez-MPX2023-Sounding-2-4 { counter-set: ez-MPX2023-Sounding-2-4 0; }
+#ez-MPX2023-Sounding-2-4 > li::marker { content: ""counter(ez-MPX2023-Sounding-2-4,lower-alpha)"."; }
+#ez-MPX2023-Sounding-2-4 > li { counter-increment: ez-MPX2023-Sounding-2-4; }
+#ez-MPX2023-Sounding-3-1 { counter-set: ez-MPX2023-Sounding-3-1 0; }
+#ez-MPX2023-Sounding-3-1 > li::marker { content: ""counter(ez-MPX2023-Sounding-3-1,lower-alpha)"."; }
+#ez-MPX2023-Sounding-3-1 > li { counter-increment: ez-MPX2023-Sounding-3-1; }
+#ez-Davenport-Sounding-2-4 { counter-set: ez-Davenport-Sounding-2-4 0; }
+#ez-Davenport-Sounding-2-4 > li::marker { content: ""counter(ez-Davenport-Sounding-2-4,lower-alpha)"."; }
+#ez-Davenport-Sounding-2-4 > li { counter-increment: ez-Davenport-Sounding-2-4; }
+#ez-Davenport-Sounding-3-1 { counter-set: ez-Davenport-Sounding-3-1 0; }
+#ez-Davenport-Sounding-3-1 > li::marker { content: ""counter(ez-Davenport-Sounding-3-1,lower-alpha)"."; }
+#ez-Davenport-Sounding-3-1 > li { counter-increment: ez-Davenport-Sounding-3-1; }
+#ez-identifyAwTB-2-2 { counter-set: ez-identifyAwTB-2-2 0; }
+#ez-identifyAwTB-2-2 > li::marker { content: ""counter(ez-identifyAwTB-2-2,lower-alpha)"."; }
+#ez-identifyAwTB-2-2 > li { counter-increment: ez-identifyAwTB-2-2; }
+#ez-identifyAwTB-3-1 { counter-set: ez-identifyAwTB-3-1 0; }
+#ez-identifyAwTB-3-1 > li::marker { content: ""counter(ez-identifyAwTB-3-1,lower-alpha)"."; }
+#ez-identifyAwTB-3-1 > li { counter-increment: ez-identifyAwTB-3-1; }
+#ez-SeattleSun-2-4 { counter-set: ez-SeattleSun-2-4 0; }
+#ez-SeattleSun-2-4 > li::marker { content: ""counter(ez-SeattleSun-2-4,lower-alpha)"."; }
+#ez-SeattleSun-2-4 > li { counter-increment: ez-SeattleSun-2-4; }
+#ez-SeattleSun-2-4-3-2 { counter-set: ez-SeattleSun-2-4-3-2 0; }
+#ez-SeattleSun-2-4-3-2 > li::marker { content: ""counter(ez-SeattleSun-2-4-3-2,lower-roman)"."; }
+#ez-SeattleSun-2-4-3-2 > li { counter-increment: ez-SeattleSun-2-4-3-2; }
+#ez-SeattleSun-3-1 { counter-set: ez-SeattleSun-3-1 0; }
+#ez-SeattleSun-3-1 > li::marker { content: ""counter(ez-SeattleSun-3-1,lower-alpha)"."; }
+#ez-SeattleSun-3-1 > li { counter-increment: ez-SeattleSun-3-1; }
+#ez-SeattleSun-3-1-3-1 { counter-set: ez-SeattleSun-3-1-3-1 0; }
+#ez-SeattleSun-3-1-3-1 > li::marker { content: ""counter(ez-SeattleSun-3-1-3-1,lower-roman)"."; }
+#ez-SeattleSun-3-1-3-1 > li { counter-increment: ez-SeattleSun-3-1-3-1; }
+#ModelingLowTempRio-2-4 { counter-set: ModelingLowTempRio-2-4 0; }
+#ModelingLowTempRio-2-4 > li::marker { content: ""counter(ModelingLowTempRio-2-4,lower-alpha)"."; }
+#ModelingLowTempRio-2-4 > li { counter-increment: ModelingLowTempRio-2-4; }
+#ModelingLowTempRio-3-1 { counter-set: ModelingLowTempRio-3-1 0; }
+#ModelingLowTempRio-3-1 > li::marker { content: ""counter(ModelingLowTempRio-3-1,lower-alpha)"."; }
+#ModelingLowTempRio-3-1 > li { counter-increment: ModelingLowTempRio-3-1; }
+#ModelingLowHighTempStCloud-2-4 { counter-set: ModelingLowHighTempStCloud-2-4 0; }
+#ModelingLowHighTempStCloud-2-4 > li::marker { content: ""counter(ModelingLowHighTempStCloud-2-4,lower-alpha)"."; }
+#ModelingLowHighTempStCloud-2-4 > li { counter-increment: ModelingLowHighTempStCloud-2-4; }
+#ModelingLowHighTempStCloud-3-1 { counter-set: ModelingLowHighTempStCloud-3-1 0; }
+#ModelingLowHighTempStCloud-3-1 > li::marker { content: ""counter(ModelingLowHighTempStCloud-3-1,lower-alpha)"."; }
+#ModelingLowHighTempStCloud-3-1 > li { counter-increment: ModelingLowHighTempStCloud-3-1; }
+#ex_geo_heights_45S-2-4 { counter-set: ex_geo_heights_45S-2-4 0; }
+#ex_geo_heights_45S-2-4 > li::marker { content: ""counter(ex_geo_heights_45S-2-4,lower-alpha)"."; }
+#ex_geo_heights_45S-2-4 > li { counter-increment: ex_geo_heights_45S-2-4; }
+#ex_geo_heights_45S-3-1 { counter-set: ex_geo_heights_45S-3-1 0; }
+#ex_geo_heights_45S-3-1 > li::marker { content: ""counter(ex_geo_heights_45S-3-1,lower-alpha)"."; }
+#ex_geo_heights_45S-3-1 > li { counter-increment: ex_geo_heights_45S-3-1; }
+#GeopotentialHeightsAt35N-2-4 { counter-set: GeopotentialHeightsAt35N-2-4 0; }
+#GeopotentialHeightsAt35N-2-4 > li::marker { content: ""counter(GeopotentialHeightsAt35N-2-4,lower-alpha)"."; }
+#GeopotentialHeightsAt35N-2-4 > li { counter-increment: GeopotentialHeightsAt35N-2-4; }
+#GeopotentialHeightsAt35N-3-1 { counter-set: GeopotentialHeightsAt35N-3-1 0; }
+#GeopotentialHeightsAt35N-3-1 > li::marker { content: ""counter(GeopotentialHeightsAt35N-3-1,lower-alpha)"."; }
+#GeopotentialHeightsAt35N-3-1 > li { counter-increment: GeopotentialHeightsAt35N-3-1; }
+#USweathermap-2-2-2 { counter-set: USweathermap-2-2-2 0; }
+#USweathermap-2-2-2 > li::marker { content: ""counter(USweathermap-2-2-2,lower-alpha)""; }
+#USweathermap-2-2-2 > li { counter-increment: USweathermap-2-2-2; }
+#USweathermap-3-1-1 { counter-set: USweathermap-3-1-1 0; }
+#USweathermap-3-1-1 > li::marker { content: ""counter(USweathermap-3-1-1,lower-alpha)""; }
+#USweathermap-3-1-1 > li { counter-increment: USweathermap-3-1-1; }
+#windchillexercise-2-1-8 { counter-set: windchillexercise-2-1-8 0; }
+#windchillexercise-2-1-8 > li::marker { content: ""counter(windchillexercise-2-1-8,lower-alpha)"."; }
+#windchillexercise-2-1-8 > li { counter-increment: windchillexercise-2-1-8; }
+#windchillexercise-3-1-1 { counter-set: windchillexercise-3-1-1 0; }
+#windchillexercise-3-1-1 > li::marker { content: ""counter(windchillexercise-3-1-1,lower-alpha)"."; }
+#windchillexercise-3-1-1 > li { counter-increment: windchillexercise-3-1-1; }
+#snowfall1-2-1-7 { counter-set: snowfall1-2-1-7 0; }
+#snowfall1-2-1-7 > li::marker { content: ""counter(snowfall1-2-1-7,lower-alpha)"."; }
+#snowfall1-2-1-7 > li { counter-increment: snowfall1-2-1-7; }
+#snowfall1-3-1-1 { counter-set: snowfall1-3-1-1 0; }
+#snowfall1-3-1-1 > li::marker { content: ""counter(snowfall1-3-1-1,lower-alpha)"."; }
+#snowfall1-3-1-1 > li { counter-increment: snowfall1-3-1-1; }
+#UHI1-2-1-15 { counter-set: UHI1-2-1-15 0; }
+#UHI1-2-1-15 > li::marker { content: ""counter(UHI1-2-1-15,lower-alpha)"."; }
+#UHI1-2-1-15 > li { counter-increment: UHI1-2-1-15; }
+#UHI1-3-1-1 { counter-set: UHI1-3-1-1 0; }
+#UHI1-3-1-1 > li::marker { content: ""counter(UHI1-3-1-1,lower-alpha)"."; }
+#UHI1-3-1-1 > li { counter-increment: UHI1-3-1-1; }
+#dewpoint-2-1-7 { counter-set: dewpoint-2-1-7 0; }
+#dewpoint-2-1-7 > li::marker { content: ""counter(dewpoint-2-1-7,lower-alpha)""; }
+#dewpoint-2-1-7 > li { counter-increment: dewpoint-2-1-7; }
+#dewpoint-3-1-1 { counter-set: dewpoint-3-1-1 0; }
+#dewpoint-3-1-1 > li::marker { content: ""counter(dewpoint-3-1-1,lower-alpha)""; }
+#dewpoint-3-1-1 > li { counter-increment: dewpoint-3-1-1; }
+#hdwindexexercise-2-1-5 { counter-set: hdwindexexercise-2-1-5 0; }
+#hdwindexexercise-2-1-5 > li::marker { content: ""counter(hdwindexexercise-2-1-5,lower-alpha)""; }
+#hdwindexexercise-2-1-5 > li { counter-increment: hdwindexexercise-2-1-5; }
+#hdwindexexercise-3-1-1 { counter-set: hdwindexexercise-3-1-1 0; }
+#hdwindexexercise-3-1-1 > li::marker { content: ""counter(hdwindexexercise-3-1-1,lower-alpha)""; }
+#hdwindexexercise-3-1-1 > li { counter-increment: hdwindexexercise-3-1-1; }
+#MyFrostbite-2-3-1 { counter-set: MyFrostbite-2-3-1 0; }
+#MyFrostbite-2-3-1 > li::marker { content: ""counter(MyFrostbite-2-3-1,lower-alpha)""; }
+#MyFrostbite-2-3-1 > li { counter-increment: MyFrostbite-2-3-1; }
+#Plotting3D2-2-1-2 { counter-set: Plotting3D2-2-1-2 0; }
+#Plotting3D2-2-1-2 > li::marker { content: ""counter(Plotting3D2-2-1-2,lower-alpha)""; }
+#Plotting3D2-2-1-2 > li { counter-increment: Plotting3D2-2-1-2; }
+#Plotting3D2-3-1-1 { counter-set: Plotting3D2-3-1-1 0; }
+#Plotting3D2-3-1-1 > li::marker { content: ""counter(Plotting3D2-3-1-1,lower-alpha)""; }
+#Plotting3D2-3-1-1 > li { counter-increment: Plotting3D2-3-1-1; }
+#Ez-9-1-2-2-1-7 { counter-set: Ez-9-1-2-2-1-7 0; }
+#Ez-9-1-2-2-1-7 > li::marker { content: ""counter(Ez-9-1-2-2-1-7,lower-alpha)"."; }
+#Ez-9-1-2-2-1-7 > li { counter-increment: Ez-9-1-2-2-1-7; }
+#Ez-9-1-2-3-1-1 { counter-set: Ez-9-1-2-3-1-1 0; }
+#Ez-9-1-2-3-1-1 > li::marker { content: ""counter(Ez-9-1-2-3-1-1,lower-alpha)"."; }
+#Ez-9-1-2-3-1-1 > li { counter-increment: Ez-9-1-2-3-1-1; }
+#Ez-9-1-2-4-1-1 { counter-set: Ez-9-1-2-4-1-1 0; }
+#Ez-9-1-2-4-1-1 > li::marker { content: ""counter(Ez-9-1-2-4-1-1,lower-alpha)"."; }
+#Ez-9-1-2-4-1-1 > li { counter-increment: Ez-9-1-2-4-1-1; }
+#PlottingWA-2-1-1 { counter-set: PlottingWA-2-1-1 0; }
+#PlottingWA-2-1-1 > li::marker { content: ""counter(PlottingWA-2-1-1,lower-alpha)"."; }
+#PlottingWA-2-1-1 > li { counter-increment: PlottingWA-2-1-1; }
+#PlottingWA-3-1 { counter-set: PlottingWA-3-1 0; }
+#PlottingWA-3-1 > li::marker { content: ""counter(PlottingWA-3-1,lower-alpha)"."; }
+#PlottingWA-3-1 > li { counter-increment: PlottingWA-3-1; }
+#contoursandgraphs-2-2-1 { counter-set: contoursandgraphs-2-2-1 0; }
+#contoursandgraphs-2-2-1 > li::marker { content: ""counter(contoursandgraphs-2-2-1,lower-alpha)"."; }
+#contoursandgraphs-2-2-1 > li { counter-increment: contoursandgraphs-2-2-1; }
+#contoursandgraphs-3-1 { counter-set: contoursandgraphs-3-1 0; }
+#contoursandgraphs-3-1 > li::marker { content: ""counter(contoursandgraphs-3-1,lower-alpha)"."; }
+#contoursandgraphs-3-1 > li { counter-increment: contoursandgraphs-3-1; }
+#winchillcontours-2-3 { counter-set: winchillcontours-2-3 0; }
+#winchillcontours-2-3 > li::marker { content: ""counter(winchillcontours-2-3,lower-alpha)"."; }
+#winchillcontours-2-3 > li { counter-increment: winchillcontours-2-3; }
+#winchillcontours-3-1 { counter-set: winchillcontours-3-1 0; }
+#winchillcontours-3-1 > li::marker { content: ""counter(winchillcontours-3-1,lower-alpha)"."; }
+#winchillcontours-3-1 > li { counter-increment: winchillcontours-3-1; }
+#levelsetsin3d-2-1-1 { counter-set: levelsetsin3d-2-1-1 0; }
+#levelsetsin3d-2-1-1 > li::marker { content: ""counter(levelsetsin3d-2-1-1,lower-alpha)"."; }
+#levelsetsin3d-2-1-1 > li { counter-increment: levelsetsin3d-2-1-1; }
+#levelsetsin3d-3-1 { counter-set: levelsetsin3d-3-1 0; }
+#levelsetsin3d-3-1 > li::marker { content: ""counter(levelsetsin3d-3-1,lower-alpha)"."; }
+#levelsetsin3d-3-1 > li { counter-increment: levelsetsin3d-3-1; }
+#PA-7B-3-2-2 { counter-set: PA-7B-3-2-2 0; }
+#PA-7B-3-2-2 > li::marker { content: ""counter(PA-7B-3-2-2,lower-alpha)"."; }
+#PA-7B-3-2-2 > li { counter-increment: PA-7B-3-2-2; }
+#PA-7B-3-3-1-1 { counter-set: PA-7B-3-3-1-1 0; }
+#PA-7B-3-3-1-1 > li::marker { content: ""counter(PA-7B-3-3-1-1,lower-alpha)"."; }
+#PA-7B-3-3-1-1 > li { counter-increment: PA-7B-3-3-1-1; }
+#ez-sphericalp2r-2-2 { counter-set: ez-sphericalp2r-2-2 0; }
+#ez-sphericalp2r-2-2 > li::marker { content: ""counter(ez-sphericalp2r-2-2,lower-alpha)"."; }
+#ez-sphericalp2r-2-2 > li { counter-increment: ez-sphericalp2r-2-2; }
+#ez-sphericalp2r-3-1 { counter-set: ez-sphericalp2r-3-1 0; }
+#ez-sphericalp2r-3-1 > li::marker { content: ""counter(ez-sphericalp2r-3-1,lower-alpha)"."; }
+#ez-sphericalp2r-3-1 > li { counter-increment: ez-sphericalp2r-3-1; }
+#rectangulartopolar4-2-1-1 { counter-set: rectangulartopolar4-2-1-1 0; }
+#rectangulartopolar4-2-1-1 > li::marker { content: ""counter(rectangulartopolar4-2-1-1,lower-alpha)"."; }
+#rectangulartopolar4-2-1-1 > li { counter-increment: rectangulartopolar4-2-1-1; }
+#rectangulartopolar4-3-1 { counter-set: rectangulartopolar4-3-1 0; }
+#rectangulartopolar4-3-1 > li::marker { content: ""counter(rectangulartopolar4-3-1,lower-alpha)"."; }
+#rectangulartopolar4-3-1 > li { counter-increment: rectangulartopolar4-3-1; }
+#PA_11_8-2 { counter-set: PA_11_8-2 0; }
+#PA_11_8-2 > li::marker { content: ""counter(PA_11_8-2,lower-alpha)"."; }
+#PA_11_8-2 > li { counter-increment: PA_11_8-2; }
+#A_11_8_7-1-1 { counter-set: A_11_8_7-1-1 0; }
+#A_11_8_7-1-1 > li::marker { content: ""counter(A_11_8_7-1-1,lower-alpha)"."; }
+#A_11_8_7-1-1 > li { counter-increment: A_11_8_7-1-1; }
+#ez-CartesianToSpherical-2-1-1 { counter-set: ez-CartesianToSpherical-2-1-1 0; }
+#ez-CartesianToSpherical-2-1-1 > li::marker { content: ""counter(ez-CartesianToSpherical-2-1-1,lower-alpha)"."; }
+#ez-CartesianToSpherical-2-1-1 > li { counter-increment: ez-CartesianToSpherical-2-1-1; }
+#ez-CartesianToSpherical-3-1 { counter-set: ez-CartesianToSpherical-3-1 0; }
+#ez-CartesianToSpherical-3-1 > li::marker { content: ""counter(ez-CartesianToSpherical-3-1,lower-alpha)"."; }
+#ez-CartesianToSpherical-3-1 > li { counter-increment: ez-CartesianToSpherical-3-1; }
+#ez-CartesianToSpherical-4-1 { counter-set: ez-CartesianToSpherical-4-1 0; }
+#ez-CartesianToSpherical-4-1 > li::marker { content: ""counter(ez-CartesianToSpherical-4-1,lower-alpha)"."; }
+#ez-CartesianToSpherical-4-1 > li { counter-increment: ez-CartesianToSpherical-4-1; }
+#sec_displacementvectors-25-3-1-2-2 { counter-set: sec_displacementvectors-25-3-1-2-2 0; }
+#sec_displacementvectors-25-3-1-2-2 > li::marker { content: ""counter(sec_displacementvectors-25-3-1-2-2,lower-alpha)"."; }
+#sec_displacementvectors-25-3-1-2-2 > li { counter-increment: sec_displacementvectors-25-3-1-2-2; }
+#horizontalwindvector-2-1-1 { counter-set: horizontalwindvector-2-1-1 0; }
+#horizontalwindvector-2-1-1 > li::marker { content: ""counter(horizontalwindvector-2-1-1,lower-alpha)"."; }
+#horizontalwindvector-2-1-1 > li { counter-increment: horizontalwindvector-2-1-1; }
+#horizontalwindvector-3-1 { counter-set: horizontalwindvector-3-1 0; }
+#horizontalwindvector-3-1 > li::marker { content: ""counter(horizontalwindvector-3-1,lower-alpha)"."; }
+#horizontalwindvector-3-1 > li { counter-increment: horizontalwindvector-3-1; }
+#ResolveVector-2-1-1 { counter-set: ResolveVector-2-1-1 0; }
+#ResolveVector-2-1-1 > li::marker { content: ""counter(ResolveVector-2-1-1,lower-alpha)"."; }
+#ResolveVector-2-1-1 > li { counter-increment: ResolveVector-2-1-1; }
+#ResolveVector-3-1-1 { counter-set: ResolveVector-3-1-1 0; }
+#ResolveVector-3-1-1 > li::marker { content: ""counter(ResolveVector-3-1-1,lower-alpha)"."; }
+#ResolveVector-3-1-1 > li { counter-increment: ResolveVector-3-1-1; }
+#directionsandvectors-2-1-3 { counter-set: directionsandvectors-2-1-3 0; }
+#directionsandvectors-2-1-3 > li::marker { content: ""counter(directionsandvectors-2-1-3,lower-alpha)"."; }
+#directionsandvectors-2-1-3 > li { counter-increment: directionsandvectors-2-1-3; }
+#directionsandvectors-3-1 { counter-set: directionsandvectors-3-1 0; }
+#directionsandvectors-3-1 > li::marker { content: ""counter(directionsandvectors-3-1,lower-alpha)"."; }
+#directionsandvectors-3-1 > li { counter-increment: directionsandvectors-3-1; }
+#meanwindvectors0-2-2-6 { counter-set: meanwindvectors0-2-2-6 0; }
+#meanwindvectors0-2-2-6 > li::marker { content: ""counter(meanwindvectors0-2-2-6,lower-alpha)"."; }
+#meanwindvectors0-2-2-6 > li { counter-increment: meanwindvectors0-2-2-6; }
+#meanwindvectors0-3-1-1 { counter-set: meanwindvectors0-3-1-1 0; }
+#meanwindvectors0-3-1-1 > li::marker { content: ""counter(meanwindvectors0-3-1-1,lower-alpha)"."; }
+#meanwindvectors0-3-1-1 > li { counter-increment: meanwindvectors0-3-1-1; }
+#AnglesAndSigns-2-1 { counter-set: AnglesAndSigns-2-1 0; }
+#AnglesAndSigns-2-1 > li::marker { content: ""counter(AnglesAndSigns-2-1,lower-alpha)"."; }
+#AnglesAndSigns-2-1 > li { counter-increment: AnglesAndSigns-2-1; }
+#AnglesAndSigns-2-1-2-2 { counter-set: AnglesAndSigns-2-1-2-2 0; }
+#AnglesAndSigns-2-1-2-2 > li::marker { content: ""counter(AnglesAndSigns-2-1-2-2,lower-roman)"."; }
+#AnglesAndSigns-2-1-2-2 > li { counter-increment: AnglesAndSigns-2-1-2-2; }
+#dotproductbasic-2-1-3 { counter-set: dotproductbasic-2-1-3 0; }
+#dotproductbasic-2-1-3 > li::marker { content: ""counter(dotproductbasic-2-1-3,lower-alpha)"."; }
+#dotproductbasic-2-1-3 > li { counter-increment: dotproductbasic-2-1-3; }
+#dotproductbasic-3-1-1 { counter-set: dotproductbasic-3-1-1 0; }
+#dotproductbasic-3-1-1 > li::marker { content: ""counter(dotproductbasic-3-1-1,lower-alpha)"."; }
+#dotproductbasic-3-1-1 > li { counter-increment: dotproductbasic-3-1-1; }
+#advectioncentralUS-2-1-3 { counter-set: advectioncentralUS-2-1-3 0; }
+#advectioncentralUS-2-1-3 > li::marker { content: ""counter(advectioncentralUS-2-1-3,lower-alpha)"."; }
+#advectioncentralUS-2-1-3 > li { counter-increment: advectioncentralUS-2-1-3; }
+#advectioncentralUS-3-1-1 { counter-set: advectioncentralUS-3-1-1 0; }
+#advectioncentralUS-3-1-1 > li::marker { content: ""counter(advectioncentralUS-3-1-1,lower-alpha)"."; }
+#advectioncentralUS-3-1-1 > li { counter-increment: advectioncentralUS-3-1-1; }
+#AdvectionInNY-2-1-3 { counter-set: AdvectionInNY-2-1-3 0; }
+#AdvectionInNY-2-1-3 > li::marker { content: ""counter(AdvectionInNY-2-1-3,lower-alpha)"."; }
+#AdvectionInNY-2-1-3 > li { counter-increment: AdvectionInNY-2-1-3; }
+#AdvectionInNY-3-1-1 { counter-set: AdvectionInNY-3-1-1 0; }
+#AdvectionInNY-3-1-1 > li::marker { content: ""counter(AdvectionInNY-3-1-1,lower-alpha)"."; }
+#AdvectionInNY-3-1-1 > li { counter-increment: AdvectionInNY-3-1-1; }
+#advectionsartell-2-3-1 { counter-set: advectionsartell-2-3-1 0; }
+#advectionsartell-2-3-1 > li::marker { content: ""counter(advectionsartell-2-3-1,lower-alpha)"."; }
+#advectionsartell-2-3-1 > li { counter-increment: advectionsartell-2-3-1; }
+#advectionsartell-3-1 { counter-set: advectionsartell-3-1 0; }
+#advectionsartell-3-1 > li::marker { content: ""counter(advectionsartell-3-1,lower-alpha)"."; }
+#advectionsartell-3-1 > li { counter-increment: advectionsartell-3-1; }
+#advectioncoldspring-2-1-6 { counter-set: advectioncoldspring-2-1-6 0; }
+#advectioncoldspring-2-1-6 > li::marker { content: ""counter(advectioncoldspring-2-1-6,lower-alpha)"."; }
+#advectioncoldspring-2-1-6 > li { counter-increment: advectioncoldspring-2-1-6; }
+#advectioncoldspring-3-1 { counter-set: advectioncoldspring-3-1 0; }
+#advectioncoldspring-3-1 > li::marker { content: ""counter(advectioncoldspring-3-1,lower-alpha)"."; }
+#advectioncoldspring-3-1 > li { counter-increment: advectioncoldspring-3-1; }
+#DeterminantComputations-2-1-1 { counter-set: DeterminantComputations-2-1-1 0; }
+#DeterminantComputations-2-1-1 > li::marker { content: ""counter(DeterminantComputations-2-1-1,lower-alpha)"."; }
+#DeterminantComputations-2-1-1 > li { counter-increment: DeterminantComputations-2-1-1; }
+#DeterminantComputations-3-1-1 { counter-set: DeterminantComputations-3-1-1 0; }
+#DeterminantComputations-3-1-1 > li::marker { content: ""counter(DeterminantComputations-3-1-1,lower-alpha)"."; }
+#DeterminantComputations-3-1-1 > li { counter-increment: DeterminantComputations-3-1-1; }
+#coriolisgolfball-2-1-3 { counter-set: coriolisgolfball-2-1-3 0; }
+#coriolisgolfball-2-1-3 > li::marker { content: ""counter(coriolisgolfball-2-1-3,lower-alpha)"."; }
+#coriolisgolfball-2-1-3 > li { counter-increment: coriolisgolfball-2-1-3; }
+#coriolisgolfball-3-1-1 { counter-set: coriolisgolfball-3-1-1 0; }
+#coriolisgolfball-3-1-1 > li::marker { content: ""counter(coriolisgolfball-3-1-1,lower-alpha)"."; }
+#coriolisgolfball-3-1-1 > li { counter-increment: coriolisgolfball-3-1-1; }
+#VSorU-2-1-1 { counter-set: VSorU-2-1-1 0; }
+#VSorU-2-1-1 > li::marker { content: ""counter(VSorU-2-1-1,lower-alpha)"."; }
+#VSorU-2-1-1 > li { counter-increment: VSorU-2-1-1; }
+#VSorU-3-1-1 { counter-set: VSorU-3-1-1 0; }
+#VSorU-3-1-1 > li::marker { content: ""counter(VSorU-3-1-1,lower-alpha)"."; }
+#VSorU-3-1-1 > li { counter-increment: VSorU-3-1-1; }
+#NoVerticalCross-2-3 { counter-set: NoVerticalCross-2-3 0; }
+#NoVerticalCross-2-3 > li::marker { content: ""counter(NoVerticalCross-2-3,lower-alpha)"."; }
+#NoVerticalCross-2-3 > li { counter-increment: NoVerticalCross-2-3; }
+#NoVerticalCross-3-1 { counter-set: NoVerticalCross-3-1 0; }
+#NoVerticalCross-3-1 > li::marker { content: ""counter(NoVerticalCross-3-1,lower-alpha)"."; }
+#NoVerticalCross-3-1 > li { counter-increment: NoVerticalCross-3-1; }
+#VenusCoriolis-2-2 { counter-set: VenusCoriolis-2-2 0; }
+#VenusCoriolis-2-2 > li::marker { content: ""counter(VenusCoriolis-2-2,lower-alpha)"."; }
+#VenusCoriolis-2-2 > li { counter-increment: VenusCoriolis-2-2; }
+#VenusCoriolis-3-1 { counter-set: VenusCoriolis-3-1 0; }
+#VenusCoriolis-3-1 > li::marker { content: ""counter(VenusCoriolis-3-1,lower-alpha)"."; }
+#VenusCoriolis-3-1 > li { counter-increment: VenusCoriolis-3-1; }
+#PickingKoff-2-1-4 { counter-set: PickingKoff-2-1-4 0; }
+#PickingKoff-2-1-4 > li::marker { content: ""counter(PickingKoff-2-1-4,lower-alpha)"."; }
+#PickingKoff-2-1-4 > li { counter-increment: PickingKoff-2-1-4; }
+#PickingKoff-3-1 { counter-set: PickingKoff-3-1 0; }
+#PickingKoff-3-1 > li::marker { content: ""counter(PickingKoff-3-1,lower-alpha)"."; }
+#PickingKoff-3-1 > li { counter-increment: PickingKoff-3-1; }
+#TechnologyCrossProducts-2-1-1 { counter-set: TechnologyCrossProducts-2-1-1 0; }
+#TechnologyCrossProducts-2-1-1 > li::marker { content: ""counter(TechnologyCrossProducts-2-1-1,lower-alpha)"."; }
+#TechnologyCrossProducts-2-1-1 > li { counter-increment: TechnologyCrossProducts-2-1-1; }
+#BulkRichardsonNumber-2-5-1 { counter-set: BulkRichardsonNumber-2-5-1 0; }
+#BulkRichardsonNumber-2-5-1 > li::marker { content: ""counter(BulkRichardsonNumber-2-5-1,lower-alpha)"."; }
+#BulkRichardsonNumber-2-5-1 > li { counter-increment: BulkRichardsonNumber-2-5-1; }
+#BulkRichardsonNumber-3-1 { counter-set: BulkRichardsonNumber-3-1 0; }
+#BulkRichardsonNumber-3-1 > li::marker { content: ""counter(BulkRichardsonNumber-3-1,lower-alpha)"."; }
+#BulkRichardsonNumber-3-1 > li { counter-increment: BulkRichardsonNumber-3-1; }
+#windchillpartials-3 { counter-set: windchillpartials-3 0; }
+#windchillpartials-3 > li::marker { content: ""counter(windchillpartials-3,lower-alpha)"."; }
+#windchillpartials-3 > li { counter-increment: windchillpartials-3; }
+#windchillpartials-4-1 { counter-set: windchillpartials-4-1 0; }
+#windchillpartials-4-1 > li::marker { content: ""counter(windchillpartials-4-1,lower-alpha)"."; }
+#windchillpartials-4-1 > li { counter-increment: windchillpartials-4-1; }
+#interpretfirstorderpartials-8-3 { counter-set: interpretfirstorderpartials-8-3 0; }
+#interpretfirstorderpartials-8-3 > li::marker { content: ""counter(interpretfirstorderpartials-8-3,lower-alpha)"."; }
+#interpretfirstorderpartials-8-3 > li { counter-increment: interpretfirstorderpartials-8-3; }
+#interpretfirstorderpartials-8-4-1 { counter-set: interpretfirstorderpartials-8-4-1 0; }
+#interpretfirstorderpartials-8-4-1 > li::marker { content: ""counter(interpretfirstorderpartials-8-4-1,lower-alpha)"."; }
+#interpretfirstorderpartials-8-4-1 > li { counter-increment: interpretfirstorderpartials-8-4-1; }
+#meanwindspeed-3 { counter-set: meanwindspeed-3 0; }
+#meanwindspeed-3 > li::marker { content: ""counter(meanwindspeed-3,lower-alpha)"."; }
+#meanwindspeed-3 > li { counter-increment: meanwindspeed-3; }
+#meanwindspeed-4-1 { counter-set: meanwindspeed-4-1 0; }
+#meanwindspeed-4-1 > li::marker { content: ""counter(meanwindspeed-4-1,lower-alpha)"."; }
+#meanwindspeed-4-1 > li { counter-increment: meanwindspeed-4-1; }
+#SVPexercise-4 { counter-set: SVPexercise-4 0; }
+#SVPexercise-4 > li::marker { content: ""counter(SVPexercise-4,lower-alpha)"."; }
+#SVPexercise-4 > li { counter-increment: SVPexercise-4; }
+#SVPexercise-5-1 { counter-set: SVPexercise-5-1 0; }
+#SVPexercise-5-1 > li::marker { content: ""counter(SVPexercise-5-1,lower-alpha)"."; }
+#SVPexercise-5-1 > li { counter-increment: SVPexercise-5-1; }
+#partialisobaricmap-2-3 { counter-set: partialisobaricmap-2-3 0; }
+#partialisobaricmap-2-3 > li::marker { content: ""counter(partialisobaricmap-2-3,lower-alpha)"."; }
+#partialisobaricmap-2-3 > li { counter-increment: partialisobaricmap-2-3; }
+#partialisobaricmap-3-1 { counter-set: partialisobaricmap-3-1 0; }
+#partialisobaricmap-3-1 > li::marker { content: ""counter(partialisobaricmap-3-1,lower-alpha)"."; }
+#partialisobaricmap-3-1 > li { counter-increment: partialisobaricmap-3-1; }
+#ez_potential_temperature-2-1-8 { counter-set: ez_potential_temperature-2-1-8 0; }
+#ez_potential_temperature-2-1-8 > li::marker { content: ""counter(ez_potential_temperature-2-1-8,lower-alpha)"."; }
+#ez_potential_temperature-2-1-8 > li { counter-increment: ez_potential_temperature-2-1-8; }
+#ez_potential_temperature-3-1 { counter-set: ez_potential_temperature-3-1 0; }
+#ez_potential_temperature-3-1 > li::marker { content: ""counter(ez_potential_temperature-3-1,lower-alpha)"."; }
+#ez_potential_temperature-3-1 > li { counter-increment: ez_potential_temperature-3-1; }
+#insolation-2-3 { counter-set: insolation-2-3 0; }
+#insolation-2-3 > li::marker { content: ""counter(insolation-2-3,lower-alpha)"."; }
+#insolation-2-3 > li { counter-increment: insolation-2-3; }
+#frostbitepartial-2-3 { counter-set: frostbitepartial-2-3 0; }
+#frostbitepartial-2-3 > li::marker { content: ""counter(frostbitepartial-2-3,lower-alpha)"."; }
+#frostbitepartial-2-3 > li { counter-increment: frostbitepartial-2-3; }
+#frostbitepartial-3-1 { counter-set: frostbitepartial-3-1 0; }
+#frostbitepartial-3-1 > li::marker { content: ""counter(frostbitepartial-3-1,lower-alpha)"."; }
+#frostbitepartial-3-1 > li { counter-increment: frostbitepartial-3-1; }
+#WetBulbGlobeTemp-2-2 { counter-set: WetBulbGlobeTemp-2-2 0; }
+#WetBulbGlobeTemp-2-2 > li::marker { content: ""counter(WetBulbGlobeTemp-2-2,lower-alpha)"."; }
+#WetBulbGlobeTemp-2-2 > li { counter-increment: WetBulbGlobeTemp-2-2; }
+#WetBulbGlobeTemp-3-1 { counter-set: WetBulbGlobeTemp-3-1 0; }
+#WetBulbGlobeTemp-3-1 > li::marker { content: ""counter(WetBulbGlobeTemp-3-1,lower-alpha)"."; }
+#WetBulbGlobeTemp-3-1 > li { counter-increment: WetBulbGlobeTemp-3-1; }
+#A_10_2_11-2-2-5 { counter-set: A_10_2_11-2-2-5 0; }
+#A_10_2_11-2-2-5 > li::marker { content: ""counter(A_10_2_11-2-2-5,lower-alpha)"."; }
+#A_10_2_11-2-2-5 > li { counter-increment: A_10_2_11-2-2-5; }
+#partialbackwards-2 { counter-set: partialbackwards-2 0; }
+#partialbackwards-2 > li::marker { content: ""counter(partialbackwards-2,lower-alpha)"."; }
+#partialbackwards-2 > li { counter-increment: partialbackwards-2; }
+#partialbackwards-3-1 { counter-set: partialbackwards-3-1 0; }
+#partialbackwards-3-1 > li::marker { content: ""counter(partialbackwards-3-1,lower-alpha)"."; }
+#partialbackwards-3-1 > li { counter-increment: partialbackwards-3-1; }
+#firstcontouradvect-4 { counter-set: firstcontouradvect-4 0; }
+#firstcontouradvect-4 > li::marker { content: ""counter(firstcontouradvect-4,lower-alpha)"."; }
+#firstcontouradvect-4 > li { counter-increment: firstcontouradvect-4; }
+#firstcontouradvect-5-1 { counter-set: firstcontouradvect-5-1 0; }
+#firstcontouradvect-5-1 > li::marker { content: ""counter(firstcontouradvect-5-1,lower-alpha)"."; }
+#firstcontouradvect-5-1 > li { counter-increment: firstcontouradvect-5-1; }
+#dewpointcontours-2-3 { counter-set: dewpointcontours-2-3 0; }
+#dewpointcontours-2-3 > li::marker { content: ""counter(dewpointcontours-2-3,lower-alpha)"."; }
+#dewpointcontours-2-3 > li { counter-increment: dewpointcontours-2-3; }
+#dewpointcontours-2-3-3-2 { counter-set: dewpointcontours-2-3-3-2 0; }
+#dewpointcontours-2-3-3-2 > li::marker { content: ""counter(dewpointcontours-2-3-3-2,lower-roman)"."; }
+#dewpointcontours-2-3-3-2 > li { counter-increment: dewpointcontours-2-3-3-2; }
+#dewpointcontours-3-1 { counter-set: dewpointcontours-3-1 0; }
+#dewpointcontours-3-1 > li::marker { content: ""counter(dewpointcontours-3-1,lower-alpha)"."; }
+#dewpointcontours-3-1 > li { counter-increment: dewpointcontours-3-1; }
+#extracted-webwork-5-1-1-4-1-1-1 { counter-set: extracted-webwork-5-1-1-4-1-1-1 0; }
+#extracted-webwork-5-1-1-4-1-1-1 > li::marker { content: "("counter(extracted-webwork-5-1-1-4-1-1-1,lower-alpha)")"; }
+#extracted-webwork-5-1-1-4-1-1-1 > li { counter-increment: extracted-webwork-5-1-1-4-1-1-1; }
+#extracted-webwork-5-1-1-4-1-2-1 { counter-set: extracted-webwork-5-1-1-4-1-2-1 0; }
+#extracted-webwork-5-1-1-4-1-2-1 > li::marker { content: ""counter(extracted-webwork-5-1-1-4-1-2-1,upper-alpha)"."; }
+#extracted-webwork-5-1-1-4-1-2-1 > li { counter-increment: extracted-webwork-5-1-1-4-1-2-1; }
+#transportequation-2-2 { counter-set: transportequation-2-2 0; }
+#transportequation-2-2 > li::marker { content: ""counter(transportequation-2-2,lower-alpha)"."; }
+#transportequation-2-2 > li { counter-increment: transportequation-2-2; }
+#transportequation-3-1 { counter-set: transportequation-3-1 0; }
+#transportequation-3-1 > li::marker { content: ""counter(transportequation-3-1,lower-alpha)"."; }
+#transportequation-3-1 > li { counter-increment: transportequation-3-1; }
+#CirculationPentagonPath-2-5 { counter-set: CirculationPentagonPath-2-5 0; }
+#CirculationPentagonPath-2-5 > li::marker { content: ""counter(CirculationPentagonPath-2-5,lower-alpha)"."; }
+#CirculationPentagonPath-2-5 > li { counter-increment: CirculationPentagonPath-2-5; }
+#CirculationPentagonPath-3-1 { counter-set: CirculationPentagonPath-3-1 0; }
+#CirculationPentagonPath-3-1 > li::marker { content: ""counter(CirculationPentagonPath-3-1,lower-alpha)"."; }
+#CirculationPentagonPath-3-1 > li { counter-increment: CirculationPentagonPath-3-1; }
+#ComputeCurlBothWays-1-1-5 { counter-set: ComputeCurlBothWays-1-1-5 0; }
+#ComputeCurlBothWays-1-1-5 > li::marker { content: ""counter(ComputeCurlBothWays-1-1-5,lower-alpha)"."; }
+#ComputeCurlBothWays-1-1-5 > li { counter-increment: ComputeCurlBothWays-1-1-5; }
+#ComputeCurlBothWays-2-1 { counter-set: ComputeCurlBothWays-2-1 0; }
+#ComputeCurlBothWays-2-1 > li::marker { content: ""counter(ComputeCurlBothWays-2-1,lower-alpha)"."; }
+#ComputeCurlBothWays-2-1 > li { counter-increment: ComputeCurlBothWays-2-1; }
+#MetarsToVorticity-2-7 { counter-set: MetarsToVorticity-2-7 0; }
+#MetarsToVorticity-2-7 > li::marker { content: ""counter(MetarsToVorticity-2-7,lower-alpha)"."; }
+#MetarsToVorticity-2-7 > li { counter-increment: MetarsToVorticity-2-7; }
+#MetarsToVorticity-3-1 { counter-set: MetarsToVorticity-3-1 0; }
+#MetarsToVorticity-3-1 > li::marker { content: ""counter(MetarsToVorticity-3-1,lower-alpha)"."; }
+#MetarsToVorticity-3-1 > li { counter-increment: MetarsToVorticity-3-1; }
+#fluxmaximized-2-1-3 { counter-set: fluxmaximized-2-1-3 0; }
+#fluxmaximized-2-1-3 > li::marker { content: ""counter(fluxmaximized-2-1-3,lower-alpha)"."; }
+#fluxmaximized-2-1-3 > li { counter-increment: fluxmaximized-2-1-3; }
+#fluxmaximized-3-1-1 { counter-set: fluxmaximized-3-1-1 0; }
+#fluxmaximized-3-1-1 > li::marker { content: ""counter(fluxmaximized-3-1-1,lower-alpha)"."; }
+#fluxmaximized-3-1-1 > li { counter-increment: fluxmaximized-3-1-1; }
+#FluxSidesPrism-2-1-4 { counter-set: FluxSidesPrism-2-1-4 0; }
+#FluxSidesPrism-2-1-4 > li::marker { content: ""counter(FluxSidesPrism-2-1-4,lower-alpha)"."; }
+#FluxSidesPrism-2-1-4 > li { counter-increment: FluxSidesPrism-2-1-4; }
+#FluxSidesPrism-3-1 { counter-set: FluxSidesPrism-3-1 0; }
+#FluxSidesPrism-3-1 > li::marker { content: ""counter(FluxSidesPrism-3-1,lower-alpha)"."; }
+#FluxSidesPrism-3-1 > li { counter-increment: FluxSidesPrism-3-1; }
+#fluxofcube-2-1-6 { counter-set: fluxofcube-2-1-6 0; }
+#fluxofcube-2-1-6 > li::marker { content: ""counter(fluxofcube-2-1-6,lower-alpha)"."; }
+#fluxofcube-2-1-6 > li { counter-increment: fluxofcube-2-1-6; }
+#fluxofcube-3-1-1 { counter-set: fluxofcube-3-1-1 0; }
+#fluxofcube-3-1-1 > li::marker { content: ""counter(fluxofcube-3-1-1,lower-alpha)"."; }
+#fluxofcube-3-1-1 > li { counter-increment: fluxofcube-3-1-1; }
+#Ez_10_3_0-2-3 { counter-set: Ez_10_3_0-2-3 0; }
+#Ez_10_3_0-2-3 > li::marker { content: ""counter(Ez_10_3_0-2-3,lower-alpha)"."; }
+#Ez_10_3_0-2-3 > li { counter-increment: Ez_10_3_0-2-3; }
+#Ez_10_3_1-2-3 { counter-set: Ez_10_3_1-2-3 0; }
+#Ez_10_3_1-2-3 > li::marker { content: ""counter(Ez_10_3_1-2-3,lower-alpha)"."; }
+#Ez_10_3_1-2-3 > li { counter-increment: Ez_10_3_1-2-3; }
+#Ez_10_3_1-3-1-1 { counter-set: Ez_10_3_1-3-1-1 0; }
+#Ez_10_3_1-3-1-1 > li::marker { content: ""counter(Ez_10_3_1-3-1-1,lower-alpha)"."; }
+#Ez_10_3_1-3-1-1 > li { counter-increment: Ez_10_3_1-3-1-1; }
+#ez-wind-at-MSP-2-3 { counter-set: ez-wind-at-MSP-2-3 0; }
+#ez-wind-at-MSP-2-3 > li::marker { content: ""counter(ez-wind-at-MSP-2-3,lower-alpha)"."; }
+#ez-wind-at-MSP-2-3 > li { counter-increment: ez-wind-at-MSP-2-3; }
+#ez-wind-at-MSP-3-1 { counter-set: ez-wind-at-MSP-3-1 0; }
+#ez-wind-at-MSP-3-1 > li::marker { content: ""counter(ez-wind-at-MSP-3-1,lower-alpha)"."; }
+#ez-wind-at-MSP-3-1 > li { counter-increment: ez-wind-at-MSP-3-1; }
+#ez-wind-at-Jackson-2-4 { counter-set: ez-wind-at-Jackson-2-4 0; }
+#ez-wind-at-Jackson-2-4 > li::marker { content: ""counter(ez-wind-at-Jackson-2-4,lower-alpha)"."; }
+#ez-wind-at-Jackson-2-4 > li { counter-increment: ez-wind-at-Jackson-2-4; }
+#ez-wind-at-Jackson-3-1 { counter-set: ez-wind-at-Jackson-3-1 0; }
+#ez-wind-at-Jackson-3-1 > li::marker { content: ""counter(ez-wind-at-Jackson-3-1,lower-alpha)"."; }
+#ez-wind-at-Jackson-3-1 > li { counter-increment: ez-wind-at-Jackson-3-1; }
+</style>
+</head>
+<body class="pretext book ignore-math">
+<a class="assistive" href="#ptx-content">Skip to main content</a><header id="ptx-masthead" class="ptx-masthead"><div class="ptx-banner">
+<a xmlns:pf="https://prefigure.org" id="logo-link" class="logo-link" target="_blank" href="http://web.stcloudstate.edu/drbuske/"><img src="external/SCSU_StC_Pri_DkBlkBG.png" alt="Logo image"></a><div class="title-container">
+<h1 class="heading"><a href="atmospherickinematics.html"><span class="title">Mathematics of Atmospheric Kinematics</span></a></h1>
+<p class="byline">Dale Buske</p>
+</div>
+</div></header><nav xmlns:pf="https://prefigure.org" id="ptx-navbar" class="ptx-navbar navbar"><button class="toc-toggle button" title="Contents"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5d2;</span><span class="name">Contents</span></button><a class="index-button button" href="backmatter-2.html" title="Index"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe88e;</span><span class="name">Index</span></a><div class="searchbox">
+<div class="searchwidget"><button id="searchbutton" class="searchbutton button" type="button" title="Search book"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe8b6;</span><span class="name">Search Book</span></button></div>
+<div id="searchresultsplaceholder" class="searchresultsplaceholder" style="display: none">
+<div class="search-results-controls">
+<input aria-label="Search term" id="ptxsearch" class="ptxsearch" type="text" name="terms" placeholder="Search term"><button title="Close search" id="closesearchresults" class="closesearchresults"><span class="material-symbols-outlined">close</span></button>
+</div>
+<h2 class="search-results-heading">Search Results: </h2>
+<div id="searchempty" class="searchempty"><span>No results.</span></div>
+<ol id="searchresults" class="searchresults"></ol>
+</div>
+</div>
+<span class="nav-other-controls"><button id="calculator-toggle" class="calculator-toggle button" title="Show calculator" aria-expanded="false" aria-controls="calculator-container"><span class="icon material-symbols-outlined" aria-hidden="true">&#xea5f;</span><span class="name">Calc</span></button><div id="calculator-container" class="calculator-container" style="display: none; z-index:100;"><div id="geogebra-calculator"></div></div>
+<script>
+var ggbApp = new GGBApplet({"appName": "classic",
+    "width": 330,
+    "height": 600,
+    "showToolBar": true,
+    "showAlgebraInput": true,
+    "perspective": "G/A",
+    "algebraInputPosition": "bottom",
+    "scaleContainerClass": "calculator-container",
+    "allowUpscale": true,
+    "autoHeight": true,
+    "disableAutoScale": false},
+true);
+</script></span><span class="treebuttons"><a class="previous-button button" href="ch_taylor_polynomials.html" title="Previous"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5cb;</span><span class="name">Prev</span></a><a class="up-button button" href="ch_taylor_polynomials.html" title="Up"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5ce;</span><span class="name">Up</span></a><a class="next-button button" href="sec_taylor_polynomials_2var.html" title="Next"><span class="name">Next</span><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5cc;</span></a></span></nav><div xmlns:pf="https://prefigure.org" id="latex-macros" class="hidden-content process-math" style="display:none"><span class="process-math">\(\newcommand{\N}{\mathbb N}
+\newcommand{\Z}{\mathbb Z}
+\newcommand{\Q}{\mathbb Q}
+\newcommand{\R}{\mathbb R}
+\newcommand{\lt}{&lt;}
+\newcommand{\gt}{&gt;}
+\newcommand{\amp}{&amp;}
+\definecolor{fillinmathshade}{gray}{0.9}
+\newcommand{\fillinmath}[1]{\mathchoice{\colorbox{fillinmathshade}{$\displaystyle     \phantom{\,#1\,}$}}{\colorbox{fillinmathshade}{$\textstyle        \phantom{\,#1\,}$}}{\colorbox{fillinmathshade}{$\scriptstyle      \phantom{\,#1\,}$}}{\colorbox{fillinmathshade}{$\scriptscriptstyle\phantom{\,#1\,}$}}}
+\)</span></div>
+<div class="ptx-page">
+<div xmlns:pf="https://prefigure.org" id="ptx-sidebar" class="ptx-sidebar"><nav id="ptx-toc" class="ptx-toc depth2"><ul class="structural contains-active toc-item-list">
+<li class="toc-item toc-frontmatter">
+<div class="toc-title-box"><a href="frontmatter.html" class="internal"><span class="title">Front Matter</span></a></div>
+<ul class="structural toc-item-list">
+<li class="toc-item toc-colophon"><div class="toc-title-box"><a href="frontmatter-3.html" class="internal"><span class="title">Colophon</span></a></div></li>
+<li class="toc-item toc-acknowledgement"><div class="toc-title-box"><a href="frontmatter-4.html" class="internal"><span class="title">Acknowledgements</span></a></div></li>
+</ul>
+</li>
+<li class="toc-item toc-chapter">
+<div class="toc-title-box"><a href="ch_numerical_integration.html" class="internal"><span class="codenumber">1</span> <span class="title">Approximation I: Area</span></a></div>
+<ul class="structural toc-item-list"><li class="toc-item toc-section">
+<div class="toc-title-box"><a href="sec_CAPE.html" class="internal"><span class="codenumber">1.1</span> <span class="title">Numerical Integration</span></a></div>
+<ul class="structural toc-item-list">
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="sec_CAPE.html#sec_CAPE-4" class="internal"><span class="codenumber">1.1.1</span> <span class="title">CAPE and CIN</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="sec_CAPE.html#sec_CAPE-5" class="internal"><span class="codenumber">1.1.2</span> <span class="title">Left, Right, and Midpoint Sums</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="sec_CAPE.html#sec_CAPE-6" class="internal"><span class="codenumber">1.1.3</span> <span class="title">The Trapezoidal Rule</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="sec_CAPE.html#sec_CAPE-7" class="internal"><span class="codenumber">1.1.4</span> <span class="title">Simpson’s Rule</span></a></div></li>
+<li class="toc-item toc-exercises"><div class="toc-title-box"><a href="sec_CAPE.html#ez_CAPE" class="internal"><span class="codenumber">1.1.5</span> <span class="title">Exercises</span></a></div></li>
+</ul>
+</li></ul>
+</li>
+<li class="toc-item toc-chapter">
+<div class="toc-title-box"><a href="ch_series.html" class="internal"><span class="codenumber">2</span> <span class="title">Modeling Periodic Behavior</span></a></div>
+<ul class="structural toc-item-list">
+<li class="toc-item toc-section">
+<div class="toc-title-box"><a href="sec_fourier_series.html" class="internal"><span class="codenumber">2.1</span> <span class="title">Sinusoids</span></a></div>
+<ul class="structural toc-item-list">
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="sec_fourier_series.html#sec_fourier_series-4" class="internal"><span class="codenumber">2.1.1</span> <span class="title">Sinusoids</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="sec_fourier_series.html#sec_fourier_series-5" class="internal"><span class="codenumber">2.1.2</span> <span class="title">Least-squares Fit of a Sinusoid</span></a></div></li>
+<li class="toc-item toc-exercises"><div class="toc-title-box"><a href="sec_fourier_series.html#ex_sinusoids" class="internal"><span class="codenumber">2.1.3</span> <span class="title">Exercises</span></a></div></li>
+</ul>
+</li>
+<li class="toc-item toc-section">
+<div class="toc-title-box"><a href="sec_trig_polynomials.html" class="internal"><span class="codenumber">2.2</span> <span class="title">Trigonometric Polynomials</span></a></div>
+<ul class="structural toc-item-list">
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="sec_trig_polynomials.html#sec_trig_polynomials-4" class="internal"><span class="codenumber">2.2.1</span> <span class="title">Trigonometric Polynomials</span></a></div></li>
+<li class="toc-item toc-exercises"><div class="toc-title-box"><a href="sec_trig_polynomials.html#ex_trig_polynomials" class="internal"><span class="codenumber">2.2.2</span> <span class="title">Exercises</span></a></div></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toc-item toc-chapter">
+<div class="toc-title-box"><a href="ch-contours.html" class="internal"><span class="codenumber">3</span> <span class="title">Contours and Lingo</span></a></div>
+<ul class="structural toc-item-list">
+<li class="toc-item toc-section">
+<div class="toc-title-box"><a href="sec_functionnotation.html" class="internal"><span class="codenumber">3.1</span> <span class="title">Function Notation</span></a></div>
+<ul class="structural toc-item-list"><li class="toc-item toc-exercises"><div class="toc-title-box"><a href="sec_functionnotation.html#ex_firstch-intro" class="internal"><span class="codenumber">3.1</span> <span class="title">Exercises</span></a></div></li></ul>
+</li>
+<li class="toc-item toc-section">
+<div class="toc-title-box"><a href="sec_3space.html" class="internal"><span class="codenumber">3.2</span> <span class="title">A Tour of 3-Space</span></a></div>
+<ul class="structural toc-item-list"><li class="toc-item toc-exercises"><div class="toc-title-box"><a href="sec_3space.html#ex_3space" class="internal"><span class="codenumber">3.2</span> <span class="title">Exercises</span></a></div></li></ul>
+</li>
+<li class="toc-item toc-section">
+<div class="toc-title-box"><a href="sec_contour_diagrams.html" class="internal"><span class="codenumber">3.3</span> <span class="title">Contour Diagrams</span></a></div>
+<ul class="structural toc-item-list"><li class="toc-item toc-exercises"><div class="toc-title-box"><a href="sec_contour_diagrams.html#ex_contour_diagrams" class="internal"><span class="codenumber">3.3</span> <span class="title">Exercises</span></a></div></li></ul>
+</li>
+<li class="toc-item toc-section">
+<div class="toc-title-box"><a href="sec_spherical_coords.html" class="internal"><span class="codenumber">3.4</span> <span class="title">Additional Coordinate Systems</span></a></div>
+<ul class="structural toc-item-list">
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="sec_spherical_coords.html#sec_spherical_coords-4" class="internal"><span class="codenumber">3.4.1</span> <span class="title">Polar Coordinates</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="sec_spherical_coords.html#sphericalcoordinatesection" class="internal"><span class="codenumber">3.4.2</span> <span class="title">Spherical Coordinates</span></a></div></li>
+<li class="toc-item toc-exercises"><div class="toc-title-box"><a href="sec_spherical_coords.html#ex_spherical_coords" class="internal"><span class="codenumber">3.4.3</span> <span class="title">Exercises</span></a></div></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toc-item toc-chapter">
+<div class="toc-title-box"><a href="ch_vectors.html" class="internal"><span class="codenumber">4</span> <span class="title">Modeling Force: Vectors</span></a></div>
+<ul class="structural toc-item-list">
+<li class="toc-item toc-section">
+<div class="toc-title-box"><a href="sec_displacementvectors.html" class="internal"><span class="codenumber">4.1</span> <span class="title">Displacement Vectors</span></a></div>
+<ul class="structural toc-item-list"><li class="toc-item toc-exercises"><div class="toc-title-box"><a href="sec_displacementvectors.html#ex_sec_displacementvectors" class="internal"><span class="codenumber">4.1</span> <span class="title">Exercises</span></a></div></li></ul>
+</li>
+<li class="toc-item toc-section">
+<div class="toc-title-box"><a href="sec_dotproduct.html" class="internal"><span class="codenumber">4.2</span> <span class="title">Dot Product</span></a></div>
+<ul class="structural toc-item-list"><li class="toc-item toc-exercises"><div class="toc-title-box"><a href="sec_dotproduct.html#ex_dotproduct" class="internal"><span class="codenumber">4.2</span> <span class="title">Exercises</span></a></div></li></ul>
+</li>
+<li class="toc-item toc-section">
+<div class="toc-title-box"><a href="sec_cross_product.html" class="internal"><span class="codenumber">4.3</span> <span class="title">The Cross Product</span></a></div>
+<ul class="structural toc-item-list"><li class="toc-item toc-exercises"><div class="toc-title-box"><a href="sec_cross_product.html#ex_crossproduct" class="internal"><span class="codenumber">4.3</span> <span class="title">Exercises</span></a></div></li></ul>
+</li>
+</ul>
+</li>
+<li class="toc-item toc-chapter">
+<div class="toc-title-box"><a href="ch-differentiation.html" class="internal"><span class="codenumber">5</span> <span class="title">Rate of Change: Differentiation</span></a></div>
+<ul class="structural toc-item-list">
+<li class="toc-item toc-section">
+<div class="toc-title-box"><a href="sec_partial_differentiation.html" class="internal"><span class="codenumber">5.1</span> <span class="title">Partial Differentiation</span></a></div>
+<ul class="structural toc-item-list">
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="sec_partial_differentiation.html#sec_partial_differentiation-4" class="internal"><span class="codenumber">5.1.1</span> <span class="title">First-order Partial Derivatives</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="sec_partial_differentiation.html#interpretfirstorderpartials" class="internal"><span class="codenumber">5.1.2</span> <span class="title">Interpretations of First-order Partial Derivatives</span></a></div></li>
+<li class="toc-item toc-exercises"><div class="toc-title-box"><a href="sec_partial_differentiation.html#ex_partialdifferentiation" class="internal"><span class="codenumber">5.1.3</span> <span class="title">Exercises</span></a></div></li>
+</ul>
+</li>
+<li class="toc-item toc-section">
+<div class="toc-title-box"><a href="sec_the_gradient.html" class="internal"><span class="codenumber">5.2</span> <span class="title">The Gradient</span></a></div>
+<ul class="structural toc-item-list"><li class="toc-item toc-exercises"><div class="toc-title-box"><a href="sec_the_gradient.html#ex_the_gradient" class="internal"><span class="codenumber">5.2</span> <span class="title">Exercises</span></a></div></li></ul>
+</li>
+<li class="toc-item toc-section">
+<div class="toc-title-box"><a href="sec_chain_rule.html" class="internal"><span class="codenumber">5.3</span> <span class="title">The Chain Rule</span></a></div>
+<ul class="structural toc-item-list"><li class="toc-item toc-exercises"><div class="toc-title-box"><a href="sec_chain_rule.html#ex_chain_rule" class="internal"><span class="codenumber">5.3</span> <span class="title">Exercises</span></a></div></li></ul>
+</li>
+</ul>
+</li>
+<li class="toc-item toc-chapter">
+<div class="toc-title-box"><a href="ch-vectorfields.html" class="internal"><span class="codenumber">6</span> <span class="title">Flow: Vector Fields</span></a></div>
+<ul class="structural toc-item-list">
+<li class="toc-item toc-section">
+<div class="toc-title-box"><a href="sec_vector_fields.html" class="internal"><span class="codenumber">6.1</span> <span class="title">Vector Fields</span></a></div>
+<ul class="structural toc-item-list"><li class="toc-item toc-exercises"><div class="toc-title-box"><a href="sec_vector_fields.html#ex_sec_vectorfields" class="internal"><span class="codenumber">6.1</span> <span class="title">Exercises</span></a></div></li></ul>
+</li>
+<li class="toc-item toc-section">
+<div class="toc-title-box"><a href="sec_circulation.html" class="internal"><span class="codenumber">6.2</span> <span class="title">Circulation</span></a></div>
+<ul class="structural toc-item-list"><li class="toc-item toc-exercises"><div class="toc-title-box"><a href="sec_circulation.html#ex_sec_circulation" class="internal"><span class="codenumber">6.2</span> <span class="title">Exercises</span></a></div></li></ul>
+</li>
+<li class="toc-item toc-section">
+<div class="toc-title-box"><a href="sec_curl.html" class="internal"><span class="codenumber">6.3</span> <span class="title">Curl</span></a></div>
+<ul class="structural toc-item-list"><li class="toc-item toc-exercises"><div class="toc-title-box"><a href="sec_curl.html#ex_sec_curl" class="internal"><span class="codenumber">6.3</span> <span class="title">Exercises</span></a></div></li></ul>
+</li>
+<li class="toc-item toc-section">
+<div class="toc-title-box"><a href="sec_flux.html" class="internal"><span class="codenumber">6.4</span> <span class="title">Flux</span></a></div>
+<ul class="structural toc-item-list"><li class="toc-item toc-exercises"><div class="toc-title-box"><a href="sec_flux.html#ex_sec_flux" class="internal"><span class="codenumber">6.4</span> <span class="title">Exercises</span></a></div></li></ul>
+</li>
+<li class="toc-item toc-section">
+<div class="toc-title-box"><a href="sec_divergence.html" class="internal"><span class="codenumber">6.5</span> <span class="title">Divergence</span></a></div>
+<ul class="structural toc-item-list"><li class="toc-item toc-exercises"><div class="toc-title-box"><a href="sec_divergence.html#ex_sec_divergence" class="internal"><span class="codenumber">6.5</span> <span class="title">Exercises</span></a></div></li></ul>
+</li>
+<li class="toc-item toc-section">
+<div class="toc-title-box"><a href="sec_Laplacian.html" class="internal"><span class="codenumber">6.6</span> <span class="title">The Laplacian</span></a></div>
+<ul class="structural toc-item-list"><li class="toc-item toc-exercises"><div class="toc-title-box"><a href="sec_Laplacian.html#ex_laplacian" class="internal"><span class="codenumber">6.6</span> <span class="title">Exercises</span></a></div></li></ul>
+</li>
+</ul>
+</li>
+<li class="toc-item toc-chapter contains-active">
+<div class="toc-title-box"><a href="ch_taylor_polynomials.html" class="internal"><span class="codenumber">7</span> <span class="title">Approximation II: Taylor Polynomials</span></a></div>
+<ul class="structural toc-item-list contains-active">
+<li class="toc-item toc-section active">
+<div class="toc-title-box"><a href="sec_taylor_polynomials_1var.html" class="internal"><span class="codenumber">7.1</span> <span class="title">Taylor Polynomials in One Variable</span></a></div>
+<ul class="structural toc-item-list">
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="sec_taylor_polynomials_1var.html#sec_taylor_polynomials_1var-4" class="internal"><span class="codenumber">7.1.1</span> <span class="title">Taylor Polynomials of Degree 2</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="sec_taylor_polynomials_1var.html#sec_taylor_polynomials_1var-5" class="internal"><span class="codenumber">7.1.2</span> <span class="title">Taylor Polynomials of Degree <span class="process-math">\(n\)</span></span></a></div></li>
+<li class="toc-item toc-exercises"><div class="toc-title-box"><a href="sec_taylor_polynomials_1var.html#ex_taylor_polynomials_1var" class="internal"><span class="codenumber">7.1.3</span> <span class="title">Exercises</span></a></div></li>
+</ul>
+</li>
+<li class="toc-item toc-section">
+<div class="toc-title-box"><a href="sec_taylor_polynomials_2var.html" class="internal"><span class="codenumber">7.2</span> <span class="title">Taylor Polynomials in Two Variables</span></a></div>
+<ul class="structural toc-item-list">
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="sec_taylor_polynomials_2var.html#sec_taylor_polynomials_2var-4" class="internal"><span class="codenumber">7.2.1</span> <span class="title">Linear Approximations in Two Variables</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="sec_taylor_polynomials_2var.html#sec_taylor_polynomials_2var-5" class="internal"><span class="codenumber">7.2.2</span> <span class="title">Quadratic Approximations in Two Variables</span></a></div></li>
+<li class="toc-item toc-section"><div class="toc-title-box"><a href="sec_taylor_polynomials_2var.html#sec_taylor_polynomials_2var-6" class="internal"><span class="codenumber">7.2.1</span> <span class="title">Translations, Divergence, Vorticity, and Deformation</span></a></div></li>
+<li class="toc-item toc-section"><div class="toc-title-box"><a href="sec_taylor_polynomials_2var.html#sec_taylor_polynomials_2var-7" class="internal"><span class="codenumber">7.2.2</span> <span class="title">Kinematics of the Horizontal Wind Field</span></a></div></li>
+<li class="toc-item toc-exercises"><div class="toc-title-box"><a href="sec_taylor_polynomials_2var.html#ex_taylor_polynomials_2var" class="internal"><span class="codenumber">7.2.5</span> <span class="title">Exercises</span></a></div></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toc-item toc-backmatter">
+<div class="toc-title-box"><a href="backmatter.html" class="internal"><span class="title">Backmatter</span></a></div>
+<ul class="structural toc-item-list">
+<li class="toc-item toc-index"><div class="toc-title-box"><a href="backmatter-2.html" class="internal"><span class="title">Index</span></a></div></li>
+<li class="toc-item toc-colophon"><div class="toc-title-box"><a href="backmatter-3.html" class="internal"><span class="title">Colophon</span></a></div></li>
+</ul>
+</li>
+</ul></nav></div>
+<main class="ptx-main"><div id="ptx-content" class="ptx-content"><section xmlns:pf="https://prefigure.org" class="section" id="sec_taylor_polynomials_1var"><h2 class="heading hide-type">
+<span class="type">Section</span><span class="space"> </span><span class="codenumber">7.1</span><span class="space"> </span><span class="title">Taylor Polynomials in One Variable</span>
+</h2>
+<article class="objectives goal-like" id="sec_taylor_polynomials_1var-2"><h3 class="heading"><span class="type">Motivating Questions</span></h3>
+<ul class="disc" id="sec_taylor_polynomials_1var-2-1">
+<li id="sec_taylor_polynomials_1var-2-1-1"><div class="para" id="sec_taylor_polynomials_1var-2-1-1-1">Tangent lines are used in calculus to approximate the graph of a function near a point.  Could a parabola do a better job of approximation near a point?  If so, how do we find such a parabola?</div></li>
+<li id="sec_taylor_polynomials_1var-2-1-2"><div class="para" id="sec_taylor_polynomials_1var-2-1-2-1">Could a higher degree polynomial be used to approximate the graph of a function near a given point?</div></li>
+</ul></article><section class="introduction" id="sec_taylor_polynomials_1var-3"><div class="para" id="sec_taylor_polynomials_1var-3-1">Meteorological phenomena can be complicated.  Earlier we modeled geopotential heights at a given latitude using <dfn class="terminology">trigonometric polynomials</dfn>.  We used sine and cosine functions because the data was periodic.  But what about modeling behavior or functions that are not periodic?  And what about modeling functions of more than one variable?  In this section, we use polynomials called <dfn class="terminology">Taylor polynomials</dfn> to model such functions.</div></section><section class="subsection" id="sec_taylor_polynomials_1var-4"><h3 class="heading hide-type">
+<span class="type">Subsection</span><span class="space"> </span><span class="codenumber">7.1.1</span><span class="space"> </span><span class="title">Taylor Polynomials of Degree 2</span>
+</h3>
+<article class="example example-like" id="fittingexpnegx"><h4 class="heading">
+<span class="type">Example</span><span class="space"> </span><span class="codenumber">7.1.1</span><span class="period">.</span><span class="space"> </span><span class="title">Polynomials approximating <span class="process-math">\(f(x)=e^{-x}\)</span>.</span>
+</h4>
+<div class="para" id="fittingexpnegx-2">For illustration purposes, we start by finding a polynomial that fits a rather simple function, <span class="process-math">\(f(x)=e^{-x}\text{.}\)</span>  And, we will try to fit the polynomial well near <span class="process-math">\(x=0\text{.}\)</span>  If the polynomial has degree 0, call it <span class="process-math">\(P_0(x)\text{,}\)</span> then it will simply be a constant function.  What is the ’best’ constant function to approximate <span class="process-math">\(f(x)=e^{-x}\)</span> near <span class="process-math">\(x=0\text{?}\)</span>  <span class="process-math">\(P_0(x)=1\)</span> will do since it is an exact fit at <span class="process-math">\(x=0\text{.}\)</span>  Sure, it isn’t a very good fit far away from <span class="process-math">\(x=0\text{,}\)</span> but we seek polynomial fits that are good near <span class="process-math">\(x=0\)</span> and so <span class="process-math">\(P_0(x)=1\)</span> is as good as any constant function can approximate <span class="process-math">\(f(x)\text{.}\)</span>  We will call <span class="process-math">\(P_0(x)\)</span> the zero-degree Taylor polynomial approximation to <span class="process-math">\(f(x)=e^{-x}\)</span> at <span class="process-math">\(x=0\text{.}\)</span>
+</div>
+<div class="para" id="fittingexpnegx-3">Next, let’s find a polynomial of degree 1, call it <span class="process-math">\(P_1(x)\text{,}\)</span> that fits <span class="process-math">\(f(x)=e^{-x}\)</span> well near <span class="process-math">\(x=0\text{.}\)</span>  Since a polynomial of degree one is just a linear function, the polynomial whose graph is the tangent line to <span class="process-math">\(f(x)\)</span> at <span class="process-math">\(x=0\)</span> would work well since we would have that <span class="process-math">\(f(0)=P_1(0)\)</span> and <span class="process-math">\(f'(0)=P_1(0)\text{.}\)</span>  That is, both the value of <span class="process-math">\(P_1(x)\)</span> and the derivative or slope of <span class="process-math">\(P_1(x)\)</span> would match the function perfectly at <span class="process-math">\(x=0\text{.}\)</span>  From calculus, you may remember that this tangent line is given by the function <span class="process-math">\(P_1(x) = f(0) +f'(0)(x-0) = 1 + (-1)x = 1-x\)</span> when <span class="process-math">\(f(x)=e^{-x}\text{.}\)</span>  We call <span class="process-math">\(P_1(x)\)</span> (the linearization of <span class="process-math">\(f(x)=e^{-x}\)</span> at <span class="process-math">\(x=0\)</span>) the Taylor polynomial approximation of degree 1.</div>
+<figure class="figure figure-like" id="zeroonetwoTaylorapproximations"><div class="sidebyside"><div class="sbsrow" style="margin-left:1.666666666666667%;margin-right:1.666666666666667%;">
+<div class="sbspanel top" style="width:31.0344827586207%;"><img src="external/LinearApprox1varDeg0.jpg" class="contained"></div>
+<div class="sbspanel top" style="width:31.0344827586207%;"><img src="external/LinearApprox1varDeg1.jpg" class="contained"></div>
+<div class="sbspanel top" style="width:31.0344827586207%;"><img src="external/LinearApprox1varDeg2.jpg" class="contained"></div>
+</div></div>
+<figcaption><span class="type">Figure</span><span class="space"> </span><span class="codenumber">7.1.2<span class="period">.</span></span><span class="space"> </span>Left: The zero-degree Taylor polynomial approximation to <span class="process-math">\(f(x) = e^{-x}\)</span> at <span class="process-math">\(x=0\)</span> is <span class="process-math">\(P_0(x)=1\text{.}\)</span>  Middle: The first-degree Taylor polynomial approximation to <span class="process-math">\(f(x) = e^{-x}\)</span> at <span class="process-math">\(x=0\)</span> is <span class="process-math">\(\displaystyle P_1(x)=1-x\text{.}\)</span>  Right: The second-degree Taylor polynomial approximation to <span class="process-math">\(f(x) = e^{-x}\)</span> at <span class="process-math">\(x=0\)</span> is <span class="process-math">\(\displaystyle P_2(x)=1-x+\frac{x^2}{2}\text{.}\)</span></figcaption></figure><div class="para logical" id="fittingexpnegx-5">
+<div class="para">To determine a polynomial of degree 2, call it <span class="process-math">\(P_2(x)\)</span> that fits <span class="process-math">\(f(x)=e^{-x}\)</span> well near 0, we should think about what we mean by the phrase ’fits well.’  No matter how hard we try, a polynomial of degree 2 (whose graph is always a parabola) will never fit <span class="process-math">\(f(x)=e^{-x}\)</span> perfectly everywhere.  So let’s focus on getting good attributes at and near <span class="process-math">\(x=0\text{.}\)</span>  For example, with the Taylor polynomial <span class="process-math">\(P_1(x)\text{,}\)</span> we saw that <span class="process-math">\(P_1(0)=f(0)\)</span> and <span class="process-math">\(P_1'(0)=f'(0)\text{.}\)</span>  That is the height and slope of <span class="process-math">\(f(x)\)</span> at <span class="process-math">\(x=0\)</span> matched <span class="process-math">\(P_1(x)\text{.}\)</span>  It seems reasonable to then also ask <span class="process-math">\(P_2''(0)=f''(0)\text{.}\)</span>  That is, to ask the concavity of both functions, <span class="process-math">\(f(x)\)</span> and <span class="process-math">\(P_2(x)\text{,}\)</span> to match at <span class="process-math">\(x=0\text{.}\)</span>  If we define</div>
+<div class="displaymath process-math" data-contains-math-knowls="./knowl/xref/zeroonetwoTaylorapproximations.html">
+\begin{equation*}
+P_2(x)=c_0 + c_1x + c_2x^2
+\end{equation*}
+</div>
+<div class="para">and if we require that</div>
+<div class="displaymath process-math" data-contains-math-knowls="./knowl/xref/zeroonetwoTaylorapproximations.html">
+\begin{equation*}
+P_2(0)=f(0), \ \ \ P_2'(0)=f'(0), \ \ \ \ {\rm{and}} \ \ \ \ P_2''(0)=f''(0)
+\end{equation*}
+</div>
+<div class="para">then it turns out that</div>
+<div class="displaymath process-math" data-contains-math-knowls="./knowl/xref/zeroonetwoTaylorapproximations.html" id="fittingexpnegx-5-17">
+\begin{align*}
+\displaystyle c_0 = \mathstrut \amp f(0)=1 \\
+c_1 = \mathstrut \amp f'(0)=-1 \\
+c_2 = \mathstrut \amp \frac{f''(0)}{2} = \frac{1}{2}.
+\end{align*}
+</div>
+<div class="para">Graphs of Taylor polynomial approximations of degrees 0, 1, and 2 appear in <a href="sec_taylor_polynomials_1var.html#zeroonetwoTaylorapproximations" class="xref" data-knowl="./knowl/xref/zeroonetwoTaylorapproximations.html" data-reveal-label="Reveal" data-close-label="Close" title="Figure 7.1.2">Figure 7.1.2</a>.</div>
+</div>
+<article class="assemblage assemblage-like" id="TaylorPolyDegree2"><h5 class="heading"><span class="title">Taylor Polynomials of Degree 1 and 2.</span></h5>
+<div class="para logical" id="TaylorPolyDegree2-2">
+<div class="para">Given a smooth function <span class="process-math">\(f(x)\text{,}\)</span> the Taylor polynomial of degree one about <span class="process-math">\(x=x_0\)</span> is given by</div>
+<div class="displaymath process-math">
+\begin{equation*}
+P_1(x) = f(x_0) + f'(x_0)(x-x_0).
+\end{equation*}
+</div>
+<div class="para">This is the same as the tangent line to <span class="process-math">\(f(x)\)</span> at <span class="process-math">\(x=x_0\text{.}\)</span>  The Taylor polynomial of degree two about <span class="process-math">\(x=x_0\)</span> is given by</div>
+<div class="displaymath process-math">
+\begin{equation*}
+P_2(x) = f(x_0) + f'(x_0)(x-x_0) + \frac{f''(x_0)}{2}(x-x_0).
+\end{equation*}
+</div>
+</div></article></article><article class="example example-like" id="ApproxPotentialTemp"><h4 class="heading">
+<span class="type">Example</span><span class="space"> </span><span class="codenumber">7.1.3</span><span class="period">.</span><span class="space"> </span><span class="title">Approximating Potential Temperature.</span>
+</h4>
+<div class="para logical" id="ApproxPotentialTemp-2">
+<div class="para">The <dfn class="terminology">potential temperature</dfn> <span class="process-math">\(\theta\)</span> of a parcel of air at pressure <span class="process-math">\(p\)</span> (in mb) is the temperature that the air parcel would attain if adiabatically brought to a standard reference pressure such as <span class="process-math">\(p_0=1000\)</span> mb.  Assuming the air is an ideal gas, if <span class="process-math">\(T\)</span> is the current absolute temperature of the air parcel (in Kelvin), then</div>
+<div class="displaymath process-math" data-contains-math-knowls="./knowl/xref/PotentialTempFit.html">
+\begin{equation*}
+\theta(T,p) = T \left( \frac{1000}{p} \right)^{0.286}.
+\end{equation*}
+</div>
+<div class="para">If the temperature of the air parcel is held constant at <span class="process-math">\(T=10^{\circ}C\)</span> (283 Kelvin), then the potential temperature (in Kelvin) would be given by the one-variable function</div>
+<div class="displaymath process-math" data-contains-math-knowls="./knowl/xref/PotentialTempFit.html">
+\begin{equation*}
+\theta(p) = 283\left( \frac{1000}{p}\right)^{0.286}.
+\end{equation*}
+</div>
+<div class="para">The Taylor polynomial approximation of degree 2 at <span class="process-math">\(p=500\)</span> mb is then given by</div>
+<div class="displaymath process-math" data-contains-math-knowls="./knowl/xref/PotentialTempFit.html">
+\begin{equation*}
+P_2(p) = c_0 + c_1(p-500) + c_2(p-500)^2
+\end{equation*}
+</div>
+<div class="para">where</div>
+<div class="displaymath process-math" data-contains-math-knowls="./knowl/xref/PotentialTempFit.html" id="ApproxPotentialTemp-2-12">
+\begin{align*}
+\displaystyle c_0 = \mathstrut \amp \theta(500) = 283\left( \frac{1000}{500} \right)^{0.286} \approx 345.05 \\
+c_1 = \mathstrut \amp \frac{\theta'(500)}{1!} \approx -0.197 \\
+c_2 = \mathstrut \amp \frac{\theta''(500)}{2!} \approx 0.000254.
+\end{align*}
+</div>
+<div class="para">so that</div>
+<div class="displaymath process-math" data-contains-math-knowls="./knowl/xref/PotentialTempFit.html">
+\begin{equation*}
+\theta(p) \approx P_2(p) = 345.05 -0.197(p-500) + 0.000254(p-500)^2.
+\end{equation*}
+</div>
+<div class="para">Both <span class="process-math">\(\theta(p)\)</span> and <span class="process-math">\(P_2(p)\)</span> are plotted in <a href="sec_taylor_polynomials_1var.html#PotentialTempFit" class="xref" data-knowl="./knowl/xref/PotentialTempFit.html" data-reveal-label="Reveal" data-close-label="Close" title="Figure 7.1.4">Figure 7.1.4</a>.  Note the good fit near <span class="process-math">\(p=500\)</span> mb and poor fit at <span class="process-math">\(p=100\)</span> mb.</div>
+</div>
+<figure class="figure figure-like" id="PotentialTempFit"><div class="image-box" style="width: 50%; margin-left: 25%; margin-right: 25%;"><img src="external/PotentialTempFit.jpg" class="contained" alt="Fitting potential temperature with a Taylor polynomial of degree 2."></div>
+<figcaption><span class="type">Figure</span><span class="space"> </span><span class="codenumber">7.1.4<span class="period">.</span></span><span class="space"> </span>For <span class="process-math">\(T=10^{\circ}C\text{,}\)</span> the potential temperature (in Kelvin) at pressure <span class="process-math">\(p\)</span> (in mb) is given by <span class="process-math">\(\theta(p) = 283\left( \frac{1000}{p}\right)^{0.286}.\)</span> The Taylor polynomial approximation near <span class="process-math">\(p=500\)</span> mb is given by <span class="process-math">\(P_2(p) = 345.05 -0.197(p-500) + 0.000254(p-500)^2\)</span> (dashed curve).</figcaption></figure></article><article class="example example-like" id="InterpolatingWind"><h4 class="heading">
+<span class="type">Example</span><span class="space"> </span><span class="codenumber">7.1.5</span><span class="period">.</span><span class="space"> </span><span class="title">Interpolating Wind over Time.</span>
+</h4>
+<div class="para" id="InterpolatingWind-2">Wind observations for Saint Cloud, MN appear in <a href="sec_taylor_polynomials_1var.html#StCObservationsJan15" class="xref" data-knowl="./knowl/xref/StCObservationsJan15.html" data-reveal-label="Reveal" data-close-label="Close" title="Figure 7.1.6">Figure 7.1.6</a>.  We construct a Taylor polynomial <span class="process-math">\(u(t)\)</span> for the speed of the eastward wind near time 6:53.</div>
+<figure class="figure figure-like" id="StCObservationsJan15"><div class="image-box" style="width: 75%; margin-left: 12.5%; margin-right: 12.5%;"><img src="external/StCloudObsJan152024.jpg" class="contained" alt="Wind Observations near Saint Cloud MN on January 14, 2024."></div>
+<figcaption><span class="type">Figure</span><span class="space"> </span><span class="codenumber">7.1.6<span class="period">.</span></span><span class="space"> </span>Observations at the Saint Cloud, MN airport on January 15, 2024.</figcaption></figure><div class="para" id="InterpolatingWind-4">To start, we label times and speeds of the eastward components of the wind as in <a href="sec_taylor_polynomials_1var.html#WindTimeTable" class="xref" data-knowl="./knowl/xref/WindTimeTable.html" data-reveal-label="Reveal" data-close-label="Close" title="Table 7.1.7: Observations at the Saint Cloud, MN airport on January 15, 2024.">Table 7.1.7</a>.</div>
+<figure class="table table-like" id="WindTimeTable"><figcaption><span class="type">Table</span><span class="space"> </span><span class="codenumber">7.1.7<span class="period">.</span></span><span class="space"> </span>Observations at the Saint Cloud, MN airport on January 15, 2024.</figcaption><div class="tabular-box natural-width"><table class="tabular">
+<tr class="header-horizontal">
+<th scope="col" class="c m b1 r0 l0 t0 lines">Time <span class="process-math">\(t\)</span> (hr)</th>
+<th scope="col" class="c m b1 r0 l0 t0 lines">
+<span class="process-math">\(u(t)\)</span> (mph)</th>
+</tr>
+<tr>
+<td class="c m b0 r0 l0 t0 lines">
+<span class="process-math">\(t_1 = -2\)</span> (4:53)</td>
+<td class="c m b0 r0 l0 t0 lines"><span class="process-math">\(8\)</span></td>
+</tr>
+<tr>
+<td class="c m b0 r0 l0 t0 lines">
+<span class="process-math">\(t_2 = -1\)</span> (5:53)</td>
+<td class="c m b0 r0 l0 t0 lines"><span class="process-math">\(9\)</span></td>
+</tr>
+<tr>
+<td class="c m b0 r0 l0 t0 lines">
+<span class="process-math">\(t_3 = 0\)</span> (6:53)</td>
+<td class="c m b0 r0 l0 t0 lines"><span class="process-math">\(13\)</span></td>
+</tr>
+<tr>
+<td class="c m b0 r0 l0 t0 lines">
+<span class="process-math">\(t_4 = 1\)</span> (7:53)</td>
+<td class="c m b0 r0 l0 t0 lines"><span class="process-math">\(12\)</span></td>
+</tr>
+<tr>
+<td class="c m b0 r0 l0 t0 lines">
+<span class="process-math">\(t_5 = 2\)</span> (8:53)</td>
+<td class="c m b0 r0 l0 t0 lines"><span class="process-math">\(13\)</span></td>
+</tr>
+</table></div></figure><div class="para logical" id="InterpolatingWind-6">
+<div class="para">First, we have <span class="process-math">\(u(t_3) = 13\text{.}\)</span>  Next, we estimate</div>
+<div class="displaymath process-math">
+\begin{equation*}
+\displaystyle \frac{du}{dt}\biggr\rvert_{t=t_3} \approx \frac{u(t_4)-u(t_2)}{t_4-t_2} = \frac{12-9}{2} = 1.5 \ \frac{\rm{mph}}{\rm{hr}}.
+\end{equation*}
+</div>
+<div class="para">Next, we estimate</div>
+<div class="displaymath process-math" id="InterpolatingWind-6-3">
+\begin{align*}
+\frac{d^2u}{dt^2}\biggr\rvert_{t=t_3} \approx \mathstrut \amp \frac{\frac{du}{dt}\bigr\rvert_{t=t_4} - \frac{du}{dt}\bigr\rvert_{t=t_2}}{t_4 - t_2} \\
+\approx \mathstrut \amp \frac{ \frac{13-13}{2} - \frac{13-8}{2}}{2} \\
+= \mathstrut \amp -1.25 \ \frac{\rm{mph}}{\rm{hr}^2}.
+\end{align*}
+</div>
+<div class="para">From this we can write the Taylor polynomial of degree 2 about <span class="process-math">\(t=t_3\)</span> as</div>
+<div class="displaymath process-math" id="InterpolatingWind-6-5">
+\begin{align*}
+u(t) \approx \mathstrut \amp u(t_3) + \frac{du}{dt}\biggr\rvert_{t=t_3} (t-t_3) + \frac{1}{2}\frac{d^2u}{dt^2}\biggr\rvert_{t=t_3} (t-t_3)^2 \\
+= \mathstrut \amp 13 + 1.5(t-t_3) - 0.625(t-t_3)^2. 
+\end{align*}
+</div>
+<div class="para">We can then use this expression to estimate the speed of the eastward component of the wind at 18 minutes (3/10 of an hour) before 6:53.  That is, at 6:35:</div>
+<div class="displaymath process-math">
+\begin{equation*}
+u(-0.3) \approx 13 + 1.5(-0.3) - 0.625(-0.3)^2 \approx 12.5 \ mph.
+\end{equation*}
+</div>
+</div></article><details id="SouthernMNwind" class="exercise exercise-like born-hidden-knowl"><summary class="knowl__link"><h4 class="heading">
+<span class="type">Checkpoint</span><span class="space"> </span><span class="codenumber">7.1.8</span><span class="period">.</span><span class="space"> </span><span class="title">Wind along I-90.</span>
+</h4></summary><article class="exercise exercise-like knowl__content"><div class="para" id="SouthernMNwind-2-1">Rather than having time <span class="process-math">\(t\)</span> be the independent variable of interest, a spatial variable <span class="process-math">\(x\)</span> can also be used in a Taylor polynomial.  Wind observations at noon on January 15, 2024 from <a class="external" href="https://windfinder.com" target="_blank">https://windfinder.com</a><details class="ptx-footnote" aria-live="polite" id="SouthernMNwind-2-1-4"><summary class="ptx-footnote__number" title="Footnote 93"><sup> 93 </sup></summary><div class="ptx-footnote__contents" id="SouthernMNwind-2-1-4"><code class="code-inline tex2jax_ignore">https://windfinder.com</code></div></details> for five cities along I-90 in southern Minnesota appear in <a href="sec_taylor_polynomials_1var.html#SouthernMNwindtable" class="xref" data-knowl="./knowl/xref/SouthernMNwindtable.html" data-reveal-label="Reveal" data-close-label="Close" title="Table 7.1.9: Eastward component of wind along I-90 in southern Minnesota on January 15, 2024.">Table 7.1.9</a>.</div> <figure class="table table-like" id="SouthernMNwindtable"><figcaption><span class="type">Table</span><span class="space"> </span><span class="codenumber">7.1.9<span class="period">.</span></span><span class="space"> </span>Eastward component of wind along I-90 in southern Minnesota on January 15, 2024.</figcaption><div class="tabular-box natural-width"><table class="tabular">
+<tr class="header-horizontal">
+<th scope="col" class="c m b1 r0 l0 t0 lines">Location <span class="process-math">\(x\)</span> (miles east of Fairmont)</th>
+<th scope="col" class="c m b1 r0 l0 t0 lines">Wind</th>
+<th scope="col" class="c m b1 r0 l0 t0 lines">Eastward component <span class="process-math">\(u(x)\)</span> (mph)</th>
+</tr>
+<tr>
+<td class="c m b0 r0 l0 t0 lines">
+<span class="process-math">\(x_1 = -56.7\)</span> (Worthington)</td>
+<td class="c m b0 r0 l0 t0 lines">14 mph @ <span class="process-math">\(284^{\circ}\)</span>
+</td>
+<td class="c m b0 r0 l0 t0 lines">13.58</td>
+</tr>
+<tr>
+<td class="c m b0 r0 l0 t0 lines">
+<span class="process-math">\(x_2 = -26.5\)</span> (Jackson)</td>
+<td class="c m b0 r0 l0 t0 lines">14 mph @ <span class="process-math">\(290^{\circ}\)</span>
+</td>
+<td class="c m b0 r0 l0 t0 lines">13.16</td>
+</tr>
+<tr>
+<td class="c m b0 r0 l0 t0 lines">
+<span class="process-math">\(x_3 = 0\)</span> (Fairmont)</td>
+<td class="c m b0 r0 l0 t0 lines">13 mph @ <span class="process-math">\(293^{\circ}\)</span>
+</td>
+<td class="c m b0 r0 l0 t0 lines">11.97</td>
+</tr>
+<tr>
+<td class="c m b0 r0 l0 t0 lines">
+<span class="process-math">\(x_4 = 18.0\)</span> (Blue Earth)</td>
+<td class="c m b0 r0 l0 t0 lines">12 mph @ <span class="process-math">\(292^{\circ}\)</span>
+</td>
+<td class="c m b0 r0 l0 t0 lines">11.13</td>
+</tr>
+<tr>
+<td class="c m b0 r0 l0 t0 lines">
+<span class="process-math">\(x_5 = 54.6\)</span> (Albert Lea)</td>
+<td class="c m b0 r0 l0 t0 lines">13 mph @ <span class="process-math">\(287^{\circ}\)</span>
+</td>
+<td class="c m b0 r0 l0 t0 lines">12.43</td>
+</tr>
+</table></div></figure> <div class="para" id="SouthernMNwind-2-3">Use this information to construct a second degree Taylor polynomial that can be used to estimate the eastward component of the wind in Sherbern which is located 13.3 miles west of Fairmont.</div> <figure class="figure figure-like" id="SouthernMNmap"><div class="image-box" style="width: 75%; margin-left: 12.5%; margin-right: 12.5%;"><img src="external/SouthernMNmap.jpg" class="contained" alt="Wind Observations along I-90 in January, 2024."></div>
+<figcaption><span class="type">Figure</span><span class="space"> </span><span class="codenumber">7.1.10<span class="period">.</span></span><span class="space"> </span>Cities in southern MN along I-90.</figcaption></figure><div class="solutions"><details id="SouthernMNwind-3" class="answer solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Answer</span><span class="period">.</span></summary><div class="answer solution-like knowl__content">
+<div class="para logical" id="SouthernMNwind-3-1">
+<div class="para">We have <span class="process-math">\(u(x_3) = 11.97\text{.}\)</span>  Next, we estimate</div>
+<div class="displaymath process-math">
+\begin{equation*}
+\displaystyle \frac{du}{dx}\biggr\rvert_{x=x_3} \approx \frac{u(x_4)-u(x_2)}{x_4-x_2} = \frac{11.13-13.16}{18.0-(-26.5)} \approx -0.0456  \ \frac{\rm{mph}}{\rm{mi}}.
+\end{equation*}
+</div>
+<div class="para">Then we estimate</div>
+<div class="displaymath process-math" id="SouthernMNwind-3-1-3">
+\begin{align*}
+\frac{d^2u}{dx^2}\biggr\rvert_{x=x_3} \approx \mathstrut \amp \frac{\frac{du}{dx}\bigr\rvert_{x=x_4} - \frac{du}{dx}\bigr\rvert_{x=x_2}}{x_4 - x_2} \\
+\approx \mathstrut \amp \frac{ \frac{12.43-11.97}{54.6} - \frac{11.97-13.58}{56.7}}{18.0-(-26.5)} \\
+= \mathstrut \amp 0.000827 \frac{\rm{mph}}{\rm{mi}^2}.
+\end{align*}
+</div>
+<div class="para">From this we can write the Taylor polynomial of degree 2 about <span class="process-math">\(x=x_3\)</span> as</div>
+<div class="displaymath process-math" id="SouthernMNwind-3-1-5">
+\begin{align*}
+u(x) \approx \mathstrut \amp u(x_3) + \frac{du}{dx}\biggr\rvert_{x=x_3} (x-x_3) + \frac{1}{2}\frac{d^2u}{dx^2}\biggr\rvert_{x=x_3} (x-x_3)^2 \\
+= \mathstrut \amp 11.97 -0.0456(x-0) +0.000414(x-0)^2. 
+\end{align*}
+</div>
+</div>
+<div class="para logical" id="SouthernMNwind-3-2">
+<div class="para">We then use this expression to estimate the speed of the eastward component of the wind in Sherbern:</div>
+<div class="displaymath process-math" id="SouthernMNwind-3-2-1">
+\begin{align*}
+u(-13.3) \approx \mathstrut \amp 11.97 -0.0456(-13.3) + 0.000414(-13.3)^2 \\
+\approx \mathstrut \amp 12.65 \ {\rm{mph}}.
+\end{align*}
+</div>
+</div>
+</div></details></div></article></details></section><section class="subsection" id="sec_taylor_polynomials_1var-5"><h3 class="heading hide-type">
+<span class="type">Subsection</span><span class="space"> </span><span class="codenumber">7.1.2</span><span class="space"> </span><span class="title">Taylor Polynomials of Degree <span class="process-math">\(n\)</span></span>
+</h3>
+<article class="assemblage assemblage-like" id="TaylorPolyDegreeN"><h4 class="heading"><span class="title">Taylor Polynomials of Degree <span class="process-math">\(n\)</span>.</span></h4>
+<div class="para logical" id="TaylorPolyDegreeN-2">
+<div class="para">In general, the Taylor polynomial of degree <span class="process-math">\(n\)</span> approximating any function <span class="process-math">\(f(x)\)</span> near <span class="process-math">\(x=0\)</span> has the form</div>
+<div class="displaymath process-math">
+\begin{equation*}
+P_n(x) = c_0 + c_1x+ c_2x^2 + c_3x^3 + \dots + c_nx^n
+\end{equation*}
+</div>
+<div class="para">where</div>
+<div class="displaymath process-math">
+\begin{equation*}
+c_0=f(0), c_1 = \frac{f'(0)}{1!}, c_2 = \frac{f''(0)}{2!}, c_3 = \frac{f'''(0)}{3!}, \dots, c_n = \frac{f^{(n)}(0)}{n!}.
+\end{equation*}
+</div>
+<div class="para">If we wish to approximate using a Taylor polynomial near a different point, say <span class="process-math">\(x=a\text{,}\)</span> then it has the form</div>
+<div class="displaymath process-math">
+\begin{equation*}
+P_n(x) = c_0 + c_1(x-a)+ c_2(x-a)^2 + c_3(x-a)^3 + \dots + c_n(x-a)^n
+\end{equation*}
+</div>
+<div class="para">where</div>
+<div class="displaymath process-math">
+\begin{equation*}
+c_0=f(a), c_1 = \frac{f'(a)}{1!}, c_2 = \frac{f''(a)}{2!}, c_3 = \frac{f'''(a)}{3!}, \dots, c_n = \frac{f^{(n)}(a)}{n!}.
+\end{equation*}
+</div>
+</div></article></section><section class="exercises" id="ex_taylor_polynomials_1var"><h3 class="heading hide-type">
+<span class="type">Exercises</span><span class="space"> </span><span class="codenumber">7.1.3</span><span class="space"> </span><span class="title">Exercises</span>
+</h3>
+<article class="exercise exercise-like" id="ez-taylorPolyExp"><h4 class="heading">
+<span class="codenumber">1<span class="period">.</span></span><span class="space"> </span><span class="title">Taylor Polynomial of an Exponential Function.</span>
+</h4>
+<div id="momez-taylorPolyExp-2wrap" style="width:100%;overflow:visible;position:relative"><iframe id="momez-taylorPolyExp-2" style="position:absolute;z-index:1;object-fit: contain; width: 100%" frameborder="0" data-knowl-callback="sendResizeRequest" src="https://www.myopenmath.com/embedq2.php?id=1498348&amp;frame_id=momez-taylorPolyExp-2"></iframe></div></article><article class="exercise exercise-like" id="ez-taylorPolysincos"><h4 class="heading">
+<span class="codenumber">2<span class="period">.</span></span><span class="space"> </span><span class="title">Taylor Polynomial of Trigonometric Function.</span>
+</h4>
+<div id="momez-taylorPolysincos-2wrap" style="width:100%;overflow:visible;position:relative"><iframe id="momez-taylorPolysincos-2" style="position:absolute;z-index:1;object-fit: contain; width: 100%" frameborder="0" data-knowl-callback="sendResizeRequest" src="https://www.myopenmath.com/embedq2.php?id=1498352&amp;frame_id=momez-taylorPolysincos-2"></iframe></div></article><article class="exercise exercise-like" id="ez-taylor_polynomials_1var-1"><h4 class="heading">
+<span class="codenumber">3<span class="period">.</span></span><span class="space"> </span><span class="title">Finding Taylor Polynomials for a Rational Function.</span>
+</h4>
+<div id="webwork-8" class="exercise-wrapper" data-domain="https://webwork-ptx.aimath.org" data-seed="8" data-localize-correct="Correct" data-localize-incorrect="Incorrect" data-localize-blank="Blank" data-localize-submit="Submit" data-localize-check-responses="Check Responses" data-localize-reveal="Reveal" data-localize-randomize="Randomize" data-localize-reset="Reset" data-localize-hint="Hint" data-localize-solution="Solution" data-sourceFilePath="Library/Michigan/Chap10Sec1/Q01.pg" data-courseID="anonymous" data-userID="anonymous" data-coursePassword="anonymous" aria-live="polite">
+<div class="problem-buttons"><button class="webwork-button" onclick="handleWW('webwork-8')">Activate</button></div>
+<div class="problem-contents">
+<div class="para logical" id="extracted-webwork-8-1-1-1">
+<div class="para">Find the Taylor polynomials of degree <span class="process-math">\(n\)</span> approximating</div>
+<div class="displaymath process-math">
+\begin{equation*}
+\frac{5}{2-2x}
+\end{equation*}
+</div>
+<div class="para">for <span class="process-math">\(x\)</span> near 0:</div>
+</div> <div class="para" id="extracted-webwork-8-1-1-2">For <span class="process-math">\(n=3\text{,}\)</span> <span class="process-math">\(P_3(x) =\)</span> <span class="fillin underline" role="img" aria-label="45-character blank" style="width: 20.4545454545455em;"></span>
+</div> <div class="para" id="extracted-webwork-8-1-1-3">For <span class="process-math">\(n=5\text{,}\)</span> <span class="process-math">\(P_5(x) =\)</span> <span class="fillin underline" role="img" aria-label="45-character blank" style="width: 20.4545454545455em;"></span>
+</div> <div class="para" id="extracted-webwork-8-1-1-4">For <span class="process-math">\(n=7\text{,}\)</span> <span class="process-math">\(P_7(x) =\)</span> <span class="fillin underline" role="img" aria-label="45-character blank" style="width: 20.4545454545455em;"></span>
+</div>
+<div class="solutions">
+<details id="extracted-webwork-8-1-2" class="answer solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Answer</span><span class="space"> </span><span class="codenumber">1</span><span class="period">.</span></summary><div class="answer solution-like knowl__content"><div class="para" id="extracted-webwork-8-1-2-1"><span class="process-math">\(\frac{5}{2}+\frac{5}{2}x+\frac{5}{2}x^{2}+\frac{5}{2}x^{3}\)</span></div></div></details><details id="extracted-webwork-8-1-3" class="answer solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Answer</span><span class="space"> </span><span class="codenumber">2</span><span class="period">.</span></summary><div class="answer solution-like knowl__content"><div class="para" id="extracted-webwork-8-1-3-1"><span class="process-math">\(\frac{5}{2}+\frac{5}{2}x+\frac{5}{2}x^{2}+\frac{5}{2}x^{3}+\frac{5}{2}x^{4}+\frac{5}{2}x^{5}\)</span></div></div></details><details id="extracted-webwork-8-1-4" class="answer solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Answer</span><span class="space"> </span><span class="codenumber">3</span><span class="period">.</span></summary><div class="answer solution-like knowl__content"><div class="para" id="extracted-webwork-8-1-4-1"><span class="process-math">\(\frac{5}{2}+\frac{5}{2}x+\frac{5}{2}x^{2}+\frac{5}{2}x^{3}+\frac{5}{2}x^{4}+\frac{5}{2}x^{5}+\frac{5}{2}x^{6}+\frac{5}{2}x^{7}\)</span></div></div></details><details id="extracted-webwork-8-1-5" class="solution solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Solution</span><span class="period">.</span></summary><div class="solution solution-like knowl__content">
+<span class="process-math">\(f(x) = \frac{5}{2-2x}\text{.}\)</span><span class="process-math">\(f(0)=\text{,}\)</span><div class="tabular-box natural-width"><table class="tabular">
+<tr>
+<td class="l m b2 r2 l2 t2 lines"><span class="process-math">\(f'(x) = \frac{5\cdot 2}{\left(2-2x\right)^{2}}\)</span></td>
+<td class="l m b2 r2 l0 t2 lines"><span class="process-math">\(f'(0) = \frac{5}{2}\)</span></td>
+</tr>
+<tr>
+<td class="l m b2 r2 l2 t0 lines"><span class="process-math">\(f''(x) = \frac{2\cdot 5\cdot 2^{2}}{\left(2-2x\right)^{3}}\)</span></td>
+<td class="l m b2 r2 l0 t0 lines"><span class="process-math">\(f''(0) = \frac{2\cdot 5}{2}\)</span></td>
+</tr>
+<tr>
+<td class="l m b2 r2 l2 t0 lines"><span class="process-math">\(f'''(x) = \frac{3!\cdot 5\cdot 2^{3}}{\left(2-2x\right)^{4}}\)</span></td>
+<td class="l m b2 r2 l0 t0 lines"><span class="process-math">\(f'''(0) = \frac{3!\cdot 5}{2}\)</span></td>
+</tr>
+<tr>
+<td class="l m b2 r2 l2 t0 lines"><span class="process-math">\(f^{(4)}(x) = \frac{4!\cdot 5\cdot 2^{4}}{\left(2-2x\right)^{5}}\)</span></td>
+<td class="l m b2 r2 l0 t0 lines"><span class="process-math">\(f^{(4)}(0) = \frac{4!\cdot 5}{2}\)</span></td>
+</tr>
+<tr>
+<td class="l m b2 r2 l2 t0 lines"><span class="process-math">\(f^{(5)}(x) = \frac{5!\cdot 5\cdot 2^{5}}{\left(2-2x\right)^{6}}\)</span></td>
+<td class="l m b2 r2 l0 t0 lines"><span class="process-math">\(f^{(5)}(0) = \frac{5!\cdot 5}{2}\)</span></td>
+</tr>
+<tr>
+<td class="l m b2 r2 l2 t0 lines"><span class="process-math">\(f^{(6)}(x) = \frac{6!\cdot 5\cdot 2^{6}}{\left(2-2x\right)^{7}}\)</span></td>
+<td class="l m b2 r2 l0 t0 lines"><span class="process-math">\(f^{(6)}(0) = \frac{6!\cdot 5}{2}\)</span></td>
+</tr>
+<tr>
+<td class="l m b2 r2 l2 t0 lines"><span class="process-math">\(f^{(7)}(x) = \frac{7!\cdot 5\cdot 2^{7}}{\left(2-2x\right)^{8}}\)</span></td>
+<td class="l m b2 r2 l0 t0 lines"><span class="process-math">\(f^{(7)}(0) = \frac{7!\cdot 5}{2}\)</span></td>
+</tr>
+</table></div>
+<span class="process-math">\(P_3(x) = \frac{5}{2}+\frac{5}{2}x+\frac{5}{2}x^{2}+\frac{5}{2}x^{3}\text{,}\)</span><span class="process-math">\(P_5(x) = \frac{5}{2}+\frac{5}{2}x+\frac{5}{2}x^{2}+\frac{5}{2}x^{3}+\frac{5}{2}x^{4}+\frac{5}{2}x^{5}\text{,}\)</span><span class="process-math">\(P_7(x) = \frac{5}{2}+\frac{5}{2}x+\frac{5}{2}x^{2}+\frac{5}{2}x^{3}+\frac{5}{2}x^{4}+\frac{5}{2}x^{5}+\frac{5}{2}x^{6}+\frac{5}{2}x^{7}\text{.}\)</span>
+</div></details>
+</div>
+</div>
+</div></article><article class="exercise exercise-like" id="ez-taylor_polynomials_1var-3"><h4 class="heading">
+<span class="codenumber">4<span class="period">.</span></span><span class="space"> </span><span class="title">Finding a Taylor Polynomial near a Nonzero Value for a Trigonometric Function.</span>
+</h4>
+<div id="webwork-9" class="exercise-wrapper" data-domain="https://webwork-ptx.aimath.org" data-seed="9" data-localize-correct="Correct" data-localize-incorrect="Incorrect" data-localize-blank="Blank" data-localize-submit="Submit" data-localize-check-responses="Check Responses" data-localize-reveal="Reveal" data-localize-randomize="Randomize" data-localize-reset="Reset" data-localize-hint="Hint" data-localize-solution="Solution" data-sourceFilePath="Library/Michigan/Chap10Sec1/Q13.pg" data-courseID="anonymous" data-userID="anonymous" data-coursePassword="anonymous" aria-live="polite">
+<div class="problem-buttons"><button class="webwork-button" onclick="handleWW('webwork-9')">Activate</button></div>
+<div class="problem-contents">
+<div class="para" id="extracted-webwork-9-1-1-1">Find the Taylor polynomial of degree <span class="process-math">\(n = 4\)</span> for <span class="process-math">\(x\)</span> near the point <span class="process-math">\(a = \frac{\pi }{8}\)</span> for the function <span class="process-math">\(\sin\!\left(4x\right)\text{.}\)</span>
+</div> <div class="para" id="extracted-webwork-9-1-1-2">
+<span class="process-math">\(P_{4}(x) =\)</span> <span class="fillin underline" role="img" aria-label="45-character blank" style="width: 20.4545454545455em;"></span>
+</div>
+<div class="solutions">
+<details id="extracted-webwork-9-1-2" class="answer solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Answer</span><span class="period">.</span></summary><div class="answer solution-like knowl__content"><div class="para" id="extracted-webwork-9-1-2-1"><span class="process-math">\(1+\frac{-4^{2}}{2}\!\left(x-\frac{\pi }{8}\right)^{2}+\frac{4^{4}}{24}\!\left(x-\frac{\pi }{8}\right)^{4}\)</span></div></div></details><details id="extracted-webwork-9-1-3" class="solution solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Solution</span><span class="period">.</span></summary><div class="solution solution-like knowl__content">
+<span class="process-math">\(f(x)= \sin\!\left(4x\right)\text{.}\)</span><span class="process-math">\(f(\frac{\pi }{8}) = 1\text{,}\)</span><div class="tabular-box natural-width"><table class="tabular">
+<tr>
+<td class="l m b2 r2 l2 t2 lines"><span class="process-math">\(f'(x) = 4\cos\!\left(4x\right)\)</span></td>
+<td class="l m b2 r2 l0 t2 lines"><span class="process-math">\(f'(\frac{\pi }{8}) = 0\)</span></td>
+</tr>
+<tr>
+<td class="l m b2 r2 l2 t0 lines"><span class="process-math">\(f''(x) = -16\sin\!\left(4x\right)\)</span></td>
+<td class="l m b2 r2 l0 t0 lines"><span class="process-math">\(f'''(\frac{\pi }{8}) = -4^{2}\)</span></td>
+</tr>
+<tr>
+<td class="l m b2 r2 l2 t0 lines"><span class="process-math">\(f'''(x) = -64\cos\!\left(4x\right)\)</span></td>
+<td class="l m b2 r2 l0 t0 lines"><span class="process-math">\(f'''(\frac{\pi }{8}) = 0\)</span></td>
+</tr>
+<tr>
+<td class="l m b2 r2 l2 t0 lines"><span class="process-math">\(f''''(x) = 256\sin\!\left(4x\right)\)</span></td>
+<td class="l m b2 r2 l0 t0 lines"><span class="process-math">\(f''''(\frac{\pi }{8}) = 4^{4}\)</span></td>
+</tr>
+</table></div>
+<span class="process-math">\(P_4(x) = 1+\frac{-4^{2}}{2}\!\left(x-\frac{\pi }{8}\right)^{2}+\frac{4^{4}}{24}\!\left(x-\frac{\pi }{8}\right)^{4}\text{.}\)</span>
+</div></details>
+</div>
+</div>
+</div></article><article class="exercise exercise-like" id="ez-taylor_polynomials_1var-4"><h4 class="heading">
+<span class="codenumber">5<span class="period">.</span></span><span class="space"> </span><span class="title">Taylor Polynomial Coefficients.</span>
+</h4>
+<div id="webwork-10" class="exercise-wrapper" data-domain="https://webwork-ptx.aimath.org" data-seed="10" data-localize-correct="Correct" data-localize-incorrect="Incorrect" data-localize-blank="Blank" data-localize-submit="Submit" data-localize-check-responses="Check Responses" data-localize-reveal="Reveal" data-localize-randomize="Randomize" data-localize-reset="Reset" data-localize-hint="Hint" data-localize-solution="Solution" data-sourceFilePath="Library/Michigan/Chap10Sec1/Q17.pg" data-courseID="anonymous" data-userID="anonymous" data-coursePassword="anonymous" aria-live="polite">
+<div class="problem-buttons"><button class="webwork-button" onclick="handleWW('webwork-10')">Activate</button></div>
+<div class="problem-contents">
+<div class="para" id="extracted-webwork-10-1-1-1">Suppose that <span class="process-math">\(P_2(x)=a+bx+cx^2\)</span> is the second degree Taylor polynomial for the function <span class="process-math">\(f\)</span> about <span class="process-math">\(x=0\text{.}\)</span> What can you say about the signs of <span class="process-math">\(a\text{,}\)</span> <span class="process-math">\(b\text{,}\)</span> <span class="process-math">\(c\)</span> if <span class="process-math">\(f\)</span> has the graph given below?</div> <div class="image-box" style="width: 25%; margin-left: 37.5%; margin-right: 37.5%;"><img src="generated/webwork/images/webwork-10-image-1.png" class="contained"></div> <div class="para" id="extracted-webwork-10-1-1-3"><em class="emphasis">(For each, enter <span class="process-math">\(+\)</span> if the term is positive, and <span class="process-math">\(-\)</span> if it is negative.  Note that because this is essentially multiple choice problem it will not show which parts of your answer are correct or incorrect.)</em></div> <div class="para" id="extracted-webwork-10-1-1-4">
+<span class="process-math">\(a\)</span> is <span class="fillin underline" role="img" aria-label="3-character blank" style="width: 1.363636363636364em;"></span>
+</div> <div class="para" id="extracted-webwork-10-1-1-5">
+<span class="process-math">\(b\)</span> is <span class="fillin underline" role="img" aria-label="3-character blank" style="width: 1.363636363636364em;"></span>
+</div> <div class="para" id="extracted-webwork-10-1-1-6">
+<span class="process-math">\(c\)</span> is <span class="fillin underline" role="img" aria-label="3-character blank" style="width: 1.363636363636364em;"></span>
+</div>
+<div class="solutions">
+<details id="extracted-webwork-10-1-2" class="answer solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Answer</span><span class="space"> </span><span class="codenumber">1</span><span class="period">.</span></summary><div class="answer solution-like knowl__content"><div class="para" id="extracted-webwork-10-1-2-1"><span class="process-math">\(\text{+}\)</span></div></div></details><details id="extracted-webwork-10-1-3" class="answer solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Answer</span><span class="space"> </span><span class="codenumber">2</span><span class="period">.</span></summary><div class="answer solution-like knowl__content"><div class="para" id="extracted-webwork-10-1-3-1"><span class="process-math">\(\text{+}\)</span></div></div></details><details id="extracted-webwork-10-1-4" class="answer solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Answer</span><span class="space"> </span><span class="codenumber">3</span><span class="period">.</span></summary><div class="answer solution-like knowl__content"><div class="para" id="extracted-webwork-10-1-4-1"><span class="process-math">\(\text{-}\)</span></div></div></details><details id="extracted-webwork-10-1-5" class="solution solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Solution</span><span class="period">.</span></summary><div class="solution solution-like knowl__content">
+<span class="process-math">\(P_2(x)\)</span><span class="process-math">\(f(x)\)</span><span class="process-math">\(x=0\text{,}\)</span><span class="process-math">\(P_2(0)=f(0)\text{,}\)</span><span class="process-math">\(a=f(0)\text{.}\)</span><span class="process-math">\(\frac{d}{dx}P_2(x) \big|_{x=0} = f'(0)\text{,}\)</span><span class="process-math">\(b=f'(0)\text{;}\)</span><span class="process-math">\(\frac{d^2}{dx^2} P_2(x) \big|_{x=0} = f''(0)\text{,}\)</span><span class="process-math">\(2c=f''(0)\text{.}\)</span><span class="process-math">\(a\)</span><span class="process-math">\(y\)</span><span class="process-math">\(f(x)\text{,}\)</span><span class="process-math">\(b\)</span><span class="process-math">\(f(x)\)</span><span class="process-math">\(x=0\)</span><span class="process-math">\(c\)</span><span class="process-math">\(f(x)\)</span><span class="process-math">\(x=0\text{.}\)</span><span class="process-math">\(a &gt; 0\text{;}\)</span><span class="process-math">\(b &gt; 0\text{;}\)</span><span class="process-math">\(c \lt  0\)</span>
+</div></details>
+</div>
+</div>
+</div></article><article class="exercise exercise-like" id="ez-taylor_polynomials_1var-5"><h4 class="heading">
+<span class="codenumber">6<span class="period">.</span></span><span class="space"> </span><span class="title">Taylor Polynomial Coefficients II.</span>
+</h4>
+<div id="webwork-11" class="exercise-wrapper" data-domain="https://webwork-ptx.aimath.org" data-seed="11" data-localize-correct="Correct" data-localize-incorrect="Incorrect" data-localize-blank="Blank" data-localize-submit="Submit" data-localize-check-responses="Check Responses" data-localize-reveal="Reveal" data-localize-randomize="Randomize" data-localize-reset="Reset" data-localize-hint="Hint" data-localize-solution="Solution" data-sourceFilePath="Library/Michigan/Chap10Sec1/Q21.pg" data-courseID="anonymous" data-userID="anonymous" data-coursePassword="anonymous" aria-live="polite">
+<div class="problem-buttons"><button class="webwork-button" onclick="handleWW('webwork-11')">Activate</button></div>
+<div class="problem-contents">
+<div class="para" id="extracted-webwork-11-1-1-1">The function <span class="process-math">\(f(x)\)</span> is approximated near <span class="process-math">\(x=0\)</span> by the second degree Taylor polynomial <span class="process-math">\(P_2(x) = -\left(3+3x+2x^{2}\right)\text{.}\)</span>
+</div> <div class="para" id="extracted-webwork-11-1-1-2">Give values:</div> <div class="para" id="extracted-webwork-11-1-1-3">
+<span class="process-math">\(f(0) =\)</span> <span class="fillin underline" role="img" aria-label="15-character blank" style="width: 6.818181818181818em;"></span>
+</div> <div class="para" id="extracted-webwork-11-1-1-4">
+<span class="process-math">\(f'(0) =\)</span> <span class="fillin underline" role="img" aria-label="15-character blank" style="width: 6.818181818181818em;"></span>
+</div> <div class="para" id="extracted-webwork-11-1-1-5">
+<span class="process-math">\(f''(0) =\)</span> <span class="fillin underline" role="img" aria-label="15-character blank" style="width: 6.818181818181818em;"></span>
+</div>
+<div class="solutions">
+<details id="extracted-webwork-11-1-2" class="answer solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Answer</span><span class="space"> </span><span class="codenumber">1</span><span class="period">.</span></summary><div class="answer solution-like knowl__content"><div class="para" id="extracted-webwork-11-1-2-1"><span class="process-math">\(-3\)</span></div></div></details><details id="extracted-webwork-11-1-3" class="answer solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Answer</span><span class="space"> </span><span class="codenumber">2</span><span class="period">.</span></summary><div class="answer solution-like knowl__content"><div class="para" id="extracted-webwork-11-1-3-1"><span class="process-math">\(-3\)</span></div></div></details><details id="extracted-webwork-11-1-4" class="answer solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Answer</span><span class="space"> </span><span class="codenumber">3</span><span class="period">.</span></summary><div class="answer solution-like knowl__content"><div class="para" id="extracted-webwork-11-1-4-1"><span class="process-math">\(-4\)</span></div></div></details><details id="extracted-webwork-11-1-5" class="solution solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Solution</span><span class="period">.</span></summary><div class="solution solution-like knowl__content">
+<div class="displaymath process-math">
+\begin{equation*}
+f(x)\approx
+P_2(x)=f(0)+f'(0)x+\frac{f''(0)}{2!}x^2
+\end{equation*}
+</div>
+<span class="process-math">\(P_2(x)\text{,}\)</span><span class="process-math">\(f(0)=\)</span><span class="process-math">\(-3\text{,}\)</span><span class="process-math">\(f(0)=-3\text{.}\)</span><span class="process-math">\(f'(0)=\)</span><span class="process-math">\(x\text{,}\)</span><span class="process-math">\(-3\text{,}\)</span><span class="process-math">\(f'(0)=-3\text{.}\)</span><span class="process-math">\(\frac{f''(0)}{2!}=\)</span><span class="process-math">\(x^2\text{,}\)</span><span class="process-math">\(-2\text{,}\)</span><span class="process-math">\(f''(0)=-4\text{.}\)</span>
+</div></details>
+</div>
+</div>
+</div></article><article class="exercise exercise-like" id="ez-taylor_polynomials_1var-6"><h4 class="heading">
+<span class="codenumber">7<span class="period">.</span></span><span class="space"> </span><span class="title">Approximation using a Taylor Polynomial.</span>
+</h4>
+<div id="webwork-12" class="exercise-wrapper" data-domain="https://webwork-ptx.aimath.org" data-seed="12" data-localize-correct="Correct" data-localize-incorrect="Incorrect" data-localize-blank="Blank" data-localize-submit="Submit" data-localize-check-responses="Check Responses" data-localize-reveal="Reveal" data-localize-randomize="Randomize" data-localize-reset="Reset" data-localize-hint="Hint" data-localize-solution="Solution" data-sourceFilePath="Library/Michigan/Chap10Sec1/Q23.pg" data-courseID="anonymous" data-userID="anonymous" data-coursePassword="anonymous" aria-live="polite">
+<div class="problem-buttons"><button class="webwork-button" onclick="handleWW('webwork-12')">Activate</button></div>
+<div class="problem-contents">
+<div class="para" id="extracted-webwork-12-1-1-1">Suppose <span class="process-math">\(g\)</span> is a function which has continuous derivatives, and that <span class="process-math">\(g(3)=5, g'(3)=3\text{,}\)</span> <span class="process-math">\(g''(3)=4\text{,}\)</span> <span class="process-math">\(g'''(3)=3\text{.}\)</span>
+</div> <div class="para" id="extracted-webwork-12-1-1-2">
+<em class="alert">(a)</em> What is the Taylor polynomial of degree 2 for <span class="process-math">\(g\)</span> near <span class="process-math">\(3\text{?}\)</span>
+</div> <div class="para" id="extracted-webwork-12-1-1-3">
+<span class="process-math">\(P_2(x) =\)</span> <span class="fillin underline" role="img" aria-label="45-character blank" style="width: 20.4545454545455em;"></span>
+</div> <div class="para" id="extracted-webwork-12-1-1-4">
+<em class="alert">(b)</em> What is the Taylor polynomial of degree 3 for <span class="process-math">\(g\)</span> near <span class="process-math">\(3\text{?}\)</span>
+</div> <div class="para" id="extracted-webwork-12-1-1-5">
+<span class="process-math">\(P_3(x) =\)</span> <span class="fillin underline" role="img" aria-label="45-character blank" style="width: 20.4545454545455em;"></span>
+</div> <div class="para" id="extracted-webwork-12-1-1-6">
+<em class="alert">(c)</em> Use the two polynomials that you found in parts (a) and (b) to approximate <span class="process-math">\(g(3.1)\text{.}\)</span>
+</div> <div class="para" id="extracted-webwork-12-1-1-7">With <span class="process-math">\(P_2\text{,}\)</span> <span class="process-math">\(g(3.1)\approx\)</span> <span class="fillin underline" role="img" aria-label="15-character blank" style="width: 6.818181818181818em;"></span>
+</div> <div class="para" id="extracted-webwork-12-1-1-8">With <span class="process-math">\(P_3\text{,}\)</span> <span class="process-math">\(g(3.1)\approx\)</span> <span class="fillin underline" role="img" aria-label="15-character blank" style="width: 6.818181818181818em;"></span>
+</div>
+<div class="solutions">
+<details id="extracted-webwork-12-1-2" class="answer solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Answer</span><span class="space"> </span><span class="codenumber">1</span><span class="period">.</span></summary><div class="answer solution-like knowl__content"><div class="para" id="extracted-webwork-12-1-2-1"><span class="process-math">\(5+3\!\left(x-3\right)+\frac{1}{2!}\cdot 4\!\left(x-3\right)^{2}\)</span></div></div></details><details id="extracted-webwork-12-1-3" class="answer solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Answer</span><span class="space"> </span><span class="codenumber">2</span><span class="period">.</span></summary><div class="answer solution-like knowl__content"><div class="para" id="extracted-webwork-12-1-3-1"><span class="process-math">\(5+3\!\left(x-3\right)+\frac{1}{2!}\cdot 4\!\left(x-3\right)^{2}+\frac{1}{3!}\cdot 3\!\left(x-3\right)^{3}\)</span></div></div></details><details id="extracted-webwork-12-1-4" class="answer solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Answer</span><span class="space"> </span><span class="codenumber">3</span><span class="period">.</span></summary><div class="answer solution-like knowl__content"><div class="para" id="extracted-webwork-12-1-4-1"><span class="process-math">\(5.32\)</span></div></div></details><details id="extracted-webwork-12-1-5" class="answer solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Answer</span><span class="space"> </span><span class="codenumber">4</span><span class="period">.</span></summary><div class="answer solution-like knowl__content"><div class="para" id="extracted-webwork-12-1-5-1"><span class="process-math">\(5.3205\)</span></div></div></details><details id="extracted-webwork-12-1-6" class="solution solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Solution</span><span class="period">.</span></summary><div class="solution solution-like knowl__content">
+<div class="displaymath process-math">
+\begin{equation*}
+g(x) = g(3) + g'(3)(x-3) + \frac{g''(3)}{2!}(x-3)^2
++\frac{g'''(3)}{3!}(x-3)^3+\cdots
+\end{equation*}
+</div>
+<div class="displaymath process-math">
+\begin{equation*}
+g(x) = 5 + 3(x-3) + \frac{4}{2!}(x-3)^2
++\frac{3}{3!}(x-3)^3+\cdots
+\end{equation*}
+</div>
+<em class="alert">(a)</em><span class="process-math">\(P_2 (x)\text{,}\)</span><span class="process-math">\((x-3)^2\)</span><div class="displaymath process-math">
+\begin{equation*}
+P_2(x) = 5+3\!\left(x-3\right)+\frac{1}{2!}\cdot 4\!\left(x-3\right)^{2}.
+\end{equation*}
+</div>
+<em class="alert">(b)</em><span class="process-math">\(P_3 (x)\text{,}\)</span><span class="process-math">\((x-3)^3\)</span><div class="displaymath process-math">
+\begin{equation*}
+P_3 (x) = 5+3\!\left(x-3\right)+\frac{1}{2!}\cdot 4\!\left(x-3\right)^{2}+\frac{1}{3!}\cdot 3\!\left(x-3\right)^{3}
+\end{equation*}
+</div>
+<em class="alert">(c)</em><span class="process-math">\(x=3.1\)</span><div class="displaymath process-math">
+\begin{equation*}
+P_2(4.9) = 5+3\!\left(3.1-3\right)+\frac{1}{2!}\cdot 4\!\left(3.1-3\right)^{2} = 5.32.
+\end{equation*}
+</div>
+<div class="displaymath process-math">
+\begin{equation*}
+P_3(4.9) = 5+3\!\left(3.1-3\right)+\frac{1}{2!}\cdot 4\!\left(3.1-3\right)^{2}+\frac{1}{3!}\cdot 3\!\left(3.1-3\right)^{3} = 5.3205.
+\end{equation*}
+</div>
+</div></details>
+</div>
+</div>
+</div></article><article class="exercise exercise-like" id="ez-wind-at-MSP"><h4 class="heading">
+<span class="codenumber">8<span class="period">.</span></span><span class="space"> </span><span class="title">Interpolating Wind at MSP.</span>
+</h4>
+<div class="para" id="ez-wind-at-MSP-2-1">Wind observations for Minneapolis appear in <a href="sec_taylor_polynomials_1var.html#MSPObservationsMar17" class="xref" data-knowl="./knowl/xref/MSPObservationsMar17.html" data-reveal-label="Reveal" data-close-label="Close" title="Figure 7.1.11">Figure 7.1.11</a>.  The northward wind <span class="process-math">\(v\)</span> is such that <span class="process-math">\(v\)</span>(16:53) = -18 mph.</div> <figure class="figure figure-like" id="MSPObservationsMar17"><div class="image-box" style="width: 75%; margin-left: 12.5%; margin-right: 12.5%;"><img src="external/MSPObsMar172024.jpg" class="contained" alt="Wind Observations near Minneapolis MN on March 17, 2024."></div>
+<figcaption><span class="type">Figure</span><span class="space"> </span><span class="codenumber">7.1.11<span class="period">.</span></span><span class="space"> </span>Observations at the Minneapolis, MN airport on March 17, 2024.</figcaption></figure> <ol class="lower-alpha" id="ez-wind-at-MSP-2-3">
+<li id="ez-wind-at-MSP-2-3-1"><div class="para" id="ez-wind-at-MSP-2-3-1-1">Estimate <span class="process-math">\(\frac{dv}{dt}\)</span> at time 16:53 using a central difference.  Be sure to include units.</div></li>
+<li id="ez-wind-at-MSP-2-3-2"><div class="para" id="ez-wind-at-MSP-2-3-2-1">Estimate <span class="process-math">\(\frac{dv}{dt}\)</span> at time 17:53 using a central difference.</div></li>
+<li id="ez-wind-at-MSP-2-3-3"><div class="para" id="ez-wind-at-MSP-2-3-3-1">Estimate <span class="process-math">\(\frac{dv}{dt}\)</span> at time 15:53 using a central difference.</div></li>
+<li id="ez-wind-at-MSP-2-3-4"><div class="para" id="ez-wind-at-MSP-2-3-4-1">Using your results from (a) and (b), estimate <span class="process-math">\(\frac{d^2v}{dt^2}\)</span> at time 16:53 using a central difference.</div></li>
+<li id="ez-wind-at-MSP-2-3-5"><div class="para" id="ez-wind-at-MSP-2-3-5-1">Suppose that <span class="process-math">\(t\)</span> represents the number of hours since 16:53.  Construct a second degree Taylor polynomial <span class="process-math">\(v(t)\)</span> modeling the speed of the northward wind near time 16:53 (i.e. <span class="process-math">\(t=0\)</span>).  Your polynomial will have the form <span class="process-math">\(v(t) = a_0 + a_1t + a_2t^2\text{.}\)</span>  Hint: Use the results from (a) and (d).</div></li>
+</ol>
+<div class="solutions"><details id="ez-wind-at-MSP-3" class="answer solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Answer</span><span class="period">.</span></summary><div class="answer solution-like knowl__content"><ol class="lower-alpha" id="ez-wind-at-MSP-3-1">
+<li id="ez-wind-at-MSP-3-1-1"><div class="para" id="ez-wind-at-MSP-3-1-1-1"><span class="process-math">\(\displaystyle \frac{dv}{dt} \approx \frac{\Delta v}{\Delta t} = \frac{-18-(-20) \ {\rm{mph}} }{2 \ {\rm{hr}} } = 1 \ \frac{\rm{mph}}{\rm{hr}}\)</span></div></li>
+<li id="ez-wind-at-MSP-3-1-2"><div class="para" id="ez-wind-at-MSP-3-1-2-1"><span class="process-math">\(\displaystyle \frac{dv}{dt} \approx \frac{-16-(-18) \ {\rm{mph}} }{2 \ {\rm{hr}} } = 1 \ \frac{\rm{mph}}{\rm{hr}}\)</span></div></li>
+<li id="ez-wind-at-MSP-3-1-3"><div class="para" id="ez-wind-at-MSP-3-1-3-1"><span class="process-math">\(\displaystyle \frac{dv}{dt} \approx \frac{-18-(-22) \ {\rm{mph}} }{2 \ {\rm{hr}} } = 2 \ \frac{\rm{mph}}{\rm{hr}}\)</span></div></li>
+<li id="ez-wind-at-MSP-3-1-4"><div class="para" id="ez-wind-at-MSP-3-1-4-1"><span class="process-math">\(\displaystyle \frac{d^2v}{dt^2} \approx \frac{\Delta(dv/dt)}{\Delta t} \approx \frac{1 \ \frac{\rm{mph}}{\rm{hr}} -2 \ \frac{\rm{mph}}{\rm{hr}} }{2 \ {\rm{hr}} } = -0.5 \ \frac{ \frac{\rm{mph}}{\rm{hr}}}{\rm{hr}}\)</span></div></li>
+<li id="ez-wind-at-MSP-3-1-5"><div class="para" id="ez-wind-at-MSP-3-1-5-1"><span class="process-math">\(\displaystyle v(t) = -18 + t - 0.25t^2\)</span></div></li>
+</ol></div></details></div></article></section></section></div>
+<div class="ptx-content-footer">
+<a class="previous-button button" href="ch_taylor_polynomials.html" title="Previous"><span xmlns:pf="https://prefigure.org" class="icon material-symbols-outlined" aria-hidden="true">&#xe5cb;</span><span class="name">Prev</span></a><a class="top-button button" href="#" title="Top"><span xmlns:pf="https://prefigure.org" class="icon material-symbols-outlined" aria-hidden="true">&#xe5ce;</span><span class="name">Top</span></a><a class="next-button button" href="sec_taylor_polynomials_2var.html" title="Next"><span class="name">Next</span><span xmlns:pf="https://prefigure.org" class="icon material-symbols-outlined" aria-hidden="true">&#xe5cc;</span></a>
+</div></main>
+</div>
+<div id="ptx-page-footer" class="ptx-page-footer">
+<a xmlns:pf="https://prefigure.org" class="pretext-link" href="https://pretextbook.org" title="PreTeXt"><div class="logo"><svg xmlns="http://www.w3.org/2000/svg" width="100%" height="100%" viewBox="338 3000 8772 6866"><g style="stroke-width:.025in; stroke:black; fill:none"><polyline points="472,3590 472,9732 " style="stroke:#000000;stroke-width:174; stroke-linejoin:miter; stroke-linecap:round; "></polyline><path style="stroke:#000000;stroke-width:126;stroke-linecap:butt;" d="M 4724,9448 A 4660 4660  0  0  1  8598  9259"></path><path style="stroke:#000000;stroke-width:174;stroke-linecap:butt;" d="M 4488,9685 A 4228 4228  0  0  0   472  9732"></path><path style="stroke:#000000;stroke-width:126;stroke-linecap:butt;" d="M 4724,3590 A 4241 4241  0  0  1  8598  3496"></path><path style="stroke:#000000;stroke-width:126;stroke-linecap:round;" d="M 850,3496  A 4241 4241  0  0  1  4724  3590"></path><path style="stroke:#000000;stroke-width:126;stroke-linecap:round;" d="M 850,9259  A 4507 4507  0  0  1  4724  9448"></path><polyline points="5385,4299 4062,8125" style="stroke:#000000;stroke-width:300; stroke-linejoin:miter; stroke-linecap:round;"></polyline><polyline points="8598,3496 8598,9259" style="stroke:#000000;stroke-width:126; stroke-linejoin:miter; stroke-linecap:round;"></polyline><polyline points="850,3496 850,9259" style="stroke:#000000;stroke-width:126; stroke-linejoin:miter; stroke-linecap:round;"></polyline><polyline points="4960,9685 4488,9685" style="stroke:#000000;stroke-width:174; stroke-linejoin:miter; stroke-linecap:round;"></polyline><polyline points="3070,4582 1889,6141 3070,7700" style="stroke:#000000;stroke-width:300; stroke-linejoin:miter; stroke-linecap:round;"></polyline><polyline points="6418,4582 7600,6141 6418,7700" style="stroke:#000000;stroke-width:300; stroke-linejoin:miter; stroke-linecap:round;"></polyline><polyline points="8976,3590 8976,9732" style="stroke:#000000;stroke-width:174; stroke-linejoin:miter; stroke-linecap:round;"></polyline><path style="stroke:#000000;stroke-width:174;stroke-linecap:butt;" d="M 4960,9685 A 4228 4228  0  0  1  8976  9732"></path></g></svg></div></a><a xmlns:pf="https://prefigure.org" class="runestone-link" href="https://runestone.academy" title="Runestone Academy"><img class="logo" src="https://runestone.academy/runestone/static/images/RAIcon_cropped.png"></a><a xmlns:pf="https://prefigure.org" class="mathjax-link" href="https://www.mathjax.org" title="MathJax"><img class="logo" src="https://www.mathjax.org/badge/badge-square-2.png"></a>
+</div>
+</body>
+</html>

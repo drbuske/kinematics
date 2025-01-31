@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en-US">
+<!--********************************************-->
+<!--*       Generated from PreTeXt source      *-->
+<!--*                                          *-->
+<!--*         https://pretextbook.org          *-->
+<!--*                                          *-->
+<!--********************************************-->
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<meta name="robots" content="noindex, nofollow">
+</head>
+<body class="ignore-math">
+<article class="example example-like"><h4 class="heading">
+<span class="type">Example</span><span class="space"> </span><span class="codenumber">3.1.22</span><span class="period">.</span><span class="space"> </span><span class="title">Old Wind Chill Index Formula.</span>
+</h4> Models for the wind chill index have evolved over time.  Until the 1970s, the coldest parts of Canada reported the original wind chill index, a three or four digit number with units of kilocalories/hour per square meter. Each individual calibrated the scale of numbers personally, through experience. The chart also provided general guidance to comfort and hazard through threshold values of the index, such as 1400, which was the threshold for frostbite.  The original formula for the index was<div class="displaymath process-math">
+\begin{equation*}
+C(w,T) = (10\sqrt{w}-w+10.5)(33-T)
+\end{equation*}
+</div>where <span class="process-math">\(C\)</span> was the wind chill index, <span class="process-math">\(w\)</span> was the wind velocity (in <span class="process-math">\(m/s\)</span>), and <span class="process-math">\(T\)</span> was the air temperature (in <span class="process-math">\(^{\circ}C\)</span>). Using this model, <span class="process-math">\(\frac{\partial C}{\partial T}\)</span> can be found by holding <span class="process-math">\(w\)</span> constant and differentiating <span class="process-math">\(C\)</span> with respect to <span class="process-math">\(T\text{.}\)</span>  This gives<div class="displaymath process-math">
+\begin{equation*}
+\displaystyle \frac{\partial C}{\partial T} = -(10\sqrt{w} - w + 10.5).
+\end{equation*}
+</div>For example, <span class="process-math">\(C(10,-5) \approx 1220\)</span> (not quite frostbite threshold) and <span class="process-math">\(\frac{\partial C}{\partial T}(10,-5) = -(10\sqrt{10} - 10 + 10.5) \approx -32.1\text{.}\)</span>  This tells us that when the wind velocity is <span class="process-math">\(w=10\)</span> m/s and the air temperature is <span class="process-math">\(T=-5^{\circ}C\text{,}\)</span> the rate at which the wind chill index is changing from 1220 kilocalories/hour per square meter is -32.1 (kilocalories/hour per square meter per degree Celsius).  Simply put, if wind remained at <span class="process-math">\(w=10\)</span> m/s but the air temperature warmed to <span class="process-math">\(T=-4^{\circ}C\text{,}\)</span> we could expect the wind chill index to be roughly 1187.9 (even less worry of frostbite).</article><span class="incontext"><a href="sec_partial_differentiation.html#oldwindchillindex" class="internal">in-context</a></span>
+</body>
+</html>

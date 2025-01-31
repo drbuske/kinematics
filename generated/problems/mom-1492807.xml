@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8"?>
+<myopenmath xmlns:pi="http://pretextbook.org/2020/pretext/internal" id="1492807">
+<statement>
+<p>Each graph below shows the xy-plane as part of 3-space, together with two vectors.</p>
+<p><em>Part 1</em>: Shown below are solid blue vector <m>\displaystyle\vec{{{w}}}</m> and dashed red vector <m>\displaystyle\vec{{{u}}}</m>, both drawn on the xy-plane. Decide if the cross product <m>\displaystyle\vec{{{u}}}\times\vec{{{w}}}</m> points into the screen, out of the screen, or if it is the zero vector.</p><p style="text-align:center"></p><image width="50%"  pi:generated="problems/images/3aaa31c2227c234e1b45ee045eb10cab.png" /> <p><ol style="list-style-type:upper-alpha"><li>Out of the screen</li> 
+<li>Into the screen</li> 
+<li>Neither: It is the zero vector</li> 
+</ol></p>
+<p><em>Part 2</em>: Shown below are dashed red vector <m>\displaystyle\vec{{{u}}}</m> and solid blue vector <m>\displaystyle\vec{{{w}}}</m>, both drawn on the xy-plane. Decide if the cross product <m>\displaystyle\vec{{{u}}}\times\vec{{{w}}}</m> points into the screen, out of the screen, or if it is the zero vector.</p><p style="text-align:center"></p><image width="50%"  pi:generated="problems/images/fb0a76aba0e71d348babb38d2a24e6b5.png" /> <p><ol style="list-style-type:upper-alpha"><li>Out of the screen</li> 
+<li>Into the screen</li> 
+<li>Neither: It is the zero vector</li> 
+</ol></p>
+<p><em>Part 3</em>: Shown below are dashed blue vector <m>\displaystyle\vec{{{u}}}</m> and solid red vector <m>\displaystyle\vec{{{w}}}</m>, both drawn on the xy-plane. Decide if the cross product <m>\displaystyle\vec{{{u}}}\times\vec{{{w}}}</m> points into the screen, out of the screen, or if it is the zero vector.</p><p style="text-align:center"></p><image width="50%"  pi:generated="problems/images/cd49fcf61ba5340085ca1e45f3ecdb28.png" /> <p><ol style="list-style-type:upper-alpha"><li>Out of the screen</li> 
+<li>Into the screen</li> 
+<li>Neither: It is the zero vector</li> 
+</ol></p>
+<p><em>Part 4</em>: Shown below are dashed red vector <m>\displaystyle\vec{{{w}}}</m> and solid blue vector <m>\displaystyle\vec{{{u}}}</m>, both drawn on the xy-plane. Decide if the cross product <m>\displaystyle\vec{{{u}}}\times\vec{{{w}}}</m> points into the screen, out of the screen, or if it is the zero vector.</p><p style="text-align:center"></p><image width="50%"  pi:generated="problems/images/2c4965da7413ed0958285d7a51b24c76.png" /> <p><ol style="list-style-type:upper-alpha"><li>Out of the screen</li> 
+<li>Into the screen</li> 
+<li>Neither: It is the zero vector</li> 
+</ol></p>
+<p><em>Part 5</em>: Shown below are dashed red vector <m>\displaystyle\vec{{{w}}}</m> and solid blue vector <m>\displaystyle\vec{{{u}}}</m>, both drawn on the xy-plane. Decide if the cross product <m>\displaystyle\vec{{{u}}}\times\vec{{{w}}}</m> points into the screen, out of the screen, or if it is the zero vector.</p><p style="text-align:center"></p><image width="50%"  pi:generated="problems/images/22427a605655d0e817e398cb5654cd79.png" /> <p><ol style="list-style-type:upper-alpha"><li>Out of the screen</li> 
+<li>Into the screen</li> 
+<li>Neither: It is the zero vector</li> 
+</ol></p>
+
+
+</statement>
+<solution>
+<p><ul><li>B: Into the screen</li><li>B: Into the screen</li><li>A: Out of the screen</li><li>A: Out of the screen</li><li>B: Into the screen</li></ul></p>
+</solution>
+</myopenmath>
+

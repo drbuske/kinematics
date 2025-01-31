@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<myopenmath xmlns:pi="http://pretextbook.org/2020/pretext/internal" id="1212280">
+<statement>
+<p>
+Consider a lake whose center is located at <m>\displaystyle{\left({0},{0}\right)}</m>.  Let <m>\displaystyle{f{{\left({x},{y}\right)}}}</m> be a function that determines the amount of pollutant in a lake at point <m>\displaystyle{\left({x},{y}\right)}</m>, which is located  <m>\displaystyle{x}</m> meters east and <m>\displaystyle{y}</m> meters north of the center of the lake. </p>
+<p>
+Choose the best interpretation for <m>\displaystyle\nabla{f{{\left({0},{0}\right)}}}</m> concerning the center of the lake.</p>
+<p><ol style="list-style-type:upper-alpha"><li>It indicates the direction in which the pollution decreases the fastest.</li> 
+<li>It indicates the direction in which pollution is constant.</li> 
+<li>It indicates how polluted the lake is at the center.</li> 
+<li>It is the rate of change of the pollution.</li> 
+<li>It indicates the direction in which pollution increases the fastest.</li> 
+</ol></p>
+
+
+</statement>
+<solution>
+<p><ul><li>E: It indicates the direction in which pollution increases the fastest.</li></ul></p>
+</solution>
+</myopenmath>
+

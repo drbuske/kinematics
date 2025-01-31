@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<myopenmath xmlns:pi="http://pretextbook.org/2020/pretext/internal" id="471677">
+<statement>
+<p>
+Performing the operation <m>\displaystyle\vec{{{u}}}\cdot{\left(\vec{{{v}}}\times\vec{{{w}}}\right)}</m> results in</p>
+<p><ol style="list-style-type:upper-alpha"><li>a vector</li> 
+<li>a scalar</li> 
+<li>does not make sense!</li> 
+</ol></p>
+
+
+</statement>
+<solution>
+<p><ul><li>B: a scalar</li></ul></p>
+</solution>
+</myopenmath>
+

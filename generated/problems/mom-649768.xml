@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<myopenmath xmlns:pi="http://pretextbook.org/2020/pretext/internal" id="649768">
+<statement>
+<p>
+Find the curl of the vector field <m>\displaystyle\vec{{{F}}}={y}{x}^{{5}}\vec{{{i}}}+{x}{z}^{{6}}\vec{{{j}}}+{z}{y}^{{4}}\vec{{{k}}}</m>.</p>
+<p>
+<m>\displaystyle\text{curl}\ \vec{{{F}}}</m> = <fillin characters="12" />  
+ <m>\displaystyle\vec{{i}}</m> + <fillin characters="12" />  
+ <m>\displaystyle\vec{{j}}</m> + <fillin characters="12" />  
+ <m>\displaystyle\vec{{k}}</m>
+</p>
+</statement>
+<solution>
+<p><ul><li><m>\displaystyle{4}{z}{y}^{{3}}-{6}{x}{z}^{{5}}</m></li><li><m>\displaystyle{0}</m></li><li><m>\displaystyle{z}^{{6}}-{x}^{{5}}</m></li></ul></p>
+</solution>
+</myopenmath>
+

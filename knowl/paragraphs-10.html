@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en-US">
+<!--********************************************-->
+<!--*       Generated from PreTeXt source      *-->
+<!--*                                          *-->
+<!--*         https://pretextbook.org          *-->
+<!--*                                          *-->
+<!--********************************************-->
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<meta name="robots" content="noindex, nofollow">
+</head>
+<body class="ignore-math">
+<section class="paragraphs"><h3 class="heading"><span class="title">Defining the Cross Product Geometrically.</span></h3> <div class="para">We have previously seen how to combine two vectors to get a number (the dot product) that tells us the degree to which two vectors are aligned.  In 3-space, we now combine two vectors in another manner in which the result is a vector that also gives us geometric information about our two original vectors.  To start, we review the area of a parallelogram.</div> <article class="theorem theorem-like"><h4 class="heading">
+<span class="type">Theorem</span><span class="space"> </span><span class="codenumber">2.3.4</span><span class="period">.</span><span class="space"> </span><span class="title">Area of a Parallelogram.</span>
+</h4>
+<div class="para logical">
+<div class="para">The area of a parallelogram formed by vectors <span class="process-math">\(\vec{v}\)</span> and <span class="process-math">\(\vec{w}\)</span> with an angle <span class="process-math">\(\theta\)</span> between them is</div>
+<div class="displaymath process-math">
+\begin{equation*}
+Area = Base \cdot Height = \| \vec{v} \| \| \vec{w} \| \sin\theta.
+\end{equation*}
+</div>
+</div></article> <figure class="figure figure-like"><div class="image-box" style="width: 50%; margin-left: 25%; margin-right: 25%;"><img src="generated/latex-image/crossproductdefn.svg" role="img" class="contained" alt="Area of a Parallelogram."></div>
+<figcaption><span class="type">Figure</span><span class="space"> </span><span class="codenumber">2.3.5<span class="period">.</span></span><span class="space"> </span>Area of a parallelogram determined by <span class="process-math">\(\vec{v}\)</span> and <span class="process-math">\(\vec{w}\text{:}\)</span> <span class="process-math">\(\|\vec{v}\| \|\vec{w} \| \sin\theta\text{.}\)</span></figcaption></figure> <article class="definition definition-like"><h4 class="heading">
+<span class="type">Definition</span><span class="space"> </span><span class="codenumber">2.3.6</span><span class="period">.</span><span class="space"> </span><span class="title">Cross Product.</span>
+</h4> We define the <dfn class="terminology">cross product</dfn>  of vectors <span class="process-math">\(\vec{v}\)</span> and <span class="process-math">\(\vec{w}\text{,}\)</span> denoted <span class="process-math">\(\vec{v} \times \vec{w}\text{,}\)</span> to be <ul class="disc">
+<li><div class="para">[Direction] a vector perpendicular to both <span class="process-math">\({\vec{v}}\)</span> and <span class="process-math">\({\vec{w}}\)</span> and</div></li>
+<li><div class="para">[Magnitude] having length equal to the area of the parallelogram formed by <span class="process-math">\(\vec{v}\)</span> and <span class="process-math">\(\vec{w}\text{.}\)</span>
+</div></li>
+</ul></article> <div class="para">The direction of <span class="process-math">\(\vec{v} \times \vec{w}\)</span> is given by the normal vector to the plane defined by <span class="process-math">\({\vec{v}}\)</span> and <span class="process-math">\({\vec{w}}\text{.}\)</span>  There are two perpendicular vectors to the plane (pointing out of the plane in opposite directions).  We choose <span class="process-math">\(\vec{v} \times \vec{w}\)</span> according to the right-hand rule.  From this definition, you may now see why the cross product can be thought of a directed area.</div> <article class="theorem theorem-like"><h4 class="heading">
+<span class="type">Theorem</span><span class="space"> </span><span class="codenumber">2.3.7</span><span class="period">.</span><span class="space"> </span><span class="title">Geometric Computation of Cross Product.</span>
+</h4>
+<div class="para logical">
+<div class="para">If <span class="process-math">\(\vec{v}\)</span> and <span class="process-math">\(\vec{w}\)</span> are not parallel, then</div>
+<div class="displaymath process-math">
+\begin{align*}
+\vec{v} \times \vec{w} = \mathstrut \amp \left( \begin{array}{c} {\rm{Area \ of \ parallelogram}} \\ {\rm{with \ edges }} \ \vec{v} \ {\rm{and}} \ \vec{w} \end{array} \right) \vec{n} \\
+= \mathstrut \amp \left( \| \vec{v} \| \| \vec{w} \| \sin\theta\right) \vec{n},
+\end{align*}
+</div>
+<div class="para">where <span class="process-math">\(0 \leq \theta \leq 180^{\circ}\)</span> is the angle between <span class="process-math">\(\vec{v}\)</span> and <span class="process-math">\(\vec{w}\)</span> and <span class="process-math">\(\vec{n}\)</span> is the unit vector perpendicular to <span class="process-math">\(\vec{v}\)</span> and <span class="process-math">\(\vec{w}\)</span> in the direction given by the right-hand rule.</div>
+</div></article> <article class="example example-like"><h4 class="heading">
+<span class="type">Example</span><span class="space"> </span><span class="codenumber">2.3.8</span><span class="period">.</span><span class="space"> </span><span class="title">Calculating <span class="process-math">\(\vec{i} \times (\vec{i} + \vec{j})\)</span>.</span>
+</h4> <div class="para logical">
+<div class="para">To calculate <span class="process-math">\(\vec{i} \times (\vec{i} + \vec{j})\text{,}\)</span> we start with sketching both vectors as shown in <a href="" class="xref" data-knowl="./knowl/CrossProductExample1.html" title="Figure 2.3.9">Figure 2.3.9</a>.  Vectors <span class="process-math">\(\vec{i}\)</span> and <span class="process-math">\(\vec{i} + \vec{j}\)</span> form a parallelogram that lives in the <span class="process-math">\(xy\)</span>-plane.  Since <span class="process-math">\(\| \vec{i} \| = 1\)</span> and <span class="process-math">\(\| \vec{i}+\vec{j} \| =\sqrt{2}\text{,}\)</span> and the angle between <span class="process-math">\(\vec{i}\)</span> and <span class="process-math">\(\vec{i} + \vec{j}\)</span> is <span class="process-math">\(45^{\circ}\text{,}\)</span> the area of the parallelogram is</div>
+<div class="displaymath process-math" data-contains-math-knowls="./knowl/CrossProductExample1.html">
+\begin{align*}
+\| \vec{i} \| \cdot \| \vec{i} + \vec{j} \| \cdot \sin 45^{\circ} = \mathstrut \amp 1 \cdot \sqrt{2} \cdot \frac{\sqrt{2}}{2} \\
+= \mathstrut \amp 1.
+\end{align*}
+</div>
+<div class="para">Since the unit vector <span class="process-math">\(\vec{k}\)</span> is a vector perpendicular to both, we have <span class="process-math">\(\vec{i} \times (\vec{i} + \vec{j}) = 1 \cdot \vec{k}\text{.}\)</span>  Note that <span class="process-math">\(-\vec{k}\)</span> is also perpendicular to both <span class="process-math">\(\vec{i}\)</span> and <span class="process-math">\(\vec{i} + \vec{j}\text{.}\)</span>  However, by the right-hand rule, since <span class="process-math">\(\vec{i}\)</span> is being crossed into <span class="process-math">\(\vec{i} + \vec{j}\text{,}\)</span> the cross product will point in the positive <span class="process-math">\(\vec{k}\)</span> direction.  Note though that <span class="process-math">\((\vec{i} + \vec{j}) \times \vec{i} = -\vec{k}\)</span> by the right-hand rule.</div>
+</div> <figure class="figure figure-like"><div class="image-box" style="width: 50%; margin-left: 25%; margin-right: 25%;"><img src="generated/latex-image/CrossProductExample1Pic.svg" role="img" class="contained" alt="Computing a cross product."></div>
+<figcaption><span class="type">Figure</span><span class="space"> </span><span class="codenumber">2.3.9<span class="period">.</span></span><span class="space"> </span><span class="process-math">\(\vec{i} \times (\vec{i} + \vec{j}) = \vec{k}\)</span></figcaption></figure></article> <div class="para">Six fundamental cross product calculations can be remembered with the help of <a href="" class="xref" data-knowl="./knowl/ijkcompute.html" title="Figure 2.3.10">Figure 2.3.10</a>.  In addition, you may also want to note some cross product properties listed in <a href="" class="xref" data-knowl="./knowl/propcross.html" title="Theorem 2.3.11: Properties of the Cross Product">Theorem 2.3.11</a>.</div> <figure class="figure figure-like"><div class="image-box" style="width: 25%; margin-left: 37.5%; margin-right: 37.5%;"><img src="generated/latex-image/ijkcomputePic.svg" role="img" class="contained" alt="Cross product calculations."></div>
+<figcaption><span class="type">Figure</span><span class="space"> </span><span class="codenumber">2.3.10<span class="period">.</span></span><span class="space"> </span><span class="process-math">\(\vec{i} \times \vec{j} = \vec{k}\text{,}\)</span> <span class="process-math">\(\vec{j} \times \vec{k} = \vec{i}\text{,}\)</span> <span class="process-math">\(\vec{k} \times \vec{i} = \vec{j}\text{,}\)</span> <span class="process-math">\(\vec{j} \times \vec{i} = -\vec{k}\text{,}\)</span> <span class="process-math">\(\vec{k} \times \vec{j} = -\vec{i}\)</span> , and <span class="process-math">\(\vec{i} \times \vec{k} = -\vec{j}\)</span></figcaption></figure> <div class="para">These six calculations along with <a href="" class="xref" data-knowl="./knowl/CrossProductEx1.html" title="Example 2.3.8: Calculating \vec{i} \times (\vec{i} + \vec{j})">Example 2.3.8</a> suggest a general property - if we change the order of vectors in computing a cross product, the resulting vector points in the opposite direction with the same size.  <a href="" class="xref" data-knowl="./knowl/propcross.html" title="Theorem 2.3.11: Properties of the Cross Product">Theorem 2.3.11</a> summarizes this and two additional properties of the cross product.</div> <article class="theorem theorem-like"><h4 class="heading">
+<span class="type">Theorem</span><span class="space"> </span><span class="codenumber">2.3.11</span><span class="period">.</span><span class="space"> </span><span class="title">Properties of the Cross Product.</span>
+</h4>
+<div class="para logical">
+<div class="para">For vectors <span class="process-math">\(\vec{u}, \vec{v}\text{,}\)</span> and <span class="process-math">\(\vec{w}\text{,}\)</span> and scalar <span class="process-math">\(\lambda\)</span>
+</div>
+<ul class="disc">
+<li><div class="para"><span class="process-math">\(\displaystyle \vec{w} \times \vec{v}= -(\vec{v} \times \vec{w})\)</span></div></li>
+<li><div class="para"><span class="process-math">\(\displaystyle (\lambda{\vec{v}}) \times {\vec{w}} = \lambda ({\vec{v}} \times {\vec{w}}) = {\vec{v}} \times (\lambda {\vec{w}})\)</span></div></li>
+<li><div class="para"><span class="process-math">\(\displaystyle {\vec{u}} \times (\vec{v}+{\vec{w}}) = {\vec{u}} \times {\vec{v}} + {\vec{u}} \times {\vec{w}}\)</span></div></li>
+</ul>
+</div></article> <article class="example example-like"><h4 class="heading">
+<span class="type">Example</span><span class="space"> </span><span class="codenumber">2.3.12</span><span class="period">.</span><span class="space"> </span><span class="title"><span class="process-math">\((2\vec{j}+\vec{k}) \times \vec{i}\)</span>.</span>
+</h4> For some unit vector <span class="process-math">\(\vec{n}\)</span> perpendicular to both <span class="process-math">\(2\vec{j}+\vec{k}\)</span> and <span class="process-math">\(\vec{i}\)</span> we have<div class="displaymath process-math" data-contains-math-knowls="./knowl/CrossProductExample3.html">
+\begin{align*}
+(2\vec{j}+\vec{k}) \times \vec{i}  = \mathstrut \amp \left( \| 2\vec{j}+\vec{k} \| \cdot \| \vec{i} \| \cdot \sin 90^{\circ} \right) \vec{n} \\
+= \mathstrut \amp \sqrt{5} \cdot 1 \cdot 1 \cdot \vec{n}.
+\end{align*}
+</div>Rather than find this vector <span class="process-math">\(\vec{n}\text{,}\)</span> we can use properties to compute the cross product.  Since <span class="process-math">\(\vec{j} \times \vec{i} = -\vec{k}\)</span> and <span class="process-math">\(\vec{k} \times \vec{i} = \vec{j}\text{,}\)</span> we see that <span class="process-math">\((2\vec{j}+\vec{k}) \times \vec{i} = -2\vec{k} +\vec{j}\text{.}\)</span>  This vector is shown in <a href="" class="xref" data-knowl="./knowl/CrossProductExample3.html" title="Figure 2.3.13">Figure 2.3.13</a>.  Finally, you may wish to note that <span class="process-math">\(\vec{n} = \frac{1}{\sqrt{5}}(-2\vec{k} +\vec{j})\)</span> is the unit vector that we could have pursued above. <figure class="figure figure-like"><div class="image-box" style="width: 50%; margin-left: 25%; margin-right: 25%;"><img src="generated/latex-image/CrossProductExample3Pic.svg" role="img" class="contained" alt="Using properties of cross product."></div>
+<figcaption><span class="type">Figure</span><span class="space"> </span><span class="codenumber">2.3.13<span class="period">.</span></span><span class="space"> </span><span class="process-math">\((2\vec{j}+\vec{k}) \times \vec{i} = -2\vec{k} +\vec{j}\)</span></figcaption></figure></article> <article class="exercise exercise-like"><a href="" class="exercise-knowl original" data-knowl="./knowl/calculategeocross-hidden.html" title="Checkpoint 2.3.14: Calculating a Cross Product"><h4 class="heading">
+<span class="type">Checkpoint</span><span class="space"> </span><span class="codenumber">2.3.14</span><span class="period">.</span><span class="space"> </span><span class="title">Calculating a Cross Product.</span>
+</h4></a></article></section><span class="incontext"><a href="sec_cross_product.html#paragraphs-10" class="internal">in-context</a></span>
+</body>
+</html>

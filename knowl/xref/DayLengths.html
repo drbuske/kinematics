@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en-US" dir="ltr">
+<!--********************************************-->
+<!--*       Generated from PreTeXt source      *-->
+<!--*                                          *-->
+<!--*         https://pretextbook.org          *-->
+<!--*                                          *-->
+<!--********************************************-->
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<meta name="robots" content="noindex, nofollow">
+</head>
+<body class="ignore-math">
+<article class="example example-like"><h4 class="heading">
+<span class="type">Example</span><span xmlns:pf="https://prefigure.org" class="space"> </span><span class="codenumber">2.1.5</span><span xmlns:pf="https://prefigure.org" class="period">.</span><span xmlns:pf="https://prefigure.org" class="space"> </span><span class="title">Day Lengths.</span>
+</h4>
+<div xmlns:pf="https://prefigure.org" class="para">The length of day <span class="process-math">\(H(t)\)</span> at various dates <span class="process-math">\(t\)</span> during each year are given in <a href="sec_fourier_series.html#HoursDaylightOrchids" class="xref" data-knowl="./knowl/xref/HoursDaylightOrchids.html" data-reveal-label="Reveal" data-close-label="Close" title="Figure 2.1.6">Figure 2.1.6</a>.</div>
+<figure class="figure figure-like"><div xmlns:pf="https://prefigure.org" class="image-box" style="width: 90%; margin-left: 5%; margin-right: 5%;"><img src="external/HoursDaylightOrchids.jpg" class="contained" alt="Length of day at various dates of the year."></div>
+<figcaption xmlns:pf="https://prefigure.org"><span class="type">Figure</span><span class="space"> </span><span class="codenumber">2.1.6<span class="period">.</span></span><span class="space"> </span>Data from <a class="external" href="https://www.orchidculture.com/COD/daylength.html" target="_blank">https://www.orchidculture.com/COD/daylength.html</a><details class="ptx-footnote" aria-live="polite" id="HoursDaylightOrchids-1-2"><summary class="ptx-footnote__number" title="Footnote 24"><sup> 24 </sup></summary><div class="ptx-footnote__contents" id="HoursDaylightOrchids-1-2"><code class="code-inline tex2jax_ignore">https://www.orchidculture.com/COD/daylength.html</code></div></details>.</figcaption></figure><div xmlns:pf="https://prefigure.org" class="para">Using <span class="process-math">\(t=0\)</span> to represent January 1, <span class="process-math">\(t=15\)</span> to represent January 16, <span class="process-math">\(t=31\)</span> to represent February 1, and so on, we can place this data in a spreadsheet (<a class="external" href="external/DaylightData.xlsx" target="_blank"><code class="code-inline tex2jax_ignore">DaylightData.xlsx</code></a>) and plot these values.  See <a href="sec_fourier_series.html#DaylightDataExcel" class="xref" data-knowl="./knowl/xref/DaylightDataExcel.html" data-reveal-label="Reveal" data-close-label="Close" title="Figure 2.1.7">Figure 2.1.7</a>.</div>
+<figure class="figure figure-like"><div class="sidebyside"><div class="sbsrow" style="margin-left:2.5%;margin-right:2.5%;">
+<div class="sbspanel top" style="width:26.3157894736842%;"><img src="external/DaylightDataExcelTable.jpg" class="contained"></div>
+<div class="sbspanel top" style="width:68.4210526315789%;"><img src="external/DaylightDataExcelGraph.jpg" class="contained"></div>
+</div></div>
+<figcaption xmlns:pf="https://prefigure.org"><span class="type">Figure</span><span class="space"> </span><span class="codenumber">2.1.7<span class="period">.</span></span><span class="space"> </span>Left: Ordered pairs <span class="process-math">\((t,H(t))\)</span> in a spreadsheet.  Right: A plot of the ordered pairs <span class="process-math">\((t,H(t))\text{.}\)</span></figcaption></figure><div xmlns:pf="https://prefigure.org" class="para logical">
+<div class="para">Plotting this data over the course of three years demonstrates just how much this looks like the graph of a sine or cosine function.  That is, if <span class="process-math">\(H(t)\)</span> represents the hours of daylight during day <span class="process-math">\(t\text{,}\)</span> it seems reasonable to believe that</div>
+<div class="displaymath process-math">
+\begin{equation*}
+H(t) = A \sin(\omega t - \phi) + B
+\end{equation*}
+</div>
+<div class="para">for some constants <span class="process-math">\(A\text{,}\)</span> <span class="process-math">\(B\text{,}\)</span> <span class="process-math">\(\omega\text{,}\)</span> and <span class="process-math">\(\phi\text{.}\)</span>  These constants are used to modify the amplitude <span class="process-math">\(A\text{,}\)</span> vertical shift <span class="process-math">\(B\text{,}\)</span> frequency <span class="process-math">\(\omega\text{,}\)</span> and phase shift <span class="process-math">\(\frac{\phi}{\omega}\)</span> of a standard sine function <span class="process-math">\(\sin(t)\text{.}\)</span>
+</div>
+</div>
+<figure class="figure figure-like"><div xmlns:pf="https://prefigure.org" class="image-box" style="width: 75%; margin-left: 12.5%; margin-right: 12.5%;"><img src="external/DaylightDataExcelGraph3years.jpg" class="contained" alt="Three years of daylight data plotted."></div>
+<figcaption xmlns:pf="https://prefigure.org"><span class="type">Figure</span><span class="space"> </span><span class="codenumber">2.1.8<span class="period">.</span></span><span class="space"> </span>Three years of the daylight data illustrates its periodic nature.</figcaption></figure><div xmlns:pf="https://prefigure.org" class="para logical">
+<div class="para">Perhaps unsurprisingly, it appears that the vertical shift <span class="process-math">\(B\)</span> for this function appears to be <span class="process-math">\(B=12\)</span> hours.  That is, <span class="process-math">\(B=12\)</span> appears to be the average height of the data.  In fact, for any similar periodic data set, we can determine the vertical shift by simply  determining the average of such uniformly spaced data values.  That is, for data values <span class="process-math">\(\left\{ (x_n,y_n): 1 \leq n \leq N\right\}\text{,}\)</span> we can calculate the value of the vertical shift <span class="process-math">\(B\)</span> as</div>
+<div class="displaymath process-math">
+\begin{equation*}
+B = \frac{\sum_{n=1}^N y_n}{N}.
+\end{equation*}
+</div>
+<div class="para">Indeed, if we average these data values, we find that <span class="process-math">\(B=11.99625\text{.}\)</span>  For simplicity, we will take <span class="process-math">\(B=12\text{.}\)</span>
+</div>
+</div>
+<div xmlns:pf="https://prefigure.org" class="para logical">
+<div class="para">The amplitude of a sinusoid is half of the distance from peak to trough.   Seeing the middle of the data is at a height of 12, we can eyeball the amplitude <span class="process-math">\(A\)</span> as being roughly <span class="process-math">\(3.5\)</span> hours.  A more quantitative approach would be to calculate half the difference of the maximum <span class="process-math">\(y\)</span>-value and the minimum <span class="process-math">\(y\)</span>-value in the data.  In this case, we get</div>
+<div class="displaymath process-math">
+\begin{equation*}
+A \approx \frac{15.4-8.6}{2} = 3.4.
+\end{equation*}
+</div>
+<div class="para">This is roughly what we eyeballed.  However, we know well that the longest and shortest days of the year, the summer and winter solstices, are not represented in the data.  So this is clearly only an estimate.  In the next section, we will see how we can use all of the data to provide an improved estimate of the amplitude.  For now, we will simply take <span class="process-math">\(A=3.4\)</span> hours.</div>
+</div>
+<div xmlns:pf="https://prefigure.org" class="para">The period of the natural sine and cosine functions, <span class="process-math">\(\sin(t)\)</span> and <span class="process-math">\(\cos(t)\text{,}\)</span> is <span class="process-math">\(T=2\pi\text{.}\)</span>  That is, these functions repeat themselves on every interval of length <span class="process-math">\(2\pi\text{.}\)</span>  The frequency <span class="process-math">\(\omega\)</span> of a sinusoid is thus given by <span class="process-math">\(\omega = \frac{2\pi}{T}\)</span> where <span class="process-math">\(T\)</span> is the period.  For the daylight data, it is clear that our function <span class="process-math">\(H(t)\)</span> has period <span class="process-math">\(T = 365\)</span> days.  From this, we calculate the frequency to be <span class="process-math">\(\omega = \frac{2\pi}{365}\text{.}\)</span>
+</div>
+<div xmlns:pf="https://prefigure.org" class="para">Does <span class="process-math">\(H(t) = 3.4\sin \left( \frac{2\pi}{365}t \right) + 12\)</span> fit the data fairly well?  It has the right amplitude, the right frequency and period, and the right vertical shift.  However, if we plot this model against the original data (<a href="sec_fourier_series.html#DaylightDataVsModelPre" class="xref" data-knowl="./knowl/xref/DaylightDataVsModelPre.html" data-reveal-label="Reveal" data-close-label="Close" title="Figure 2.1.9">Figure 2.1.9</a>), it is obviously ``out of phase".  That is, a horizontal shift is needed to align our model with the data.</div>
+<figure class="figure figure-like"><div xmlns:pf="https://prefigure.org" class="image-box" style="width: 75%; margin-left: 12.5%; margin-right: 12.5%;"><img src="external/DaylightDataVsModelPre.jpg" class="contained" alt="A model that is out of phase."></div>
+<figcaption xmlns:pf="https://prefigure.org"><span class="type">Figure</span><span class="space"> </span><span class="codenumber">2.1.9<span class="period">.</span></span><span class="space"> </span>The daylight data compared to the model <span class="process-math">\(H(t) = 3.4\sin \left( \frac{2\pi}{365}t \right) + 12\)</span> appears to be out of phase.</figcaption></figure><div xmlns:pf="https://prefigure.org" class="para logical">
+<div class="para">How do we determine the horizontal shift needed for the model to better match the data?  One way would be to compare where (at what day <span class="process-math">\(t\)</span>) the maximum of both the data and the model occur.  In the case of the data, we all know the longest day of the year occurs at the summer solstice in June which coincides with <span class="process-math">\(t \approx 171\text{.}\)</span>  On the other hand, the function <span class="process-math">\(H(t) = 3.4\sin \left( \frac{2\pi}{365}t \right) + 12\)</span> has a maximum value occurring when <span class="process-math">\(\frac{2\pi}{365}t = \frac{\pi}{2}\text{.}\)</span>  Solving for <span class="process-math">\(t\)</span> gives <span class="process-math">\(t = \frac{365}{4} = 91.25\text{.}\)</span>  To adjust our model so that the peak occurs at <span class="process-math">\(t=171\)</span> days rather than <span class="process-math">\(t=91.25\)</span> days requires a horizontal (phase) shift to the right of <span class="process-math">\(t=171-91.25 = 79.75\)</span> days.  To do this, we replace the variable <span class="process-math">\(t\)</span> with <span class="process-math">\(t-79.75\text{:}\)</span>
+</div>
+<div class="displaymath process-math">
+\begin{align*}
+H(t)  = \mathstrut \amp 3.4\sin \left( \frac{2\pi}{365}(t-79.75) \right) + 12 \\
+= \mathstrut \amp 3.4\sin \left( \frac{2\pi}{365}t-\frac{159.5\pi}{365} \right) + 12.
+\end{align*}
+</div>
+<div class="para">From this, we see that <span class="process-math">\(\phi = \frac{159.5\pi}{365}\)</span> with phase shift <span class="process-math">\(\frac{\phi}{\omega} = 79.75\)</span> days.</div>
+</div>
+<figure class="figure figure-like"><div xmlns:pf="https://prefigure.org" class="image-box" style="width: 75%; margin-left: 12.5%; margin-right: 12.5%;"><img src="external/DaylightDataVsModelPost.jpg" class="contained" alt="A model that is out of phase."></div>
+<figcaption xmlns:pf="https://prefigure.org"><span class="type">Figure</span><span class="space"> </span><span class="codenumber">2.1.10<span class="period">.</span></span><span class="space"> </span>The daylight data compared to our model <span class="process-math">\(H(t) = 3.4\sin \left( \frac{2\pi}{365}t-\frac{159.5\pi}{365} \right) + 12\)</span> that now includes a phase shift.</figcaption></figure></article><span class="incontext"><a class="internal" href="sec_fourier_series.html#DayLengths">in-context</a></span>
+</body>
+</html>

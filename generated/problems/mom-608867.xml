@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<myopenmath xmlns:pi="http://pretextbook.org/2020/pretext/internal" id="608867">
+<statement>
+<p>
+Does <m>\displaystyle{f{{\left({x},{y},{z}\right)}}}={e}^{{-{3}{x}-{4}{y}}}{\sin{{\left({5}{z}\right)}}}</m> satisfies the Laplace Equation, <m>\displaystyle\frac{{\partial^{{2}}{f}}}{{\partial{x}^{{2}}}}+\frac{{\partial^{{2}}{f}}}{{\partial{y}^{{2}}}}+\frac{{\partial^{{2}}{f}}}{{\partial{z}^{{2}}}}={0}</m> ? </p>
+<p><ol style="list-style-type:upper-alpha"><li>Yes</li> 
+<li>No</li> 
+</ol></p>
+
+
+</statement>
+<solution>
+<p><ul><li>A: Yes</li></ul></p>
+</solution>
+</myopenmath>
+

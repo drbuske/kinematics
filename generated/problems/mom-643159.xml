@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<myopenmath xmlns:pi="http://pretextbook.org/2020/pretext/internal" id="643159">
+<statement>
+<p>
+Compute <m>\displaystyle\int_{{S}}{\left({3}\vec{{{i}}}+{6}\vec{{{k}}}\right)}\cdot{d}\vec{{{A}}}</m> where <m>\displaystyle{S}</m> is a square of side length <m>\displaystyle{6}</m> perpendicular to the <m>\displaystyle{z}</m>-axis centered at <m>\displaystyle{\left({0},{0},-{5}\right)}</m> oriented away from the origin.  </p>
+<p>
+<m>\displaystyle\int_{{S}}{\left({3}\vec{{{i}}}+{6}\vec{{{k}}}\right)}\cdot{d}\vec{{{A}}}=</m><fillin characters="8" />   
+</p>
+</statement>
+<solution>
+<p><ul><li>-216</li></ul></p>
+</solution>
+</myopenmath>
+

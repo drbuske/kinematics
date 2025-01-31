@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<myopenmath xmlns:pi="http://pretextbook.org/2020/pretext/internal" id="757060">
+<statement>
+<p>Use the Midpoint Rule to approximate the integral <m>\displaystyle{\int_{{{9}}}^{{{16}}}}{\left(-{3}{x}+{7}{x}^{{2}}\right)}\ {\left.{d}{x}\right.}</m> with <m>\displaystyle{n}={3}</m>.  Round your answer to the nearest 0.001.  
+  </p>
+<p>
+  <m>\displaystyle{M}_{{3}}=</m> <fillin characters="12" />   </p>
+
+</statement>
+<solution>
+<p><ul><li>7571.6018518519</li></ul></p>
+</solution>
+</myopenmath>
+

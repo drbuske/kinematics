@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<myopenmath xmlns:pi="http://pretextbook.org/2020/pretext/internal" id="616564">
+<statement>
+<p>Speedometer readings for a vehicle (in motion) at 11-second intervals are given in the table.</p>
+<table><tabular> <row><cell><em><em>t</em> (sec)</em></cell><cell>0</cell><cell>11</cell><cell>22</cell><cell>33</cell><cell>44</cell><cell>55</cell><cell>66</cell></row>
+<row><cell><em><em>v</em> (ft/s)</em></cell><cell>0</cell><cell>8</cell><cell>29</cell><cell>51</cell><cell>65</cell><cell>63</cell><cell>46</cell></row>
+</tabular></table><p>Estimate the distance traveled by the vehicle during this 66-second period using a left sum <m>\displaystyle{L}_{{6}}</m>, a right sum <m>\displaystyle{R}_{{6}}</m>, and a middle sum <m>\displaystyle{M}_{{3}}</m>.
+  </p>
+<p>
+  <m>\displaystyle{L}_{{6}}</m> = <fillin characters="8" /> feet
+  </p>
+<p>
+  <m>\displaystyle{R}_{{6}}</m> = <fillin characters="8" /> feet
+  </p>
+<p>
+  <m>\displaystyle{M}_{{3}}</m> = <fillin characters="8" /> feet</p>
+
+</statement>
+<solution>
+<p><ul><li>2376</li><li>2882</li><li>2684</li></ul></p>
+</solution>
+</myopenmath>
+

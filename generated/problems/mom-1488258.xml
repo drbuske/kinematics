@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+<myopenmath xmlns:pi="http://pretextbook.org/2020/pretext/internal" id="1488258">
+<statement>
+<p>
+Given the function  <m>\displaystyle{y}={3}{\sin{{\left({7}{t}-\frac{\pi}{{6}}\right)}}}-{8}</m> , determine the amplitude, phase shift, and period.</p>
+<p>
+Give exact answers as fractions and/or multiples of <m>\displaystyle\pi</m> as necessary.</p>
+<p>
+Amplitude <m>\displaystyle{A}=</m> <fillin characters="8" />   </p>
+<p>
+Phase shift <m>\displaystyle{\frac{{\phi}}{{\omega}}}=</m> <fillin characters="8" />   </p>
+<p>
+Period <m>\displaystyle{T}=</m> <fillin characters="8" />   
+
+</p>
+</statement>
+<solution>
+<p><ul><li>3</li><li><m>\displaystyle\frac{\pi}{{42}}</m></li><li><m>\displaystyle\frac{{{2}\pi}}{{7}}</m></li></ul></p><p>The function <m>\displaystyle{A}{\sin{{\left({B}{\left({t}-{C}\right)}\right)}}}+{D}</m> will have amplitude <m>\displaystyle{\left|{A}\right|}</m>, phase shift <m>\displaystyle{C}</m>, and period <m>\displaystyle\frac{{{2}\pi}}{{\left|{B}\right|}}</m>.</p>
+<p>
+Rewriting:</p>
+<p>
+<m>\displaystyle{3}{\sin{{\left({7}{t}-\frac{\pi}{{6}}\right)}}}-{8}={3}{\sin{{\left({7}{\left({t}-\frac{\pi}{{42}}\right)}\right)}}}-{8}</m></p>
+<p>
+So the amplitude is <m>\displaystyle{\left|{3}\right|}={3}</m>, the phase shift is <m>\displaystyle\frac{\pi}{{42}}</m>, and the period is <m>\displaystyle\frac{{{2}\pi}}{{7}}</m>.</p>
+</solution>
+</myopenmath>
+

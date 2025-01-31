@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8"?>
+<myopenmath xmlns:pi="http://pretextbook.org/2020/pretext/internal" id="750278">
+<statement>
+<p>
+Determine whether the divergence of each vector field below at each indicated point is positive, negative, or zero.</p>
+<p>
+<em>Field 1</em></p><image width="67%"  pi:generated="problems/images/c5b9c17b89ae8231c2e63a3cc601ee94.png" /> Positive<p>
+Negative</p>
+<p>
+Zero</p>
+<p>
+<em>Field 2</em></p><image width="67%"  pi:generated="problems/images/632654b75fb4e82232e0213803e6eb3b.png" /> Positive<p>
+Negative</p>
+<p>
+Zero</p>
+<p>
+<em>Field 3</em></p><image width="67%"  pi:generated="problems/images/6634d1a5c20b9892332ae71aef8f4fd0.png" /> Positive<p>
+Negative</p>
+<p>
+Zero</p>
+<p>
+<em>Field 4</em></p><image width="67%"  pi:generated="problems/images/44700169180530aa1f0eb0e7594cffe7.png" /> Positive<p>
+Negative</p>
+<p>
+Zero</p>
+</statement>
+<solution>
+<p><ul><li>C: Zero</li><li>B: Negative</li><li>A: Positive</li><li>B: Negative</li></ul></p>
+</solution>
+</myopenmath>
+

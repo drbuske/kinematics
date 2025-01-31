@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<myopenmath xmlns:pi="http://pretextbook.org/2020/pretext/internal" id="886837">
+<statement>
+<p>
+Find a formula the gradient vector field (shown below) of <m>\displaystyle{f{{\left({x},{y}\right)}}}={x}^{{4}}{y}^{{3}}</m>.</p><image width="42%"  pi:generated="problems/images/4a1f77a99a23662e5f56efc862951c12.png" /><p>
+<m>\displaystyle\vec{{F}}=</m><fillin characters="12" />
+<m>\displaystyle\vec{{i}}+</m><fillin characters="12" />
+<m>\displaystyle\vec{{j}}</m>
+</p>
+</statement>
+<solution>
+<p><ul><li><m>\displaystyle{4}{x}^{{3}}{y}^{{3}}</m></li><li><m>\displaystyle{3}{x}^{{4}}{y}^{{2}}</m></li></ul></p>
+</solution>
+</myopenmath>
+

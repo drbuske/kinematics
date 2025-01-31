@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<myopenmath xmlns:pi="http://pretextbook.org/2020/pretext/internal" id="8489">
+<statement>
+<p>
+Convert the Cartesian coordinate (-1,-6) to polar coordinates, <m>\displaystyle{0}\le\theta{<}{2}\pi,\ {r}{>}{0}</m></p>
+<p>
+<em>r</em> = <fillin characters="20" />   
+</p>
+<p>  Enter exact value.</p>
+<p>
+<m>\displaystyle\theta</m> = <fillin characters="20" />   
+</p>
+</statement>
+<solution>
+<p><ul><li><m>\displaystyle\sqrt{{{37}}}</m></li><li>4.5472403029701</li></ul></p>
+</solution>
+</myopenmath>
+

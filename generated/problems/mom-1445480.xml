@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<myopenmath xmlns:pi="http://pretextbook.org/2020/pretext/internal" id="1445480">
+<statement>
+
+Suppose we have a periodic function of the form <m>\displaystyle{f{{\left({t}\right)}}}={a}{\sin{{\left({b}{t}\right)}}}+{c}</m> where the vertical shift is <m>\displaystyle{7}</m>, the period is <m>\displaystyle\frac{{8}}{{3}}</m> and the amplitude is <m>\displaystyle{20}</m>.<p>
+Write out the function.</p>
+<m>\displaystyle{f{{\left({t}\right)}}}=</m>   <fillin characters="10" />  
+
+
+</statement>
+<solution>
+<p><ul><li><m>\displaystyle{20}{\sin{{\left(\frac{{3}}{{4}}\pi{t}\right)}}}+{7}{\quad\text{or}\quad}-{20}{\sin{{\left(\frac{{3}}{{4}}\pi{t}\right)}}}+{7}</m></li></ul></p>
+</solution>
+</myopenmath>
+

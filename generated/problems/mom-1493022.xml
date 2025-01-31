@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<myopenmath xmlns:pi="http://pretextbook.org/2020/pretext/internal" id="1493022">
+<statement>
+<p>
+For each function <m>\displaystyle{f{{\left({x},{y},{z}\right)}}}</m>, determine whether its gradient points radially outward from the origin, radially inward toward the origin, radially outward from the <m>\displaystyle{z}</m>-axis, or radially inward toward the <m>\displaystyle{z}</m>-axis.</p>
+<p><ol style="list-style-type:upper-alpha">
+<li class="nowrap"> <m>\displaystyle{f{{\left({x},{y},{z}\right)}}}={\frac{{{1}}}{{{x}^{{2}}+{y}^{{2}}}}}</m></li>
+<li class="nowrap"> <m>\displaystyle{f{{\left({x},{y},{z}\right)}}}={\frac{{{1}}}{{{x}^{{2}}+{y}^{{2}}+{z}^{{2}}}}}</m></li>
+<li class="nowrap"> <m>\displaystyle{f{{\left({x},{y},{z}\right)}}}={x}^{{2}}+{y}^{{2}}</m></li>
+<li class="nowrap"> <m>\displaystyle{f{{\left({x},{y},{z}\right)}}}={x}^{{2}}+{y}^{{2}}+{z}^{{2}}</m></li>
+</ol></p>
+<p><ol style="list-style-type:lower-alpha">
+<li>Points radially inward toward the origin</li>
+<li>Points radially outward from the origin</li>
+<li>Points radially outward from the <m>\displaystyle{z}</m>-axis</li>
+<li>Points radially inward toward the <m>\displaystyle{z}</m>-axis</li>
+</ol></p> 
+
+
+</statement>
+<solution>
+<p><ul><li>d a c b </li></ul></p>
+</solution>
+</myopenmath>
+

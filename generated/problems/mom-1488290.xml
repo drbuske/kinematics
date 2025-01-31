@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<myopenmath xmlns:pi="http://pretextbook.org/2020/pretext/internal" id="1488290">
+<statement>
+<p>
+The function below models the average monthly temperature, <m>\displaystyle{T}</m> degrees Fahrenheit <m>\displaystyle{\left(\amp{d}{e}{g}{F}\right)}</m>, for a certain city, where <m>\displaystyle{t}</m> represents the months of the year (January = 1, February = 2, etc.).</p>
+<p>
+<m>\displaystyle{T}{\left({t}\right)}={18}{\sin{{\left({30}{t}-{120}\right)}}}+{34}</m></p>
+<p>
+What is the difference between the maximum and minimum average monthly temperatures?</p>
+<p>
+<fillin characters="2" /> <ampersand />;degF
+</p>
+</statement>
+<solution>
+<p><ul><li>36</li></ul></p>
+</solution>
+</myopenmath>
+

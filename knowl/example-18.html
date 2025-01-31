@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en-US">
+<!--********************************************-->
+<!--*       Generated from PreTeXt source      *-->
+<!--*                                          *-->
+<!--*         https://pretextbook.org          *-->
+<!--*                                          *-->
+<!--********************************************-->
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<meta name="robots" content="noindex, nofollow">
+</head>
+<body class="ignore-math">
+<article class="example example-like"><h4 class="heading">
+<span class="type">Example</span><span class="space"> </span><span class="codenumber">2.2.17</span><span class="period">.</span><span class="space"> </span><span class="title">Two-Dimensional Advection.</span>
+</h4> <div class="para">
+<a href="" class="xref" data-knowl="./knowl/RochesterMN.html" title="Figure 2.2.18">Figure 2.2.18</a> shows current temperatures observed near Rochester, MN.  Suppose the horizontal wind vector is <span class="process-math">\(\vec{v}_H = (36 \ {\rm{km/hr}})\vec{i} -(11 \ {\rm{km/hr}})\vec{j}.\)</span> <figure class="figure figure-like"><div class="image-box" style="width: 75%; margin-left: 12.5%; margin-right: 12.5%;"><img src="generated/latex-image/RochesterMNPic.svg" role="img" class="contained" alt="Two-Dimensional Advection."></div>
+<figcaption><span class="type">Figure</span><span class="space"> </span><span class="codenumber">2.2.18<span class="period">.</span></span><span class="space"> </span>Temperatures near Rochester, MN.  Hammond is 35 km north of Rochester.  Stewartville is 21 km south of Rochester.  Owatonna is 66 km west of Rochester.  Winona is 87 km east of Rochester.</figcaption></figure>
+</div> <div class="para logical">
+<div class="para">Here,</div>
+<div class="displaymath process-math">
+\begin{equation*}
+\vec{u}_T = \frac{(8.2-9.1)^{\circ}C}{153 \ {\rm{km}}} \vec{i} + \frac{(8.7-8.5)^{\circ}C}{56 \ {\rm{km}}}\vec{j}.
+\end{equation*}
+</div>
+<div class="para">It follows that the temperature advection at Rochester is</div>
+<div class="displaymath process-math">
+\begin{align*}
+-\vec{v}_H \cdot \vec{u}_T = \mathstrut \amp -\left[(36 \ {\rm{km/hr}})\vec{i} -(11 \ {\rm{km/hr}}) \vec{j}\right] \cdot \left(\frac{-0.9^{\circ}C}{153 \ {\rm{km}}} \vec{i} + \frac{0.2^{\circ}C}{56 \ {\rm{km}}}\vec{j}\right) \\
+= \mathstrut \amp \frac{324}{1530} \frac{^{\circ}C}{\rm{hr}} + \frac{22}{560} \frac{^{\circ}C}{{\rm{hr}}} \\
+\approx \mathstrut \amp 0.25\frac{^{\circ}C}{\rm{hr}}
+\end{align*}
+</div>
+</div> <div class="para logical">
+<div class="para">If the current temperature at Rochester is <span class="process-math">\(8.5^{\circ}C\text{,}\)</span> the temperature 2 hours from now is given by</div>
+<div class="displaymath process-math">
+\begin{align*}
+T_{fcst} = \mathstrut \amp T_{curr} + \Delta t(- \vec{v}_H \cdot \vec{u}_T)\\
+\approx \mathstrut \amp 8.5^{\circ}C + (2 \ {\rm{hr}}) \left( 0.25\frac{^{\circ}C}{\rm{hr}}\right)  \\
+= \mathstrut \amp 9.0^{\circ}{C}\text{.}
+\end{align*}
+</div>
+</div></article><span class="incontext"><a href="sec_dotproduct.html#example-18" class="internal">in-context</a></span>
+</body>
+</html>

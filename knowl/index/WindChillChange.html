@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en-US" dir="ltr">
+<!--********************************************-->
+<!--*       Generated from PreTeXt source      *-->
+<!--*                                          *-->
+<!--*         https://pretextbook.org          *-->
+<!--*                                          *-->
+<!--********************************************-->
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<meta name="robots" content="noindex, nofollow">
+</head>
+<body class="ignore-math">
+<article class="exercise exercise-like"><h3 class="heading">
+<span class="type">Checkpoint</span><span xmlns:pf="https://prefigure.org" class="space"> </span><span class="codenumber">5.3.10</span><span xmlns:pf="https://prefigure.org" class="period">.</span><span xmlns:pf="https://prefigure.org" class="space"> </span><span class="title">A Dropping Wind Chill.</span>
+</h3>
+<div xmlns:pf="https://prefigure.org" class="para logical">
+<div class="para">The wind chill index is modeled by the function</div>
+<div class="displaymath process-math">
+\begin{equation*}
+W(T,v) = 13.12 + 0.6215T - 11.37v^{0.16} + 0.3965Tv^{0.16}
+\end{equation*}
+</div>
+<div class="para">where <span class="process-math">\(T\)</span> is the temperature in degrees Celsius and <span class="process-math">\(v\)</span> is the wind speed (in km/hr).  The temperature <span class="process-math">\(T\)</span> and the wind speed <span class="process-math">\(v\)</span> are also, of course, functions of time <span class="process-math">\(t\text{.}\)</span>  Suppose that at 11:00 a.m., we have <span class="process-math">\(T = -15^{\circ}C\)</span> and <span class="process-math">\(v = 30\)</span> km/hr.  Further, suppose that <span class="process-math">\(T(t)\)</span> is decreasing by <span class="process-math">\(^{\circ}C/hr\)</span> and <span class="process-math">\(v(t)\)</span> is increasing by 2 km/hr.  That is, <span class="process-math">\(\frac{dT}{dt} = -4 \ \frac{^{\circ}C}{hr}\)</span> and <span class="process-math">\(\frac{dv}{dt} = 2 \ \frac{km/hr}{hr}\text{.}\)</span>  At what rate is the apparent temperature (i.e. the wind chill <span class="process-math">\(W\)</span>) changing at 11:00 a.m.?</div>
+</div>
+<div class="solutions"><details xmlns:pf="https://prefigure.org" class="answer solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Answer</span><span class="period">.</span></summary><div class="answer solution-like knowl__content"><div class="para logical">
+<div class="para">By the chain rule, note that</div>
+<div class="displaymath process-math">
+\begin{equation*}
+\frac{dW}{dt} = \frac{\partial W}{\partial T}\frac{dT}{dt} + \frac{\partial W}{\partial v}\frac{dv}{dt}.
+\end{equation*}
+</div>
+<div class="para">Since</div>
+<div class="displaymath process-math">
+\begin{equation*}
+\frac{\partial W}{\partial T}= 0.6215 + 0.3965v^{0.16}
+\end{equation*}
+</div>
+<div class="para">and</div>
+<div class="displaymath process-math">
+\begin{equation*}
+\frac{\partial W}{\partial v}= (0.16)(11.37)v^{-0.84} + (0.16)(0.3965)Tv^{-0.84}
+\end{equation*}
+</div>
+<div class="para">we have</div>
+<div class="displaymath process-math">
+\begin{align*}
+\frac{\partial W}{\partial T}(-15,30) = \mathstrut \amp 0.6215+0.3965(30)^{0.16}\\
+\approx \mathstrut \amp 1.305
+\end{align*}
+</div>
+<div class="para">and</div>
+<div class="displaymath process-math">
+\begin{align*}
+\frac{\partial W}{\partial v}(-15,30) = \mathstrut \amp (0.16)(11.37)(30)^{-0.84} + (0.16)(0.3965)(-15)(30)^{-0.84}\\
+\approx \mathstrut \amp 0.05.
+\end{align*}
+</div>
+<div class="para">So at 11:00 a.m. (when <span class="process-math">\(T = -15^{\circ}C\)</span> and <span class="process-math">\(v = 30\)</span> km/hr) we have</div>
+<div class="displaymath process-math">
+\begin{align*}
+\frac{dW}{dt}  = \mathstrut \amp \frac{\partial W}{\partial T}\frac{dT}{dt} + \frac{\partial W}{\partial v}\frac{dv}{dt} \\
+\approx \mathstrut \amp \left(1.305 \ \frac{^{\circ}C}{^{\circ}C} \right)  \left( -4 \ \frac{^{\circ}C}{hr}\right) + \left( 0.05 \ \frac{^{\circ}C}{km/hr} \right)  \left( 2 \ \frac{km/hr}{hr}\right) \\
+= \mathstrut \amp -5.22  \ \frac{^{\circ}C}{hr} + 0.1 \ \frac{^{\circ}C}{hr} \\
+= \mathstrut \amp -5.12 \ \frac{^{\circ}C}{hr}.
+\end{align*}
+</div>
+<div class="para">This means that the wind chill (or feels like temperature) is dropping at a rate of 5.12 degrees Celsius per hour at 11:00 a.m..  Most of the contribution to this drop is coming from the rapid drop in ambient temperature <span class="process-math">\(T\text{.}\)</span>
+</div>
+</div></div></details></div></article><span class="incontext"><a class="internal" href="sec_chain_rule.html#WindChillChange">in-context</a></span>
+</body>
+</html>

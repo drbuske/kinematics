@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en-US">
+<!--********************************************-->
+<!--*       Generated from PreTeXt source      *-->
+<!--*                                          *-->
+<!--*         https://pretextbook.org          *-->
+<!--*                                          *-->
+<!--********************************************-->
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<meta name="robots" content="noindex, nofollow">
+</head>
+<body class="ignore-math"><article class="example example-like"><p>Consider the vector field <span class="process-math">\(\vec{F}=x\vec{j}\text{.}\)</span>  A cross section of <span class="process-math">\(\vec{F}\)</span> that lies in the plane <span class="process-math">\(z=0\)</span> is given in <a href="" class="xref" data-knowl="./knowl/CurlXJ.html" title="Figure 4.3.5">Figure 4.3.5</a>.  We investigate <span class="process-math">\({\rm{curl}} \ \vec{F}(-1,1,0)\text{.}\)</span></p>
+<figure class="figure figure-like"><div class="image-box" style="width: 35%; margin-left: 32.5%; margin-right: 32.5%;"><img src="generated/latex-image/CurlXJPic.svg" role="img" class="contained" alt="Connecting Curl Definition."></div>
+<figcaption><span class="type">Figure</span><span class="space"> </span><span class="codenumber">4.3.5<span class="period">.</span></span><span class="space"> </span>The <span class="process-math">\(z=0\)</span> cross section of the three-dimensional vector field <span class="process-math">\(\vec{F}=x\vec{j}\text{.}\)</span></figcaption></figure><p>If we place a small square <span class="process-math">\(C\)</span> centered at <span class="process-math">\((-1,1,0)\)</span> as shown in <a href="" class="xref" data-knowl="./knowl/CurlXJ.html" title="Figure 4.3.5">Figure 4.3.5</a> in the vector field <span class="process-math">\(\vec{F}=x\vec{j}\text{,}\)</span> we can imagine it as a small paddle wheel (see <a href="" class="xref" data-knowl="./knowl/PaddleWheel.html" title="Figure 4.2.12">Figure 4.2.12</a>) that will turn based on the flow.  In this case, the paddle wheel will turn counter-clockwise.  In fact, it is when the handle of the paddle wheel points in the direction of <span class="process-math">\(+\vec{k}\)</span> that the it spins fastest in the counter-clockwise direction (i.e. when the circulation is greatest).  So geometrically, we see that <span class="process-math">\({\rm{curl}}\ \vec{F}(-1,1,0) = \alpha\vec{k}\)</span> for some number <span class="process-math">\(\alpha&gt;0\text{.}\)</span></p>
+<p>Using <a href="" class="xref" data-knowl="./knowl/algebraiccurl.html" title="Definition 4.3.3: Algebraic (Coordinate) Definition of Curl">Definition 4.3.3</a>, we can compute <span class="process-math">\({\rm{curl}}\ \vec{F}(-1,1,0)\)</span> directly.  For <span class="process-math">\(\vec{F}=x\vec{j}\text{,}\)</span> we note that</p>
+<div class="displaymath process-math" data-contains-math-knowls="./knowl/algebraiccurl.html">
+\begin{align*}
+{\rm{curl}} \ \vec{F}  = \mathstrut \amp \nabla \times \vec{F} \\
+= \mathstrut \amp \det \left( \begin{array}{ccc} \vec{i} \amp \vec{j} \amp \vec{k} \\ \frac{\partial}{\partial x} \amp \frac{\partial}{\partial y} \amp \frac{\partial}{\partial z} \\ 0 \amp x \amp 0 \end{array} \right) \\
+= \mathstrut \amp 1\vec{k} 
+\end{align*}
+</div>
+<p class="continuation">which aligns with what we expected using the geometric definition of curl.  Note too that, rather remarkably, <span class="process-math">\({\rm{curl}}\ \vec{F}\)</span> is the same vector at every point in this field!</p></article></body>
+</html>

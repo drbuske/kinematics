@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+<myopenmath xmlns:pi="http://pretextbook.org/2020/pretext/internal" id="1492879">
+<statement>
+<p>
+Consider the level curves shown below for the function <m>\displaystyle{z}={f{{\left({x},{y}\right)}}}</m>.</p><image width="50%"  pi:generated="problems/images/fc7cf19c38deac11bf707e44293fe5ab.png" />
+<p>
+What is the sign of <m>\displaystyle{\frac{{\partial{f}}}{{\partial{x}}}}{\left(-{10},{5}\right)}</m>?
+</p>
+<p><ol style="list-style-type:upper-alpha"><li>Positive</li> 
+<li>Negative</li> 
+<li>Zero</li> 
+</ol></p>
+<p>
+What is the sign of <m>\displaystyle{\frac{{\partial{f}}}{{\partial{y}}}}{\left(-{10},{5}\right)}</m>?
+</p>
+<p><ol style="list-style-type:upper-alpha"><li>Positive</li> 
+<li>Negative</li> 
+<li>Zero</li> 
+</ol></p>
+
+
+</statement>
+<solution>
+<p><ul><li>B: Negative</li><li>A: Positive</li></ul></p>
+</solution>
+</myopenmath>
+

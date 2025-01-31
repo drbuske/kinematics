@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<myopenmath xmlns:pi="http://pretextbook.org/2020/pretext/internal" id="471687">
+<statement>
+<p>
+Performing the operation <m>\displaystyle\vec{{{u}}}\times{\left(\vec{{{v}}}\times\vec{{{w}}}\right)}</m> results in</p>
+<p><ol style="list-style-type:upper-alpha"><li>a vector</li> 
+<li>a scalar</li> 
+<li>a meaningless statement</li> 
+</ol></p>
+
+
+</statement>
+<solution>
+<p><ul><li>A: a vector</li></ul></p>
+</solution>
+</myopenmath>
+

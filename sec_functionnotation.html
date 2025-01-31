@@ -1,0 +1,1401 @@
+<!DOCTYPE html>
+<!--********************************************-->
+<!--*       Generated from PreTeXt source      *-->
+<!--*                                          *-->
+<!--*         https://pretextbook.org          *-->
+<!--*                                          *-->
+<!--********************************************-->
+<html lang="en-US" dir="ltr">
+<head xmlns:og="http://ogp.me/ns#" xmlns:book="https://ogp.me/ns/book#">
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<title>Function Notation</title>
+<meta name="Keywords" content="Authored in PreTeXt">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta xmlns:pf="https://prefigure.org" property="og:type" content="book">
+<meta xmlns:pf="https://prefigure.org" property="book:title" content="Mathematics of Atmospheric Kinematics">
+<meta xmlns:pf="https://prefigure.org" property="book:author" content="Dale Buske">
+<script>
+var runestoneMathReady = new Promise((resolve) => window.rsMathReady = resolve);
+window.MathJax = {
+  "tex": {
+    "inlineMath": [
+      [
+        "\\(",
+        "\\)"
+      ]
+    ],
+    "tags": "none",
+    "tagSide": "right",
+    "tagIndent": ".8em",
+    "packages": {
+      "[+]": [
+        "base",
+        "extpfeil",
+        "ams",
+        "amscd",
+        "color",
+        "newcommand",
+        "knowl"
+      ]
+    }
+  },
+  "options": {
+    "ignoreHtmlClass": "tex2jax_ignore|ignore-math",
+    "processHtmlClass": "process-math",
+    "renderActions": {
+      "findScript": [
+        10,
+        function (doc) {
+            document.querySelectorAll('script[type^="math/tex"]').forEach(function(node) {
+                var display = !!node.type.match(/; *mode=display/);
+                var math = new doc.options.MathItem(node.textContent, doc.inputJax[0], display);
+                var text = document.createTextNode('');
+                node.parentNode.replaceChild(text, node);
+                math.start = {node: text, delim: '', n: 0};
+                math.end = {node: text, delim: '', n: 0};
+                doc.math.push(math);
+            });
+        },
+        ""
+      ]
+    }
+  },
+  "chtml": {
+    "scale": 0.98,
+    "mtextInheritFont": true
+  },
+  "loader": {
+    "load": [
+      "input/asciimath",
+      "[tex]/extpfeil",
+      "[tex]/amscd",
+      "[tex]/color",
+      "[tex]/newcommand",
+      "[pretext]/mathjaxknowl3.js"
+    ],
+    "paths": {
+      "pretext": "_static/pretext/js/lib"
+    }
+  },
+  "startup": {
+    pageReady() {
+      return MathJax.startup.defaultPageReady().then(function () {
+      console.log("in ready function");
+      rsMathReady();
+      }
+    )}
+  }
+};
+</script><script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js"></script><script src="_static/pretext/js/pretext-webwork/2.17/pretext-webwork.js"></script><script src="https://webwork-ptx.aimath.org/webwork2_files/node_modules/iframe-resizer/js/iframeResizer.min.js"></script><script src="_static/pretext/js/lti_iframe_resizer.js"></script><script src="https://cdnjs.cloudflare.com/ajax/libs/lunr.js/2.3.9/lunr.min.js" integrity="sha512-4xUl/d6D6THrAnXAwGajXkoWaeMNwEKK4iNfq5DotEbLPAfk6FSxSP3ydNxqDgCw1c/0Z1Jg6L8h2j+++9BZmg==" crossorigin="anonymous" referrerpolicy="no-referrer"></script><script src="lunr-pretext-search-index.js" async=""></script><script src="_static/pretext/js/pretext_search.js"></script><link href="_static/pretext/css/pretext_search.css" rel="stylesheet" type="text/css">
+<script src="_static/pretext/js/lib/jquery.min.js"></script><script src="_static/pretext/js/lib/jquery.sticky.js"></script><script src="_static/pretext/js/lib/jquery.espy.min.js"></script><script src="_static/pretext/js/pretext.js"></script><script src="_static/pretext/js/pretext_add_on.js?x=1"></script><script src="_static/pretext/js/user_preferences.js"></script><script src="_static/pretext/js/lib/knowl.js"></script><!--knowl.js code controls Sage Cells within knowls--><script>sagecellEvalName='Evaluate (Sage)';
+</script><link xmlns:pf="https://prefigure.org" rel="preconnect" href="https://fonts.googleapis.com">
+<link xmlns:pf="https://prefigure.org" rel="preconnect" href="https://fonts.gstatic.com" crossorigin="">
+<link xmlns:pf="https://prefigure.org" href="https://fonts.googleapis.com/css2?family=Inconsolata:wght@400;700&amp;family=Noto+Serif:ital,wght@0,400;0,700;1,400;1,700&amp;family=Tinos:ital,wght@0,400;0,700;1,400;1,700&amp;display=swap" rel="stylesheet">
+<link xmlns:pf="https://prefigure.org" href="https://fonts.cdnfonts.com/css/dejavu-serif" rel="stylesheet">
+<link xmlns:pf="https://prefigure.org" href="https://fonts.googleapis.com/css2?family=Roboto+Serif:opsz,wdth,wght@8..144,50..150,100..900&amp;display=swap" rel="stylesheet">
+<link xmlns:pf="https://prefigure.org" href="https://fonts.googleapis.com/css2?family=Open+Sans:wdth,wght@75..100,300..800&amp;display=swap" rel="stylesheet">
+<link xmlns:pf="https://prefigure.org" rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200">
+<script src="https://cdn.geogebra.org/apps/deployggb.js"></script><link href="_static/pretext/css/pretext.css" rel="stylesheet" type="text/css">
+<link href="_static/pretext/css/pretext_add_on.css" rel="stylesheet" type="text/css">
+<link href="_static/pretext/css/shell_default.css" rel="stylesheet" type="text/css">
+<link href="_static/pretext/css/banner_default.css" rel="stylesheet" type="text/css">
+<link href="_static/pretext/css/navbar_default.css" rel="stylesheet" type="text/css">
+<link href="_static/pretext/css/toc_default.css" rel="stylesheet" type="text/css">
+<link href="_static/pretext/css/knowls_default.css" rel="stylesheet" type="text/css">
+<link href="_static/pretext/css/style_default.css" rel="stylesheet" type="text/css">
+<link href="_static/pretext/css/colors_blue_red.css" rel="stylesheet" type="text/css">
+<link href="_static/pretext/css/setcolors.css" rel="stylesheet" type="text/css">
+<!--** eBookCongig is necessary to configure interactive       **-->
+<!--** Runestone components to run locally in reader's browser **-->
+<!--** No external communication:                              **-->
+<!--**     log level is 0, Runestone Services are disabled     **-->
+<script type="text/javascript">
+eBookConfig = {};
+eBookConfig.useRunestoneServices = false;
+eBookConfig.host = 'http://127.0.0.1:8000';
+eBookConfig.course = 'PTX_Course_Title_Here';
+eBookConfig.basecourse = 'PTX_Base_Course';
+eBookConfig.isLoggedIn = false;
+eBookConfig.email = '';
+eBookConfig.isInstructor = false;
+eBookConfig.logLevel = 0;
+eBookConfig.username = '';
+eBookConfig.readings = null;
+eBookConfig.activities = null;
+eBookConfig.downloadsEnabled = false;
+eBookConfig.allow_pairs = false;
+eBookConfig.enableScratchAC = false;
+eBookConfig.build_info = "";
+eBookConfig.python3 = null;
+eBookConfig.runestone_version = '7.4.5';
+eBookConfig.jobehost = '';
+eBookConfig.proxyuri_runs = '';
+eBookConfig.proxyuri_files = '';
+eBookConfig.enable_chatcodes =  false;
+</script>
+<!--*** Runestone Services ***-->
+<script src="_static/prefix-runtime.a28db57f2b9be365.bundle.js"></script><script src="_static/prefix-347.8328b60515045466.bundle.js"></script><script src="_static/prefix-runestone.0143ee6c5ca7e162.bundle.js"></script><link rel="stylesheet" type="text/css" href="_static/prefix-347.f9add1ca35d5ad93.css">
+<link rel="stylesheet" type="text/css" href="_static/prefix-runestone.82759e13f7f711fa.css">
+<style>
+#ez-Norman1999-Sounding-2-3 { counter-set: ez-Norman1999-Sounding-2-3 0; }
+#ez-Norman1999-Sounding-2-3 > li::marker { content: ""counter(ez-Norman1999-Sounding-2-3,lower-alpha)"."; }
+#ez-Norman1999-Sounding-2-3 > li { counter-increment: ez-Norman1999-Sounding-2-3; }
+#ez-Norman1999-Sounding-3-1 { counter-set: ez-Norman1999-Sounding-3-1 0; }
+#ez-Norman1999-Sounding-3-1 > li::marker { content: ""counter(ez-Norman1999-Sounding-3-1,lower-alpha)"."; }
+#ez-Norman1999-Sounding-3-1 > li { counter-increment: ez-Norman1999-Sounding-3-1; }
+#ez-Midwest-Derecho-2-3 { counter-set: ez-Midwest-Derecho-2-3 0; }
+#ez-Midwest-Derecho-2-3 > li::marker { content: ""counter(ez-Midwest-Derecho-2-3,lower-alpha)"."; }
+#ez-Midwest-Derecho-2-3 > li { counter-increment: ez-Midwest-Derecho-2-3; }
+#ez-Midwest-Derecho-3-1-1 { counter-set: ez-Midwest-Derecho-3-1-1 0; }
+#ez-Midwest-Derecho-3-1-1 > li::marker { content: ""counter(ez-Midwest-Derecho-3-1-1,lower-alpha)"."; }
+#ez-Midwest-Derecho-3-1-1 > li { counter-increment: ez-Midwest-Derecho-3-1-1; }
+#ez-MPX2023-Sounding-2-4 { counter-set: ez-MPX2023-Sounding-2-4 0; }
+#ez-MPX2023-Sounding-2-4 > li::marker { content: ""counter(ez-MPX2023-Sounding-2-4,lower-alpha)"."; }
+#ez-MPX2023-Sounding-2-4 > li { counter-increment: ez-MPX2023-Sounding-2-4; }
+#ez-MPX2023-Sounding-3-1 { counter-set: ez-MPX2023-Sounding-3-1 0; }
+#ez-MPX2023-Sounding-3-1 > li::marker { content: ""counter(ez-MPX2023-Sounding-3-1,lower-alpha)"."; }
+#ez-MPX2023-Sounding-3-1 > li { counter-increment: ez-MPX2023-Sounding-3-1; }
+#ez-Davenport-Sounding-2-4 { counter-set: ez-Davenport-Sounding-2-4 0; }
+#ez-Davenport-Sounding-2-4 > li::marker { content: ""counter(ez-Davenport-Sounding-2-4,lower-alpha)"."; }
+#ez-Davenport-Sounding-2-4 > li { counter-increment: ez-Davenport-Sounding-2-4; }
+#ez-Davenport-Sounding-3-1 { counter-set: ez-Davenport-Sounding-3-1 0; }
+#ez-Davenport-Sounding-3-1 > li::marker { content: ""counter(ez-Davenport-Sounding-3-1,lower-alpha)"."; }
+#ez-Davenport-Sounding-3-1 > li { counter-increment: ez-Davenport-Sounding-3-1; }
+#ez-identifyAwTB-2-2 { counter-set: ez-identifyAwTB-2-2 0; }
+#ez-identifyAwTB-2-2 > li::marker { content: ""counter(ez-identifyAwTB-2-2,lower-alpha)"."; }
+#ez-identifyAwTB-2-2 > li { counter-increment: ez-identifyAwTB-2-2; }
+#ez-identifyAwTB-3-1 { counter-set: ez-identifyAwTB-3-1 0; }
+#ez-identifyAwTB-3-1 > li::marker { content: ""counter(ez-identifyAwTB-3-1,lower-alpha)"."; }
+#ez-identifyAwTB-3-1 > li { counter-increment: ez-identifyAwTB-3-1; }
+#ez-SeattleSun-2-4 { counter-set: ez-SeattleSun-2-4 0; }
+#ez-SeattleSun-2-4 > li::marker { content: ""counter(ez-SeattleSun-2-4,lower-alpha)"."; }
+#ez-SeattleSun-2-4 > li { counter-increment: ez-SeattleSun-2-4; }
+#ez-SeattleSun-2-4-3-2 { counter-set: ez-SeattleSun-2-4-3-2 0; }
+#ez-SeattleSun-2-4-3-2 > li::marker { content: ""counter(ez-SeattleSun-2-4-3-2,lower-roman)"."; }
+#ez-SeattleSun-2-4-3-2 > li { counter-increment: ez-SeattleSun-2-4-3-2; }
+#ez-SeattleSun-3-1 { counter-set: ez-SeattleSun-3-1 0; }
+#ez-SeattleSun-3-1 > li::marker { content: ""counter(ez-SeattleSun-3-1,lower-alpha)"."; }
+#ez-SeattleSun-3-1 > li { counter-increment: ez-SeattleSun-3-1; }
+#ez-SeattleSun-3-1-3-1 { counter-set: ez-SeattleSun-3-1-3-1 0; }
+#ez-SeattleSun-3-1-3-1 > li::marker { content: ""counter(ez-SeattleSun-3-1-3-1,lower-roman)"."; }
+#ez-SeattleSun-3-1-3-1 > li { counter-increment: ez-SeattleSun-3-1-3-1; }
+#ModelingLowTempRio-2-4 { counter-set: ModelingLowTempRio-2-4 0; }
+#ModelingLowTempRio-2-4 > li::marker { content: ""counter(ModelingLowTempRio-2-4,lower-alpha)"."; }
+#ModelingLowTempRio-2-4 > li { counter-increment: ModelingLowTempRio-2-4; }
+#ModelingLowTempRio-3-1 { counter-set: ModelingLowTempRio-3-1 0; }
+#ModelingLowTempRio-3-1 > li::marker { content: ""counter(ModelingLowTempRio-3-1,lower-alpha)"."; }
+#ModelingLowTempRio-3-1 > li { counter-increment: ModelingLowTempRio-3-1; }
+#ModelingLowHighTempStCloud-2-4 { counter-set: ModelingLowHighTempStCloud-2-4 0; }
+#ModelingLowHighTempStCloud-2-4 > li::marker { content: ""counter(ModelingLowHighTempStCloud-2-4,lower-alpha)"."; }
+#ModelingLowHighTempStCloud-2-4 > li { counter-increment: ModelingLowHighTempStCloud-2-4; }
+#ModelingLowHighTempStCloud-3-1 { counter-set: ModelingLowHighTempStCloud-3-1 0; }
+#ModelingLowHighTempStCloud-3-1 > li::marker { content: ""counter(ModelingLowHighTempStCloud-3-1,lower-alpha)"."; }
+#ModelingLowHighTempStCloud-3-1 > li { counter-increment: ModelingLowHighTempStCloud-3-1; }
+#ex_geo_heights_45S-2-4 { counter-set: ex_geo_heights_45S-2-4 0; }
+#ex_geo_heights_45S-2-4 > li::marker { content: ""counter(ex_geo_heights_45S-2-4,lower-alpha)"."; }
+#ex_geo_heights_45S-2-4 > li { counter-increment: ex_geo_heights_45S-2-4; }
+#ex_geo_heights_45S-3-1 { counter-set: ex_geo_heights_45S-3-1 0; }
+#ex_geo_heights_45S-3-1 > li::marker { content: ""counter(ex_geo_heights_45S-3-1,lower-alpha)"."; }
+#ex_geo_heights_45S-3-1 > li { counter-increment: ex_geo_heights_45S-3-1; }
+#GeopotentialHeightsAt35N-2-4 { counter-set: GeopotentialHeightsAt35N-2-4 0; }
+#GeopotentialHeightsAt35N-2-4 > li::marker { content: ""counter(GeopotentialHeightsAt35N-2-4,lower-alpha)"."; }
+#GeopotentialHeightsAt35N-2-4 > li { counter-increment: GeopotentialHeightsAt35N-2-4; }
+#GeopotentialHeightsAt35N-3-1 { counter-set: GeopotentialHeightsAt35N-3-1 0; }
+#GeopotentialHeightsAt35N-3-1 > li::marker { content: ""counter(GeopotentialHeightsAt35N-3-1,lower-alpha)"."; }
+#GeopotentialHeightsAt35N-3-1 > li { counter-increment: GeopotentialHeightsAt35N-3-1; }
+#USweathermap-2-2-2 { counter-set: USweathermap-2-2-2 0; }
+#USweathermap-2-2-2 > li::marker { content: ""counter(USweathermap-2-2-2,lower-alpha)""; }
+#USweathermap-2-2-2 > li { counter-increment: USweathermap-2-2-2; }
+#USweathermap-3-1-1 { counter-set: USweathermap-3-1-1 0; }
+#USweathermap-3-1-1 > li::marker { content: ""counter(USweathermap-3-1-1,lower-alpha)""; }
+#USweathermap-3-1-1 > li { counter-increment: USweathermap-3-1-1; }
+#windchillexercise-2-1-8 { counter-set: windchillexercise-2-1-8 0; }
+#windchillexercise-2-1-8 > li::marker { content: ""counter(windchillexercise-2-1-8,lower-alpha)"."; }
+#windchillexercise-2-1-8 > li { counter-increment: windchillexercise-2-1-8; }
+#windchillexercise-3-1-1 { counter-set: windchillexercise-3-1-1 0; }
+#windchillexercise-3-1-1 > li::marker { content: ""counter(windchillexercise-3-1-1,lower-alpha)"."; }
+#windchillexercise-3-1-1 > li { counter-increment: windchillexercise-3-1-1; }
+#snowfall1-2-1-7 { counter-set: snowfall1-2-1-7 0; }
+#snowfall1-2-1-7 > li::marker { content: ""counter(snowfall1-2-1-7,lower-alpha)"."; }
+#snowfall1-2-1-7 > li { counter-increment: snowfall1-2-1-7; }
+#snowfall1-3-1-1 { counter-set: snowfall1-3-1-1 0; }
+#snowfall1-3-1-1 > li::marker { content: ""counter(snowfall1-3-1-1,lower-alpha)"."; }
+#snowfall1-3-1-1 > li { counter-increment: snowfall1-3-1-1; }
+#UHI1-2-1-15 { counter-set: UHI1-2-1-15 0; }
+#UHI1-2-1-15 > li::marker { content: ""counter(UHI1-2-1-15,lower-alpha)"."; }
+#UHI1-2-1-15 > li { counter-increment: UHI1-2-1-15; }
+#UHI1-3-1-1 { counter-set: UHI1-3-1-1 0; }
+#UHI1-3-1-1 > li::marker { content: ""counter(UHI1-3-1-1,lower-alpha)"."; }
+#UHI1-3-1-1 > li { counter-increment: UHI1-3-1-1; }
+#dewpoint-2-1-7 { counter-set: dewpoint-2-1-7 0; }
+#dewpoint-2-1-7 > li::marker { content: ""counter(dewpoint-2-1-7,lower-alpha)""; }
+#dewpoint-2-1-7 > li { counter-increment: dewpoint-2-1-7; }
+#dewpoint-3-1-1 { counter-set: dewpoint-3-1-1 0; }
+#dewpoint-3-1-1 > li::marker { content: ""counter(dewpoint-3-1-1,lower-alpha)""; }
+#dewpoint-3-1-1 > li { counter-increment: dewpoint-3-1-1; }
+#hdwindexexercise-2-1-5 { counter-set: hdwindexexercise-2-1-5 0; }
+#hdwindexexercise-2-1-5 > li::marker { content: ""counter(hdwindexexercise-2-1-5,lower-alpha)""; }
+#hdwindexexercise-2-1-5 > li { counter-increment: hdwindexexercise-2-1-5; }
+#hdwindexexercise-3-1-1 { counter-set: hdwindexexercise-3-1-1 0; }
+#hdwindexexercise-3-1-1 > li::marker { content: ""counter(hdwindexexercise-3-1-1,lower-alpha)""; }
+#hdwindexexercise-3-1-1 > li { counter-increment: hdwindexexercise-3-1-1; }
+#MyFrostbite-2-3-1 { counter-set: MyFrostbite-2-3-1 0; }
+#MyFrostbite-2-3-1 > li::marker { content: ""counter(MyFrostbite-2-3-1,lower-alpha)""; }
+#MyFrostbite-2-3-1 > li { counter-increment: MyFrostbite-2-3-1; }
+#Plotting3D2-2-1-2 { counter-set: Plotting3D2-2-1-2 0; }
+#Plotting3D2-2-1-2 > li::marker { content: ""counter(Plotting3D2-2-1-2,lower-alpha)""; }
+#Plotting3D2-2-1-2 > li { counter-increment: Plotting3D2-2-1-2; }
+#Plotting3D2-3-1-1 { counter-set: Plotting3D2-3-1-1 0; }
+#Plotting3D2-3-1-1 > li::marker { content: ""counter(Plotting3D2-3-1-1,lower-alpha)""; }
+#Plotting3D2-3-1-1 > li { counter-increment: Plotting3D2-3-1-1; }
+#Ez-9-1-2-2-1-7 { counter-set: Ez-9-1-2-2-1-7 0; }
+#Ez-9-1-2-2-1-7 > li::marker { content: ""counter(Ez-9-1-2-2-1-7,lower-alpha)"."; }
+#Ez-9-1-2-2-1-7 > li { counter-increment: Ez-9-1-2-2-1-7; }
+#Ez-9-1-2-3-1-1 { counter-set: Ez-9-1-2-3-1-1 0; }
+#Ez-9-1-2-3-1-1 > li::marker { content: ""counter(Ez-9-1-2-3-1-1,lower-alpha)"."; }
+#Ez-9-1-2-3-1-1 > li { counter-increment: Ez-9-1-2-3-1-1; }
+#Ez-9-1-2-4-1-1 { counter-set: Ez-9-1-2-4-1-1 0; }
+#Ez-9-1-2-4-1-1 > li::marker { content: ""counter(Ez-9-1-2-4-1-1,lower-alpha)"."; }
+#Ez-9-1-2-4-1-1 > li { counter-increment: Ez-9-1-2-4-1-1; }
+#PlottingWA-2-1-1 { counter-set: PlottingWA-2-1-1 0; }
+#PlottingWA-2-1-1 > li::marker { content: ""counter(PlottingWA-2-1-1,lower-alpha)"."; }
+#PlottingWA-2-1-1 > li { counter-increment: PlottingWA-2-1-1; }
+#PlottingWA-3-1 { counter-set: PlottingWA-3-1 0; }
+#PlottingWA-3-1 > li::marker { content: ""counter(PlottingWA-3-1,lower-alpha)"."; }
+#PlottingWA-3-1 > li { counter-increment: PlottingWA-3-1; }
+#contoursandgraphs-2-2-1 { counter-set: contoursandgraphs-2-2-1 0; }
+#contoursandgraphs-2-2-1 > li::marker { content: ""counter(contoursandgraphs-2-2-1,lower-alpha)"."; }
+#contoursandgraphs-2-2-1 > li { counter-increment: contoursandgraphs-2-2-1; }
+#contoursandgraphs-3-1 { counter-set: contoursandgraphs-3-1 0; }
+#contoursandgraphs-3-1 > li::marker { content: ""counter(contoursandgraphs-3-1,lower-alpha)"."; }
+#contoursandgraphs-3-1 > li { counter-increment: contoursandgraphs-3-1; }
+#winchillcontours-2-3 { counter-set: winchillcontours-2-3 0; }
+#winchillcontours-2-3 > li::marker { content: ""counter(winchillcontours-2-3,lower-alpha)"."; }
+#winchillcontours-2-3 > li { counter-increment: winchillcontours-2-3; }
+#winchillcontours-3-1 { counter-set: winchillcontours-3-1 0; }
+#winchillcontours-3-1 > li::marker { content: ""counter(winchillcontours-3-1,lower-alpha)"."; }
+#winchillcontours-3-1 > li { counter-increment: winchillcontours-3-1; }
+#levelsetsin3d-2-1-1 { counter-set: levelsetsin3d-2-1-1 0; }
+#levelsetsin3d-2-1-1 > li::marker { content: ""counter(levelsetsin3d-2-1-1,lower-alpha)"."; }
+#levelsetsin3d-2-1-1 > li { counter-increment: levelsetsin3d-2-1-1; }
+#levelsetsin3d-3-1 { counter-set: levelsetsin3d-3-1 0; }
+#levelsetsin3d-3-1 > li::marker { content: ""counter(levelsetsin3d-3-1,lower-alpha)"."; }
+#levelsetsin3d-3-1 > li { counter-increment: levelsetsin3d-3-1; }
+#PA-7B-3-2-2 { counter-set: PA-7B-3-2-2 0; }
+#PA-7B-3-2-2 > li::marker { content: ""counter(PA-7B-3-2-2,lower-alpha)"."; }
+#PA-7B-3-2-2 > li { counter-increment: PA-7B-3-2-2; }
+#PA-7B-3-3-1-1 { counter-set: PA-7B-3-3-1-1 0; }
+#PA-7B-3-3-1-1 > li::marker { content: ""counter(PA-7B-3-3-1-1,lower-alpha)"."; }
+#PA-7B-3-3-1-1 > li { counter-increment: PA-7B-3-3-1-1; }
+#ez-sphericalp2r-2-2 { counter-set: ez-sphericalp2r-2-2 0; }
+#ez-sphericalp2r-2-2 > li::marker { content: ""counter(ez-sphericalp2r-2-2,lower-alpha)"."; }
+#ez-sphericalp2r-2-2 > li { counter-increment: ez-sphericalp2r-2-2; }
+#ez-sphericalp2r-3-1 { counter-set: ez-sphericalp2r-3-1 0; }
+#ez-sphericalp2r-3-1 > li::marker { content: ""counter(ez-sphericalp2r-3-1,lower-alpha)"."; }
+#ez-sphericalp2r-3-1 > li { counter-increment: ez-sphericalp2r-3-1; }
+#rectangulartopolar4-2-1-1 { counter-set: rectangulartopolar4-2-1-1 0; }
+#rectangulartopolar4-2-1-1 > li::marker { content: ""counter(rectangulartopolar4-2-1-1,lower-alpha)"."; }
+#rectangulartopolar4-2-1-1 > li { counter-increment: rectangulartopolar4-2-1-1; }
+#rectangulartopolar4-3-1 { counter-set: rectangulartopolar4-3-1 0; }
+#rectangulartopolar4-3-1 > li::marker { content: ""counter(rectangulartopolar4-3-1,lower-alpha)"."; }
+#rectangulartopolar4-3-1 > li { counter-increment: rectangulartopolar4-3-1; }
+#PA_11_8-2 { counter-set: PA_11_8-2 0; }
+#PA_11_8-2 > li::marker { content: ""counter(PA_11_8-2,lower-alpha)"."; }
+#PA_11_8-2 > li { counter-increment: PA_11_8-2; }
+#A_11_8_7-1-1 { counter-set: A_11_8_7-1-1 0; }
+#A_11_8_7-1-1 > li::marker { content: ""counter(A_11_8_7-1-1,lower-alpha)"."; }
+#A_11_8_7-1-1 > li { counter-increment: A_11_8_7-1-1; }
+#ez-CartesianToSpherical-2-1-1 { counter-set: ez-CartesianToSpherical-2-1-1 0; }
+#ez-CartesianToSpherical-2-1-1 > li::marker { content: ""counter(ez-CartesianToSpherical-2-1-1,lower-alpha)"."; }
+#ez-CartesianToSpherical-2-1-1 > li { counter-increment: ez-CartesianToSpherical-2-1-1; }
+#ez-CartesianToSpherical-3-1 { counter-set: ez-CartesianToSpherical-3-1 0; }
+#ez-CartesianToSpherical-3-1 > li::marker { content: ""counter(ez-CartesianToSpherical-3-1,lower-alpha)"."; }
+#ez-CartesianToSpherical-3-1 > li { counter-increment: ez-CartesianToSpherical-3-1; }
+#ez-CartesianToSpherical-4-1 { counter-set: ez-CartesianToSpherical-4-1 0; }
+#ez-CartesianToSpherical-4-1 > li::marker { content: ""counter(ez-CartesianToSpherical-4-1,lower-alpha)"."; }
+#ez-CartesianToSpherical-4-1 > li { counter-increment: ez-CartesianToSpherical-4-1; }
+#sec_displacementvectors-25-3-1-2-2 { counter-set: sec_displacementvectors-25-3-1-2-2 0; }
+#sec_displacementvectors-25-3-1-2-2 > li::marker { content: ""counter(sec_displacementvectors-25-3-1-2-2,lower-alpha)"."; }
+#sec_displacementvectors-25-3-1-2-2 > li { counter-increment: sec_displacementvectors-25-3-1-2-2; }
+#horizontalwindvector-2-1-1 { counter-set: horizontalwindvector-2-1-1 0; }
+#horizontalwindvector-2-1-1 > li::marker { content: ""counter(horizontalwindvector-2-1-1,lower-alpha)"."; }
+#horizontalwindvector-2-1-1 > li { counter-increment: horizontalwindvector-2-1-1; }
+#horizontalwindvector-3-1 { counter-set: horizontalwindvector-3-1 0; }
+#horizontalwindvector-3-1 > li::marker { content: ""counter(horizontalwindvector-3-1,lower-alpha)"."; }
+#horizontalwindvector-3-1 > li { counter-increment: horizontalwindvector-3-1; }
+#ResolveVector-2-1-1 { counter-set: ResolveVector-2-1-1 0; }
+#ResolveVector-2-1-1 > li::marker { content: ""counter(ResolveVector-2-1-1,lower-alpha)"."; }
+#ResolveVector-2-1-1 > li { counter-increment: ResolveVector-2-1-1; }
+#ResolveVector-3-1-1 { counter-set: ResolveVector-3-1-1 0; }
+#ResolveVector-3-1-1 > li::marker { content: ""counter(ResolveVector-3-1-1,lower-alpha)"."; }
+#ResolveVector-3-1-1 > li { counter-increment: ResolveVector-3-1-1; }
+#directionsandvectors-2-1-3 { counter-set: directionsandvectors-2-1-3 0; }
+#directionsandvectors-2-1-3 > li::marker { content: ""counter(directionsandvectors-2-1-3,lower-alpha)"."; }
+#directionsandvectors-2-1-3 > li { counter-increment: directionsandvectors-2-1-3; }
+#directionsandvectors-3-1 { counter-set: directionsandvectors-3-1 0; }
+#directionsandvectors-3-1 > li::marker { content: ""counter(directionsandvectors-3-1,lower-alpha)"."; }
+#directionsandvectors-3-1 > li { counter-increment: directionsandvectors-3-1; }
+#meanwindvectors0-2-2-6 { counter-set: meanwindvectors0-2-2-6 0; }
+#meanwindvectors0-2-2-6 > li::marker { content: ""counter(meanwindvectors0-2-2-6,lower-alpha)"."; }
+#meanwindvectors0-2-2-6 > li { counter-increment: meanwindvectors0-2-2-6; }
+#meanwindvectors0-3-1-1 { counter-set: meanwindvectors0-3-1-1 0; }
+#meanwindvectors0-3-1-1 > li::marker { content: ""counter(meanwindvectors0-3-1-1,lower-alpha)"."; }
+#meanwindvectors0-3-1-1 > li { counter-increment: meanwindvectors0-3-1-1; }
+#AnglesAndSigns-2-1 { counter-set: AnglesAndSigns-2-1 0; }
+#AnglesAndSigns-2-1 > li::marker { content: ""counter(AnglesAndSigns-2-1,lower-alpha)"."; }
+#AnglesAndSigns-2-1 > li { counter-increment: AnglesAndSigns-2-1; }
+#AnglesAndSigns-2-1-2-2 { counter-set: AnglesAndSigns-2-1-2-2 0; }
+#AnglesAndSigns-2-1-2-2 > li::marker { content: ""counter(AnglesAndSigns-2-1-2-2,lower-roman)"."; }
+#AnglesAndSigns-2-1-2-2 > li { counter-increment: AnglesAndSigns-2-1-2-2; }
+#dotproductbasic-2-1-3 { counter-set: dotproductbasic-2-1-3 0; }
+#dotproductbasic-2-1-3 > li::marker { content: ""counter(dotproductbasic-2-1-3,lower-alpha)"."; }
+#dotproductbasic-2-1-3 > li { counter-increment: dotproductbasic-2-1-3; }
+#dotproductbasic-3-1-1 { counter-set: dotproductbasic-3-1-1 0; }
+#dotproductbasic-3-1-1 > li::marker { content: ""counter(dotproductbasic-3-1-1,lower-alpha)"."; }
+#dotproductbasic-3-1-1 > li { counter-increment: dotproductbasic-3-1-1; }
+#advectioncentralUS-2-1-3 { counter-set: advectioncentralUS-2-1-3 0; }
+#advectioncentralUS-2-1-3 > li::marker { content: ""counter(advectioncentralUS-2-1-3,lower-alpha)"."; }
+#advectioncentralUS-2-1-3 > li { counter-increment: advectioncentralUS-2-1-3; }
+#advectioncentralUS-3-1-1 { counter-set: advectioncentralUS-3-1-1 0; }
+#advectioncentralUS-3-1-1 > li::marker { content: ""counter(advectioncentralUS-3-1-1,lower-alpha)"."; }
+#advectioncentralUS-3-1-1 > li { counter-increment: advectioncentralUS-3-1-1; }
+#AdvectionInNY-2-1-3 { counter-set: AdvectionInNY-2-1-3 0; }
+#AdvectionInNY-2-1-3 > li::marker { content: ""counter(AdvectionInNY-2-1-3,lower-alpha)"."; }
+#AdvectionInNY-2-1-3 > li { counter-increment: AdvectionInNY-2-1-3; }
+#AdvectionInNY-3-1-1 { counter-set: AdvectionInNY-3-1-1 0; }
+#AdvectionInNY-3-1-1 > li::marker { content: ""counter(AdvectionInNY-3-1-1,lower-alpha)"."; }
+#AdvectionInNY-3-1-1 > li { counter-increment: AdvectionInNY-3-1-1; }
+#advectionsartell-2-3-1 { counter-set: advectionsartell-2-3-1 0; }
+#advectionsartell-2-3-1 > li::marker { content: ""counter(advectionsartell-2-3-1,lower-alpha)"."; }
+#advectionsartell-2-3-1 > li { counter-increment: advectionsartell-2-3-1; }
+#advectionsartell-3-1 { counter-set: advectionsartell-3-1 0; }
+#advectionsartell-3-1 > li::marker { content: ""counter(advectionsartell-3-1,lower-alpha)"."; }
+#advectionsartell-3-1 > li { counter-increment: advectionsartell-3-1; }
+#advectioncoldspring-2-1-6 { counter-set: advectioncoldspring-2-1-6 0; }
+#advectioncoldspring-2-1-6 > li::marker { content: ""counter(advectioncoldspring-2-1-6,lower-alpha)"."; }
+#advectioncoldspring-2-1-6 > li { counter-increment: advectioncoldspring-2-1-6; }
+#advectioncoldspring-3-1 { counter-set: advectioncoldspring-3-1 0; }
+#advectioncoldspring-3-1 > li::marker { content: ""counter(advectioncoldspring-3-1,lower-alpha)"."; }
+#advectioncoldspring-3-1 > li { counter-increment: advectioncoldspring-3-1; }
+#DeterminantComputations-2-1-1 { counter-set: DeterminantComputations-2-1-1 0; }
+#DeterminantComputations-2-1-1 > li::marker { content: ""counter(DeterminantComputations-2-1-1,lower-alpha)"."; }
+#DeterminantComputations-2-1-1 > li { counter-increment: DeterminantComputations-2-1-1; }
+#DeterminantComputations-3-1-1 { counter-set: DeterminantComputations-3-1-1 0; }
+#DeterminantComputations-3-1-1 > li::marker { content: ""counter(DeterminantComputations-3-1-1,lower-alpha)"."; }
+#DeterminantComputations-3-1-1 > li { counter-increment: DeterminantComputations-3-1-1; }
+#coriolisgolfball-2-1-3 { counter-set: coriolisgolfball-2-1-3 0; }
+#coriolisgolfball-2-1-3 > li::marker { content: ""counter(coriolisgolfball-2-1-3,lower-alpha)"."; }
+#coriolisgolfball-2-1-3 > li { counter-increment: coriolisgolfball-2-1-3; }
+#coriolisgolfball-3-1-1 { counter-set: coriolisgolfball-3-1-1 0; }
+#coriolisgolfball-3-1-1 > li::marker { content: ""counter(coriolisgolfball-3-1-1,lower-alpha)"."; }
+#coriolisgolfball-3-1-1 > li { counter-increment: coriolisgolfball-3-1-1; }
+#VSorU-2-1-1 { counter-set: VSorU-2-1-1 0; }
+#VSorU-2-1-1 > li::marker { content: ""counter(VSorU-2-1-1,lower-alpha)"."; }
+#VSorU-2-1-1 > li { counter-increment: VSorU-2-1-1; }
+#VSorU-3-1-1 { counter-set: VSorU-3-1-1 0; }
+#VSorU-3-1-1 > li::marker { content: ""counter(VSorU-3-1-1,lower-alpha)"."; }
+#VSorU-3-1-1 > li { counter-increment: VSorU-3-1-1; }
+#NoVerticalCross-2-3 { counter-set: NoVerticalCross-2-3 0; }
+#NoVerticalCross-2-3 > li::marker { content: ""counter(NoVerticalCross-2-3,lower-alpha)"."; }
+#NoVerticalCross-2-3 > li { counter-increment: NoVerticalCross-2-3; }
+#NoVerticalCross-3-1 { counter-set: NoVerticalCross-3-1 0; }
+#NoVerticalCross-3-1 > li::marker { content: ""counter(NoVerticalCross-3-1,lower-alpha)"."; }
+#NoVerticalCross-3-1 > li { counter-increment: NoVerticalCross-3-1; }
+#VenusCoriolis-2-2 { counter-set: VenusCoriolis-2-2 0; }
+#VenusCoriolis-2-2 > li::marker { content: ""counter(VenusCoriolis-2-2,lower-alpha)"."; }
+#VenusCoriolis-2-2 > li { counter-increment: VenusCoriolis-2-2; }
+#VenusCoriolis-3-1 { counter-set: VenusCoriolis-3-1 0; }
+#VenusCoriolis-3-1 > li::marker { content: ""counter(VenusCoriolis-3-1,lower-alpha)"."; }
+#VenusCoriolis-3-1 > li { counter-increment: VenusCoriolis-3-1; }
+#PickingKoff-2-1-4 { counter-set: PickingKoff-2-1-4 0; }
+#PickingKoff-2-1-4 > li::marker { content: ""counter(PickingKoff-2-1-4,lower-alpha)"."; }
+#PickingKoff-2-1-4 > li { counter-increment: PickingKoff-2-1-4; }
+#PickingKoff-3-1 { counter-set: PickingKoff-3-1 0; }
+#PickingKoff-3-1 > li::marker { content: ""counter(PickingKoff-3-1,lower-alpha)"."; }
+#PickingKoff-3-1 > li { counter-increment: PickingKoff-3-1; }
+#TechnologyCrossProducts-2-1-1 { counter-set: TechnologyCrossProducts-2-1-1 0; }
+#TechnologyCrossProducts-2-1-1 > li::marker { content: ""counter(TechnologyCrossProducts-2-1-1,lower-alpha)"."; }
+#TechnologyCrossProducts-2-1-1 > li { counter-increment: TechnologyCrossProducts-2-1-1; }
+#BulkRichardsonNumber-2-5-1 { counter-set: BulkRichardsonNumber-2-5-1 0; }
+#BulkRichardsonNumber-2-5-1 > li::marker { content: ""counter(BulkRichardsonNumber-2-5-1,lower-alpha)"."; }
+#BulkRichardsonNumber-2-5-1 > li { counter-increment: BulkRichardsonNumber-2-5-1; }
+#BulkRichardsonNumber-3-1 { counter-set: BulkRichardsonNumber-3-1 0; }
+#BulkRichardsonNumber-3-1 > li::marker { content: ""counter(BulkRichardsonNumber-3-1,lower-alpha)"."; }
+#BulkRichardsonNumber-3-1 > li { counter-increment: BulkRichardsonNumber-3-1; }
+#windchillpartials-3 { counter-set: windchillpartials-3 0; }
+#windchillpartials-3 > li::marker { content: ""counter(windchillpartials-3,lower-alpha)"."; }
+#windchillpartials-3 > li { counter-increment: windchillpartials-3; }
+#windchillpartials-4-1 { counter-set: windchillpartials-4-1 0; }
+#windchillpartials-4-1 > li::marker { content: ""counter(windchillpartials-4-1,lower-alpha)"."; }
+#windchillpartials-4-1 > li { counter-increment: windchillpartials-4-1; }
+#interpretfirstorderpartials-8-3 { counter-set: interpretfirstorderpartials-8-3 0; }
+#interpretfirstorderpartials-8-3 > li::marker { content: ""counter(interpretfirstorderpartials-8-3,lower-alpha)"."; }
+#interpretfirstorderpartials-8-3 > li { counter-increment: interpretfirstorderpartials-8-3; }
+#interpretfirstorderpartials-8-4-1 { counter-set: interpretfirstorderpartials-8-4-1 0; }
+#interpretfirstorderpartials-8-4-1 > li::marker { content: ""counter(interpretfirstorderpartials-8-4-1,lower-alpha)"."; }
+#interpretfirstorderpartials-8-4-1 > li { counter-increment: interpretfirstorderpartials-8-4-1; }
+#meanwindspeed-3 { counter-set: meanwindspeed-3 0; }
+#meanwindspeed-3 > li::marker { content: ""counter(meanwindspeed-3,lower-alpha)"."; }
+#meanwindspeed-3 > li { counter-increment: meanwindspeed-3; }
+#meanwindspeed-4-1 { counter-set: meanwindspeed-4-1 0; }
+#meanwindspeed-4-1 > li::marker { content: ""counter(meanwindspeed-4-1,lower-alpha)"."; }
+#meanwindspeed-4-1 > li { counter-increment: meanwindspeed-4-1; }
+#SVPexercise-4 { counter-set: SVPexercise-4 0; }
+#SVPexercise-4 > li::marker { content: ""counter(SVPexercise-4,lower-alpha)"."; }
+#SVPexercise-4 > li { counter-increment: SVPexercise-4; }
+#SVPexercise-5-1 { counter-set: SVPexercise-5-1 0; }
+#SVPexercise-5-1 > li::marker { content: ""counter(SVPexercise-5-1,lower-alpha)"."; }
+#SVPexercise-5-1 > li { counter-increment: SVPexercise-5-1; }
+#partialisobaricmap-2-3 { counter-set: partialisobaricmap-2-3 0; }
+#partialisobaricmap-2-3 > li::marker { content: ""counter(partialisobaricmap-2-3,lower-alpha)"."; }
+#partialisobaricmap-2-3 > li { counter-increment: partialisobaricmap-2-3; }
+#partialisobaricmap-3-1 { counter-set: partialisobaricmap-3-1 0; }
+#partialisobaricmap-3-1 > li::marker { content: ""counter(partialisobaricmap-3-1,lower-alpha)"."; }
+#partialisobaricmap-3-1 > li { counter-increment: partialisobaricmap-3-1; }
+#ez_potential_temperature-2-1-8 { counter-set: ez_potential_temperature-2-1-8 0; }
+#ez_potential_temperature-2-1-8 > li::marker { content: ""counter(ez_potential_temperature-2-1-8,lower-alpha)"."; }
+#ez_potential_temperature-2-1-8 > li { counter-increment: ez_potential_temperature-2-1-8; }
+#ez_potential_temperature-3-1 { counter-set: ez_potential_temperature-3-1 0; }
+#ez_potential_temperature-3-1 > li::marker { content: ""counter(ez_potential_temperature-3-1,lower-alpha)"."; }
+#ez_potential_temperature-3-1 > li { counter-increment: ez_potential_temperature-3-1; }
+#insolation-2-3 { counter-set: insolation-2-3 0; }
+#insolation-2-3 > li::marker { content: ""counter(insolation-2-3,lower-alpha)"."; }
+#insolation-2-3 > li { counter-increment: insolation-2-3; }
+#frostbitepartial-2-3 { counter-set: frostbitepartial-2-3 0; }
+#frostbitepartial-2-3 > li::marker { content: ""counter(frostbitepartial-2-3,lower-alpha)"."; }
+#frostbitepartial-2-3 > li { counter-increment: frostbitepartial-2-3; }
+#frostbitepartial-3-1 { counter-set: frostbitepartial-3-1 0; }
+#frostbitepartial-3-1 > li::marker { content: ""counter(frostbitepartial-3-1,lower-alpha)"."; }
+#frostbitepartial-3-1 > li { counter-increment: frostbitepartial-3-1; }
+#WetBulbGlobeTemp-2-2 { counter-set: WetBulbGlobeTemp-2-2 0; }
+#WetBulbGlobeTemp-2-2 > li::marker { content: ""counter(WetBulbGlobeTemp-2-2,lower-alpha)"."; }
+#WetBulbGlobeTemp-2-2 > li { counter-increment: WetBulbGlobeTemp-2-2; }
+#WetBulbGlobeTemp-3-1 { counter-set: WetBulbGlobeTemp-3-1 0; }
+#WetBulbGlobeTemp-3-1 > li::marker { content: ""counter(WetBulbGlobeTemp-3-1,lower-alpha)"."; }
+#WetBulbGlobeTemp-3-1 > li { counter-increment: WetBulbGlobeTemp-3-1; }
+#A_10_2_11-2-2-5 { counter-set: A_10_2_11-2-2-5 0; }
+#A_10_2_11-2-2-5 > li::marker { content: ""counter(A_10_2_11-2-2-5,lower-alpha)"."; }
+#A_10_2_11-2-2-5 > li { counter-increment: A_10_2_11-2-2-5; }
+#partialbackwards-2 { counter-set: partialbackwards-2 0; }
+#partialbackwards-2 > li::marker { content: ""counter(partialbackwards-2,lower-alpha)"."; }
+#partialbackwards-2 > li { counter-increment: partialbackwards-2; }
+#partialbackwards-3-1 { counter-set: partialbackwards-3-1 0; }
+#partialbackwards-3-1 > li::marker { content: ""counter(partialbackwards-3-1,lower-alpha)"."; }
+#partialbackwards-3-1 > li { counter-increment: partialbackwards-3-1; }
+#firstcontouradvect-4 { counter-set: firstcontouradvect-4 0; }
+#firstcontouradvect-4 > li::marker { content: ""counter(firstcontouradvect-4,lower-alpha)"."; }
+#firstcontouradvect-4 > li { counter-increment: firstcontouradvect-4; }
+#firstcontouradvect-5-1 { counter-set: firstcontouradvect-5-1 0; }
+#firstcontouradvect-5-1 > li::marker { content: ""counter(firstcontouradvect-5-1,lower-alpha)"."; }
+#firstcontouradvect-5-1 > li { counter-increment: firstcontouradvect-5-1; }
+#dewpointcontours-2-3 { counter-set: dewpointcontours-2-3 0; }
+#dewpointcontours-2-3 > li::marker { content: ""counter(dewpointcontours-2-3,lower-alpha)"."; }
+#dewpointcontours-2-3 > li { counter-increment: dewpointcontours-2-3; }
+#dewpointcontours-2-3-3-2 { counter-set: dewpointcontours-2-3-3-2 0; }
+#dewpointcontours-2-3-3-2 > li::marker { content: ""counter(dewpointcontours-2-3-3-2,lower-roman)"."; }
+#dewpointcontours-2-3-3-2 > li { counter-increment: dewpointcontours-2-3-3-2; }
+#dewpointcontours-3-1 { counter-set: dewpointcontours-3-1 0; }
+#dewpointcontours-3-1 > li::marker { content: ""counter(dewpointcontours-3-1,lower-alpha)"."; }
+#dewpointcontours-3-1 > li { counter-increment: dewpointcontours-3-1; }
+#extracted-webwork-5-1-1-4-1-1-1 { counter-set: extracted-webwork-5-1-1-4-1-1-1 0; }
+#extracted-webwork-5-1-1-4-1-1-1 > li::marker { content: "("counter(extracted-webwork-5-1-1-4-1-1-1,lower-alpha)")"; }
+#extracted-webwork-5-1-1-4-1-1-1 > li { counter-increment: extracted-webwork-5-1-1-4-1-1-1; }
+#extracted-webwork-5-1-1-4-1-2-1 { counter-set: extracted-webwork-5-1-1-4-1-2-1 0; }
+#extracted-webwork-5-1-1-4-1-2-1 > li::marker { content: ""counter(extracted-webwork-5-1-1-4-1-2-1,upper-alpha)"."; }
+#extracted-webwork-5-1-1-4-1-2-1 > li { counter-increment: extracted-webwork-5-1-1-4-1-2-1; }
+#transportequation-2-2 { counter-set: transportequation-2-2 0; }
+#transportequation-2-2 > li::marker { content: ""counter(transportequation-2-2,lower-alpha)"."; }
+#transportequation-2-2 > li { counter-increment: transportequation-2-2; }
+#transportequation-3-1 { counter-set: transportequation-3-1 0; }
+#transportequation-3-1 > li::marker { content: ""counter(transportequation-3-1,lower-alpha)"."; }
+#transportequation-3-1 > li { counter-increment: transportequation-3-1; }
+#CirculationPentagonPath-2-5 { counter-set: CirculationPentagonPath-2-5 0; }
+#CirculationPentagonPath-2-5 > li::marker { content: ""counter(CirculationPentagonPath-2-5,lower-alpha)"."; }
+#CirculationPentagonPath-2-5 > li { counter-increment: CirculationPentagonPath-2-5; }
+#CirculationPentagonPath-3-1 { counter-set: CirculationPentagonPath-3-1 0; }
+#CirculationPentagonPath-3-1 > li::marker { content: ""counter(CirculationPentagonPath-3-1,lower-alpha)"."; }
+#CirculationPentagonPath-3-1 > li { counter-increment: CirculationPentagonPath-3-1; }
+#ComputeCurlBothWays-1-1-5 { counter-set: ComputeCurlBothWays-1-1-5 0; }
+#ComputeCurlBothWays-1-1-5 > li::marker { content: ""counter(ComputeCurlBothWays-1-1-5,lower-alpha)"."; }
+#ComputeCurlBothWays-1-1-5 > li { counter-increment: ComputeCurlBothWays-1-1-5; }
+#ComputeCurlBothWays-2-1 { counter-set: ComputeCurlBothWays-2-1 0; }
+#ComputeCurlBothWays-2-1 > li::marker { content: ""counter(ComputeCurlBothWays-2-1,lower-alpha)"."; }
+#ComputeCurlBothWays-2-1 > li { counter-increment: ComputeCurlBothWays-2-1; }
+#MetarsToVorticity-2-7 { counter-set: MetarsToVorticity-2-7 0; }
+#MetarsToVorticity-2-7 > li::marker { content: ""counter(MetarsToVorticity-2-7,lower-alpha)"."; }
+#MetarsToVorticity-2-7 > li { counter-increment: MetarsToVorticity-2-7; }
+#MetarsToVorticity-3-1 { counter-set: MetarsToVorticity-3-1 0; }
+#MetarsToVorticity-3-1 > li::marker { content: ""counter(MetarsToVorticity-3-1,lower-alpha)"."; }
+#MetarsToVorticity-3-1 > li { counter-increment: MetarsToVorticity-3-1; }
+#fluxmaximized-2-1-3 { counter-set: fluxmaximized-2-1-3 0; }
+#fluxmaximized-2-1-3 > li::marker { content: ""counter(fluxmaximized-2-1-3,lower-alpha)"."; }
+#fluxmaximized-2-1-3 > li { counter-increment: fluxmaximized-2-1-3; }
+#fluxmaximized-3-1-1 { counter-set: fluxmaximized-3-1-1 0; }
+#fluxmaximized-3-1-1 > li::marker { content: ""counter(fluxmaximized-3-1-1,lower-alpha)"."; }
+#fluxmaximized-3-1-1 > li { counter-increment: fluxmaximized-3-1-1; }
+#FluxSidesPrism-2-1-4 { counter-set: FluxSidesPrism-2-1-4 0; }
+#FluxSidesPrism-2-1-4 > li::marker { content: ""counter(FluxSidesPrism-2-1-4,lower-alpha)"."; }
+#FluxSidesPrism-2-1-4 > li { counter-increment: FluxSidesPrism-2-1-4; }
+#FluxSidesPrism-3-1 { counter-set: FluxSidesPrism-3-1 0; }
+#FluxSidesPrism-3-1 > li::marker { content: ""counter(FluxSidesPrism-3-1,lower-alpha)"."; }
+#FluxSidesPrism-3-1 > li { counter-increment: FluxSidesPrism-3-1; }
+#fluxofcube-2-1-6 { counter-set: fluxofcube-2-1-6 0; }
+#fluxofcube-2-1-6 > li::marker { content: ""counter(fluxofcube-2-1-6,lower-alpha)"."; }
+#fluxofcube-2-1-6 > li { counter-increment: fluxofcube-2-1-6; }
+#fluxofcube-3-1-1 { counter-set: fluxofcube-3-1-1 0; }
+#fluxofcube-3-1-1 > li::marker { content: ""counter(fluxofcube-3-1-1,lower-alpha)"."; }
+#fluxofcube-3-1-1 > li { counter-increment: fluxofcube-3-1-1; }
+#Ez_10_3_0-2-3 { counter-set: Ez_10_3_0-2-3 0; }
+#Ez_10_3_0-2-3 > li::marker { content: ""counter(Ez_10_3_0-2-3,lower-alpha)"."; }
+#Ez_10_3_0-2-3 > li { counter-increment: Ez_10_3_0-2-3; }
+#Ez_10_3_1-2-3 { counter-set: Ez_10_3_1-2-3 0; }
+#Ez_10_3_1-2-3 > li::marker { content: ""counter(Ez_10_3_1-2-3,lower-alpha)"."; }
+#Ez_10_3_1-2-3 > li { counter-increment: Ez_10_3_1-2-3; }
+#Ez_10_3_1-3-1-1 { counter-set: Ez_10_3_1-3-1-1 0; }
+#Ez_10_3_1-3-1-1 > li::marker { content: ""counter(Ez_10_3_1-3-1-1,lower-alpha)"."; }
+#Ez_10_3_1-3-1-1 > li { counter-increment: Ez_10_3_1-3-1-1; }
+#ez-wind-at-MSP-2-3 { counter-set: ez-wind-at-MSP-2-3 0; }
+#ez-wind-at-MSP-2-3 > li::marker { content: ""counter(ez-wind-at-MSP-2-3,lower-alpha)"."; }
+#ez-wind-at-MSP-2-3 > li { counter-increment: ez-wind-at-MSP-2-3; }
+#ez-wind-at-MSP-3-1 { counter-set: ez-wind-at-MSP-3-1 0; }
+#ez-wind-at-MSP-3-1 > li::marker { content: ""counter(ez-wind-at-MSP-3-1,lower-alpha)"."; }
+#ez-wind-at-MSP-3-1 > li { counter-increment: ez-wind-at-MSP-3-1; }
+#ez-wind-at-Jackson-2-4 { counter-set: ez-wind-at-Jackson-2-4 0; }
+#ez-wind-at-Jackson-2-4 > li::marker { content: ""counter(ez-wind-at-Jackson-2-4,lower-alpha)"."; }
+#ez-wind-at-Jackson-2-4 > li { counter-increment: ez-wind-at-Jackson-2-4; }
+#ez-wind-at-Jackson-3-1 { counter-set: ez-wind-at-Jackson-3-1 0; }
+#ez-wind-at-Jackson-3-1 > li::marker { content: ""counter(ez-wind-at-Jackson-3-1,lower-alpha)"."; }
+#ez-wind-at-Jackson-3-1 > li { counter-increment: ez-wind-at-Jackson-3-1; }
+</style>
+</head>
+<body class="pretext book ignore-math">
+<a class="assistive" href="#ptx-content">Skip to main content</a><header id="ptx-masthead" class="ptx-masthead"><div class="ptx-banner">
+<a xmlns:pf="https://prefigure.org" id="logo-link" class="logo-link" target="_blank" href="http://web.stcloudstate.edu/drbuske/"><img src="external/SCSU_StC_Pri_DkBlkBG.png" alt="Logo image"></a><div class="title-container">
+<h1 class="heading"><a href="atmospherickinematics.html"><span class="title">Mathematics of Atmospheric Kinematics</span></a></h1>
+<p class="byline">Dale Buske</p>
+</div>
+</div></header><nav xmlns:pf="https://prefigure.org" id="ptx-navbar" class="ptx-navbar navbar"><button class="toc-toggle button" title="Contents"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5d2;</span><span class="name">Contents</span></button><a class="index-button button" href="backmatter-2.html" title="Index"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe88e;</span><span class="name">Index</span></a><div class="searchbox">
+<div class="searchwidget"><button id="searchbutton" class="searchbutton button" type="button" title="Search book"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe8b6;</span><span class="name">Search Book</span></button></div>
+<div id="searchresultsplaceholder" class="searchresultsplaceholder" style="display: none">
+<div class="search-results-controls">
+<input aria-label="Search term" id="ptxsearch" class="ptxsearch" type="text" name="terms" placeholder="Search term"><button title="Close search" id="closesearchresults" class="closesearchresults"><span class="material-symbols-outlined">close</span></button>
+</div>
+<h2 class="search-results-heading">Search Results: </h2>
+<div id="searchempty" class="searchempty"><span>No results.</span></div>
+<ol id="searchresults" class="searchresults"></ol>
+</div>
+</div>
+<span class="nav-other-controls"><button id="calculator-toggle" class="calculator-toggle button" title="Show calculator" aria-expanded="false" aria-controls="calculator-container"><span class="icon material-symbols-outlined" aria-hidden="true">&#xea5f;</span><span class="name">Calc</span></button><div id="calculator-container" class="calculator-container" style="display: none; z-index:100;"><div id="geogebra-calculator"></div></div>
+<script>
+var ggbApp = new GGBApplet({"appName": "classic",
+    "width": 330,
+    "height": 600,
+    "showToolBar": true,
+    "showAlgebraInput": true,
+    "perspective": "G/A",
+    "algebraInputPosition": "bottom",
+    "scaleContainerClass": "calculator-container",
+    "allowUpscale": true,
+    "autoHeight": true,
+    "disableAutoScale": false},
+true);
+</script></span><span class="treebuttons"><a class="previous-button button" href="ch-contours.html" title="Previous"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5cb;</span><span class="name">Prev</span></a><a class="up-button button" href="ch-contours.html" title="Up"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5ce;</span><span class="name">Up</span></a><a class="next-button button" href="sec_3space.html" title="Next"><span class="name">Next</span><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5cc;</span></a></span></nav><div xmlns:pf="https://prefigure.org" id="latex-macros" class="hidden-content process-math" style="display:none"><span class="process-math">\(\newcommand{\N}{\mathbb N}
+\newcommand{\Z}{\mathbb Z}
+\newcommand{\Q}{\mathbb Q}
+\newcommand{\R}{\mathbb R}
+\newcommand{\lt}{&lt;}
+\newcommand{\gt}{&gt;}
+\newcommand{\amp}{&amp;}
+\definecolor{fillinmathshade}{gray}{0.9}
+\newcommand{\fillinmath}[1]{\mathchoice{\colorbox{fillinmathshade}{$\displaystyle     \phantom{\,#1\,}$}}{\colorbox{fillinmathshade}{$\textstyle        \phantom{\,#1\,}$}}{\colorbox{fillinmathshade}{$\scriptstyle      \phantom{\,#1\,}$}}{\colorbox{fillinmathshade}{$\scriptscriptstyle\phantom{\,#1\,}$}}}
+\)</span></div>
+<div class="ptx-page">
+<div xmlns:pf="https://prefigure.org" id="ptx-sidebar" class="ptx-sidebar"><nav id="ptx-toc" class="ptx-toc depth2"><ul class="structural contains-active toc-item-list">
+<li class="toc-item toc-frontmatter">
+<div class="toc-title-box"><a href="frontmatter.html" class="internal"><span class="title">Front Matter</span></a></div>
+<ul class="structural toc-item-list">
+<li class="toc-item toc-colophon"><div class="toc-title-box"><a href="frontmatter-3.html" class="internal"><span class="title">Colophon</span></a></div></li>
+<li class="toc-item toc-acknowledgement"><div class="toc-title-box"><a href="frontmatter-4.html" class="internal"><span class="title">Acknowledgements</span></a></div></li>
+</ul>
+</li>
+<li class="toc-item toc-chapter">
+<div class="toc-title-box"><a href="ch_numerical_integration.html" class="internal"><span class="codenumber">1</span> <span class="title">Approximation I: Area</span></a></div>
+<ul class="structural toc-item-list"><li class="toc-item toc-section">
+<div class="toc-title-box"><a href="sec_CAPE.html" class="internal"><span class="codenumber">1.1</span> <span class="title">Numerical Integration</span></a></div>
+<ul class="structural toc-item-list">
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="sec_CAPE.html#sec_CAPE-4" class="internal"><span class="codenumber">1.1.1</span> <span class="title">CAPE and CIN</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="sec_CAPE.html#sec_CAPE-5" class="internal"><span class="codenumber">1.1.2</span> <span class="title">Left, Right, and Midpoint Sums</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="sec_CAPE.html#sec_CAPE-6" class="internal"><span class="codenumber">1.1.3</span> <span class="title">The Trapezoidal Rule</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="sec_CAPE.html#sec_CAPE-7" class="internal"><span class="codenumber">1.1.4</span> <span class="title">Simpson’s Rule</span></a></div></li>
+<li class="toc-item toc-exercises"><div class="toc-title-box"><a href="sec_CAPE.html#ez_CAPE" class="internal"><span class="codenumber">1.1.5</span> <span class="title">Exercises</span></a></div></li>
+</ul>
+</li></ul>
+</li>
+<li class="toc-item toc-chapter">
+<div class="toc-title-box"><a href="ch_series.html" class="internal"><span class="codenumber">2</span> <span class="title">Modeling Periodic Behavior</span></a></div>
+<ul class="structural toc-item-list">
+<li class="toc-item toc-section">
+<div class="toc-title-box"><a href="sec_fourier_series.html" class="internal"><span class="codenumber">2.1</span> <span class="title">Sinusoids</span></a></div>
+<ul class="structural toc-item-list">
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="sec_fourier_series.html#sec_fourier_series-4" class="internal"><span class="codenumber">2.1.1</span> <span class="title">Sinusoids</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="sec_fourier_series.html#sec_fourier_series-5" class="internal"><span class="codenumber">2.1.2</span> <span class="title">Least-squares Fit of a Sinusoid</span></a></div></li>
+<li class="toc-item toc-exercises"><div class="toc-title-box"><a href="sec_fourier_series.html#ex_sinusoids" class="internal"><span class="codenumber">2.1.3</span> <span class="title">Exercises</span></a></div></li>
+</ul>
+</li>
+<li class="toc-item toc-section">
+<div class="toc-title-box"><a href="sec_trig_polynomials.html" class="internal"><span class="codenumber">2.2</span> <span class="title">Trigonometric Polynomials</span></a></div>
+<ul class="structural toc-item-list">
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="sec_trig_polynomials.html#sec_trig_polynomials-4" class="internal"><span class="codenumber">2.2.1</span> <span class="title">Trigonometric Polynomials</span></a></div></li>
+<li class="toc-item toc-exercises"><div class="toc-title-box"><a href="sec_trig_polynomials.html#ex_trig_polynomials" class="internal"><span class="codenumber">2.2.2</span> <span class="title">Exercises</span></a></div></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toc-item toc-chapter contains-active">
+<div class="toc-title-box"><a href="ch-contours.html" class="internal"><span class="codenumber">3</span> <span class="title">Contours and Lingo</span></a></div>
+<ul class="structural toc-item-list contains-active">
+<li class="toc-item toc-section active">
+<div class="toc-title-box"><a href="sec_functionnotation.html" class="internal"><span class="codenumber">3.1</span> <span class="title">Function Notation</span></a></div>
+<ul class="structural toc-item-list"><li class="toc-item toc-exercises"><div class="toc-title-box"><a href="sec_functionnotation.html#ex_firstch-intro" class="internal"><span class="codenumber">3.1</span> <span class="title">Exercises</span></a></div></li></ul>
+</li>
+<li class="toc-item toc-section">
+<div class="toc-title-box"><a href="sec_3space.html" class="internal"><span class="codenumber">3.2</span> <span class="title">A Tour of 3-Space</span></a></div>
+<ul class="structural toc-item-list"><li class="toc-item toc-exercises"><div class="toc-title-box"><a href="sec_3space.html#ex_3space" class="internal"><span class="codenumber">3.2</span> <span class="title">Exercises</span></a></div></li></ul>
+</li>
+<li class="toc-item toc-section">
+<div class="toc-title-box"><a href="sec_contour_diagrams.html" class="internal"><span class="codenumber">3.3</span> <span class="title">Contour Diagrams</span></a></div>
+<ul class="structural toc-item-list"><li class="toc-item toc-exercises"><div class="toc-title-box"><a href="sec_contour_diagrams.html#ex_contour_diagrams" class="internal"><span class="codenumber">3.3</span> <span class="title">Exercises</span></a></div></li></ul>
+</li>
+<li class="toc-item toc-section">
+<div class="toc-title-box"><a href="sec_spherical_coords.html" class="internal"><span class="codenumber">3.4</span> <span class="title">Additional Coordinate Systems</span></a></div>
+<ul class="structural toc-item-list">
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="sec_spherical_coords.html#sec_spherical_coords-4" class="internal"><span class="codenumber">3.4.1</span> <span class="title">Polar Coordinates</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="sec_spherical_coords.html#sphericalcoordinatesection" class="internal"><span class="codenumber">3.4.2</span> <span class="title">Spherical Coordinates</span></a></div></li>
+<li class="toc-item toc-exercises"><div class="toc-title-box"><a href="sec_spherical_coords.html#ex_spherical_coords" class="internal"><span class="codenumber">3.4.3</span> <span class="title">Exercises</span></a></div></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toc-item toc-chapter">
+<div class="toc-title-box"><a href="ch_vectors.html" class="internal"><span class="codenumber">4</span> <span class="title">Modeling Force: Vectors</span></a></div>
+<ul class="structural toc-item-list">
+<li class="toc-item toc-section">
+<div class="toc-title-box"><a href="sec_displacementvectors.html" class="internal"><span class="codenumber">4.1</span> <span class="title">Displacement Vectors</span></a></div>
+<ul class="structural toc-item-list"><li class="toc-item toc-exercises"><div class="toc-title-box"><a href="sec_displacementvectors.html#ex_sec_displacementvectors" class="internal"><span class="codenumber">4.1</span> <span class="title">Exercises</span></a></div></li></ul>
+</li>
+<li class="toc-item toc-section">
+<div class="toc-title-box"><a href="sec_dotproduct.html" class="internal"><span class="codenumber">4.2</span> <span class="title">Dot Product</span></a></div>
+<ul class="structural toc-item-list"><li class="toc-item toc-exercises"><div class="toc-title-box"><a href="sec_dotproduct.html#ex_dotproduct" class="internal"><span class="codenumber">4.2</span> <span class="title">Exercises</span></a></div></li></ul>
+</li>
+<li class="toc-item toc-section">
+<div class="toc-title-box"><a href="sec_cross_product.html" class="internal"><span class="codenumber">4.3</span> <span class="title">The Cross Product</span></a></div>
+<ul class="structural toc-item-list"><li class="toc-item toc-exercises"><div class="toc-title-box"><a href="sec_cross_product.html#ex_crossproduct" class="internal"><span class="codenumber">4.3</span> <span class="title">Exercises</span></a></div></li></ul>
+</li>
+</ul>
+</li>
+<li class="toc-item toc-chapter">
+<div class="toc-title-box"><a href="ch-differentiation.html" class="internal"><span class="codenumber">5</span> <span class="title">Rate of Change: Differentiation</span></a></div>
+<ul class="structural toc-item-list">
+<li class="toc-item toc-section">
+<div class="toc-title-box"><a href="sec_partial_differentiation.html" class="internal"><span class="codenumber">5.1</span> <span class="title">Partial Differentiation</span></a></div>
+<ul class="structural toc-item-list">
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="sec_partial_differentiation.html#sec_partial_differentiation-4" class="internal"><span class="codenumber">5.1.1</span> <span class="title">First-order Partial Derivatives</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="sec_partial_differentiation.html#interpretfirstorderpartials" class="internal"><span class="codenumber">5.1.2</span> <span class="title">Interpretations of First-order Partial Derivatives</span></a></div></li>
+<li class="toc-item toc-exercises"><div class="toc-title-box"><a href="sec_partial_differentiation.html#ex_partialdifferentiation" class="internal"><span class="codenumber">5.1.3</span> <span class="title">Exercises</span></a></div></li>
+</ul>
+</li>
+<li class="toc-item toc-section">
+<div class="toc-title-box"><a href="sec_the_gradient.html" class="internal"><span class="codenumber">5.2</span> <span class="title">The Gradient</span></a></div>
+<ul class="structural toc-item-list"><li class="toc-item toc-exercises"><div class="toc-title-box"><a href="sec_the_gradient.html#ex_the_gradient" class="internal"><span class="codenumber">5.2</span> <span class="title">Exercises</span></a></div></li></ul>
+</li>
+<li class="toc-item toc-section">
+<div class="toc-title-box"><a href="sec_chain_rule.html" class="internal"><span class="codenumber">5.3</span> <span class="title">The Chain Rule</span></a></div>
+<ul class="structural toc-item-list"><li class="toc-item toc-exercises"><div class="toc-title-box"><a href="sec_chain_rule.html#ex_chain_rule" class="internal"><span class="codenumber">5.3</span> <span class="title">Exercises</span></a></div></li></ul>
+</li>
+</ul>
+</li>
+<li class="toc-item toc-chapter">
+<div class="toc-title-box"><a href="ch-vectorfields.html" class="internal"><span class="codenumber">6</span> <span class="title">Flow: Vector Fields</span></a></div>
+<ul class="structural toc-item-list">
+<li class="toc-item toc-section">
+<div class="toc-title-box"><a href="sec_vector_fields.html" class="internal"><span class="codenumber">6.1</span> <span class="title">Vector Fields</span></a></div>
+<ul class="structural toc-item-list"><li class="toc-item toc-exercises"><div class="toc-title-box"><a href="sec_vector_fields.html#ex_sec_vectorfields" class="internal"><span class="codenumber">6.1</span> <span class="title">Exercises</span></a></div></li></ul>
+</li>
+<li class="toc-item toc-section">
+<div class="toc-title-box"><a href="sec_circulation.html" class="internal"><span class="codenumber">6.2</span> <span class="title">Circulation</span></a></div>
+<ul class="structural toc-item-list"><li class="toc-item toc-exercises"><div class="toc-title-box"><a href="sec_circulation.html#ex_sec_circulation" class="internal"><span class="codenumber">6.2</span> <span class="title">Exercises</span></a></div></li></ul>
+</li>
+<li class="toc-item toc-section">
+<div class="toc-title-box"><a href="sec_curl.html" class="internal"><span class="codenumber">6.3</span> <span class="title">Curl</span></a></div>
+<ul class="structural toc-item-list"><li class="toc-item toc-exercises"><div class="toc-title-box"><a href="sec_curl.html#ex_sec_curl" class="internal"><span class="codenumber">6.3</span> <span class="title">Exercises</span></a></div></li></ul>
+</li>
+<li class="toc-item toc-section">
+<div class="toc-title-box"><a href="sec_flux.html" class="internal"><span class="codenumber">6.4</span> <span class="title">Flux</span></a></div>
+<ul class="structural toc-item-list"><li class="toc-item toc-exercises"><div class="toc-title-box"><a href="sec_flux.html#ex_sec_flux" class="internal"><span class="codenumber">6.4</span> <span class="title">Exercises</span></a></div></li></ul>
+</li>
+<li class="toc-item toc-section">
+<div class="toc-title-box"><a href="sec_divergence.html" class="internal"><span class="codenumber">6.5</span> <span class="title">Divergence</span></a></div>
+<ul class="structural toc-item-list"><li class="toc-item toc-exercises"><div class="toc-title-box"><a href="sec_divergence.html#ex_sec_divergence" class="internal"><span class="codenumber">6.5</span> <span class="title">Exercises</span></a></div></li></ul>
+</li>
+<li class="toc-item toc-section">
+<div class="toc-title-box"><a href="sec_Laplacian.html" class="internal"><span class="codenumber">6.6</span> <span class="title">The Laplacian</span></a></div>
+<ul class="structural toc-item-list"><li class="toc-item toc-exercises"><div class="toc-title-box"><a href="sec_Laplacian.html#ex_laplacian" class="internal"><span class="codenumber">6.6</span> <span class="title">Exercises</span></a></div></li></ul>
+</li>
+</ul>
+</li>
+<li class="toc-item toc-chapter">
+<div class="toc-title-box"><a href="ch_taylor_polynomials.html" class="internal"><span class="codenumber">7</span> <span class="title">Approximation II: Taylor Polynomials</span></a></div>
+<ul class="structural toc-item-list">
+<li class="toc-item toc-section">
+<div class="toc-title-box"><a href="sec_taylor_polynomials_1var.html" class="internal"><span class="codenumber">7.1</span> <span class="title">Taylor Polynomials in One Variable</span></a></div>
+<ul class="structural toc-item-list">
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="sec_taylor_polynomials_1var.html#sec_taylor_polynomials_1var-4" class="internal"><span class="codenumber">7.1.1</span> <span class="title">Taylor Polynomials of Degree 2</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="sec_taylor_polynomials_1var.html#sec_taylor_polynomials_1var-5" class="internal"><span class="codenumber">7.1.2</span> <span class="title">Taylor Polynomials of Degree <span class="process-math">\(n\)</span></span></a></div></li>
+<li class="toc-item toc-exercises"><div class="toc-title-box"><a href="sec_taylor_polynomials_1var.html#ex_taylor_polynomials_1var" class="internal"><span class="codenumber">7.1.3</span> <span class="title">Exercises</span></a></div></li>
+</ul>
+</li>
+<li class="toc-item toc-section">
+<div class="toc-title-box"><a href="sec_taylor_polynomials_2var.html" class="internal"><span class="codenumber">7.2</span> <span class="title">Taylor Polynomials in Two Variables</span></a></div>
+<ul class="structural toc-item-list">
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="sec_taylor_polynomials_2var.html#sec_taylor_polynomials_2var-4" class="internal"><span class="codenumber">7.2.1</span> <span class="title">Linear Approximations in Two Variables</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="sec_taylor_polynomials_2var.html#sec_taylor_polynomials_2var-5" class="internal"><span class="codenumber">7.2.2</span> <span class="title">Quadratic Approximations in Two Variables</span></a></div></li>
+<li class="toc-item toc-section"><div class="toc-title-box"><a href="sec_taylor_polynomials_2var.html#sec_taylor_polynomials_2var-6" class="internal"><span class="codenumber">7.2.1</span> <span class="title">Translations, Divergence, Vorticity, and Deformation</span></a></div></li>
+<li class="toc-item toc-section"><div class="toc-title-box"><a href="sec_taylor_polynomials_2var.html#sec_taylor_polynomials_2var-7" class="internal"><span class="codenumber">7.2.2</span> <span class="title">Kinematics of the Horizontal Wind Field</span></a></div></li>
+<li class="toc-item toc-exercises"><div class="toc-title-box"><a href="sec_taylor_polynomials_2var.html#ex_taylor_polynomials_2var" class="internal"><span class="codenumber">7.2.5</span> <span class="title">Exercises</span></a></div></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toc-item toc-backmatter">
+<div class="toc-title-box"><a href="backmatter.html" class="internal"><span class="title">Backmatter</span></a></div>
+<ul class="structural toc-item-list">
+<li class="toc-item toc-index"><div class="toc-title-box"><a href="backmatter-2.html" class="internal"><span class="title">Index</span></a></div></li>
+<li class="toc-item toc-colophon"><div class="toc-title-box"><a href="backmatter-3.html" class="internal"><span class="title">Colophon</span></a></div></li>
+</ul>
+</li>
+</ul></nav></div>
+<main class="ptx-main"><div id="ptx-content" class="ptx-content"><section xmlns:pf="https://prefigure.org" class="section" id="sec_functionnotation"><h2 class="heading hide-type">
+<span class="type">Section</span><span class="space"> </span><span class="codenumber">3.1</span><span class="space"> </span><span class="title">Function Notation</span>
+</h2>
+<article class="objectives goal-like" id="sec_functionnotation-2"><h3 class="heading"><span class="type">Motivating Questions</span></h3>
+<ul class="disc" id="sec_functionnotation-2-1">
+<li id="sec_functionnotation-2-1-1"><div class="para" id="sec_functionnotation-2-1-1-1">How can we use functions of multiple variables to model meteorological quantities?</div></li>
+<li id="sec_functionnotation-2-1-2"><div class="para" id="sec_functionnotation-2-1-2-1">How can multivariable functions be represented algebraically, numerically, and graphically?</div></li>
+</ul></article><section class="introduction" id="sec_functionnotation-3"><div class="para" id="sec_functionnotation-3-1">Many relationships you have studied in the past involved two variables - an independent variable (such as <span class="process-math">\(x\)</span>) and a dependent variable (often <span class="process-math">\(y\)</span>).  In fact, most of your study of calculus involved the study of relationships <span class="process-math">\(y=f(x)\text{.}\)</span>  For example, the percentage of damage <span class="process-math">\(P\)</span> to a crop after a storm can be thought of as a function of maximum wind speed <span class="process-math">\(w\)</span> (in mph) during that storm.  That is, <span class="process-math">\(P=f(w)\text{.}\)</span>  However, often additional variables have an impact on an outcome.  The damage to a crop after a storm is also impacted by the age <span class="process-math">\(a\)</span> of the crop (in days), for example.  To represent this situation, where the percent damage <span class="process-math">\(P\)</span> depends on wind speed <span class="process-math">\(w\)</span> and age of crop <span class="process-math">\(a\text{,}\)</span> we write <span class="process-math">\(P=f(w,a)\text{.}\)</span>  In this section, we study functions of more than one variable.</div></section><div class="para" id="sec_functionnotation-4"><article class="example example-like" id="sec_functionnotation-4-1"><h3 class="heading">
+<span class="type">Example</span><span class="space"> </span><span class="codenumber">3.1.1</span><span class="period">.</span><span class="space"> </span><span class="title">Wind Chill Index.</span>
+</h3>
+<div class="para" id="sec_functionnotation-4-1-2">The <dfn class="terminology">wind chill index</dfn> depends upon the the wind speed <span class="process-math">\(v\)</span> and the air temperature <span class="process-math">\(T\text{.}\)</span>  That is, <span class="process-math">\(W=f(v,T)\text{.}\)</span>
+</div></article></div>
+<div class="para" id="sec_functionnotation-5"><article class="example example-like" id="sec_functionnotation-5-1"><h3 class="heading">
+<span class="type">Example</span><span class="space"> </span><span class="codenumber">3.1.2</span><span class="period">.</span><span class="space"> </span><span class="title">Hot-Dry-Windy Index.</span>
+</h3>
+<div class="para" id="sec_functionnotation-5-1-2">The <dfn class="terminology">Hot-Dry-Windy index (HDW)</dfn> depends on the maximum wind speed <span class="process-math">\(U\)</span> and maximum vapor pressure deficit <span class="process-math">\(VPD\)</span> in the lowest 50 millibars of the atmosphere.  That is, <span class="process-math">\(HDW=g(U,VPD)\text{.}\)</span>
+</div></article></div>
+<div class="para" id="sec_functionnotation-6"><article class="example example-like" id="sec_functionnotation-6-1"><h3 class="heading">
+<span class="type">Example</span><span class="space"> </span><span class="codenumber">3.1.3</span><span class="period">.</span><span class="space"> </span><span class="title">Describing the Atmosphere.</span>
+</h3>
+<div class="para logical" id="sec_functionnotation-6-1-2">
+<div class="para">There are seven basic variables that describe the state <span class="process-math">\(S\)</span> of the atmosphere:</div>
+<ul class="disc" id="sec_functionnotation-6-1-2-2">
+<li id="sec_functionnotation-6-1-2-2-1"><div class="para" id="p-derived-sec_functionnotation-6-1-2-2-1">
+<span class="process-math">\(T\)</span> (temperature)</div></li>
+<li id="sec_functionnotation-6-1-2-2-2"><div class="para" id="p-derived-sec_functionnotation-6-1-2-2-2">
+<span class="process-math">\(\rho\)</span> (pressure)</div></li>
+<li id="sec_functionnotation-6-1-2-2-3"><div class="para" id="p-derived-sec_functionnotation-6-1-2-2-3">
+<span class="process-math">\(\phi\)</span> (geopotential)</div></li>
+<li id="sec_functionnotation-6-1-2-2-4"><div class="para" id="p-derived-sec_functionnotation-6-1-2-2-4">
+<span class="process-math">\(q\)</span> (humidity/moisture)</div></li>
+<li id="sec_functionnotation-6-1-2-2-5"><div class="para" id="p-derived-sec_functionnotation-6-1-2-2-5">
+<span class="process-math">\(u\)</span> (<span class="process-math">\(x\)</span>-component of wind)</div></li>
+<li id="sec_functionnotation-6-1-2-2-6"><div class="para" id="p-derived-sec_functionnotation-6-1-2-2-6">
+<span class="process-math">\(v\)</span> (<span class="process-math">\(y\)</span>-component of wind)</div></li>
+<li id="sec_functionnotation-6-1-2-2-7"><div class="para" id="p-derived-sec_functionnotation-6-1-2-2-7">
+<span class="process-math">\(w\)</span> (<span class="process-math">\(z\)</span>-component of wind)</div></li>
+</ul>
+<div class="para">That is, <span class="process-math">\(S = h(T,\rho, \phi, q, u, v, w)\text{.}\)</span>
+</div>
+</div></article></div>
+<details id="USweathermap" class="exercise exercise-like born-hidden-knowl"><summary class="knowl__link"><h3 class="heading">
+<span class="type">Checkpoint</span><span class="space"> </span><span class="codenumber">3.1.4</span><span class="period">.</span><span class="space"> </span><span class="title">Isotherms.</span>
+</h3></summary><article class="exercise exercise-like knowl__content"><div class="para" id="USweathermap-2-1">The weather map in <a href="sec_functionnotation.html#usweathermappic" class="xref" data-knowl="./knowl/xref/usweathermappic.html" data-reveal-label="Reveal" data-close-label="Close" title="Figure 3.1.5">Figure 3.1.5</a> (a <dfn class="terminology">contour diagram</dfn>) displays the predicted high temperature, <span class="process-math">\(T\text{,}\)</span> in degrees Fahrenheit throughout the United States on a particular day.  Clearly, <span class="process-math">\(T\)</span> is a function of latitude <span class="process-math">\(y\)</span> and longitude <span class="process-math">\(x\text{.}\)</span>  The curves, on which the high temperature <span class="process-math">\(T\)</span> is constant, are called <dfn class="terminology">isotherms</dfn>. <figure class="figure figure-like" id="usweathermappic"><div class="image-box" style="width: 50%; margin-left: 25%; margin-right: 25%;"><img src="external/USweathermapcontours.jpg" class="contained" alt="A weather map of the United States."></div>
+<figcaption><span class="type">Figure</span><span class="space"> </span><span class="codenumber">3.1.5<span class="period">.</span></span><span class="space"> </span>A weather map of the United States (Source: <a class="external" href="https://weather.gov" target="_blank">weather.gov</a><details class="ptx-footnote" aria-live="polite" id="usweathermappic-1-2"><summary class="ptx-footnote__number" title="Footnote 30"><sup> 30 </sup></summary><div class="ptx-footnote__contents" id="usweathermappic-1-2"><code class="code-inline tex2jax_ignore">weather.gov</code></div></details>).</figcaption></figure>
+</div> <div class="para logical" id="USweathermap-2-2">
+<div class="para">Estimate the predicted high temperature <span class="process-math">\(T\)</span> in each given city.</div>
+<ol class="lower-alpha" id="USweathermap-2-2-2">
+<li id="USweathermap-2-2-2-1"><div class="para" id="p-derived-USweathermap-2-2-2-1">New Orleans, LA</div></li>
+<li id="USweathermap-2-2-2-2"><div class="para" id="p-derived-USweathermap-2-2-2-2">Chicago, IL</div></li>
+<li id="USweathermap-2-2-2-3"><div class="para" id="p-derived-USweathermap-2-2-2-3">Buffalo, NY</div></li>
+<li id="USweathermap-2-2-2-4"><div class="para" id="p-derived-USweathermap-2-2-2-4">St. Cloud, MN (<span class="process-math">\(45.5^{\circ} N, 94.2^{\circ} W\)</span>)</div></li>
+</ol>
+</div>
+<div class="solutions"><details id="USweathermap-3" class="answer solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Answer</span><span class="period">.</span></summary><div class="answer solution-like knowl__content"><div class="para logical" id="USweathermap-3-1"><ol class="lower-alpha" id="USweathermap-3-1-1">
+<li id="USweathermap-3-1-1-1"><div class="para" id="p-derived-USweathermap-3-1-1-1">New Orleans, LA: approximately <span class="process-math">\(80^{\circ}F\)</span>
+</div></li>
+<li id="USweathermap-3-1-1-2"><div class="para" id="p-derived-USweathermap-3-1-1-2">Chicago, IL: approximately <span class="process-math">\(35^{\circ}F\)</span>
+</div></li>
+<li id="USweathermap-3-1-1-3"><div class="para" id="p-derived-USweathermap-3-1-1-3">Buffalo, NY: approximately <span class="process-math">\(40^{\circ}F\)</span>
+</div></li>
+<li id="USweathermap-3-1-1-4"><div class="para" id="p-derived-USweathermap-3-1-1-4">St. Cloud, MN: approximately <span class="process-math">\(22^{\circ}F\)</span>
+</div></li>
+</ol></div></div></details></div></article></details><div class="para" id="sec_functionnotation-8"></div>
+<details id="windchillexercise" class="exercise exercise-like born-hidden-knowl"><summary class="knowl__link"><h3 class="heading">
+<span class="type">Checkpoint</span><span class="space"> </span><span class="codenumber">3.1.6</span><span class="period">.</span><span class="space"> </span><span class="title">Wind Chill.</span>
+</h3></summary><article class="exercise exercise-like knowl__content"><div class="para logical" id="windchillexercise-2-1">
+<div class="para">Wind chill is a temperature which tells you how cold it feels as a result of the combination of wind and temperature.  Let <span class="process-math">\(C = f(w,T)\)</span> where <span class="process-math">\(C\)</span> is the wind chill temperature (in degrees Fahrenheit) that is associated with a wind speed of <span class="process-math">\(w\)</span> miles per hour and a temperature of <span class="process-math">\(T\)</span> degrees Fahrenheit.  Values for the function <span class="process-math">\(f\)</span> are given in <a href="sec_functionnotation.html#windchilltable1" class="xref" data-knowl="./knowl/xref/windchilltable1.html" data-reveal-label="Reveal" data-close-label="Close" title="Table 3.1.7: Table of wind chill values.">Table 3.1.7</a>. <figure class="table table-like" id="windchilltable1"><figcaption><span class="type">Table</span><span class="space"> </span><span class="codenumber">3.1.7<span class="period">.</span></span><span class="space"> </span>Table of wind chill values.</figcaption><div class="tabular-box natural-width"><table class="tabular">
+<tr class="header-horizontal">
+<th scope="col" class="c m b2 r0 l0 t0 lines"><span class="process-math">\(w \ \backslash \ T\)</span></th>
+<th scope="col" class="c m b2 r0 l0 t0 lines"><span class="process-math">\(35\)</span></th>
+<th scope="col" class="c m b2 r0 l0 t0 lines"><span class="process-math">\(30\)</span></th>
+<th scope="col" class="c m b2 r0 l0 t0 lines"><span class="process-math">\(25\)</span></th>
+<th scope="col" class="c m b2 r0 l0 t0 lines"><span class="process-math">\(20\)</span></th>
+<th scope="col" class="c m b2 r0 l0 t0 lines"><span class="process-math">\(15\)</span></th>
+<th scope="col" class="c m b2 r0 l0 t0 lines"><span class="process-math">\(10\)</span></th>
+<th scope="col" class="c m b2 r0 l0 t0 lines"><span class="process-math">\(5\)</span></th>
+<th scope="col" class="c m b2 r0 l0 t0 lines"><span class="process-math">\(0\)</span></th>
+</tr>
+<tr>
+<td class="c m b0 r0 l0 t0 lines"><span class="process-math">\(5\)</span></td>
+<td class="c m b0 r0 l0 t0 lines"><span class="process-math">\(31\)</span></td>
+<td class="c m b0 r0 l0 t0 lines"><span class="process-math">\(25\)</span></td>
+<td class="c m b0 r0 l0 t0 lines"><span class="process-math">\(19\)</span></td>
+<td class="c m b0 r0 l0 t0 lines"><span class="process-math">\(13\)</span></td>
+<td class="c m b0 r0 l0 t0 lines"><span class="process-math">\(7\)</span></td>
+<td class="c m b0 r0 l0 t0 lines"><span class="process-math">\(1\)</span></td>
+<td class="c m b0 r0 l0 t0 lines"><span class="process-math">\(-5\)</span></td>
+<td class="c m b0 r0 l0 t0 lines"><span class="process-math">\(-11\)</span></td>
+</tr>
+<tr>
+<td class="c m b0 r0 l0 t0 lines"><span class="process-math">\(10\)</span></td>
+<td class="c m b0 r0 l0 t0 lines"><span class="process-math">\(27\)</span></td>
+<td class="c m b0 r0 l0 t0 lines"><span class="process-math">\(21\)</span></td>
+<td class="c m b0 r0 l0 t0 lines"><span class="process-math">\(15\)</span></td>
+<td class="c m b0 r0 l0 t0 lines"><span class="process-math">\(9\)</span></td>
+<td class="c m b0 r0 l0 t0 lines"><span class="process-math">\(3\)</span></td>
+<td class="c m b0 r0 l0 t0 lines"><span class="process-math">\(-4\)</span></td>
+<td class="c m b0 r0 l0 t0 lines"><span class="process-math">\(-10\)</span></td>
+<td class="c m b0 r0 l0 t0 lines"><span class="process-math">\(-16\)</span></td>
+</tr>
+<tr>
+<td class="c m b0 r0 l0 t0 lines"><span class="process-math">\(15\)</span></td>
+<td class="c m b0 r0 l0 t0 lines"><span class="process-math">\(25\)</span></td>
+<td class="c m b0 r0 l0 t0 lines"><span class="process-math">\(19\)</span></td>
+<td class="c m b0 r0 l0 t0 lines"><span class="process-math">\(13\)</span></td>
+<td class="c m b0 r0 l0 t0 lines"><span class="process-math">\(6\)</span></td>
+<td class="c m b0 r0 l0 t0 lines"><span class="process-math">\(0\)</span></td>
+<td class="c m b0 r0 l0 t0 lines"><span class="process-math">\(-7\)</span></td>
+<td class="c m b0 r0 l0 t0 lines"><span class="process-math">\(-13\)</span></td>
+<td class="c m b0 r0 l0 t0 lines"><span class="process-math">\(-19\)</span></td>
+</tr>
+<tr>
+<td class="c m b0 r0 l0 t0 lines"><span class="process-math">\(20\)</span></td>
+<td class="c m b0 r0 l0 t0 lines"><span class="process-math">\(24\)</span></td>
+<td class="c m b0 r0 l0 t0 lines"><span class="process-math">\(17\)</span></td>
+<td class="c m b0 r0 l0 t0 lines"><span class="process-math">\(11\)</span></td>
+<td class="c m b0 r0 l0 t0 lines"><span class="process-math">\(4\)</span></td>
+<td class="c m b0 r0 l0 t0 lines"><span class="process-math">\(-2\)</span></td>
+<td class="c m b0 r0 l0 t0 lines"><span class="process-math">\(-9\)</span></td>
+<td class="c m b0 r0 l0 t0 lines"><span class="process-math">\(-15\)</span></td>
+<td class="c m b0 r0 l0 t0 lines"><span class="process-math">\(-22\)</span></td>
+</tr>
+<tr>
+<td class="c m b0 r0 l0 t0 lines"><span class="process-math">\(25\)</span></td>
+<td class="c m b0 r0 l0 t0 lines"><span class="process-math">\(23\)</span></td>
+<td class="c m b0 r0 l0 t0 lines"><span class="process-math">\(16\)</span></td>
+<td class="c m b0 r0 l0 t0 lines"><span class="process-math">\(9\)</span></td>
+<td class="c m b0 r0 l0 t0 lines"><span class="process-math">\(3\)</span></td>
+<td class="c m b0 r0 l0 t0 lines"><span class="process-math">\(-4\)</span></td>
+<td class="c m b0 r0 l0 t0 lines"><span class="process-math">\(-11\)</span></td>
+<td class="c m b0 r0 l0 t0 lines"><span class="process-math">\(-17\)</span></td>
+<td class="c m b0 r0 l0 t0 lines"><span class="process-math">\(-24\)</span></td>
+</tr>
+</table></div></figure>
+</div>
+<ol class="lower-alpha" id="windchillexercise-2-1-8">
+<li id="windchillexercise-2-1-8-1"><div class="para" id="p-derived-windchillexercise-2-1-8-1">Evaluate and interpret <span class="process-math">\(f(20,5)\text{.}\)</span>
+</div></li>
+<li id="windchillexercise-2-1-8-2"><div class="para" id="p-derived-windchillexercise-2-1-8-2">How fast does the wind need to blow for it to feel like <span class="process-math">\(-10^{\circ}F\)</span> when the air temperature is really <span class="process-math">\(5^{\circ}F\text{?}\)</span>
+</div></li>
+<li id="windchillexercise-2-1-8-3"><div class="para" id="p-derived-windchillexercise-2-1-8-3">If <span class="process-math">\(w\)</span> is held constant, is the single variable function you get increasing, decreasing, or neither?</div></li>
+<li id="windchillexercise-2-1-8-4"><div class="para" id="p-derived-windchillexercise-2-1-8-4">If <span class="process-math">\(T\)</span> is held constant, is the single variable function you get increasing, decreasing, or neither?</div></li>
+</ol>
+</div>
+<div class="solutions"><details id="windchillexercise-3" class="answer solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Answer</span><span class="period">.</span></summary><div class="answer solution-like knowl__content"><div class="para logical" id="windchillexercise-3-1"><ol class="lower-alpha" id="windchillexercise-3-1-1">
+<li id="windchillexercise-3-1-1-1"><div class="para" id="p-derived-windchillexercise-3-1-1-1">
+<span class="process-math">\(f(20,5) = -15^{\circ}F\text{;}\)</span> When the wind speed is 20 mph and the temperature is <span class="process-math">\(5^{\circ}F\text{,}\)</span> the windchill (or feels like temperature) is <span class="process-math">\(-15^{\circ}F\text{.}\)</span>
+</div></li>
+<li id="windchillexercise-3-1-1-2"><div class="para" id="p-derived-windchillexercise-3-1-1-2">10 mph</div></li>
+<li id="windchillexercise-3-1-1-3"><div class="para" id="p-derived-windchillexercise-3-1-1-3">increasing</div></li>
+<li id="windchillexercise-3-1-1-4"><div class="para" id="p-derived-windchillexercise-3-1-1-4">decreasing</div></li>
+</ol></div></div></details></div></article></details><div class="para" id="sec_functionnotation-10">In <a href="sec_functionnotation.html#USweathermap" class="xref" data-knowl="./knowl/xref/USweathermap.html" data-reveal-label="Reveal" data-close-label="Close" title="Checkpoint 3.1.4: Isotherms">Checkpoint 3.1.4</a> and <a href="sec_functionnotation.html#windchillexercise" class="xref" data-knowl="./knowl/xref/windchillexercise.html" data-reveal-label="Reveal" data-close-label="Close" title="Checkpoint 3.1.6: Wind Chill">Checkpoint 3.1.6</a>, we used a contour diagram and a numeric table to represent the respective functions <span class="process-math">\(T = f(x,y)\)</span> and <span class="process-math">\(C=f(w,T)\text{.}\)</span>  We did this since there was no obvious algebraic formula for these underlying functions.   The same is true in <a href="sec_functionnotation.html#snowfall1" class="xref" data-knowl="./knowl/xref/snowfall1.html" data-reveal-label="Reveal" data-close-label="Close" title="Checkpoint 3.1.8: Snowfall">Checkpoint 3.1.8</a>.</div>
+<details id="snowfall1" class="exercise exercise-like born-hidden-knowl"><summary class="knowl__link"><h3 class="heading">
+<span class="type">Checkpoint</span><span class="space"> </span><span class="codenumber">3.1.8</span><span class="period">.</span><span class="space"> </span><span class="title">Snowfall.</span>
+</h3></summary><article class="exercise exercise-like knowl__content"><div class="para logical" id="snowfall1-2-1">
+<div class="para">Consider <span class="process-math">\(S = g(d, T)\)</span> where <span class="process-math">\(S\)</span> represents newly fallen snowfall (in inches) as a function of the melt water depth <span class="process-math">\(d\)</span> (in inches) and temperature <span class="process-math">\(T\)</span> (in <span class="process-math">\(^\circ F\)</span>). <figure class="figure figure-like" id="snowfall1-2-1-6"><div class="image-box" style="width: 60%; margin-left: 20%; margin-right: 20%;"><img src="external/water_content_snow.jpg" class="contained" alt="Newly fallen snowfall"></div>
+<figcaption><span class="type">Figure</span><span class="space"> </span><span class="codenumber">3.1.9<span class="period">.</span></span><span class="space"> </span>Newly fallen snowfall (in inches) as a function of melt water depth <span class="process-math">\(d\)</span> (in inches) and temperature <span class="process-math">\(T\)</span> (in <span class="process-math">\(^\circ F\)</span>).  (Source: <a class="external" href="https://SIMA.org" target="_blank">www.SIMA.org</a><details class="ptx-footnote" aria-live="polite" id="snowfall1-2-1-6-1-5"><summary class="ptx-footnote__number" title="Footnote 31"><sup> 31 </sup></summary><div class="ptx-footnote__contents" id="snowfall1-2-1-6-1-5"><code class="code-inline tex2jax_ignore">SIMA.org</code></div></details>)</figcaption></figure>
+</div>
+<ol class="lower-alpha" id="snowfall1-2-1-7">
+<li id="snowfall1-2-1-7-1"><div class="para" id="p-derived-snowfall1-2-1-7-1">Compute <span class="process-math">\(S = g(0.5 \ \rm{inches}, 5^{\circ}F)\text{.}\)</span>
+</div></li>
+<li id="snowfall1-2-1-7-2"><div class="para" id="p-derived-snowfall1-2-1-7-2">If it is known that 10 inches of snowfall occurred, can the melt water depth <span class="process-math">\(d\)</span> be uniquely determined?  If so, what is this value?  If not, explain why not.</div></li>
+<li id="snowfall1-2-1-7-3"><div class="para" id="p-derived-snowfall1-2-1-7-3">If <span class="process-math">\(d\)</span> is held constant, is the single variable function that results increasing, decreasing, or neither?</div></li>
+</ol>
+</div>
+<div class="solutions"><details id="snowfall1-3" class="answer solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Answer</span><span class="period">.</span></summary><div class="answer solution-like knowl__content"><div class="para logical" id="snowfall1-3-1"><ol class="lower-alpha" id="snowfall1-3-1-1">
+<li id="snowfall1-3-1-1-1"><div class="para" id="p-derived-snowfall1-3-1-1-1">20 inches (of snowfall)</div></li>
+<li id="snowfall1-3-1-1-2"><div class="para" id="p-derived-snowfall1-3-1-1-2">The value of <span class="process-math">\(d\)</span> cannot be determined.  More than one combination of melt water depth <span class="process-math">\(d\)</span> and temperature <span class="process-math">\(T\)</span> could have produced this snowfall.  For example, <span class="process-math">\(g(1,30)=g(0.5,17)=g(0.25,5)=10\text{.}\)</span>
+</div></li>
+<li id="snowfall1-3-1-1-3"><div class="para" id="p-derived-snowfall1-3-1-1-3">For a given melt water depth <span class="process-math">\(d\text{,}\)</span> as the temperature <span class="process-math">\(T\)</span> increases, the resulting snowfall decreases.</div></li>
+</ol></div></div></details></div></article></details><div class="para" id="sec_functionnotation-12">Some quantities we encounter can be modeled with a formula.   However, as this next example demonstrates, representing functions of several variables in multiple ways carries huge advantages.</div>
+<div class="para" id="sec_functionnotation-13"><article class="example example-like" id="sec_functionnotation-13-1"><h3 class="heading">
+<span class="type">Example</span><span class="space"> </span><span class="codenumber">3.1.10</span><span class="period">.</span><span class="space"> </span><span class="title">Heat Index.</span>
+</h3>
+<div class="para logical" id="sec_functionnotation-13-1-2">
+<div class="para">On hot days, you feel warmer than the actual air temperature when the air is more humid, but you feel cooler when the air is drier due to evaporation of your perspiration.  Steadman’s temperature-humidity index of sultriness (i.e. <dfn class="terminology">heat index</dfn> is given by</div>
+<div class="displaymath process-math" data-contains-math-knowls="./knowl/xref/Steadman.html ./knowl/xref/Steadman1.html ./knowl/xref/Steadman2.html" id="Steadman">
+\begin{equation}
+H = T_R + [T - T_R] \cdot \left( \frac{RH \cdot e_S}{100\cdot e_R} \right)^p\tag{3.1}
+\end{equation}
+</div>
+<div class="para">where <span class="process-math">\(e_R = 1.6 \ kPa\)</span> is reference vapor pressure, and</div>
+<div class="displaymath process-math" data-contains-math-knowls="./knowl/xref/Steadman.html ./knowl/xref/Steadman1.html ./knowl/xref/Steadman2.html" id="sec_functionnotation-13-1-2-5">
+\begin{align*}
+T_R   = \mathstrut \amp 0.8841T + 0.19\\
+p  = \mathstrut \amp \frac{1}{0.0196}T + 0.09031,  \text{and}  \\
+e_S  = \mathstrut \amp 0.611e^{\left[ 5423\left(\frac{1}{273.15} - \frac{1}{(T+273.15)}\right) \right]}.
+\end{align*}
+</div>
+<div class="para">The two variables for this function <span class="process-math">\(H\)</span> are <span class="process-math">\(T\)</span> (dry bulb temperature in <span class="process-math">\(^{\circ}C\)</span>) and <span class="process-math">\(RH\)</span> (relative humidity, ranging from 0 in dry air to 100 for saturated air).  The formula in <a href="sec_functionnotation.html#Steadman" class="xref" data-knowl="./knowl/xref/Steadman.html" data-reveal-label="Reveal" data-close-label="Close" title="Equation 3.1">(3.1)</a> is an algebraic representation of the heat index function <span class="process-math">\(H=f(T, RH)\text{.}\)</span>  Obviously, this equation is somewhat messy!  Fortunately, there are multiple ways to represent functions of two variables.  For the heat index, it is often represented numerically with a table as shown in <a href="sec_functionnotation.html#Steadman1" class="xref" data-knowl="./knowl/xref/Steadman1.html" data-reveal-label="Reveal" data-close-label="Close" title="Figure 3.1.11">Figure 3.1.11</a>.  In addition to an algebraic representation (i.e. a formula) and a numeric representation (i.e. a table of values), a third way to represent this function is graphically.  To this end, a contour diagram of the heat index is shown in <a href="sec_functionnotation.html#Steadman2" class="xref" data-knowl="./knowl/xref/Steadman2.html" data-reveal-label="Reveal" data-close-label="Close" title="Figure 3.1.12">Figure 3.1.12</a>.  Finally, we could attempt to describe the function in a fourth way - verbally.  For this function, a precise description would be really, really clunky!  A poor verbal description of the heat index would be to say that the Steadman heat index is a measure of the ``feels like" temperature found my modifying warm air temperatures upward when high relative humidities are present.</div>
+</div>
+<figure class="figure figure-like" id="Steadman1"><div class="image-box" style="width: 50%; margin-left: 25%; margin-right: 25%;"><img src="external/HeatIndexCentigradeTable.jpg" class="contained" alt="Steadman’s heat index."></div>
+<figcaption><span class="type">Figure</span><span class="space"> </span><span class="codenumber">3.1.11<span class="period">.</span></span><span class="space"> </span>A table representing Steadman’s heat index (<span class="process-math">\(^{\circ}C\)</span>).  (Source: Stull, Practical Meteorology)</figcaption></figure><figure class="figure figure-like" id="Steadman2"><div class="image-box" style="width: 50%; margin-left: 25%; margin-right: 25%;"><img src="external/SteadmanHeatIndexContourMap.jpg" class="contained" alt="Contour map of Steadman’s heat index."></div>
+<figcaption><span class="type">Figure</span><span class="space"> </span><span class="codenumber">3.1.12<span class="period">.</span></span><span class="space"> </span>A contour diagram representing Steadman’s heat index.</figcaption></figure></article></div>
+<details id="UHI1" class="exercise exercise-like born-hidden-knowl"><summary class="knowl__link"><h3 class="heading">
+<span class="type">Checkpoint</span><span class="space"> </span><span class="codenumber">3.1.13</span><span class="period">.</span><span class="space"> </span><span class="title">Urban Heat Island.</span>
+</h3></summary><article class="exercise exercise-like knowl__content"><div class="para logical" id="UHI1-2-1">
+<div class="para">Elevated urban temperatures are known as the <dfn class="terminology">urban heat island</dfn>  (<span class="process-math">\(UHI\)</span>), which is defined as the difference in air temperature difference between a city and the surrounding countryside.  The daily maximum <span class="process-math">\(UHI\)</span> can by modeled using the empirical formula</div>
+<div class="displaymath process-math">
+\begin{equation*}
+UHI_{max} = (2-SVF-f_{veg})\sqrt[4]{\frac{S\downarrow \cdot DTR^3}{U}}
+\end{equation*}
+</div>
+<div class="para">where <span class="process-math">\(SVF\)</span> denotes the sky-view factor (e.g. fraction of visible sky), <span class="process-math">\(f_{veg}\)</span> denotes the vegetation fraction of the urban area, <span class="process-math">\(S\downarrow\)</span> denotes the mean downward shortwave radiation (<span class="process-math">\(K\cdot m/s\)</span>), <span class="process-math">\(DTR\)</span> denotes the diurnal temperature range (<span class="process-math">\(K\)</span>), and <span class="process-math">\(U\)</span> denotes the mean wind speed (<span class="process-math">\(m/s\)</span>) measured at a rural station nearby the city.  <span class="process-math">\(UHI_{max}\)</span> is then a function of five variables.  As such, understanding it graphically is challenging.</div>
+<ol class="lower-alpha" id="UHI1-2-1-15">
+<li id="UHI1-2-1-15-1"><div class="para" id="p-derived-UHI1-2-1-15-1">Is <span class="process-math">\(UHI_{max}\)</span> an increasing or decreasing function in the variable <span class="process-math">\(SVF\text{?}\)</span>  Does this seem logical?</div></li>
+<li id="UHI1-2-1-15-2"><div class="para" id="p-derived-UHI1-2-1-15-2">Is <span class="process-math">\(UHI_{max}\)</span> an increasing or decreasing function in the variable <span class="process-math">\(f_{veg}\text{?}\)</span>
+</div></li>
+<li id="UHI1-2-1-15-3"><div class="para" id="p-derived-UHI1-2-1-15-3">Based on the formula, is <span class="process-math">\(UHI_{max}\)</span> greater with light winds or strong winds present?  Explain.</div></li>
+<li id="UHI1-2-1-15-4"><div class="para" id="p-derived-UHI1-2-1-15-4">What is <span class="process-math">\(UHI_{max}\)</span> in the countryside where <span class="process-math">\(SVF=1\)</span> and <span class="process-math">\(f_{vec}=1\text{?}\)</span>  Does this make sense?</div></li>
+</ol>
+</div>
+<div class="solutions"><details id="UHI1-3" class="answer solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Answer</span><span class="period">.</span></summary><div class="answer solution-like knowl__content"><div class="para logical" id="UHI1-3-1"><ol class="lower-alpha" id="UHI1-3-1-1">
+<li id="UHI1-3-1-1-1"><div class="para" id="p-derived-UHI1-3-1-1-1">As <span class="process-math">\(SVF\)</span> increases, <span class="process-math">\(UHI_{max}\)</span> decreases.  This is logical since as the sky view improves, the urban heat island should be reduced.</div></li>
+<li id="UHI1-3-1-1-2"><div class="para" id="p-derived-UHI1-3-1-1-2">
+<span class="process-math">\(UHI_{max}\)</span> is decreasing in the variable <span class="process-math">\(f_{veg}\text{.}\)</span>
+</div></li>
+<li id="UHI1-3-1-1-3"><div class="para" id="p-derived-UHI1-3-1-1-3">
+<span class="process-math">\(UHI_{max}\)</span> is greater with light winds (near <span class="process-math">\(U=0 \ m/s\)</span>) than with strong winds as evident by the variable <span class="process-math">\(U^{1/4}\)</span> in the denominator.  As <span class="process-math">\(U\)</span> increases, <span class="process-math">\(UHI_{max}\)</span> decreases.</div></li>
+<li id="UHI1-3-1-1-4"><div class="para" id="p-derived-UHI1-3-1-1-4">
+<span class="process-math">\(UHI_{max}=0\)</span> in the countryside.  This makes sense as the countryside serves as a basis for our measurement of the urban heat island.</div></li>
+</ol></div></div></details></div></article></details><div class="para" id="sec_functionnotation-15"><article class="example example-like" id="IdealGasLawFunctions"><h3 class="heading">
+<span class="type">Example</span><span class="space"> </span><span class="codenumber">3.1.14</span><span class="period">.</span><span class="space"> </span><span class="title">Ideal Gas Law.</span>
+</h3>
+<div class="para logical" id="IdealGasLawFunctions-2">
+<div class="para">The <dfn class="terminology">ideal gas law</dfn> is often written in the form <span class="process-math">\(PV=nRT\)</span> where <span class="process-math">\(P\text{,}\)</span> <span class="process-math">\(V\text{,}\)</span> and <span class="process-math">\(T\)</span> are variables representing pressure (measured in pascals, or newtons per square meter), volume (measured in cubic meters), and temperature (measured in kelvins).  In this equation, <span class="process-math">\(n\)</span> represents the amount of substance (measured in moles) and <span class="process-math">\(R = 8.314 \ J/{(K \cdot mol)}\)</span> is the <dfn class="terminology">ideal gas constant</dfn>.  These do not change in situations in which this law is generally applied.  In this equation, we can think of any one of the variables as a function of the other two variables.</div>
+<ul class="disc" id="IdealGasLawFunctions-2-11">
+<li id="IdealGasLawFunctions-2-11-1"><div class="para" id="p-derived-IdealGasLawFunctions-2-11-1"><span class="process-math">\(\displaystyle \displaystyle P = f_1(V,T) = \frac{nRT}{V}\)</span></div></li>
+<li id="IdealGasLawFunctions-2-11-2"><div class="para" id="p-derived-IdealGasLawFunctions-2-11-2"><span class="process-math">\(\displaystyle \displaystyle V = f_2(P,T) = \frac{nRT}{P}\)</span></div></li>
+<li id="IdealGasLawFunctions-2-11-3"><div class="para" id="p-derived-IdealGasLawFunctions-2-11-3"><span class="process-math">\(\displaystyle \displaystyle T = f_3(P,V) = \frac{PV}{nR}\)</span></div></li>
+</ul>
+</div></article></div>
+<section class="exercises" id="ex_firstch-intro"><h3 class="heading hide-type">
+<span class="type">Exercises</span><span class="space"> </span><span class="codenumber"></span><span class="space"> </span><span class="title">Exercises</span>
+</h3>
+<article class="exercise exercise-like" id="EvaluatefFromPoly"><h4 class="heading">
+<span class="codenumber">1<span class="period">.</span></span><span class="space"> </span><span class="title">A Polynomial <span class="process-math">\(f(x,y)\)</span> in Two Variables.</span>
+</h4>
+<div id="momEvaluatefFromPoly-2wrap" style="width:100%;overflow:visible;position:relative"><iframe id="momEvaluatefFromPoly-2" style="position:absolute;z-index:1;object-fit: contain; width: 100%" frameborder="0" data-knowl-callback="sendResizeRequest" src="https://www.myopenmath.com/embedq2.php?id=6001&amp;frame_id=momEvaluatefFromPoly-2"></iframe></div></article><article class="exercise exercise-like" id="EvaluatefFromTable"><h4 class="heading">
+<span class="codenumber">2<span class="period">.</span></span><span class="space"> </span><span class="title">A Table Representing <span class="process-math">\(f(x,y)\)</span>.</span>
+</h4>
+<div id="momEvaluatefFromTable-2wrap" style="width:100%;overflow:visible;position:relative"><iframe id="momEvaluatefFromTable-2" style="position:absolute;z-index:1;object-fit: contain; width: 100%" frameborder="0" data-knowl-callback="sendResizeRequest" src="https://www.myopenmath.com/embedq2.php?id=20061&amp;frame_id=momEvaluatefFromTable-2"></iframe></div></article><article class="exercise exercise-like" id="Library__FortLewis__Calc3__12-2-Multivariable-graphs__HGM4-12-2-16-Multivariable-functions-graphs.pg"><h4 class="heading">
+<span class="codenumber">3<span class="period">.</span></span><span class="space"> </span><span class="title">Concentration of a Drug in the Blood.</span>
+</h4>
+<div id="webwork-1" class="exercise-wrapper" data-domain="https://webwork-ptx.aimath.org" data-seed="1" data-localize-correct="Correct" data-localize-incorrect="Incorrect" data-localize-blank="Blank" data-localize-submit="Submit" data-localize-check-responses="Check Responses" data-localize-reveal="Reveal" data-localize-randomize="Randomize" data-localize-reset="Reset" data-localize-hint="Hint" data-localize-solution="Solution" data-sourceFilePath="Library/FortLewis/Calc3/12-2-Multivariable-graphs/HGM4-12-2-16-Multivariable-functions-graphs.pg" data-courseID="anonymous" data-userID="anonymous" data-coursePassword="anonymous" aria-live="polite">
+<div class="problem-buttons"><button class="webwork-button" onclick="handleWW('webwork-1')">Activate</button></div>
+<div class="problem-contents">
+<div class="para logical" id="extracted-webwork-1-1-1-1">
+<div class="para">Consider the concentration, C, (in mg/liter) of a drug in the blood as a function of the amount of drug given, x, and the time since injection, t.  For <span class="process-math">\(0 \leq x \leq 4\)</span> mg and <span class="process-math">\(t \geq 0\)</span> hours, we have</div>
+<div class="displaymath process-math">
+\begin{equation*}
+C = f(x,t) = 30te^{-\left(4-x\right)t}
+\end{equation*}
+</div>
+</div> <div class="para" id="extracted-webwork-1-1-1-2">
+<span class="process-math">\(f(3,2) =\)</span> <span class="fillin underline" role="img" aria-label="40-character blank" style="width: 18.1818181818182em;"></span>
+</div> <div class="para logical" id="extracted-webwork-1-1-1-3">
+<div class="para">Give a practical interpretation of your answer: <span class="process-math">\(f(3, 2)\)</span> is</div>
+<ul class="circle" id="extracted-webwork-1-1-1-3-2">
+<li id="extracted-webwork-1-1-1-3-2-1"><div class="para" id="extracted-webwork-1-1-1-3-2-1-1">the concentration of a 3 mg dose in the blood 2 hours after injection.</div></li>
+<li id="extracted-webwork-1-1-1-3-2-2"><div class="para" id="extracted-webwork-1-1-1-3-2-2-1">the amount of a 2 mg dose in the blood 3 hours after injection.</div></li>
+<li id="extracted-webwork-1-1-1-3-2-3"><div class="para" id="extracted-webwork-1-1-1-3-2-3-1">the change in concentration of a 2 mg dose in the blood 3 hours after injection.</div></li>
+<li id="extracted-webwork-1-1-1-3-2-4"><div class="para" id="extracted-webwork-1-1-1-3-2-4-1">the amount of a 3 mg dose in the blood 2 hours after injection.</div></li>
+<li id="extracted-webwork-1-1-1-3-2-5"><div class="para" id="extracted-webwork-1-1-1-3-2-5-1">the change in concentration of a 3 mg dose in the blood 2 hours after injection.</div></li>
+<li id="extracted-webwork-1-1-1-3-2-6"><div class="para" id="extracted-webwork-1-1-1-3-2-6-1">the concentration of a 2 mg dose in the blood 3 hours after injection.</div></li>
+</ul>
+</div>
+<div class="solutions"><details id="extracted-webwork-1-1-2" class="answer solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Answer</span><span class="period">.</span></summary><div class="answer solution-like knowl__content"><div class="para" id="extracted-webwork-1-1-2-1"><span class="process-math">\(8.12012\)</span></div></div></details></div>
+</div>
+</div></article><article class="exercise exercise-like" id="ez-windchilltable"><h4 class="heading">
+<span class="codenumber">4<span class="period">.</span></span><span class="space"> </span><span class="title">Wind Chill Table.</span>
+</h4>
+<div id="webwork-2" class="exercise-wrapper" data-domain="https://webwork-ptx.aimath.org" data-seed="2" data-localize-correct="Correct" data-localize-incorrect="Incorrect" data-localize-blank="Blank" data-localize-submit="Submit" data-localize-check-responses="Check Responses" data-localize-reveal="Reveal" data-localize-randomize="Randomize" data-localize-reset="Reset" data-localize-hint="Hint" data-localize-solution="Solution" data-sourceFilePath="Library/Michigan/Chap12Sec1/Q21.pg" data-courseID="anonymous" data-userID="anonymous" data-coursePassword="anonymous" aria-live="polite">
+<div class="problem-buttons"><button class="webwork-button" onclick="handleWW('webwork-2')">Activate</button></div>
+<div class="problem-contents">
+<div class="para" id="extracted-webwork-2-1-1-1">The temperature adjusted for wind-chill, <span class="process-math">\(w\text{,}\)</span> is a temperature which tells you how cold it feels, as a result of the combination of wind and temperature [see <a class="external" href="http://www.nws.noaa.gov/om/windchill/" target="_blank">wind-chill</a><details class="ptx-footnote" aria-live="polite" id="extracted-webwork-2-1-1-1-3"><summary class="ptx-footnote__number" title="Footnote 3.1.4.32"><sup> 32 </sup></summary><div class="ptx-footnote__contents" id="extracted-webwork-2-1-1-1-3"><code class="code-inline tex2jax_ignore">www.nws.noaa.gov/om/windchill/</code></div></details>]. See the table below, which gives temperature adjusted for wind-chill, <span class="process-math">\(w\text{,}\)</span> as a function of temperature <span class="process-math">\(T\)</span> and wind speed <span class="process-math">\(s\text{.}\)</span>
+</div> <div class="tabular-box natural-width"><table class="tabular">
+<tr>
+<td class="l m b2 r2 l2 t2 lines"></td>
+<td class="l m b2 r2 l0 t2 lines"><span class="process-math">\(T=35\)</span></td>
+<td class="l m b2 r2 l0 t2 lines"><span class="process-math">\(T=30\)</span></td>
+<td class="l m b2 r2 l0 t2 lines"><span class="process-math">\(T=25\)</span></td>
+<td class="l m b2 r2 l0 t2 lines"><span class="process-math">\(T=20\)</span></td>
+<td class="l m b2 r2 l0 t2 lines"><span class="process-math">\(T=15\)</span></td>
+<td class="l m b2 r2 l0 t2 lines"><span class="process-math">\(T=10\)</span></td>
+<td class="l m b2 r2 l0 t2 lines"><span class="process-math">\(T=5\)</span></td>
+<td class="l m b2 r2 l0 t2 lines"><span class="process-math">\(T=0\)</span></td>
+</tr>
+<tr>
+<td class="l m b2 r2 l2 t0 lines"><span class="process-math">\(s=5\)</span></td>
+<td class="l m b2 r2 l0 t0 lines">31</td>
+<td class="l m b2 r2 l0 t0 lines">25</td>
+<td class="l m b2 r2 l0 t0 lines">19</td>
+<td class="l m b2 r2 l0 t0 lines">13</td>
+<td class="l m b2 r2 l0 t0 lines">7</td>
+<td class="l m b2 r2 l0 t0 lines">1</td>
+<td class="l m b2 r2 l0 t0 lines">-5</td>
+<td class="l m b2 r2 l0 t0 lines">-11</td>
+</tr>
+<tr>
+<td class="l m b2 r2 l2 t0 lines"><span class="process-math">\(s=10\)</span></td>
+<td class="l m b2 r2 l0 t0 lines">27</td>
+<td class="l m b2 r2 l0 t0 lines">21</td>
+<td class="l m b2 r2 l0 t0 lines">15</td>
+<td class="l m b2 r2 l0 t0 lines">9</td>
+<td class="l m b2 r2 l0 t0 lines">3</td>
+<td class="l m b2 r2 l0 t0 lines">-4</td>
+<td class="l m b2 r2 l0 t0 lines">-10</td>
+<td class="l m b2 r2 l0 t0 lines">-16</td>
+</tr>
+<tr>
+<td class="l m b2 r2 l2 t0 lines"><span class="process-math">\(s=15\)</span></td>
+<td class="l m b2 r2 l0 t0 lines">25</td>
+<td class="l m b2 r2 l0 t0 lines">19</td>
+<td class="l m b2 r2 l0 t0 lines">13</td>
+<td class="l m b2 r2 l0 t0 lines">6</td>
+<td class="l m b2 r2 l0 t0 lines">0</td>
+<td class="l m b2 r2 l0 t0 lines">-7</td>
+<td class="l m b2 r2 l0 t0 lines">-13</td>
+<td class="l m b2 r2 l0 t0 lines">-19</td>
+</tr>
+<tr>
+<td class="l m b2 r2 l2 t0 lines"><span class="process-math">\(s=20\)</span></td>
+<td class="l m b2 r2 l0 t0 lines">24</td>
+<td class="l m b2 r2 l0 t0 lines">17</td>
+<td class="l m b2 r2 l0 t0 lines">11</td>
+<td class="l m b2 r2 l0 t0 lines">4</td>
+<td class="l m b2 r2 l0 t0 lines">-2</td>
+<td class="l m b2 r2 l0 t0 lines">-9</td>
+<td class="l m b2 r2 l0 t0 lines">-15</td>
+<td class="l m b2 r2 l0 t0 lines">-22</td>
+</tr>
+<tr>
+<td class="l m b2 r2 l2 t0 lines"><span class="process-math">\(s=25\)</span></td>
+<td class="l m b2 r2 l0 t0 lines">23</td>
+<td class="l m b2 r2 l0 t0 lines">16</td>
+<td class="l m b2 r2 l0 t0 lines">9</td>
+<td class="l m b2 r2 l0 t0 lines">3</td>
+<td class="l m b2 r2 l0 t0 lines">-4</td>
+<td class="l m b2 r2 l0 t0 lines">-11</td>
+<td class="l m b2 r2 l0 t0 lines">-17</td>
+<td class="l m b2 r2 l0 t0 lines">-24</td>
+</tr>
+</table></div> <div class="para" id="extracted-webwork-2-1-1-3">Use this table to make tables of the temperature adjusted for wind-chill (<span class="process-math">\(w\)</span>) as a function of temperature for wind speeds 5 and 15 mph:</div> <div class="para" id="extracted-webwork-2-1-1-4"><span class="process-math">\(s = 5\text{:}\)</span></div> <div class="tabular-box natural-width"><table class="tabular">
+<tr>
+<td class="l m b2 r2 l2 t2 lines">independent variable = <span class="fillin underline" role="img" aria-label="3-character blank" style="width: 1.363636363636364em;"></span> =</td>
+<td class="l m b2 r2 l0 t2 lines"><span class="fillin underline" role="img" aria-label="5-character blank" style="width: 2.272727272727273em;"></span></td>
+<td class="l m b2 r2 l0 t2 lines"><span class="fillin underline" role="img" aria-label="5-character blank" style="width: 2.272727272727273em;"></span></td>
+<td class="l m b2 r2 l0 t2 lines"><span class="fillin underline" role="img" aria-label="5-character blank" style="width: 2.272727272727273em;"></span></td>
+<td class="l m b2 r2 l0 t2 lines"><span class="fillin underline" role="img" aria-label="5-character blank" style="width: 2.272727272727273em;"></span></td>
+<td class="l m b2 r2 l0 t2 lines"><span class="fillin underline" role="img" aria-label="5-character blank" style="width: 2.272727272727273em;"></span></td>
+<td class="l m b2 r2 l0 t2 lines"><span class="fillin underline" role="img" aria-label="5-character blank" style="width: 2.272727272727273em;"></span></td>
+<td class="l m b2 r2 l0 t2 lines"><span class="fillin underline" role="img" aria-label="5-character blank" style="width: 2.272727272727273em;"></span></td>
+<td class="l m b2 r2 l0 t2 lines"><span class="fillin underline" role="img" aria-label="5-character blank" style="width: 2.272727272727273em;"></span></td>
+</tr>
+<tr>
+<td class="l m b2 r2 l2 t0 lines">dependent variable = <span class="fillin underline" role="img" aria-label="3-character blank" style="width: 1.363636363636364em;"></span> =</td>
+<td class="l m b2 r2 l0 t0 lines"><span class="fillin underline" role="img" aria-label="5-character blank" style="width: 2.272727272727273em;"></span></td>
+<td class="l m b2 r2 l0 t0 lines"><span class="fillin underline" role="img" aria-label="5-character blank" style="width: 2.272727272727273em;"></span></td>
+<td class="l m b2 r2 l0 t0 lines"><span class="fillin underline" role="img" aria-label="5-character blank" style="width: 2.272727272727273em;"></span></td>
+<td class="l m b2 r2 l0 t0 lines"><span class="fillin underline" role="img" aria-label="5-character blank" style="width: 2.272727272727273em;"></span></td>
+<td class="l m b2 r2 l0 t0 lines"><span class="fillin underline" role="img" aria-label="5-character blank" style="width: 2.272727272727273em;"></span></td>
+<td class="l m b2 r2 l0 t0 lines"><span class="fillin underline" role="img" aria-label="5-character blank" style="width: 2.272727272727273em;"></span></td>
+<td class="l m b2 r2 l0 t0 lines"><span class="fillin underline" role="img" aria-label="5-character blank" style="width: 2.272727272727273em;"></span></td>
+<td class="l m b2 r2 l0 t0 lines"><span class="fillin underline" role="img" aria-label="5-character blank" style="width: 2.272727272727273em;"></span></td>
+</tr>
+</table></div> <div class="para" id="extracted-webwork-2-1-1-6"><span class="process-math">\(s = 15\text{:}\)</span></div> <div class="tabular-box natural-width"><table class="tabular">
+<tr>
+<td class="l m b2 r2 l2 t2 lines">independent variable = <span class="fillin underline" role="img" aria-label="3-character blank" style="width: 1.363636363636364em;"></span> =</td>
+<td class="l m b2 r2 l0 t2 lines"><span class="fillin underline" role="img" aria-label="5-character blank" style="width: 2.272727272727273em;"></span></td>
+<td class="l m b2 r2 l0 t2 lines"><span class="fillin underline" role="img" aria-label="5-character blank" style="width: 2.272727272727273em;"></span></td>
+<td class="l m b2 r2 l0 t2 lines"><span class="fillin underline" role="img" aria-label="5-character blank" style="width: 2.272727272727273em;"></span></td>
+<td class="l m b2 r2 l0 t2 lines"><span class="fillin underline" role="img" aria-label="5-character blank" style="width: 2.272727272727273em;"></span></td>
+<td class="l m b2 r2 l0 t2 lines"><span class="fillin underline" role="img" aria-label="5-character blank" style="width: 2.272727272727273em;"></span></td>
+<td class="l m b2 r2 l0 t2 lines"><span class="fillin underline" role="img" aria-label="5-character blank" style="width: 2.272727272727273em;"></span></td>
+<td class="l m b2 r2 l0 t2 lines"><span class="fillin underline" role="img" aria-label="5-character blank" style="width: 2.272727272727273em;"></span></td>
+<td class="l m b2 r2 l0 t2 lines"><span class="fillin underline" role="img" aria-label="5-character blank" style="width: 2.272727272727273em;"></span></td>
+</tr>
+<tr>
+<td class="l m b2 r2 l2 t0 lines">dependent variable = <span class="fillin underline" role="img" aria-label="3-character blank" style="width: 1.363636363636364em;"></span> =</td>
+<td class="l m b2 r2 l0 t0 lines"><span class="fillin underline" role="img" aria-label="5-character blank" style="width: 2.272727272727273em;"></span></td>
+<td class="l m b2 r2 l0 t0 lines"><span class="fillin underline" role="img" aria-label="5-character blank" style="width: 2.272727272727273em;"></span></td>
+<td class="l m b2 r2 l0 t0 lines"><span class="fillin underline" role="img" aria-label="5-character blank" style="width: 2.272727272727273em;"></span></td>
+<td class="l m b2 r2 l0 t0 lines"><span class="fillin underline" role="img" aria-label="5-character blank" style="width: 2.272727272727273em;"></span></td>
+<td class="l m b2 r2 l0 t0 lines"><span class="fillin underline" role="img" aria-label="5-character blank" style="width: 2.272727272727273em;"></span></td>
+<td class="l m b2 r2 l0 t0 lines"><span class="fillin underline" role="img" aria-label="5-character blank" style="width: 2.272727272727273em;"></span></td>
+<td class="l m b2 r2 l0 t0 lines"><span class="fillin underline" role="img" aria-label="5-character blank" style="width: 2.272727272727273em;"></span></td>
+<td class="l m b2 r2 l0 t0 lines"><span class="fillin underline" role="img" aria-label="5-character blank" style="width: 2.272727272727273em;"></span></td>
+</tr>
+</table></div>
+<div class="solutions">
+<details id="extracted-webwork-2-1-2" class="answer solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Answer</span><span class="space"> </span><span class="codenumber">1</span><span class="period">.</span></summary><div class="answer solution-like knowl__content"><div class="para" id="extracted-webwork-2-1-2-1"><span class="process-math">\(T\)</span></div></div></details><details id="extracted-webwork-2-1-3" class="answer solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Answer</span><span class="space"> </span><span class="codenumber">2</span><span class="period">.</span></summary><div class="answer solution-like knowl__content"><div class="para" id="extracted-webwork-2-1-3-1"><span class="process-math">\(35\)</span></div></div></details><details id="extracted-webwork-2-1-4" class="answer solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Answer</span><span class="space"> </span><span class="codenumber">3</span><span class="period">.</span></summary><div class="answer solution-like knowl__content"><div class="para" id="extracted-webwork-2-1-4-1"><span class="process-math">\(30\)</span></div></div></details><details id="extracted-webwork-2-1-5" class="answer solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Answer</span><span class="space"> </span><span class="codenumber">4</span><span class="period">.</span></summary><div class="answer solution-like knowl__content"><div class="para" id="extracted-webwork-2-1-5-1"><span class="process-math">\(25\)</span></div></div></details><details id="extracted-webwork-2-1-6" class="answer solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Answer</span><span class="space"> </span><span class="codenumber">5</span><span class="period">.</span></summary><div class="answer solution-like knowl__content"><div class="para" id="extracted-webwork-2-1-6-1"><span class="process-math">\(20\)</span></div></div></details><details id="extracted-webwork-2-1-7" class="answer solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Answer</span><span class="space"> </span><span class="codenumber">6</span><span class="period">.</span></summary><div class="answer solution-like knowl__content"><div class="para" id="extracted-webwork-2-1-7-1"><span class="process-math">\(15\)</span></div></div></details><details id="extracted-webwork-2-1-8" class="answer solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Answer</span><span class="space"> </span><span class="codenumber">7</span><span class="period">.</span></summary><div class="answer solution-like knowl__content"><div class="para" id="extracted-webwork-2-1-8-1"><span class="process-math">\(10\)</span></div></div></details><details id="extracted-webwork-2-1-9" class="answer solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Answer</span><span class="space"> </span><span class="codenumber">8</span><span class="period">.</span></summary><div class="answer solution-like knowl__content"><div class="para" id="extracted-webwork-2-1-9-1"><span class="process-math">\(5\)</span></div></div></details><details id="extracted-webwork-2-1-10" class="answer solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Answer</span><span class="space"> </span><span class="codenumber">9</span><span class="period">.</span></summary><div class="answer solution-like knowl__content"><div class="para" id="extracted-webwork-2-1-10-1"><span class="process-math">\(0\)</span></div></div></details><details id="extracted-webwork-2-1-11" class="answer solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Answer</span><span class="space"> </span><span class="codenumber">10</span><span class="period">.</span></summary><div class="answer solution-like knowl__content"><div class="para" id="extracted-webwork-2-1-11-1"><span class="process-math">\(w\)</span></div></div></details><details id="extracted-webwork-2-1-12" class="answer solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Answer</span><span class="space"> </span><span class="codenumber">11</span><span class="period">.</span></summary><div class="answer solution-like knowl__content"><div class="para" id="extracted-webwork-2-1-12-1"><span class="process-math">\(31\)</span></div></div></details><details id="extracted-webwork-2-1-13" class="answer solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Answer</span><span class="space"> </span><span class="codenumber">12</span><span class="period">.</span></summary><div class="answer solution-like knowl__content"><div class="para" id="extracted-webwork-2-1-13-1"><span class="process-math">\(25\)</span></div></div></details><details id="extracted-webwork-2-1-14" class="answer solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Answer</span><span class="space"> </span><span class="codenumber">13</span><span class="period">.</span></summary><div class="answer solution-like knowl__content"><div class="para" id="extracted-webwork-2-1-14-1"><span class="process-math">\(19\)</span></div></div></details><details id="extracted-webwork-2-1-15" class="answer solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Answer</span><span class="space"> </span><span class="codenumber">14</span><span class="period">.</span></summary><div class="answer solution-like knowl__content"><div class="para" id="extracted-webwork-2-1-15-1"><span class="process-math">\(13\)</span></div></div></details><details id="extracted-webwork-2-1-16" class="answer solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Answer</span><span class="space"> </span><span class="codenumber">15</span><span class="period">.</span></summary><div class="answer solution-like knowl__content"><div class="para" id="extracted-webwork-2-1-16-1"><span class="process-math">\(7\)</span></div></div></details><details id="extracted-webwork-2-1-17" class="answer solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Answer</span><span class="space"> </span><span class="codenumber">16</span><span class="period">.</span></summary><div class="answer solution-like knowl__content"><div class="para" id="extracted-webwork-2-1-17-1"><span class="process-math">\(1\)</span></div></div></details><details id="extracted-webwork-2-1-18" class="answer solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Answer</span><span class="space"> </span><span class="codenumber">17</span><span class="period">.</span></summary><div class="answer solution-like knowl__content"><div class="para" id="extracted-webwork-2-1-18-1"><span class="process-math">\(-5\)</span></div></div></details><details id="extracted-webwork-2-1-19" class="answer solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Answer</span><span class="space"> </span><span class="codenumber">18</span><span class="period">.</span></summary><div class="answer solution-like knowl__content"><div class="para" id="extracted-webwork-2-1-19-1"><span class="process-math">\(-11\)</span></div></div></details><details id="extracted-webwork-2-1-20" class="answer solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Answer</span><span class="space"> </span><span class="codenumber">19</span><span class="period">.</span></summary><div class="answer solution-like knowl__content"><div class="para" id="extracted-webwork-2-1-20-1"><span class="process-math">\(T\)</span></div></div></details><details id="extracted-webwork-2-1-21" class="answer solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Answer</span><span class="space"> </span><span class="codenumber">20</span><span class="period">.</span></summary><div class="answer solution-like knowl__content"><div class="para" id="extracted-webwork-2-1-21-1"><span class="process-math">\(35\)</span></div></div></details><details id="extracted-webwork-2-1-22" class="answer solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Answer</span><span class="space"> </span><span class="codenumber">21</span><span class="period">.</span></summary><div class="answer solution-like knowl__content"><div class="para" id="extracted-webwork-2-1-22-1"><span class="process-math">\(30\)</span></div></div></details><details id="extracted-webwork-2-1-23" class="answer solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Answer</span><span class="space"> </span><span class="codenumber">22</span><span class="period">.</span></summary><div class="answer solution-like knowl__content"><div class="para" id="extracted-webwork-2-1-23-1"><span class="process-math">\(25\)</span></div></div></details><details id="extracted-webwork-2-1-24" class="answer solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Answer</span><span class="space"> </span><span class="codenumber">23</span><span class="period">.</span></summary><div class="answer solution-like knowl__content"><div class="para" id="extracted-webwork-2-1-24-1"><span class="process-math">\(20\)</span></div></div></details><details id="extracted-webwork-2-1-25" class="answer solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Answer</span><span class="space"> </span><span class="codenumber">24</span><span class="period">.</span></summary><div class="answer solution-like knowl__content"><div class="para" id="extracted-webwork-2-1-25-1"><span class="process-math">\(15\)</span></div></div></details><details id="extracted-webwork-2-1-26" class="answer solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Answer</span><span class="space"> </span><span class="codenumber">25</span><span class="period">.</span></summary><div class="answer solution-like knowl__content"><div class="para" id="extracted-webwork-2-1-26-1"><span class="process-math">\(10\)</span></div></div></details><details id="extracted-webwork-2-1-27" class="answer solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Answer</span><span class="space"> </span><span class="codenumber">26</span><span class="period">.</span></summary><div class="answer solution-like knowl__content"><div class="para" id="extracted-webwork-2-1-27-1"><span class="process-math">\(5\)</span></div></div></details><details id="extracted-webwork-2-1-28" class="answer solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Answer</span><span class="space"> </span><span class="codenumber">27</span><span class="period">.</span></summary><div class="answer solution-like knowl__content"><div class="para" id="extracted-webwork-2-1-28-1"><span class="process-math">\(0\)</span></div></div></details><details id="extracted-webwork-2-1-29" class="answer solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Answer</span><span class="space"> </span><span class="codenumber">28</span><span class="period">.</span></summary><div class="answer solution-like knowl__content"><div class="para" id="extracted-webwork-2-1-29-1"><span class="process-math">\(w\)</span></div></div></details><details id="extracted-webwork-2-1-30" class="answer solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Answer</span><span class="space"> </span><span class="codenumber">29</span><span class="period">.</span></summary><div class="answer solution-like knowl__content"><div class="para" id="extracted-webwork-2-1-30-1"><span class="process-math">\(25\)</span></div></div></details><details id="extracted-webwork-2-1-31" class="answer solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Answer</span><span class="space"> </span><span class="codenumber">30</span><span class="period">.</span></summary><div class="answer solution-like knowl__content"><div class="para" id="extracted-webwork-2-1-31-1"><span class="process-math">\(19\)</span></div></div></details><details id="extracted-webwork-2-1-32" class="answer solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Answer</span><span class="space"> </span><span class="codenumber">31</span><span class="period">.</span></summary><div class="answer solution-like knowl__content"><div class="para" id="extracted-webwork-2-1-32-1"><span class="process-math">\(13\)</span></div></div></details><details id="extracted-webwork-2-1-33" class="answer solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Answer</span><span class="space"> </span><span class="codenumber">32</span><span class="period">.</span></summary><div class="answer solution-like knowl__content"><div class="para" id="extracted-webwork-2-1-33-1"><span class="process-math">\(6\)</span></div></div></details><details id="extracted-webwork-2-1-34" class="answer solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Answer</span><span class="space"> </span><span class="codenumber">33</span><span class="period">.</span></summary><div class="answer solution-like knowl__content"><div class="para" id="extracted-webwork-2-1-34-1"><span class="process-math">\(0\)</span></div></div></details><details id="extracted-webwork-2-1-35" class="answer solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Answer</span><span class="space"> </span><span class="codenumber">34</span><span class="period">.</span></summary><div class="answer solution-like knowl__content"><div class="para" id="extracted-webwork-2-1-35-1"><span class="process-math">\(-7\)</span></div></div></details><details id="extracted-webwork-2-1-36" class="answer solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Answer</span><span class="space"> </span><span class="codenumber">35</span><span class="period">.</span></summary><div class="answer solution-like knowl__content"><div class="para" id="extracted-webwork-2-1-36-1"><span class="process-math">\(-13\)</span></div></div></details><details id="extracted-webwork-2-1-37" class="answer solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Answer</span><span class="space"> </span><span class="codenumber">36</span><span class="period">.</span></summary><div class="answer solution-like knowl__content"><div class="para" id="extracted-webwork-2-1-37-1"><span class="process-math">\(-19\)</span></div></div></details><details id="extracted-webwork-2-1-38" class="solution solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Solution</span><span class="period">.</span></summary><div class="solution solution-like knowl__content">
+<span class="process-math">\(w_1(T) = w(5, T)\)</span><span class="process-math">\(w_2(T) = w(15, T)\)</span><span class="process-math">\(s = 5\)</span><div class="tabular-box natural-width"><table class="tabular">
+<tr>
+<td class="l m b2 r2 l2 t2 lines"><span class="process-math">\(T =\)</span></td>
+<td class="l m b2 r2 l0 t2 lines">35</td>
+<td class="l m b2 r2 l0 t2 lines">30</td>
+<td class="l m b2 r2 l0 t2 lines">25</td>
+<td class="l m b2 r2 l0 t2 lines">20</td>
+<td class="l m b2 r2 l0 t2 lines">15</td>
+<td class="l m b2 r2 l0 t2 lines">10</td>
+<td class="l m b2 r2 l0 t2 lines">5</td>
+<td class="l m b2 r2 l0 t2 lines">0</td>
+</tr>
+<tr>
+<td class="l m b2 r2 l2 t0 lines"><span class="process-math">\(w =\)</span></td>
+<td class="l m b2 r2 l0 t0 lines">31</td>
+<td class="l m b2 r2 l0 t0 lines">25</td>
+<td class="l m b2 r2 l0 t0 lines">19</td>
+<td class="l m b2 r2 l0 t0 lines">13</td>
+<td class="l m b2 r2 l0 t0 lines">7</td>
+<td class="l m b2 r2 l0 t0 lines">1</td>
+<td class="l m b2 r2 l0 t0 lines">-5</td>
+<td class="l m b2 r2 l0 t0 lines">-11</td>
+</tr>
+</table></div>
+<span class="process-math">\(s = 15\)</span><div class="tabular-box natural-width"><table class="tabular">
+<tr>
+<td class="l m b2 r2 l2 t2 lines"><span class="process-math">\(T =\)</span></td>
+<td class="l m b2 r2 l0 t2 lines">35</td>
+<td class="l m b2 r2 l0 t2 lines">30</td>
+<td class="l m b2 r2 l0 t2 lines">25</td>
+<td class="l m b2 r2 l0 t2 lines">20</td>
+<td class="l m b2 r2 l0 t2 lines">15</td>
+<td class="l m b2 r2 l0 t2 lines">10</td>
+<td class="l m b2 r2 l0 t2 lines">5</td>
+<td class="l m b2 r2 l0 t2 lines">0</td>
+</tr>
+<tr>
+<td class="l m b2 r2 l2 t0 lines"><span class="process-math">\(w =\)</span></td>
+<td class="l m b2 r2 l0 t0 lines">25</td>
+<td class="l m b2 r2 l0 t0 lines">19</td>
+<td class="l m b2 r2 l0 t0 lines">13</td>
+<td class="l m b2 r2 l0 t0 lines">6</td>
+<td class="l m b2 r2 l0 t0 lines">0</td>
+<td class="l m b2 r2 l0 t0 lines">-7</td>
+<td class="l m b2 r2 l0 t0 lines">-13</td>
+<td class="l m b2 r2 l0 t0 lines">-19</td>
+</tr>
+</table></div>
+</div></details>
+</div>
+</div>
+</div></article><article class="exercise exercise-like" id="ez-bankaccountbalance"><h4 class="heading">
+<span class="codenumber">5<span class="period">.</span></span><span class="space"> </span><span class="title">Bank Account Balance.</span>
+</h4>
+<div id="webwork-3" class="exercise-wrapper" data-domain="https://webwork-ptx.aimath.org" data-seed="3" data-localize-correct="Correct" data-localize-incorrect="Incorrect" data-localize-blank="Blank" data-localize-submit="Submit" data-localize-check-responses="Check Responses" data-localize-reveal="Reveal" data-localize-randomize="Randomize" data-localize-reset="Reset" data-localize-hint="Hint" data-localize-solution="Solution" data-sourceFilePath="Library/Michigan/Chap12Sec1/Q22.pg" data-courseID="anonymous" data-userID="anonymous" data-coursePassword="anonymous" aria-live="polite">
+<div class="problem-buttons"><button class="webwork-button" onclick="handleWW('webwork-3')">Activate</button></div>
+<div class="problem-contents">
+<div class="para" id="extracted-webwork-3-1-1-1">The balance, <span class="process-math">\(B\text{,}\)</span> in dollars, in a bank account depends on the amount deposited, <span class="process-math">\(A\)</span> dollars, the annual interest rate, <span class="process-math">\(r\)</span> %, and the time, <span class="process-math">\(t\text{,}\)</span> in months since the deposit, so  <span class="process-math">\(B=f(A,r,t)\text{.}\)</span>
+</div> <div class="para" id="extracted-webwork-3-1-1-2">
+<em class="alert">(a)</em> Is  <span class="process-math">\(f\)</span> an increasing or decreasing function of:</div> <div class="para logical" id="extracted-webwork-3-1-1-3">
+<div class="para"><span class="process-math">\(A\text{?}\)</span></div>
+<ul class="square" id="extracted-webwork-3-1-1-3-2">
+<li id="extracted-webwork-3-1-1-3-2-1"><div class="para" id="extracted-webwork-3-1-1-3-2-1-1">increasing</div></li>
+<li id="extracted-webwork-3-1-1-3-2-2"><div class="para" id="extracted-webwork-3-1-1-3-2-2-1">decreasing</div></li>
+<li id="extracted-webwork-3-1-1-3-2-3"><div class="para" id="extracted-webwork-3-1-1-3-2-3-1">neither increasing nor decreasing</div></li>
+<li id="extracted-webwork-3-1-1-3-2-4"><div class="para" id="extracted-webwork-3-1-1-3-2-4-1">somtimes increasing and sometimes decreasing</div></li>
+</ul>
+</div> <div class="para logical" id="extracted-webwork-3-1-1-4">
+<div class="para"><span class="process-math">\(r\text{?}\)</span></div>
+<ul class="square" id="extracted-webwork-3-1-1-4-2">
+<li id="extracted-webwork-3-1-1-4-2-1"><div class="para" id="extracted-webwork-3-1-1-4-2-1-1">increasing</div></li>
+<li id="extracted-webwork-3-1-1-4-2-2"><div class="para" id="extracted-webwork-3-1-1-4-2-2-1">decreasing</div></li>
+<li id="extracted-webwork-3-1-1-4-2-3"><div class="para" id="extracted-webwork-3-1-1-4-2-3-1">neither increasing nor decreasing</div></li>
+<li id="extracted-webwork-3-1-1-4-2-4"><div class="para" id="extracted-webwork-3-1-1-4-2-4-1">somtimes increasing and sometimes decreasing</div></li>
+</ul>
+</div> <div class="para logical" id="extracted-webwork-3-1-1-5">
+<div class="para"><span class="process-math">\(t\text{?}\)</span></div>
+<ul class="square" id="extracted-webwork-3-1-1-5-2">
+<li id="extracted-webwork-3-1-1-5-2-1"><div class="para" id="extracted-webwork-3-1-1-5-2-1-1">increasing</div></li>
+<li id="extracted-webwork-3-1-1-5-2-2"><div class="para" id="extracted-webwork-3-1-1-5-2-2-1">decreasing</div></li>
+<li id="extracted-webwork-3-1-1-5-2-3"><div class="para" id="extracted-webwork-3-1-1-5-2-3-1">neither increasing nor decreasing</div></li>
+<li id="extracted-webwork-3-1-1-5-2-4"><div class="para" id="extracted-webwork-3-1-1-5-2-4-1">somtimes increasing and sometimes decreasing</div></li>
+</ul>
+</div> <div class="para" id="extracted-webwork-3-1-1-6">
+<em class="alert">(b)</em> Interpret the statement <span class="process-math">\(f(1250, 1, 18) \approx 1452\)</span> by writing a sentence, including units.  Then use your sentence to complete the following:</div> <div class="para logical" id="extracted-webwork-3-1-1-7">
+<div class="para">The units of 1250 are:</div>
+<ul class="square" id="extracted-webwork-3-1-1-7-1">
+<li id="extracted-webwork-3-1-1-7-1-1"><div class="para" id="extracted-webwork-3-1-1-7-1-1-1">percent</div></li>
+<li id="extracted-webwork-3-1-1-7-1-2"><div class="para" id="extracted-webwork-3-1-1-7-1-2-1">months</div></li>
+<li id="extracted-webwork-3-1-1-7-1-3"><div class="para" id="extracted-webwork-3-1-1-7-1-3-1">dollars</div></li>
+<li id="extracted-webwork-3-1-1-7-1-4"><div class="para" id="extracted-webwork-3-1-1-7-1-4-1">dollars/month</div></li>
+<li id="extracted-webwork-3-1-1-7-1-5"><div class="para" id="extracted-webwork-3-1-1-7-1-5-1">percent/month</div></li>
+</ul>
+</div> <div class="para logical" id="extracted-webwork-3-1-1-8">
+<div class="para">The units of 1 are:</div>
+<ul class="square" id="extracted-webwork-3-1-1-8-1">
+<li id="extracted-webwork-3-1-1-8-1-1"><div class="para" id="extracted-webwork-3-1-1-8-1-1-1">percent</div></li>
+<li id="extracted-webwork-3-1-1-8-1-2"><div class="para" id="extracted-webwork-3-1-1-8-1-2-1">months</div></li>
+<li id="extracted-webwork-3-1-1-8-1-3"><div class="para" id="extracted-webwork-3-1-1-8-1-3-1">dollars</div></li>
+<li id="extracted-webwork-3-1-1-8-1-4"><div class="para" id="extracted-webwork-3-1-1-8-1-4-1">dollars/month</div></li>
+<li id="extracted-webwork-3-1-1-8-1-5"><div class="para" id="extracted-webwork-3-1-1-8-1-5-1">percent/month</div></li>
+</ul>
+</div> <div class="para logical" id="extracted-webwork-3-1-1-9">
+<div class="para">The units of 18 are:</div>
+<ul class="square" id="extracted-webwork-3-1-1-9-1">
+<li id="extracted-webwork-3-1-1-9-1-1"><div class="para" id="extracted-webwork-3-1-1-9-1-1-1">percent</div></li>
+<li id="extracted-webwork-3-1-1-9-1-2"><div class="para" id="extracted-webwork-3-1-1-9-1-2-1">months</div></li>
+<li id="extracted-webwork-3-1-1-9-1-3"><div class="para" id="extracted-webwork-3-1-1-9-1-3-1">dollars</div></li>
+<li id="extracted-webwork-3-1-1-9-1-4"><div class="para" id="extracted-webwork-3-1-1-9-1-4-1">dollars/month</div></li>
+<li id="extracted-webwork-3-1-1-9-1-5"><div class="para" id="extracted-webwork-3-1-1-9-1-5-1">percent/month</div></li>
+</ul>
+</div> <div class="para logical" id="extracted-webwork-3-1-1-10">
+<div class="para">The units of 1452 are:</div>
+<ul class="square" id="extracted-webwork-3-1-1-10-1">
+<li id="extracted-webwork-3-1-1-10-1-1"><div class="para" id="extracted-webwork-3-1-1-10-1-1-1">percent</div></li>
+<li id="extracted-webwork-3-1-1-10-1-2"><div class="para" id="extracted-webwork-3-1-1-10-1-2-1">months</div></li>
+<li id="extracted-webwork-3-1-1-10-1-3"><div class="para" id="extracted-webwork-3-1-1-10-1-3-1">dollars</div></li>
+<li id="extracted-webwork-3-1-1-10-1-4"><div class="para" id="extracted-webwork-3-1-1-10-1-4-1">dollars/month</div></li>
+<li id="extracted-webwork-3-1-1-10-1-5"><div class="para" id="extracted-webwork-3-1-1-10-1-5-1">percent/month</div></li>
+</ul>
+<div class="para">.</div>
+</div> <div class="para" id="extracted-webwork-3-1-1-11"><em class="emphasis">(Note because this is all multiple choice, you will not see which parts of the problem are correct.)</em></div>
+<div class="solutions">
+<details id="extracted-webwork-3-1-2" class="answer solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Answer</span><span class="space"> </span><span class="codenumber">1</span><span class="period">.</span></summary><div class="answer solution-like knowl__content"><div class="para" id="extracted-webwork-3-1-2-1"><span class="process-math">\(\text{increasing}\)</span></div></div></details><details id="extracted-webwork-3-1-3" class="answer solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Answer</span><span class="space"> </span><span class="codenumber">2</span><span class="period">.</span></summary><div class="answer solution-like knowl__content"><div class="para" id="extracted-webwork-3-1-3-1"><span class="process-math">\(\text{increasing}\)</span></div></div></details><details id="extracted-webwork-3-1-4" class="answer solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Answer</span><span class="space"> </span><span class="codenumber">3</span><span class="period">.</span></summary><div class="answer solution-like knowl__content"><div class="para" id="extracted-webwork-3-1-4-1"><span class="process-math">\(\text{increasing}\)</span></div></div></details><details id="extracted-webwork-3-1-5" class="answer solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Answer</span><span class="space"> </span><span class="codenumber">4</span><span class="period">.</span></summary><div class="answer solution-like knowl__content"><div class="para" id="extracted-webwork-3-1-5-1"><span class="process-math">\(\text{dollars}\)</span></div></div></details><details id="extracted-webwork-3-1-6" class="answer solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Answer</span><span class="space"> </span><span class="codenumber">5</span><span class="period">.</span></summary><div class="answer solution-like knowl__content"><div class="para" id="extracted-webwork-3-1-6-1"><span class="process-math">\(\text{percent}\)</span></div></div></details><details id="extracted-webwork-3-1-7" class="answer solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Answer</span><span class="space"> </span><span class="codenumber">6</span><span class="period">.</span></summary><div class="answer solution-like knowl__content"><div class="para" id="extracted-webwork-3-1-7-1"><span class="process-math">\(\text{months}\)</span></div></div></details><details id="extracted-webwork-3-1-8" class="answer solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Answer</span><span class="space"> </span><span class="codenumber">7</span><span class="period">.</span></summary><div class="answer solution-like knowl__content"><div class="para" id="extracted-webwork-3-1-8-1"><span class="process-math">\(\text{dollars}\)</span></div></div></details><details id="extracted-webwork-3-1-9" class="solution solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Solution</span><span class="period">.</span></summary><div class="solution solution-like knowl__content">
+<em class="alert">(a)</em><span class="process-math">\(B\)</span><em class="alert">(b)</em>
+</div></details>
+</div>
+</div>
+</div></article><article class="exercise exercise-like" id="calcpressure"><h4 class="heading">
+<span class="codenumber">6<span class="period">.</span></span><span class="space"> </span><span class="title">Applying the Ideal Gas Law.</span>
+</h4>
+<div class="para" id="calcpressure-2-1">What is the pressure exerted by an <span class="process-math">\(n=0.500\)</span> mol sample of nitrogen gas in a 10.0 liter container at 298 K?  Hint: You will want to use the ideal gas law as in <a href="sec_functionnotation.html#IdealGasLawFunctions" class="xref" data-knowl="./knowl/xref/IdealGasLawFunctions.html" data-reveal-label="Reveal" data-close-label="Close" title="Example 3.1.14: Ideal Gas Law">Example 3.1.14</a> and to convert liters to cubic meters.  Note also that 1 joule is 1 pascal <span class="process-math">\(\cdot \ m^3\text{.}\)</span>
+</div>
+<div class="solutions"><details id="calcpressure-3" class="answer solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Answer</span><span class="period">.</span></summary><div class="answer solution-like knowl__content"><div class="para" id="calcpressure-3-1">
+<span class="process-math">\(P = \frac{nRT}{V} = \frac{(0.500 \ mol)(8.314 \ J/{(K \cdot mol)})(298 \ K)}{0.10 \ m^3} \approx 12,388\)</span> pascals or 12.388 kilopascals.</div></div></details></div></article><article class="exercise exercise-like" id="dewpoint"><h4 class="heading">
+<span class="codenumber">7<span class="period">.</span></span><span class="space"> </span><span class="title">Dewpoint.</span>
+</h4>
+<div class="para logical" id="dewpoint-2-1">
+<div class="para">A model for the dewpoint temperature is given by</div>
+<div class="displaymath process-math">
+\begin{equation*}
+D = \frac{ b \left( \frac{aT}{b+T} + \ln RH\right)}{a-\left(\frac{aT}{b+T} + \ln RH\right)}
+\end{equation*}
+</div>
+<div class="para">where <span class="process-math">\(a = 17.27\text{,}\)</span> <span class="process-math">\(b=237.7\text{,}\)</span> <span class="process-math">\(RH\)</span> is relative humidity (as a decimal), and <span class="process-math">\(T\)</span> is the temperature (in <span class="process-math">\(^\circ C\)</span>).</div>
+<ol class="lower-alpha" id="dewpoint-2-1-7">
+<li id="dewpoint-2-1-7-1"><div class="para" id="p-derived-dewpoint-2-1-7-1">
+<span class="process-math">\(D\)</span> is a function of how many variables?</div></li>
+<li id="dewpoint-2-1-7-2"><div class="para" id="p-derived-dewpoint-2-1-7-2">Describe a reasonable domain for this function.</div></li>
+</ol>
+</div>
+<div class="solutions"><details id="dewpoint-3" class="answer solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Answer</span><span class="period">.</span></summary><div class="answer solution-like knowl__content"><div class="para logical" id="dewpoint-3-1"><ol class="lower-alpha" id="dewpoint-3-1-1">
+<li id="dewpoint-3-1-1-1"><div class="para" id="p-derived-dewpoint-3-1-1-1">two (<span class="process-math">\(RH\)</span> and <span class="process-math">\(T\)</span>); <span class="process-math">\(a\)</span> and <span class="process-math">\(b\)</span> are examples of <dfn class="terminology">parameters</dfn> .  We often write <span class="process-math">\(D(RH,T)\)</span>
+</div></li>
+<li id="dewpoint-3-1-1-2"><div class="para" id="p-derived-dewpoint-3-1-1-2">
+<span class="process-math">\(0 \le RH \leq 1\text{,}\)</span> <span class="process-math">\(-90 \leq T \leq 60\)</span> (based on world record temperatures)</div></li>
+</ol></div></div></details></div></article><article class="exercise exercise-like" id="hdwindexexercise"><h4 class="heading">
+<span class="codenumber">8<span class="period">.</span></span><span class="space"> </span><span class="title">The Hot-Dry-Windy Index.</span>
+</h4>
+<div class="para logical" id="hdwindexexercise-2-1">
+<div class="para">The Hot-Dry-Windy Index <span class="process-math">\(HDW\)</span> can be written as a function of two variables - windspeed <span class="process-math">\(U\)</span> (measured in meters per second) and vapor pressure deficit <span class="process-math">\(VPD\)</span> (measured in hectopascals).  Here, the vapor pressure deficit combines moisture and temperature into a single variable.  The function is easily described as a product: <span class="process-math">\(HDW = U \cdot VPD\text{.}\)</span>
+</div>
+<ol class="lower-alpha" id="hdwindexexercise-2-1-5">
+<li id="hdwindexexercise-2-1-5-1"><div class="para" id="p-derived-hdwindexexercise-2-1-5-1">What are the units of the Hot-Dry-Windy Index <span class="process-math">\(HDW\text{?}\)</span>
+</div></li>
+<li id="hdwindexexercise-2-1-5-2"><div class="para" id="p-derived-hdwindexexercise-2-1-5-2">Sketch a graph of the one-variable function that results from the Hot-Dry-Windy Index by holding windspeed constant at <span class="process-math">\(U=10\)</span> meters per second.</div></li>
+<li id="hdwindexexercise-2-1-5-3"><div class="para" id="p-derived-hdwindexexercise-2-1-5-3">Create a table with inputs of <span class="process-math">\(U = 10, 20, 30\)</span> (<span class="process-math">\(m/s\)</span>) and <span class="process-math">\(VPD=5, 10, 15\)</span> (<span class="process-math">\(hPa\)</span>) representing this function.</div></li>
+</ol>
+</div>
+<div class="solutions"><details id="hdwindexexercise-3" class="answer solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Answer</span><span class="period">.</span></summary><div class="answer solution-like knowl__content"><div class="para logical" id="hdwindexexercise-3-1"><ol class="lower-alpha" id="hdwindexexercise-3-1-1">
+<li id="hdwindexexercise-3-1-1-1"><div class="para" id="p-derived-hdwindexexercise-3-1-1-1">
+<span class="process-math">\(hPa \cdot \frac{m}{sec}\)</span> (which, due to lack of physical significance for fire processes, are recommended to be ignored for users of this index)</div></li>
+<li id="hdwindexexercise-3-1-1-2"><div class="para" id="p-derived-hdwindexexercise-3-1-1-2">The graph will be a line with slope 10.  The horizontal axis will be labeled <span class="process-math">\(VPD\)</span> with units of <span class="process-math">\(hPa\)</span> and the vertical axis will represent <span class="process-math">\(HDW\text{.}\)</span>
+</div></li>
+<li id="hdwindexexercise-3-1-1-3">We simply evaluate the function <span class="process-math">\(HDW = U \cdot VPD\)</span> at these ordered pairs. <figure class="table table-like" id="hotdrywindytable"><figcaption><span class="type">Table</span><span class="space"> </span><span class="codenumber">3.1.15<span class="period">.</span></span><span class="space"> </span>Table of <span class="process-math">\(HDW\)</span> values.</figcaption><div class="tabular-box natural-width"><table class="tabular">
+<tr>
+<td class="l m b0 r0 l0 t0 lines"><span class="process-math">\(U \ (m/sec) \ \backslash \ VPD \ (hPa)\)</span></td>
+<td class="l m b0 r0 l0 t0 lines"><span class="process-math">\(5\)</span></td>
+<td class="l m b0 r0 l0 t0 lines"><span class="process-math">\(10\)</span></td>
+<td class="l m b0 r0 l0 t0 lines"><span class="process-math">\(15\)</span></td>
+</tr>
+<tr>
+<td class="l m b0 r0 l0 t0 lines"><span class="process-math">\(10\)</span></td>
+<td class="l m b0 r0 l0 t0 lines"><span class="process-math">\(50\)</span></td>
+<td class="l m b0 r0 l0 t0 lines"><span class="process-math">\(100\)</span></td>
+<td class="l m b0 r0 l0 t0 lines"><span class="process-math">\(150\)</span></td>
+</tr>
+<tr>
+<td class="l m b0 r0 l0 t0 lines"><span class="process-math">\(20\)</span></td>
+<td class="l m b0 r0 l0 t0 lines"><span class="process-math">\(100\)</span></td>
+<td class="l m b0 r0 l0 t0 lines"><span class="process-math">\(200\)</span></td>
+<td class="l m b0 r0 l0 t0 lines"><span class="process-math">\(300\)</span></td>
+</tr>
+<tr>
+<td class="l m b0 r0 l0 t0 lines"><span class="process-math">\(30\)</span></td>
+<td class="l m b0 r0 l0 t0 lines"><span class="process-math">\(150\)</span></td>
+<td class="l m b0 r0 l0 t0 lines"><span class="process-math">\(300\)</span></td>
+<td class="l m b0 r0 l0 t0 lines"><span class="process-math">\(450\)</span></td>
+</tr>
+</table></div></figure>
+</li>
+</ol></div></div></details></div></article><article class="exercise exercise-like" id="usingcontourdiagram"><h4 class="heading">
+<span class="codenumber">9<span class="period">.</span></span><span class="space"> </span><span class="title">The Trace.</span>
+</h4>
+<div class="para" id="usingcontourdiagram-2-1">The contour diagram in <a href="sec_functionnotation.html#usweathermappic" class="xref" data-knowl="./knowl/xref/usweathermappic.html" data-reveal-label="Reveal" data-close-label="Close" title="Figure 3.1.5">Figure 3.1.5</a> displays the predicted high temperature, <span class="process-math">\(T\text{,}\)</span> in degrees Fahrenheit throughout the U.S. on a particular day.  <span class="process-math">\(T\)</span> is a function of latitude <span class="process-math">\(y\)</span> (measured in degrees north of the equator) and longitude <span class="process-math">\(x\)</span> (measured in degrees east of the prime meridian).  Sketch a possible graph (with axes labeled) of the predicted high temperature <span class="process-math">\(T\)</span> on a line north-south through Topeka, KS.  Is this the graph of the <dfn class="terminology">trace</dfn>  <span class="process-math">\(T(x,39.0473)\)</span> or of the trace <span class="process-math">\(T(-95.6752,y)\text{?}\)</span>
+</div>
+<div class="solutions"><details id="usingcontourdiagram-3" class="answer solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Answer</span><span class="period">.</span></summary><div class="answer solution-like knowl__content"><div class="para" id="usingcontourdiagram-3-1">This is the graph of the trace <span class="process-math">\(T(-95.6752,y)\text{.}\)</span>  It is decreasing.</div></div></details></div></article><article class="exercise exercise-like" id="interpretingcontourmap"><h4 class="heading">
+<span class="codenumber">10<span class="period">.</span></span><span class="space"> </span><span class="title">Pressure Contours.</span>
+</h4>
+<div class="para" id="interpretingcontourmap-2-1">
+<a href="sec_functionnotation.html#pressurecontours" class="xref" data-knowl="./knowl/xref/pressurecontours.html" data-reveal-label="Reveal" data-close-label="Close" title="Figure 3.1.16">Figure 3.1.16</a> shows contour lines for a function <span class="process-math">\(p =g(x,y)\)</span> of two variables.  What do <span class="process-math">\(p\text{,}\)</span> <span class="process-math">\(x\text{,}\)</span> and <span class="process-math">\(y\)</span> represent and what are the units for each?</div> <figure class="figure figure-like" id="pressurecontours"><div class="image-box" style="width: 50%; margin-left: 25%; margin-right: 25%;"><img src="external/201705011500_N.jpg" class="contained" alt="Pressure Contours"></div>
+<figcaption><span class="type">Figure</span><span class="space"> </span><span class="codenumber">3.1.16<span class="period">.</span></span><span class="space"> </span>Contours for <a href="sec_functionnotation.html#interpretingcontourmap" class="xref" data-knowl="./knowl/xref/interpretingcontourmap.html" data-reveal-label="Reveal" data-close-label="Close" title="Exercise 3.1.10: Pressure Contours">Exercise 3.1.10</a>.  (Source: University of Illinois)</figcaption></figure><div class="solutions"><details id="interpretingcontourmap-3" class="answer solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Answer</span><span class="period">.</span></summary><div class="answer solution-like knowl__content"><div class="para" id="interpretingcontourmap-3-1">
+<span class="process-math">\(p\)</span> represents pressure (in millibars), <span class="process-math">\(x\)</span> represents degrees longitude (east of the prime meridian), <span class="process-math">\(y\)</span> represents degrees lattitude (north of the equator).</div></div></details></div></article><article class="exercise exercise-like" id="MyFrostbite"><h4 class="heading">
+<span class="codenumber">11<span class="period">.</span></span><span class="space"> </span><span class="title">Frostbite.</span>
+</h4>
+<div class="para" id="MyFrostbite-2-1">
+<dfn class="terminology">Frostbite</dfn>  is damage to body tissue caused by extreme cold. A wind chill of <span class="process-math">\(-20^\circ F\)</span> will cause frostbite in just 30 minutes.  The table in <a href="sec_functionnotation.html#frostbite2" class="xref" data-knowl="./knowl/xref/frostbite2.html" data-reveal-label="Reveal" data-close-label="Close" title="Figure 3.1.17">Figure 3.1.17</a> gives the minutes to frostbite under varying conditions.</div> <figure class="figure figure-like" id="frostbite2"><div class="image-box" style="width: 75%; margin-left: 12.5%; margin-right: 12.5%;"><img src="external/frostbitetime2.jpg" class="contained" alt="frost bite table"></div>
+<figcaption><span class="type">Figure</span><span class="space"> </span><span class="codenumber">3.1.17<span class="period">.</span></span><span class="space"> </span>Minutes to frostbite (Source: weather.gov).</figcaption></figure> <div class="para logical" id="MyFrostbite-2-3"><ol class="lower-alpha" id="MyFrostbite-2-3-1">
+<li id="MyFrostbite-2-3-1-1"><div class="para" id="p-derived-MyFrostbite-2-3-1-1">Just as wind chill <span class="process-math">\(C\)</span> is a function of wind speed and temperature (see <a href="sec_functionnotation.html#windchillexercise" class="xref" data-knowl="./knowl/xref/windchillexercise.html" data-reveal-label="Reveal" data-close-label="Close" title="Checkpoint 3.1.6: Wind Chill">Checkpoint 3.1.6</a>), the number of minutes <span class="process-math">\(M\)</span> until frostbite occurs is also a function <span class="process-math">\(f\)</span> of two variables.  Define these two variables.  Be sure to include units.</div></li>
+<li id="MyFrostbite-2-3-1-2"><div class="para" id="p-derived-MyFrostbite-2-3-1-2">Compute <span class="process-math">\(M=f(25,-20)\text{.}\)</span>  Then, carefully interpret the meaning of this equality with a single sentence.</div></li>
+<li id="MyFrostbite-2-3-1-3"><div class="para" id="p-derived-MyFrostbite-2-3-1-3">Draw a contour diagram for the frostbite function <span class="process-math">\(f\text{.}\)</span>  <a href="sec_functionnotation.html#usweathermappic" class="xref" data-knowl="./knowl/xref/usweathermappic.html" data-reveal-label="Reveal" data-close-label="Close" title="Figure 3.1.5">Figure 3.1.5</a> is an example of a contour diagram using isotherms.  Rather than isotherms (constant temperatures), what is being held constant along these curves?</div></li>
+</ol></div>
+<div class="solutions"><details id="MyFrostbite-3" class="answer solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Answer</span><span class="period">.</span></summary><div class="answer solution-like knowl__content"></div></details></div></article></section></section></div>
+<div class="ptx-content-footer">
+<a class="previous-button button" href="ch-contours.html" title="Previous"><span xmlns:pf="https://prefigure.org" class="icon material-symbols-outlined" aria-hidden="true">&#xe5cb;</span><span class="name">Prev</span></a><a class="top-button button" href="#" title="Top"><span xmlns:pf="https://prefigure.org" class="icon material-symbols-outlined" aria-hidden="true">&#xe5ce;</span><span class="name">Top</span></a><a class="next-button button" href="sec_3space.html" title="Next"><span class="name">Next</span><span xmlns:pf="https://prefigure.org" class="icon material-symbols-outlined" aria-hidden="true">&#xe5cc;</span></a>
+</div></main>
+</div>
+<div id="ptx-page-footer" class="ptx-page-footer">
+<a xmlns:pf="https://prefigure.org" class="pretext-link" href="https://pretextbook.org" title="PreTeXt"><div class="logo"><svg xmlns="http://www.w3.org/2000/svg" width="100%" height="100%" viewBox="338 3000 8772 6866"><g style="stroke-width:.025in; stroke:black; fill:none"><polyline points="472,3590 472,9732 " style="stroke:#000000;stroke-width:174; stroke-linejoin:miter; stroke-linecap:round; "></polyline><path style="stroke:#000000;stroke-width:126;stroke-linecap:butt;" d="M 4724,9448 A 4660 4660  0  0  1  8598  9259"></path><path style="stroke:#000000;stroke-width:174;stroke-linecap:butt;" d="M 4488,9685 A 4228 4228  0  0  0   472  9732"></path><path style="stroke:#000000;stroke-width:126;stroke-linecap:butt;" d="M 4724,3590 A 4241 4241  0  0  1  8598  3496"></path><path style="stroke:#000000;stroke-width:126;stroke-linecap:round;" d="M 850,3496  A 4241 4241  0  0  1  4724  3590"></path><path style="stroke:#000000;stroke-width:126;stroke-linecap:round;" d="M 850,9259  A 4507 4507  0  0  1  4724  9448"></path><polyline points="5385,4299 4062,8125" style="stroke:#000000;stroke-width:300; stroke-linejoin:miter; stroke-linecap:round;"></polyline><polyline points="8598,3496 8598,9259" style="stroke:#000000;stroke-width:126; stroke-linejoin:miter; stroke-linecap:round;"></polyline><polyline points="850,3496 850,9259" style="stroke:#000000;stroke-width:126; stroke-linejoin:miter; stroke-linecap:round;"></polyline><polyline points="4960,9685 4488,9685" style="stroke:#000000;stroke-width:174; stroke-linejoin:miter; stroke-linecap:round;"></polyline><polyline points="3070,4582 1889,6141 3070,7700" style="stroke:#000000;stroke-width:300; stroke-linejoin:miter; stroke-linecap:round;"></polyline><polyline points="6418,4582 7600,6141 6418,7700" style="stroke:#000000;stroke-width:300; stroke-linejoin:miter; stroke-linecap:round;"></polyline><polyline points="8976,3590 8976,9732" style="stroke:#000000;stroke-width:174; stroke-linejoin:miter; stroke-linecap:round;"></polyline><path style="stroke:#000000;stroke-width:174;stroke-linecap:butt;" d="M 4960,9685 A 4228 4228  0  0  1  8976  9732"></path></g></svg></div></a><a xmlns:pf="https://prefigure.org" class="runestone-link" href="https://runestone.academy" title="Runestone Academy"><img class="logo" src="https://runestone.academy/runestone/static/images/RAIcon_cropped.png"></a><a xmlns:pf="https://prefigure.org" class="mathjax-link" href="https://www.mathjax.org" title="MathJax"><img class="logo" src="https://www.mathjax.org/badge/badge-square-2.png"></a>
+</div>
+</body>
+</html>

@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<myopenmath xmlns:pi="http://pretextbook.org/2020/pretext/internal" id="610131">
+<statement>
+<p>Determine the slope of the contour lines of the function <m>\displaystyle{f{{\left({x},{y}\right)}}}=</m> <m>\displaystyle{3}+{2}{x}-{2}{y}</m>.  Enter your answer as an integer or a reduced fraction.</p>
+<p>Slope of contour lines: <fillin characters="8" />   </p>
+
+</statement>
+<solution>
+<p><ul><li><m>\displaystyle{1}</m></li></ul></p><p>A contour line for <m>\displaystyle{f{{\left({x},{y}\right)}}}</m> has the form <m>\displaystyle{c}=</m> <m>\displaystyle{3}+{2}{x}-{2}{y}</m> for some constant <m>\displaystyle{c}</m>. </p>
+<p>Solving this equation for <m>\displaystyle{y}</m> gives <m>\displaystyle{y}=</m> <m>\displaystyle{\frac{{{c}-{3}-{2}{x}}}{-}}{2}</m>.</p>
+<p>So the slope for any value of <m>\displaystyle{c}</m> will be <m>\displaystyle{1}</m>.</p>
+</solution>
+</myopenmath>
+

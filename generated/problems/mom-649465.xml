@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<myopenmath xmlns:pi="http://pretextbook.org/2020/pretext/internal" id="649465">
+<statement>
+<p>
+For the vector field sketched in the <m>\displaystyle{x}{y}</m>-plane, determine if the divergence is positive, zero, or negative at the point <m>\displaystyle{\left({2},{2}\right)}</m>.  </p><image width="50%"  pi:generated="problems/images/3a3ad88b06ab56b810f60ffedb896552.png" /><p><ol style="list-style-type:upper-alpha"><li>Positive</li> 
+<li>Negative</li> 
+<li>Zero</li> 
+</ol></p>
+
+
+</statement>
+<solution>
+<p><ul><li>B: Negative</li></ul></p>
+</solution>
+</myopenmath>
+

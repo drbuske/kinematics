@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="utf-8"?>
+<myopenmath xmlns:pi="http://pretextbook.org/2020/pretext/internal" id="1498339">
+<statement>
+<p>
+Use the contour map to estimate the sign of the derivatives at point P.</p><image width="53%"  pi:generated="problems/images/id64293pic0.jpg" /><p>
+<m>\displaystyle{\frac{{\partial{f}}}{{\partial{x}}}}</m> is </p>
+<p><ol style="list-style-type:upper-alpha"><li>negative (<less/>0)<less/>/label<greater/></li> 
+<li>positive (<greater/>0)</li> 
+</ol></p>
+ at point P<p>
+<m>\displaystyle{\frac{{\partial{f}}}{{\partial{y}}}}</m> is </p>
+<p><ol style="list-style-type:upper-alpha"><li>negative (<less/>0)<less/>/label<greater/></li> 
+<li>positive (<greater/>0)</li> 
+</ol></p>
+ at point P<p>
+<m>\displaystyle{\frac{{\partial^{{2}}{f}}}{{\partial{x}^{{2}}}}}</m> is </p>
+<p><ol style="list-style-type:upper-alpha"><li>negative (<less/>0)<less/>/label<greater/></li> 
+<li>positive (<greater/>0)</li> 
+</ol></p>
+ at point P<p>
+<m>\displaystyle{\frac{{\partial^{{2}}{f}}}{{\partial{y}^{{2}}}}}</m> is </p>
+<p><ol style="list-style-type:upper-alpha"><li>negative (<less/>0)<less/>/label<greater/></li> 
+<li>positive (<greater/>0)</li> 
+</ol></p>
+ at point P<p>
+<m>\displaystyle{\frac{{\partial^{{2}}{f}}}{{\partial{x}\partial{y}}}}</m> is </p>
+<p><ol style="list-style-type:upper-alpha"><li>negative (<less/>0)<less/>/label<greater/></li> 
+<li>positive (<greater/>0)</li> 
+</ol></p>
+ at point P
+
+</statement>
+<solution>
+<p><ul><li>A: negative (<less/>0)<less/>/li<greater/></li><li>B: positive (<greater/>0)</li><li>A: negative (<less/>0)<less/>/li<greater/></li><li>B: positive (<greater/>0)</li><li>A: negative (<less/>0)<less/>/li<greater/></li></ul></p>
+</solution>
+</myopenmath>
+

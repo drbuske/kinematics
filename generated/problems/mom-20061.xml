@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<myopenmath xmlns:pi="http://pretextbook.org/2020/pretext/internal" id="20061">
+<statement>
+<p>
+The table below shows values for <m>\displaystyle{f{{\left({x},{y}\right)}}}</m>.  <em>x</em> values are down the side, and <em>y</em> values are across the top. Use the table to evaluate <m>\displaystyle{f{{\left({1},{4}\right)}}}</m>.</p><table><tabular> <row><cell>     y<p>x</p></cell><cell>1</cell><cell>2</cell><cell>3</cell><cell>4</cell><cell>5</cell></row><row><cell>1</cell><cell>10</cell><cell>12</cell><cell>14</cell><cell>16</cell><cell>18</cell></row><row><cell>2</cell><cell>14</cell><cell>16</cell><cell>18</cell><cell>20</cell><cell>22</cell></row><row><cell>3</cell><cell>18</cell><cell>20</cell><cell>22</cell><cell>24</cell><cell>26</cell></row><row><cell>4</cell><cell>22</cell><cell>24</cell><cell>26</cell><cell>28</cell><cell>30</cell></row><row><cell>5</cell><cell>26</cell><cell>28</cell><cell>30</cell><cell>32</cell><cell>34</cell></row></tabular></table><p>
+<m>\displaystyle{f{{\left({1},{4}\right)}}}</m> = <fillin characters="20" />
+</p>
+</statement>
+<solution>
+<p><ul><li>16</li></ul></p>
+</solution>
+</myopenmath>
+

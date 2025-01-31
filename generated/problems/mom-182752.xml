@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8"?>
+<myopenmath xmlns:pi="http://pretextbook.org/2020/pretext/internal" id="182752">
+<statement>
+<image width="33%"  pi:generated="problems/images/13eb65fdb57e2ff7e8fa1e24cbb32ca4.png" /><p>
+Match the vectors <m>\displaystyle\vec{{p}},\vec{{q}},\vec{{r}},\vec{{s}},\text{and }\ \vec{{t}}</m> with one of the combinations of the <m>\displaystyle\vec{{u}}</m> and <m>\displaystyle\vec{{v}}</m> vectors from the graph.
+</p><p class="centered">Vector</p>
+<p><ol style="list-style-type:upper-alpha">
+<li class="nowrap"> <m>\displaystyle\vec{{s}}</m></li>
+<li class="nowrap"> <m>\displaystyle\vec{{r}}</m></li>
+<li class="nowrap"> <m>\displaystyle\vec{{p}}</m></li>
+<li class="nowrap"> <m>\displaystyle\vec{{q}}</m></li>
+<li class="nowrap"> <m>\displaystyle\vec{{t}}</m></li>
+</ol></p>
+<p class="centered">Vector Combination</p>
+<p><ol style="list-style-type:lower-alpha">
+<li><m>\displaystyle\vec{{v}}-{2}\vec{{u}}</m></li>
+<li><m>\displaystyle-\vec{{v}}</m></li>
+<li><m>\displaystyle{3}\vec{{u}}</m></li>
+<li><m>\displaystyle{3}\vec{{u}}-\vec{{v}}</m></li>
+<li><m>\displaystyle\vec{{u}}+\vec{{v}}</m></li>
+</ol></p> 
+
+
+</statement>
+<solution>
+<p><ul><li>c e a b d </li></ul></p>
+</solution>
+</myopenmath>
+

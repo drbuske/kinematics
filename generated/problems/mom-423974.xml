@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<myopenmath xmlns:pi="http://pretextbook.org/2020/pretext/internal" id="423974">
+<statement>
+<p>
+Sketch the level curves of the function <m>\displaystyle{f{{\left({x},{y}\right)}}}={5}{x}+{3}{y}</m> corresponding to <m>\displaystyle{c}=-{9}</m>, <m>\displaystyle{c}={15}</m>, and <m>\displaystyle{c}={9}</m>.</p><image width="50%"  pi:generated="problems/images/a06900c37f4cdff560a4db1075593bfb.png" />
+
+
+</statement>
+<solution>
+<p><ul><li><image width="50%"  pi:generated="problems/images/2ac759c163b128ba8317687c3ba455e4.png" />
+</li></ul></p>
+</solution>
+</myopenmath>
+

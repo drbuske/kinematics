@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<myopenmath xmlns:pi="http://pretextbook.org/2020/pretext/internal" id="730415">
+<statement>
+<p>
+Find the projections of the point <m>\displaystyle{\left({10},-{14},-{7}\right)}</m> on the following coordinate planes.</p>
+<p>
+The <m>\displaystyle{x}{y}</m>-plane:  <m>\displaystyle{(}</m><fillin characters="5" />,<fillin characters="5" />,<fillin characters="5" /> <m>\displaystyle{)}</m></p>
+<p>
+The <m>\displaystyle{y}{z}</m>-plane:  <m>\displaystyle{(}</m><fillin characters="5" />,<fillin characters="5" />,<fillin characters="5" /> <m>\displaystyle{)}</m></p>
+<p>
+The <m>\displaystyle{x}{z}</m>-plane:  <m>\displaystyle{(}</m><fillin characters="5" />,<fillin characters="5" />,<fillin characters="5" /> <m>\displaystyle{)}</m>
+</p>
+</statement>
+<solution>
+<p><ul><li>10</li><li>-14</li><li>0</li><li>0</li><li>-14</li><li>-7</li><li>10</li><li>0</li><li>-7</li></ul></p>
+</solution>
+</myopenmath>
+

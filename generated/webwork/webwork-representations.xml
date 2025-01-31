@@ -1,0 +1,1336 @@
+<?xml version='1.0' encoding='utf-8'?>
+<webwork-representations>
+  <webwork-reps version="2" ww_major_version="2" ww_minor_version="17" xml:id="extracted-webwork-1" ww-id="webwork-1">
+    <static seed="1" source="Library/FortLewis/Calc3/12-2-Multivariable-graphs/HGM4-12-2-16-Multivariable-functions-graphs.pg">
+      <statement><p>Consider the concentration, C, (in mg/liter) of a drug in the blood 
+as a function of the amount of drug given, x, and the time since
+injection, t.  For <m>0 \leq x \leq 4</m> mg and <m>t \geq 0</m> hours,
+we have
+<me>C = f(x,t) = 30te^{-\left(4-x\right)t}</me></p>
+<p><m>f(3,2) =</m> <fillin name="AnSwEr0001" characters="40"/></p>
+<p>Give a practical interpretation of your answer: <m>f(3, 2)</m> is
+<var form="buttons">
+<li>
+<p>the concentration of a 3 mg dose in the blood 2 hours after injection.</p>
+</li>
+<li>
+<p>the amount of a 2 mg dose in the blood 3 hours after injection.</p>
+</li>
+<li>
+<p>the change in concentration of a 2 mg dose in the blood 3 hours after injection.</p>
+</li>
+<li>
+<p>the amount of a 3 mg dose in the blood 2 hours after injection.</p>
+</li>
+<li>
+<p>the change in concentration of a 3 mg dose in the blood 2 hours after injection.</p>
+</li>
+<li>
+<p>the concentration of a 2 mg dose in the blood 3 hours after injection.</p>
+</li>
+</var></p>
+</statement>
+      <answer>
+        <p>
+          <m>8.12012</m>
+        </p>
+      </answer>
+    </static>
+    <server-data sourceFilePath="Library/FortLewis/Calc3/12-2-Multivariable-graphs/HGM4-12-2-16-Multivariable-functions-graphs.pg" domain="https://webwork-ptx.aimath.org" course-id="anonymous" user-id="anonymous" course-password="anonymous" language="en-US"/>
+    <pg source="Library/FortLewis/Calc3/12-2-Multivariable-graphs/HGM4-12-2-16-Multivariable-functions-graphs.pg"/>
+  </webwork-reps>
+  <webwork-reps version="2" ww_major_version="2" ww_minor_version="17" xml:id="extracted-webwork-2" ww-id="webwork-2">
+    <static seed="2" source="Library/Michigan/Chap12Sec1/Q21.pg">
+      <statement><p>The temperature adjusted for wind-chill, <m>w</m>, is a temperature which
+tells you how cold it feels, as a result of the combination of wind and
+temperature [see
+<url href="http://www.nws.noaa.gov/om/windchill/">wind-chill</url>].
+See the table below, which gives temperature adjusted for wind-chill,
+<m>w</m>, as a function of temperature <m>T</m> and wind speed <m>s</m>.</p>
+<tabular top="medium" bottom="medium" left="medium" right="medium">
+<row>
+<cell/>
+<cell><m>T=35</m></cell>
+<cell><m>T=30</m></cell>
+<cell><m>T=25</m></cell>
+<cell><m>T=20</m></cell>
+<cell><m>T=15</m></cell>
+<cell><m>T=10</m></cell>
+<cell><m>T=5</m></cell>
+<cell><m>T=0</m></cell>
+</row>
+<row>
+<cell><m>s=5</m></cell>
+<cell>31</cell>
+<cell>25</cell>
+<cell>19</cell>
+<cell>13</cell>
+<cell>7</cell>
+<cell>1</cell>
+<cell>-5</cell>
+<cell>-11</cell>
+</row>
+<row>
+<cell><m>s=10</m></cell>
+<cell>27</cell>
+<cell>21</cell>
+<cell>15</cell>
+<cell>9</cell>
+<cell>3</cell>
+<cell>-4</cell>
+<cell>-10</cell>
+<cell>-16</cell>
+</row>
+<row>
+<cell><m>s=15</m></cell>
+<cell>25</cell>
+<cell>19</cell>
+<cell>13</cell>
+<cell>6</cell>
+<cell>0</cell>
+<cell>-7</cell>
+<cell>-13</cell>
+<cell>-19</cell>
+</row>
+<row>
+<cell><m>s=20</m></cell>
+<cell>24</cell>
+<cell>17</cell>
+<cell>11</cell>
+<cell>4</cell>
+<cell>-2</cell>
+<cell>-9</cell>
+<cell>-15</cell>
+<cell>-22</cell>
+</row>
+<row>
+<cell><m>s=25</m></cell>
+<cell>23</cell>
+<cell>16</cell>
+<cell>9</cell>
+<cell>3</cell>
+<cell>-4</cell>
+<cell>-11</cell>
+<cell>-17</cell>
+<cell>-24</cell>
+</row>
+</tabular>
+<p>Use this table to make tables of the temperature adjusted for
+wind-chill (<m>w</m>) as a function of temperature for wind speeds 5 and
+15 mph:</p>
+<p><m>s = 5</m>:</p>
+<tabular top="medium" bottom="medium" left="medium" right="medium">
+<row>
+<cell>independent variable = <fillin name="AnSwEr0001" characters="3"/> = </cell>
+<cell><fillin name="AnSwEr0002" characters="5"/></cell>
+<cell><fillin name="AnSwEr0003" characters="5"/></cell>
+<cell><fillin name="AnSwEr0004" characters="5"/></cell>
+<cell><fillin name="AnSwEr0005" characters="5"/></cell>
+<cell><fillin name="AnSwEr0006" characters="5"/></cell>
+<cell><fillin name="AnSwEr0007" characters="5"/></cell>
+<cell><fillin name="AnSwEr0008" characters="5"/></cell>
+<cell><fillin name="AnSwEr0009" characters="5"/></cell>
+</row>
+<row>
+<cell>dependent variable = <fillin name="AnSwEr0010" characters="3"/> = </cell>
+<cell><fillin name="AnSwEr0011" characters="5"/></cell>
+<cell><fillin name="AnSwEr0012" characters="5"/></cell>
+<cell><fillin name="AnSwEr0013" characters="5"/></cell>
+<cell><fillin name="AnSwEr0014" characters="5"/></cell>
+<cell><fillin name="AnSwEr0015" characters="5"/></cell>
+<cell><fillin name="AnSwEr0016" characters="5"/></cell>
+<cell><fillin name="AnSwEr0017" characters="5"/></cell>
+<cell><fillin name="AnSwEr0018" characters="5"/></cell>
+</row>
+</tabular>
+<p><m>s = 15</m>:</p>
+<tabular top="medium" bottom="medium" left="medium" right="medium">
+<row>
+<cell>independent variable = <fillin name="AnSwEr0019" characters="3"/> = </cell>
+<cell><fillin name="AnSwEr0020" characters="5"/></cell>
+<cell><fillin name="AnSwEr0021" characters="5"/></cell>
+<cell><fillin name="AnSwEr0022" characters="5"/></cell>
+<cell><fillin name="AnSwEr0023" characters="5"/></cell>
+<cell><fillin name="AnSwEr0024" characters="5"/></cell>
+<cell><fillin name="AnSwEr0025" characters="5"/></cell>
+<cell><fillin name="AnSwEr0026" characters="5"/></cell>
+<cell><fillin name="AnSwEr0027" characters="5"/></cell>
+</row>
+<row>
+<cell>dependent variable = <fillin name="AnSwEr0028" characters="3"/> = </cell>
+<cell><fillin name="AnSwEr0029" characters="5"/></cell>
+<cell><fillin name="AnSwEr0030" characters="5"/></cell>
+<cell><fillin name="AnSwEr0031" characters="5"/></cell>
+<cell><fillin name="AnSwEr0032" characters="5"/></cell>
+<cell><fillin name="AnSwEr0033" characters="5"/></cell>
+<cell><fillin name="AnSwEr0034" characters="5"/></cell>
+<cell><fillin name="AnSwEr0035" characters="5"/></cell>
+<cell><fillin name="AnSwEr0036" characters="5"/></cell>
+</row>
+</tabular>
+</statement>
+      <answer>
+        <p>
+          <m>T</m>
+        </p>
+      </answer>
+      <answer>
+        <p>
+          <m>35</m>
+        </p>
+      </answer>
+      <answer>
+        <p>
+          <m>30</m>
+        </p>
+      </answer>
+      <answer>
+        <p>
+          <m>25</m>
+        </p>
+      </answer>
+      <answer>
+        <p>
+          <m>20</m>
+        </p>
+      </answer>
+      <answer>
+        <p>
+          <m>15</m>
+        </p>
+      </answer>
+      <answer>
+        <p>
+          <m>10</m>
+        </p>
+      </answer>
+      <answer>
+        <p>
+          <m>5</m>
+        </p>
+      </answer>
+      <answer>
+        <p>
+          <m>0</m>
+        </p>
+      </answer>
+      <answer>
+        <p>
+          <m>w</m>
+        </p>
+      </answer>
+      <answer>
+        <p>
+          <m>31</m>
+        </p>
+      </answer>
+      <answer>
+        <p>
+          <m>25</m>
+        </p>
+      </answer>
+      <answer>
+        <p>
+          <m>19</m>
+        </p>
+      </answer>
+      <answer>
+        <p>
+          <m>13</m>
+        </p>
+      </answer>
+      <answer>
+        <p>
+          <m>7</m>
+        </p>
+      </answer>
+      <answer>
+        <p>
+          <m>1</m>
+        </p>
+      </answer>
+      <answer>
+        <p>
+          <m>-5</m>
+        </p>
+      </answer>
+      <answer>
+        <p>
+          <m>-11</m>
+        </p>
+      </answer>
+      <answer>
+        <p>
+          <m>T</m>
+        </p>
+      </answer>
+      <answer>
+        <p>
+          <m>35</m>
+        </p>
+      </answer>
+      <answer>
+        <p>
+          <m>30</m>
+        </p>
+      </answer>
+      <answer>
+        <p>
+          <m>25</m>
+        </p>
+      </answer>
+      <answer>
+        <p>
+          <m>20</m>
+        </p>
+      </answer>
+      <answer>
+        <p>
+          <m>15</m>
+        </p>
+      </answer>
+      <answer>
+        <p>
+          <m>10</m>
+        </p>
+      </answer>
+      <answer>
+        <p>
+          <m>5</m>
+        </p>
+      </answer>
+      <answer>
+        <p>
+          <m>0</m>
+        </p>
+      </answer>
+      <answer>
+        <p>
+          <m>w</m>
+        </p>
+      </answer>
+      <answer>
+        <p>
+          <m>25</m>
+        </p>
+      </answer>
+      <answer>
+        <p>
+          <m>19</m>
+        </p>
+      </answer>
+      <answer>
+        <p>
+          <m>13</m>
+        </p>
+      </answer>
+      <answer>
+        <p>
+          <m>6</m>
+        </p>
+      </answer>
+      <answer>
+        <p>
+          <m>0</m>
+        </p>
+      </answer>
+      <answer>
+        <p>
+          <m>-7</m>
+        </p>
+      </answer>
+      <answer>
+        <p>
+          <m>-13</m>
+        </p>
+      </answer>
+      <answer>
+        <p>
+          <m>-19</m>
+        </p>
+      </answer>
+      <solution><m>w_1(T) = w(5, T)</m>
+and <m>w_2(T) = w(15, T)</m> from the given data:
+
+
+
+When <m>s = 5</m>
+
+
+
+
+
+<tabular top="medium" bottom="medium" left="medium" right="medium">
+
+<row>
+<cell><m>T =</m></cell>
+<cell>35</cell>
+<cell>30</cell>
+<cell>25</cell>
+<cell>20</cell>
+<cell>15</cell>
+<cell>10</cell>
+<cell>5</cell>
+<cell>0</cell>
+</row>
+
+<row>
+<cell><m>w =</m></cell>
+<cell>31</cell>
+<cell>25</cell>
+<cell>19</cell>
+<cell>13</cell>
+<cell>7</cell>
+<cell>1</cell>
+<cell>-5</cell>
+<cell>-11</cell>
+</row>
+
+
+</tabular>
+
+
+
+
+
+
+When <m>s = 15</m>
+
+
+
+
+
+<tabular top="medium" bottom="medium" left="medium" right="medium">
+
+<row>
+<cell><m>T =</m></cell>
+<cell>35</cell>
+<cell>30</cell>
+<cell>25</cell>
+<cell>20</cell>
+<cell>15</cell>
+<cell>10</cell>
+<cell>5</cell>
+<cell>0</cell>
+</row>
+
+<row>
+<cell><m>w =</m></cell>
+<cell>25</cell>
+<cell>19</cell>
+<cell>13</cell>
+<cell>6</cell>
+<cell>0</cell>
+<cell>-7</cell>
+<cell>-13</cell>
+<cell>-19</cell>
+</row>
+
+
+</tabular>
+
+
+
+
+
+</solution>
+    </static>
+    <server-data sourceFilePath="Library/Michigan/Chap12Sec1/Q21.pg" domain="https://webwork-ptx.aimath.org" course-id="anonymous" user-id="anonymous" course-password="anonymous" language="en-US"/>
+    <pg source="Library/Michigan/Chap12Sec1/Q21.pg"/>
+  </webwork-reps>
+  <webwork-reps version="2" ww_major_version="2" ww_minor_version="17" xml:id="extracted-webwork-3" ww-id="webwork-3">
+    <static seed="3" source="Library/Michigan/Chap12Sec1/Q22.pg">
+      <statement><p>The balance, <m>B</m>, in dollars, in a bank account depends on the amount
+deposited, <m>A</m> dollars, the annual interest rate, <m>r</m> %, and
+the time, <m>t</m>, in months since the deposit, so  <m>B=f(A,r,t)</m>.</p>
+<p><alert>(a)</alert>
+Is  <m>f</m> an increasing or decreasing function of:</p>
+<p><m>A</m>?  <var form="popup" name="AnSwEr0001">
+<li>
+<p>?</p>
+</li>
+<li>
+<p>increasing</p>
+</li>
+<li>
+<p>decreasing</p>
+</li>
+<li>
+<p>neither increasing nor decreasing</p>
+</li>
+<li>
+<p>somtimes increasing and sometimes decreasing</p>
+</li>
+</var></p>
+<p><m>r</m>?  <var form="popup" name="AnSwEr0002">
+<li>
+<p>?</p>
+</li>
+<li>
+<p>increasing</p>
+</li>
+<li>
+<p>decreasing</p>
+</li>
+<li>
+<p>neither increasing nor decreasing</p>
+</li>
+<li>
+<p>somtimes increasing and sometimes decreasing</p>
+</li>
+</var></p>
+<p><m>t</m>?  <var form="popup" name="AnSwEr0003">
+<li>
+<p>?</p>
+</li>
+<li>
+<p>increasing</p>
+</li>
+<li>
+<p>decreasing</p>
+</li>
+<li>
+<p>neither increasing nor decreasing</p>
+</li>
+<li>
+<p>somtimes increasing and sometimes decreasing</p>
+</li>
+</var></p>
+<p><alert>(b)</alert>
+Interpret the statement <m>f(1250, 1, 18) \approx 1452</m> by writing
+a sentence, including units.  Then use your sentence to complete the
+following:</p>
+<p>The units of 1250 are:  <var form="popup" name="AnSwEr0004">
+<li>
+<p>?</p>
+</li>
+<li>
+<p>percent</p>
+</li>
+<li>
+<p>months</p>
+</li>
+<li>
+<p>dollars</p>
+</li>
+<li>
+<p>dollars/month</p>
+</li>
+<li>
+<p>percent/month</p>
+</li>
+</var></p>
+<p>The units of 1 are:   <var form="popup" name="AnSwEr0005">
+<li>
+<p>?</p>
+</li>
+<li>
+<p>percent</p>
+</li>
+<li>
+<p>months</p>
+</li>
+<li>
+<p>dollars</p>
+</li>
+<li>
+<p>dollars/month</p>
+</li>
+<li>
+<p>percent/month</p>
+</li>
+</var></p>
+<p>The units of 18 are:   <var form="popup" name="AnSwEr0006">
+<li>
+<p>?</p>
+</li>
+<li>
+<p>percent</p>
+</li>
+<li>
+<p>months</p>
+</li>
+<li>
+<p>dollars</p>
+</li>
+<li>
+<p>dollars/month</p>
+</li>
+<li>
+<p>percent/month</p>
+</li>
+</var></p>
+<p>The units of 1452 are: <var form="popup" name="AnSwEr0007">
+<li>
+<p>?</p>
+</li>
+<li>
+<p>percent</p>
+</li>
+<li>
+<p>months</p>
+</li>
+<li>
+<p>dollars</p>
+</li>
+<li>
+<p>dollars/month</p>
+</li>
+<li>
+<p>percent/month</p>
+</li>
+</var>.</p>
+<p><em>(Note because this is all multiple choice, you will
+not see which parts of the problem are correct.)</em></p>
+</statement>
+      <answer>
+        <p>
+          <m>\text{increasing}</m>
+        </p>
+      </answer>
+      <answer>
+        <p>
+          <m>\text{increasing}</m>
+        </p>
+      </answer>
+      <answer>
+        <p>
+          <m>\text{increasing}</m>
+        </p>
+      </answer>
+      <answer>
+        <p>
+          <m>\text{dollars}</m>
+        </p>
+      </answer>
+      <answer>
+        <p>
+          <m>\text{percent}</m>
+        </p>
+      </answer>
+      <answer>
+        <p>
+          <m>\text{months}</m>
+        </p>
+      </answer>
+      <answer>
+        <p>
+          <m>\text{dollars}</m>
+        </p>
+      </answer>
+      <solution><alert>(a)</alert>
+We expect <m>B</m> to be an increasing function of all three variables.
+
+
+
+
+<alert>(b)</alert>
+A deposit of 1250 dollars at a 1 % annual interest rate for
+18 months results in a balance of 1452 dollars.
+
+
+
+
+</solution>
+    </static>
+    <server-data sourceFilePath="Library/Michigan/Chap12Sec1/Q22.pg" domain="https://webwork-ptx.aimath.org" course-id="anonymous" user-id="anonymous" course-password="anonymous" language="en-US"/>
+    <pg source="Library/Michigan/Chap12Sec1/Q22.pg"/>
+  </webwork-reps>
+  <webwork-reps version="2" ww_major_version="2" ww_minor_version="17" xml:id="extracted-webwork-4" ww-id="webwork-4">
+    <static seed="4" source="Library/Michigan/Chap12Sec3/Q14.pg">
+      <statement><p>Find an equation for the contour of
+<m>f(x, y) = 2 x^2 y + 9 x + 20</m> that goes through the point
+<m>(3, -3)</m>.</p>
+<p>Equation: <fillin name="AnSwEr0001" characters="55"/></p>
+</statement>
+      <answer>
+        <p>
+          <m>2yx^{2}+9x+20 = -7</m>
+        </p>
+      </answer>
+      <solution><m>f(3, -3) = 2\cdot 3^2\cdot -3 + 9 \cdot 3 + 20 =  -7</m>,
+an equation for the contour is
+<me>2 x^2 y + 9 x + 20 = -7.</me>
+
+
+
+</solution>
+    </static>
+    <server-data sourceFilePath="Library/Michigan/Chap12Sec3/Q14.pg" domain="https://webwork-ptx.aimath.org" course-id="anonymous" user-id="anonymous" course-password="anonymous" language="en-US"/>
+    <pg source="Library/Michigan/Chap12Sec3/Q14.pg"/>
+  </webwork-reps>
+  <webwork-reps version="2" ww_major_version="2" ww_minor_version="17" xml:id="extracted-webwork-5" ww-id="webwork-5">
+    <static seed="5" source="Library/FortLewis/Calc3/14-6-Chain-rule/HGM4-14-6-00-Chain-rule.pg">
+      <statement><p>A bison is charging across the plain one morning.  His
+path takes him to location <m>(x,y)</m> at time <m>t</m>, 
+where <m>x</m> and <m>y</m> are functions of <m>t</m>, and 
+north is in the direction of increasing <m>y</m>.  The 
+temperature is always colder farther north.  As time 
+passes, the sun rises in the sky, sending out more heat,
+and a cold front blows in from the east.  At time <m>t</m>
+the air temperature <m>H</m> near the bison is given by
+<m>H = f(x,y,t)</m>.  The chain rule expresses the 
+derivative <m>dH / dt</m> as a sum of three terms:</p>
+<p><me>\frac{dH}{dt} 
+= 
+\frac{\partial f}{\partial x} \frac{\partial x}{\partial t}
++
+\frac{\partial f}{\partial y} \frac{\partial y}{\partial t}
++
+\frac{\partial f}{\partial t}.</me></p>
+<p>Identify the term that gives the contribution to the 
+change in temperature experienced by the bison that is
+due to:</p>
+<tabular valign="middle">
+<row>
+<cell><ol>
+<li>
+The bison's change in latitude
+</li>
+<li>
+The coming cold front
+</li>
+<li>
+The rising sun
+</li>
+</ol></cell>
+<cell><ol label="A.">
+<li>
+<m>\displaystyle \frac{\partial f}{\partial t}</m>
+</li>
+<li>
+<m>\displaystyle \frac{\partial f}{\partial x} \frac{\partial x}{\partial t}</m>
+</li>
+<li>
+<m>\displaystyle \frac{\partial f}{\partial y} \frac{\partial y}{\partial t}</m>
+</li>
+</ol></cell>
+</row>
+</tabular>
+</statement>
+    </static>
+    <server-data sourceFilePath="Library/FortLewis/Calc3/14-6-Chain-rule/HGM4-14-6-00-Chain-rule.pg" domain="https://webwork-ptx.aimath.org" course-id="anonymous" user-id="anonymous" course-password="anonymous" language="en-US"/>
+    <pg source="Library/FortLewis/Calc3/14-6-Chain-rule/HGM4-14-6-00-Chain-rule.pg"/>
+  </webwork-reps>
+  <webwork-reps version="2" ww_major_version="2" ww_minor_version="17" xml:id="extracted-webwork-6" ww-id="webwork-6">
+    <static seed="6" source="Library/Michigan/Chap14Sec6/Q17.pg">
+      <statement><p>Corn production, <m>C</m>, is a function
+of rainfall, <m>R</m> (in inches), and temperature, <m>T</m>
+(in degrees C).
+The first figure below shows how rainfall is predicted
+to vary with time because of global warming; the second,
+how temperature is predicted to vary with time because of
+global warming.</p>
+<image xmlns:pi="http://pretextbook.org/2020/pretext/internal" width="58.3333333333333%" pi:generated="webwork/images/webwork-6-image-1.png"/>
+<p>Graph of rainfall, <m>R</m> vs. time, <m>t</m></p>
+<image xmlns:pi="http://pretextbook.org/2020/pretext/internal" width="58.3333333333333%" pi:generated="webwork/images/webwork-6-image-2.png"/>
+<p>Graph of temperature, <m>T</m> vs. time, <m>t</m></p>
+<p>Suppose that we know that (currently)
+<me>\Delta C \approx 3.6 \Delta R - 4.6 \Delta T</me></p>
+<p>Use this to estimate the change in corn production between the year
+2020 and the year 2021.</p>
+<p>Change = <fillin name="AnSwEr0001" characters="35"/></p>
+<p>Hence, estimate <m>dC/dt</m> when <m>t=2020</m>.</p>
+<p><m>dC/dt =</m> <fillin name="AnSwEr0002" characters="35"/></p>
+</statement>
+      <answer>
+        <p>
+          <m>-0.62</m>
+        </p>
+      </answer>
+      <answer>
+        <p>
+          <m>-0.62</m>
+        </p>
+      </answer>
+      <solution><m>R=15</m> inches and
+<m>T=25^\circ</m>C, a change, <m>\Delta R</m>, in rainfall and a change, 
+<m>\Delta T</m>,
+in temperature produces a change, <m>\Delta C</m>, in corn production given by
+<me>\Delta C \approx 3.6 \Delta R - 4.6 \Delta T.</me>
+Now both <m>R</m> and <m>T</m> are functions of time
+<m>t</m> (in years), and we want to find the effect of a small
+change in time, <m>\Delta t</m>, on <m>R</m> and <m>T</m>.
+The first figure
+shows that the slope of the graph for <m>R</m> versus <m>t</m> is about
+<m>-0.7/10 = -0.07</m> in/year when <m>t=2020</m>. Similarly,
+the second
+shows the slope of the graph of <m>T</m> versus <m>t</m>
+is about <m>0.8/10 = 0.08^\circ</m> C/year when <m>t=2020</m>.
+Thus, around the year 2020,
+<me>\Delta R \approx -0.07 \Delta t \quad
+\mbox{ and} \quad \Delta T \approx 0.08 \Delta t.</me>
+
+Substituting these into the equation for <m>\Delta C</m>, we get
+<me>\Delta C \approx (3.6)(-0.07) \Delta t - (4.6)(0.08) \Delta t
+\approx -0.62 \Delta t.</me>
+
+
+
+Thus in one year corn production will decline by about
+0.62 in.
+
+
+
+
+When <m>t=2020</m>
+<me>\frac{\Delta C}{\Delta t}\approx -0.62,</me>
+so
+<me>\frac{dC}{dt}\approx -0.62.</me>
+
+
+
+</solution>
+    </static>
+    <server-data sourceFilePath="Library/Michigan/Chap14Sec6/Q17.pg" domain="https://webwork-ptx.aimath.org" course-id="anonymous" user-id="anonymous" course-password="anonymous" language="en-US"/>
+    <pg source="Library/Michigan/Chap14Sec6/Q17.pg"/>
+  </webwork-reps>
+  <webwork-reps version="2" ww_major_version="2" ww_minor_version="17" xml:id="extracted-webwork-7" ww-id="webwork-7">
+    <static seed="7" source="Library/Michigan/Chap14Sec6/Q19.pg">
+      <statement><p>Air pressure decreases at a rate of 2.5 pascals per
+kilometer in the eastward direction. In addition,  the air pressure is
+increasing at a constant rate with respect to time
+everywhere.  A ship sailing eastward at 14 km/hour past an island
+takes barometer
+readings and records  a pressure drop of 60 pascals in
+2 hours.
+Estimate the time rate of change of air pressure on the  island.
+(A pascal is a unit of air pressure.)</p>
+<p>Time rate of change of air pressure = <fillin name="AnSwEr0001" characters="35"/></p>
+<p>(include <url href="/webwork2_files/helpFiles/Units.html">units</url>)</p>
+</statement>
+      <answer>
+        <p>
+          <m>5\ {\textstyle\frac{\rm\mathstrut Pa}{\rm\mathstrut hr}}</m>
+        </p>
+      </answer>
+      <solution><m>p(x,t)</m> be the air pressure in pascals  at <m>x</m> km
+east of the island at time <m>t</m> hours after the ship passes the
+island.  We want to compute <m>\partial p/\partial t</m>.
+
+
+
+
+Let <m>S(t)</m> be the air pressure on the ship at time <m>t</m>, so that
+<m>S(t)=p(14 t, t)</m>.  By the chain rule we have
+<me>{dS\over dt} = {\partial p\over \partial x}{dx\over dt} +
+    {\partial p\over \partial t}{dt\over dt} = 
+	{\partial p\over \partial x}{dx\over dt} +
+	{\partial p\over \partial t}.</me>
+Since 
+<m>dS/dt \approx (-60 \hbox{ pascal})/(2 \hbox{ hour}) = -30
+    \mbox{ pascal}/\mbox{hour}</m>, and 
+<m>\partial p/ \partial x = -2.5\hbox{ pascal/km}</m>, and
+<m>dx / dt = 14 \hbox{ km/hour}</m>, solving for
+<m>\partial p / \partial t</m>, we have
+<me>{\partial p \over \partial t} = -30 \hbox{ pascal/hour} +
+    (2.5 \hbox{ pascal/km}) (14 \hbox{ km/hour} ) =
+    5\ {\textstyle\frac{\rm\mathstrut Pa}{\rm\mathstrut hr}}</me>
+
+
+
+</solution>
+    </static>
+    <server-data sourceFilePath="Library/Michigan/Chap14Sec6/Q19.pg" domain="https://webwork-ptx.aimath.org" course-id="anonymous" user-id="anonymous" course-password="anonymous" language="en-US"/>
+    <pg source="Library/Michigan/Chap14Sec6/Q19.pg"/>
+  </webwork-reps>
+  <webwork-reps version="2" ww_major_version="2" ww_minor_version="17" xml:id="extracted-webwork-8" ww-id="webwork-8">
+    <static seed="8" source="Library/Michigan/Chap10Sec1/Q01.pg">
+      <statement><p>Find the Taylor polynomials of degree <m>n</m> approximating
+<me>\frac{5}{2-2x}</me>
+for <m>x</m> near 0:</p>
+<p>For <m>n=3</m>, <m>P_3(x) =</m> <fillin name="AnSwEr0001" characters="45"/></p>
+<p>For <m>n=5</m>, <m>P_5(x) =</m> <fillin name="AnSwEr0002" characters="45"/></p>
+<p>For <m>n=7</m>, <m>P_7(x) =</m> <fillin name="AnSwEr0003" characters="45"/></p>
+</statement>
+      <answer>
+        <p>
+          <m>\frac{5}{2}+\frac{5}{2}x+\frac{5}{2}x^{2}+\frac{5}{2}x^{3}</m>
+        </p>
+      </answer>
+      <answer>
+        <p>
+          <m>\frac{5}{2}+\frac{5}{2}x+\frac{5}{2}x^{2}+\frac{5}{2}x^{3}+\frac{5}{2}x^{4}+\frac{5}{2}x^{5}</m>
+        </p>
+      </answer>
+      <answer>
+        <p>
+          <m>\frac{5}{2}+\frac{5}{2}x+\frac{5}{2}x^{2}+\frac{5}{2}x^{3}+\frac{5}{2}x^{4}+\frac{5}{2}x^{5}+\frac{5}{2}x^{6}+\frac{5}{2}x^{7}</m>
+        </p>
+      </answer>
+      <solution><m>f(x) = \frac{5}{2-2x}</m>. Then <m>f(0)=</m>, and
+
+
+<tabular top="medium" bottom="medium" left="medium" right="medium">
+
+<row>
+<cell><m>f'(x) = \frac{5\cdot 2}{\left(2-2x\right)^{2}}</m></cell>
+<cell><m>f'(0) = \frac{5}{2}</m></cell>
+</row>
+
+<row>
+<cell><m>f''(x) = \frac{2\cdot 5\cdot 2^{2}}{\left(2-2x\right)^{3}}</m></cell>
+<cell><m>f''(0) = \frac{2\cdot 5}{2}</m></cell>
+</row>
+
+<row>
+<cell><m>f'''(x) = \frac{3!\cdot 5\cdot 2^{3}}{\left(2-2x\right)^{4}}</m></cell>
+<cell><m>f'''(0) = \frac{3!\cdot 5}{2}</m></cell>
+</row>
+
+<row>
+<cell><m>f^{(4)}(x) = \frac{4!\cdot 5\cdot 2^{4}}{\left(2-2x\right)^{5}}</m></cell>
+<cell><m>f^{(4)}(0) = \frac{4!\cdot 5}{2}</m></cell>
+</row>
+
+<row>
+<cell><m>f^{(5)}(x) = \frac{5!\cdot 5\cdot 2^{5}}{\left(2-2x\right)^{6}}</m></cell>
+<cell><m>f^{(5)}(0) = \frac{5!\cdot 5}{2}</m></cell>
+</row>
+
+<row>
+<cell><m>f^{(6)}(x) = \frac{6!\cdot 5\cdot 2^{6}}{\left(2-2x\right)^{7}}</m></cell>
+<cell><m>f^{(6)}(0) = \frac{6!\cdot 5}{2}</m></cell>
+</row>
+
+<row>
+<cell><m>f^{(7)}(x) = \frac{7!\cdot 5\cdot 2^{7}}{\left(2-2x\right)^{8}}</m></cell>
+<cell><m>f^{(7)}(0) = \frac{7!\cdot 5}{2}</m></cell>
+</row>
+
+
+</tabular>
+
+
+Thus, evaluating these,
+
+
+
+<m>P_3(x) = \frac{5}{2}+\frac{5}{2}x+\frac{5}{2}x^{2}+\frac{5}{2}x^{3}</m>,
+
+
+
+<m>P_5(x) = \frac{5}{2}+\frac{5}{2}x+\frac{5}{2}x^{2}+\frac{5}{2}x^{3}+\frac{5}{2}x^{4}+\frac{5}{2}x^{5}</m>,
+
+
+
+and <m>P_7(x) = \frac{5}{2}+\frac{5}{2}x+\frac{5}{2}x^{2}+\frac{5}{2}x^{3}+\frac{5}{2}x^{4}+\frac{5}{2}x^{5}+\frac{5}{2}x^{6}+\frac{5}{2}x^{7}</m>.
+
+
+
+</solution>
+    </static>
+    <server-data sourceFilePath="Library/Michigan/Chap10Sec1/Q01.pg" domain="https://webwork-ptx.aimath.org" course-id="anonymous" user-id="anonymous" course-password="anonymous" language="en-US"/>
+    <pg source="Library/Michigan/Chap10Sec1/Q01.pg"/>
+  </webwork-reps>
+  <webwork-reps version="2" ww_major_version="2" ww_minor_version="17" xml:id="extracted-webwork-9" ww-id="webwork-9">
+    <static seed="9" source="Library/Michigan/Chap10Sec1/Q13.pg">
+      <statement><p>Find the Taylor
+polynomial of degree <m>n = 4</m> for <m>x</m> near the
+point <m>a = \frac{\pi }{8}</m> for the function
+<m>\sin\!\left(4x\right)</m>.</p>
+<p><m>P_{4}(x) =</m> <fillin name="AnSwEr0001" characters="45"/></p>
+</statement>
+      <answer>
+        <p>
+          <m>1+\frac{-4^{2}}{2}\!\left(x-\frac{\pi }{8}\right)^{2}+\frac{4^{4}}{24}\!\left(x-\frac{\pi }{8}\right)^{4}</m>
+        </p>
+      </answer>
+      <solution><m>f(x)= \sin\!\left(4x\right)</m>. Then <m>f(\frac{\pi }{8}) = 1</m>, and
+
+<tabular top="medium" bottom="medium" left="medium" right="medium">
+
+<row>
+<cell><m>f'(x) = 4\cos\!\left(4x\right)</m></cell>
+<cell><m>f'(\frac{\pi }{8}) = 0</m></cell>
+</row>
+
+<row>
+<cell><m>f''(x) = -16\sin\!\left(4x\right)</m></cell>
+<cell><m>f'''(\frac{\pi }{8}) = -4^{2}</m></cell>
+</row>
+
+<row>
+<cell><m>f'''(x) = -64\cos\!\left(4x\right)</m></cell>
+<cell><m>f'''(\frac{\pi }{8}) = 0</m></cell>
+</row>
+
+<row>
+<cell><m>f''''(x) = 256\sin\!\left(4x\right)</m></cell>
+<cell><m>f''''(\frac{\pi }{8}) = 4^{4}</m></cell>
+</row>
+
+
+</tabular>
+
+So,
+<m>P_4(x) = 1+\frac{-4^{2}}{2}\!\left(x-\frac{\pi }{8}\right)^{2}+\frac{4^{4}}{24}\!\left(x-\frac{\pi }{8}\right)^{4}</m>.
+
+
+
+</solution>
+    </static>
+    <server-data sourceFilePath="Library/Michigan/Chap10Sec1/Q13.pg" domain="https://webwork-ptx.aimath.org" course-id="anonymous" user-id="anonymous" course-password="anonymous" language="en-US"/>
+    <pg source="Library/Michigan/Chap10Sec1/Q13.pg"/>
+  </webwork-reps>
+  <webwork-reps version="2" ww_major_version="2" ww_minor_version="17" xml:id="extracted-webwork-10" ww-id="webwork-10">
+    <static seed="10" source="Library/Michigan/Chap10Sec1/Q17.pg">
+      <statement><p>Suppose that <m>P_2(x)=a+bx+cx^2</m> is the
+second degree Taylor polynomial for the function <m>f</m> about <m>x=0</m>.
+What can you say about the signs of
+<m>a</m>, <m>b</m>, <m>c</m> if <m>f</m> has the graph given below?</p>
+<image xmlns:pi="http://pretextbook.org/2020/pretext/internal" width="25%" pi:generated="webwork/images/webwork-10-image-1.png"/>
+<p><em>(For each, enter <m>+</m> if the term is positive, and <m>-</m> if
+it is negative.  Note that because this is essentially multiple choice
+problem it will not show which parts of your answer are correct or
+incorrect.)</em></p>
+<p><m>a</m> is <fillin name="AnSwEr0001" characters="3"/></p>
+<p><m>b</m> is <fillin name="AnSwEr0002" characters="3"/></p>
+<p><m>c</m> is <fillin name="AnSwEr0003" characters="3"/></p>
+</statement>
+      <answer>
+        <p>
+          <m>\text{+}</m>
+        </p>
+      </answer>
+      <answer>
+        <p>
+          <m>\text{+}</m>
+        </p>
+      </answer>
+      <answer>
+        <p>
+          <m>\text{-}</m>
+        </p>
+      </answer>
+      <solution><m>P_2(x)</m> is the second degree Taylor polynomial for <m>f(x)</m>
+about <m>x=0</m>, <m>P_2(0)=f(0)</m>, which says <m>a=f(0)</m>.  Since
+<m>\frac{d}{dx}P_2(x) \big|_{x=0} = f'(0)</m>,
+<m>b=f'(0)</m>; and since
+<m>\frac{d^2}{dx^2} P_2(x) \big|_{x=0} = f''(0)</m>,
+<m>2c=f''(0)</m>.  In other words, <m>a</m> is the <m>y</m>-intercept of
+<m>f(x)</m>, <m>b</m> is the slope of the tangent line to <m>f(x)</m> at
+<m>x=0</m> and <m>c</m> tells us the concavity of <m>f(x)</m> near <m>x=0</m>.
+
+
+
+Thus
+<m>a &gt; 0</m>; <m>b &gt; 0</m>; and <m>c \lt  0</m>
+
+
+
+</solution>
+    </static>
+    <server-data sourceFilePath="Library/Michigan/Chap10Sec1/Q17.pg" domain="https://webwork-ptx.aimath.org" course-id="anonymous" user-id="anonymous" course-password="anonymous" language="en-US"/>
+    <pg source="Library/Michigan/Chap10Sec1/Q17.pg"/>
+  </webwork-reps>
+  <webwork-reps version="2" ww_major_version="2" ww_minor_version="17" xml:id="extracted-webwork-11" ww-id="webwork-11">
+    <static seed="11" source="Library/Michigan/Chap10Sec1/Q21.pg">
+      <statement><p>The function <m>f(x)</m> is approximated near <m>x=0</m> by the second
+degree Taylor polynomial <m>P_2(x) = -\left(3+3x+2x^{2}\right)</m>.</p>
+<p>Give values:</p>
+<p><m>f(0) =</m> <fillin name="AnSwEr0001" characters="15"/></p>
+<p><m>f'(0) =</m> <fillin name="AnSwEr0002" characters="15"/></p>
+<p><m>f''(0) =</m> <fillin name="AnSwEr0003" characters="15"/></p>
+</statement>
+      <answer>
+        <p>
+          <m>-3</m>
+        </p>
+      </answer>
+      <answer>
+        <p>
+          <m>-3</m>
+        </p>
+      </answer>
+      <answer>
+        <p>
+          <m>-4</m>
+        </p>
+      </answer>
+      <solution><me>f(x)\approx
+P_2(x)=f(0)+f'(0)x+\frac{f''(0)}{2!}x^2</me>
+and identifying coefficients with those given for <m>P_2(x)</m>, we obtain:
+
+
+
+<m>f(0)=</m> the constant term, which equals <m>-3</m>, so <m>f(0)=-3</m>.
+
+
+
+<m>f'(0)=</m> the coefficient of <m>x</m>, which equals <m>-3</m>, so
+<m>f'(0)=-3</m>.
+
+
+
+<m>\frac{f''(0)}{2!}=</m> the coefficient of <m>x^2</m>, which equals <m>-2</m>,
+so <m>f''(0)=-4</m>.
+
+
+
+</solution>
+    </static>
+    <server-data sourceFilePath="Library/Michigan/Chap10Sec1/Q21.pg" domain="https://webwork-ptx.aimath.org" course-id="anonymous" user-id="anonymous" course-password="anonymous" language="en-US"/>
+    <pg source="Library/Michigan/Chap10Sec1/Q21.pg"/>
+  </webwork-reps>
+  <webwork-reps version="2" ww_major_version="2" ww_minor_version="17" xml:id="extracted-webwork-12" ww-id="webwork-12">
+    <static seed="12" source="Library/Michigan/Chap10Sec1/Q23.pg">
+      <statement><p>Suppose <m>g</m> is a function which has continuous derivatives, and that
+<m>g(3)=5, g'(3)=3</m>, <m>g''(3)=4</m>,
+<m>g'''(3)=3</m>.</p>
+<p><alert>(a)</alert>
+What is the Taylor polynomial of degree 2 for <m>g</m> near 
+<m>3</m>?</p>
+<p><m>P_2(x) =</m> <fillin name="AnSwEr0001" characters="45"/></p>
+<p><alert>(b)</alert>
+What is the Taylor polynomial of degree 3 for <m>g</m> near 
+<m>3</m>?</p>
+<p><m>P_3(x) =</m> <fillin name="AnSwEr0002" characters="45"/></p>
+<p><alert>(c)</alert>
+Use the two polynomials that you found in parts (a) and (b) to
+approximate <m>g(3.1)</m>.</p>
+<p>With <m>P_2</m>, <m>g(3.1)\approx</m> <fillin name="AnSwEr0003" characters="15"/></p>
+<p>With <m>P_3</m>, <m>g(3.1)\approx</m> <fillin name="AnSwEr0004" characters="15"/></p>
+</statement>
+      <answer>
+        <p>
+          <m>5+3\!\left(x-3\right)+\frac{1}{2!}\cdot 4\!\left(x-3\right)^{2}</m>
+        </p>
+      </answer>
+      <answer>
+        <p>
+          <m>5+3\!\left(x-3\right)+\frac{1}{2!}\cdot 4\!\left(x-3\right)^{2}+\frac{1}{3!}\cdot 3\!\left(x-3\right)^{3}</m>
+        </p>
+      </answer>
+      <answer>
+        <p>
+          <m>5.32</m>
+        </p>
+      </answer>
+      <answer>
+        <p>
+          <m>5.3205</m>
+        </p>
+      </answer>
+      <solution><me>g(x) = g(3) + g'(3)(x-3) + \frac{g''(3)}{2!}(x-3)^2
++\frac{g'''(3)}{3!}(x-3)^3+\cdots</me>
+Substituting gives
+<me>g(x) = 5 + 3(x-3) + \frac{4}{2!}(x-3)^2
+  +\frac{3}{3!}(x-3)^3+\cdots</me>
+
+
+
+
+<alert>(a)</alert>
+The degree 2 Taylor polynomial, <m>P_2 (x)</m>, is obtained by truncating
+after the <m>(x-3)^2</m> term:
+<me>P_2(x) = 5+3\!\left(x-3\right)+\frac{1}{2!}\cdot 4\!\left(x-3\right)^{2}.</me>
+
+
+
+<alert>(b)</alert>
+The degree 3 Taylor polynomial, <m>P_3 (x)</m>, is obtained by truncating
+after the
+<m>(x-3)^3</m> term:
+<me>P_3 (x) = 5+3\!\left(x-3\right)+\frac{1}{2!}\cdot 4\!\left(x-3\right)^{2}+\frac{1}{3!}\cdot 3\!\left(x-3\right)^{3}</me>
+
+
+
+
+<alert>(c)</alert>
+Substitute <m>x=3.1</m> into the Taylor polynomial of degree 2:
+<me>P_2(4.9) = 5+3\!\left(3.1-3\right)+\frac{1}{2!}\cdot 4\!\left(3.1-3\right)^{2} = 5.32.</me>
+From the Taylor polynomial of degree 3, we obtain
+<me>P_3(4.9) = 5+3\!\left(3.1-3\right)+\frac{1}{2!}\cdot 4\!\left(3.1-3\right)^{2}+\frac{1}{3!}\cdot 3\!\left(3.1-3\right)^{3} = 5.3205.</me>
+
+
+
+</solution>
+    </static>
+    <server-data sourceFilePath="Library/Michigan/Chap10Sec1/Q23.pg" domain="https://webwork-ptx.aimath.org" course-id="anonymous" user-id="anonymous" course-password="anonymous" language="en-US"/>
+    <pg source="Library/Michigan/Chap10Sec1/Q23.pg"/>
+  </webwork-reps>
+  <webwork-reps version="2" ww_major_version="2" ww_minor_version="17" xml:id="extracted-webwork-13" ww-id="webwork-13">
+    <static seed="13" source="Library/Michigan/Chap14Sec4/Q75.pg">
+      <statement><p><alert>(a)</alert>
+For <m>g(x,y) = \sqrt{x^{2}+y+14}</m>,</p>
+<p><m>\nabla g(3,2) =</m> <fillin name="AnSwEr0001" characters="35"/></p>
+<p><alert>(b)</alert>
+Find the best linear approximation of <m>g(x,y)</m> for <m>(x,y)</m>
+near <m>(3,2)</m>.</p>
+<p>Linear approximation = <fillin name="AnSwEr0002" characters="35"/></p>
+<p><alert>(c)</alert>
+Use the approximation in part (b) to estimate <m>g(3.01, 2.02)</m>.</p>
+<p><m>g(3.01,2.02) \approx</m> <fillin name="AnSwEr0003" characters="35"/></p>
+</statement>
+      <answer>
+        <p>
+          <m>0.6\boldsymbol{i}+0.1\boldsymbol{j}</m>
+        </p>
+      </answer>
+      <answer>
+        <p>
+          <m>5+\frac{3}{5}\!\left(x-3\right)+\frac{1}{2\cdot 5}\!\left(y-2\right)</m>
+        </p>
+      </answer>
+      <answer>
+        <p>
+          <m>5.008</m>
+        </p>
+      </answer>
+      <solution><alert>(a)</alert>
+We have
+<me>g_x = \frac{x}{\sqrt{x^{2}+y+14}}, \quad \hbox{ so } g_x(3, 2) = \frac{3}{5}</me>
+and
+<me>g_y = \frac{1}{2 \sqrt{x^{2}+y+14}}, \quad \hbox{ so } g_y(3, 2) = \frac{1}{10}.</me>
+Thus
+<me>\nabla g(3,2) = \frac{3}{5}\, \vec i + \frac{1}{10}\, \vec j.</me>
+
+
+
+
+<alert>(b)</alert>
+Using the value <m>g(3, 2) = 5</m> and the partial derivatives
+in part (a) we have
+<me>g(x, y) = \sqrt{x^{2}+y+14} \approx  5 + \frac{3}{5} (x-3) + \frac{1}{10} (y-2).</me>
+
+
+
+
+<alert>(c)</alert>
+Using the linearization in part (b), we have
+<me>g(3.01, 2.02) \approx 5 + \frac{3}{5} (3 - 3.01) + \frac{1}{10} (2 - 2.02) = 5.008.</me>
+
+
+
+</solution>
+    </static>
+    <server-data sourceFilePath="Library/Michigan/Chap14Sec4/Q75.pg" domain="https://webwork-ptx.aimath.org" course-id="anonymous" user-id="anonymous" course-password="anonymous" language="en-US"/>
+    <pg source="Library/Michigan/Chap14Sec4/Q75.pg"/>
+  </webwork-reps>
+  <webwork-reps version="2" ww_major_version="2" ww_minor_version="17" xml:id="extracted-webwork-14" ww-id="webwork-14">
+    <static seed="14" source="Library/FortLewis/Calc3/14-7-Second-order-partials/HGM4-14-7-00-Second-order-partials.pg">
+      <statement><p>Find the second-order Taylor polynomial 
+for <m>\displaystyle f(x,y) = 4x^{2}y+2xy^{3}</m> at the
+point <m>(1,-1)</m>.</p>
+<p><m>Q(x,y) =</m> <fillin name="AnSwEr0001" characters="80"/></p>
+</statement>
+      <answer>
+        <p>
+          <m>10\!\left(y+1\right)-\left(6+10\!\left(x-1\right)\right)-\frac{8\!\left(x-1\right)^{2}}{2}-\frac{12\!\left(y+1\right)^{2}}{2}+14\!\left(x-1\right)\!\left(y+1\right)</m>
+        </p>
+      </answer>
+    </static>
+    <server-data sourceFilePath="Library/FortLewis/Calc3/14-7-Second-order-partials/HGM4-14-7-00-Second-order-partials.pg" domain="https://webwork-ptx.aimath.org" course-id="anonymous" user-id="anonymous" course-password="anonymous" language="en-US"/>
+    <pg source="Library/FortLewis/Calc3/14-7-Second-order-partials/HGM4-14-7-00-Second-order-partials.pg"/>
+  </webwork-reps>
+  <webwork-reps version="2" ww_major_version="2" ww_minor_version="17" xml:id="extracted-webwork-15" ww-id="webwork-15">
+    <static seed="15" source="Library/Michigan/Chap14Sec7/Q29.pg">
+      <statement><p>Find the best quadratic approximation, <m>Q(x,y)</m> of
+<m>\sqrt{4+6x-7y}</m> for <m>(x,y)</m> near <m>(0,0)</m>,</p>
+<p><m>Q(x,y) =</m> <fillin name="AnSwEr0001" characters="55"/></p>
+</statement>
+      <answer>
+        <p>
+          <m>2+1.5x-1.75y-\frac{1.125x^{2}}{2}-\frac{1.53125y^{2}}{2}+1.3125xy</m>
+        </p>
+      </answer>
+      <solution><m>f(x, y) = \sqrt{4+6x-7y}</m>, the first and second derivatives are
+<me>f_x = \frac{6}{2\sqrt{4+6x-7y}}, \qquad f_y = -\frac{7}{2\sqrt{4+6x-7y}},</me>
+and
+<me>f_{xx} = -\frac{36}{4\!\left(4+6x-7y\right)^{1.5}}, \qquad
+f_{xy} = \frac{42}{4\!\left(4+6x-7y\right)^{1.5}}, \qquad
+f_{yy} = -\frac{49}{4\!\left(4+6x-7y\right)^{1.5}}.</me>
+Thus we find that
+<me>f(0, 0) = 2, \qquad
+f_x(0, 0) = 1.5, \qquad
+f_y(0, 0) = -1.75,</me>
+and
+<me>f_{xx}(0, 0) = -1.125,\qquad
+f_{xy}(0, 0) = 1.3125,\qquad
+f_{yy}(0, 0) = -1.53125.</me>
+
+The best quadratic approximation for <m>f(x, y)</m> for <m>(x, y)</m> near
+<m>(0, 0)</m> is
+<me>f(x, y) \approx Q(x,y) = 2+1.5x-1.75y-\frac{1.125x^{2}}{2}-\frac{1.53125y^{2}}{2}+1.3125xy.</me>
+
+
+
+</solution>
+    </static>
+    <server-data sourceFilePath="Library/Michigan/Chap14Sec7/Q29.pg" domain="https://webwork-ptx.aimath.org" course-id="anonymous" user-id="anonymous" course-password="anonymous" language="en-US"/>
+    <pg source="Library/Michigan/Chap14Sec7/Q29.pg"/>
+  </webwork-reps>
+  <webwork-reps version="2" ww_major_version="2" ww_minor_version="17" xml:id="extracted-webwork-16" ww-id="webwork-16">
+    <static seed="16" source="Library/Michigan/Chap14Sec7/Q34.pg">
+      <statement><p>0.1/-0.1</p>
+<p>Find the linear, <m>L(x,y)</m>, and quadratic, <m>Q(x,y)</m>,
+Taylor polynomials valid near <m>(4,0)</m> for
+<me>f(x,y) = \sin\!\left(x-4\right)\cos\!\left(y\right).</me></p>
+<p><m>L(x,y) =</m> <fillin name="AnSwEr0001" characters="55"/></p>
+<p><m>Q(x,y) =</m> <fillin name="AnSwEr0002" characters="55"/></p>
+<p>Find the approximations for <m>f(4.1,-0.1)</m> generated by these, and
+compare with the exact value of the function:</p>
+<p>At <m>(4.1,-0.1)</m>,</p>
+<p><m>L(4.1,-0.1) =</m> <fillin name="AnSwEr0003" characters="25"/>,</p>
+<p><m>Q(4.1,-0.1) =</m> <fillin name="AnSwEr0004" characters="25"/>,</p>
+<p><m>f(4.1,-0.1) =</m> <fillin name="AnSwEr0005" characters="25"/>.</p>
+</statement>
+      <answer>
+        <p>
+          <m>x-4</m>
+        </p>
+      </answer>
+      <answer>
+        <p>
+          <m>x-4</m>
+        </p>
+      </answer>
+      <answer>
+        <p>
+          <m>0.1</m>
+        </p>
+      </answer>
+      <answer>
+        <p>
+          <m>0.1</m>
+        </p>
+      </answer>
+      <answer>
+        <p>
+          <m>0.0993347</m>
+        </p>
+      </answer>
+      <solution><m>f(4,0) = 0</m> and the relevant derivatives are:
+<me>f_x = \cos\!\left(x-4\right)\cos\!\left(y\right)\quad\mbox{so}\quad f_x(4,0) = 1,</me>
+<me>f_y = -\sin\!\left(x-4\right)\sin\!\left(y\right)\quad\mbox{so}\quad f_y(4,0) = 0,</me>
+<me>f_{xx} = -\sin\!\left(x-4\right)\cos\!\left(y\right)\quad\mbox{so}\quad f_{xx}(4,0) = 0,</me>
+<me>f_{xy} = -\cos\!\left(x-4\right)\sin\!\left(y\right) \quad\mbox{so}\quad f_{xy}(4,0) = 0,</me>
+and
+<me>f_{yy} = -\left(\sin\!\left(x-4\right)\cos\!\left(y\right)\right)\quad\mbox{so}\quad f_{yy}(4,0) = 0.</me>
+Thus the linear approximation, <m>L(x,y)</m> to <m>f(x,y)</m> at
+<m>(4,0)</m>, is given by:
+<me>f(x,y)\approx L(x,y) = f(4,0)+f_x(4,0)(x-4)+f_y(4,0)(y-0)
+= x-4</me>
+
+The quadratic approximation, <m>Q(x,y)</m> to <m>f(x,y)</m> near
+<m>(4,0)</m>, is given by:
+<me>f(x,y)\approx Q(x,y) = f(4,0)+f_x(4,0)(x-4)+f_y(4,0)(y-0) +
+  {1\over 2}f_{xx}(4,0)(x-4)^2</me>
+<me>+ f_{xy}(4,0)(x-4)(y-0)+{1\over 2}f_{yy}(4,0)(y-0)^2</me>
+<me>= x-4</me>
+
+Thus the linear and quadratic approximations are the same.  The values
+of the approximations are
+<me>L(4.1,-0.1) = Q(4.1,-0.1) = 0.1.</me>
+and the exact value is
+<me>f(4.1,-0.1) = 0.0993347.</me>
+
+
+
+</solution>
+    </static>
+    <server-data sourceFilePath="Library/Michigan/Chap14Sec7/Q34.pg" domain="https://webwork-ptx.aimath.org" course-id="anonymous" user-id="anonymous" course-password="anonymous" language="en-US"/>
+    <pg source="Library/Michigan/Chap14Sec7/Q34.pg"/>
+  </webwork-reps>
+</webwork-representations>

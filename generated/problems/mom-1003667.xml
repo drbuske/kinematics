@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<myopenmath xmlns:pi="http://pretextbook.org/2020/pretext/internal" id="1003667">
+<statement>
+<p>
+Find the divergence of the vector field <m>\displaystyle\vec{{{F}}}={\left({8}{x}+{6}{y}{z}\right)}{i}+{\left({2}{y}+{3}{x}{z}\right)}{j}+{\left({4}{z}+{9}{x}{y}\right)}{k}</m></p>
+<p>
+<m>\displaystyle\text{div}\ \vec{{{F}}}</m> = <fillin characters="20" />  
+
+</p>
+</statement>
+<solution>
+<p><ul><li><m>\displaystyle{14}</m></li></ul></p>
+</solution>
+</myopenmath>
+

@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<myopenmath xmlns:pi="http://pretextbook.org/2020/pretext/internal" id="1498056">
+<statement>
+<p>
+Let <m>\displaystyle\vec{{{F}}}={9}{x}{y}\vec{{{i}}}+{2}{x}{z}\vec{{{j}}}+{10}{y}{z}\vec{{{k}}}</m>. Find the curl of <m>\displaystyle\vec{{{F}}}</m>.</p>
+<p>
+<m>\displaystyle\text{curl}\ \vec{{{F}}}=</m> <fillin characters="8" />  
+<m>\displaystyle\vec{{{i}}}+</m> <fillin characters="8" />  
+<m>\displaystyle\vec{{{j}}}+</m> <fillin characters="8" />  
+<m>\displaystyle\vec{{{k}}}</m>
+</p>
+</statement>
+<solution>
+<p><ul><li><m>\displaystyle-{2}{x}+{10}{z}</m></li><li><m>\displaystyle{0}</m></li><li><m>\displaystyle-{9}{x}+{2}{z}</m></li></ul></p>
+</solution>
+</myopenmath>
+

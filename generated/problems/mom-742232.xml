@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<myopenmath xmlns:pi="http://pretextbook.org/2020/pretext/internal" id="742232">
+<statement>
+<p>
+Find the maximum rate of change of <m>\displaystyle{f{{\left({x},{y}\right)}}}={y}{e}^{{{x}{y}}}</m> at the point <m>\displaystyle{\left({0},{12}\right)}</m>. </p>
+<p>
+<fillin characters="20" />   
+</p>
+</statement>
+<solution>
+<p><ul><li><m>\displaystyle\sqrt{{{20737}}}</m></li></ul></p>
+</solution>
+</myopenmath>
+

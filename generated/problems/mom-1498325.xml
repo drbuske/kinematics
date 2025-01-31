@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<myopenmath xmlns:pi="http://pretextbook.org/2020/pretext/internal" id="1498325">
+<statement>
+<p>
+Given <m>\displaystyle{f{{\left({x},{y}\right)}}}={x}^{{2}}-{3}{x}{y}^{{4}}+{3}{y}^{{5}}</m>, find</p>
+<p>
+<m>\displaystyle{\frac{{\partial^{{2}}{f}}}{{\partial{x}^{{2}}}}}{\left({x},{y}\right)}</m> = <fillin characters="8" />  
+</p>
+<p>
+<m>\displaystyle{\frac{{\partial^{{2}}{f}}}{{\partial{y}\partial{x}}}}{\left({x},{y}\right)}</m> = <fillin characters="8" />  
+
+</p>
+</statement>
+<solution>
+<p><ul><li><m>\displaystyle{2}</m></li><li><m>\displaystyle-{12}{y}^{{3}}</m></li></ul></p>
+</solution>
+</myopenmath>
+

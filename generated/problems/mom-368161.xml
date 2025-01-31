@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<myopenmath xmlns:pi="http://pretextbook.org/2020/pretext/internal" id="368161">
+<statement>
+<p>
+Outside temperature over a day can be modeled as a sinusoidal function.  Suppose you know the temperature is 65 degrees at 6 a.m. and the high and low temperature during the day are 71 and 59 degrees, respectively.  Assuming midnight is when the temperature is lowest, find an equation for the temperature, <m>\displaystyle{T}{\left({t}\right)}</m>, where <m>\displaystyle{t}</m> is the number of hours since midnight.</p>
+<p>
+<m>\displaystyle{T}{\left({t}\right)}</m> = <fillin characters="30" />  
+
+</p>
+</statement>
+<solution>
+<p><ul><li><m>\displaystyle{6}\cdot{\sin{{\left(\frac{\pi}{{12}}\cdot{\left({t}-{6}\right)}\right)}}}+{65}</m></li></ul></p>
+</solution>
+</myopenmath>
+

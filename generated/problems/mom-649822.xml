@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8"?>
+<myopenmath xmlns:pi="http://pretextbook.org/2020/pretext/internal" id="649822">
+<statement>
+<p>
+A smooth vector field <m>\displaystyle\vec{{{F}}}</m> has <m>\displaystyle\text{curl}\ \vec{{{F}}}{\left({0},{0},{0}\right)}=</m><m>\displaystyle-{2}\vec{{{i}}}+\vec{{{j}}}+{4}\vec{{{k}}}</m>.  </p>
+<p>
+Let <m>\displaystyle{C}_{{1}}</m> be a circle of radius <m>\displaystyle{0.01}</m> centered at the origin in the <m>\displaystyle{x}{y}</m>-plane, oriented counterclockwise when viewed from the positive <m>\displaystyle{z}</m>-axis.  Estimate the circulation around <m>\displaystyle{C}_{{1}}</m>. </p>
+<p>
+<fillin characters="12" />   </p>
+<p>
+Let <m>\displaystyle{C}_{{2}}</m> be a circle of radius <m>\displaystyle{0.01}</m> centered at the origin in the <m>\displaystyle{y}{z}</m>-plane, oriented counterclockwise when viewed from the positive <m>\displaystyle{x}</m>-axis.  Estimate the circulation around <m>\displaystyle{C}_{{2}}</m>.  </p>
+<p>
+<fillin characters="12" />   </p>
+<p>
+Let <m>\displaystyle{C}_{{3}}</m> be a circle of radius <m>\displaystyle{0.01}</m> centered at the origin in the <m>\displaystyle{x}{z}</m>-plane, oriented counterclockwise when viewed from the positive <m>\displaystyle{y}</m>-axis.  Estimate the circulation around <m>\displaystyle{C}_{{3}}</m>.  </p>
+<p>
+<fillin characters="12" />   
+</p>
+</statement>
+<solution>
+<p><ul><li><m>\displaystyle{0.00004}\pi</m></li><li><m>\displaystyle-{0.00002}\pi</m></li><li><m>\displaystyle{0.00001}\pi</m></li></ul></p><p>The circulation density of a smooth vector field <m>\displaystyle\vec{{{F}}}</m> at a point <m>\displaystyle{\left({x},{y},{z}\right)}</m> around the direction of a unit vector <m>\displaystyle\vec{{{n}}}</m> is defined by <m>\displaystyle\text{circ}_{{\vec{{{n}}}}}\ \vec{{{F}}}{\left({x},{y},{z}\right)}=\lim_{{\text{Area}\rightarrow{0}}}{\frac{{\int_{{C}}\vec{{{F}}}\cdot{d}\vec{{{r}}}}}{{\text{Area}\ \text{inside}\ {C}}}}</m>.  </p>
+<p>
+Since <m>\displaystyle{C}_{{1}}</m> is a small circle centerd at <m>\displaystyle{\left({0},{0}\right)}</m> in the <m>\displaystyle{x}{y}</m>-plane, oriented counterclockwise, we can estimate the circulation <m>\displaystyle\int_{{{C}_{{1}}}}\vec{{{F}}}\cdot{d}\vec{{{r}}}</m> by using the <m>\displaystyle\vec{{{k}}}</m> component of <m>\displaystyle\text{curl}\ \vec{{{F}}}</m>.  So, the circulation around <m>\displaystyle{C}_{{1}}</m> is given by <m>\displaystyle\int_{{{C}_{{1}}}}\vec{{{F}}}\cdot{d}\vec{{{r}}}\approx\text{circ}_{{\vec{{{k}}}}}\ \vec{{{F}}}{\left({0},{0},{0}\right)}\cdot{\left(\text{Area}\ \text{inside}\ {C}_{{1}}\right)}</m> <m>\displaystyle={\left(\text{curl}\ \vec{{{F}}}{\left({0},{0},{0}\right)}\cdot\vec{{{k}}}\right)}{\left(\text{Area}\ \text{inside}\ {C}_{{1}}\right)}</m> <m>\displaystyle={4}\cdot\pi\cdot{\left({0.01}\right)}^{{2}}=</m><m>\displaystyle{0.00004}\pi</m>.  </p>
+<p>
+Similarly, we estimate the circulation <m>\displaystyle\int_{{{C}_{{2}}}}\vec{{{F}}}\cdot{d}\vec{{{r}}}</m> by using <m>\displaystyle\text{circ}_{{\vec{{{i}}}}}\ \vec{{{F}}}{\left({0},{0},{0}\right)}</m>.  So, the circulation around <m>\displaystyle{C}_{{2}}</m> is given by <m>\displaystyle\int_{{{C}_{{2}}}}\vec{{{F}}}\cdot{d}\vec{{{r}}}\approx\text{circ}_{{\vec{{{i}}}}}\ \vec{{{F}}}{\left({0},{0},{0}\right)}\cdot{\left(\text{Area}\ \text{inside}\ {C}_{{2}}\right)}</m> <m>\displaystyle={\left(\text{curl}\ \vec{{{F}}}{\left({0},{0},{0}\right)}\cdot\vec{{{i}}}\right)}{\left(\text{Area}\ \text{inside}\ {C}_{{2}}\right)}</m> <m>\displaystyle=-{2}\cdot\pi\cdot{\left({0.01}\right)}^{{2}}=</m><m>\displaystyle-{0.00002}\pi</m>.  </p>
+</solution>
+</myopenmath>
+

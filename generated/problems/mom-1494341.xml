@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="utf-8"?>
+<myopenmath xmlns:pi="http://pretextbook.org/2020/pretext/internal" id="1494341">
+<statement>
+<p>Suppose that <m>\displaystyle{W}{\left({s},{t}\right)}={F}{\left({u}{\left({s},{t}\right)},{v}{\left({s},{t}\right)}\right)}</m> is a differentiable function, as are <m>\displaystyle{u}</m> and <m>\displaystyle{v}</m>.   Suppose further that the following are true:</p>
+<table><tabular>         
+  
+    <row>
+      <cell>
+        <p> <m>\displaystyle{u}{\left({1},{0}\right)}=-{7}</m> </p>
+      </cell>
+      <cell>
+        <p> <m>\displaystyle{v}{\left({1},{0}\right)}={4}</m> </p>
+      </cell>
+    </row>
+    <row>
+      <cell>
+        <p> <m>\displaystyle{\frac{{\partial{u}}}{{\partial{s}}}}{\left({1},{0}\right)}=-{6}</m>  </p>
+      </cell>
+      <cell>
+        <p> <m>\displaystyle{\frac{{\partial{v}}}{{\partial{s}}}}{\left({1},{0}\right)}={8}</m> </p>
+      </cell>
+    </row>
+    <row>
+      <cell>
+        <p> <m>\displaystyle{\frac{{\partial{u}}}{{\partial{t}}}}{\left({1},{0}\right)}={0}</m> </p>
+      </cell>
+      <cell>
+        <p> <m>\displaystyle{\frac{{\partial{v}}}{{\partial{t}}}}{\left({1},{0}\right)}=-{8}</m> </p>
+      </cell>
+    </row>
+    <row>
+      <cell>
+        <p> <m>\displaystyle{\frac{{\partial{F}}}{{\partial{u}}}}{\left(-{7},{4}\right)}={5}</m> </p>
+      </cell>
+      <cell>
+        <p> <m>\displaystyle{\frac{{\partial{F}}}{{\partial{v}}}}{\left(-{7},{4}\right)}={2}</m> </p>
+      </cell>
+    </row>
+  
+</tabular></table><p> <m>\displaystyle{\frac{{\partial{W}}}{{\partial{s}}}}{\left({1},{0}\right)}=</m> <fillin characters="8" />   </p>
+<p> <m>\displaystyle{\frac{{\partial{W}}}{{\partial{t}}}}{\left({1},{0}\right)}=</m> <fillin characters="8" />   </p>
+
+</statement>
+<solution>
+<p><ul><li>-14</li><li>-16</li></ul></p>
+</solution>
+</myopenmath>
+

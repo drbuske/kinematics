@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<myopenmath xmlns:pi="http://pretextbook.org/2020/pretext/internal" id="1488316">
+<statement>
+<p>
+The following data is periodic with period <m>\displaystyle{T}={6}</m> but cannot be fit with a sinusoid.  </p><table><tabular> <row><cell><m>\displaystyle{t}</m></cell><cell><m>\displaystyle{y}</m></cell></row><row><cell>0</cell><cell>715</cell></row><row><cell>1.5</cell><cell>616</cell></row><row><cell>3</cell><cell>569</cell></row><row><cell>4.5</cell><cell>483</cell></row><row><cell>6</cell><cell>715</cell></row><row><cell>7.5</cell><cell>616</cell></row><row><cell>9</cell><cell>569</cell></row><row><cell>10.5</cell><cell>483</cell></row><row><cell>12</cell><cell>715</cell></row></tabular></table><p>
+The best fitting trigonometric polynomial <m>\displaystyle{f{{\left({t}\right)}}}={a}_{{0}}+{a}_{{1}}{\cos{{\left({\frac{{{2}\pi}}{{6}}}{t}\right)}}}+{b}_{{1}}{\sin{{\left({\frac{{{2}\pi}}{{6}}}{t}\right)}}}</m> to this data uses coefficients </p>
+<p>
+<m>\displaystyle{a}_{{0}}=</m> <fillin characters="8" />   </p>
+<p>
+<m>\displaystyle{a}_{{1}}=</m> <fillin characters="8" />   </p>
+<p>
+<m>\displaystyle{b}_{{1}}=</m> <fillin characters="8" />   
+</p>
+</statement>
+<solution>
+<p><ul><li>595.75</li><li>73</li><li>66.5</li></ul></p>
+</solution>
+</myopenmath>
+

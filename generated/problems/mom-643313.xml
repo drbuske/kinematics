@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<myopenmath xmlns:pi="http://pretextbook.org/2020/pretext/internal" id="643313">
+<statement>
+<p>Compute the flux of the vector field <m>\displaystyle\vec{{{H}}}=</m> <m>\displaystyle\vec{{{i}}}-{6}\vec{{{j}}}-\vec{{{k}}}</m> through the disk <m>\displaystyle{S}</m> of radius <m>\displaystyle{6}</m> in the plane <m>\displaystyle{x}={1}</m> oriented in the positive <m>\displaystyle{x}</m>-direction. </p>
+<p>Flux = <fillin characters="8" />   </p>
+
+</statement>
+<solution>
+<p><ul><li><m>\displaystyle{36}\pi</m></li></ul></p>
+</solution>
+</myopenmath>
+

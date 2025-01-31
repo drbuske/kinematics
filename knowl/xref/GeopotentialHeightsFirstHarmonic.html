@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en-US" dir="ltr">
+<!--********************************************-->
+<!--*       Generated from PreTeXt source      *-->
+<!--*                                          *-->
+<!--*         https://pretextbook.org          *-->
+<!--*                                          *-->
+<!--********************************************-->
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<meta name="robots" content="noindex, nofollow">
+</head>
+<body class="ignore-math">
+<article class="example example-like"><h4 class="heading">
+<span class="type">Example</span><span xmlns:pf="https://prefigure.org" class="space"> </span><span class="codenumber">2.2.5</span><span xmlns:pf="https://prefigure.org" class="period">.</span><span xmlns:pf="https://prefigure.org" class="space"> </span><span class="title">Fitting a Sinusoid to Geopotential Heights.</span>
+</h4>
+<div xmlns:pf="https://prefigure.org" class="para">At <span class="process-math">\(45^{\circ}N\)</span> latitude, 500 mb geopotential heights <span class="process-math">\(Z\)</span> as a function of degrees longitude <span class="process-math">\(t\)</span> (see <a href="sec_trig_polynomials.html#GeopotentialHeightsNov10202345N" class="xref" data-knowl="./knowl/xref/GeopotentialHeightsNov10202345N.html" data-reveal-label="Reveal" data-close-label="Close" title="Figure 2.2.6">Figure 2.2.6</a>) are periodic with period <span class="process-math">\(T=360\text{.}\)</span>  Our objective is to model <span class="process-math">\(Z\)</span> using a trigonometric polynomial  <a href="sec_trig_polynomials.html#TrigPolynomial" class="xref" data-knowl="./knowl/xref/TrigPolynomial.html" data-reveal-label="Reveal" data-close-label="Close" title="Equation 2.8">(2.8)</a> with <span class="process-math">\(m=1\)</span> (i.e. a sinusoid).  In this situation the fundamental frequency is <span class="process-math">\(\omega = \frac{2\pi}{360}\text{.}\)</span>
+</div>
+<figure class="figure figure-like"><div xmlns:pf="https://prefigure.org" class="image-box" style="width: 90%; margin-left: 5%; margin-right: 5%;"><img src="external/GeopotentialHeightsNov10202345N.jpg" class="contained" alt="Geopotential heights at 45 degrees north as a function of longitude t."></div>
+<figcaption xmlns:pf="https://prefigure.org"><span class="type">Figure</span><span class="space"> </span><span class="codenumber">2.2.6<span class="period">.</span></span><span class="space"> </span>500 mb geopotential heights <span class="process-math">\(Z\)</span> at <span class="process-math">\(45^{\circ}N\)</span> as a function of degrees longitude <span class="process-math">\(t\text{.}\)</span>  Data from November 10, 2023.</figcaption></figure><div xmlns:pf="https://prefigure.org" class="para logical">
+<div class="para">When <span class="process-math">\(m=1\text{,}\)</span> we look for the best periodic function</div>
+<div class="displaymath process-math">
+\begin{equation*}
+f(t) = a_0 + a_1\cos(\omega t) + b_1\sin(\omega t)
+\end{equation*}
+</div>
+<div class="para">to fit the data <span class="process-math">\(\left\{ (t_n, y_n) \right\}\text{.}\)</span>  We compute:</div>
+<div class="displaymath process-math">
+\begin{align*}
+a_0   = \mathstrut \amp \frac{\sum y_n}{N} \approx 5656.45  \\
+a_1   = \mathstrut \amp \displaystyle \frac{2}{N}\sum y_n \cos( \omega t_n) \approx 44.73 \\
+b_1   =  \mathstrut \amp \displaystyle \frac{2}{N} \sum y_n \sin( \omega t_n) \approx 12.79
+\end{align*}
+</div>
+<div class="para">Thus, since <span class="process-math">\(\omega = \frac{2\pi}{360}\text{,}\)</span> we model the geopotential heights <span class="process-math">\(Z\)</span> by the sinusoid</div>
+<div class="displaymath process-math">
+\begin{equation*}
+f(t) = 5656.45 + 44.73\cos\left( \frac{2\pi}{360} t\right) + 12.79\sin\left(\frac{2\pi}{360} t\right).
+\end{equation*}
+</div>
+<div class="para">Plotting this function against our data illustrates the best fit we can make to this data without using additional harmonics <span class="process-math">\(2\omega\text{,}\)</span> <span class="process-math">\(3\omega\text{,}\)</span> <span class="process-math">\(4\omega\text{,}\)</span> <span class="process-math">\(\ldots\text{.}\)</span>
+</div>
+</div>
+<figure class="figure figure-like"><div xmlns:pf="https://prefigure.org" class="image-box" style="width: 90%; margin-left: 5%; margin-right: 5%;"><img src="external/GeopotentialHeightsNov10202345NFirstOrder.jpg" class="contained" alt="Fitting a sinusoid to geopotential heights."></div>
+<figcaption xmlns:pf="https://prefigure.org"><span class="type">Figure</span><span class="space"> </span><span class="codenumber">2.2.7<span class="period">.</span></span><span class="space"> </span>500 mb geopotential heights <span class="process-math">\(Z\)</span> at <span class="process-math">\(45^{\circ}N\)</span> as a function of degrees longitude <span class="process-math">\(t\)</span> and <span class="process-math">\(f(t) = 5656.45 + 44.73\cos\left( \frac{2\pi}{360} t\right) + 12.79\sin\left(\frac{2\pi}{360} t\right).\)</span></figcaption></figure></article><span class="incontext"><a class="internal" href="sec_trig_polynomials.html#GeopotentialHeightsFirstHarmonic">in-context</a></span>
+</body>
+</html>

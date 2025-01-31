@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<myopenmath xmlns:pi="http://pretextbook.org/2020/pretext/internal" id="1166744">
+<statement>
+<p>
+Write an equation of the plane passing through the point <m>\displaystyle{\left(-{14},-{2},-{1}\right)}</m> that is parallel to the <m>\displaystyle{y}{z}</m>-plane.</p>
+<p>
+<fillin characters="20" />  
+
+</p>
+</statement>
+<solution>
+<p><ul><li><m>\displaystyle{x}=-{14}</m></li></ul></p>
+</solution>
+</myopenmath>
+

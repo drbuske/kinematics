@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8"?>
+<myopenmath xmlns:pi="http://pretextbook.org/2020/pretext/internal" id="1492517">
+<statement>
+<p>Three different forces act on an object. They are:
+  </p>
+<p>
+  <m>\displaystyle\vec{{F}}_{{1}}=</m> <m>\displaystyle-{6}\vec{{{i}}}-{7}\vec{{{j}}}</m> </p>
+<p><m>\displaystyle\vec{{F}}_{{2}}=</m> <m>\displaystyle{6}\vec{{{i}}}-{6}\vec{{{j}}}</m></p>
+<p><m>\displaystyle\vec{{F}}_{{3}}=</m> <m>\displaystyle{5}\vec{{{i}}}-\vec{{{j}}}</m>
+  </p>
+<p>
+  Find the net force <m>\displaystyle{F}_{{\text{net}}}</m> on the object (the sum of the forces)
+  </p>
+<p>
+  <m>\displaystyle\vec{{F}}_{{\text{net}}}=</m> <fillin characters="8" />    <m>\displaystyle\vec{{{i}}}</m> + <fillin characters="8" />    <m>\displaystyle\vec{{{j}}}</m>
+  </p>
+<p>
+  Find what fourth force, <m>\displaystyle{F}_{{4}}</m> would need to be added so the object feels no force, that is, so <m>\displaystyle{F}_{{\text{net}}}={0}</m>
+  </p>
+<p>
+  <m>\displaystyle\vec{{F}}_{{4}}</m> = <fillin characters="8" />    <m>\displaystyle\vec{{{i}}}</m> + <fillin characters="8" />    <m>\displaystyle\vec{{{j}}}</m></p>
+
+</statement>
+<solution>
+<p><ul><li>5</li><li>-5</li><li>-14</li><li>14</li></ul></p>
+</solution>
+</myopenmath>
+

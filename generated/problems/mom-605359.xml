@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<myopenmath xmlns:pi="http://pretextbook.org/2020/pretext/internal" id="605359">
+<statement>
+<p>Vectors  <m>\displaystyle\vec{{u}}</m> (shown in red) and  <m>\displaystyle\vec{{v}}</m> (shown in blue) are drawn below. </p><image width="58%"  pi:generated="problems/images/978f4556e21835b19f6e722a644d0471.png" /> <p>On the graph below, draw the result of <m>\displaystyle\vec{{u}}+\vec{{v}}</m>, beginning at the origin <m>\displaystyle{\left({0},{0}\right)}</m>. </p><image width="58%"  pi:generated="problems/images/789056e104083e4841c09e1d3a08020b.png" />
+ <p>Next, resolve <m>\displaystyle-{3}\vec{{u}}-{2}\vec{{v}}</m> into components.  </p>
+<p><m>\displaystyle-{3}\vec{{u}}-{2}\vec{{v}}=</m><fillin characters="5" />   <m>\displaystyle\vec{{i}}</m>  + <fillin characters="5" />   <m>\displaystyle\vec{{j}}</m> </p>
+
+</statement>
+<solution>
+<p><ul><li><image width="58%"  pi:generated="problems/images/676a72c66fb71cef3b0839a090a9ad26.png" />
+</li><li>7</li><li>3</li></ul></p>
+</solution>
+</myopenmath>
+

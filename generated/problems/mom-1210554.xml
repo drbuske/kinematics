@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<myopenmath xmlns:pi="http://pretextbook.org/2020/pretext/internal" id="1210554">
+<statement>
+<p>Here is a topographic map showing part of Buck River and its surrounding area. Use this map to answer the questions below.
+  </p><image width="100%"  pi:generated="problems/images/buckriver.png" />
+  
+<p><ol>
+  <li>A hiker walks (in a straight line) from point A to point B. Describe what happens to their elevation along the way. Be as specific as you can be.</li>
+  <li>What is the average rate of change in elevation when you walk from point C to point D? Show your work, and be sure to include units!</li>
+  <li>Does the Buck River flow north-to-south or south-to-north? Justify your answer (showing that you know how to read a contour map).</li>
+</ol></p>
+<p><textarea rows="10" name="qn0" id="qn0" style="width:98%;" class="mceEditor" aria-label="Question 1" cols="50"></textarea>
+</p>
+
+</statement>
+<solution>
+<p><ul><li></li></ul></p><p><ol>
+  <li>At point A, the hiker starts at 1500 ft. They walk uphill for about 4 miles, reaching about 1825 ft. Then they walk downhill for 2 miles until they return to 1500 ft at point B.</li>
+  <li>The AROC is (2000 ft - 1500 ft)/ (3 mi) = 500/3 ft/mi = 166.67 ft/mi.</li>
+  <li>The Buck River flows north-to-south because water flows downhill. As we travel north-to-south, the Buck River encounters contours at height 1400 ft, 1300 ft, 1200 ft, 1100 ft. So this must be the direction of flow.</li>
+</ol></p>
+</solution>
+</myopenmath>
+

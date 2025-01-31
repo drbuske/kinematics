@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<myopenmath xmlns:pi="http://pretextbook.org/2020/pretext/internal" id="6001">
+<statement>
+<p>
+Given <m>\displaystyle{f{{\left({x},{y}\right)}}}={60}{x}+{70}{y}-{5}{x}^{{2}}-{4}{y}^{{2}}-{x}{y}</m></p>
+<p>
+Evaluate <m>\displaystyle{f{{\left({2},{6}\right)}}}</m></p>
+<p>
+<m>\displaystyle{f{{\left({2},{6}\right)}}}</m> = <fillin characters="20" />   
+</p>
+</statement>
+<solution>
+<p><ul><li>364</li></ul></p>
+</solution>
+</myopenmath>
+

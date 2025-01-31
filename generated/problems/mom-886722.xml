@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<myopenmath xmlns:pi="http://pretextbook.org/2020/pretext/internal" id="886722">
+<statement>
+<p>
+Match each vector field.</p>
+<p><ol style="list-style-type:upper-alpha">
+<li> <m>\displaystyle\vec{{{F}}}{\left({x},{y}\right)}=-{y}\vec{{{i}}}+{x}\vec{{{j}}}</m></li>
+<li> <m>\displaystyle\vec{{{F}}}{\left({x},{y}\right)}=-\frac{{y}}{\sqrt{{{x}^{{2}}+{y}^{{2}}}}}\vec{{{i}}}+\frac{{x}}{\sqrt{{{x}^{{2}}+{y}^{{2}}}}}\vec{{{j}}}</m></li>
+</ol></p>
+<p><ol style="list-style-type:lower-alpha">
+<li><image width="50%"  pi:generated="problems/images/5cf0c049e896abab46ba730bb658a80b.png" /></li>
+<li><image width="50%"  pi:generated="problems/images/889a0fa389e152d5b5e8808d36b077bd.png" /></li>
+</ol></p> 
+
+</statement>
+<solution>
+<p><ul><li>b a </li></ul></p>
+</solution>
+</myopenmath>
+

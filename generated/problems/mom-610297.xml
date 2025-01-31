@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<myopenmath xmlns:pi="http://pretextbook.org/2020/pretext/internal" id="610297">
+<statement>
+<image width="50%"  pi:generated="problems/images/71dc72a5cec48a281340e0766324e57d.png" /><p>
+Let <m>\displaystyle{C}</m> denote a semicircular path from (0,4) to (0,0) shown in red.  </p>
+<p>
+Is the line integral of the pictured vector field over the curve <m>\displaystyle{C}</m> positive, negative, or zero?
+ </p>
+<p><ol style="list-style-type:upper-alpha"><li>Positive</li> 
+<li>Negative</li> 
+<li>Zero</li> 
+</ol></p>
+  
+
+</statement>
+<solution>
+<p><ul><li>B: Negative</li></ul></p>
+</solution>
+</myopenmath>
+

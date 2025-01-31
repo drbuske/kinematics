@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<myopenmath xmlns:pi="http://pretextbook.org/2020/pretext/internal" id="1488260">
+<statement>
+<p>
+Graph the function <m>\displaystyle{f{{\left({t}\right)}}}={3}{\sin{{\left({t}\right)}}}+{1}</m>.</p><image width="98%"  pi:generated="problems/images/920ba7ee0b07b3f4f90934dae1033640.png" />
+
+
+</statement>
+<solution>
+<p><ul><li><image width="98%"  pi:generated="problems/images/b5de7e0c0a5069cc1d285ea6d5742e5a.png" />
+</li></ul></p>
+</solution>
+</myopenmath>
+

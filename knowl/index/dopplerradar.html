@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en-US" dir="ltr">
+<!--********************************************-->
+<!--*       Generated from PreTeXt source      *-->
+<!--*                                          *-->
+<!--*         https://pretextbook.org          *-->
+<!--*                                          *-->
+<!--********************************************-->
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<meta name="robots" content="noindex, nofollow">
+</head>
+<body class="ignore-math">
+<article class="example example-like"><h4 class="heading">
+<span class="type">Example</span><span xmlns:pf="https://prefigure.org" class="space"> </span><span class="codenumber">3.4.13</span><span xmlns:pf="https://prefigure.org" class="period">.</span><span xmlns:pf="https://prefigure.org" class="space"> </span><span class="title">PPI (Radar).</span>
+</h4>
+<div xmlns:pf="https://prefigure.org" class="para">Radar supplies data in a format closely related to polar coordinates.  Rather than supplying the polar angle <span class="process-math">\(\theta\text{,}\)</span> data is stored in a table of range-azimuth ordered pairs <span class="process-math">\((r,\beta)\)</span> where <span class="process-math">\(\beta\)</span> is the azimuth sometimes also denoted by <span class="process-math">\(\phi_{vect}\text{.}\)</span>  The azimuth measures the angle in a clockwise fashion with <span class="process-math">\(0^{\circ}\)</span> as due north.</div>
+<figure class="figure figure-like"><div class="sidebyside"><div class="sbsrow" style="margin-left:5%;margin-right:5%;">
+<div class="sbspanel middle" style="width:44.4444444444444%;"><img src="external/Sturmfront_auf_Doppler-Radar-Schirm.jpg" class="contained"></div>
+<div class="sbspanel middle" style="width:44.4444444444444%;"><img xmlns:pf="https://prefigure.org" src="generated/latex-image/radarazimuthpic.svg" role="img" class="contained" alt="Radar uses range-azimuth ordered pairs."></div>
+</div></div>
+<figcaption xmlns:pf="https://prefigure.org"><span class="type">Figure</span><span class="space"> </span><span class="codenumber">3.4.14<span class="period">.</span></span><span class="space"> </span>Left: Image of a thunderstorm on a PPI. (Source: Public Domain (NOAA))  Right: Radar supplies the location at point <span class="process-math">\(P\)</span> as a range-azimuth ordered pair <span class="process-math">\((r,\beta)\text{.}\)</span>  The angle <span class="process-math">\(\beta\)</span> is the angle measured clockwise from the axis pointing due north and the segment connecting the pole <span class="process-math">\(O\)</span> with the point <span class="process-math">\(P\text{.}\)</span></figcaption></figure><div xmlns:pf="https://prefigure.org" class="para logical">
+<div class="para">A <dfn class="terminology">plan position indicator (PPI)</dfn> is a type of radar display that represents the radar antenna in the center of the display, with the distance from it drawn as concentric circles. As the radar antenna rotates, a radial trace on the PPI sweeps in unison with it about the center point.  To generate a picture similar to a PPI on a raster scan monitor with a line sequential image (such as a television or computer monitor), this radar data must first be converted to rectangular coordinates <span class="process-math">\((x,y)\text{.}\)</span>  Since <span class="process-math">\(\theta = 90^{\circ}-\beta\text{,}\)</span> the equations</div>
+<div class="displaymath process-math">
+\begin{equation}
+x=r\cos(90^{\circ}-\beta), \ \ \ \ y=r\sin(90^{\circ}-\beta)\tag{3.4}
+\end{equation}
+</div>
+<div class="para">accomplish this task.</div>
+</div></article><span class="incontext"><a class="internal" href="sec_spherical_coords.html#dopplerradar">in-context</a></span>
+</body>
+</html>

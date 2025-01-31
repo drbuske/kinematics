@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en-US">
+<!--********************************************-->
+<!--*       Generated from PreTeXt source      *-->
+<!--*                                          *-->
+<!--*         https://pretextbook.org          *-->
+<!--*                                          *-->
+<!--********************************************-->
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<meta name="robots" content="noindex, nofollow">
+</head>
+<body class="ignore-math">
+<article class="example example-like"><h3 class="heading">
+<span class="type">Example</span><span class="space"> </span><span class="codenumber">4.6.14</span><span class="period">.</span><span class="space"> </span><span class="title">The Laplacian and Average Values Near a Point.</span>
+</h3> <div class="para logical">
+<div class="para">The function</div>
+<div class="displaymath process-math">
+\begin{equation*}
+u(x,y)=1+e^{-x}\sin(y)
+\end{equation*}
+</div>
+<div class="para">has <span class="process-math">\(\frac{\partial u}{\partial x} = -e^{-x}\sin(y)\)</span> and <span class="process-math">\(\frac{\partial u}{\partial y} = e^{-x}\cos(y)\text{.}\)</span>  So, <span class="process-math">\(\frac{\partial^2 u}{\partial x^2} = e^{-x}\sin(y)\)</span> and <span class="process-math">\(\frac{\partial^2 u}{\partial y^2} = -e^{-x}\sin(y)\text{.}\)</span>  It follows that the Laplacian is zero:</div>
+<div class="displaymath process-math">
+\begin{align*}
+\Delta u = \mathstrut \amp \frac{\partial^2 u}{\partial x^2} + \frac{\partial^2 u}{\partial y^2}\\
+= \mathstrut \amp e^{-x}\sin(y) -e^{-x}\sin(y)\\
+= \mathstrut \amp 0.
+\end{align*}
+</div>
+<div class="para">We interpret this to mean that near any point <span class="process-math">\((x_0,y_0,u(x_0,y_0))\)</span> on the graph of <span class="process-math">\(u(x,y)\text{,}\)</span> the average value of <span class="process-math">\(u(x,y)\)</span> is equal to the value <span class="process-math">\(u(x_0,y_0)\text{.}\)</span>
+</div>
+</div> <figure class="figure figure-like"><div class="image-box" style="width: 50%; margin-left: 25%; margin-right: 25%;"><img src="generated/latex-image/TwoDSecondDerivativevsavgPic.svg" role="img" class="contained" alt="Two dimensional Laplacian relates to the average."></div>
+<figcaption><span class="type">Figure</span><span class="space"> </span><span class="codenumber">4.6.15<span class="period">.</span></span><span class="space"> </span>The function <span class="process-math">\(u(x,y)=1+e^{-x}\sin(y)\)</span> has Laplacian <span class="process-math">\(\Delta u = 0\text{.}\)</span>  Thus, the average value of <span class="process-math">\(u\)</span> near <span class="process-math">\((x_0,y_0)\)</span> is equal to the value <span class="process-math">\(u(x_0,y_0)\text{.}\)</span></figcaption></figure> <div class="para">The vector field <span class="process-math">\(\nabla u(x,y)\)</span> for <span class="process-math">\(u(x,y)=1+e^{-x}\sin(y)\)</span> is divergence-free (sometimes also called solenoidal).  There are no sources or sinks (see <a href="" class="xref" data-knowl="./knowl/divergenceofgradient2.html" title="Figure 4.6.16">Figure 4.6.16</a>).  The interested reader should try plotting this function over various domains.  They will find the graph of <span class="process-math">\(u\)</span> has no maxima or minima and the gradient vector field <span class="process-math">\(\nabla u\)</span> has no sources or sinks.</div> <figure class="figure figure-like"><div class="image-box" style="width: 50%; margin-left: 25%; margin-right: 25%;"><img src="generated/latex-image/divergenceofgradient2Pic.svg" role="img" class="contained" alt="The vector field is divergence free."></div>
+<figcaption><span class="type">Figure</span><span class="space"> </span><span class="codenumber">4.6.16<span class="period">.</span></span><span class="space"> </span>If <span class="process-math">\(u(x,y)=1+e^{-x}\sin(y)\text{,}\)</span> the gradient vector field <span class="process-math">\(\nabla u\)</span> has no sources or sinks.  That is, <span class="process-math">\(\Delta u = div \ (\nabla u) = 0\)</span> everywhere.</figcaption></figure></article><span class="incontext"><a href="sec_Laplacian.html#LaplacianAvgValues" class="internal">in-context</a></span>
+</body>
+</html>

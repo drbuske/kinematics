@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<myopenmath xmlns:pi="http://pretextbook.org/2020/pretext/internal" id="1490729">
+<statement>
+<image width="93%"  pi:generated="problems/images/PolarPoint2.png" /> <p>
+Identify the coordinates of the point in polar form based upon the given conditions.</p>
+<p>
+Use pi for <m>\displaystyle\pi</m>.</p>
+<p>
+<m>\displaystyle{r}{>}{0}</m> and <m>\displaystyle{0}{<}\theta{<}{2}\pi</m></p>
+<p>
+<m>\displaystyle{(}</m><fillin characters="8" />    , <fillin characters="8" />   <m>\displaystyle{)}</m> </p>
+</statement>
+<solution>
+<p><ul><li>2</li><li>2.3561944901923</li></ul></p>
+</solution>
+</myopenmath>
+

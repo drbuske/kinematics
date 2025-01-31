@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en-US" dir="ltr">
+<!--********************************************-->
+<!--*       Generated from PreTeXt source      *-->
+<!--*                                          *-->
+<!--*         https://pretextbook.org          *-->
+<!--*                                          *-->
+<!--********************************************-->
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<meta name="robots" content="noindex, nofollow">
+</head>
+<body class="ignore-math">
+<article class="exercise exercise-like"><h4 class="heading">
+<span class="type">Checkpoint</span><span xmlns:pf="https://prefigure.org" class="space"> </span><span class="codenumber">5.1.13</span><span xmlns:pf="https://prefigure.org" class="period">.</span><span xmlns:pf="https://prefigure.org" class="space"> </span><span class="title">Bulk Richardson Number.</span>
+</h4>
+<div xmlns:pf="https://prefigure.org" class="para">In the context of convective storm forecasting, the <dfn class="terminology">Bulk Richardson Number</dfn> abbreviated as BRN is a nondimensional ratio of the convective available potential energy (CAPE) to a measure of the vertical wind shear (<span class="process-math">\(\frac{1}{2}U^2\)</span>).  The BRN is used to characterize convective-storm types for various environments.</div> <figure class="table table-like"><figcaption xmlns:pf="https://prefigure.org"><span class="type">Table</span><span class="space"> </span><span class="codenumber">5.1.14<span class="period">.</span></span><span class="space"> </span>Interpreting the Bulk Richardson Number (BRN).  Sources: www.weather.gov<details class="ptx-footnote" aria-live="polite" id="BRNtable-1-2"><summary class="ptx-footnote__number" title="Footnote 71"><sup> 71 </sup></summary><div class="ptx-footnote__contents" id="BRNtable-1-2"><code class="code-inline tex2jax_ignore">www.weather.gov</code></div></details> and the American Meteorological Society</figcaption><div class="tabular-box natural-width"><table xmlns:pf="https://prefigure.org" class="tabular">
+<tr class="header-horizontal">
+<th scope="col" class="l m b2 r0 l0 t0 lines">BRN value</th>
+<th scope="col" class="l m b2 r0 l0 t0 lines">Interpretation</th>
+</tr>
+<tr>
+<td class="l m b2 r0 l0 t0 lines">BRN below 10</td>
+<td class="l m b2 r0 l0 t0" style="max-width:480px;"><div class="para">Strong vertical wind shear and weak CAPE. The shear may be too strong given the weak    buoyancy to develop sustained convective updrafts. However, given sufficient forcing, thunderstorms may still develop; if so, rotating supercells could evolve given the high shear.</div></td>
+</tr>
+<tr>
+<td class="l m b2 r0 l0 t0 lines">BRN = 10 to 45</td>
+<td class="l m b2 r0 l0 t0 lines">Associated with supercell development.</td>
+</tr>
+<tr>
+<td class="l m b2 r0 l0 t0 lines">BRN over 50</td>
+<td class="l m b2 r0 l0 t0" style="max-width:480px;"><div class="para">Relatively weak vertical wind shear and high CAPE which suggests multicellular thunderstorm development is most likely.</div></td>
+</tr>
+</table></div></figure> <div xmlns:pf="https://prefigure.org" class="para logical">
+<div class="para">As a function of two variables, we write</div>
+<div class="displaymath process-math" data-contains-math-knowls="./knowl/xref/BRNgraph.html">
+\begin{equation*}
+{\rm{BRN}}({\rm{CAPE}},U) = \frac{\rm{CAPE}}{\frac{1}{2}U^2}
+\end{equation*}
+</div>
+<div class="para">where CAPE represents buoyant energy and <span class="process-math">\(U\)</span> represents the difference between the 6-km density-weighted mean wind speed and a 500-m mean surface layer wind speed. A graph of this function appears in <a href="sec_partial_differentiation.html#BRNgraph" class="xref" data-knowl="./knowl/xref/BRNgraph.html" data-reveal-label="Reveal" data-close-label="Close" title="Figure 5.1.15">Figure 5.1.15</a>.</div>
+</div> <figure class="figure figure-like"><div xmlns:pf="https://prefigure.org" class="image-box" style="width: 50%; margin-left: 25%; margin-right: 25%;"><img src="external/BRNgraph.jpg" class="contained" alt="The graph of BRN."></div>
+<figcaption xmlns:pf="https://prefigure.org"><span class="type">Figure</span><span class="space"> </span><span class="codenumber">5.1.15<span class="period">.</span></span><span class="space"> </span>The graph of <span class="process-math">\({\rm{BRN}}({\rm{CAPE}},U) = \frac{\rm{CAPE}}{\frac{1}{2}U^2}\text{.}\)</span></figcaption></figure> <div xmlns:pf="https://prefigure.org" class="para logical"><ol class="lower-alpha" id="BulkRichardsonNumber-2-5-1">
+<li><div class="para">Is BRN an increasing or decreasing function of the variable <span class="process-math">\(U\text{?}\)</span>
+</div></li>
+<li><div class="para">Suppose that CAPE = 2500 J/kg and <span class="process-math">\(U=11\)</span> m/s. What ordered triple does this correspond to on the surface graphed above?  Should we expect multicellular thunderstorm development?</div></li>
+<li><div class="para">Based on the surface given, should we expect <span class="process-math">\(\frac{\partial {\rm{(BRN)}}}{\partial U}\)</span> to be positive, negative, or zero?  Why?</div></li>
+<li><div class="para">Using your differentiation skills, compute <span class="process-math">\(\frac{\partial {\rm{(BRN)}}}{\partial U}\text{.}\)</span>  Is this value positive, negative, or zero?</div></li>
+</ol></div>
+<div class="solutions"><details xmlns:pf="https://prefigure.org" class="answer solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Answer</span><span class="period">.</span></summary><div class="answer solution-like knowl__content"><ol class="lower-alpha" id="BulkRichardsonNumber-3-1">
+<li><div class="para">Decreasing</div></li>
+<li><div class="para">
+<span class="process-math">\(\left(2500,11,\frac{5000}{121}\right)\)</span> or roughly <span class="process-math">\((5000,11,41.3)\)</span> which is associated with supercell development (not multicellular thunderstorm development).</div></li>
+<li><div class="para">Negative.  If the surface is intersected with a vertical plane CAPE=constant, the resulting curve will be decreasing as <span class="process-math">\(U\)</span> increases.  That is, it has a negative slope.</div></li>
+<li><div class="para"><div class="displaymath process-math">
+\begin{align*}
+\frac{\partial {\rm{(BRN)}}}{\partial U} = \mathstrut \amp \frac{\partial}{\partial U} 2{\rm{(BRN)}}U^{-2}\\
+= \mathstrut \amp -4{\rm{(BRN)}}U^{-3} \\
+= \mathstrut \amp -4 \cdot \frac{\rm{BRN}}{U^3}\\
+&lt; \mathstrut \amp 0
+\end{align*}
+</div></div></li>
+</ol></div></details></div></article><span class="incontext"><a class="internal" href="sec_partial_differentiation.html#BulkRichardsonNumber">in-context</a></span>
+</body>
+</html>

@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<myopenmath xmlns:pi="http://pretextbook.org/2020/pretext/internal" id="610162">
+<statement>
+<p>Consider the function <m>\displaystyle{f{{\left({x},{y}\right)}}}={4}{y}-{x}-{5}{x}^{{3}}</m>. Suppose you are standing on the surface at the point where <m>\displaystyle{x}={3}</m>, <m>\displaystyle{y}={2}</m>. If you start to move on the surface parallel to the <m>\displaystyle{x}</m>-axis in the direction of increasing <m>\displaystyle{x}</m>, does your height increase or decrease?</p>
+<p><ol style="list-style-type:upper-alpha"><li>Increases</li> 
+<li>Decreases</li> 
+<li>Stays the same</li> 
+<li>Not enough information to decide</li> 
+</ol></p>
+
+
+</statement>
+<solution>
+<p><ul><li>B: Decreases</li></ul></p>
+</solution>
+</myopenmath>
+

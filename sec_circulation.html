@@ -1,0 +1,1099 @@
+<!DOCTYPE html>
+<!--********************************************-->
+<!--*       Generated from PreTeXt source      *-->
+<!--*                                          *-->
+<!--*         https://pretextbook.org          *-->
+<!--*                                          *-->
+<!--********************************************-->
+<html lang="en-US" dir="ltr">
+<head xmlns:og="http://ogp.me/ns#" xmlns:book="https://ogp.me/ns/book#">
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<title>Circulation</title>
+<meta name="Keywords" content="Authored in PreTeXt">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta xmlns:pf="https://prefigure.org" property="og:type" content="book">
+<meta xmlns:pf="https://prefigure.org" property="book:title" content="Mathematics of Atmospheric Kinematics">
+<meta xmlns:pf="https://prefigure.org" property="book:author" content="Dale Buske">
+<script>
+var runestoneMathReady = new Promise((resolve) => window.rsMathReady = resolve);
+window.MathJax = {
+  "tex": {
+    "inlineMath": [
+      [
+        "\\(",
+        "\\)"
+      ]
+    ],
+    "tags": "none",
+    "tagSide": "right",
+    "tagIndent": ".8em",
+    "packages": {
+      "[+]": [
+        "base",
+        "extpfeil",
+        "ams",
+        "amscd",
+        "color",
+        "newcommand",
+        "knowl"
+      ]
+    }
+  },
+  "options": {
+    "ignoreHtmlClass": "tex2jax_ignore|ignore-math",
+    "processHtmlClass": "process-math",
+    "renderActions": {
+      "findScript": [
+        10,
+        function (doc) {
+            document.querySelectorAll('script[type^="math/tex"]').forEach(function(node) {
+                var display = !!node.type.match(/; *mode=display/);
+                var math = new doc.options.MathItem(node.textContent, doc.inputJax[0], display);
+                var text = document.createTextNode('');
+                node.parentNode.replaceChild(text, node);
+                math.start = {node: text, delim: '', n: 0};
+                math.end = {node: text, delim: '', n: 0};
+                doc.math.push(math);
+            });
+        },
+        ""
+      ]
+    }
+  },
+  "chtml": {
+    "scale": 0.98,
+    "mtextInheritFont": true
+  },
+  "loader": {
+    "load": [
+      "input/asciimath",
+      "[tex]/extpfeil",
+      "[tex]/amscd",
+      "[tex]/color",
+      "[tex]/newcommand",
+      "[pretext]/mathjaxknowl3.js"
+    ],
+    "paths": {
+      "pretext": "_static/pretext/js/lib"
+    }
+  },
+  "startup": {
+    pageReady() {
+      return MathJax.startup.defaultPageReady().then(function () {
+      console.log("in ready function");
+      rsMathReady();
+      }
+    )}
+  }
+};
+</script><script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js"></script><script src="_static/pretext/js/pretext-webwork/2.17/pretext-webwork.js"></script><script src="https://webwork-ptx.aimath.org/webwork2_files/node_modules/iframe-resizer/js/iframeResizer.min.js"></script><script src="_static/pretext/js/lti_iframe_resizer.js"></script><script src="https://cdnjs.cloudflare.com/ajax/libs/lunr.js/2.3.9/lunr.min.js" integrity="sha512-4xUl/d6D6THrAnXAwGajXkoWaeMNwEKK4iNfq5DotEbLPAfk6FSxSP3ydNxqDgCw1c/0Z1Jg6L8h2j+++9BZmg==" crossorigin="anonymous" referrerpolicy="no-referrer"></script><script src="lunr-pretext-search-index.js" async=""></script><script src="_static/pretext/js/pretext_search.js"></script><link href="_static/pretext/css/pretext_search.css" rel="stylesheet" type="text/css">
+<script src="_static/pretext/js/lib/jquery.min.js"></script><script src="_static/pretext/js/lib/jquery.sticky.js"></script><script src="_static/pretext/js/lib/jquery.espy.min.js"></script><script src="_static/pretext/js/pretext.js"></script><script src="_static/pretext/js/pretext_add_on.js?x=1"></script><script src="_static/pretext/js/user_preferences.js"></script><script src="_static/pretext/js/lib/knowl.js"></script><!--knowl.js code controls Sage Cells within knowls--><script>sagecellEvalName='Evaluate (Sage)';
+</script><link xmlns:pf="https://prefigure.org" rel="preconnect" href="https://fonts.googleapis.com">
+<link xmlns:pf="https://prefigure.org" rel="preconnect" href="https://fonts.gstatic.com" crossorigin="">
+<link xmlns:pf="https://prefigure.org" href="https://fonts.googleapis.com/css2?family=Inconsolata:wght@400;700&amp;family=Noto+Serif:ital,wght@0,400;0,700;1,400;1,700&amp;family=Tinos:ital,wght@0,400;0,700;1,400;1,700&amp;display=swap" rel="stylesheet">
+<link xmlns:pf="https://prefigure.org" href="https://fonts.cdnfonts.com/css/dejavu-serif" rel="stylesheet">
+<link xmlns:pf="https://prefigure.org" href="https://fonts.googleapis.com/css2?family=Roboto+Serif:opsz,wdth,wght@8..144,50..150,100..900&amp;display=swap" rel="stylesheet">
+<link xmlns:pf="https://prefigure.org" href="https://fonts.googleapis.com/css2?family=Open+Sans:wdth,wght@75..100,300..800&amp;display=swap" rel="stylesheet">
+<link xmlns:pf="https://prefigure.org" rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200">
+<script src="https://cdn.geogebra.org/apps/deployggb.js"></script><link href="_static/pretext/css/pretext.css" rel="stylesheet" type="text/css">
+<link href="_static/pretext/css/pretext_add_on.css" rel="stylesheet" type="text/css">
+<link href="_static/pretext/css/shell_default.css" rel="stylesheet" type="text/css">
+<link href="_static/pretext/css/banner_default.css" rel="stylesheet" type="text/css">
+<link href="_static/pretext/css/navbar_default.css" rel="stylesheet" type="text/css">
+<link href="_static/pretext/css/toc_default.css" rel="stylesheet" type="text/css">
+<link href="_static/pretext/css/knowls_default.css" rel="stylesheet" type="text/css">
+<link href="_static/pretext/css/style_default.css" rel="stylesheet" type="text/css">
+<link href="_static/pretext/css/colors_blue_red.css" rel="stylesheet" type="text/css">
+<link href="_static/pretext/css/setcolors.css" rel="stylesheet" type="text/css">
+<!--** eBookCongig is necessary to configure interactive       **-->
+<!--** Runestone components to run locally in reader's browser **-->
+<!--** No external communication:                              **-->
+<!--**     log level is 0, Runestone Services are disabled     **-->
+<script type="text/javascript">
+eBookConfig = {};
+eBookConfig.useRunestoneServices = false;
+eBookConfig.host = 'http://127.0.0.1:8000';
+eBookConfig.course = 'PTX_Course_Title_Here';
+eBookConfig.basecourse = 'PTX_Base_Course';
+eBookConfig.isLoggedIn = false;
+eBookConfig.email = '';
+eBookConfig.isInstructor = false;
+eBookConfig.logLevel = 0;
+eBookConfig.username = '';
+eBookConfig.readings = null;
+eBookConfig.activities = null;
+eBookConfig.downloadsEnabled = false;
+eBookConfig.allow_pairs = false;
+eBookConfig.enableScratchAC = false;
+eBookConfig.build_info = "";
+eBookConfig.python3 = null;
+eBookConfig.runestone_version = '7.4.5';
+eBookConfig.jobehost = '';
+eBookConfig.proxyuri_runs = '';
+eBookConfig.proxyuri_files = '';
+eBookConfig.enable_chatcodes =  false;
+</script>
+<!--*** Runestone Services ***-->
+<script src="_static/prefix-runtime.a28db57f2b9be365.bundle.js"></script><script src="_static/prefix-347.8328b60515045466.bundle.js"></script><script src="_static/prefix-runestone.0143ee6c5ca7e162.bundle.js"></script><link rel="stylesheet" type="text/css" href="_static/prefix-347.f9add1ca35d5ad93.css">
+<link rel="stylesheet" type="text/css" href="_static/prefix-runestone.82759e13f7f711fa.css">
+<style>
+#ez-Norman1999-Sounding-2-3 { counter-set: ez-Norman1999-Sounding-2-3 0; }
+#ez-Norman1999-Sounding-2-3 > li::marker { content: ""counter(ez-Norman1999-Sounding-2-3,lower-alpha)"."; }
+#ez-Norman1999-Sounding-2-3 > li { counter-increment: ez-Norman1999-Sounding-2-3; }
+#ez-Norman1999-Sounding-3-1 { counter-set: ez-Norman1999-Sounding-3-1 0; }
+#ez-Norman1999-Sounding-3-1 > li::marker { content: ""counter(ez-Norman1999-Sounding-3-1,lower-alpha)"."; }
+#ez-Norman1999-Sounding-3-1 > li { counter-increment: ez-Norman1999-Sounding-3-1; }
+#ez-Midwest-Derecho-2-3 { counter-set: ez-Midwest-Derecho-2-3 0; }
+#ez-Midwest-Derecho-2-3 > li::marker { content: ""counter(ez-Midwest-Derecho-2-3,lower-alpha)"."; }
+#ez-Midwest-Derecho-2-3 > li { counter-increment: ez-Midwest-Derecho-2-3; }
+#ez-Midwest-Derecho-3-1-1 { counter-set: ez-Midwest-Derecho-3-1-1 0; }
+#ez-Midwest-Derecho-3-1-1 > li::marker { content: ""counter(ez-Midwest-Derecho-3-1-1,lower-alpha)"."; }
+#ez-Midwest-Derecho-3-1-1 > li { counter-increment: ez-Midwest-Derecho-3-1-1; }
+#ez-MPX2023-Sounding-2-4 { counter-set: ez-MPX2023-Sounding-2-4 0; }
+#ez-MPX2023-Sounding-2-4 > li::marker { content: ""counter(ez-MPX2023-Sounding-2-4,lower-alpha)"."; }
+#ez-MPX2023-Sounding-2-4 > li { counter-increment: ez-MPX2023-Sounding-2-4; }
+#ez-MPX2023-Sounding-3-1 { counter-set: ez-MPX2023-Sounding-3-1 0; }
+#ez-MPX2023-Sounding-3-1 > li::marker { content: ""counter(ez-MPX2023-Sounding-3-1,lower-alpha)"."; }
+#ez-MPX2023-Sounding-3-1 > li { counter-increment: ez-MPX2023-Sounding-3-1; }
+#ez-Davenport-Sounding-2-4 { counter-set: ez-Davenport-Sounding-2-4 0; }
+#ez-Davenport-Sounding-2-4 > li::marker { content: ""counter(ez-Davenport-Sounding-2-4,lower-alpha)"."; }
+#ez-Davenport-Sounding-2-4 > li { counter-increment: ez-Davenport-Sounding-2-4; }
+#ez-Davenport-Sounding-3-1 { counter-set: ez-Davenport-Sounding-3-1 0; }
+#ez-Davenport-Sounding-3-1 > li::marker { content: ""counter(ez-Davenport-Sounding-3-1,lower-alpha)"."; }
+#ez-Davenport-Sounding-3-1 > li { counter-increment: ez-Davenport-Sounding-3-1; }
+#ez-identifyAwTB-2-2 { counter-set: ez-identifyAwTB-2-2 0; }
+#ez-identifyAwTB-2-2 > li::marker { content: ""counter(ez-identifyAwTB-2-2,lower-alpha)"."; }
+#ez-identifyAwTB-2-2 > li { counter-increment: ez-identifyAwTB-2-2; }
+#ez-identifyAwTB-3-1 { counter-set: ez-identifyAwTB-3-1 0; }
+#ez-identifyAwTB-3-1 > li::marker { content: ""counter(ez-identifyAwTB-3-1,lower-alpha)"."; }
+#ez-identifyAwTB-3-1 > li { counter-increment: ez-identifyAwTB-3-1; }
+#ez-SeattleSun-2-4 { counter-set: ez-SeattleSun-2-4 0; }
+#ez-SeattleSun-2-4 > li::marker { content: ""counter(ez-SeattleSun-2-4,lower-alpha)"."; }
+#ez-SeattleSun-2-4 > li { counter-increment: ez-SeattleSun-2-4; }
+#ez-SeattleSun-2-4-3-2 { counter-set: ez-SeattleSun-2-4-3-2 0; }
+#ez-SeattleSun-2-4-3-2 > li::marker { content: ""counter(ez-SeattleSun-2-4-3-2,lower-roman)"."; }
+#ez-SeattleSun-2-4-3-2 > li { counter-increment: ez-SeattleSun-2-4-3-2; }
+#ez-SeattleSun-3-1 { counter-set: ez-SeattleSun-3-1 0; }
+#ez-SeattleSun-3-1 > li::marker { content: ""counter(ez-SeattleSun-3-1,lower-alpha)"."; }
+#ez-SeattleSun-3-1 > li { counter-increment: ez-SeattleSun-3-1; }
+#ez-SeattleSun-3-1-3-1 { counter-set: ez-SeattleSun-3-1-3-1 0; }
+#ez-SeattleSun-3-1-3-1 > li::marker { content: ""counter(ez-SeattleSun-3-1-3-1,lower-roman)"."; }
+#ez-SeattleSun-3-1-3-1 > li { counter-increment: ez-SeattleSun-3-1-3-1; }
+#ModelingLowTempRio-2-4 { counter-set: ModelingLowTempRio-2-4 0; }
+#ModelingLowTempRio-2-4 > li::marker { content: ""counter(ModelingLowTempRio-2-4,lower-alpha)"."; }
+#ModelingLowTempRio-2-4 > li { counter-increment: ModelingLowTempRio-2-4; }
+#ModelingLowTempRio-3-1 { counter-set: ModelingLowTempRio-3-1 0; }
+#ModelingLowTempRio-3-1 > li::marker { content: ""counter(ModelingLowTempRio-3-1,lower-alpha)"."; }
+#ModelingLowTempRio-3-1 > li { counter-increment: ModelingLowTempRio-3-1; }
+#ModelingLowHighTempStCloud-2-4 { counter-set: ModelingLowHighTempStCloud-2-4 0; }
+#ModelingLowHighTempStCloud-2-4 > li::marker { content: ""counter(ModelingLowHighTempStCloud-2-4,lower-alpha)"."; }
+#ModelingLowHighTempStCloud-2-4 > li { counter-increment: ModelingLowHighTempStCloud-2-4; }
+#ModelingLowHighTempStCloud-3-1 { counter-set: ModelingLowHighTempStCloud-3-1 0; }
+#ModelingLowHighTempStCloud-3-1 > li::marker { content: ""counter(ModelingLowHighTempStCloud-3-1,lower-alpha)"."; }
+#ModelingLowHighTempStCloud-3-1 > li { counter-increment: ModelingLowHighTempStCloud-3-1; }
+#ex_geo_heights_45S-2-4 { counter-set: ex_geo_heights_45S-2-4 0; }
+#ex_geo_heights_45S-2-4 > li::marker { content: ""counter(ex_geo_heights_45S-2-4,lower-alpha)"."; }
+#ex_geo_heights_45S-2-4 > li { counter-increment: ex_geo_heights_45S-2-4; }
+#ex_geo_heights_45S-3-1 { counter-set: ex_geo_heights_45S-3-1 0; }
+#ex_geo_heights_45S-3-1 > li::marker { content: ""counter(ex_geo_heights_45S-3-1,lower-alpha)"."; }
+#ex_geo_heights_45S-3-1 > li { counter-increment: ex_geo_heights_45S-3-1; }
+#GeopotentialHeightsAt35N-2-4 { counter-set: GeopotentialHeightsAt35N-2-4 0; }
+#GeopotentialHeightsAt35N-2-4 > li::marker { content: ""counter(GeopotentialHeightsAt35N-2-4,lower-alpha)"."; }
+#GeopotentialHeightsAt35N-2-4 > li { counter-increment: GeopotentialHeightsAt35N-2-4; }
+#GeopotentialHeightsAt35N-3-1 { counter-set: GeopotentialHeightsAt35N-3-1 0; }
+#GeopotentialHeightsAt35N-3-1 > li::marker { content: ""counter(GeopotentialHeightsAt35N-3-1,lower-alpha)"."; }
+#GeopotentialHeightsAt35N-3-1 > li { counter-increment: GeopotentialHeightsAt35N-3-1; }
+#USweathermap-2-2-2 { counter-set: USweathermap-2-2-2 0; }
+#USweathermap-2-2-2 > li::marker { content: ""counter(USweathermap-2-2-2,lower-alpha)""; }
+#USweathermap-2-2-2 > li { counter-increment: USweathermap-2-2-2; }
+#USweathermap-3-1-1 { counter-set: USweathermap-3-1-1 0; }
+#USweathermap-3-1-1 > li::marker { content: ""counter(USweathermap-3-1-1,lower-alpha)""; }
+#USweathermap-3-1-1 > li { counter-increment: USweathermap-3-1-1; }
+#windchillexercise-2-1-8 { counter-set: windchillexercise-2-1-8 0; }
+#windchillexercise-2-1-8 > li::marker { content: ""counter(windchillexercise-2-1-8,lower-alpha)"."; }
+#windchillexercise-2-1-8 > li { counter-increment: windchillexercise-2-1-8; }
+#windchillexercise-3-1-1 { counter-set: windchillexercise-3-1-1 0; }
+#windchillexercise-3-1-1 > li::marker { content: ""counter(windchillexercise-3-1-1,lower-alpha)"."; }
+#windchillexercise-3-1-1 > li { counter-increment: windchillexercise-3-1-1; }
+#snowfall1-2-1-7 { counter-set: snowfall1-2-1-7 0; }
+#snowfall1-2-1-7 > li::marker { content: ""counter(snowfall1-2-1-7,lower-alpha)"."; }
+#snowfall1-2-1-7 > li { counter-increment: snowfall1-2-1-7; }
+#snowfall1-3-1-1 { counter-set: snowfall1-3-1-1 0; }
+#snowfall1-3-1-1 > li::marker { content: ""counter(snowfall1-3-1-1,lower-alpha)"."; }
+#snowfall1-3-1-1 > li { counter-increment: snowfall1-3-1-1; }
+#UHI1-2-1-15 { counter-set: UHI1-2-1-15 0; }
+#UHI1-2-1-15 > li::marker { content: ""counter(UHI1-2-1-15,lower-alpha)"."; }
+#UHI1-2-1-15 > li { counter-increment: UHI1-2-1-15; }
+#UHI1-3-1-1 { counter-set: UHI1-3-1-1 0; }
+#UHI1-3-1-1 > li::marker { content: ""counter(UHI1-3-1-1,lower-alpha)"."; }
+#UHI1-3-1-1 > li { counter-increment: UHI1-3-1-1; }
+#dewpoint-2-1-7 { counter-set: dewpoint-2-1-7 0; }
+#dewpoint-2-1-7 > li::marker { content: ""counter(dewpoint-2-1-7,lower-alpha)""; }
+#dewpoint-2-1-7 > li { counter-increment: dewpoint-2-1-7; }
+#dewpoint-3-1-1 { counter-set: dewpoint-3-1-1 0; }
+#dewpoint-3-1-1 > li::marker { content: ""counter(dewpoint-3-1-1,lower-alpha)""; }
+#dewpoint-3-1-1 > li { counter-increment: dewpoint-3-1-1; }
+#hdwindexexercise-2-1-5 { counter-set: hdwindexexercise-2-1-5 0; }
+#hdwindexexercise-2-1-5 > li::marker { content: ""counter(hdwindexexercise-2-1-5,lower-alpha)""; }
+#hdwindexexercise-2-1-5 > li { counter-increment: hdwindexexercise-2-1-5; }
+#hdwindexexercise-3-1-1 { counter-set: hdwindexexercise-3-1-1 0; }
+#hdwindexexercise-3-1-1 > li::marker { content: ""counter(hdwindexexercise-3-1-1,lower-alpha)""; }
+#hdwindexexercise-3-1-1 > li { counter-increment: hdwindexexercise-3-1-1; }
+#MyFrostbite-2-3-1 { counter-set: MyFrostbite-2-3-1 0; }
+#MyFrostbite-2-3-1 > li::marker { content: ""counter(MyFrostbite-2-3-1,lower-alpha)""; }
+#MyFrostbite-2-3-1 > li { counter-increment: MyFrostbite-2-3-1; }
+#Plotting3D2-2-1-2 { counter-set: Plotting3D2-2-1-2 0; }
+#Plotting3D2-2-1-2 > li::marker { content: ""counter(Plotting3D2-2-1-2,lower-alpha)""; }
+#Plotting3D2-2-1-2 > li { counter-increment: Plotting3D2-2-1-2; }
+#Plotting3D2-3-1-1 { counter-set: Plotting3D2-3-1-1 0; }
+#Plotting3D2-3-1-1 > li::marker { content: ""counter(Plotting3D2-3-1-1,lower-alpha)""; }
+#Plotting3D2-3-1-1 > li { counter-increment: Plotting3D2-3-1-1; }
+#Ez-9-1-2-2-1-7 { counter-set: Ez-9-1-2-2-1-7 0; }
+#Ez-9-1-2-2-1-7 > li::marker { content: ""counter(Ez-9-1-2-2-1-7,lower-alpha)"."; }
+#Ez-9-1-2-2-1-7 > li { counter-increment: Ez-9-1-2-2-1-7; }
+#Ez-9-1-2-3-1-1 { counter-set: Ez-9-1-2-3-1-1 0; }
+#Ez-9-1-2-3-1-1 > li::marker { content: ""counter(Ez-9-1-2-3-1-1,lower-alpha)"."; }
+#Ez-9-1-2-3-1-1 > li { counter-increment: Ez-9-1-2-3-1-1; }
+#Ez-9-1-2-4-1-1 { counter-set: Ez-9-1-2-4-1-1 0; }
+#Ez-9-1-2-4-1-1 > li::marker { content: ""counter(Ez-9-1-2-4-1-1,lower-alpha)"."; }
+#Ez-9-1-2-4-1-1 > li { counter-increment: Ez-9-1-2-4-1-1; }
+#PlottingWA-2-1-1 { counter-set: PlottingWA-2-1-1 0; }
+#PlottingWA-2-1-1 > li::marker { content: ""counter(PlottingWA-2-1-1,lower-alpha)"."; }
+#PlottingWA-2-1-1 > li { counter-increment: PlottingWA-2-1-1; }
+#PlottingWA-3-1 { counter-set: PlottingWA-3-1 0; }
+#PlottingWA-3-1 > li::marker { content: ""counter(PlottingWA-3-1,lower-alpha)"."; }
+#PlottingWA-3-1 > li { counter-increment: PlottingWA-3-1; }
+#contoursandgraphs-2-2-1 { counter-set: contoursandgraphs-2-2-1 0; }
+#contoursandgraphs-2-2-1 > li::marker { content: ""counter(contoursandgraphs-2-2-1,lower-alpha)"."; }
+#contoursandgraphs-2-2-1 > li { counter-increment: contoursandgraphs-2-2-1; }
+#contoursandgraphs-3-1 { counter-set: contoursandgraphs-3-1 0; }
+#contoursandgraphs-3-1 > li::marker { content: ""counter(contoursandgraphs-3-1,lower-alpha)"."; }
+#contoursandgraphs-3-1 > li { counter-increment: contoursandgraphs-3-1; }
+#winchillcontours-2-3 { counter-set: winchillcontours-2-3 0; }
+#winchillcontours-2-3 > li::marker { content: ""counter(winchillcontours-2-3,lower-alpha)"."; }
+#winchillcontours-2-3 > li { counter-increment: winchillcontours-2-3; }
+#winchillcontours-3-1 { counter-set: winchillcontours-3-1 0; }
+#winchillcontours-3-1 > li::marker { content: ""counter(winchillcontours-3-1,lower-alpha)"."; }
+#winchillcontours-3-1 > li { counter-increment: winchillcontours-3-1; }
+#levelsetsin3d-2-1-1 { counter-set: levelsetsin3d-2-1-1 0; }
+#levelsetsin3d-2-1-1 > li::marker { content: ""counter(levelsetsin3d-2-1-1,lower-alpha)"."; }
+#levelsetsin3d-2-1-1 > li { counter-increment: levelsetsin3d-2-1-1; }
+#levelsetsin3d-3-1 { counter-set: levelsetsin3d-3-1 0; }
+#levelsetsin3d-3-1 > li::marker { content: ""counter(levelsetsin3d-3-1,lower-alpha)"."; }
+#levelsetsin3d-3-1 > li { counter-increment: levelsetsin3d-3-1; }
+#PA-7B-3-2-2 { counter-set: PA-7B-3-2-2 0; }
+#PA-7B-3-2-2 > li::marker { content: ""counter(PA-7B-3-2-2,lower-alpha)"."; }
+#PA-7B-3-2-2 > li { counter-increment: PA-7B-3-2-2; }
+#PA-7B-3-3-1-1 { counter-set: PA-7B-3-3-1-1 0; }
+#PA-7B-3-3-1-1 > li::marker { content: ""counter(PA-7B-3-3-1-1,lower-alpha)"."; }
+#PA-7B-3-3-1-1 > li { counter-increment: PA-7B-3-3-1-1; }
+#ez-sphericalp2r-2-2 { counter-set: ez-sphericalp2r-2-2 0; }
+#ez-sphericalp2r-2-2 > li::marker { content: ""counter(ez-sphericalp2r-2-2,lower-alpha)"."; }
+#ez-sphericalp2r-2-2 > li { counter-increment: ez-sphericalp2r-2-2; }
+#ez-sphericalp2r-3-1 { counter-set: ez-sphericalp2r-3-1 0; }
+#ez-sphericalp2r-3-1 > li::marker { content: ""counter(ez-sphericalp2r-3-1,lower-alpha)"."; }
+#ez-sphericalp2r-3-1 > li { counter-increment: ez-sphericalp2r-3-1; }
+#rectangulartopolar4-2-1-1 { counter-set: rectangulartopolar4-2-1-1 0; }
+#rectangulartopolar4-2-1-1 > li::marker { content: ""counter(rectangulartopolar4-2-1-1,lower-alpha)"."; }
+#rectangulartopolar4-2-1-1 > li { counter-increment: rectangulartopolar4-2-1-1; }
+#rectangulartopolar4-3-1 { counter-set: rectangulartopolar4-3-1 0; }
+#rectangulartopolar4-3-1 > li::marker { content: ""counter(rectangulartopolar4-3-1,lower-alpha)"."; }
+#rectangulartopolar4-3-1 > li { counter-increment: rectangulartopolar4-3-1; }
+#PA_11_8-2 { counter-set: PA_11_8-2 0; }
+#PA_11_8-2 > li::marker { content: ""counter(PA_11_8-2,lower-alpha)"."; }
+#PA_11_8-2 > li { counter-increment: PA_11_8-2; }
+#A_11_8_7-1-1 { counter-set: A_11_8_7-1-1 0; }
+#A_11_8_7-1-1 > li::marker { content: ""counter(A_11_8_7-1-1,lower-alpha)"."; }
+#A_11_8_7-1-1 > li { counter-increment: A_11_8_7-1-1; }
+#ez-CartesianToSpherical-2-1-1 { counter-set: ez-CartesianToSpherical-2-1-1 0; }
+#ez-CartesianToSpherical-2-1-1 > li::marker { content: ""counter(ez-CartesianToSpherical-2-1-1,lower-alpha)"."; }
+#ez-CartesianToSpherical-2-1-1 > li { counter-increment: ez-CartesianToSpherical-2-1-1; }
+#ez-CartesianToSpherical-3-1 { counter-set: ez-CartesianToSpherical-3-1 0; }
+#ez-CartesianToSpherical-3-1 > li::marker { content: ""counter(ez-CartesianToSpherical-3-1,lower-alpha)"."; }
+#ez-CartesianToSpherical-3-1 > li { counter-increment: ez-CartesianToSpherical-3-1; }
+#ez-CartesianToSpherical-4-1 { counter-set: ez-CartesianToSpherical-4-1 0; }
+#ez-CartesianToSpherical-4-1 > li::marker { content: ""counter(ez-CartesianToSpherical-4-1,lower-alpha)"."; }
+#ez-CartesianToSpherical-4-1 > li { counter-increment: ez-CartesianToSpherical-4-1; }
+#sec_displacementvectors-25-3-1-2-2 { counter-set: sec_displacementvectors-25-3-1-2-2 0; }
+#sec_displacementvectors-25-3-1-2-2 > li::marker { content: ""counter(sec_displacementvectors-25-3-1-2-2,lower-alpha)"."; }
+#sec_displacementvectors-25-3-1-2-2 > li { counter-increment: sec_displacementvectors-25-3-1-2-2; }
+#horizontalwindvector-2-1-1 { counter-set: horizontalwindvector-2-1-1 0; }
+#horizontalwindvector-2-1-1 > li::marker { content: ""counter(horizontalwindvector-2-1-1,lower-alpha)"."; }
+#horizontalwindvector-2-1-1 > li { counter-increment: horizontalwindvector-2-1-1; }
+#horizontalwindvector-3-1 { counter-set: horizontalwindvector-3-1 0; }
+#horizontalwindvector-3-1 > li::marker { content: ""counter(horizontalwindvector-3-1,lower-alpha)"."; }
+#horizontalwindvector-3-1 > li { counter-increment: horizontalwindvector-3-1; }
+#ResolveVector-2-1-1 { counter-set: ResolveVector-2-1-1 0; }
+#ResolveVector-2-1-1 > li::marker { content: ""counter(ResolveVector-2-1-1,lower-alpha)"."; }
+#ResolveVector-2-1-1 > li { counter-increment: ResolveVector-2-1-1; }
+#ResolveVector-3-1-1 { counter-set: ResolveVector-3-1-1 0; }
+#ResolveVector-3-1-1 > li::marker { content: ""counter(ResolveVector-3-1-1,lower-alpha)"."; }
+#ResolveVector-3-1-1 > li { counter-increment: ResolveVector-3-1-1; }
+#directionsandvectors-2-1-3 { counter-set: directionsandvectors-2-1-3 0; }
+#directionsandvectors-2-1-3 > li::marker { content: ""counter(directionsandvectors-2-1-3,lower-alpha)"."; }
+#directionsandvectors-2-1-3 > li { counter-increment: directionsandvectors-2-1-3; }
+#directionsandvectors-3-1 { counter-set: directionsandvectors-3-1 0; }
+#directionsandvectors-3-1 > li::marker { content: ""counter(directionsandvectors-3-1,lower-alpha)"."; }
+#directionsandvectors-3-1 > li { counter-increment: directionsandvectors-3-1; }
+#meanwindvectors0-2-2-6 { counter-set: meanwindvectors0-2-2-6 0; }
+#meanwindvectors0-2-2-6 > li::marker { content: ""counter(meanwindvectors0-2-2-6,lower-alpha)"."; }
+#meanwindvectors0-2-2-6 > li { counter-increment: meanwindvectors0-2-2-6; }
+#meanwindvectors0-3-1-1 { counter-set: meanwindvectors0-3-1-1 0; }
+#meanwindvectors0-3-1-1 > li::marker { content: ""counter(meanwindvectors0-3-1-1,lower-alpha)"."; }
+#meanwindvectors0-3-1-1 > li { counter-increment: meanwindvectors0-3-1-1; }
+#AnglesAndSigns-2-1 { counter-set: AnglesAndSigns-2-1 0; }
+#AnglesAndSigns-2-1 > li::marker { content: ""counter(AnglesAndSigns-2-1,lower-alpha)"."; }
+#AnglesAndSigns-2-1 > li { counter-increment: AnglesAndSigns-2-1; }
+#AnglesAndSigns-2-1-2-2 { counter-set: AnglesAndSigns-2-1-2-2 0; }
+#AnglesAndSigns-2-1-2-2 > li::marker { content: ""counter(AnglesAndSigns-2-1-2-2,lower-roman)"."; }
+#AnglesAndSigns-2-1-2-2 > li { counter-increment: AnglesAndSigns-2-1-2-2; }
+#dotproductbasic-2-1-3 { counter-set: dotproductbasic-2-1-3 0; }
+#dotproductbasic-2-1-3 > li::marker { content: ""counter(dotproductbasic-2-1-3,lower-alpha)"."; }
+#dotproductbasic-2-1-3 > li { counter-increment: dotproductbasic-2-1-3; }
+#dotproductbasic-3-1-1 { counter-set: dotproductbasic-3-1-1 0; }
+#dotproductbasic-3-1-1 > li::marker { content: ""counter(dotproductbasic-3-1-1,lower-alpha)"."; }
+#dotproductbasic-3-1-1 > li { counter-increment: dotproductbasic-3-1-1; }
+#advectioncentralUS-2-1-3 { counter-set: advectioncentralUS-2-1-3 0; }
+#advectioncentralUS-2-1-3 > li::marker { content: ""counter(advectioncentralUS-2-1-3,lower-alpha)"."; }
+#advectioncentralUS-2-1-3 > li { counter-increment: advectioncentralUS-2-1-3; }
+#advectioncentralUS-3-1-1 { counter-set: advectioncentralUS-3-1-1 0; }
+#advectioncentralUS-3-1-1 > li::marker { content: ""counter(advectioncentralUS-3-1-1,lower-alpha)"."; }
+#advectioncentralUS-3-1-1 > li { counter-increment: advectioncentralUS-3-1-1; }
+#AdvectionInNY-2-1-3 { counter-set: AdvectionInNY-2-1-3 0; }
+#AdvectionInNY-2-1-3 > li::marker { content: ""counter(AdvectionInNY-2-1-3,lower-alpha)"."; }
+#AdvectionInNY-2-1-3 > li { counter-increment: AdvectionInNY-2-1-3; }
+#AdvectionInNY-3-1-1 { counter-set: AdvectionInNY-3-1-1 0; }
+#AdvectionInNY-3-1-1 > li::marker { content: ""counter(AdvectionInNY-3-1-1,lower-alpha)"."; }
+#AdvectionInNY-3-1-1 > li { counter-increment: AdvectionInNY-3-1-1; }
+#advectionsartell-2-3-1 { counter-set: advectionsartell-2-3-1 0; }
+#advectionsartell-2-3-1 > li::marker { content: ""counter(advectionsartell-2-3-1,lower-alpha)"."; }
+#advectionsartell-2-3-1 > li { counter-increment: advectionsartell-2-3-1; }
+#advectionsartell-3-1 { counter-set: advectionsartell-3-1 0; }
+#advectionsartell-3-1 > li::marker { content: ""counter(advectionsartell-3-1,lower-alpha)"."; }
+#advectionsartell-3-1 > li { counter-increment: advectionsartell-3-1; }
+#advectioncoldspring-2-1-6 { counter-set: advectioncoldspring-2-1-6 0; }
+#advectioncoldspring-2-1-6 > li::marker { content: ""counter(advectioncoldspring-2-1-6,lower-alpha)"."; }
+#advectioncoldspring-2-1-6 > li { counter-increment: advectioncoldspring-2-1-6; }
+#advectioncoldspring-3-1 { counter-set: advectioncoldspring-3-1 0; }
+#advectioncoldspring-3-1 > li::marker { content: ""counter(advectioncoldspring-3-1,lower-alpha)"."; }
+#advectioncoldspring-3-1 > li { counter-increment: advectioncoldspring-3-1; }
+#DeterminantComputations-2-1-1 { counter-set: DeterminantComputations-2-1-1 0; }
+#DeterminantComputations-2-1-1 > li::marker { content: ""counter(DeterminantComputations-2-1-1,lower-alpha)"."; }
+#DeterminantComputations-2-1-1 > li { counter-increment: DeterminantComputations-2-1-1; }
+#DeterminantComputations-3-1-1 { counter-set: DeterminantComputations-3-1-1 0; }
+#DeterminantComputations-3-1-1 > li::marker { content: ""counter(DeterminantComputations-3-1-1,lower-alpha)"."; }
+#DeterminantComputations-3-1-1 > li { counter-increment: DeterminantComputations-3-1-1; }
+#coriolisgolfball-2-1-3 { counter-set: coriolisgolfball-2-1-3 0; }
+#coriolisgolfball-2-1-3 > li::marker { content: ""counter(coriolisgolfball-2-1-3,lower-alpha)"."; }
+#coriolisgolfball-2-1-3 > li { counter-increment: coriolisgolfball-2-1-3; }
+#coriolisgolfball-3-1-1 { counter-set: coriolisgolfball-3-1-1 0; }
+#coriolisgolfball-3-1-1 > li::marker { content: ""counter(coriolisgolfball-3-1-1,lower-alpha)"."; }
+#coriolisgolfball-3-1-1 > li { counter-increment: coriolisgolfball-3-1-1; }
+#VSorU-2-1-1 { counter-set: VSorU-2-1-1 0; }
+#VSorU-2-1-1 > li::marker { content: ""counter(VSorU-2-1-1,lower-alpha)"."; }
+#VSorU-2-1-1 > li { counter-increment: VSorU-2-1-1; }
+#VSorU-3-1-1 { counter-set: VSorU-3-1-1 0; }
+#VSorU-3-1-1 > li::marker { content: ""counter(VSorU-3-1-1,lower-alpha)"."; }
+#VSorU-3-1-1 > li { counter-increment: VSorU-3-1-1; }
+#NoVerticalCross-2-3 { counter-set: NoVerticalCross-2-3 0; }
+#NoVerticalCross-2-3 > li::marker { content: ""counter(NoVerticalCross-2-3,lower-alpha)"."; }
+#NoVerticalCross-2-3 > li { counter-increment: NoVerticalCross-2-3; }
+#NoVerticalCross-3-1 { counter-set: NoVerticalCross-3-1 0; }
+#NoVerticalCross-3-1 > li::marker { content: ""counter(NoVerticalCross-3-1,lower-alpha)"."; }
+#NoVerticalCross-3-1 > li { counter-increment: NoVerticalCross-3-1; }
+#VenusCoriolis-2-2 { counter-set: VenusCoriolis-2-2 0; }
+#VenusCoriolis-2-2 > li::marker { content: ""counter(VenusCoriolis-2-2,lower-alpha)"."; }
+#VenusCoriolis-2-2 > li { counter-increment: VenusCoriolis-2-2; }
+#VenusCoriolis-3-1 { counter-set: VenusCoriolis-3-1 0; }
+#VenusCoriolis-3-1 > li::marker { content: ""counter(VenusCoriolis-3-1,lower-alpha)"."; }
+#VenusCoriolis-3-1 > li { counter-increment: VenusCoriolis-3-1; }
+#PickingKoff-2-1-4 { counter-set: PickingKoff-2-1-4 0; }
+#PickingKoff-2-1-4 > li::marker { content: ""counter(PickingKoff-2-1-4,lower-alpha)"."; }
+#PickingKoff-2-1-4 > li { counter-increment: PickingKoff-2-1-4; }
+#PickingKoff-3-1 { counter-set: PickingKoff-3-1 0; }
+#PickingKoff-3-1 > li::marker { content: ""counter(PickingKoff-3-1,lower-alpha)"."; }
+#PickingKoff-3-1 > li { counter-increment: PickingKoff-3-1; }
+#TechnologyCrossProducts-2-1-1 { counter-set: TechnologyCrossProducts-2-1-1 0; }
+#TechnologyCrossProducts-2-1-1 > li::marker { content: ""counter(TechnologyCrossProducts-2-1-1,lower-alpha)"."; }
+#TechnologyCrossProducts-2-1-1 > li { counter-increment: TechnologyCrossProducts-2-1-1; }
+#BulkRichardsonNumber-2-5-1 { counter-set: BulkRichardsonNumber-2-5-1 0; }
+#BulkRichardsonNumber-2-5-1 > li::marker { content: ""counter(BulkRichardsonNumber-2-5-1,lower-alpha)"."; }
+#BulkRichardsonNumber-2-5-1 > li { counter-increment: BulkRichardsonNumber-2-5-1; }
+#BulkRichardsonNumber-3-1 { counter-set: BulkRichardsonNumber-3-1 0; }
+#BulkRichardsonNumber-3-1 > li::marker { content: ""counter(BulkRichardsonNumber-3-1,lower-alpha)"."; }
+#BulkRichardsonNumber-3-1 > li { counter-increment: BulkRichardsonNumber-3-1; }
+#windchillpartials-3 { counter-set: windchillpartials-3 0; }
+#windchillpartials-3 > li::marker { content: ""counter(windchillpartials-3,lower-alpha)"."; }
+#windchillpartials-3 > li { counter-increment: windchillpartials-3; }
+#windchillpartials-4-1 { counter-set: windchillpartials-4-1 0; }
+#windchillpartials-4-1 > li::marker { content: ""counter(windchillpartials-4-1,lower-alpha)"."; }
+#windchillpartials-4-1 > li { counter-increment: windchillpartials-4-1; }
+#interpretfirstorderpartials-8-3 { counter-set: interpretfirstorderpartials-8-3 0; }
+#interpretfirstorderpartials-8-3 > li::marker { content: ""counter(interpretfirstorderpartials-8-3,lower-alpha)"."; }
+#interpretfirstorderpartials-8-3 > li { counter-increment: interpretfirstorderpartials-8-3; }
+#interpretfirstorderpartials-8-4-1 { counter-set: interpretfirstorderpartials-8-4-1 0; }
+#interpretfirstorderpartials-8-4-1 > li::marker { content: ""counter(interpretfirstorderpartials-8-4-1,lower-alpha)"."; }
+#interpretfirstorderpartials-8-4-1 > li { counter-increment: interpretfirstorderpartials-8-4-1; }
+#meanwindspeed-3 { counter-set: meanwindspeed-3 0; }
+#meanwindspeed-3 > li::marker { content: ""counter(meanwindspeed-3,lower-alpha)"."; }
+#meanwindspeed-3 > li { counter-increment: meanwindspeed-3; }
+#meanwindspeed-4-1 { counter-set: meanwindspeed-4-1 0; }
+#meanwindspeed-4-1 > li::marker { content: ""counter(meanwindspeed-4-1,lower-alpha)"."; }
+#meanwindspeed-4-1 > li { counter-increment: meanwindspeed-4-1; }
+#SVPexercise-4 { counter-set: SVPexercise-4 0; }
+#SVPexercise-4 > li::marker { content: ""counter(SVPexercise-4,lower-alpha)"."; }
+#SVPexercise-4 > li { counter-increment: SVPexercise-4; }
+#SVPexercise-5-1 { counter-set: SVPexercise-5-1 0; }
+#SVPexercise-5-1 > li::marker { content: ""counter(SVPexercise-5-1,lower-alpha)"."; }
+#SVPexercise-5-1 > li { counter-increment: SVPexercise-5-1; }
+#partialisobaricmap-2-3 { counter-set: partialisobaricmap-2-3 0; }
+#partialisobaricmap-2-3 > li::marker { content: ""counter(partialisobaricmap-2-3,lower-alpha)"."; }
+#partialisobaricmap-2-3 > li { counter-increment: partialisobaricmap-2-3; }
+#partialisobaricmap-3-1 { counter-set: partialisobaricmap-3-1 0; }
+#partialisobaricmap-3-1 > li::marker { content: ""counter(partialisobaricmap-3-1,lower-alpha)"."; }
+#partialisobaricmap-3-1 > li { counter-increment: partialisobaricmap-3-1; }
+#ez_potential_temperature-2-1-8 { counter-set: ez_potential_temperature-2-1-8 0; }
+#ez_potential_temperature-2-1-8 > li::marker { content: ""counter(ez_potential_temperature-2-1-8,lower-alpha)"."; }
+#ez_potential_temperature-2-1-8 > li { counter-increment: ez_potential_temperature-2-1-8; }
+#ez_potential_temperature-3-1 { counter-set: ez_potential_temperature-3-1 0; }
+#ez_potential_temperature-3-1 > li::marker { content: ""counter(ez_potential_temperature-3-1,lower-alpha)"."; }
+#ez_potential_temperature-3-1 > li { counter-increment: ez_potential_temperature-3-1; }
+#insolation-2-3 { counter-set: insolation-2-3 0; }
+#insolation-2-3 > li::marker { content: ""counter(insolation-2-3,lower-alpha)"."; }
+#insolation-2-3 > li { counter-increment: insolation-2-3; }
+#frostbitepartial-2-3 { counter-set: frostbitepartial-2-3 0; }
+#frostbitepartial-2-3 > li::marker { content: ""counter(frostbitepartial-2-3,lower-alpha)"."; }
+#frostbitepartial-2-3 > li { counter-increment: frostbitepartial-2-3; }
+#frostbitepartial-3-1 { counter-set: frostbitepartial-3-1 0; }
+#frostbitepartial-3-1 > li::marker { content: ""counter(frostbitepartial-3-1,lower-alpha)"."; }
+#frostbitepartial-3-1 > li { counter-increment: frostbitepartial-3-1; }
+#WetBulbGlobeTemp-2-2 { counter-set: WetBulbGlobeTemp-2-2 0; }
+#WetBulbGlobeTemp-2-2 > li::marker { content: ""counter(WetBulbGlobeTemp-2-2,lower-alpha)"."; }
+#WetBulbGlobeTemp-2-2 > li { counter-increment: WetBulbGlobeTemp-2-2; }
+#WetBulbGlobeTemp-3-1 { counter-set: WetBulbGlobeTemp-3-1 0; }
+#WetBulbGlobeTemp-3-1 > li::marker { content: ""counter(WetBulbGlobeTemp-3-1,lower-alpha)"."; }
+#WetBulbGlobeTemp-3-1 > li { counter-increment: WetBulbGlobeTemp-3-1; }
+#A_10_2_11-2-2-5 { counter-set: A_10_2_11-2-2-5 0; }
+#A_10_2_11-2-2-5 > li::marker { content: ""counter(A_10_2_11-2-2-5,lower-alpha)"."; }
+#A_10_2_11-2-2-5 > li { counter-increment: A_10_2_11-2-2-5; }
+#partialbackwards-2 { counter-set: partialbackwards-2 0; }
+#partialbackwards-2 > li::marker { content: ""counter(partialbackwards-2,lower-alpha)"."; }
+#partialbackwards-2 > li { counter-increment: partialbackwards-2; }
+#partialbackwards-3-1 { counter-set: partialbackwards-3-1 0; }
+#partialbackwards-3-1 > li::marker { content: ""counter(partialbackwards-3-1,lower-alpha)"."; }
+#partialbackwards-3-1 > li { counter-increment: partialbackwards-3-1; }
+#firstcontouradvect-4 { counter-set: firstcontouradvect-4 0; }
+#firstcontouradvect-4 > li::marker { content: ""counter(firstcontouradvect-4,lower-alpha)"."; }
+#firstcontouradvect-4 > li { counter-increment: firstcontouradvect-4; }
+#firstcontouradvect-5-1 { counter-set: firstcontouradvect-5-1 0; }
+#firstcontouradvect-5-1 > li::marker { content: ""counter(firstcontouradvect-5-1,lower-alpha)"."; }
+#firstcontouradvect-5-1 > li { counter-increment: firstcontouradvect-5-1; }
+#dewpointcontours-2-3 { counter-set: dewpointcontours-2-3 0; }
+#dewpointcontours-2-3 > li::marker { content: ""counter(dewpointcontours-2-3,lower-alpha)"."; }
+#dewpointcontours-2-3 > li { counter-increment: dewpointcontours-2-3; }
+#dewpointcontours-2-3-3-2 { counter-set: dewpointcontours-2-3-3-2 0; }
+#dewpointcontours-2-3-3-2 > li::marker { content: ""counter(dewpointcontours-2-3-3-2,lower-roman)"."; }
+#dewpointcontours-2-3-3-2 > li { counter-increment: dewpointcontours-2-3-3-2; }
+#dewpointcontours-3-1 { counter-set: dewpointcontours-3-1 0; }
+#dewpointcontours-3-1 > li::marker { content: ""counter(dewpointcontours-3-1,lower-alpha)"."; }
+#dewpointcontours-3-1 > li { counter-increment: dewpointcontours-3-1; }
+#extracted-webwork-5-1-1-4-1-1-1 { counter-set: extracted-webwork-5-1-1-4-1-1-1 0; }
+#extracted-webwork-5-1-1-4-1-1-1 > li::marker { content: "("counter(extracted-webwork-5-1-1-4-1-1-1,lower-alpha)")"; }
+#extracted-webwork-5-1-1-4-1-1-1 > li { counter-increment: extracted-webwork-5-1-1-4-1-1-1; }
+#extracted-webwork-5-1-1-4-1-2-1 { counter-set: extracted-webwork-5-1-1-4-1-2-1 0; }
+#extracted-webwork-5-1-1-4-1-2-1 > li::marker { content: ""counter(extracted-webwork-5-1-1-4-1-2-1,upper-alpha)"."; }
+#extracted-webwork-5-1-1-4-1-2-1 > li { counter-increment: extracted-webwork-5-1-1-4-1-2-1; }
+#transportequation-2-2 { counter-set: transportequation-2-2 0; }
+#transportequation-2-2 > li::marker { content: ""counter(transportequation-2-2,lower-alpha)"."; }
+#transportequation-2-2 > li { counter-increment: transportequation-2-2; }
+#transportequation-3-1 { counter-set: transportequation-3-1 0; }
+#transportequation-3-1 > li::marker { content: ""counter(transportequation-3-1,lower-alpha)"."; }
+#transportequation-3-1 > li { counter-increment: transportequation-3-1; }
+#CirculationPentagonPath-2-5 { counter-set: CirculationPentagonPath-2-5 0; }
+#CirculationPentagonPath-2-5 > li::marker { content: ""counter(CirculationPentagonPath-2-5,lower-alpha)"."; }
+#CirculationPentagonPath-2-5 > li { counter-increment: CirculationPentagonPath-2-5; }
+#CirculationPentagonPath-3-1 { counter-set: CirculationPentagonPath-3-1 0; }
+#CirculationPentagonPath-3-1 > li::marker { content: ""counter(CirculationPentagonPath-3-1,lower-alpha)"."; }
+#CirculationPentagonPath-3-1 > li { counter-increment: CirculationPentagonPath-3-1; }
+#ComputeCurlBothWays-1-1-5 { counter-set: ComputeCurlBothWays-1-1-5 0; }
+#ComputeCurlBothWays-1-1-5 > li::marker { content: ""counter(ComputeCurlBothWays-1-1-5,lower-alpha)"."; }
+#ComputeCurlBothWays-1-1-5 > li { counter-increment: ComputeCurlBothWays-1-1-5; }
+#ComputeCurlBothWays-2-1 { counter-set: ComputeCurlBothWays-2-1 0; }
+#ComputeCurlBothWays-2-1 > li::marker { content: ""counter(ComputeCurlBothWays-2-1,lower-alpha)"."; }
+#ComputeCurlBothWays-2-1 > li { counter-increment: ComputeCurlBothWays-2-1; }
+#MetarsToVorticity-2-7 { counter-set: MetarsToVorticity-2-7 0; }
+#MetarsToVorticity-2-7 > li::marker { content: ""counter(MetarsToVorticity-2-7,lower-alpha)"."; }
+#MetarsToVorticity-2-7 > li { counter-increment: MetarsToVorticity-2-7; }
+#MetarsToVorticity-3-1 { counter-set: MetarsToVorticity-3-1 0; }
+#MetarsToVorticity-3-1 > li::marker { content: ""counter(MetarsToVorticity-3-1,lower-alpha)"."; }
+#MetarsToVorticity-3-1 > li { counter-increment: MetarsToVorticity-3-1; }
+#fluxmaximized-2-1-3 { counter-set: fluxmaximized-2-1-3 0; }
+#fluxmaximized-2-1-3 > li::marker { content: ""counter(fluxmaximized-2-1-3,lower-alpha)"."; }
+#fluxmaximized-2-1-3 > li { counter-increment: fluxmaximized-2-1-3; }
+#fluxmaximized-3-1-1 { counter-set: fluxmaximized-3-1-1 0; }
+#fluxmaximized-3-1-1 > li::marker { content: ""counter(fluxmaximized-3-1-1,lower-alpha)"."; }
+#fluxmaximized-3-1-1 > li { counter-increment: fluxmaximized-3-1-1; }
+#FluxSidesPrism-2-1-4 { counter-set: FluxSidesPrism-2-1-4 0; }
+#FluxSidesPrism-2-1-4 > li::marker { content: ""counter(FluxSidesPrism-2-1-4,lower-alpha)"."; }
+#FluxSidesPrism-2-1-4 > li { counter-increment: FluxSidesPrism-2-1-4; }
+#FluxSidesPrism-3-1 { counter-set: FluxSidesPrism-3-1 0; }
+#FluxSidesPrism-3-1 > li::marker { content: ""counter(FluxSidesPrism-3-1,lower-alpha)"."; }
+#FluxSidesPrism-3-1 > li { counter-increment: FluxSidesPrism-3-1; }
+#fluxofcube-2-1-6 { counter-set: fluxofcube-2-1-6 0; }
+#fluxofcube-2-1-6 > li::marker { content: ""counter(fluxofcube-2-1-6,lower-alpha)"."; }
+#fluxofcube-2-1-6 > li { counter-increment: fluxofcube-2-1-6; }
+#fluxofcube-3-1-1 { counter-set: fluxofcube-3-1-1 0; }
+#fluxofcube-3-1-1 > li::marker { content: ""counter(fluxofcube-3-1-1,lower-alpha)"."; }
+#fluxofcube-3-1-1 > li { counter-increment: fluxofcube-3-1-1; }
+#Ez_10_3_0-2-3 { counter-set: Ez_10_3_0-2-3 0; }
+#Ez_10_3_0-2-3 > li::marker { content: ""counter(Ez_10_3_0-2-3,lower-alpha)"."; }
+#Ez_10_3_0-2-3 > li { counter-increment: Ez_10_3_0-2-3; }
+#Ez_10_3_1-2-3 { counter-set: Ez_10_3_1-2-3 0; }
+#Ez_10_3_1-2-3 > li::marker { content: ""counter(Ez_10_3_1-2-3,lower-alpha)"."; }
+#Ez_10_3_1-2-3 > li { counter-increment: Ez_10_3_1-2-3; }
+#Ez_10_3_1-3-1-1 { counter-set: Ez_10_3_1-3-1-1 0; }
+#Ez_10_3_1-3-1-1 > li::marker { content: ""counter(Ez_10_3_1-3-1-1,lower-alpha)"."; }
+#Ez_10_3_1-3-1-1 > li { counter-increment: Ez_10_3_1-3-1-1; }
+#ez-wind-at-MSP-2-3 { counter-set: ez-wind-at-MSP-2-3 0; }
+#ez-wind-at-MSP-2-3 > li::marker { content: ""counter(ez-wind-at-MSP-2-3,lower-alpha)"."; }
+#ez-wind-at-MSP-2-3 > li { counter-increment: ez-wind-at-MSP-2-3; }
+#ez-wind-at-MSP-3-1 { counter-set: ez-wind-at-MSP-3-1 0; }
+#ez-wind-at-MSP-3-1 > li::marker { content: ""counter(ez-wind-at-MSP-3-1,lower-alpha)"."; }
+#ez-wind-at-MSP-3-1 > li { counter-increment: ez-wind-at-MSP-3-1; }
+#ez-wind-at-Jackson-2-4 { counter-set: ez-wind-at-Jackson-2-4 0; }
+#ez-wind-at-Jackson-2-4 > li::marker { content: ""counter(ez-wind-at-Jackson-2-4,lower-alpha)"."; }
+#ez-wind-at-Jackson-2-4 > li { counter-increment: ez-wind-at-Jackson-2-4; }
+#ez-wind-at-Jackson-3-1 { counter-set: ez-wind-at-Jackson-3-1 0; }
+#ez-wind-at-Jackson-3-1 > li::marker { content: ""counter(ez-wind-at-Jackson-3-1,lower-alpha)"."; }
+#ez-wind-at-Jackson-3-1 > li { counter-increment: ez-wind-at-Jackson-3-1; }
+</style>
+</head>
+<body class="pretext book ignore-math">
+<a class="assistive" href="#ptx-content">Skip to main content</a><header id="ptx-masthead" class="ptx-masthead"><div class="ptx-banner">
+<a xmlns:pf="https://prefigure.org" id="logo-link" class="logo-link" target="_blank" href="http://web.stcloudstate.edu/drbuske/"><img src="external/SCSU_StC_Pri_DkBlkBG.png" alt="Logo image"></a><div class="title-container">
+<h1 class="heading"><a href="atmospherickinematics.html"><span class="title">Mathematics of Atmospheric Kinematics</span></a></h1>
+<p class="byline">Dale Buske</p>
+</div>
+</div></header><nav xmlns:pf="https://prefigure.org" id="ptx-navbar" class="ptx-navbar navbar"><button class="toc-toggle button" title="Contents"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5d2;</span><span class="name">Contents</span></button><a class="index-button button" href="backmatter-2.html" title="Index"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe88e;</span><span class="name">Index</span></a><div class="searchbox">
+<div class="searchwidget"><button id="searchbutton" class="searchbutton button" type="button" title="Search book"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe8b6;</span><span class="name">Search Book</span></button></div>
+<div id="searchresultsplaceholder" class="searchresultsplaceholder" style="display: none">
+<div class="search-results-controls">
+<input aria-label="Search term" id="ptxsearch" class="ptxsearch" type="text" name="terms" placeholder="Search term"><button title="Close search" id="closesearchresults" class="closesearchresults"><span class="material-symbols-outlined">close</span></button>
+</div>
+<h2 class="search-results-heading">Search Results: </h2>
+<div id="searchempty" class="searchempty"><span>No results.</span></div>
+<ol id="searchresults" class="searchresults"></ol>
+</div>
+</div>
+<span class="nav-other-controls"><button id="calculator-toggle" class="calculator-toggle button" title="Show calculator" aria-expanded="false" aria-controls="calculator-container"><span class="icon material-symbols-outlined" aria-hidden="true">&#xea5f;</span><span class="name">Calc</span></button><div id="calculator-container" class="calculator-container" style="display: none; z-index:100;"><div id="geogebra-calculator"></div></div>
+<script>
+var ggbApp = new GGBApplet({"appName": "classic",
+    "width": 330,
+    "height": 600,
+    "showToolBar": true,
+    "showAlgebraInput": true,
+    "perspective": "G/A",
+    "algebraInputPosition": "bottom",
+    "scaleContainerClass": "calculator-container",
+    "allowUpscale": true,
+    "autoHeight": true,
+    "disableAutoScale": false},
+true);
+</script></span><span class="treebuttons"><a class="previous-button button" href="sec_vector_fields.html" title="Previous"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5cb;</span><span class="name">Prev</span></a><a class="up-button button" href="ch-vectorfields.html" title="Up"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5ce;</span><span class="name">Up</span></a><a class="next-button button" href="sec_curl.html" title="Next"><span class="name">Next</span><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5cc;</span></a></span></nav><div xmlns:pf="https://prefigure.org" id="latex-macros" class="hidden-content process-math" style="display:none"><span class="process-math">\(\newcommand{\N}{\mathbb N}
+\newcommand{\Z}{\mathbb Z}
+\newcommand{\Q}{\mathbb Q}
+\newcommand{\R}{\mathbb R}
+\newcommand{\lt}{&lt;}
+\newcommand{\gt}{&gt;}
+\newcommand{\amp}{&amp;}
+\definecolor{fillinmathshade}{gray}{0.9}
+\newcommand{\fillinmath}[1]{\mathchoice{\colorbox{fillinmathshade}{$\displaystyle     \phantom{\,#1\,}$}}{\colorbox{fillinmathshade}{$\textstyle        \phantom{\,#1\,}$}}{\colorbox{fillinmathshade}{$\scriptstyle      \phantom{\,#1\,}$}}{\colorbox{fillinmathshade}{$\scriptscriptstyle\phantom{\,#1\,}$}}}
+\)</span></div>
+<div class="ptx-page">
+<div xmlns:pf="https://prefigure.org" id="ptx-sidebar" class="ptx-sidebar"><nav id="ptx-toc" class="ptx-toc depth2"><ul class="structural contains-active toc-item-list">
+<li class="toc-item toc-frontmatter">
+<div class="toc-title-box"><a href="frontmatter.html" class="internal"><span class="title">Front Matter</span></a></div>
+<ul class="structural toc-item-list">
+<li class="toc-item toc-colophon"><div class="toc-title-box"><a href="frontmatter-3.html" class="internal"><span class="title">Colophon</span></a></div></li>
+<li class="toc-item toc-acknowledgement"><div class="toc-title-box"><a href="frontmatter-4.html" class="internal"><span class="title">Acknowledgements</span></a></div></li>
+</ul>
+</li>
+<li class="toc-item toc-chapter">
+<div class="toc-title-box"><a href="ch_numerical_integration.html" class="internal"><span class="codenumber">1</span> <span class="title">Approximation I: Area</span></a></div>
+<ul class="structural toc-item-list"><li class="toc-item toc-section">
+<div class="toc-title-box"><a href="sec_CAPE.html" class="internal"><span class="codenumber">1.1</span> <span class="title">Numerical Integration</span></a></div>
+<ul class="structural toc-item-list">
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="sec_CAPE.html#sec_CAPE-4" class="internal"><span class="codenumber">1.1.1</span> <span class="title">CAPE and CIN</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="sec_CAPE.html#sec_CAPE-5" class="internal"><span class="codenumber">1.1.2</span> <span class="title">Left, Right, and Midpoint Sums</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="sec_CAPE.html#sec_CAPE-6" class="internal"><span class="codenumber">1.1.3</span> <span class="title">The Trapezoidal Rule</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="sec_CAPE.html#sec_CAPE-7" class="internal"><span class="codenumber">1.1.4</span> <span class="title">Simpson’s Rule</span></a></div></li>
+<li class="toc-item toc-exercises"><div class="toc-title-box"><a href="sec_CAPE.html#ez_CAPE" class="internal"><span class="codenumber">1.1.5</span> <span class="title">Exercises</span></a></div></li>
+</ul>
+</li></ul>
+</li>
+<li class="toc-item toc-chapter">
+<div class="toc-title-box"><a href="ch_series.html" class="internal"><span class="codenumber">2</span> <span class="title">Modeling Periodic Behavior</span></a></div>
+<ul class="structural toc-item-list">
+<li class="toc-item toc-section">
+<div class="toc-title-box"><a href="sec_fourier_series.html" class="internal"><span class="codenumber">2.1</span> <span class="title">Sinusoids</span></a></div>
+<ul class="structural toc-item-list">
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="sec_fourier_series.html#sec_fourier_series-4" class="internal"><span class="codenumber">2.1.1</span> <span class="title">Sinusoids</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="sec_fourier_series.html#sec_fourier_series-5" class="internal"><span class="codenumber">2.1.2</span> <span class="title">Least-squares Fit of a Sinusoid</span></a></div></li>
+<li class="toc-item toc-exercises"><div class="toc-title-box"><a href="sec_fourier_series.html#ex_sinusoids" class="internal"><span class="codenumber">2.1.3</span> <span class="title">Exercises</span></a></div></li>
+</ul>
+</li>
+<li class="toc-item toc-section">
+<div class="toc-title-box"><a href="sec_trig_polynomials.html" class="internal"><span class="codenumber">2.2</span> <span class="title">Trigonometric Polynomials</span></a></div>
+<ul class="structural toc-item-list">
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="sec_trig_polynomials.html#sec_trig_polynomials-4" class="internal"><span class="codenumber">2.2.1</span> <span class="title">Trigonometric Polynomials</span></a></div></li>
+<li class="toc-item toc-exercises"><div class="toc-title-box"><a href="sec_trig_polynomials.html#ex_trig_polynomials" class="internal"><span class="codenumber">2.2.2</span> <span class="title">Exercises</span></a></div></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toc-item toc-chapter">
+<div class="toc-title-box"><a href="ch-contours.html" class="internal"><span class="codenumber">3</span> <span class="title">Contours and Lingo</span></a></div>
+<ul class="structural toc-item-list">
+<li class="toc-item toc-section">
+<div class="toc-title-box"><a href="sec_functionnotation.html" class="internal"><span class="codenumber">3.1</span> <span class="title">Function Notation</span></a></div>
+<ul class="structural toc-item-list"><li class="toc-item toc-exercises"><div class="toc-title-box"><a href="sec_functionnotation.html#ex_firstch-intro" class="internal"><span class="codenumber">3.1</span> <span class="title">Exercises</span></a></div></li></ul>
+</li>
+<li class="toc-item toc-section">
+<div class="toc-title-box"><a href="sec_3space.html" class="internal"><span class="codenumber">3.2</span> <span class="title">A Tour of 3-Space</span></a></div>
+<ul class="structural toc-item-list"><li class="toc-item toc-exercises"><div class="toc-title-box"><a href="sec_3space.html#ex_3space" class="internal"><span class="codenumber">3.2</span> <span class="title">Exercises</span></a></div></li></ul>
+</li>
+<li class="toc-item toc-section">
+<div class="toc-title-box"><a href="sec_contour_diagrams.html" class="internal"><span class="codenumber">3.3</span> <span class="title">Contour Diagrams</span></a></div>
+<ul class="structural toc-item-list"><li class="toc-item toc-exercises"><div class="toc-title-box"><a href="sec_contour_diagrams.html#ex_contour_diagrams" class="internal"><span class="codenumber">3.3</span> <span class="title">Exercises</span></a></div></li></ul>
+</li>
+<li class="toc-item toc-section">
+<div class="toc-title-box"><a href="sec_spherical_coords.html" class="internal"><span class="codenumber">3.4</span> <span class="title">Additional Coordinate Systems</span></a></div>
+<ul class="structural toc-item-list">
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="sec_spherical_coords.html#sec_spherical_coords-4" class="internal"><span class="codenumber">3.4.1</span> <span class="title">Polar Coordinates</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="sec_spherical_coords.html#sphericalcoordinatesection" class="internal"><span class="codenumber">3.4.2</span> <span class="title">Spherical Coordinates</span></a></div></li>
+<li class="toc-item toc-exercises"><div class="toc-title-box"><a href="sec_spherical_coords.html#ex_spherical_coords" class="internal"><span class="codenumber">3.4.3</span> <span class="title">Exercises</span></a></div></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toc-item toc-chapter">
+<div class="toc-title-box"><a href="ch_vectors.html" class="internal"><span class="codenumber">4</span> <span class="title">Modeling Force: Vectors</span></a></div>
+<ul class="structural toc-item-list">
+<li class="toc-item toc-section">
+<div class="toc-title-box"><a href="sec_displacementvectors.html" class="internal"><span class="codenumber">4.1</span> <span class="title">Displacement Vectors</span></a></div>
+<ul class="structural toc-item-list"><li class="toc-item toc-exercises"><div class="toc-title-box"><a href="sec_displacementvectors.html#ex_sec_displacementvectors" class="internal"><span class="codenumber">4.1</span> <span class="title">Exercises</span></a></div></li></ul>
+</li>
+<li class="toc-item toc-section">
+<div class="toc-title-box"><a href="sec_dotproduct.html" class="internal"><span class="codenumber">4.2</span> <span class="title">Dot Product</span></a></div>
+<ul class="structural toc-item-list"><li class="toc-item toc-exercises"><div class="toc-title-box"><a href="sec_dotproduct.html#ex_dotproduct" class="internal"><span class="codenumber">4.2</span> <span class="title">Exercises</span></a></div></li></ul>
+</li>
+<li class="toc-item toc-section">
+<div class="toc-title-box"><a href="sec_cross_product.html" class="internal"><span class="codenumber">4.3</span> <span class="title">The Cross Product</span></a></div>
+<ul class="structural toc-item-list"><li class="toc-item toc-exercises"><div class="toc-title-box"><a href="sec_cross_product.html#ex_crossproduct" class="internal"><span class="codenumber">4.3</span> <span class="title">Exercises</span></a></div></li></ul>
+</li>
+</ul>
+</li>
+<li class="toc-item toc-chapter">
+<div class="toc-title-box"><a href="ch-differentiation.html" class="internal"><span class="codenumber">5</span> <span class="title">Rate of Change: Differentiation</span></a></div>
+<ul class="structural toc-item-list">
+<li class="toc-item toc-section">
+<div class="toc-title-box"><a href="sec_partial_differentiation.html" class="internal"><span class="codenumber">5.1</span> <span class="title">Partial Differentiation</span></a></div>
+<ul class="structural toc-item-list">
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="sec_partial_differentiation.html#sec_partial_differentiation-4" class="internal"><span class="codenumber">5.1.1</span> <span class="title">First-order Partial Derivatives</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="sec_partial_differentiation.html#interpretfirstorderpartials" class="internal"><span class="codenumber">5.1.2</span> <span class="title">Interpretations of First-order Partial Derivatives</span></a></div></li>
+<li class="toc-item toc-exercises"><div class="toc-title-box"><a href="sec_partial_differentiation.html#ex_partialdifferentiation" class="internal"><span class="codenumber">5.1.3</span> <span class="title">Exercises</span></a></div></li>
+</ul>
+</li>
+<li class="toc-item toc-section">
+<div class="toc-title-box"><a href="sec_the_gradient.html" class="internal"><span class="codenumber">5.2</span> <span class="title">The Gradient</span></a></div>
+<ul class="structural toc-item-list"><li class="toc-item toc-exercises"><div class="toc-title-box"><a href="sec_the_gradient.html#ex_the_gradient" class="internal"><span class="codenumber">5.2</span> <span class="title">Exercises</span></a></div></li></ul>
+</li>
+<li class="toc-item toc-section">
+<div class="toc-title-box"><a href="sec_chain_rule.html" class="internal"><span class="codenumber">5.3</span> <span class="title">The Chain Rule</span></a></div>
+<ul class="structural toc-item-list"><li class="toc-item toc-exercises"><div class="toc-title-box"><a href="sec_chain_rule.html#ex_chain_rule" class="internal"><span class="codenumber">5.3</span> <span class="title">Exercises</span></a></div></li></ul>
+</li>
+</ul>
+</li>
+<li class="toc-item toc-chapter contains-active">
+<div class="toc-title-box"><a href="ch-vectorfields.html" class="internal"><span class="codenumber">6</span> <span class="title">Flow: Vector Fields</span></a></div>
+<ul class="structural toc-item-list contains-active">
+<li class="toc-item toc-section">
+<div class="toc-title-box"><a href="sec_vector_fields.html" class="internal"><span class="codenumber">6.1</span> <span class="title">Vector Fields</span></a></div>
+<ul class="structural toc-item-list"><li class="toc-item toc-exercises"><div class="toc-title-box"><a href="sec_vector_fields.html#ex_sec_vectorfields" class="internal"><span class="codenumber">6.1</span> <span class="title">Exercises</span></a></div></li></ul>
+</li>
+<li class="toc-item toc-section active">
+<div class="toc-title-box"><a href="sec_circulation.html" class="internal"><span class="codenumber">6.2</span> <span class="title">Circulation</span></a></div>
+<ul class="structural toc-item-list"><li class="toc-item toc-exercises"><div class="toc-title-box"><a href="sec_circulation.html#ex_sec_circulation" class="internal"><span class="codenumber">6.2</span> <span class="title">Exercises</span></a></div></li></ul>
+</li>
+<li class="toc-item toc-section">
+<div class="toc-title-box"><a href="sec_curl.html" class="internal"><span class="codenumber">6.3</span> <span class="title">Curl</span></a></div>
+<ul class="structural toc-item-list"><li class="toc-item toc-exercises"><div class="toc-title-box"><a href="sec_curl.html#ex_sec_curl" class="internal"><span class="codenumber">6.3</span> <span class="title">Exercises</span></a></div></li></ul>
+</li>
+<li class="toc-item toc-section">
+<div class="toc-title-box"><a href="sec_flux.html" class="internal"><span class="codenumber">6.4</span> <span class="title">Flux</span></a></div>
+<ul class="structural toc-item-list"><li class="toc-item toc-exercises"><div class="toc-title-box"><a href="sec_flux.html#ex_sec_flux" class="internal"><span class="codenumber">6.4</span> <span class="title">Exercises</span></a></div></li></ul>
+</li>
+<li class="toc-item toc-section">
+<div class="toc-title-box"><a href="sec_divergence.html" class="internal"><span class="codenumber">6.5</span> <span class="title">Divergence</span></a></div>
+<ul class="structural toc-item-list"><li class="toc-item toc-exercises"><div class="toc-title-box"><a href="sec_divergence.html#ex_sec_divergence" class="internal"><span class="codenumber">6.5</span> <span class="title">Exercises</span></a></div></li></ul>
+</li>
+<li class="toc-item toc-section">
+<div class="toc-title-box"><a href="sec_Laplacian.html" class="internal"><span class="codenumber">6.6</span> <span class="title">The Laplacian</span></a></div>
+<ul class="structural toc-item-list"><li class="toc-item toc-exercises"><div class="toc-title-box"><a href="sec_Laplacian.html#ex_laplacian" class="internal"><span class="codenumber">6.6</span> <span class="title">Exercises</span></a></div></li></ul>
+</li>
+</ul>
+</li>
+<li class="toc-item toc-chapter">
+<div class="toc-title-box"><a href="ch_taylor_polynomials.html" class="internal"><span class="codenumber">7</span> <span class="title">Approximation II: Taylor Polynomials</span></a></div>
+<ul class="structural toc-item-list">
+<li class="toc-item toc-section">
+<div class="toc-title-box"><a href="sec_taylor_polynomials_1var.html" class="internal"><span class="codenumber">7.1</span> <span class="title">Taylor Polynomials in One Variable</span></a></div>
+<ul class="structural toc-item-list">
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="sec_taylor_polynomials_1var.html#sec_taylor_polynomials_1var-4" class="internal"><span class="codenumber">7.1.1</span> <span class="title">Taylor Polynomials of Degree 2</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="sec_taylor_polynomials_1var.html#sec_taylor_polynomials_1var-5" class="internal"><span class="codenumber">7.1.2</span> <span class="title">Taylor Polynomials of Degree <span class="process-math">\(n\)</span></span></a></div></li>
+<li class="toc-item toc-exercises"><div class="toc-title-box"><a href="sec_taylor_polynomials_1var.html#ex_taylor_polynomials_1var" class="internal"><span class="codenumber">7.1.3</span> <span class="title">Exercises</span></a></div></li>
+</ul>
+</li>
+<li class="toc-item toc-section">
+<div class="toc-title-box"><a href="sec_taylor_polynomials_2var.html" class="internal"><span class="codenumber">7.2</span> <span class="title">Taylor Polynomials in Two Variables</span></a></div>
+<ul class="structural toc-item-list">
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="sec_taylor_polynomials_2var.html#sec_taylor_polynomials_2var-4" class="internal"><span class="codenumber">7.2.1</span> <span class="title">Linear Approximations in Two Variables</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="sec_taylor_polynomials_2var.html#sec_taylor_polynomials_2var-5" class="internal"><span class="codenumber">7.2.2</span> <span class="title">Quadratic Approximations in Two Variables</span></a></div></li>
+<li class="toc-item toc-section"><div class="toc-title-box"><a href="sec_taylor_polynomials_2var.html#sec_taylor_polynomials_2var-6" class="internal"><span class="codenumber">7.2.1</span> <span class="title">Translations, Divergence, Vorticity, and Deformation</span></a></div></li>
+<li class="toc-item toc-section"><div class="toc-title-box"><a href="sec_taylor_polynomials_2var.html#sec_taylor_polynomials_2var-7" class="internal"><span class="codenumber">7.2.2</span> <span class="title">Kinematics of the Horizontal Wind Field</span></a></div></li>
+<li class="toc-item toc-exercises"><div class="toc-title-box"><a href="sec_taylor_polynomials_2var.html#ex_taylor_polynomials_2var" class="internal"><span class="codenumber">7.2.5</span> <span class="title">Exercises</span></a></div></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toc-item toc-backmatter">
+<div class="toc-title-box"><a href="backmatter.html" class="internal"><span class="title">Backmatter</span></a></div>
+<ul class="structural toc-item-list">
+<li class="toc-item toc-index"><div class="toc-title-box"><a href="backmatter-2.html" class="internal"><span class="title">Index</span></a></div></li>
+<li class="toc-item toc-colophon"><div class="toc-title-box"><a href="backmatter-3.html" class="internal"><span class="title">Colophon</span></a></div></li>
+</ul>
+</li>
+</ul></nav></div>
+<main class="ptx-main"><div id="ptx-content" class="ptx-content"><section xmlns:pf="https://prefigure.org" class="section" id="sec_circulation"><h2 class="heading hide-type">
+<span class="type">Section</span><span class="space"> </span><span class="codenumber">6.2</span><span class="space"> </span><span class="title">Circulation</span>
+</h2>
+<article class="objectives goal-like" id="sec_circulation-2"><h3 class="heading"><span class="type">Motivating Questions</span></h3>
+<ul class="disc" id="sec_circulation-2-1">
+<li id="sec_circulation-2-1-1"><div class="para" id="sec_circulation-2-1-1-1">In a vector field, what is circulation and how do we measure it?</div></li>
+<li id="sec_circulation-2-1-2"><div class="para" id="sec_circulation-2-1-2-1">What is the difference between circulation and vorticity in a vector field?</div></li>
+<li id="sec_circulation-2-1-3"><div class="para" id="sec_circulation-2-1-3-1">What is circulation density and how is it calculated?</div></li>
+</ul></article><div class="para" id="sec_circulation-3">To see where the term circulation comes from and what it measures, let <span class="process-math">\(\vec{v}\)</span> represent the velocity field of a fluid and let <span class="process-math">\(C\)</span> be an oriented curve.  If <span class="process-math">\(\vec{T}(P)\)</span> represents a (unit) tangent vector to <span class="process-math">\(C\)</span> at point <span class="process-math">\(P\text{,}\)</span> then <span class="process-math">\(\vec{v}(P) \cdot \vec{T}(P)\)</span> measures how aligned the vector field <span class="process-math">\(\vec{v}\)</span> or flow is with the oriented curve at <span class="process-math">\(P\text{.}\)</span>
+</div>
+<div class="para" id="sec_circulation-4">Taking several points <span class="process-math">\(P_i\)</span> on the curve <span class="process-math">\(C\text{,}\)</span> computing the dot products <span class="process-math">\(\vec{v}(P_i) \cdot \vec{T}(P_i)\text{,}\)</span> and then adding up these values will give us a number.  This value (positive, negative, and size) tells us just how much <span class="process-math">\(C\)</span> goes with the flow (or goes against it).</div>
+<figure class="figure figure-like" id="IdeaOfCirculation1"><div class="image-box" style="width: 35%; margin-left: 32.5%; margin-right: 32.5%;"><img src="generated/latex-image/IdeaOfCirculation1Pic.svg" role="img" class="contained" alt="The idea of circulation."></div>
+<figcaption><span class="type">Figure</span><span class="space"> </span><span class="codenumber">6.2.1<span class="period">.</span></span><span class="space"> </span>The sum of dot products <span class="process-math">\(\vec{v}_0 \cdot \vec{T}_0 +\vec{v}_1 \cdot \vec{T}_1 + \vec{v}_2 \cdot \vec{T}_2\)</span> is a measure of how aligned the vector field <span class="process-math">\(\vec{v}\)</span> is to the oriented curve <span class="process-math">\(C\)</span> (oriented from <span class="process-math">\(P_0\)</span> to <span class="process-math">\(P_3\text{,}\)</span> for example).</figcaption></figure><div class="para logical" id="sec_circulation-6">
+<div class="para">
+<dfn class="terminology">Circulation</dfn>, often denoted by <span class="process-math">\(\Gamma\text{,}\)</span> will measure how much a closed oriented curve <span class="process-math">\(C\)</span> goes with the flow of a vector field <span class="process-math">\(\vec{v}\text{.}\)</span>  A definite integral can be used to produce the value of <span class="process-math">\(\Gamma\text{.}\)</span>
+</div>
+<ul class="disc" id="sec_circulation-6-8">
+<li id="sec_circulation-6-8-1"><div class="para" id="p-derived-sec_circulation-6-8-1">Circulation, <span class="process-math">\(\Gamma\text{,}\)</span> is a number.</div></li>
+<li id="sec_circulation-6-8-2"><div class="para" id="p-derived-sec_circulation-6-8-2">
+<span class="process-math">\(\Gamma\)</span> will be positive if <span class="process-math">\(C\)</span> goes with the flow; negative if <span class="process-math">\(C\)</span> goes against the flow.</div></li>
+<li id="sec_circulation-6-8-3"><div class="para" id="p-derived-sec_circulation-6-8-3">The magnitude of the circulation measures how much the flow is with <span class="process-math">\(C\text{.}\)</span>
+</div></li>
+</ul>
+</div>
+<article class="example example-like" id="SignOfCirculation"><h3 class="heading">
+<span class="type">Example</span><span class="space"> </span><span class="codenumber">6.2.2</span><span class="period">.</span>
+</h3>
+<div class="para" id="SignOfCirculation-1">The circulation <span class="process-math">\(\Gamma\)</span> for the closed, oriented curve <span class="process-math">\(C\)</span> in the vector field <span class="process-math">\(\vec{v}\)</span> shown in <a href="sec_circulation.html#VFCirculationPosNeg1" class="xref" data-knowl="./knowl/xref/VFCirculationPosNeg1.html" data-reveal-label="Reveal" data-close-label="Close" title="Figure 6.2.3">Figure 6.2.3</a> is negative.</div>
+<figure class="figure figure-like" id="VFCirculationPosNeg1"><div class="image-box" style="width: 50%; margin-left: 25%; margin-right: 25%;"><img src="generated/latex-image/VFCirculationPosNeg1Pic.svg" role="img" class="contained" alt="Negative Circulation."></div>
+<figcaption><span class="type">Figure</span><span class="space"> </span><span class="codenumber">6.2.3<span class="period">.</span></span><span class="space"> </span>A vector field <span class="process-math">\(v\)</span> and oriented curve <span class="process-math">\(C\)</span> having negative circulation <span class="process-math">\(\Gamma\text{.}\)</span></figcaption></figure><div class="para" id="SignOfCirculation-3">The circulation <span class="process-math">\(\Gamma\)</span> for the closed, oriented curve <span class="process-math">\(C\)</span> in the vector field <span class="process-math">\(\vec{v}\)</span> shown in <a href="sec_circulation.html#VFCirculationPosNeg2" class="xref" data-knowl="./knowl/xref/VFCirculationPosNeg2.html" data-reveal-label="Reveal" data-close-label="Close" title="Figure 6.2.4">Figure 6.2.4</a> is positive.</div>
+<figure class="figure figure-like" id="VFCirculationPosNeg2"><div class="image-box" style="width: 50%; margin-left: 25%; margin-right: 25%;"><img src="generated/latex-image/VFCirculationPosNeg2Pic.svg" role="img" class="contained" alt="Positive Circulation."></div>
+<figcaption><span class="type">Figure</span><span class="space"> </span><span class="codenumber">6.2.4<span class="period">.</span></span><span class="space"> </span>A vector field <span class="process-math">\(v\)</span> and oriented curve <span class="process-math">\(C\)</span> having positive circulation <span class="process-math">\(\Gamma\text{.}\)</span></figcaption></figure></article><details id="PositiveOrNegativeCirculation" class="exercise exercise-like born-hidden-knowl"><summary class="knowl__link"><h3 class="heading">
+<span class="type">Checkpoint</span><span class="space"> </span><span class="codenumber">6.2.5</span><span class="period">.</span><span class="space"> </span><span class="title">Positive or Negative Circulation?</span>
+</h3></summary><article class="exercise exercise-like knowl__content"><div id="momPositiveOrNegativeCirculation-2wrap" style="width:100%;overflow:visible;position:relative"><iframe id="momPositiveOrNegativeCirculation-2" style="position:absolute;z-index:1;object-fit: contain; width: 100%" frameborder="0" data-knowl-callback="sendResizeRequest" src="https://www.myopenmath.com/embedq2.php?id=610301&amp;frame_id=momPositiveOrNegativeCirculation-2"></iframe></div></article></details><div class="para" id="sec_circulation-9">Consider again a vector field <span class="process-math">\(\vec{v}\)</span> and an oriented curve <span class="process-math">\(C\)</span> as shown in <a href="sec_circulation.html#IdeaOfLineInt2" class="xref" data-knowl="./knowl/xref/IdeaOfLineInt2.html" data-reveal-label="Reveal" data-close-label="Close" title="Figure 6.2.6">Figure 6.2.6</a>.  Begin by dividing <span class="process-math">\(C\)</span> into <span class="process-math">\(n\)</span> small, nearly straight pieces along which <span class="process-math">\(\vec{v}\)</span> is approximately constant.  Each piece can be represented by a displacement vector <span class="process-math">\(\Delta \vec{r}_i\)</span> that joins <span class="process-math">\(P_{i-1}\)</span> to <span class="process-math">\(P_{i}\text{.}\)</span>
+</div>
+<figure class="figure figure-like" id="IdeaOfLineInt2"><div class="image-box" style="width: 35%; margin-left: 32.5%; margin-right: 32.5%;"><img src="generated/latex-image/IdeaOfLineInt2Pic.svg" role="img" class="contained" alt="The idea of a line integral."></div>
+<figcaption><span class="type">Figure</span><span class="space"> </span><span class="codenumber">6.2.6<span class="period">.</span></span><span class="space"> </span>Dividing a curve <span class="process-math">\(C\)</span> into pieces in order to approximate circulation <span class="process-math">\(\Gamma\text{.}\)</span></figcaption></figure><div class="para logical" id="sec_circulation-11">
+<div class="para">The value of <span class="process-math">\(\vec{v}\)</span> at each point of this small piece of <span class="process-math">\(C\)</span> is approximately <span class="process-math">\(\vec{v}(P_i)\text{.}\)</span>  If an object experiences a displacement along a closed curve <span class="process-math">\(C\text{,}\)</span> the circulation <span class="process-math">\(\Gamma\)</span> caused by the vector field <span class="process-math">\(\vec{v}\)</span> is approximately</div>
+<div class="displaymath process-math">
+\begin{equation*}
+\sum_{i=1}^{n} \vec{v}(P_i) \cdot \Delta \vec{r}_i.
+\end{equation*}
+</div>
+<div class="para">When the oriented curve <span class="process-math">\(C\)</span> is not closed, the value we approximate still has meaning (and measures how much <span class="process-math">\(C\)</span> ’goes with the flow’).  We call the limiting value in the above expression a line integral.</div>
+</div>
+<article class="definition definition-like" id="sec_circulation-12"><h3 class="heading">
+<span class="type">Definition</span><span class="space"> </span><span class="codenumber">6.2.7</span><span class="period">.</span><span class="space"> </span><span class="title">Line Integral.</span>
+</h3>
+<div class="para logical" id="sec_circulation-12-2">
+<div class="para">The <dfn class="terminology">line integral</dfn> of a vector field <span class="process-math">\(\vec{v}\)</span> along an oriented curve <span class="process-math">\(C\)</span> is</div>
+<div class="displaymath process-math">
+\begin{equation*}
+\int_C {\vec{v}} \cdot d{\vec{r}} = \lim_{\| \Delta \vec{r}_i \| \rightarrow 0} \sum_{i=1}^{n} \vec{v}(P_i) \cdot \Delta \vec{r}_i.
+\end{equation*}
+</div>
+</div></article><article class="example example-like" id="PosNegZeroLineInt1"><h3 class="heading">
+<span class="type">Example</span><span class="space"> </span><span class="codenumber">6.2.8</span><span class="period">.</span><span class="space"> </span><span class="title">Sign of a Line Integral.</span>
+</h3>
+<div id="momPosNegZeroLineInt1-2wrap" style="width:100%;overflow:visible;position:relative"><iframe id="momPosNegZeroLineInt1-2" style="position:absolute;z-index:1;object-fit: contain; width: 100%" frameborder="0" data-knowl-callback="sendResizeRequest" src="https://www.myopenmath.com/embedq2.php?id=610266&amp;frame_id=momPosNegZeroLineInt1-2"></iframe></div></article><div class="para" id="sec_circulation-14"></div>
+<details id="PosNegZeroLineInt2" class="exercise exercise-like born-hidden-knowl"><summary class="knowl__link"><h3 class="heading">
+<span class="type">Checkpoint</span><span class="space"> </span><span class="codenumber">6.2.9</span><span class="period">.</span><span class="space"> </span><span class="title">Sign of a Line Integral II.</span>
+</h3></summary><article class="exercise exercise-like knowl__content"><div id="momPosNegZeroLineInt2-2wrap" style="width:100%;overflow:visible;position:relative"><iframe id="momPosNegZeroLineInt2-2" style="position:absolute;z-index:1;object-fit: contain; width: 100%" frameborder="0" data-knowl-callback="sendResizeRequest" src="https://www.myopenmath.com/embedq2.php?id=610289&amp;frame_id=momPosNegZeroLineInt2-2&amp;width=400&amp;height=300"></iframe></div></article></details><div class="para" id="sec_circulation-16">In the following example, we investigate circulation in the context of wind.</div>
+<article class="example example-like" id="windcirculationexample"><h3 class="heading">
+<span class="type">Example</span><span class="space"> </span><span class="codenumber">6.2.10</span><span class="period">.</span><span class="space"> </span><span class="title">Circulation from Wind.</span>
+</h3>
+<div class="para" id="windcirculationexample-2">Suppose the wind velocity vector field <span class="process-math">\(\vec{v}\)</span> is easterly and decreasing at a rate of <span class="process-math">\(10 \frac{m}{s}\)</span> per <span class="process-math">\(1000 \ km\)</span> toward the north (see <a href="sec_circulation.html#windcircexamplepic" class="xref" data-knowl="./knowl/xref/windcircexamplepic.html" data-reveal-label="Reveal" data-close-label="Close" title="Figure 6.2.11">Figure 6.2.11</a>).  That is, <span class="process-math">\(\vec{v} = -(20-y/100 \frac{m}{s})\vec{i}\text{.}\)</span>  We determine the circulation <span class="process-math">\(\Gamma\)</span> about a <span class="process-math">\(1000 \ km \times 1000 \ km\)</span> square that is oriented in a counterclockwise fashion.</div>
+<figure class="figure figure-like" id="windcircexamplepic"><div class="image-box" style="width: 50%; margin-left: 25%; margin-right: 25%;"><img src="generated/latex-image/mywindcircexamplepic.svg" role="img" class="contained" alt="An easterly wind."></div>
+<figcaption><span class="type">Figure</span><span class="space"> </span><span class="codenumber">6.2.11<span class="period">.</span></span><span class="space"> </span>Oriented curve <span class="process-math">\(C\)</span> and vector field <span class="process-math">\(\vec{v}\)</span> used in <a href="sec_circulation.html#windcirculationexample" class="xref" data-knowl="./knowl/xref/windcirculationexample.html" data-reveal-label="Reveal" data-close-label="Close" title="Example 6.2.10: Circulation from Wind">Example 6.2.10</a>.</figcaption></figure><div class="para logical" id="windcirculationexample-4">
+<div class="para">Since the contour <span class="process-math">\(C\)</span> is made up of four line segments, computation of the line integral giving <span class="process-math">\(\Gamma\)</span> becomes the sum</div>
+<div class="displaymath process-math" id="windcirculationexample-4-3">
+\begin{align*}
+\Gamma = \mathstrut \amp \int_C \vec{v} \cdot d\vec{r} \\
+= \mathstrut \amp (-20 \ \frac{m}{s})\vec{i} \cdot (1000 \ km)\vec{i} +  (-(20-y/100) \ \frac{m}{s})\vec{i} \cdot (1000 \ km)\vec{j}  \\
+\mathstrut \amp + (-10 \ \frac{m}{s})\vec{i} \cdot (-1000 \ km)\vec{i} + (-(20-y/100) \ \frac{m}{s})\vec{i} \cdot (-1000 \ km)\vec{j} \\
+= \mathstrut \amp -20,000,000 \ \frac{m^2}{s} + 0 + 10,000,000 \ \frac{m^2}{s} + 0 \\
+= \mathstrut \amp -1 \times 10^7 \ \frac{m^2}{s}.  
+\end{align*}
+</div>
+<div class="para">It makes sense that <span class="process-math">\(\Gamma\)</span> is negative - the wind is more against <span class="process-math">\(C\)</span> than it is with <span class="process-math">\(C\text{.}\)</span>  Note also the units of the circulation are area per second.</div>
+</div></article><div class="para" id="sec_circulation-18"></div>
+<details id="WindCirculationCheck" class="exercise exercise-like born-hidden-knowl"><summary class="knowl__link"><h3 class="heading">
+<span class="type">Checkpoint</span><span class="space"> </span><span class="codenumber">6.2.12</span><span class="period">.</span><span class="space"> </span><span class="title">Circulation from Wind II.</span>
+</h3></summary><article class="exercise exercise-like knowl__content"><div class="para" id="WindCirculationCheck-2-1">Determine the circulation <span class="process-math">\(\Gamma\)</span> about a <span class="process-math">\(300 \ {\rm{km}} \times 200 \ {\rm{km}}\)</span> rectangle where the (wind) velocity vector <span class="process-math">\(\vec{v}\)</span> is easterly and decreasing linearly at a rate of <span class="process-math">\(2.5 \ \frac{m}{s}\)</span> per <span class="process-math">\(100 \ {\rm{km}}\)</span> toward the north.  That is, <span class="process-math">\(\vec{v} = -(10-y/40 \frac{m}{s})\vec{i}\text{.}\)</span> <figure class="figure figure-like" id="windcircexample2pic"><div class="image-box" style="width: 50%; margin-left: 25%; margin-right: 25%;"><img src="generated/latex-image/mywindcircexample2pic.svg" role="img" class="contained" alt="Another easterly wind."></div>
+<figcaption><span class="type">Figure</span><span class="space"> </span><span class="codenumber">6.2.13<span class="period">.</span></span><span class="space"> </span>Oriented curve <span class="process-math">\(C\)</span> and vector field <span class="process-math">\(\vec{v}\)</span> used in <a href="sec_circulation.html#WindCirculationCheck" class="xref" data-knowl="./knowl/xref/WindCirculationCheck.html" data-reveal-label="Reveal" data-close-label="Close" title="Checkpoint 6.2.12: Circulation from Wind II">Checkpoint 6.2.12</a>.</figcaption></figure>
+</div>
+<div class="solutions"><details id="WindCirculationCheck-3" class="answer solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Answer</span><span class="period">.</span></summary><div class="answer solution-like knowl__content">
+<div class="para" id="WindCirculationCheck-3-1"></div>
+<div class="displaymath process-math" id="WindCirculationCheck-3-2">
+\begin{align*}
+\displaystyle \Gamma = \mathstrut \amp \int_C \vec{v} \cdot d\vec{r} \\
+= \mathstrut \amp (-10 \ \frac{m}{s} \ \vec{i})(300 \ {\rm{km}} \ \vec{i}) + (-10-y/40 \ \frac{m}{s} \ \vec{i})(200 \ {\rm{km}} \ \vec{j}) \\
+\mathstrut \amp +  (-5 \ \frac{m}{s} \ \vec{i})(-300 \ {\rm{km}} \ \vec{i}) + (-10-y/40 \ \frac{m}{s} \ \vec{i})(-200 \ {\rm{km}} \ \vec{j})\\
+= \mathstrut \amp -3,000,000 \ \frac{m^2}{s} + 0 + 1,500,000 \ \frac{m^2}{s} + 0\\
+= \mathstrut \amp -1,500,000 \ \frac{m^2}{s}.
+\end{align*}
+</div>
+</div></details></div></article></details><div class="para logical" id="sec_circulation-20">
+<div class="para">Understanding circulation in three dimensions may be easier with the help of a paddlewheel (see <a href="sec_circulation.html#PaddleWheel" class="xref" data-knowl="./knowl/xref/PaddleWheel.html" data-reveal-label="Reveal" data-close-label="Close" title="Figure 6.2.14">Figure 6.2.14</a>).  Let <span class="process-math">\(\vec{v}(x,y,z)\)</span> be a vector field and imagine placing a tiny paddlewheel in the vector field at the point <span class="process-math">\((x, y, z)\)</span> so that the handle points in the direction of the axis that you want to measure the circulation of <span class="process-math">\(\vec{v}\)</span> around.</div>
+<ul class="disc" id="sec_circulation-20-5">
+<li id="sec_circulation-20-5-1"><div class="para" id="p-derived-sec_circulation-20-5-1">The angular velocity of the paddlewheel measures the strength of the circulation.</div></li>
+<li id="sec_circulation-20-5-2"><div class="para" id="p-derived-sec_circulation-20-5-2">The circulation is positive if the rotation is counterclockwise and negative if the rotation is clockwise (as you look down the handle of the paddlewheel).</div></li>
+</ul>
+</div>
+<figure class="figure figure-like" id="PaddleWheel"><div class="image-box" style="width: 50%; margin-left: 25%; margin-right: 25%;"><img src="external/PaddleWheel3Mod.jpg" class="contained" alt="A paddle wheel."></div>
+<figcaption><span class="type">Figure</span><span class="space"> </span><span class="codenumber">6.2.14<span class="period">.</span></span><span class="space"> </span>A paddle wheel.  Source:<a class="external" href="" target="_blank">https://opentextbc.ca/calculusv3openstax/</a><details class="ptx-footnote" aria-live="polite" id="PaddleWheel-1-2"><summary class="ptx-footnote__number" title="Footnote 83"><sup> 83 </sup></summary><div class="ptx-footnote__contents" id="PaddleWheel-1-2"><code class="code-inline tex2jax_ignore"></code></div></details></figcaption></figure><article class="example example-like" id="Curl1Pic"><h3 class="heading">
+<span class="type">Example</span><span class="space"> </span><span class="codenumber">6.2.15</span><span class="period">.</span><span class="space"> </span><span class="title">Circulation - Positive, Negative, or Zero?</span>
+</h3>
+<div id="momCurl1Pic-2wrap" style="width:100%;overflow:visible;position:relative"><iframe id="momCurl1Pic-2" style="position:absolute;z-index:1;object-fit: contain; width: 100%" frameborder="0" data-knowl-callback="sendResizeRequest" src="https://www.myopenmath.com/embedq2.php?id=886996&amp;frame_id=momCurl1Pic-2"></iframe></div></article><div class="para" id="sec_circulation-23">Circulation and vorticity are two measures of rotation of a vector field.</div>
+<ul class="disc" id="sec_circulation-24">
+<li id="sec_circulation-24-1"><div class="para" id="p-derived-sec_circulation-24-1">
+<dfn class="terminology">Circulation</dfn> around a closed curve <span class="process-math">\(C\text{,}\)</span> <span class="process-math">\(\Gamma\text{,}\)</span> is a number.  It is a macroscopic measure of rotation in a finite region (of the fluid, such as air).</div></li>
+<li id="sec_circulation-24-2"><div class="para" id="p-derived-sec_circulation-24-2">
+<dfn class="terminology">Vorticity</dfn> is a vector field. It is a microscopic measure of rotation at any point (in the fluid).</div></li>
+</ul>
+<div class="para" id="sec_circulation-25">Macroscopic and microscopic circulation need not be related.  You can have one without the other.  Imagine a leaf circling in an eddy in a river.  The leaf may not be spinning. Or, the leaf may spin about its center as it floats down the river.</div>
+<div class="para" id="sec_circulation-26">While circulation is helpful in understanding macroscopic rotation, the concept of circulation density is of more value in understanding microscopic rotation.  We now introduce this concept in order to measure vorticity.</div>
+<article class="definition definition-like" id="sec_circulation-27"><h3 class="heading">
+<span class="type">Definition</span><span class="space"> </span><span class="codenumber">6.2.16</span><span class="period">.</span><span class="space"> </span><span class="title">Circulation Density.</span>
+</h3>
+<div class="para logical" id="sec_circulation-27-2">
+<div class="para">The <dfn class="terminology">circulation density</dfn> of a smooth vector field <span class="process-math">\(\vec{v}\)</span> at <span class="process-math">\(P = (x,y,z)\)</span> around the direction of a unit vector <span class="process-math">\(\vec{n}\)</span> is defined as</div>
+<div class="displaymath process-math">
+\begin{equation*}
+circ_{\vec{n}} \vec{v}(x,y,z) = \lim_{Area \rightarrow 0} \frac{\int_C \vec{v} \cdot d\vec{r}}{Area \ inside \ C},
+\end{equation*}
+</div>
+<div class="para">where <span class="process-math">\(C\)</span> is a circle centered at <span class="process-math">\(P\)</span> and perpendicular to <span class="process-math">\(\vec{n}\text{.}\)</span>
+</div>
+</div></article><figure class="figure figure-like" id="paddlewheel2"><div class="image-box" style="width: 25%; margin-left: 37.5%; margin-right: 37.5%;"><img src="generated/latex-image/paddlewheel2pic.svg" role="img" class="contained" alt="Circulation Density."></div>
+<figcaption><span class="type">Figure</span><span class="space"> </span><span class="codenumber">6.2.17<span class="period">.</span></span><span class="space"> </span>Circulation Density.</figcaption></figure><div class="para" id="sec_circulation-29">Think of <span class="process-math">\(\vec{n}\)</span> in <a href="sec_circulation.html#paddlewheel2" class="xref" data-knowl="./knowl/xref/paddlewheel2.html" data-reveal-label="Reveal" data-close-label="Close" title="Figure 6.2.17">Figure 6.2.17</a> as the handle of a paddlewheel.  The orientation of the circle <span class="process-math">\(C\)</span> is determined by the right-hand rule: If you place your right thumb in the direction of <span class="process-math">\(\vec{n}\text{,}\)</span> your fingers curl in the direction of <span class="process-math">\(C\text{.}\)</span>  The quantity <span class="process-math">\(circ_{\vec{n}}\vec{v}\)</span> measures the circulation per unit area around <span class="process-math">\(\vec{n}\text{.}\)</span>
+</div>
+<article class="example example-like" id="GreatestCirculation"><h3 class="heading">
+<span class="type">Example</span><span class="space"> </span><span class="codenumber">6.2.18</span><span class="period">.</span><span class="space"> </span><span class="title">Direction of Greatest Circulation.</span>
+</h3>
+<div class="para" id="GreatestCirculation-2">A vector field <span class="process-math">\(\vec{v}(x,y,z)\)</span> is shown in <a href="sec_circulation.html#Curl3Update" class="xref" data-knowl="./knowl/xref/Curl3Update.html" data-reveal-label="Reveal" data-close-label="Close" title="Figure 6.2.19">Figure 6.2.19</a>.  For approximately what value of <span class="process-math">\(\vec{n}\)</span> does <span class="process-math">\(circ_{\vec{n}}\vec{v}(0,0,0)\)</span> appear to be the greatest?  Choosing <span class="process-math">\(\vec{n} = \vec{k}\)</span> would produce the greatest circulation because it appears that placing the paddlewheel so that the handle points straight up would result in the fastest counterclockwise rotation.</div>
+<figure class="figure figure-like" id="Curl3Update"><div class="image-box" style="width: 50%; margin-left: 25%; margin-right: 25%;"><img src="external/Curl3Update.jpg" class="contained" alt="Greatest Circulation."></div>
+<figcaption><span class="type">Figure</span><span class="space"> </span><span class="codenumber">6.2.19<span class="period">.</span></span><span class="space"> </span><span class="process-math">\(circ_{\vec{n}}\vec{v}(0,0,0)\)</span> appears to be the greatest when <span class="process-math">\(\vec{n} = \vec{k}\text{.}\)</span></figcaption></figure></article><section class="exercises" id="ex_sec_circulation"><h3 class="heading hide-type">
+<span class="type">Exercises</span><span class="space"> </span><span class="codenumber"></span><span class="space"> </span><span class="title">Exercises</span>
+</h3>
+<article class="exercise exercise-like" id="PosNegZeroLineInt3"><h4 class="heading">
+<span class="codenumber">1<span class="period">.</span></span><span class="space"> </span><span class="title">Sign of a Line Integral III.</span>
+</h4>
+<div id="momPosNegZeroLineInt3-2wrap" style="width:100%;overflow:visible;position:relative"><iframe id="momPosNegZeroLineInt3-2" style="position:absolute;z-index:1;object-fit: contain; width: 100%" frameborder="0" data-knowl-callback="sendResizeRequest" src="https://www.myopenmath.com/embedq2.php?id=610297&amp;frame_id=momPosNegZeroLineInt3-2"></iframe></div></article><article class="exercise exercise-like" id="WindAroundLake"><h4 class="heading">
+<span class="codenumber">2<span class="period">.</span></span><span class="space"> </span><span class="title">Wind Around a Lake.</span>
+</h4>
+<div class="para" id="WindAroundLake-2-1">Wind around a circular lake of radius 2 km blows in a counterclockwise circular pattern around the lake with wind speed increasing linearly with distance from the center.  The wind reaches a maximum speed of 10 meters per second at the edge of the lake.  Calculate the circulation, <span class="process-math">\(\Gamma\text{,}\)</span> around the lake.</div>
+<div class="solutions"><details id="WindAroundLake-3" class="answer solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Answer</span><span class="period">.</span></summary><div class="answer solution-like knowl__content"><div class="para" id="WindAroundLake-3-1">The path <span class="process-math">\(C\)</span> we will use is a circle with radius 2 km.  At each point on <span class="process-math">\(C\text{,}\)</span> the direction of the vector field (the wind) is parallel to the direction of travel around the lake.  Vectors in the wind field <span class="process-math">\(\vec{v}\)</span> with tangent vectors to the curve <span class="process-math">\(C\)</span> are then always parallel.  This means all dot products in any approximation to the line integral being computed will be the product of the length of the length of wind vectors and the length of tangent vectors to the curve.  The line integral will then be product of 10 meters per second and <span class="process-math">\(2\pi(2 {\rm{km}})\text{.}\)</span>  This give a circulation of <span class="process-math">\(\Gamma = 40,000\pi\)</span> square meters per second.</div></div></details></div></article><article class="exercise exercise-like" id="WindAroundHurricaneEye"><h4 class="heading">
+<span class="codenumber">3<span class="period">.</span></span><span class="space"> </span><span class="title">Wind Around Eye of Hurricane.</span>
+</h4>
+<div class="para" id="WindAroundHurricaneEye-2-1">A hurricane has a circular eye of radius 10 km.  The wind blows in a counterclockwise direction around the eye.  The wind speed at the edge of the eye is 50 meters per second and decreases linearly to 0 as one approaches the center of the eye.  Calculate the circulation, <span class="process-math">\(\Gamma\text{,}\)</span> around a circular path with a radius of 3 km centered at the eye of the hurricane.</div> <figure class="figure figure-like" id="EyeOfFlorence"><div class="image-box" style="width: 50%; margin-left: 25%; margin-right: 25%;"><img src="external/Staring_Down_Hurricane_Florence.jpg" class="contained" alt="The eye of hurricane Florence."></div>
+<figcaption><span class="type">Figure</span><span class="space"> </span><span class="codenumber">6.2.20<span class="period">.</span></span><span class="space"> </span>Hurricane Florence, seen from the International Space Station, showing a well-defined eye at the center of the storm.  Source:<a class="external" href="https://www.nasa.gov/image-feature/staring-down-hurricane-florence" target="_blank">Alexander Gerst (Public Domain)</a><details class="ptx-footnote" aria-live="polite" id="EyeOfFlorence-1-2"><summary class="ptx-footnote__number" title="Footnote 84"><sup> 84 </sup></summary><div class="ptx-footnote__contents" id="EyeOfFlorence-1-2"><code class="code-inline tex2jax_ignore">www.nasa.gov/image-feature/staring-down-hurricane-florence</code></div></details></figcaption></figure><div class="solutions"><details id="WindAroundHurricaneEye-3" class="answer solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Answer</span><span class="period">.</span></summary><div class="answer solution-like knowl__content"><div class="para" id="WindAroundHurricaneEye-3-1">The path <span class="process-math">\(C\)</span> is a circle with radius 3 km.  At each point on <span class="process-math">\(C\text{,}\)</span> the direction of the vector field (the wind) is parallel to the direction of travel around the eye.  So to compute the circulation we can simply multiply the (constant) strength of the wind field with the length of the path around the eye.  This is the product of 15 meters per second (the strength is 30% of 50 meters per second) and <span class="process-math">\(2\pi(3 {\rm{km}})\text{.}\)</span>  This give a circulation of <span class="process-math">\(\Gamma = 90,000\pi\)</span> square meters per second.</div></div></details></div></article><article class="exercise exercise-like" id="CirculationPentagonPath"><h4 class="heading">
+<span class="codenumber">4<span class="period">.</span></span><span class="space"> </span><span class="title">Circulation Around Pentagonal Path.</span>
+</h4>
+<div class="para logical" id="CirculationPentagonPath-2-1">
+<div class="para">Circulation <span class="process-math">\(\Gamma\)</span> around a path <span class="process-math">\(C\)</span> due to a wind <span class="process-math">\(\vec{v}\)</span> can be computed via a line integral <span class="process-math">\(\Gamma = \int_C \vec{v} \cdot d\vec{r}\text{.}\)</span>   In this exercise, we estimate <span class="process-math">\(\Gamma\)</span> around a polygonal path <span class="process-math">\(C\)</span> that is oriented counterclockwise.  To estimate, we view the calculation for a horizontal wind <span class="process-math">\(\vec{v}\)</span> as a dot product</div>
+<div class="displaymath process-math">
+\begin{equation*}
+\Gamma = \sum_i \vec{v}_i \cdot \vec{T}_i = \sum_i \| \vec{v}_i \| \| \vec{T}_i \| \cos(\theta_i)
+\end{equation*}
+</div>
+<div class="para">where</div>
+<ul class="disc" id="CirculationPentagonPath-2-1-9">
+<li id="CirculationPentagonPath-2-1-9-1"><div class="para" id="p-derived-CirculationPentagonPath-2-1-9-1">
+<span class="process-math">\(\vec{v}_i\)</span> represents the wind vector on the <span class="process-math">\(i^{th}\)</span> segment of <span class="process-math">\(C\text{,}\)</span>
+</div></li>
+<li id="CirculationPentagonPath-2-1-9-2"><div class="para" id="p-derived-CirculationPentagonPath-2-1-9-2">
+<span class="process-math">\(\vec{T}_i\)</span> represents a vector tangent to <span class="process-math">\(C\text{,}\)</span> pointing in the direction <span class="process-math">\(C\)</span> is being traversed, and having length that of the <span class="process-math">\(i^{th}\)</span> segment of <span class="process-math">\(C\text{,}\)</span> and</div></li>
+<li id="CirculationPentagonPath-2-1-9-3"><div class="para" id="p-derived-CirculationPentagonPath-2-1-9-3">
+<span class="process-math">\(\theta_i\)</span> is the angle between vectors <span class="process-math">\(\vec{v}_i\)</span> and <span class="process-math">\(\vec{T}_i\text{.}\)</span>
+</div></li>
+</ul>
+</div>  <figure class="figure figure-like" id="pentagonalpath"><div class="image-box" style="width: 50%; margin-left: 25%; margin-right: 25%;"><img src="generated/latex-image/pentagonalpathpic.svg" role="img" class="contained" alt="A pentagonal path."></div>
+<figcaption><span class="type">Figure</span><span class="space"> </span><span class="codenumber">6.2.21<span class="period">.</span></span><span class="space"> </span>Path <span class="process-math">\(C\)</span> for <a href="sec_circulation.html#CirculationPentagonPath" class="xref" data-knowl="./knowl/xref/CirculationPentagonPath.html" data-reveal-label="Reveal" data-close-label="Close" title="Exercise 6.2.4: Circulation Around Pentagonal Path">Exercise 6.2.4</a>.</figcaption></figure> <figure class="table table-like" id="TablePentagonalPath"><figcaption><span class="type">Table</span><span class="space"> </span><span class="codenumber">6.2.22<span class="period">.</span></span><span class="space"> </span>Wind speeds and directions along path found in Figure 6.2.21.</figcaption><div class="tabular-box natural-width"><table class="tabular">
+<tr class="header-horizontal">
+<th scope="col" class="c m b2 r0 l0 t1 lines">Location</th>
+<th scope="col" class="c m b2 r0 l0 t1 lines">Wind Direction</th>
+<th scope="col" class="c m b2 r0 l0 t1 lines">Wind Speed</th>
+</tr>
+<tr>
+<td class="c m b1 r0 l0 t0 lines"><span class="process-math">\(A*\)</span></td>
+<td class="c m b1 r0 l0 t0 lines"><span class="process-math">\(240^{\circ}\)</span></td>
+<td class="c m b1 r0 l0 t0 lines">20 knots</td>
+</tr>
+<tr>
+<td class="c m b1 r0 l0 t0 lines"><span class="process-math">\(B*\)</span></td>
+<td class="c m b1 r0 l0 t0 lines"><span class="process-math">\(180^{\circ}\)</span></td>
+<td class="c m b1 r0 l0 t0 lines">15 knots</td>
+</tr>
+<tr>
+<td class="c m b1 r0 l0 t0 lines"><span class="process-math">\(C*\)</span></td>
+<td class="c m b1 r0 l0 t0 lines"><span class="process-math">\(180^{\circ}\)</span></td>
+<td class="c m b1 r0 l0 t0 lines">12 knots</td>
+</tr>
+<tr>
+<td class="c m b1 r0 l0 t0 lines"><span class="process-math">\(D^*\)</span></td>
+<td class="c m b1 r0 l0 t0 lines"><span class="process-math">\(90^{\circ}\)</span></td>
+<td class="c m b1 r0 l0 t0 lines">8 knots</td>
+</tr>
+<tr>
+<td class="c m b1 r0 l0 t0 lines"><span class="process-math">\(E^*\)</span></td>
+<td class="c m b1 r0 l0 t0 lines"><span class="process-math">\(120^{\circ}\)</span></td>
+<td class="c m b1 r0 l0 t0 lines">10 knots</td>
+</tr>
+</table></div></figure> <div class="para" id="CirculationPentagonPath-2-4">Locations A* through E* on path <span class="process-math">\(C\)</span> have wind data (taken from METARs) as given in <a href="sec_circulation.html#TablePentagonalPath" class="xref" data-knowl="./knowl/xref/TablePentagonalPath.html" data-reveal-label="Reveal" data-close-label="Close" title="Table 6.2.22: Wind speeds and directions along path found in Figure 6.2.21.">Table 6.2.22</a>.</div> <ol class="lower-alpha" id="CirculationPentagonPath-2-5">
+<li id="CirculationPentagonPath-2-5-1">
+<div class="para" id="CirculationPentagonPath-2-5-1-1">Fill in <a href="sec_circulation.html#TableWindSpeedsAtoE" class="xref" data-knowl="./knowl/xref/TableWindSpeedsAtoE.html" data-reveal-label="Reveal" data-close-label="Close" title="Table 6.2.23: Values of \|\vec{v}_i\| \|\vec{T}_i\| and \theta_i along path C shown in Figure 6.2.21.">Table 6.2.23</a> with values of <span class="process-math">\(\|\vec{v}_i\|\text{,}\)</span> <span class="process-math">\(\|\vec{T}_i\|\text{,}\)</span> and <span class="process-math">\(\theta_i\)</span> along path <span class="process-math">\(C\text{.}\)</span>  Values for locations <span class="process-math">\(D^*\)</span> and <span class="process-math">\(E^*\)</span> are provided. </div>
+<figure class="table table-like" id="TableWindSpeedsAtoE"><figcaption><span class="type">Table</span><span class="space"> </span><span class="codenumber">6.2.23<span class="period">.</span></span><span class="space"> </span>Values of <span class="process-math">\(\|\vec{v}_i\|\text{,}\)</span> <span class="process-math">\(\|\vec{T}_i\|\text{,}\)</span> and <span class="process-math">\(\theta_i\)</span> along path <span class="process-math">\(C\)</span> shown in Figure 6.2.21.</figcaption><div class="tabular-box natural-width"><table class="tabular">
+<tr class="header-horizontal">
+<th scope="col" class="c m b2 r0 l0 t1 lines">Location</th>
+<th scope="col" class="c m b2 r0 l0 t1 lines"><span class="process-math">\(\|\vec{v}_i\|\)</span></th>
+<th scope="col" class="c m b2 r0 l0 t1 lines"><span class="process-math">\(\|\vec{T}_i\|\)</span></th>
+<th scope="col" class="c m b2 r0 l0 t1 lines"><span class="process-math">\(\theta_i\)</span></th>
+</tr>
+<tr>
+<td class="c m b1 r0 l0 t0 lines"><span class="process-math">\(A^*\)</span></td>
+<td class="c m b1 r0 l0 t0 lines"></td>
+<td class="c m b1 r0 l0 t0 lines"></td>
+<td class="c m b1 r0 l0 t0 lines"></td>
+</tr>
+<tr>
+<td class="c m b1 r0 l0 t0 lines"><span class="process-math">\(B^*\)</span></td>
+<td class="c m b1 r0 l0 t0 lines"></td>
+<td class="c m b1 r0 l0 t0 lines"></td>
+<td class="c m b1 r0 l0 t0 lines"></td>
+</tr>
+<tr>
+<td class="c m b1 r0 l0 t0 lines"><span class="process-math">\(C^*\)</span></td>
+<td class="c m b1 r0 l0 t0 lines"></td>
+<td class="c m b1 r0 l0 t0 lines"></td>
+<td class="c m b1 r0 l0 t0 lines"></td>
+</tr>
+<tr>
+<td class="c m b1 r0 l0 t0 lines"><span class="process-math">\(D^*\)</span></td>
+<td class="c m b1 r0 l0 t0 lines">
+<span class="process-math">\(8\)</span> knots</td>
+<td class="c m b1 r0 l0 t0 lines">
+<span class="process-math">\(0.4\)</span> NM</td>
+<td class="c m b1 r0 l0 t0 lines"><span class="process-math">\(0^{\circ}\)</span></td>
+</tr>
+<tr>
+<td class="c m b1 r0 l0 t0 lines"><span class="process-math">\(E^*\)</span></td>
+<td class="c m b1 r0 l0 t0 lines">
+<span class="process-math">\(10\)</span> knots</td>
+<td class="c m b1 r0 l0 t0 lines">
+<span class="process-math">\(0.5\)</span> NM</td>
+<td class="c m b1 r0 l0 t0 lines"><span class="process-math">\(120^{\circ}\)</span></td>
+</tr>
+</table></div></figure>
+</li>
+<li id="CirculationPentagonPath-2-5-2"><div class="para" id="p-derived-CirculationPentagonPath-2-5-2">Calculate, approximately, the circulation <span class="process-math">\(\Gamma\)</span> for <span class="process-math">\(C\text{.}\)</span>  Be sure to include units.</div></li>
+</ol>
+<div class="solutions"><details id="CirculationPentagonPath-3" class="answer solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Answer</span><span class="period">.</span></summary><div class="answer solution-like knowl__content"><ol class="lower-alpha" id="CirculationPentagonPath-3-1">
+<li id="CirculationPentagonPath-3-1-1">The angle between the direction of the wind and the tangent to <span class="process-math">\(C\)</span> is the difference between <span class="process-math">\(90^{\circ}-\)</span>Wind Direction given and the direction of motion. <figure class="table table-like" id="TableWindSpeedsAtoEanswers"><figcaption><span class="type">Table</span><span class="space"> </span><span class="codenumber">6.2.24<span class="period">.</span></span><span class="space"> </span>Values of <span class="process-math">\(\|\vec{v}_i\|\text{,}\)</span> <span class="process-math">\(\|\vec{T}_i\|\text{,}\)</span> and <span class="process-math">\(\theta_i\)</span> along path <span class="process-math">\(C\)</span> shown in Figure 6.2.21.</figcaption><div class="tabular-box natural-width"><table class="tabular">
+<tr class="header-horizontal">
+<th scope="col" class="c m b2 r0 l0 t1 lines">Location</th>
+<th scope="col" class="c m b2 r0 l0 t1 lines"><span class="process-math">\(\|\vec{v}_i\|\)</span></th>
+<th scope="col" class="c m b2 r0 l0 t1 lines"><span class="process-math">\(\|\vec{T}_i\|\)</span></th>
+<th scope="col" class="c m b2 r0 l0 t1 lines"><span class="process-math">\(\theta_i\)</span></th>
+</tr>
+<tr>
+<td class="c m b1 r0 l0 t0 lines"><span class="process-math">\(A^*\)</span></td>
+<td class="c m b1 r0 l0 t0 lines">
+<span class="process-math">\(20\)</span> knots</td>
+<td class="c m b1 r0 l0 t0 lines">
+<span class="process-math">\(0.1\)</span> NM</td>
+<td class="c m b1 r0 l0 t0 lines"><span class="process-math">\(210^{\circ}\)</span></td>
+</tr>
+<tr>
+<td class="c m b1 r0 l0 t0 lines"><span class="process-math">\(B^*\)</span></td>
+<td class="c m b1 r0 l0 t0 lines">
+<span class="process-math">\(15\)</span> knots</td>
+<td class="c m b1 r0 l0 t0 lines">
+<span class="process-math">\(0.5\)</span> NM</td>
+<td class="c m b1 r0 l0 t0 lines"><span class="process-math">\(126.9^{\circ}\)</span></td>
+</tr>
+<tr>
+<td class="c m b1 r0 l0 t0 lines"><span class="process-math">\(C^*\)</span></td>
+<td class="c m b1 r0 l0 t0 lines">
+<span class="process-math">\(12\)</span> knots</td>
+<td class="c m b1 r0 l0 t0 lines">
+<span class="process-math">\(0.1\)</span> NM</td>
+<td class="c m b1 r0 l0 t0 lines"><span class="process-math">\(0^{\circ}\)</span></td>
+</tr>
+<tr>
+<td class="c m b1 r0 l0 t0 lines"><span class="process-math">\(D^*\)</span></td>
+<td class="c m b1 r0 l0 t0 lines">
+<span class="process-math">\(8\)</span> knots</td>
+<td class="c m b1 r0 l0 t0 lines">
+<span class="process-math">\(0.4\)</span> NM</td>
+<td class="c m b1 r0 l0 t0 lines"><span class="process-math">\(0^{\circ}\)</span></td>
+</tr>
+<tr>
+<td class="c m b1 r0 l0 t0 lines"><span class="process-math">\(E^*\)</span></td>
+<td class="c m b1 r0 l0 t0 lines">
+<span class="process-math">\(10\)</span> knots</td>
+<td class="c m b1 r0 l0 t0 lines">
+<span class="process-math">\(0.5\)</span> NM</td>
+<td class="c m b1 r0 l0 t0 lines"><span class="process-math">\(120^{\circ}\)</span></td>
+</tr>
+</table></div></figure>
+</li>
+<li id="CirculationPentagonPath-3-1-2"><div class="para" id="p-derived-CirculationPentagonPath-3-1-2"><div class="displaymath process-math" id="CirculationPentagonPath-3-1-2-1">
+\begin{align*}
+\Gamma \approx \mathstrut \amp (20 \ KT)(0.1 \ NM)\cos(210^{\circ}) + (15 \ KT)(0.5 \ NM)\cos(126.9^{\circ}) \\
+\mathstrut \amp + (12 \ KT)(0.1 \ NM)\cos(0^{\circ}) + (8 \ KT)(0.4 \ NM)\cos(0^{\circ})\\
+\mathstrut \amp + (10 \ KT)(0.5 \ NM)\cos(120^{\circ})\\
+= \mathstrut \amp -3.603 \ \frac{nm^2}{hr}
+\end{align*}
+</div></div></li>
+</ol></div></details></div></article><article class="exercise exercise-like" id="SeaBreeze"><h4 class="heading">
+<span class="codenumber">5<span class="period">.</span></span><span class="space"> </span><span class="title">Sea Breeze.</span>
+</h4>
+<div class="para" id="SeaBreeze-2-1">A <dfn class="terminology">sea breeze</dfn> is a coastal wind that blows from sea to land, caused by the temperature difference when the sea surface is colder than the adjacent land.  Explain how the strength of the sea breeze is related to the concept of circulation.</div>
+<div class="solutions"><details id="SeaBreeze-3" class="answer solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Answer</span><span class="period">.</span></summary><div class="answer solution-like knowl__content"></div></details></div></article></section></section></div>
+<div class="ptx-content-footer">
+<a class="previous-button button" href="sec_vector_fields.html" title="Previous"><span xmlns:pf="https://prefigure.org" class="icon material-symbols-outlined" aria-hidden="true">&#xe5cb;</span><span class="name">Prev</span></a><a class="top-button button" href="#" title="Top"><span xmlns:pf="https://prefigure.org" class="icon material-symbols-outlined" aria-hidden="true">&#xe5ce;</span><span class="name">Top</span></a><a class="next-button button" href="sec_curl.html" title="Next"><span class="name">Next</span><span xmlns:pf="https://prefigure.org" class="icon material-symbols-outlined" aria-hidden="true">&#xe5cc;</span></a>
+</div></main>
+</div>
+<div id="ptx-page-footer" class="ptx-page-footer">
+<a xmlns:pf="https://prefigure.org" class="pretext-link" href="https://pretextbook.org" title="PreTeXt"><div class="logo"><svg xmlns="http://www.w3.org/2000/svg" width="100%" height="100%" viewBox="338 3000 8772 6866"><g style="stroke-width:.025in; stroke:black; fill:none"><polyline points="472,3590 472,9732 " style="stroke:#000000;stroke-width:174; stroke-linejoin:miter; stroke-linecap:round; "></polyline><path style="stroke:#000000;stroke-width:126;stroke-linecap:butt;" d="M 4724,9448 A 4660 4660  0  0  1  8598  9259"></path><path style="stroke:#000000;stroke-width:174;stroke-linecap:butt;" d="M 4488,9685 A 4228 4228  0  0  0   472  9732"></path><path style="stroke:#000000;stroke-width:126;stroke-linecap:butt;" d="M 4724,3590 A 4241 4241  0  0  1  8598  3496"></path><path style="stroke:#000000;stroke-width:126;stroke-linecap:round;" d="M 850,3496  A 4241 4241  0  0  1  4724  3590"></path><path style="stroke:#000000;stroke-width:126;stroke-linecap:round;" d="M 850,9259  A 4507 4507  0  0  1  4724  9448"></path><polyline points="5385,4299 4062,8125" style="stroke:#000000;stroke-width:300; stroke-linejoin:miter; stroke-linecap:round;"></polyline><polyline points="8598,3496 8598,9259" style="stroke:#000000;stroke-width:126; stroke-linejoin:miter; stroke-linecap:round;"></polyline><polyline points="850,3496 850,9259" style="stroke:#000000;stroke-width:126; stroke-linejoin:miter; stroke-linecap:round;"></polyline><polyline points="4960,9685 4488,9685" style="stroke:#000000;stroke-width:174; stroke-linejoin:miter; stroke-linecap:round;"></polyline><polyline points="3070,4582 1889,6141 3070,7700" style="stroke:#000000;stroke-width:300; stroke-linejoin:miter; stroke-linecap:round;"></polyline><polyline points="6418,4582 7600,6141 6418,7700" style="stroke:#000000;stroke-width:300; stroke-linejoin:miter; stroke-linecap:round;"></polyline><polyline points="8976,3590 8976,9732" style="stroke:#000000;stroke-width:174; stroke-linejoin:miter; stroke-linecap:round;"></polyline><path style="stroke:#000000;stroke-width:174;stroke-linecap:butt;" d="M 4960,9685 A 4228 4228  0  0  1  8976  9732"></path></g></svg></div></a><a xmlns:pf="https://prefigure.org" class="runestone-link" href="https://runestone.academy" title="Runestone Academy"><img class="logo" src="https://runestone.academy/runestone/static/images/RAIcon_cropped.png"></a><a xmlns:pf="https://prefigure.org" class="mathjax-link" href="https://www.mathjax.org" title="MathJax"><img class="logo" src="https://www.mathjax.org/badge/badge-square-2.png"></a>
+</div>
+</body>
+</html>

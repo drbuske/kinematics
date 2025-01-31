@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<myopenmath xmlns:pi="http://pretextbook.org/2020/pretext/internal" id="757085">
+<statement>
+<p>
+Using Simpson's rule, approximate <m>\displaystyle{\int_{{1}}^{{4}}}\frac{{\cos{{\left({x}\right)}}}}{{x}}\ {\left.{d}{x}\right.}</m> with <m>\displaystyle{S}_{{6}}</m>.  Keep at least two decimal places accuracy in your answer.</p>
+<p>
+<m>\displaystyle{S}_{{6}}=</m><fillin characters="12" />   </p>
+</statement>
+<solution>
+<p><ul><li>-0.47711398246162</li></ul></p>
+</solution>
+</myopenmath>
+

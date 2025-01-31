@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<myopenmath xmlns:pi="http://pretextbook.org/2020/pretext/internal" id="196823">
+<statement>
+<p>
+Sketch the vector field.</p><table><tabular> <row><cell><m>\displaystyle{x}</m></cell><cell><m>\displaystyle{y}</m></cell><cell><m>\displaystyle\vec{{F}}{\left({x},{y}\right)}={\left\langle\frac{{x}}{{2}},\frac{{y}}{{2}}\right\rangle}</m></cell><cell></cell></row><row><cell>2</cell><cell>0</cell><cell><fillin characters="20" /></cell><cell></cell></row><row><cell>0</cell><cell>2</cell><cell><fillin characters="20" /></cell><cell></cell></row><row><cell>-2</cell><cell>0</cell><cell><fillin characters="20" /></cell><cell></cell></row><row><cell>0</cell><cell>-2</cell><cell><fillin characters="20" /></cell><cell></cell></row><row><cell>2</cell><cell>2</cell><cell><fillin characters="20" /></cell><cell></cell></row><row><cell>-2</cell><cell>2</cell><cell><fillin characters="20" /></cell><cell></cell></row><row><cell>-2</cell><cell>-2</cell><cell><fillin characters="20" /></cell><cell></cell></row><row><cell>2</cell><cell>-2</cell><cell><fillin characters="20" /></cell><cell></cell></row></tabular></table><image width="50%"  pi:generated="problems/images/a2eef9ff974ff163417f9d72ee72e529.png" />
+
+
+
+</statement>
+<solution>
+<p><ul><li><m>\displaystyle{\left\langle{1},{0}\right\rangle}</m></li><li><m>\displaystyle{\left\langle{0},{1}\right\rangle}</m></li><li><m>\displaystyle{\left\langle-{1},{0}\right\rangle}</m></li><li><m>\displaystyle{\left\langle{0},-{1}\right\rangle}</m></li><li><m>\displaystyle{\left\langle{1},{1}\right\rangle}</m></li><li><m>\displaystyle{\left\langle-{1},{1}\right\rangle}</m></li><li><m>\displaystyle{\left\langle-{1},-{1}\right\rangle}</m></li><li><m>\displaystyle{\left\langle{1},-{1}\right\rangle}</m></li><li><image width="50%"  pi:generated="problems/images/39b903bbaae3d6630611babb1104e6eb.png" />
+</li></ul></p>
+</solution>
+</myopenmath>
+

@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="utf-8"?>
+<myopenmath xmlns:pi="http://pretextbook.org/2020/pretext/internal" id="1065240">
+<statement>
+<p>
+Compute the right-hand Riemann sum <m>\displaystyle{R}_{{4}}</m> for the function <m>\displaystyle{f{{\left({x}\right)}}}={6}{x}{e}^{{-{x}}}+{3}</m> on <m>\displaystyle{\left[{0},{4}\right]}</m>.  </p><image width="50%"  pi:generated="problems/images/74fb52d9d4e42ffe3d42c9106f322b18.png" />
+<p>
+We write this sum, <m>\displaystyle{R}_{{4}}</m>, using sigma notation as <m>\displaystyle{\sum_{{{i}={1}}}^{{4}}}{f{{\left({x}_{{i}}\right)}}}\Delta{x}</m> where </p>
+<p>
+<m>\displaystyle\Delta{x}=</m><fillin characters="8" />   </p>
+<p>
+<m>\displaystyle{x}_{{1}}=</m><fillin characters="3" />   , <m>\displaystyle{x}_{{2}}=</m><fillin characters="3" />   , <m>\displaystyle{x}_{{3}}=</m><fillin characters="3" />   , and <m>\displaystyle{x}_{{4}}=</m><fillin characters="3" />   </p>
+<p>
+The functional values <m>\displaystyle{f{{\left({x}_{{1}}\right)}}},{f{{\left({x}_{{2}}\right)}}},{f{{\left({x}_{{3}}\right)}}}</m>, and <m>\displaystyle{f{{\left({x}_{{4}}\right)}}}</m> are then calculated.  For example, rounded to the nearest 0.01,</p>
+<p>
+<m>\displaystyle{f{{\left({x}_{{4}}\right)}}}=</m><fillin characters="8" />   </p>
+<p>
+So, rounded to the nearest 0.01, </p>
+<p>
+<m>\displaystyle{R}_{{4}}=</m> <fillin characters="8" />    
+</p>
+</statement>
+<solution>
+<p><ul><li><m>\displaystyle{1}</m></li><li><m>\displaystyle{1}</m></li><li><m>\displaystyle{2}</m></li><li><m>\displaystyle{3}</m></li><li><m>\displaystyle{4}</m></li><li><m>\displaystyle{3.4395753333296}</m></li><li><m>\displaystyle{17.167042609819}</m></li></ul></p>
+</solution>
+</myopenmath>
+

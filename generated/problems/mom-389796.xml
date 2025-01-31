@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<myopenmath xmlns:pi="http://pretextbook.org/2020/pretext/internal" id="389796">
+<statement>
+<p>
+Suppose you were standing on the <m>\displaystyle{x}{y}</m>-plane at the point <m>\displaystyle{\left({6},{4},{0}\right)}</m>, with the positive <m>\displaystyle{z}</m>-axis directed straight upward, and you were facing the <m>\displaystyle{y}{z}</m>-plane.</p>
+<p>
+If you walked forward 5 units, turned <m>\displaystyle{180}</m> degrees to the right, walked forward 2 units, and then finally rose straight upward by 3 units, what would be your final position?</p>
+<p>
+Give your answer as a point: (<underscore/><underscore/>, <underscore/><underscore/>, <underscore/><underscore/>)</p>
+<p>
+Answer: <fillin characters="20" />  
+</p>
+</statement>
+<solution>
+<p><ul><li><m>\displaystyle{\left({3},{4},{3}\right)}</m></li></ul></p><p>Start at <m>\displaystyle{\left({6},{4},{0}\right)}</m> and face the <m>\displaystyle{y}{z}</m>-plane.
+</p>
+<p><ol>
+  <li>After walking forward <m>\displaystyle{5}</m> units, you are at <m>\displaystyle{\left({1},{4},{0}\right)}</m>.</li>
+  <li>Then after turning <m>\displaystyle{180}</m> degrees to the right and walking forward <m>\displaystyle{2}</m> units, your coordinates are <m>\displaystyle{\left({3},{4},{0}\right)}</m>.</li>
+  <li>Finally, after rising straight upward by <m>\displaystyle{3}</m> units, your final coordinates are: <m>\displaystyle{\left({3},{4},{3}\right)}</m></li>
+</ol></p>
+</solution>
+</myopenmath>
+

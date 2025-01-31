@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en-US">
+<!--********************************************-->
+<!--*       Generated from PreTeXt source      *-->
+<!--*                                          *-->
+<!--*         https://pretextbook.org          *-->
+<!--*                                          *-->
+<!--********************************************-->
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<meta name="robots" content="noindex, nofollow">
+</head>
+<body class="ignore-math">
+<article class="example example-like"><h4 class="heading">
+<span class="type">Example</span><span class="space"> </span><span class="codenumber">3.1.17</span><span class="period">.</span><span class="space"> </span><span class="title">Launching a Projectile.</span>
+</h4> <div class="para logical">
+<div class="para">Consider the function <span class="process-math">\(f\)</span> defined by</div>
+<div class="displaymath process-math" data-contains-math-knowls="./knowl/F_10_2_trace_y.html ./knowl/F_10_2_trace_y.html">
+\begin{equation*}
+f(x,y) = \frac{x^2 \sin(2 y)}{32},
+\end{equation*}
+</div>
+<div class="para">which measures the range, or horizontal distance, in feet, traveled by a projectile launched with an initial speed of <span class="process-math">\(x\)</span> feet per second at an angle <span class="process-math">\(y\)</span> radians to the horizontal. The graph of this function is given on the left in <a href="" class="xref" data-knowl="./knowl/F_10_2_trace_y.html" title="Figure 3.1.18">Figure 3.1.18</a>. Moreover, if we fix the angle <span class="process-math">\(y = 0.6\text{,}\)</span> we may view the trace <span class="process-math">\(f(x,0.6)\)</span> as a function of <span class="process-math">\(x\)</span> alone, as seen at right in <a href="" class="xref" data-knowl="./knowl/F_10_2_trace_y.html" title="Figure 3.1.18">Figure 3.1.18</a>.</div>
+</div> <figure class="figure figure-like"><div class="sidebyside"><div class="sbsrow" style="margin-left:0%;margin-right:0%;">
+<div class="sbspanel top" style="width:50%;"><img src="external/fig_10_2_trace_y_a.svg" role="img" class="contained"></div>
+<div class="sbspanel top" style="width:50%;"><img src="external/fig_10_2_trace_y.svg" role="img" class="contained"></div>
+</div></div>
+<figcaption><span class="type">Figure</span><span class="space"> </span><span class="codenumber">3.1.18<span class="period">.</span></span><span class="space"> </span>Left: The trace of <span class="process-math">\(z=\frac{x^2 \sin(2 y)}{32}\)</span> with <span class="process-math">\(y = 0.6\text{.}\)</span>  Right: <span class="process-math">\(f(x,0.6)\)</span> viewed as a function of <span class="process-math">\(x\)</span> alone.</figcaption></figure> <div class="para logical">
+<div class="para">Note that</div>
+<div class="displaymath process-math" data-contains-math-knowls="./knowl/F_10_2_trace_y.html">
+\begin{align*}
+\frac{\partial f}{\partial x}(150,0.6) = \mathstrut \amp \left. \frac{d}{dx}[f(x,0.6)]\right\rvert_{x=150}\\
+= \mathstrut \amp  \left. \frac{2x\sin(1.2)}{32} \right\rvert_{x=150}\\
+= \mathstrut \amp \frac{\sin(1.2)}{32}300 \\
+\approx \mathstrut \amp
+8.74~\mbox{feet per feet per second} ,
+\end{align*}
+</div>
+<div class="para">which gives the slope of the tangent line shown on the right of <a href="" class="xref" data-knowl="./knowl/F_10_2_trace_y.html" title="Figure 3.1.18">Figure 3.1.18</a>. Thinking of this derivative as an instantaneous rate of change implies that if we increase the initial speed of the projectile by one foot per second (from 150 feet per second to 151 feet per second), we should expect the horizontal distance traveled to increase by approximately 8.74 feet if we hold the launch angle constant at <span class="process-math">\(0.6\)</span> radians.</div>
+</div> <div class="para">In the same way, we may obtain a trace by setting, say, <span class="process-math">\(x=150\)</span> as shown in <a href="" class="xref" data-knowl="./knowl/F_10_2_trace_x.html" title="Figure 3.1.19">Figure 3.1.19</a>.</div> <figure class="figure figure-like"><div class="sidebyside"><div class="sbsrow" style="margin-left:0%;margin-right:0%;">
+<div class="sbspanel top" style="width:50%;"><img src="external/fig_10_2_trace_x_a.svg" role="img" class="contained"></div>
+<div class="sbspanel top" style="width:50%;"><img src="external/fig_10_2_trace_x.svg" role="img" class="contained"></div>
+</div></div>
+<figcaption><span class="type">Figure</span><span class="space"> </span><span class="codenumber">3.1.19<span class="period">.</span></span><span class="space"> </span>The trace of <span class="process-math">\(z=\frac{x^2 \sin(2 y)}{32}\)</span> with <span class="process-math">\(x = 150\text{.}\)</span></figcaption></figure> <div class="para logical">
+<div class="para">This gives</div>
+<div class="displaymath process-math">
+\begin{equation*}
+f(150, y) = \frac{150^2}{32}\sin(2y),
+\end{equation*}
+</div>
+<div class="para">and therefore</div>
+<div class="displaymath process-math">
+\begin{align*}
+\frac{\partial f}{\partial y}(150,0.6) = \mathstrut \amp \left. \frac{d}{dy}[f(150,y)]\right\rvert_{y=0.6} \\
+= \mathstrut \amp \left. \frac{150^2}{16}\cos(2y)\right\rvert_{y=0.6}\\
+= \mathstrut \amp \frac{150^2}{16}\cos(1.2) \\
+\approx \mathstrut \amp 509.5 ~\mbox{feet per radian}.
+\end{align*}
+</div>
+</div> <div class="para">Once again, the derivative gives the slope of the tangent line shown on the right in <a href="" class="xref" data-knowl="./knowl/F_10_2_trace_x.html" title="Figure 3.1.19">Figure 3.1.19</a>. Thinking of the derivative as an instantaneous rate of change, we expect that the range of the projectile increases by 509.5 feet for every radian we increase the launch angle <span class="process-math">\(y\)</span> if we keep the initial speed of the projectile constant at 150 feet per second.</div></article><span class="incontext"><a href="sec_partial_differentiation.html#projectilepartial" class="internal">in-context</a></span>
+</body>
+</html>

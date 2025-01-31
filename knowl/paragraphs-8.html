@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en-US">
+<!--********************************************-->
+<!--*       Generated from PreTeXt source      *-->
+<!--*                                          *-->
+<!--*         https://pretextbook.org          *-->
+<!--*                                          *-->
+<!--********************************************-->
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<meta name="robots" content="noindex, nofollow">
+</head>
+<body class="ignore-math">
+<section class="paragraphs"><h3 class="heading"><span class="title">Horizontal Wind Vectors.</span></h3> <div class="para">The <dfn class="terminology">horizontal wind vector</dfn> <span class="process-math">\(\vec{v}_H\)</span> can be represented in multiple ways.  We describe two ways of representing this vector.</div> <div class="para logical">
+<ul class="disc">
+<li><div class="para">
+<em class="emphasis">Component representation.</em> <span class="process-math">\(\vec{v}_H\)</span> can be represented in terms of perpendicular velocity components.  For this representation, vectors <span class="process-math">\(\vec{i}\)</span> and <span class="process-math">\(\vec{j}\)</span> represent unit vectors in directions East and North respectively.  We then write <span class="process-math">\(\vec{v}_H = u\vec{i} + v\vec{j}\text{.}\)</span>  Here <span class="process-math">\(u\)</span> is the <dfn class="terminology">zonal velocity</dfn>, the magnitude of the horizontal wind towards East.   Scalar <span class="process-math">\(v\)</span> is the <dfn class="terminology">meridional velocity</dfn>, the magnitude of the horizontal wind towards North.</div></li>
+<li>
+<div class="para">
+<em class="emphasis">Wind speed and direction representation.</em> The wind speed is simply the magnitude of <span class="process-math">\(\vec{v}_H\)</span> being specified.  That is, <span class="process-math">\(\|\vec{v}_H\|\)</span> is prescribed.  Two opposite conventions are commonly used to describe wind direction.</div>
+<ol class="decimal">
+<li><div class="para">
+<span class="process-math">\(\phi_{vect}\)</span> is the <dfn class="terminology">wind vector azimuth</dfn>, i.e. the direction towards which the wind is blowing.  <span class="process-math">\(\phi_{vect}\)</span> increases clockwise from North when viewed from above. Terms such as northward, eastward, etc. imply wind vector azimuths.</div></li>
+<li><div class="para">
+<span class="process-math">\(\phi_{met}\)</span> is the <dfn class="terminology">meteorological wind direction</dfn>, i.e. the direction from which the wind is blowing. <span class="process-math">\(\phi_{met}\)</span> also increases clockwise from North when viewed from above. Terms such as northerly, easterly, etc. imply meteorological wind directions.</div></li>
+</ol>
+</li>
+</ul>
+<div class="para">The polar angle <span class="process-math">\(\phi_{polar}\)</span> is the standard angle used in mathematics to measure the angle that <span class="process-math">\(\vec{v}_H\)</span> makes with the positive <span class="process-math">\(x\)</span>-axis.</div>
+</div> <figure class="figure figure-like"><div class="image-box" style="width: 50%; margin-left: 25%; margin-right: 25%;"><img src="generated/latex-image/HorizontalWindPic.svg" role="img" class="contained" alt="Representing the horizontal wind vector \(\vec{v}_H\text{.}\)"></div>
+<figcaption><span class="type">Figure</span><span class="space"> </span><span class="codenumber">2.1.38<span class="period">.</span></span><span class="space"> </span>Representing the horizontal wind vector <span class="process-math">\(\vec{v}_H\text{.}\)</span>  Here the horizontal wind <span class="process-math">\(\vec{v}_H\)</span> is coming from an angle of <span class="process-math">\(\phi_{met}\)</span> and has azimuth <span class="process-math">\(\phi_{vect}\text{.}\)</span></figcaption></figure> <article class="exercise exercise-like"><a href="" class="exercise-knowl original" data-knowl="./knowl/horizontalwindvector-hidden.html" title="Checkpoint 2.1.39: The Horizontal Wind Vector"><h4 class="heading">
+<span class="type">Checkpoint</span><span class="space"> </span><span class="codenumber">2.1.39</span><span class="period">.</span><span class="space"> </span><span class="title">The Horizontal Wind Vector.</span>
+</h4></a></article> <article class="example example-like"><h4 class="heading">
+<span class="type">Example</span><span class="space"> </span><span class="codenumber">2.1.40</span><span class="period">.</span><span class="space"> </span><span class="title">Vertical Wind Shear.</span>
+</h4> <div class="para">The change of horizontal wind speed and/or direction with height, called <dfn class="terminology">vertical wind shear</dfn>, is a requirement for thunderstorm formation.  The vertical wind shear across a layer of air is the vector difference between the winds at the top of the layer and winds at the bottom, divided by layer thickness <span class="process-math">\(\Delta z\text{.}\)</span>
+</div> <div class="para logical">
+<div class="para">Suppose, for example, the wind at an altitude of <span class="process-math">\(z_1 = 3\)</span> km is given by <span class="process-math">\(\vec{v}_1 = 5\vec{i}-3\vec{j}\)</span> (in units of m/s) and the wind at altitude <span class="process-math">\(z_2 = 2\)</span> km is <span class="process-math">\(\vec{v}_2 = \vec{i} + 2\vec{j}\)</span> (also in units of m/s) as shown in <a href="" class="xref" data-knowl="./knowl/WindShearPic.html" title="Figure 2.1.41">Figure 2.1.41</a>.  Then, the shear vector is given by</div>
+<div class="displaymath process-math" data-contains-math-knowls="./knowl/WindShearPic.html ./knowl/WindShearPic.html">
+\begin{gather*}
+\vec{v}_s = \frac{\vec{v}_1 - \vec{v}_2}{z_1-z_2} = \frac{4\vec{i} - 5\vec{j}}{3 \ km - 2 \ km} = \frac{(4\vec{i} - 5\vec{j}) \ m/s}{1000 \ m}\text{.}
+\end{gather*}
+</div>
+<div class="para">The shear magnitude is then</div>
+<div class="displaymath process-math" data-contains-math-knowls="./knowl/WindShearPic.html ./knowl/WindShearPic.html">
+\begin{gather*}
+\| \vec{v}_s \| = \sqrt{0.004^2 + (-0.005)^2} \approx 0.0064 \ s^{-1}\text{.}
+\end{gather*}
+</div>
+<div class="para">The direction (but not the magnitude!) of the shear vector is the same as the red vector <span class="process-math">\(\Delta z \cdot \vec{v}_s\)</span> shown in <a href="" class="xref" data-knowl="./knowl/WindShearPic.html" title="Figure 2.1.41">Figure 2.1.41</a>. The units of vertical wind shear in this example are <span class="process-math">\(1/s\text{.}\)</span>
+</div>
+</div> <figure class="figure figure-like"><div class="image-box" style="width: 50%; margin-left: 25%; margin-right: 25%;"><img src="generated/latex-image/WindShearPicName.svg" role="img" class="contained" alt="Wind shear."></div>
+<figcaption><span class="type">Figure</span><span class="space"> </span><span class="codenumber">2.1.41<span class="period">.</span></span><span class="space"> </span>Vertical wind shear is proportional to the difference of the wind vectors.</figcaption></figure></article> <div class="para">The vertical wind shear <span class="process-math">\(\vec{v}_s\)</span> between the surface and a height of <span class="process-math">\(z=6\)</span> km is a standard tool in storm prediction.  When the vertical distance between layers is fixed (as it is here at 6 km), just the difference of the wind <span class="process-math">\(\vec{v}_2\)</span> at the upper layer <span class="process-math">\(z=6\)</span> km and the wind <span class="process-math">\(\vec{v}_1\)</span> at the surface called the <dfn class="terminology">bulk shear</dfn> is used.  The bulk shear is the wind difference over a layer calculated by vector subtraction.  A tool that illustrates and calculates bulk shear between two layers can be found at <a class="external" href="https://courseware.e-education.psu.edu/courses/meteo361/javascript/Lesson3/shear_calc.html#" target="_blank">https://courseware.e-education.psu.edu/courses/meteo361/javascript/Lesson3/shear_calc.html#</a><a href="" class="fn-knowl original" data-knowl="./knowl/fn-34-hidden.html" title="Footnote 34"><sup> 34 </sup></a>.</div> <article class="exercise exercise-like"><a href="" class="exercise-knowl original" data-knowl="./knowl/verticalwindsheardiff-hidden.html" title="Checkpoint 2.1.42: The 6-km Bulk Wind Shear"><h4 class="heading">
+<span class="type">Checkpoint</span><span class="space"> </span><span class="codenumber">2.1.42</span><span class="period">.</span><span class="space"> </span><span class="title">The 6-km Bulk Wind Shear.</span>
+</h4></a></article></section><span class="incontext"><a href="sec_displacementvectors.html#paragraphs-8" class="internal">in-context</a></span>
+</body>
+</html>

@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<myopenmath xmlns:pi="http://pretextbook.org/2020/pretext/internal" id="910396">
+<statement>
+<p>A contour map for a function <m>\displaystyle{f}</m> is shown. Estimate the value of <m>\displaystyle{\frac{{\partial{f}}}{{\partial{y}}}}{\left({3},{16}\right)}</m> </p><image width="42%"  pi:generated="problems/images/2b294b2c759b330af6938a4cd6b85769.png" />
+<p><m>\displaystyle{\frac{{\partial{f}}}{{\partial{y}}}}{\left({3},{16}\right)}\approx</m> <fillin characters="8" />   </p>
+
+</statement>
+<solution>
+<p><ul><li>6.7</li></ul></p>
+</solution>
+</myopenmath>
+

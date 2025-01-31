@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<myopenmath xmlns:pi="http://pretextbook.org/2020/pretext/internal" id="649459">
+<statement>
+<p>Find the divergence of the vector field <m>\displaystyle\vec{{{F}}}={y}{x}^{{6}}\vec{{{i}}}+{x}{z}^{{4}}\vec{{{j}}}+{z}{y}^{{3}}\vec{{{k}}}</m>.</p>
+<p><m>\displaystyle\text{div}\ \vec{{{F}}}</m> = <fillin characters="20" />  
+</p>
+
+</statement>
+<solution>
+<p><ul><li><m>\displaystyle{6}{y}{x}^{{5}}+{y}^{{3}}</m></li></ul></p>
+</solution>
+</myopenmath>
+
